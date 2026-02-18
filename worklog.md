@@ -1,5 +1,16 @@
 # Worklog
 
+## 2026-02-17 (session 5)
+
+### Cleanup: Removed Google Models & API Keys
+
+- **Removed** all Google models from `~/.pi/agent/models.json` (gemini-2.5-flash, gemini-2.5-flash-lite) — free tier quality too low for coding
+- **Commented out** `GEMINI_API_KEY` export in `~/.zshrc`
+- **Deleted** `~/.pi/web-search.json` — orphaned file, verified nothing reads it (not pi agent, not brave-search skill, not pi-ai SDK)
+- Key left intact in `.zshrc` (commented) for potential future re-enable
+
+---
+
 ## 2026-02-17 (session 4)
 
 ### Cleanup: Removed MD-TUI
