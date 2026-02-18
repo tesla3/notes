@@ -1,5 +1,28 @@
 # Worklog
 
+## 2026-02-17 (session 4)
+
+### Cleanup: Removed MD-TUI
+
+- **Removed** `/usr/local/bin/mdt` (MD-TUI v0.9.4) — Glow is the preferred markdown renderer
+- No config files or dotfile references existed, clean removal
+- Updated `terminal-markdown-renderers.md` to reflect removal
+
+---
+
+## 2026-02-17 (session 3)
+
+### models.json + Research Consistency
+
+- **Trimmed** Google models in `~/.pi/agent/models.json` to free-tier-only
+- **Dropped** `gemini-3-flash-preview` — preview/unstable, no rate limit guarantees
+- **Dropped** `gemini-2.5-pro` — consistently returns `limit: 0` on this key across two separate live tests; likely per-project block from Dec 2025 crackdown (globally documented as 100 RPD free, but not for this project)
+- **Final models.json:** `gemini-2.5-flash` (250/day) + `gemini-2.5-flash-lite` (1000/day) — both confirmed working
+- **Updated** `google-ai-research.md` to be consistent: 2.5-pro listed as blocked on this key with explanation, free tier table shows only confirmed-working models
+- **Lesson:** Live API test (`limit: 0`) is more reliable than blog posts for per-key availability; `limit: 0` ≠ transient, means zero quota allocation
+
+---
+
 ## 2026-02-17 (session 2)
 
 ### Google AI Research & Gemini Key Diagnosis

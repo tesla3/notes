@@ -2,7 +2,7 @@
 
 **Winner: Glow** — installed via `brew install glow` (v2.1.1)
 
-Also installed: **MD-TUI** (`mdt` v0.9.4) at `/usr/local/bin/mdt`
+~~MD-TUI was previously installed but removed — Glow is sufficient.~~
 
 ---
 
@@ -85,7 +85,7 @@ glow github.com/user/repo  # fetch remote README
 - **Repo:** https://github.com/henriklovhaug/md-tui
 - **Stats:** 363 ★ | Rust | AGPL-3.0 | Active (Feb 2026)
 - **Install:** release binary or `cargo install md-tui --locked`
-- **Installed at:** `/usr/local/bin/mdt`
+- **Previously installed at:** `/usr/local/bin/mdt` — **removed** (Glow preferred)
 
 **Strengths:**
 - Unique link selection mode — scroll through links, follow to headings/files/URLs
