@@ -1,6 +1,6 @@
 # LLM Models & Pricing
 
-← [Index](../INDEX.md)
+← [Index](../README.md)
 
 ## Current Decisions
 

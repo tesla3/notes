@@ -1,4 +1,4 @@
-← [Coding Agents](../topics/coding-agents.md) · [Index](../INDEX.md)
+← [Coding Agents](../topics/coding-agents.md) · [Index](../README.md)
 
 # OpenClaw: Innovations & Novel Design Patterns
 

@@ -1,14 +1,14 @@
 # Worklog
 
 > **Note:** File paths in entries before 2026-02-17 session 6 refer to the flat structure
-> before the notes reorg. See [INDEX.md](INDEX.md) for current file locations.
+> before the notes reorg. See [README.md](README.md) for current file locations.
 
 ## 2026-02-17 (session 6)
 
 ### Notes Reorganization
 
 - **Restructured** notes/ from flat 8-file dump into 3-layer system: INDEX → topics → research
-- **Created** `INDEX.md` — active stack dashboard, topic map, conventions
+- **Created** `README.md` — active stack dashboard, topic map, conventions
 - **Created** `topics/llm-models.md`, `topics/coding-agents.md`, `topics/dev-tools.md` — decision summaries with links to research
 - **Moved** 8 research files into `research/` with backlinks to parent topic pages
 - **Key decisions:** kept Google files separate (operational vs market research), kept Pi conversation intact (already well-structured), dev-tools.md is a routing page not unified analysis

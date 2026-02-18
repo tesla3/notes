@@ -1,6 +1,6 @@
 # Developer Tools
 
-← [Index](../INDEX.md)
+← [Index](../README.md)
 
 ---
 

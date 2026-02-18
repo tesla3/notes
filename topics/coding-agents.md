@@ -1,6 +1,6 @@
 # Coding Agents
 
-← [Index](../INDEX.md)
+← [Index](../README.md)
 
 ## Current Decision
 

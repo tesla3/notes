@@ -1,4 +1,4 @@
-← [LLM Models](../topics/llm-models.md) · [Index](../INDEX.md)
+← [LLM Models](../topics/llm-models.md) · [Index](../README.md)
 
 # Google LLM Offering Research — February 2026
 

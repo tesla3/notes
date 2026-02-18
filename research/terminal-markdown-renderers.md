@@ -1,4 +1,4 @@
-← [Developer Tools](../topics/dev-tools.md) · [Index](../INDEX.md)
+← [Developer Tools](../topics/dev-tools.md) · [Index](../README.md)
 
 # Terminal Markdown Renderers — Research (Feb 2026)
 

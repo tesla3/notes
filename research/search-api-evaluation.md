@@ -1,4 +1,4 @@
-← [Developer Tools](../topics/dev-tools.md) · [Index](../INDEX.md)
+← [Developer Tools](../topics/dev-tools.md) · [Index](../README.md)
 
 # Search APIs for Coding Agents (Pi, OpenCode, etc.) — Critically Revised Evaluation
 
