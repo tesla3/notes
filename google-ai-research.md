@@ -64,30 +64,30 @@ you can wait out, but zero free quota permanently.
 
 ---
 
-### 🚫 Paid-Only Models (limit: 0 on free tier)
+### 🚫 Paid-Only / Blocked Models (limit: 0 on this key)
 
 | Model | Notes |
 |---|---|
+| `gemini-2.5-pro` | Globally documented as free (100 RPD), but **consistently `limit: 0` on this key** — likely project-level restriction from Dec 2025 crackdown |
 | `gemini-3-pro-preview` | Newest gen Pro — paid only |
 | `gemini-2.0-flash` | Was free, removed from free tier |
 | `gemini-2.0-flash-lite` | Paid only |
 | `gemini-exp-1206` | Experimental — paid only |
 
+> **`gemini-2.5-pro` note:** Multiple Feb 2026 sources (laozhang.ai, aifreeapi.com) confirm 100 RPD free globally. However, two separate live tests on 2026-02-17 returned `limit: 0` consistently for this key. This is a **per-project restriction**, not a transient error. May be due to regional block (EU/EEA/UK/CH) or project flagged during Dec 2025 abuse crackdown. Do not use with this key.
+
 ---
 
-### ✅ Free Tier Models
+### ✅ Free Tier Models (confirmed working on this key)
 
 | Model | RPM | RPD | Context | Notes |
 |---|---|---|---|---|
-| **`gemini-2.5-pro`** ⭐ | 5 | 100 | 1,048,576 / 65,536 | 🧠 Thinking · **Best quality** |
-| **`gemini-2.5-flash`** | 10 | 250 | 1,048,576 / 65,536 | 🧠 Thinking · **Best workhorse** |
+| **`gemini-2.5-flash`** ⭐ | 10 | 250 | 1,048,576 / 65,536 | 🧠 Thinking · **Best workhorse** |
 | `gemini-2.5-flash-lite` | 15 | 1,000 | 1,048,576 / 65,536 | 🧠 Thinking · High-volume/cheap |
 | `gemma-3-27b-it` | — | — | 131,072 / 8,192 | Open weights |
 | `gemma-3-12b-it` | — | — | 32,768 / 8,192 | Open weights |
 | `gemma-3-4b-it` | — | — | 32,768 / 8,192 | Open weights |
 | `gemma-3-1b-it` | — | — | 32,768 / 8,192 | Open weights · Tiny/fast |
-
-> **Note:** A live API test on 2026-02-17 returned `limit: 0` for `gemini-2.5-pro` — confirmed to be a transient error. Multiple Feb 2026 sources (laozhang.ai, aifreeapi.com) confirm 100 RPD free access.
 
 ---
 
@@ -101,9 +101,9 @@ you can wait out, but zero free quota permanently.
 
 ### 💡 Recommendations
 
-- **Best free model:** `gemini-2.5-flash` — 1M context, thinking mode, strong performance
-- **Try the newest free:** `gemini-3-flash-preview` — Gemini 3 generation, free access
-- **Need Pro-level:** Enable billing at https://aistudio.google.com — Gemini 2.5 Pro / 3 Pro are paid only
+- **Best free model (this key):** `gemini-2.5-flash` — 1M context, thinking mode, strong performance
+- **High-volume cheap:** `gemini-2.5-flash-lite` — 1,000 req/day, still thinking-capable
+- **Need Pro-level:** Enable billing at https://aistudio.google.com — or create a fresh project/key to try getting 2.5-pro free access
 - **Full model list API:** `GET https://generativelanguage.googleapis.com/v1beta/models?key=YOUR_KEY`
 - **Rate limit monitor:** https://ai.dev/rate-limit
 

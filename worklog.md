@@ -7,6 +7,7 @@
 - **Removed** `/usr/local/bin/mdt` (MD-TUI v0.9.4) — Glow is the preferred markdown renderer
 - No config files or dotfile references existed, clean removal
 - Updated `terminal-markdown-renderers.md` to reflect removal
+- **Found:** `google-ai-research.md` has uncommitted edits from session 3 (still unstaged)
 
 ---
 
@@ -18,7 +19,7 @@
 - **Dropped** `gemini-3-flash-preview` — preview/unstable, no rate limit guarantees
 - **Dropped** `gemini-2.5-pro` — consistently returns `limit: 0` on this key across two separate live tests; likely per-project block from Dec 2025 crackdown (globally documented as 100 RPD free, but not for this project)
 - **Final models.json:** `gemini-2.5-flash` (250/day) + `gemini-2.5-flash-lite` (1000/day) — both confirmed working
-- **Updated** `google-ai-research.md` to be consistent: 2.5-pro listed as blocked on this key with explanation, free tier table shows only confirmed-working models
+- **Edited** `google-ai-research.md` to be consistent: 2.5-pro listed as blocked on this key with explanation, free tier table shows only confirmed-working models — ⚠️ **changes were not committed** (still unstaged)
 - **Lesson:** Live API test (`limit: 0`) is more reliable than blog posts for per-key availability; `limit: 0` ≠ transient, means zero quota allocation
 
 ---
@@ -64,7 +65,7 @@
 
 ### Installations
 
-- **Installed MD-TUI** v0.9.4 — downloaded release binary to `/usr/local/bin/mdt`
+- **Installed MD-TUI** v0.9.4 — downloaded release binary to `/usr/local/bin/mdt` *(removed in session 4)*
 - **Installed Glow** v2.1.1 — via `brew install glow`
 - **Winner: Glow** after hands-on testing
 
