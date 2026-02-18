@@ -1,9 +1,9 @@
 # Worklog
 
-> **Note:** File paths in entries before 2026-02-17 session 6 refer to the flat structure
+> **Note:** File paths in entries before 2026-02-17 session 7 refer to the flat structure
 > before the notes reorg. See [README.md](README.md) for current file locations.
 
-## 2026-02-17 (session 6)
+## 2026-02-17 (session 7)
 
 ### Notes Reorganization
 
@@ -13,6 +13,9 @@
 - **Moved** 8 research files into `research/` with backlinks to parent topic pages
 - **Key decisions:** kept Google files separate (operational vs market research), kept Pi conversation intact (already well-structured), dev-tools.md is a routing page not unified analysis
 - **Added** conventions for future notes: research/ first, topic pages when clusters form, README on decision changes
+- **Renamed** INDEX.md → README.md for GitHub rendering, updated all 12 internal links
+- **Review pass:** removed duplicated landscape content from api-key file, fixed stale INDEX refs, clarified titles, added 2.5 Pro key-block warning to market file
+- **Added** `AGENTS.md` — agent instructions covering reading/writing protocol, update direction, style, non-obvious file relationships
 
 ---
 
