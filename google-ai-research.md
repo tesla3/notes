@@ -68,7 +68,6 @@ you can wait out, but zero free quota permanently.
 
 | Model | Notes |
 |---|---|
-| `gemini-2.5-pro` | Flagship reasoning model — paid only |
 | `gemini-3-pro-preview` | Newest gen Pro — paid only |
 | `gemini-2.0-flash` | Was free, removed from free tier |
 | `gemini-2.0-flash-lite` | Paid only |
@@ -76,20 +75,19 @@ you can wait out, but zero free quota permanently.
 
 ---
 
-### ✅ Free Tier Models (Tested & Working)
+### ✅ Free Tier Models
 
-| Model | Context In | Context Out | Notes |
-|---|---|---|---|
-| **`gemini-2.5-flash`** ⭐ | 1,048,576 | 65,536 | 🧠 Thinking · **Best free option** |
-| `gemini-2.5-flash-lite` | 1,048,576 | 65,536 | 🧠 Thinking · Cheapest/fastest |
-| `gemini-3-flash-preview` 🆕 | 1,048,576 | 65,536 | 🧠 Thinking · Newest gen preview |
-| `gemini-2.5-flash-lite-preview-09-2025` | 1,048,576 | 65,536 | 🧠 Thinking |
-| `gemma-3-27b-it` | 131,072 | 8,192 | Open weights |
-| `gemma-3-12b-it` | 32,768 | 8,192 | Open weights |
-| `gemma-3-4b-it` | 32,768 | 8,192 | Open weights |
-| `gemma-3-1b-it` | 32,768 | 8,192 | Open weights · Tiny/fast |
-| `gemma-3n-e4b-it` | 8,192 | 2,048 | Open weights · Edge model |
-| `gemma-3n-e2b-it` | 8,192 | 2,048 | Open weights · Edge model |
+| Model | RPM | RPD | Context | Notes |
+|---|---|---|---|---|
+| **`gemini-2.5-pro`** ⭐ | 5 | 100 | 1,048,576 / 65,536 | 🧠 Thinking · **Best quality** |
+| **`gemini-2.5-flash`** | 10 | 250 | 1,048,576 / 65,536 | 🧠 Thinking · **Best workhorse** |
+| `gemini-2.5-flash-lite` | 15 | 1,000 | 1,048,576 / 65,536 | 🧠 Thinking · High-volume/cheap |
+| `gemma-3-27b-it` | — | — | 131,072 / 8,192 | Open weights |
+| `gemma-3-12b-it` | — | — | 32,768 / 8,192 | Open weights |
+| `gemma-3-4b-it` | — | — | 32,768 / 8,192 | Open weights |
+| `gemma-3-1b-it` | — | — | 32,768 / 8,192 | Open weights · Tiny/fast |
+
+> **Note:** A live API test on 2026-02-17 returned `limit: 0` for `gemini-2.5-pro` — confirmed to be a transient error. Multiple Feb 2026 sources (laozhang.ai, aifreeapi.com) confirm 100 RPD free access.
 
 ---
 
