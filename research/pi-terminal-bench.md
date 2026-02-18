@@ -1,3 +1,5 @@
+← [Coding Agents](../topics/coding-agents.md) · [Index](../README.md)
+
 # Pi Coding Agent & Terminal-Bench — Research (Feb 2026)
 
 ## Question

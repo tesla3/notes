@@ -37,6 +37,33 @@ OpenClaw (Peter Steinberger) is the viral agent (180K+ stars) that runs Pi under
 - **Selective skill injection** — only relevant skills loaded per turn (vs blind prompt stuffing)
 - **Security concern:** "Faustian bargain" — root-like access + community skills with ~15% malicious rate
 
+## Agent Landscape (Feb 2026)
+
+A phase transition between Jan 12 – Feb 14, 2026: Anthropic launched Cowork + Agent Teams, OpenAI launched Codex macOS app with parallel agents, Apple opened Xcode to third-party agents via MCP, AWS upgraded Kiro with autonomous agent.
+
+**Five major players, diverging strategies:**
+- **Anthropic** — frontrunner. Claude Code + Cowork + Agent Teams. Best model-tool integration.
+- **OpenAI** — catching up. Codex app, GPT-5.2-Codex model, parallel execution.
+- **Google** — infrastructure play. Jules/Gemini Code Assist, massive context windows.
+- **AWS** — enterprise full-stack. Kiro spec-driven development + autonomous agent.
+- **Apple** — surprise kingmaker. Xcode 26.3 opened to Claude Agent + Codex via MCP.
+
+**Tools are diverging into categories:** interactive CLI, multi-agent orchestration, autonomous background work. The winning move is using the right category for the right task, not picking one.
+
+## Tool Comparisons
+
+OpenCode vs Claude Code vs Kiro CLI: "the war is between the models, not the tools" holds broadly, but tools are adding model-independent differentiation (Agent Teams, autonomous agents, cross-session memory). Claude Code recommended as primary, but Kiro's autonomous agent is genuinely novel — dismiss was premature.
+
+## Practitioner Evidence
+
+The METR RCT (July 2025) found experienced developers 19% *slower* with AI tools while believing they were 20% faster — a 39-point perception gap. Mike Judge's replication: 21% slower, plus flat macro metrics (new apps, new games, new GitHub projects). Stack Overflow Dec 2025: first-ever decline in AI tool sentiment.
+
+Counter-evidence: Anthropic reports 30-79% faster enterprise cycles. Rakuten compressed 24→5 day feature cycles. Opsera: seniors get 5× the productivity gains of juniors. Nobody has clean data. "We're all working from vibes" (Zechner).
+
+## Context Engineering
+
+Kiro CLI's context model: guidance (conventions) + instructions (task-specific) + context interfaces (auto-discovery). Steering files, custom agents, hooks, MCP servers, knowledge bases, skills, subagents, plan agent. See research for full feature reference.
+
 ## Nanoagent Ecosystem
 
 "NanoAgent" is a namespace collision of 5+ unrelated repos sharing the "minimal agent" idea. Combined stars ~292, zero production deployments. The anti-LangChain rebellion — minimalism as philosophy.
@@ -47,7 +74,24 @@ OpenClaw (Peter Steinberger) is the viral agent (180K+ stars) that runs Pi under
 
 ## Deep Research
 
-- [Pi Practitioner Review](../research/pi-practitioner-review.md) — critical analysis from power users (Ronacher, Januschka), provider abstraction deep dive, KV cache analysis
+### Pi & OpenClaw
+- [Pi Practitioner Review](../research/pi-practitioner-review.md) — power user analysis (Ronacher, Januschka), provider abstraction, KV cache
+- [Pi Blog Review](../research/pi-blog-review-conversation.md) — critical review of Ronacher's Pi blog post
+- [Pi Terminal-Bench](../research/pi-terminal-bench.md) — why Pi isn't on the leaderboard (submitted but never added)
 - [OpenClaw Analysis](../research/openclaw-analysis.md) — value proposition, security risks, competitive context
-- [OpenClaw Innovations](../research/openclaw-innovations.md) — architecture deep dive (Gateway, A2UI, memory tiers, heartbeat, Node Bridge)
-- [Nanoagent Survey](../research/nanoagent-survey.md) — all 5 repos evaluated with critical assessment
+- [OpenClaw Innovations](../research/openclaw-innovations.md) — architecture deep dive (Gateway, A2UI, memory, heartbeat)
+- [OpenClaw Real-World Uses](../research/openclaw-real-world-uses.md) — use cases from Reddit, blogs, X threads
+
+### Landscape & Tool Comparisons
+- [AI Coding Agents Feb 2026](../research/ai-coding-agents-feb-2026-deep-assessment.md) — state of the landscape: Anthropic, OpenAI, Google, AWS, Apple
+- [OpenCode vs Claude Code vs Kiro](../research/critical-review-opencode-claude-code-kiro.md) — claim-by-claim tool comparison review
+- [Context Engineering for Kiro CLI](../research/context-engineering-kiro-cli-v2.md) — full feature reference for Kiro's context model
+
+### Practitioner Tips & Productivity Evidence
+- [Zechner & Steinberger Tips Review](../research/critical-review-v3-final.md) — corroborated, contested, and complicated
+- [Steinberger Final Evaluation](../research/steipete-final-evaluation.md) — claims vs METR study, macro productivity data
+- [Nanoagent Survey](../research/nanoagent-survey.md) — all 5 "nano" agent repos critically assessed
+
+## Related
+
+- [Software Factory](software-factory.md) — autonomous production, verification layers, the "dark factory" thesis

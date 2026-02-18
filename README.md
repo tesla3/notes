@@ -10,9 +10,19 @@
 
 ## Topics
 
-- [LLM Models & Pricing](topics/llm-models.md) — Gemini landscape, free tier, API key status
-- [Coding Agents](topics/coding-agents.md) — Pi, OpenClaw, nanoagent ecosystem
+- [LLM Models & Pricing](topics/llm-models.md) — Gemini landscape, Sonnet 4.6, free tier, API key status
+- [Coding Agents](topics/coding-agents.md) — Pi, OpenClaw, agent landscape, tool comparisons, practitioner evidence
+- [Software Factory](topics/software-factory.md) — autonomous production, dark factory thesis, verification layers, StrongDM
 - [Developer Tools](topics/dev-tools.md) — terminal markdown renderers, search APIs
+
+## Other Research
+
+Not yet grouped into topics:
+
+- [Martin Fowler's Site — Critical Analysis](research/fowler-critical-analysis.md) — article-by-article assessment, Jul 2025–Feb 2026
+- [Fowler Articles — Novelty Ranked](research/fowler-articles-novelty-ranked.md) — ranked by relevance to factory thesis
+- [Sam Schillace's Sunday Letters](research/sunday-letters-deep-dive.md) — Microsoft Deputy CTO on software unbundling, AI personhood, taste
+- [AI Future Careers Forecast](research/ai-future-careers-deep-forecast.md) — cascade effects, future careers, practical playbook for teens
 
 ## Conventions
 

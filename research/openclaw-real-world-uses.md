@@ -1,4 +1,4 @@
-← [OpenClaw Analysis](openclaw-analysis.md) · [OpenClaw Innovations](openclaw-innovations.md) · [Index](../README.md)
+← [Coding Agents](../topics/coding-agents.md) · [Index](../README.md)
 
 # OpenClaw: Real-World Use Cases (Feb 2026)
 

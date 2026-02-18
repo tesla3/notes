@@ -31,9 +31,13 @@ Google's free tier is the most generous in the industry (no credit card, 1M cont
 | **Gemini 3 Pro** | Google | #1 (1490) | Best overall, reasoning, multimodal |
 | Grok 4.1 Thinking | xAI | #2 (1477) | Real-time web, live data |
 | Claude Opus 4.5 | Anthropic | #4–#5 | Best at coding (#1 code rank 1510) |
+| **Claude Sonnet 4.6** | Anthropic | — | New mid-tier default, $3/$15, 1M context beta |
 | GPT-5.1 | OpenAI | #9 (1458) | Math, science, reasoning |
+
+**Sonnet 4.6** (Feb 17, 2026): Now default for all free/Pro users on claude.ai and Cowork. Named 4.6 (not 5) — refinement of 4.x architecture. 1M context in API beta. Key concern: extended thinking multiplies cost significantly (thinking tokens billed at output rate). Adaptive thinking mode is new.
 
 ## Deep Research
 
 - [Gemini API Key — What Works](../research/google-gemini-api-key.md) — per-key limits, blocked models, deprecated models, operational reference
 - [Gemini Market Research](../research/google-gemini-market.md) — pricing tiers, cost comparisons, consumer plans, competitor analysis, Dec 2025 incident
+- [Sonnet 4.6 Analysis](../research/sonnet-4-6-analysis.md) — benchmarks, cost trap, thinking modes, community reception

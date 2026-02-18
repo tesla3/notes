@@ -3,6 +3,20 @@
 > **Note:** File paths in entries before 2026-02-17 session 7 refer to the flat structure
 > before the notes reorg. See [README.md](README.md) for current file locations.
 
+## 2026-02-18 (session 8)
+
+### Integrate 16 New Research Files
+
+- **Created** `topics/software-factory.md` — dark factory thesis, StrongDM forensics, verification/alignment, maximum-leverage design
+- **Expanded** `topics/coding-agents.md` — added agent landscape (Feb 2026), tool comparisons, practitioner evidence (METR study), context engineering sections; linked 12 research files total
+- **Updated** `topics/llm-models.md` — added Sonnet 4.6 to landscape table, linked analysis
+- **Updated** `README.md` — added software-factory topic, added "Other Research" section for 4 unlinked files (Fowler ×2, Schillace, careers)
+- **Moved** `pi-terminal-bench-research.md` → `research/pi-terminal-bench.md`
+- **Added** backlink headers to all 16 new research files
+- **Key decisions:** steipete and critical-review-v3 go under coding-agents (practitioner evidence, not factory); Fowler/Schillace/careers stay unlinked (no natural cluster yet); software-factory topic kept tight (4 files)
+
+---
+
 ## 2026-02-17 (session 7)
 
 ### Notes Reorganization
