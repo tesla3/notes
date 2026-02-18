@@ -20,7 +20,7 @@
 Not yet grouped into topics:
 
 - [Martin Fowler's Site — Critical Analysis](research/fowler-critical-analysis.md) — article-by-article assessment, Jul 2025–Feb 2026
-- [Fowler Articles — Novelty Ranked](research/fowler-articles-novelty-ranked.md) — ranked by relevance to factory thesis
+- [Fowler Articles — Novelty Ranked](research/fowler-articles-novelty-ranked.md) — ranked by novelty to my own thinking
 - [Sam Schillace's Sunday Letters](research/sunday-letters-deep-dive.md) — Microsoft Deputy CTO on software unbundling, AI personhood, taste
 - [AI Future Careers Forecast](research/ai-future-careers-deep-forecast.md) — cascade effects, future careers, practical playbook for teens
 

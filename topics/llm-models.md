@@ -30,7 +30,7 @@ Google's free tier is the most generous in the industry (no credit card, 1M cont
 |---|---|---|---|
 | **Gemini 3 Pro** | Google | #1 (1490) | Best overall, reasoning, multimodal |
 | Grok 4.1 Thinking | xAI | #2 (1477) | Real-time web, live data |
-| Claude Opus 4.5 | Anthropic | #4–#5 | Best at coding (#1 code rank 1510) |
+| **Claude Opus 4.6** | Anthropic | — | Primary model. Successor to 4.5 (#1 coding). Not yet ranked on Arena |
 | **Claude Sonnet 4.6** | Anthropic | — | New mid-tier default, $3/$15, 1M context beta |
 | GPT-5.1 | OpenAI | #9 (1458) | Math, science, reasoning |
 
