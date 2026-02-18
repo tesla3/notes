@@ -1,3 +1,5 @@
+← [LLM Models](../topics/llm-models.md) · [Index](../INDEX.md)
+
 # Google LLM Offering Research — February 2026
 
 ## Google's LLM Lineup (Gemini Family)

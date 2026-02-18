@@ -1,3 +1,5 @@
+← [Coding Agents](../topics/coding-agents.md) · [Index](../INDEX.md)
+
 # NanoAgent / Nano-Agent — Research Survey (Feb 2026)
 
 "NanoAgent" is not one project — it's a **namespace collision** of 5+ unrelated repos sharing

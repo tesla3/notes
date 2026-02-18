@@ -1,3 +1,5 @@
+← [Developer Tools](../topics/dev-tools.md) · [Index](../INDEX.md)
+
 # Terminal Markdown Renderers — Research (Feb 2026)
 
 **Winner: Glow** — installed via `brew install glow` (v2.1.1)

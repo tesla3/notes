@@ -1,3 +1,5 @@
+← [Coding Agents](../topics/coding-agents.md) · [Index](../INDEX.md)
+
 # Research Evaluation: OpenClaw
 
 OpenClaw is an open-source autonomous AI agent and personal assistant that has achieved viral status (180k+ GitHub stars) within weeks of its launch. Created by Peter Steinberger (founder of PSPDFKit), it represents a shift toward "agentic interfaces" that run locally but interact via ubiquitous messaging platforms.
