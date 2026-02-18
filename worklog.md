@@ -16,6 +16,17 @@
 
 ---
 
+## 2026-02-17 (session 6)
+
+### Pi & Terminal-Bench Research
+
+- **Researched** why pi coding agent is not on the Terminal-Bench leaderboard
+- **Finding:** results were submitted via email but likely never processed/added by Terminal-Bench team
+- **Credibility assessment:** high — reproducible, open-source adapter, automated verification, public results.json
+- **Saved** research to `notes/pi-terminal-bench-research.md`
+
+---
+
 ## 2026-02-17 (session 5)
 
 ### Cleanup: Removed Google Models & API Keys
