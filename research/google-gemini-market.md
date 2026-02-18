@@ -29,6 +29,8 @@ Google's free tier via **Google AI Studio** (aistudio.google.com) is the most ge
 
 ### Free Tier Rate Limits
 
+> ⚠️ **This key:** Gemini 2.5 Pro shows `limit: 0` (per-project block). See [API key reference](google-gemini-api-key.md) for what actually works.
+
 | Model | RPM | Tokens/min | Requests/day |
 |---|---|---|---|
 | **Gemini 2.5 Pro** | 5 | 250K | 100 |

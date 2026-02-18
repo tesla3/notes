@@ -1,4 +1,4 @@
-# Notes Index
+# Notes
 
 ## Active Stack
 
@@ -18,5 +18,5 @@
 
 - New research → `research/` directly. No topic page required upfront.
 - Topic pages created/updated when 2+ research files cluster, or a decision is worth recording.
-- Update this INDEX when a decision changes (tool swap, model change, etc.).
+- Update this README when a decision changes (tool swap, model change, etc.).
 - See [worklog.md](worklog.md) for chronological session history.

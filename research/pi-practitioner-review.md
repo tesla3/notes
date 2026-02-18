@@ -1,6 +1,6 @@
 ← [Coding Agents](../topics/coding-agents.md) · [Index](../README.md)
 
-# Pi Coding Agent — Full Conversation Record
+# Pi Coding Agent — Practitioner Review & Technical Analysis
 
 **Date:** February 17, 2026  
 **Platform:** Claude (Opus 4.6)

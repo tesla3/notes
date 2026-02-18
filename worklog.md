@@ -7,12 +7,12 @@
 
 ### Notes Reorganization
 
-- **Restructured** notes/ from flat 8-file dump into 3-layer system: INDEX → topics → research
+- **Restructured** notes/ from flat 8-file dump into 3-layer system: README → topics → research
 - **Created** `README.md` — active stack dashboard, topic map, conventions
 - **Created** `topics/llm-models.md`, `topics/coding-agents.md`, `topics/dev-tools.md` — decision summaries with links to research
 - **Moved** 8 research files into `research/` with backlinks to parent topic pages
 - **Key decisions:** kept Google files separate (operational vs market research), kept Pi conversation intact (already well-structured), dev-tools.md is a routing page not unified analysis
-- **Added** conventions for future notes: research/ first, topic pages when clusters form, INDEX on decision changes
+- **Added** conventions for future notes: research/ first, topic pages when clusters form, README on decision changes
 
 ---
 
