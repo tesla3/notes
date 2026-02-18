@@ -27,6 +27,11 @@
 - **Finding:** results were submitted via email but likely never processed/added by Terminal-Bench team
 - **Credibility assessment:** high — reproducible, open-source adapter, automated verification, public results.json
 - **Saved** research to `notes/pi-terminal-bench-research.md`
+- **Follow-up research:** has anyone run updated pi against TB? Answer: **no**
+  - HN thread (Feb 11) shows community noticed pi's absence, speculating about it
+  - Mario on OSS vacation until Feb 23; adapter stale; no community runs
+  - oh-my-pi fork ran custom react-edit-benchmark (not TB) — found harness changes swing scores 5–14pp
+  - Updated research note with full section on this
 
 ---
 

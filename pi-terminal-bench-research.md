@@ -79,6 +79,44 @@ Notable: **Terminus 2** (Terminal-Bench team's own minimal agent — raw tmux, n
 
 ---
 
+## Has Anyone Run Updated Pi Against Terminal-Bench?
+
+**No.** As of Feb 17, 2026, nobody has publicly run the latest pi (with updated system prompt and tool descriptions) against Terminal-Bench.
+
+### Community Awareness
+
+The [HN thread](https://news.ycombinator.com/item?id=46844822) (re-surfaced ~Feb 11, 2026) shows the community has noticed:
+
+> *"Also please note this is nowhere on the terminal bench leaderboard anymore. I'd advise everyone reading the comments here to be aware of that. This isn't a CLI to use. Just a good experiment and write up."*
+
+> *"I don't follow nor use pi so no horse in this race, but I think the results were never submitted to terminal bench? not sure how the process works exactly but it's entirely missing from the benchmark. is this a sign of weakness? I honestly don't know."*
+
+### Why No Updated Run Exists
+
+1. **Mario is on vacation.** pi-mono is on "OSS Vacation" until Feb 23, 2026 — no commits, PRs, or benchmark runs.
+2. **Stale adapter.** The [pi-terminal-bench](https://github.com/badlogic/pi-terminal-bench) repo still references `claude-sonnet-4-5` in examples — hasn't been updated for Opus 4.6, GPT-5.3-Codex, etc.
+3. **No community runs.** Despite 13.2k stars, no one has publicly reported running updated pi against TB 2.0.
+
+### Closest Thing: oh-my-pi's Custom Benchmark
+
+[can1357/oh-my-pi](https://github.com/can1357/oh-my-pi) — a pi fork with ~1,300 additional commits — ran a **react-edit-benchmark** (16 models, 180 tasks, 3 runs each). This tests edit tool formats (hashline vs str_replace vs patch), not Terminal-Bench. Key findings from the [blog post](https://blog.can.ac/2026/02/12/the-harness-problem/):
+
+- Harness/tool changes alone swing model scores by **5–14 percentage points**
+- Grok Code Fast 1: 6.7% → 68.3% (10× improvement) just by changing edit format
+- Gemini 3 Flash: +5pp over str_replace, beating Google's own best attempt
+- Thesis: *"The harness problem is real, measurable, and it's the highest-leverage place to innovate right now"*
+
+This strongly suggests a fresh pi TB 2.0 run with updated tools could yield meaningfully different results than the Nov 2025 run — but nobody has done it.
+
+### What a Fresh Run Would Show
+
+Pi has evolved significantly since Nov 2025 (~2,961 total commits in pi-mono). A new TB 2.0 run with Opus 4.6 or GPT-5.3-Codex would clarify:
+- Whether pi's updated system prompt / tool descriptions improve benchmark scores
+- How pi compares to the current top agents (Simple Codex 75.1%, Droid 69.9%)
+- Whether the oh-my-pi finding (harness matters more than people think) holds for Terminal-Bench tasks
+
+---
+
 ## Sources
 
 - Blog: https://mariozechner.at/posts/2025-11-30-pi-coding-agent/
@@ -87,3 +125,7 @@ Notable: **Terminus 2** (Terminal-Bench team's own minimal agent — raw tmux, n
 - Pi Terminal-Bench adapter: https://github.com/badlogic/pi-terminal-bench
 - Results gist: https://gist.github.com/badlogic/f45e8f6e481e5ab7d3a50659da84edaa
 - Artificial Analysis TB Hard: https://artificialanalysis.ai/evaluations/terminalbench-hard
+- HN discussion (Feb 2026): https://news.ycombinator.com/item?id=46844822
+- oh-my-pi (pi fork): https://github.com/can1357/oh-my-pi
+- oh-my-pi harness blog: https://blog.can.ac/2026/02/12/the-harness-problem/
+- oh-my-pi edit benchmark: https://github.com/can1357/oh-my-pi/tree/main/packages/react-edit-benchmark
