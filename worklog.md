@@ -3,6 +3,18 @@
 > **Note:** File paths in entries before 2026-02-17 session 7 refer to the flat structure
 > before the notes reorg. See [README.md](README.md) for current file locations.
 
+## 2026-02-19 (session 9)
+
+### Dotfiles/Setup Audit
+
+- **Audited** dotfiles and installed tools against worklog history
+- **Verified OK:** mdt removed, web-search.json deleted, glow v2.1.1 installed, glow alias correct, glow config at correct macOS path with defaults, `~/.config/glow/` gone
+- **Found 2 drift items (no action taken):**
+  - `~/.pi/agent/models.json` — completely missing, not just emptied of Google models as worklog implied
+  - `GEMINI_API_KEY` in `~/.zshrc` — fully removed, not commented out as worklog stated
+
+---
+
 ## 2026-02-18 (session 8)
 
 ### Integrate 16 New Research Files

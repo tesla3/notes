@@ -13,18 +13,38 @@ This is a personal research knowledge base. No code. Pure markdown.
 - **Decision change:** update top-down: README → topic page. Research files keep their own conclusions.
 - **New topic page:** only when 2+ research files cluster or a decision needs recording.
 - **Renaming/moving:** update all links — backlinks, forward links from topic pages, README if affected.
-- Don't combine existing research files without explicit instruction.
 
 ## Backlink header format
 ```
 ← [Topic Name](../topics/X.md) · [Index](../README.md)
 ```
 
-## Style
-Research is opinionated, critical, and analytical — not balanced corporate prose.
-Include honest assessments: verdicts, trade-offs, what's bad, what's good, self-corrections.
+## Research Writing
+
+**Epistemics**
+- Be thorough, tough, but fair. Infer, connect, read between lines.
+- Validate claims against code, official docs, and expert evaluations. Don't trust secondary sources uncritically.
+- Use latest sources — this is fast-moving space. Flag when something might be stale.
+- Cite sources like academic papers. Separate facts from hype.
+- When unsure, say "not sure" explicitly rather than presenting inference as fact.
+
+**Process**
+- Search and research deep and wide before forming conclusions.
+- Review your own analysis critically at least once before presenting.
+- Forward-looking: project trends, don't just describe current state.
+- Maximum clarity without losing necessary nuance.
+
+**Tone**
+- Opinionated, critical, and analytical — not balanced corporate prose.
+- Include honest assessments: verdicts, trade-offs, what's bad, what's good, self-corrections.
+
+## Output
+- Save all research to disk as markdown. This is expected, not optional.
+- Don't combine or restructure existing files without explicit instruction.
+- When summarizing: keep all important details. Sophistication matters.
+- Progressive summarization when asked: full research → standalone synthesis → exec summary (VP/Director level).
 
 ## Non-Obvious
 - `research/google-gemini-api-key.md` = what works **on this specific API key** (operational).
   `research/google-gemini-market.md` = general pricing/landscape. These serve different purposes.
-- Commits default to `docs` type. Use `fix` for broken links, `chore` for cleanup.
+- Commits use conventional commits. Default to `docs: ...`. Use `fix:` for broken links, `chore:` for cleanup.
