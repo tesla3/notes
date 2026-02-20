@@ -30,7 +30,15 @@ Wang compares OpenClaw's risk to trusting a human PA. The thread demolished this
 
 **4. Most use cases are solutions looking for problems**
 
-`louiereederson`'s top comment systematically dismantled the examples: why do you need an AI to remember what's in your freezer? Why price-track Airbnbs — a non-liquid market? Why not just open your calendar? `sharadov` called it directly: "solution looking for a problem." The thread converged on this framework. The genuinely useful bits (text→calendar, form filling) are buried under theater.
+`louiereederson`'s top comment dismantled Wang's examples one by one:
+
+- **Glove reminder:** Wang photographs gloves *he's already holding* and asks OpenClaw to remind him to buy them. Why not just... buy them?
+- **Airbnb price tracking:** Airbnb is not a liquid market with daily price swings. Setting up 30+ price-alert cron jobs for non-fungible vacation rentals is busywork disguised as optimization.
+- **Freezer cataloguing:** Requires photographing everything you add and remove — `sharadov` called it directly: "solution looking for a problem." The overhead of maintaining the system exceeds the cost of just looking in the freezer.
+- **Morning calendar prep:** "Can you not prepare for the next day by opening your calendar?" Existing calendar apps already aggregate multiple calendars. `angiolillo` pushed back with a genuine edge case (locked-down work calendars, school PDFs), but `rezonant` and `heavyset_go` noted these are already solved by calendar sharing and read-only feeds — no LLM needed.
+- **Reminder overload:** If you need reminders for everything (texts, gloves, errands), you just push notification overload into reminder overload. "Maybe you can get clawdbot to remind you to check your reminders."
+
+The thread converged on this framework: the genuinely useful bits (text→calendar, form filling) are mundane automation buried under theatrical demos designed for a rich-person lifestyle. `hahajk` went further — "we have forgotten the simple, reliable solutions of the past: a grocery list on the fridge, a weekly planner." `Larrikin` offered the strongest counterpoint, describing a Mealie→Home Assistant→geofenced grocery alerts pipeline that's actually useful, but conceded this works fine with deterministic tools and local models — no OpenClaw needed.
 
 **5. The "let go and embrace flexibility" advice is terrifying in context**
 
