@@ -50,7 +50,17 @@ Wang's core argument is that constraining the AI limits its value — you should
 
 **7. The real insight: context accumulation is genuinely powerful**
 
-Buried under the security concerns, a real insight survived: stateful AI that learns your preferences over time is qualitatively different from stateless chat. Wang's description of workflows auto-refining (e.g., learning that Resy cancellation fees should trigger a confirmation) resonated with technically-minded readers. `4corners4sides` wrote the most substantive defense, connecting this to "Agent Native Architecture" concepts. The problem isn't the vision — it's that OpenClaw is a terrible vehicle for it.
+Buried under the security concerns, a real insight survived. Wang's core thesis — and the thing that resonated even with skeptics — is that stateful AI that accumulates context over time is qualitatively different from stateless chat. He describes this as the "sweet sweet elixir of context" and calls it a "feel the AGI" moment.
+
+The concrete mechanism: OpenClaw stores workflows in Notion and auto-refines them through use. Wang's Resy example is the clearest illustration — after booking a restaurant with a cancellation fee *once*, OpenClaw now automatically warns about cancellation fees, asks for re-confirmation on non-refundable bookings, and adds cancellation deadlines to the calendar event it creates. This wasn't programmed; the workflow evolved through use. Wang notes Notion's version control lets him see diffs of how each workflow has changed over time — "little things that take months or years to dial in... with openclaw, this was nearly single shot."
+
+The broader pattern: each new permission unlocked something useful, and "the value accumulated faster than my caution could keep up." Text message monitoring learned to detect promises ("let me review this tomorrow!") and create calendar holds. Restaurant booking learned to cross-reference two people's calendars, click through Resy availability page by page, and fill in known preferences. Recipe screenshots auto-deduplicate ingredients against the existing grocery list.
+
+`4corners4sides` wrote the most substantive defense, connecting this to "Agent Native Architecture" concepts — the idea that constraining an agent to pre-made scripts limits it, and that the real power emerges when you give it a browser and let it figure things out. He contrasted his own rigid note-taking pipeline (laptop-only, text-only, hardcoded actions, manual cron) with what OpenClaw could replace. `firasd` conceded the underlying point: "tool use and discrete data storage like documents/lists etc will unlock a lot of potential in AI over just having a chatbot manipulating tokens limited to a particular context window."
+
+`consumer451` described building essentially the same thing four months earlier — hourly wake-ups, webcam checks, weather, calendar, proactive emails — but abandoned it thinking "some multi-billion dollar company was already doing this." `kaicianflone` called the compounding context examples more convincing than any demo.
+
+The thread's skeptics didn't really rebut this insight — they attacked the *vehicle* (OpenClaw's security, cost, vibe-coded nature) rather than the *vision*. `cess11` quoted the "most important relationship in amnesia" line as evidence of unhealthy attachment. `bennydog224` called it "AI psychosis." But nobody argued that stateless AI is *better* than stateful AI, or that context accumulation doesn't matter. The disagreement is about whether the current implementation is worth the risk — not about whether the direction is right.
 
 **8. The cost problem nobody solved**
 
