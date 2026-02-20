@@ -2,6 +2,20 @@
 
 ## HN Thread Distillation: "Tailscale Peer Relays is now generally available"
 
+### Background: What Tailscale Is and What Peer Relays Do
+
+Tailscale is a mesh VPN — it lets all your devices (laptop, phone, home server, cloud VM) talk to each other as if they're on the same private network, no matter where they are. It uses WireGuard encryption under the hood but handles all the painful stuff (NAT traversal, key exchange, routing) automatically.
+
+**The problem Peer Relays solves:** When two devices can't connect directly (because of strict firewalls, CGNAT, cloud NAT rules), Tailscale falls back to **DERP servers** — relay servers run by Tailscale. DERP has two big limitations: (1) **TCP only**, which adds latency, and (2) **every node must reach every DERP server** — if one node can't reach a DERP server, you get "netsplits" where parts of your network can't talk to each other.
+
+Peer Relays flip this: now **any device on your Tailscale network** can act as a relay for other devices. It uses UDP (faster), and the rule is just "if any pair of nodes can reach any relay, it works." You run `tailscale set --relay-server` on a box with good connectivity and it helps everyone else.
+
+**Why people care:** Home users behind CGNAT (increasingly common — ISPs sharing one public IP across many customers) get much better performance. Enterprise users in AWS/cloud private subnets where direct WireGuard tunnels are impossible get a production-grade path without managing custom DERP infrastructure. And it reduces dependence on Tailscale's centralized servers.
+
+**Why half the thread is arguing about business models:** Tailscale is VC-funded and has a generous free tier (3 users, 100 devices). HN's perennial worry: will they enshittify? The math says no for now — free users cost less than what traditional customer acquisition would cost, and the PLG flywheel (dev uses it at home → recommends it at work → company pays $18/user/month) is working. But it's VC-backed with IPO ambitions, so the anxiety isn't irrational.
+
+---
+
 **Article summary:** Tailscale's Peer Relays feature has reached GA, letting any Tailscale node act as a relay for other nodes. It replaces the centralized DERP-only relay model with a decentralized, UDP-capable alternative that works in restrictive NAT/cloud environments, supports static endpoints behind load balancers, and exposes Prometheus-compatible metrics. Available on all plans including free.
 
 ### Dominant Sentiment: Enthusiastic but trust-anxious
