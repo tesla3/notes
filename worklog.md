@@ -161,3 +161,10 @@
 - **Verified API access** — confirmed 30+ models available including Gemini 3 Pro/Flash, 2.5 Pro/Flash, Nano Banana, Deep Research, Gemma, TTS
 - **Configured pi** with 5 Gemini models in `~/.pi/agent/models.json` using `google-generative-ai` API type:
   - Gemini 2.5 Flash, 2.5 Pro, 2.5 Flash-Lite, 3 Pro Preview, 3 Flash Preview
+
+## 2026-02-21
+
+- **HN distill:** [Car wash reasoning failure thread](research/hn-llm-car-wash-reasoning.md) (47031580, 1511pts/948 comments)
+  - Key finding: failure is premature token commitment + post-hoc rationalization, not reasoning incapacity
+  - Spot-patching cycle already in progress (TikTok viral → models patched → trivial variants bypass patch)
+  - Best thread insight: System 1/2 framing as cost optimization by providers (keeda)

@@ -23,6 +23,7 @@ Not yet grouped into topics:
 - [Fowler Articles — Novelty Ranked](research/fowler-articles-novelty-ranked.md) — ranked by novelty to my own thinking
 - [Sam Schillace's Sunday Letters](research/sunday-letters-deep-dive.md) — Microsoft Deputy CTO on software unbundling, AI personhood, taste
 - [AI Future Careers Forecast](research/ai-future-careers-deep-forecast.md) — cascade effects, future careers, practical playbook for teens
+- [HN: LLM Car Wash Reasoning Failure](research/hn-llm-car-wash-reasoning.md) — goal-constraint violations, token commitment, whack-a-mole patching
 
 ## Conventions
 
