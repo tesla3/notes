@@ -87,6 +87,9 @@ Kiro CLI's context model: guidance (conventions) + instructions (task-specific) 
 - [OpenCode vs Claude Code vs Kiro](../research/critical-review-opencode-claude-code-kiro.md) — claim-by-claim tool comparison review
 - [Context Engineering for Kiro CLI](../research/context-engineering-kiro-cli-v2.md) — full feature reference for Kiro's context model
 
+### Multi-Agent Coordination
+- [HN: Cord — Coordinating Agent Trees](../research/hn-cord-coordinating-agent-trees.md) — spawn/fork primitives, context flow debate, framework ephemerality thesis
+
 ### Practitioner Tips & Productivity Evidence
 - [Zechner & Steinberger Tips Review](../research/critical-review-v3-final.md) — corroborated, contested, and complicated
 - [Steinberger Final Evaluation](../research/steipete-final-evaluation.md) — claims vs METR study, macro productivity data
