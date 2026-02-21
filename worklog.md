@@ -168,3 +168,7 @@
   - Key finding: failure is premature token commitment + post-hoc rationalization, not reasoning incapacity
   - Spot-patching cycle already in progress (TikTok viral → models patched → trivial variants bypass patch)
   - Best thread insight: System 1/2 framing as cost optimization by providers (keeda)
+- **HN distill:** [Ring/Nest surveillance state thread](research/hn-ring-nest-surveillance-state.md) (47023238, 935pts/663 comments)
+  - Key finding: AnthonyMouse's selective enforcement model explains the "total surveillance + rampant crime" paradox
+  - Voluntary compliance with admin subpoenas is the actionable lever nobody focuses on
+  - ~20% of thread wasted on Greenwald credibility debate, functioning as surveillance-critique deflection
