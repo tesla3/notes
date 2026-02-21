@@ -44,6 +44,11 @@ This is a personal research knowledge base. No code. Pure markdown.
 - When summarizing: keep all important details. Sophistication matters.
 - Progressive summarization when asked: full research → standalone synthesis → exec summary (VP/Director level).
 
+## Source Credibility Checks
+- When assessing an online commenter/author: check account age, karma, submission history (stories vs. comments only), reply engagement (do they argue back?), burst vs. sustained posting patterns.
+- Writing forensics: consistent structure across all comments, perfect grammar with zero typos, overwrought metaphors, and shallow "personal" details that add nothing to the argument are AI-generation signals.
+- New accounts with burst-then-silence patterns and zero reply engagement are low-trust sources regardless of comment quality.
+
 ## Non-Obvious
 - `research/google-gemini-api-key.md` = what works **on this specific API key** (operational).
   `research/google-gemini-market.md` = general pricing/landscape. These serve different purposes.
