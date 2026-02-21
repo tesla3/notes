@@ -41,3 +41,4 @@ Google's free tier is the most generous in the industry (no credit card, 1M cont
 - [Gemini API Key — What Works](../research/google-gemini-api-key.md) — per-key limits, blocked models, deprecated models, operational reference
 - [Gemini Market Research](../research/google-gemini-market.md) — pricing tiers, cost comparisons, consumer plans, competitor analysis, Dec 2025 incident
 - [Sonnet 4.6 Analysis](../research/sonnet-4-6-analysis.md) — benchmarks, cost trap, thinking modes, community reception
+- [HN: Consistency Diffusion LMs](../research/hn-consistency-diffusion-language-models.md) — CDLM speedups, DLM adoption blockers, hybrid AR+diffusion future thesis
