@@ -172,3 +172,11 @@
   - Key finding: AnthonyMouse's selective enforcement model explains the "total surveillance + rampant crime" paradox
   - Voluntary compliance with admin subpoenas is the actionable lever nobody focuses on
   - ~20% of thread wasted on Greenwald credibility debate, functioning as surveillance-critique deflection
+
+## 2026-02-21
+- **Research:** [Pacific Ridge School critical analysis](research/pacific-ridge-school.md) — deep dive on college placement
+  - Key finding: PRS sends ~1–2% to T25 vs Bishop's ~19%, Parker ~17%, LJCDS ~12% — order-of-magnitude gap at similar tuition
+  - HYPSM: ~0.9–1.3% (≈1 student/year). MIT notably absent from entire matriculation list
+  - AP scores strong (72% at 4-5), suggesting good instruction but weak college outcomes driven by 90% acceptance rate, youth (est. 2007), and less selective student body
+  - Community colleges (MiraCosta, Palomar) appear with asterisks on matriculation list — unusual for $45K school
+  - Verdict: B+ school at A+ prices. Good holistic experience, poor placement ROI vs peers

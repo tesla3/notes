@@ -25,6 +25,7 @@ Not yet grouped into topics:
 - [AI Future Careers Forecast](research/ai-future-careers-deep-forecast.md) — cascade effects, future careers, practical playbook for teens
 - [HN: LLM Car Wash Reasoning Failure](research/hn-llm-car-wash-reasoning.md) — goal-constraint violations, token commitment, whack-a-mole patching
 - [HN: Ring/Nest Surveillance State](research/hn-ring-nest-surveillance-state.md) — selective enforcement, voluntary corporate compliance, Pinkerton parallel
+- [Pacific Ridge School — Critical Analysis](research/pacific-ridge-school.md) — college placement deep dive, San Diego peer comparison, price-to-value
 
 ## Conventions
 
