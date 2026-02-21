@@ -94,6 +94,7 @@ Kiro CLI's context model: guidance (conventions) + instructions (task-specific) 
 - [Zechner & Steinberger Tips Review](../research/critical-review-v3-final.md) — corroborated, contested, and complicated
 - [Steinberger Final Evaluation](../research/steipete-final-evaluation.md) — claims vs METR study, macro productivity data
 - [HN: AI Productivity 10% Plateau](../research/hn-ai-productivity-10-percent-plateau.md) — DX 121K-dev survey, Amdahl's Law framing, composition fallacy, METR replication
+- [Amazon AI Culture Amplification](../research/amazon-ai-culture-amplification-assessment.md) — prediction audit: internal tooling lagging, self-undermining loop already active, talent drain dominant
 - [Nanoagent Survey](../research/nanoagent-survey.md) — all 5 "nano" agent repos critically assessed
 
 ## Related
