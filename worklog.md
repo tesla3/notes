@@ -180,3 +180,9 @@
   - AP scores strong (72% at 4-5), suggesting good instruction but weak college outcomes driven by 90% acceptance rate, youth (est. 2007), and less selective student body
   - Community colleges (MiraCosta, Palomar) appear with asterisks on matriculation list — unusual for $45K school
   - Verdict: B+ school at A+ prices. Good holistic experience, poor placement ROI vs peers
+- **Research (Rev 3):** Recut PRS analysis to T20 using US News 2026 rankings
+  - UC Berkeley (#15) and UCLA (#17) enter T20; Georgetown, Emory, UVA, USC drop out
+  - PRS T20: 6.5–9.0% (nearly unchanged from T25). Bishop's 30%, Parker 19%, LJCDS 18%
+  - Interesting dynamic: Parker *gains* under T20 (Berkeley is its largest feeder at 23), Bishop's *loses* (USC 24-student pipeline drops out)
+  - Extracted all four school PDFs via PyMuPDF for exact counts; found PRS website vs PDF data discrepancies (Harvard/Yale asterisk swap, Duke/Notre Dame present on website but not PDF)
+  - Updated PRS profile stats: SAT middle 50% now 1150–1450, 4 college counselors for 108 seniors
