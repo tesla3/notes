@@ -29,3 +29,15 @@ Runners-up: mdcat (best correctness, but archived/dead Jan 2025), MD-TUI (best n
 **Key insight:** The search API matters less than the model's ability to use results well. Good model + cheap API often beats mediocre model + expensive API.
 
 → [Full evaluation](../research/search-api-evaluation.md)
+
+---
+
+## Browser Tools for Coding Agents
+
+**Decision:** TBD — not yet installed, research complete.
+
+**Recommendation:** agent-browser (Vercel Labs) as primary — CLI-first, snapshot+refs workflow, 93% token reduction, session state save/load for auth. Playwright CLI (Microsoft) as secondary once it matures past v0.1.0. Firecrawl CLI for anti-bot/heavy scraping.
+
+**Key insight:** The space consolidated around CLI tools with snapshot-based workflows in early 2026. MCP-based browser tools (Playwright MCP) are being superseded by CLI alternatives that save output to files instead of injecting into context windows. Token efficiency is the differentiator.
+
+→ [Full comparison](../research/browser-tools-for-coding-agents.md)

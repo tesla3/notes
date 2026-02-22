@@ -7,6 +7,7 @@
 - **Free backup:** Gemini 2.5 Flash (250 RPD) — [free tier details →](topics/llm-models.md#gemini-free-tier)
 - **Markdown viewer:** Glow v2.1.1 (`brew install glow`) — [alternatives →](topics/dev-tools.md#markdown-renderers)
 - **Search API:** TBD (Brave recommended for paid, Serper+Jina for budget) — [evaluation →](topics/dev-tools.md#search-apis)
+- **Browser tool:** TBD (agent-browser recommended) — [comparison →](topics/dev-tools.md#browser-tools-for-coding-agents)
 
 ## Topics
 
@@ -26,6 +27,10 @@ Not yet grouped into topics:
 - [HN: LLM Car Wash Reasoning Failure](research/hn-llm-car-wash-reasoning.md) — goal-constraint violations, token commitment, whack-a-mole patching
 - [HN: Ring/Nest Surveillance State](research/hn-ring-nest-surveillance-state.md) — selective enforcement, voluntary corporate compliance, Pinkerton parallel
 - [Pacific Ridge School — Critical Analysis](research/pacific-ridge-school.md) — college placement deep dive, San Diego peer comparison, price-to-value
+- [PRS Profile Analysis (original)](research/pacific-ridge-school-profile-analysis.md) — AO-perspective reading of the 2025-26 profile
+- [PRS Profile Analysis Review](research/pacific-ridge-profile-analysis-review.md) — critical review of the above analysis
+- [PRS Comprehensive Profile Review](research/pacific-ridge-school-profile-comprehensive-review.md) — definitive AO-grade profile assessment with full contextualization
+- [HN: Karpathy on "Claws"](research/hn-karpathy-claws-llm-agents.md) — persistent AI agent systems, security impossibility, emotional vs functional appeal
 
 ## Conventions
 

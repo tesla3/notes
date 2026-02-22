@@ -3,6 +3,43 @@
 > **Note:** File paths in entries before 2026-02-17 session 7 refer to the flat structure
 > before the notes reorg. See [README.md](README.md) for current file locations.
 
+## 2026-02-21 — Session 12 (continued Bishop's scrape)
+
+- **Critical correction:** `@tbsdecisions2026` is NOT The Bishop's School (La Jolla) — it's a different school entirely
+- Correct account: `@tbs26decisions` — discovered from crashed session's /tmp screenshots
+- Salvaged 36 screenshots from /tmp/tbs_*.png (from crashed session)
+- Read all 36 screenshots via vision, compiled full dataset
+- Scrolled Instagram grid to find 8 additional posts missed by screenshots:
+  - **Ariadne Georgiou → Harvard** (Government & Ethnicity, Migration, Rights) — Jan 7, 2026
+  - Ella Kaminsky → Northeastern (Business Admin), Wyatt Stone → Duke (Mech Eng), Kayla Pfefferman → GW (Marketing)
+  - Connor Gutierrez → Santa Clara (Finance), Penelope Fountain → Alabama (Comms/Pre-Law)
+  - Kaylee Yen → NYU (Undecided), Brandon Agbayani → Santa Clara (Business Econ)
+- Total: **44 decisions across 28 universities** (36 verified from screenshots, 8 from alt-text needing confirmation)
+- Updated `tbs-class-2026-early-decisions.md` (full rewrite), `instagram-scrape-for-college-admission.md`
+- **Next:** Screenshot-verify the 8 ⚠️ entries; monitor for RD posts through April
+
+## 2026-02-21 — Session 1
+
+- Researched browser-based tools for coding agents (JS rendering, auth, heavy pages)
+- Compared: agent-browser (Vercel), Playwright CLI (Microsoft), Dev Browser (SawyerHood), Firecrawl CLI+Browser Sandbox, Stagehand, Browser Use
+- **Recommendation:** agent-browser as primary (CLI-first, snapshot+refs, session state for auth, 93% token savings)
+- Created `research/browser-tools-for-coding-agents.md`, updated `topics/dev-tools.md` and `README.md`
+- Installed agent-browser globally + as Pi skill at `~/.pi/agent/skills/agent-browser/`
+- Used agent-browser to scrape Instagram for PRS Class of 2026 early college decisions
+  - **Instagram tag:** `@prsdecisions2026` — student-run account for PRS Class of 2026
+  - **Instagram tag (to find):** Bishop's School equivalent — search `bishops decisions 2026` or similar
+  - Extracted 19 early decisions across 17 universities (Stanford, UPenn Wharton, Duke, Northwestern, USC×2, UVA, NYU, etc.)
+  - Saved to `research/prs-class-2026-early-decisions.md` + `.json`
+  - Instagram auth state saved at `~/.agent-browser/instagram-auth.json`
+- Saved reusable workflow pattern: `research/instagram-scrape-for-college-admission.md`
+- Repeated for The Bishop's School (La Jolla):
+  - **Instagram tag:** `@tbsdecisions2026` (found via abbreviation "TBS", not "bishops")
+  - 30 early decisions across 18 universities (Miami ×6, Wake Forest ×3, Alabama ×3, Northwestern, Vanderbilt, UVA, etc.)
+  - First names only (no last names unlike PRS)
+  - Captions are full English sentences — easier to parse than PRS image-only posts
+  - Saved to `research/tbs-class-2026-early-decisions.md`
+  - Updated workflow doc with search tips (abbreviation matters)
+
 ## 2026-02-19 (session 9)
 
 ### Dotfiles/Setup Audit
@@ -173,7 +210,20 @@
   - Voluntary compliance with admin subpoenas is the actionable lever nobody focuses on
   - ~20% of thread wasted on Greenwald credibility debate, functioning as surveillance-critique deflection
 
-## 2026-02-21
+## 2026-02-21 (session 11)
+- **Research:** [PRS College Profile Analysis](research/pacific-ridge-school-profile-analysis.md) — AO's reading of the school profile document
+  - V1 analyzed profile strengths (Harkness, AP cap, counseling ratio, global engagement) and weaknesses (test scores, matriculation gaps)
+  - V2 critical self-review caught major errors:
+    - FindingSchool data unreliable (Chinese-audience site with biased methodology) — removed as primary comparison source
+    - Matriculation ≠ acceptance distinction never addressed in v1
+    - AP pass rate (~51% scoring 3+) completely omitted from v1 — below national average, significant red flag
+    - Youth-of-school factor (15 graduating classes ever, zero legacy pipeline) massively underweighted
+    - UC system mechanics hand-waved instead of analyzed
+    - Post-AP courses (Diff EQ, MV Calc) barely mentioned — actually a hidden gem
+    - Recount from actual matriculation list: ~8-10% to T30, not FindingSchool's 1.79%
+  - Verdict: Sweet spot is T20-50; profile neutral at T10 (student must carry); well-constructed document with some missing data (grading scale, GPA distribution)
+
+## 2026-02-21 (session 10)
 - **Research:** [Pacific Ridge School critical analysis](research/pacific-ridge-school.md) — deep dive on college placement
   - Key finding: PRS sends ~1–2% to T25 vs Bishop's ~19%, Parker ~17%, LJCDS ~12% — order-of-magnitude gap at similar tuition
   - HYPSM: ~0.9–1.3% (≈1 student/year). MIT notably absent from entire matriculation list
