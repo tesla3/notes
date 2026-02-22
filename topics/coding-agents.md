@@ -122,4 +122,5 @@ Kiro CLI's context model: guidance (conventions) + instructions (task-specific) 
 
 ## Related
 
+- [Insights](../insights.md) — durable non-obvious findings (agent security ceiling, approval fatigue, exploit economics)
 - [Software Factory](software-factory.md) — autonomous production, verification layers, the "dark factory" thesis
