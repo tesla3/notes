@@ -47,6 +47,10 @@ Not yet grouped into topics:
 - [HN: Skip Goes Free & Open Source](research/hn-skip-open-source.md) — Swift→Android cross-platform, LGPL-3 friction, paid dev tools death, adoption flywheel gap
 - [HN: Cognitive Debt from ChatGPT](research/hn-cognitive-debt-chatgpt.md) — MIT EEG study, tool use vs skill substitution, conflict of interest, Socrates fallacy
 - [Three-Pillar Learning Framework](research/three-pillar-learning-framework.md) — theory/practice/metacognition, why LLMs differ from prior tools, critical evaluation
+- [HN: Dead Internet Theory](research/hn-dead-internet-theory.md) — incentive theory vs detection theater, em-dash witch hunt, human-bot convergence, PageRank analogy
+- [HN: The Recurring Dream of Replacing Developers](research/hn-replacing-developers-dream.md) — essential vs accidental complexity reclassification, junior pipeline crisis, democratization-by-failure, AI slop meta-irony
+- [HN: DuckDB as First Choice for Data Processing](research/hn-duckdb-first-choice-data-processing.md) — relational guarantees over speed, SQL-vs-dataframes conflation, Ibis convergence, governance moat, production gaps
+- [HN: Data Is the Only Moat](research/hn-data-is-the-only-moat.md) — VC 2×2 framework, data-as-suitcase-word, distribution-before-data sequence, unfalsifiable positioning
 
 ## Conventions
 
