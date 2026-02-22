@@ -14,9 +14,13 @@ The thread splits roughly 40/40/20: practitioners who've tried code-only and fin
 
 ### Key Insights
 
-**1. The agent-as-toolmaker pattern is the real story, not code-only execution**
+**1. The self-tooling pattern is compelling — and running on the least reliable fuel**
 
-binalpatel describes the most complete working system in the thread: an agent that creates persistent CLIs, reuses them across sessions, and lets the human use the same CLIs as a side channel. The pattern — ask → agent can't do it → agent builds a tool → tool persists → agent and human share the tool — is more interesting than the article's thesis because it produces *durable artifacts that compound*, not just ephemeral code witnesses. fudged71 claims "1000 skills by end of this week arranged in an evolving DAG," citing a 2026 paper on Evolving Programmatic Skill Networks. The convergence is clear: multiple practitioners independently arriving at self-tooling agents.
+binalpatel describes the most complete working system in the thread: an agent that creates persistent CLIs, reuses them across sessions, and lets the human use the same CLIs as a side channel. The pattern — ask → agent can't do it → agent builds a tool → tool persists → agent and human share the tool — is genuinely interesting. fudged71 claims "1000 skills by end of this week arranged in an evolving DAG." Multiple practitioners independently arriving at the same architecture is a signal worth noting.
+
+But this is entirely self-reported enthusiasm — the same signal [known to diverge from measurement by 39 percentage points](../insights.md). binalpatel's system required building CLI infrastructure, prompt engineering, persistence mechanisms — uncounted setup costs that inflate apparent value. fudged71's "1000 skills" mirrors the pattern of AI-authored code rising while productivity stays flat: *more artifacts ≠ more value*. And Naur's theory predicts trouble: agent-generated CLIs the human didn't write are opaque artifacts. The understanding needed to maintain, debug, and evolve them wasn't built during their creation.
+
+The pattern deserves investigation, not celebration. Nobody in the thread asks: how many of those CLIs actually get reused? How much time goes into debugging the generated tools vs. using established ones? What happens when 1000 skills conflict or rot?
 
 > binalpatel: "Each interaction results in updated/improved toolkits for the things you ask it for. You as the user can use all these CLIs as well which ends up an interesting side-channel way of interacting with the agent."
 
@@ -63,8 +67,12 @@ tucnak's frustrated comment — "Ctrl+F CodeAct. No hits." — points at a real 
 
 - **Self-tooling agents are reinventing package ecosystems.** binalpatel's agent builds CLIs; fudged71 has a DAG of skills; throwup238 describes embedding-based tool search. This is the early-stage equivalent of npm/pip emerging — tool discovery, versioning, dependency management. Nobody in the thread names this trajectory, but it's where self-tooling inevitably leads.
 
+- **The tedium being removed may be diagnostic.** The article frames agent friction (choosing tools, skipping files, non-exhaustive analysis) as a problem code-only solves. But [tedium is often a signal that an abstraction is wrong](../insights.md). The frustration of watching an agent `ls` and `grep` haphazardly might be telling you the task shouldn't be delegated to an agent at all, or needs a different decomposition. Code-only numbs that nerve.
+
 - **The formal verification claim is hand-waving.** The article invokes Lean and Curry-Howard as aspirational directions. The distance between "Python script that calls subprocess" and "formal proof in Lean" is roughly the distance between a napkin sketch and an architectural blueprint. Nobody in the thread pushes back on this specifically, perhaps because it's too obviously aspirational to engage with.
 
 ### Verdict
 
-The code-only agent is a rediscovery of CodeAct dressed in stronger theoretical claims than the evidence supports. binalpatel already demonstrates the actual value proposition — artifact durability, compounding tools, shared human-agent infrastructure — but nobody in the thread connects that practice to the theoretical debate. The code-vs-tools argument rages past binalpatel's comment without recognizing it as the resolution: what matters isn't whether the agent writes code or calls tools, but whether the output *persists and compounds*. What's actually emerging isn't a "code-only" paradigm but a *self-tooling* paradigm where agents bootstrap their own tool ecosystems — and the interesting open question isn't whether to use code or tools, but how to manage the lifecycle of agent-generated tools once they accumulate faster than humans can review them.
+The code-only agent is a rediscovery of CodeAct dressed in stronger theoretical claims than the evidence supports. The thread's most interesting contribution — the self-tooling pattern from binalpatel and others — deserves scrutiny, not endorsement. It *sounds* like compounding value: agents building durable tools that persist and improve. But the evidence base is pure self-report, the setup costs are uncounted, and the pattern rhymes uncomfortably with the macro-level finding that more AI-generated code isn't producing more value.
+
+The thread shares a blind spot with the article: nobody applies skepticism to the appealing practitioner narratives. iepathos interrogates the article's theory; nobody interrogates binalpatel's practice. The hardest question isn't "code or tools?" — it's whether self-tooling agents produce genuine compounding value or just an accumulating pile of opaque artifacts whose maintenance costs haven't come due yet. The enthusiasm in this thread isn't evidence either way. We'd need longitudinal data: tool reuse rates, debugging time, what happens at 1000 skills. Nobody has it.
