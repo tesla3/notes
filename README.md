@@ -32,6 +32,13 @@ Not yet grouped into topics:
 - [PRS Comprehensive Profile Review](research/pacific-ridge-school-profile-comprehensive-review.md) — definitive AO-grade profile assessment with full contextualization
 - [HN: Karpathy on "Claws"](research/hn-karpathy-claws-llm-agents.md) — persistent AI agent systems, security impossibility, emotional vs functional appeal
 - [NanoClaw Deep Dive](research/nanoclaw-deep-dive.md) — ~4K LOC container-isolated Claw alternative, security model, skills-over-features philosophy
+- [HN: AI uBlock Blacklist](research/hn-ai-ublock-blacklist.md) — blocklist governance, false positives, professionalization pressure
+- [AI Slop Blocking Landscape](research/ai-slop-blocking-landscape.md) — blocklists, detection extensions, temporal filtering, C2PA, platform responses
+- [Gondolin Agent Sandbox](research/gondolin-agent-sandbox.md) — Armin Ronacher's QEMU micro-VM sandbox, competitive landscape, Thoughtworks endorsement
+- [HN: Matchlock Agent Sandbox](research/hn-matchlock-agent-sandbox.md) — VM sandboxing for AI agents, confused deputy problem, Claude Cowork exfiltration, Opus 4.6 red-teaming
+- [Gondolin vs Matchlock](research/gondolin-vs-matchlock.md) — deep security comparison across 7 attack classes, scorecards, recommendation
+- [Matchlock Setup Guide](research/matchlock-setup-guide.md) — practical configuration burden for Pi on macOS, honest assessment
+- [Agent as Separate macOS User](research/agent-separate-macos-user.md) — low-cost OS-level isolation, shared workspace setup, threat model comparison
 
 ## Conventions
 

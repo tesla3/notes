@@ -91,6 +91,13 @@ Kiro CLI's context model: guidance (conventions) + instructions (task-specific) 
 - [OpenCode vs Claude Code vs Kiro](../research/critical-review-opencode-claude-code-kiro.md) — claim-by-claim tool comparison review
 - [Context Engineering for Kiro CLI](../research/context-engineering-kiro-cli-v2.md) — full feature reference for Kiro's context model
 
+### Agent Sandboxing & Security
+- [Gondolin Agent Sandbox](../research/gondolin-agent-sandbox.md) — Armin Ronacher's QEMU micro-VM sandbox
+- [HN: Matchlock Agent Sandbox](../research/hn-matchlock-agent-sandbox.md) — VM sandboxing, confused deputy, Claude Cowork exfiltration
+- [Gondolin vs Matchlock](../research/gondolin-vs-matchlock.md) — security comparison across 7 attack classes
+- [Matchlock Setup Guide](../research/matchlock-setup-guide.md) — practical configuration burden for Pi on macOS
+- [Agent as Separate macOS User](../research/agent-separate-macos-user.md) — low-cost OS-level isolation, 80/20 alternative to VM sandboxing
+
 ### Multi-Agent Coordination
 - [HN: Cord — Coordinating Agent Trees](../research/hn-cord-coordinating-agent-trees.md) — spawn/fork primitives, context flow debate, framework ephemerality thesis
 
