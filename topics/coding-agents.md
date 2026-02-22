@@ -98,6 +98,7 @@ Kiro CLI's context model: guidance (conventions) + instructions (task-specific) 
 - [Matchlock Setup Guide](../research/matchlock-setup-guide.md) — practical configuration burden for Pi on macOS
 - [Agent as Separate macOS User](../research/agent-separate-macos-user.md) — low-cost OS-level isolation, 80/20 alternative to VM sandboxing
 - [Agent Isolation Friction: Self-Rebuttal](../research/agent-isolation-friction-rebuttal.md) — why "just run open" was wrong, tiered access model
+- [Separate User: Pre-Commitment Analysis](../research/agent-separate-user-precommit-analysis.md) — what you get, pay, forgo, and what remains exposed
 
 ### Multi-Agent Coordination
 - [HN: Cord — Coordinating Agent Trees](../research/hn-cord-coordinating-agent-trees.md) — spawn/fork primitives, context flow debate, framework ephemerality thesis
