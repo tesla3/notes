@@ -39,6 +39,7 @@ Not yet grouped into topics:
 - [Gondolin vs Matchlock](research/gondolin-vs-matchlock.md) — deep security comparison across 7 attack classes, scorecards, recommendation
 - [Matchlock Setup Guide](research/matchlock-setup-guide.md) — practical configuration burden for Pi on macOS, honest assessment
 - [Agent as Separate macOS User](research/agent-separate-macos-user.md) — low-cost OS-level isolation, shared workspace setup, threat model comparison
+- [Agent Isolation Friction: Self-Rebuttal](research/agent-isolation-friction-rebuttal.md) — why "just run open" was wrong, tiered access as the right model
 
 ## Conventions
 
