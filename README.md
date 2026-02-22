@@ -54,6 +54,13 @@ Not yet grouped into topics:
 - [HN: Slop Is Everywhere](research/hn-slop-everywhere-eyes-to-see.md) — FYP demand/supply inversion, algorithm-forced creator slop, Vine myth, grammar-pedantry meta-irony, principal-agent blind spot
 - [HN: Loneliness Epidemic](research/hn-loneliness-epidemic.md) — cost disease framing, survivorship bias in "just organize" advice, obligation-based institution design pattern, AI companionship tension
 - [HN: Shellbox.dev — SSH Linux Boxes](research/hn-shellbox-dev.md) — suspend/resume VMs via SSH, pricing death spiral, SSH-as-management-plane insight, AI agent sandbox market timing
+- [HN: News Publishers Limit Internet Archive over AI Scraping](research/hn-news-publishers-internet-archive-ai-scraping.md) — security theater, paywall-as-pretext, gatekeeper inversion, astroturf meta-irony, "compliant get punished" dynamic
+
+## Collections
+
+- [Insights](insights.md) — durable, transferable structural insights with strong evidence
+- [AI Coding Agent Anecdotes](anecdotes.md) — first-hand practitioner reports on AI coding tools
+- [Product Design Observations](product-design.md) — novel implementation patterns and UX choices observed in the wild
 
 ## Conventions
 
