@@ -320,3 +320,21 @@
 - Non-obvious: essential/accidental complexity boundary is being reclassified in real time, not fixed
 - Offshoring smokescreen: layoffs may be offshoring dressed as AI disruption (strict9, complicated by Tade0)
 - Wrote `research/hn-replacing-developers-dream.md`
+
+## 2026-02-22
+
+- HN distill: "The Singularity will occur on a Tuesday" (756 comments, 1381 pts)
+- Article is Trojan horse: looks like sincere singularity prediction, real thesis is only human *attention* is going hyperbolic, not capability
+- Thread splits: 60% read through to social argument, 40% stopped at (deliberately bad) math and declared slop
+- ubixar crystallizes better than article: "Linear capability growth is the reality. Hyperbolic attention growth is the story."
+- Challenger vs JOLTS gap: announced layoffs spike while actual separations stay flat — the gap IS the social singularity mechanism
+- cubefox links Scott Alexander's "1960: The Year The Singularity Was Cancelled" — strongest counter-thesis, barely discussed
+- Fetched Tim Dettmers' "Why AGI Will Not Happen" — strongest hardware-grounded argument for physical ceilings
+- Wrote `research/hn-singularity-tuesday.md`
+- Added 6 insights to `insights.md`:
+  1. RLHF anti-novelty bias (second mechanism beyond prediction→mean, from hnfong + AlphaZero paper)
+  2. Verification gates alien performance (from energy123 — more precise than "theory formation" threshold)
+  3. Recognition chain bottleneck (AI compresses generation, not recognition — from hnfong + AlphaZero)
+  4. Physical ceilings nearer than assumed (from Dettmers — GPU perf/cost maxed ~2018, transformers near-optimal)
+  5. Anticipatory displacement loop (companies act on AI potential not performance — HBR confirms, JOLTS contradicts Challenger)
+  6. Infrastructure liability inversion (from Dettmers — $200B+ CAPEX as stranded-asset risk)
