@@ -3,6 +3,14 @@
 > **Note:** File paths in entries before 2026-02-17 session 7 refer to the flat structure
 > before the notes reorg. See [README.md](README.md) for current file locations.
 
+## 2026-02-21 — Session 13 (NanoClaw deep dive)
+
+- Created `research/nanoclaw-deep-dive.md` — comprehensive analysis of NanoClaw
+- Covers: architecture, security model (container isolation vs app-level), skills-over-features contribution model, competitive landscape, red flags, Cohen's AI-native coding philosophy
+- Key finding: genuinely improves blast radius but doesn't solve prompt injection or network exfiltration; VentureBeat coverage was PR-placed
+- Cross-linked from Karpathy Claws thread, added to coding-agents topic page and README
+- Sources: GitHub, nanoclaw.dev, The New Stack interview, fumics.in analysis, VentureBeat, HN threads, Reddit
+
 ## 2026-02-21 — Session 12 (continued Bishop's scrape)
 
 - **Critical correction:** `@tbsdecisions2026` is NOT The Bishop's School (La Jolla) — it's a different school entirely
