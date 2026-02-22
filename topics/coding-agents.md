@@ -109,6 +109,7 @@ Kiro CLI's context model: guidance (conventions) + instructions (task-specific) 
 
 ### Multi-Agent Coordination
 - [HN: Cord — Coordinating Agent Trees](../research/hn-cord-coordinating-agent-trees.md) — spawn/fork primitives, context flow debate, framework ephemerality thesis
+- [HN: Cursor Browser Experiment](../research/hn-cursor-browser-experiment.md) — autonomous agents produce 3M LOC non-compiling browser, "from scratch" claim debunked, verification as missing primitive
 
 ### Practitioner Tips & Productivity Evidence
 - [Zechner & Steinberger Tips Review](../research/critical-review-v3-final.md) — corroborated, contested, and complicated
