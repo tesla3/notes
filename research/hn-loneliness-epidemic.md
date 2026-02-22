@@ -26,13 +26,15 @@ mhurron links a Psychology Today article by a loneliness researcher arguing the 
 
 The data is real. But the Atlantic's analysis of the American Time Use Survey tells a different story on a different metric: American men reduced face-to-face socializing by ~30% from 2003–2022; teenagers by ~45%. What's declining may not be *loneliness as measured by surveys* but *social infrastructure and friction tolerance*. People aren't reporting more loneliness in aggregate, but the pathway from isolation to connection has gotten steeper. The terrain changed, even if the self-report hasn't caught up — or the people most affected aren't being surveyed.
 
-**3. Church is the only institution that actually implements everything the thread asks for**
+**3. Church is structurally well-designed for social binding — but not uniquely so, and not immune**
 
-Multiple commenters (peterspath with five citations, tag_coder, sam345, toomuchtodo) suggest church. The secular HN crowd is visibly uncomfortable with this, but the structural argument is strong: church provides a free third place, regular cadence, shared purpose, low barrier to entry, belonging infrastructure with built-in onboarding (greeters, small groups, meal fellowships), and a reason to keep showing up that isn't transactional.
+Multiple commenters (peterspath with five citations, tag_coder, sam345, toomuchtodo) suggest church. The structural argument is real: church provides a free third place, regular cadence, shared purpose, low barrier to entry, belonging infrastructure with built-in onboarding (greeters, small groups, meal fellowships), and theological obligation that solves the collective-action problem — you're supposed to show up even when you don't feel like it, which is exactly the mechanism loneliness disrupts.
 
-No other institution mentioned in the thread delivers all of these simultaneously. Maker spaces have waitlists. Board game meetups can't find affordable venues (gulugawa). Run clubs require fitness. Church's "unfair advantage" is that it solves the collective-action problem through theological obligation — you're supposed to show up even when you don't feel like it, which is exactly the mechanism loneliness disrupts.
+But the thread (and my initial read) evaluated church at its best and secular alternatives at their worst. 12-step programs (AA, NA) deliver the same full package — free, daily/weekly, shared purpose, walk-in barrier, sponsor-based onboarding, service obligation — and explicitly target the most desperate and isolated. Fraternal organizations historically checked every box too, before declining under the same forces now eroding church attendance. The "only institution" framing doesn't hold.
 
-d_burfoot takes this further and argues — seriously — that "we need more cults," reframing cults as "professionally managed social environments." It's provocative, but it identifies the actual gap: secular society has no institution whose *job* is managing your social life.
+Church attendance is itself in sharp decline — U.S. membership dropped below 50% in 2020 and keeps falling. The same Baumol cost disease applies: the "cost" of attending (getting dressed, driving, sitting through a service, implicit tithing pressure) competes with Netflix on Sunday morning. The obligation mechanism provides inertia, not immunity. And for secular attendees, performing belief you don't hold is cognitively taxing and can produce a *different* kind of loneliness — being surrounded by people you can't be honest with. peterspath is six months in (honeymoon period); the real test is whether church reaches the chronically lonely with miscalibrated threat functions, or only the situationally lonely who just needed a venue.
+
+d_burfoot takes the structural logic further and argues — seriously — that "we need more cults," reframing cults as "professionally managed social environments." It's provocative, but it identifies a real gap: the *design pattern* church represents (obligation + regularity + onboarding + low cost) is powerful, and secular society has few institutions that replicate it.
 
 **4. The Baumol effect framing is the thread's most underrated comment**
 
@@ -69,7 +71,7 @@ KittenInABox independently corroborates this from the behavioral side: *"There's
 | "The epidemic is a media invention" | Strong on data, weak on mechanism | Longitudinal surveys are stable, but behavioral data (time-use surveys) shows sharp decline in face-to-face contact. These measure different things. |
 | "Just go outside and do things" | Misapplied | Correct for situationally lonely people with intact social skills. Useless-to-harmful for the chronically lonely whose threat function is miscalibrated. |
 | "Ban social media / eliminate the internet" | Medium | Identifies a real contributing factor but treats it as root cause. Social media filled a gap created by car-centric development and declining institutions. |
-| "Church solves this" | Strong structurally | Empirically supported and institutionally complete. Weakened by the assumption that secular people can or should adopt religious practice instrumentally. |
+| "Church solves this" | Medium | Good structural design (obligation, regularity, onboarding), but not unique (12-step programs match it), subject to the same attendance decline as other institutions, and theological buy-in is a real cost for secular attendees. |
 | "Build walkable cities" | Strong but timescale-mismatched | Correct structural analysis (Rick76, cpursley, css_apologist). Decades to implement, requires political power that doesn't exist. Doesn't help anyone today. |
 
 ### What the Thread Misses
