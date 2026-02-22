@@ -244,3 +244,12 @@
   - Interesting dynamic: Parker *gains* under T20 (Berkeley is its largest feeder at 23), Bishop's *loses* (USC 24-student pipeline drops out)
   - Extracted all four school PDFs via PyMuPDF for exact counts; found PRS website vs PDF data discrepancies (Harvard/Yale asterisk swap, Duke/Notre Dame present on website but not PDF)
   - Updated PRS profile stats: SAT middle 50% now 1150–1450, 4 college counselors for 108 seniors
+
+## 2026-02-21
+- **Research:** Absurd (Armin Ronacher/Earendil) durable execution system — deep dive and landscape comparison
+  - Researched Absurd GitHub repo, blog post, HN thread, and user test writeups
+  - Compared against Temporal, DBOS, Inngest, Restate, Hatchet, `use workflow`
+  - Key finding: Absurd and DBOS compete directly (both Postgres-only), but different philosophy — Absurd puts complexity in SQL, DBOS puts it in client annotations
+  - Armin tried DBOS and bounced on SDK quality; DBOS improving fast
+  - Agent use case is the killer app driving durable execution adoption
+  - Wrote `research/absurd-durable-execution-landscape.md`, linked from `topics/software-factory.md`

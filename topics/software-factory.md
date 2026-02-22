@@ -33,6 +33,7 @@ Key ideas: specification sandwich (types → contracts → PBT wrapping every fu
 
 ## Deep Research
 
+- [Absurd & Durable Execution Landscape](../research/absurd-durable-execution-landscape.md) — Absurd vs Temporal vs DBOS vs Inngest vs Restate; durable execution for agent workflows
 - [Dark Software Factory Review](../research/dark-software-factory-review.md) — the frame shift from developer tools to autonomous production
 - [StrongDM Detective Report](../research/strongdm-detective-report.md) — forensic analysis of Attractor/CXDB repos, what they kept proprietary
 - [Verification, Alignment & Software Factory](../research/verification-alignment-software-factory.md) — convergence of factory verification with AI training (RLHF/GRPO)
