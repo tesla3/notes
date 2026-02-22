@@ -1,4 +1,4 @@
-← [Index](../README.md)
+← [Index](../README.md) · See also: [Formal Verification Tools Landscape](formal-verification-tools-landscape.md)
 
 ## HN Thread Distillation: "Lean 4: How the theorem prover works and why it's the new competitive edge in AI"
 
