@@ -95,6 +95,72 @@ Legend: ✅ = verified from screenshot, ⚠️ = extracted from Instagram grid a
 - Pre-Med/Pre-Law tracks: 5
 - STEM: Biology (3), Neuroscience (2), Chemistry (1), Biomedical Computation (1), Mechanical Engineering (1)
 
+### University Histogram
+
+```
+UChicago             ████  4
+NYU                  ███   3
+Duke                 ███   3
+Boston College       ███   3
+UC Irvine            ██    2
+Santa Clara          ██    2
+Northeastern         ██    2
+Brown                █     1
+Johns Hopkins        █     1
+UCLA                 █     1
+Wake Forest          █     1
+Tulane               █     1
+Emory                █     1
+WashU                █     1
+USC                  █     1
+Occidental           █     1
+Tufts                █     1
+CMC                  █     1
+Davidson             █     1
+Rochester            █     1
+Stanford             █     1
+Columbia             █     1
+GW                   █     1
+UPenn                █     1
+Harvard              █     1
+Utah                 █     1
+Chapman              █     1
+Alabama              █     1
+Lehigh               █     1
+BYU                  █     1
+TCU                  █     1
+```
+
+Top 7 schools = 19/44 (43%). UChicago is the clear top feeder.
+
+### Major Histogram (clustered)
+
+```
+Econ/Biz/Finance     ████████████████  16  (36%)
+  Economics ×5, Business Economics ×4, Finance ×2,
+  Economics/Finance ×1, Business/Economics ×1,
+  Business Admin ×1, Business ×1, Marketing ×1
+Psychology           ███████            7  (16%)
+  Psychology ×4, Psych/Business ×1,
+  Psych (Pre-Med) ×1, Undecided ×1*
+Biology/Pre-Med      █████              5  (11%)
+  Biology ×3, Bio (Pre-Med) ×1, Biz/Biology ×1
+Public Policy        ██                 2  (5%)
+Neuroscience         ██                 2  (5%)
+  Neuroscience ×1, Neuro (Pre-Med) ×1
+Other (1 each)       ██████████        10  (23%)
+  AI for Business, Biomedical Computation,
+  Chemistry, Comms Studies (Pre-Law),
+  Comp Lit & Thought (Pre-Law), Education,
+  Film & Television, Govt & EMR, Intl Relations,
+  Mechanical Engineering, Philosophy,
+  Political Science
+```
+
+*Kaylee Yen listed Undecided — not clustered but counted under Psychology per account context.*
+
+Econ/business dominates at 36%. Hard STEM (engineering, CS, computation) notably sparse — 2 of 44.
+
 ### Timeline
 - Oct 2025 (earliest): 7 posts — athletic commits + ED
 - Nov 2025: 1 post
