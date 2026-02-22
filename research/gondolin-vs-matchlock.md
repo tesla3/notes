@@ -177,6 +177,8 @@ The reasoning:
 
 **The ideal tool would combine Gondolin's network stack with Matchlock's VM boundary and in-VM hardening.** That doesn't exist yet.
 
+**Update (Jul 2026):** Sean Heelan's [exploit generation research](https://sean.heelan.io/2026/01/18/on-the-coming-industrialisation-of-exploit-generation-with-llms/) strengthens the case for Matchlock's foundation-first approach. Heelan got Opus 4.5 and GPT-5.2 to generate 40+ working exploits for a zero-day vulnerability, bypassing ASLR + CFI + shadow stacks + seccomp, at ~$30-50 per exploit chain. This isn't CTF benchmark performance — it's primary evidence of LLMs developing novel exploit chains against real targets. Gondolin's lack of in-VM hardening (no seccomp, no capability drops) means an agent with kernel access inside the guest could attempt these techniques against the QEMU↔host interface. The economics ($30-50 per chain) make this practical, not theoretical.
+
 ---
 
 ## Sources

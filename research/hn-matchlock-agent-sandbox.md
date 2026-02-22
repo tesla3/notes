@@ -68,6 +68,8 @@ A human pentester would try a subset of these — probably kernel CVEs, metadata
 
 The 93% Cybench solve rate makes this concrete. Cybench is a benchmark of 40 professional-level Capture The Flag challenges from real CTF competitions — crypto, web exploitation, reverse engineering, binary exploitation. Opus 4.6 solves 93% of them. This isn't a toy fuzzer. It's a security researcher with encyclopedic knowledge of every published CVE, every exploitation technique, every kernel subsystem — that works 24/7 and never decides "that's probably not worth trying."
 
+**Update (Jul 2026):** Sean Heelan's [exploit generation research](https://sean.heelan.io/2026/01/18/on-the-coming-industrialisation-of-exploit-generation-with-llms/) provides primary-source evidence that goes beyond CTF benchmarks. He pointed Opus 4.5 and GPT-5.2 at a *zero-day* QuickJS vulnerability and got 40+ working exploits across 6 scenarios — including bypassing ASLR, non-executable memory, full RELRO, fine-grained CFI, hardware shadow stacks, and seccomp sandboxes. Cost: ~$30-50 per exploit chain, under an hour for most challenges. GPT-5.2's hardest solve chained 7 glibc exit-handler calls to bypass CFI + shadow stack + seccomp simultaneously — a technique Heelan hadn't seen documented. His conclusion: "we should start assuming that in the near future the limiting factor on a state or group's ability to develop exploits is going to be their token throughput over time, and not the number of hackers they employ." This directly validates the concern that Matchlock's static defenses face an attacker that gets materially stronger every few months. ([Source code](https://github.com/SeanHeelan/anamnesis-release/))
+
 **The defense implication:**
 
 jingkai_he added seccomp-BPF filters and capability drops specifically because of what the red-teaming revealed: *"from my first hand experience what the agent will exploit without cap drops and seccomps is genuinely wild."* The defense-in-depth stack inside Matchlock's VM is now: microVM boundary (primary) → new PID + mount namespace → capability drops (SYS_PTRACE, SYS_ADMIN) → `no_new_privs` → seccomp-BPF filter blocking `process_vm_readv/writev`, `ptrace`, kernel module loading.
@@ -206,5 +208,6 @@ The thread correctly identifies that VM-level isolation is the minimum viable sa
 - [Matchlock GitHub](https://github.com/jingkaihe/matchlock)
 - [Claude Cowork Exfiltration — PromptArmor](https://www.promptarmor.com/resources/claude-cowork-exfiltrates-files)
 - [Cybench](https://cybench.github.io/) — LLM cybersecurity benchmark (Opus 4.6 at 93% solve rate)
+- [Sean Heelan: Industrialisation of Exploit Generation](https://sean.heelan.io/2026/01/18/on-the-coming-industrialisation-of-exploit-generation-with-llms/) — 40+ zero-day exploits via Opus 4.5 / GPT-5.2, $30-50/chain
 - [Gondolin](https://github.com/earendil-works/gondolin) — Armin Ronacher's competing sandbox
 - [LangChain: Two sandbox patterns](https://blog.langchain.com/the-two-patterns-by-which-agents-connect-sandboxes/)

@@ -92,8 +92,12 @@ Kiro CLI's context model: guidance (conventions) + instructions (task-specific) 
 - [Context Engineering for Kiro CLI](../research/context-engineering-kiro-cli-v2.md) — full feature reference for Kiro's context model
 
 ### Agent Sandboxing & Security
+
+**Landscape status (Jul 2026):** 25+ sandbox tools/approaches now exist (Gondolin, Matchlock, yolobox, bubblewrap-tui, cco, sandvault, construct-cli, agentbox, shellbox.dev, sandbox-run, claudebox, code-on-incus, agentic-devcontainer, Docker Sandboxes, etc.) — no convergence on a standard approach. Docker has confirmed MicroVM-backed sandboxes replacing DinD (`ejia`, Docker PM, in [HN thread](../research/hn-claude-code-sandboxing-2026.md)). Sean Heelan's [exploit generation research](https://sean.heelan.io/2026/01/18/on-the-coming-industrialisation-of-exploit-generation-with-llms/) demonstrates LLMs generating 40+ zero-day exploits at $30-50/chain — static sandbox defenses face an attacker that improves every model generation.
+
+- [HN: Claude Code Sandboxing Approaches](../research/hn-claude-code-sandboxing-2026.md) — popular-level survey (351pts, 258 comments): approval fatigue as security failure, sandbox zoo, Vagrant sync-folder pitfalls, YOLO survivorship bias
 - [Gondolin Agent Sandbox](../research/gondolin-agent-sandbox.md) — Armin Ronacher's QEMU micro-VM sandbox
-- [HN: Matchlock Agent Sandbox](../research/hn-matchlock-agent-sandbox.md) — VM sandboxing, confused deputy, Claude Cowork exfiltration
+- [HN: Matchlock Agent Sandbox](../research/hn-matchlock-agent-sandbox.md) — VM sandboxing, confused deputy, Claude Cowork exfiltration, Opus 4.6 red-teaming
 - [Gondolin vs Matchlock](../research/gondolin-vs-matchlock.md) — security comparison across 7 attack classes
 - [Matchlock Setup Guide](../research/matchlock-setup-guide.md) — practical configuration burden for Pi on macOS
 - [Agent as Separate macOS User](../research/agent-separate-macos-user.md) — low-cost OS-level isolation, 80/20 alternative to VM sandboxing
