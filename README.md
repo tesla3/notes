@@ -41,6 +41,7 @@ Not yet grouped into topics:
 - [Agent as Separate macOS User](research/agent-separate-macos-user.md) — low-cost OS-level isolation, shared workspace setup, threat model comparison
 - [Agent Isolation Friction: Self-Rebuttal](research/agent-isolation-friction-rebuttal.md) — why "just run open" was wrong, tiered access as the right model
 - [Separate User: Pre-Commitment Analysis](research/agent-separate-user-precommit-analysis.md) — what you get, pay, forgo; decision framework
+- [Agent Security: What People Actually Do](research/agent-security-landscape-what-people-do.md) — OpenClaw vs interactive crowd, LuLu + dedicated accounts, tiered security
 
 ## Conventions
 

@@ -253,3 +253,35 @@
   - Armin tried DBOS and bounced on SDK quality; DBOS improving fast
   - Agent use case is the killer app driving durable execution adoption
   - Wrote `research/absurd-durable-execution-landscape.md`, linked from `topics/software-factory.md`
+
+## 2026-02-21
+
+- Distilled HN thread on [ai-ublock-blacklist](https://news.ycombinator.com/item?id=47098582) — governance problems, AP News false positive, maintainer removed combative FAQ mid-thread
+- Researched the full AI slop blocking landscape: domain blocklists (laylavish 5.2k stars, alvi-se, Stevoisiak), content detectors (DeSlop, AI Content Shield, SkipSlop), temporal filtering (Slop Evader), platform responses (Google March 2024 update, YouTube monetization rules), authenticity certification (C2PA, Mosseri's "fingerprint the real")
+- Key finding: client-side tools recapitulate email RBL history — solo maintainers → professionalization → platform absorption. Real solution requires Google/platforms to internalize filtering. C2PA is correct long-term direction but only works for media, not text.
+- Wrote `research/hn-ai-ublock-blacklist.md` and `research/ai-slop-blocking-landscape.md`, linked from README
+
+## 2026-02-21
+
+- Researched Gondolin (earendil-works/gondolin) — Armin Ronacher's QEMU-based agent sandbox with JS-programmable network/filesystem
+- Key findings: 17 days old, 551 stars, Thoughtworks endorsement, closest competitor is Matchlock, differentiated by JS-programmable network stack and secret placeholder injection
+- Wrote `research/gondolin-agent-sandbox.md`
+- Distilled HN Matchlock thread (46932343) — VM sandboxing for agents, confused deputy consensus, Claude Cowork exfiltration via allowlisted Anthropic API, Opus 4.6 red-team anecdotes, useradd contrarian argument
+- Key finding: network allowlisting doesn't solve exfiltration when allowed hosts are general-purpose APIs. Prompt-injected agent produces identical traffic to legitimate agent. Content-aware egress requires LLM-judging-LLM recursion.
+- Wrote `research/hn-matchlock-agent-sandbox.md`
+- Deep comparison of Gondolin vs Matchlock across 7 solvable attack classes
+- Matchlock wins on VM boundary (Firecracker) and in-VM hardening (seccomp-BPF). Gondolin wins on network policy (JS ethernet stack, synthetic DNS, rebinding protection) and filesystem awareness (symlink protection, MemoryProvider).
+- Recommendation: Matchlock today (foundation > policy sophistication), watch Gondolin. Ideal tool would combine Gondolin's network stack with Matchlock's VM boundary.
+- Wrote `research/gondolin-vs-matchlock.md`
+- Practical setup analysis for Matchlock with Pi: 6 layers of config, network allowlist is the ongoing tax, Pi integration doesn't exist (Gondolin's advantage)
+- Wrote `research/matchlock-setup-guide.md`
+- Elaborated "agent as separate macOS user" — the 80/20 play from matchlock guide. Covers: macOS permission model (750 home dirs, 700 sensitive dirs, TCC), user creation, shared workspace with setgid group, SSH/sudo workflow, Homebrew sharing, threat model comparison table, layering with Matchlock
+- Wrote `research/agent-separate-macos-user.md`, linked from matchlock guide and coding-agents topic page
+- Self-rebuttal: "just run open" was wrong — undersold threat frequency, bad analogy, confused frequency with expected value, overclaimed friction
+- Wrote `research/agent-isolation-friction-rebuttal.md`
+- Pre-commitment analysis of separate user: real setup is 60-90 min not 15, /tmp leaks 63 world-readable files, shared workspace permissions fragile, discipline decay, agent's own creds fully exposed
+- Wrote `research/agent-separate-user-precommit-analysis.md`
+- Landscape survey: what people actually do for agent security. Two worlds: autonomous (OpenClaw/Mac Mini) vs interactive (Claude Code/Pi). Key finding: being on-screen is a real security control the autonomous crowd doesn't have
+- Emerging pattern: LuLu outbound firewall + dedicated agent service accounts (ChatPRD pattern) = highest value for interactive use
+- Separate user is Tier 3 (optional) for interactive use when LuLu + dedicated accounts are in place
+- Wrote `research/agent-security-landscape-what-people-do.md`

@@ -99,6 +99,7 @@ Kiro CLI's context model: guidance (conventions) + instructions (task-specific) 
 - [Agent as Separate macOS User](../research/agent-separate-macos-user.md) — low-cost OS-level isolation, 80/20 alternative to VM sandboxing
 - [Agent Isolation Friction: Self-Rebuttal](../research/agent-isolation-friction-rebuttal.md) — why "just run open" was wrong, tiered access model
 - [Separate User: Pre-Commitment Analysis](../research/agent-separate-user-precommit-analysis.md) — what you get, pay, forgo, and what remains exposed
+- [Agent Security: What People Actually Do](../research/agent-security-landscape-what-people-do.md) — interactive vs autonomous, LuLu + dedicated accounts pattern, tiered recommendations
 
 ### Multi-Agent Coordination
 - [HN: Cord — Coordinating Agent Trees](../research/hn-cord-coordinating-agent-trees.md) — spawn/fork primitives, context flow debate, framework ephemerality thesis
