@@ -53,6 +53,7 @@ Not yet grouped into topics:
 - [HN: Data Is the Only Moat](research/hn-data-is-the-only-moat.md) — VC 2×2 framework, data-as-suitcase-word, distribution-before-data sequence, unfalsifiable positioning
 - [HN: Slop Is Everywhere](research/hn-slop-everywhere-eyes-to-see.md) — FYP demand/supply inversion, algorithm-forced creator slop, Vine myth, grammar-pedantry meta-irony, principal-agent blind spot
 - [HN: Loneliness Epidemic](research/hn-loneliness-epidemic.md) — cost disease framing, survivorship bias in "just organize" advice, obligation-based institution design pattern, AI companionship tension
+- [HN: Shellbox.dev — SSH Linux Boxes](research/hn-shellbox-dev.md) — suspend/resume VMs via SSH, pricing death spiral, SSH-as-management-plane insight, AI agent sandbox market timing
 
 ## Conventions
 
