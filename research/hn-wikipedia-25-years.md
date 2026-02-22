@@ -30,13 +30,13 @@ This is the thread's most important unaddressed issue. `fragebogen` naively sugg
 
 The WP:CANCER essay (linked by `amiga386`) lays out the numbers starkly: from 2005 to 2018, page views grew 11-12x while overall spending grew 1,250x. Wikipedia employs ~300 staff and burns through its intake annually with no meaningful financial reserves. `adventured` predicts confidently: "Wikipedia is already dead, they just don't know it yet. They'll get Stackoverflowed."
 
-The Wikimedia Foundation's own data (published October 2025) confirms ~8% decline in human pageviews year-over-year, attributed to AI-generated search answers and social media replacing direct visits. The foundation's response — "Future Audiences" experiments on TikTok, Roblox, and Instagram — reads as desperation dressed as innovation.
+According to Wikipedia's own stats (linked by `fragebogen`), edit rates appear steady but `lysace` notes activity is "plateauing" — which in a growing-internet context means relative decline. `adventured` predicts traffic will decline as LLMs absorb the lookup use case, and they'll "collapse into a spiral of cut-backs, as they operate on a present structure that burns most of its financial capability annually."
 
 The fundraising criticism is real but poorly aimed. `jader201` complains about intrusive donation banners; `zozbot234` counters that for a top-10 website it's running on a shoestring. The actual concern isn't that they ask too much — it's that they've built a cost structure that assumes perpetual donation growth while their traffic base erodes. `Levitz` captures it precisely: "Wikipedia should be set for life at this point, and they insist on rejecting that notion."
 
 **4. The Wales-Sanger co-founder dispute reveals Wikipedia's identity crisis**
 
-`amiga386` notes that the anniversary site credits "Founder Jimbo Wales" without mentioning Larry Sanger, who coined the name, proposed the wiki concept, and served as chief organizer during the critical first year. The famous walkout video (Wales leaves an interview after 48 seconds when asked "who are you?") draws extended discussion.
+`amiga386` notes that the anniversary site credits "Founder Jimbo Wales" without mentioning Larry Sanger, who coined the name, proposed the wiki concept, and served as chief organizer during the critical first year. A video clip where Wales walks out of an interview after being asked "So, who are you?" draws extended discussion.
 
 The thread splits predictably on this — `an_ko` frames it as right-wing harassment, `hallole` and `themafia` see Wales as simply unable to share credit. But `amiga386` delivers the real punch: "Wikipedia shows integrity even when its co-founder does not" — because Wikipedia's own article on Wales documents the dispute, his attempts to edit his own biography, and his downplaying of Bomis. The platform's commitment to accuracy extends to embarrassing its own founder, which is genuinely remarkable.
 
@@ -58,7 +58,7 @@ This isn't just a copyright issue — it's a systemic incentive problem. Wikiped
 |----------|---------|------|
 | "Wikipedia is politically biased" | Weak as stated | Repeatedly asserted without examples. The real phenomenon is cultural embedding, not ideological capture. |
 | "Fundraising is excessive/bloated" | Medium | Legitimate concern about cost structure growth vs. traffic, but misdirected at banner frequency rather than organizational spending trajectory. |
-| "LLMs will kill Wikipedia" | Strong premise, premature conclusion | Traffic is declining (~8% YoY). But LLMs *depend* on Wikipedia for training data, creating mutual dependency, not simple replacement. |
+| "LLMs will kill Wikipedia" | Strong premise, premature conclusion | Activity is plateauing while the internet grows, and LLMs absorb the quick-lookup use case. But LLMs *depend* on Wikipedia for training data, creating mutual dependency, not simple replacement. |
 | "Just edit it yourself" | Misapplied | Ignores the documented gatekeeping problem and the expertise asymmetry (math articles requiring post-graduate knowledge to fix). |
 | "Wikipedia is the worst except for everything else" | Strong | No one in the thread identifies a credible alternative. Grokipedia (`hit8run`) gets dismissed — its search can't even find a recent HBO show. |
 
