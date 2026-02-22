@@ -51,6 +51,8 @@ Not yet grouped into topics:
 - [HN: The Recurring Dream of Replacing Developers](research/hn-replacing-developers-dream.md) — essential vs accidental complexity reclassification, junior pipeline crisis, democratization-by-failure, AI slop meta-irony
 - [HN: DuckDB as First Choice for Data Processing](research/hn-duckdb-first-choice-data-processing.md) — relational guarantees over speed, SQL-vs-dataframes conflation, Ibis convergence, governance moat, production gaps
 - [HN: Data Is the Only Moat](research/hn-data-is-the-only-moat.md) — VC 2×2 framework, data-as-suitcase-word, distribution-before-data sequence, unfalsifiable positioning
+- [HN: Slop Is Everywhere](research/hn-slop-everywhere-eyes-to-see.md) — FYP demand/supply inversion, algorithm-forced creator slop, Vine myth, grammar-pedantry meta-irony, principal-agent blind spot
+- [HN: Loneliness Epidemic](research/hn-loneliness-epidemic.md) — cost disease framing, survivorship bias in "just organize" advice, church as structural solution, AI companionship tension
 
 ## Conventions
 
