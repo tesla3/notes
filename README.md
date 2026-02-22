@@ -42,6 +42,7 @@ Not yet grouped into topics:
 - [Agent Isolation Friction: Self-Rebuttal](research/agent-isolation-friction-rebuttal.md) — why "just run open" was wrong, tiered access as the right model
 - [Separate User: Pre-Commitment Analysis](research/agent-separate-user-precommit-analysis.md) — what you get, pay, forgo; decision framework
 - [Agent Security: What People Actually Do](research/agent-security-landscape-what-people-do.md) — OpenClaw vs interactive crowd, LuLu + dedicated accounts, tiered security
+- [Claude Opus 4.6: 1M Context Window Analysis](research/claude-opus-4.6-1m-context-window.md) — 1M vs 200K, attention dilution research, practitioner evidence, verdict
 
 ## Conventions
 
