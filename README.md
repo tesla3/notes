@@ -46,6 +46,7 @@ Not yet grouped into topics:
 - [Claude Opus 4.6: 1M Context Window Analysis](research/claude-opus-4.6-1m-context-window.md) — 1M vs 200K, attention dilution research, practitioner evidence, verdict
 - [HN: Skip Goes Free & Open Source](research/hn-skip-open-source.md) — Swift→Android cross-platform, LGPL-3 friction, paid dev tools death, adoption flywheel gap
 - [HN: Cognitive Debt from ChatGPT](research/hn-cognitive-debt-chatgpt.md) — MIT EEG study, tool use vs skill substitution, conflict of interest, Socrates fallacy
+- [Three-Pillar Learning Framework](research/three-pillar-learning-framework.md) — theory/practice/metacognition, why LLMs differ from prior tools, critical evaluation
 
 ## Conventions
 
