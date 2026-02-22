@@ -56,6 +56,7 @@ Not yet grouped into topics:
 - [HN: Shellbox.dev — SSH Linux Boxes](research/hn-shellbox-dev.md) — suspend/resume VMs via SSH, pricing death spiral, SSH-as-management-plane insight, AI agent sandbox market timing
 - [HN: News Publishers Limit Internet Archive over AI Scraping](research/hn-news-publishers-internet-archive-ai-scraping.md) — security theater, paywall-as-pretext, gatekeeper inversion, astroturf meta-irony, "compliant get punished" dynamic
 - [HN: Eight More Months of Agents](research/hn-eight-more-months-agents.md) — founder testimonial vs organizational reality, $170 taste gap, tribal knowledge scaling, process bottleneck blindspot
+- [HN: Vouch — Community Trust Management](research/vouch-hn-thread.md) — judgment laundering through mechanism, kayfabe insight, web-of-trust redux, newcomer exclusion tradeoff
 
 ## Collections
 

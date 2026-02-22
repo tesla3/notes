@@ -338,3 +338,13 @@
   4. Physical ceilings nearer than assumed (from Dettmers — GPU perf/cost maxed ~2018, transformers near-optimal)
   5. Anticipatory displacement loop (companies act on AI potential not performance — HBR confirms, JOLTS contradicts Challenger)
   6. Infrastructure liability inversion (from Dettmers — $200B+ CAPEX as stranded-asset risk)
+
+## 2026-02-21
+
+- Distilled HN thread on Mitchell Hashimoto's Vouch (community trust management for OSS)
+  - 1077 pts, 486 comments — significant community engagement
+  - Saved to `research/vouch-hn-thread.md`
+- Cross-referenced against insights.md — found one genuinely new structural insight:
+  - **Rejection machinery ∝ courtesy norms**: communities build automated rejection systems not for efficiency but for emotional cover. The stronger the professional courtesy norm, the more elaborate the machinery. Placed after Democratization-Failure Tradeoff.
+- Existing insights already covered: Apprenticeship Doom Loop (Vouch tightens it), Democratization-Failure Tradeoff (Vouch enacts it), intent vectors (the algorithmic alternative the thread mostly misses)
+- Updated: insights.md (new entry), README.md (new research link)
