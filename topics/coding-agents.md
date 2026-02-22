@@ -93,6 +93,8 @@ Kiro CLI's context model: guidance (conventions) + instructions (task-specific) 
 
 ### Agent Sandboxing & Security
 
+- **[Agent Security Synthesis](../research/agent-security-synthesis.md)** — distillation of all security research: core problem, solution landscape, personal posture, what's unsolvable
+
 **Landscape status (Jul 2026):** 25+ sandbox tools/approaches now exist (Gondolin, Matchlock, yolobox, bubblewrap-tui, cco, sandvault, construct-cli, agentbox, shellbox.dev, sandbox-run, claudebox, code-on-incus, agentic-devcontainer, Docker Sandboxes, etc.) — no convergence on a standard approach. Docker has confirmed MicroVM-backed sandboxes replacing DinD (`ejia`, Docker PM, in [HN thread](../research/hn-claude-code-sandboxing-2026.md)). Sean Heelan's [exploit generation research](https://sean.heelan.io/2026/01/18/on-the-coming-industrialisation-of-exploit-generation-with-llms/) demonstrates LLMs generating 40+ zero-day exploits at $30-50/chain — static sandbox defenses face an attacker that improves every model generation.
 
 - [HN: Claude Code Sandboxing Approaches](../research/hn-claude-code-sandboxing-2026.md) — popular-level survey (351pts, 258 comments): approval fatigue as security failure, sandbox zoo, Vagrant sync-folder pitfalls, YOLO survivorship bias
