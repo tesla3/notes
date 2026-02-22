@@ -14,7 +14,7 @@
 - [LLM Models & Pricing](topics/llm-models.md) — Gemini landscape, Sonnet 4.6, free tier, API key status
 - [Coding Agents](topics/coding-agents.md) — Pi, OpenClaw, agent landscape, tool comparisons, practitioner evidence
 - [Software Factory](topics/software-factory.md) — autonomous production, dark factory thesis, verification layers, StrongDM
-- [Developer Tools](topics/dev-tools.md) — terminal markdown renderers, search APIs
+- [Developer Tools](topics/dev-tools.md) — terminal markdown renderers, search APIs, browser comparison
 
 ## Other Research
 

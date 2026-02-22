@@ -41,3 +41,15 @@ Runners-up: mdcat (best correctness, but archived/dead Jan 2025), MD-TUI (best n
 **Key insight:** The space consolidated around CLI tools with snapshot-based workflows in early 2026. MCP-based browser tools (Playwright MCP) are being superseded by CLI alternatives that save output to files instead of injecting into context windows. Token efficiency is the differentiator.
 
 → [Full comparison](../research/browser-tools-for-coding-agents.md)
+
+---
+
+## Web Browsers (macOS)
+
+**Decision:** Safari as daily driver, Firefox kept for specific use cases.
+
+On 8 GB M1, Safari wins decisively: 20-40% less RAM than Chrome, 2-3x more power-efficient (WebKit vs Chromium/Gecko per powermetrics), seamless macOS integration (Keychain, Handoff, Touch ID, Spotlight). uBlock Origin Lite available on Safari since Aug 2025.
+
+Firefox stays installed for Multi-Account Containers (unique killer feature — cookie isolation between contexts), full uBlock Origin, and web dev. Chrome has no role on Apple hardware — heaviest RAM, worst battery, Google's data collection, and MV3 crippled ad blockers.
+
+→ [Full comparison](../research/browser-comparison-macos.md)
