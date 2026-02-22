@@ -1,458 +1,266 @@
 ← [Coding Agents](../topics/coding-agents.md) · [Index](../README.md)
 
-# Coding Agents: Complete Insight Inventory
+# Coding Agents: Insight Inventory
 
-*Compiled 2025-02-21. Every distinct insight about AI coding agents across the research corpus, de-duplicated, categorized, and assessed.*
-
----
-
-## How to Read This
-
-Each insight is tagged:
-
-- **Source(s):** which research file(s) contribute it
-- **Strength:** how well-evidenced it is (Strong / Medium / Weak / Unproven)
-- **Status:** Established (multiple independent sources) / Emerging (single strong source) / Contested (evidence both ways)
-
-Insights are grouped by theme, then ordered by importance within each group.
+*Compiled 2025-02-21, revised 2026-02-21. Cross-checked against internal and external sources, connected, editorially audited.*
 
 ---
 
-## I. Productivity & Measurement
+**Strength:** Strong (multiple independent sources) · Medium (single strong source or consistent anecdotes) · Weak (single observation)
+**Status:** Established · Emerging · Contested
 
-### 1. Self-reported AI productivity gains are systematically illusory
-The METR RCT (16 experienced devs, 246 tasks, randomized): AI tools *increased* completion time by 19%. Devs estimated 20% faster. Expert economists predicted 39% faster. Mike Judge's independent A/B test: ~21% slowdown. DX survey (121K devs): self-reported gain plateaued at ~10%.
-
-**Source:** hn-ai-productivity-10-percent-plateau, hn-agentic-coding-evidence
-**Strength:** Strong — RCT + independent replication + large survey convergence
-**Status:** Established
-
-### 2. The 10% organizational plateau is an equilibrium, not a waypoint
-Individual devs save ~4 hrs/week. Org-level productivity is flat. The missing hours go to: more code to review, juniors producing uncomprehended code, faster delivery of the wrong thing. Individual optimization degrades the shared environment.
-
-**Source:** hn-ai-productivity-10-percent-plateau (composition fallacy insight)
-**Strength:** Strong — survey data + multiple independent experience reports
-**Status:** Established
-
-### 3. Amdahl's Law applied to software orgs: coding speed was never the bottleneck
-Requirements, decision-making, review, meetings, and communication dominate. A 100% coding speed increase yields marginal org-level improvement because coding is a minority of total work.
-
-**Source:** hn-ai-productivity-10-percent-plateau, brooks-essential-complexity
-**Strength:** Strong — near-universal agreement, well-theorized
-**Status:** Established
-
-### 4. AI amplifies existing organizational culture rather than fixing it
-Companies with strong quality practices see velocity gains. Companies with weak practices see more outages. DORA 2025 data supports this. The tool is a multiplier, not a transformer.
-
-**Source:** hn-ai-productivity-10-percent-plateau (buried finding), ai-coding-agents-feb-2026
-**Strength:** Strong — large survey + DORA data
-**Status:** Established, under-discussed
-
-### 5. "Where's the shovelware?" — aggregate software output hasn't increased
-If AI makes devs 2-10x productive, GitHub project creation, app store submissions, and package registry activity should spike. BigQuery data shows flat lines across all sectors. No macro-level signal of the claimed revolution.
-
-**Source:** hn-ai-productivity-10-percent-plateau (Mike Judge data)
-**Strength:** Medium — single analyst, but data is public and nobody refuted it
-**Status:** Emerging
-
-### 6. "Wouldn't have built it otherwise" — redefining the productivity denominator
-The strongest honest case for AI coding isn't speed on existing tasks — it's lowering activation energy for projects below the effort threshold. Personal tools, homelab projects, weekend experiments. This value is real but invisible to productivity studies measuring time-on-task.
-
-**Source:** hn-agentic-coding-evidence (pj4533, theshrike79, xsh6942)
-**Strength:** Medium — consistent anecdotal pattern, but no measurement
-**Status:** Emerging, important — the one argument METR data can't touch
+**Source-quality flags** used throughout:
+- ⚠️ **Vendor data** — from a company with commercial interest in the finding
+- ⚠️ **Interested party** — researcher/org with incentive to frame results favorably
+- ⚠️ **Own analysis** — inference drawn by this corpus, not externally validated
 
 ---
 
-## II. Code Quality & Technical Debt
+## The Central Chain
 
-### 7. AI-generated code has measurably more defects
-CodeRabbit (Feb 2026): 1.4x more critical issues, 1.7x more major issues. Logic errors 1.75x. Security issues 1.57x. Excessive I/O ~8x. Cortex: PRs/author +20% YoY, incidents/PR +23.5%, change failure rates +30%.
+AI coding tools accelerate the part of software development that was never the bottleneck. These four insights are one argument.
 
-**Source:** ai-coding-agents-feb-2026 (Section IV quality data)
-**Strength:** Strong — multiple independent measurement sources
-**Status:** Established
+### 1. Coding speed is rarely the organizational bottleneck
+Requirements, decisions, review, communication dominate in teams and orgs. Amdahl's Law: even 100% faster coding yields marginal org-level improvement when coding is a minority of total work.
 
-### 8. Code quality is being quietly redefined downward
-Cultural shift in real time: from "structurally sound" to "does the behavior work." Practitioners increasingly accept functional-but-messy code. Historical precedent: code in major systems was always messy. LLM output fits the existing reality, not an aspirational standard.
+**Scope caveat:** This applies most to orgs and teams. For solo developers on personal projects, coding speed *is* often the binding constraint — which is why #22 (activation energy) works where organizational productivity doesn't.
 
-**Source:** hn-agentic-coding-evidence (cypherfox, _ink_, dangus), hn-ai-coding-enjoyable
-**Strength:** Medium — consistent anecdotal pattern
-**Status:** Emerging
+**Strong · Established** — near-universal agreement in developer communities, well-theorized (Brooks, "No Silver Bullet," 1986). Brooks argued essential complexity (specifications, design, testing of conceptual constructs) dominates, and attacking accidental complexity yields only marginal gains. Verified: Wikipedia summary and original paper confirm the framework is applied correctly here.
 
-### 9. "LLM debt" — the comprehension cost nobody's amortizing
-AI saves time now, creates a deferred comprehension deficit. If you never touch the code again, it's free. If you need to revise, you pay more than you saved. Feels like working in someone else's codebase.
+### 2. AI handles incidental complexity; essential complexity is untouched and now hidden
+Boilerplate, config, CRUD, migrations, API glue — AI handles well. Business rules, edge cases, domain interactions, architectural tradeoffs — it can't. By making the easy parts trivial, AI makes the hard parts *harder to see*. Code that looks correct but misunderstands the domain.
 
-**Source:** hn-ai-coding-enjoyable (munk-a coined the term, zooi, bitwize)
-**Strength:** Medium — independently discovered by three commenters from different angles
-**Status:** Established (named)
+AI does accelerate *discovery* of essential complexity through rapid prototyping — you find out faster that your domain model is wrong. But it can't resolve the tradeoffs once discovered.
 
-### 10. The maintenance time bomb
-Building is now cheap. Maintenance costs haven't changed. Vibe-coded systems may be *harder* to maintain because the creator doesn't understand what was generated. Nobody has maintained an AI-generated codebase for years yet.
+**Strong · Established** — near-consensus + Brooks framework. MIT Technology Review (Dec 2025) independently confirms: "AI tools also struggle with large, complex code bases." Alexandru Nedelcu (Nov 2025) adds the Peter Naur angle: programming is theory-building, and AI-generated code lacks the embedded understanding that makes software maintainable.
 
-**Source:** hn-vibe-coding-saas-a16z (packetlost's receipts), hn-agentic-coding-evidence (baxtr)
-**Strength:** Medium — concrete anecdotes + theoretical backing
-**Status:** Emerging — insufficient time has passed for long-term evidence
+### 3. Self-reported productivity gains are systematically inflated; the ~10% org-level plateau is stable
+METR RCT (16 experienced devs, 246 tasks on their own mature repos, randomized, Feb-June 2025, tools: Cursor Pro with Claude 3.5/3.7 Sonnet): AI *increased* completion time by 19%. Devs estimated 20% faster. Economists predicted 39% faster.
 
-### 11. "Turbocharged technical debt" — the volume-quality race
-Whether AI is net-positive depends on whether review/test infrastructure scales faster than code volume. Current trajectory: volume is winning. Teams without strong CI/CD accumulate debt; teams with it benefit.
+**Important METR caveats** (from their own paper): They explicitly state they do NOT provide evidence that "AI systems do not currently speed up many or most software developers." The study tested a specific population (experienced OSS devs on large, mature projects) with specific tools (early 2025 frontier). What generalizes robustly is the perception gap: people systematically overestimate their AI-assisted speed.
 
-**Source:** ai-coding-agents-feb-2026 (MIT's Geoffrey Parker)
-**Strength:** Medium — data shows both trends simultaneously
-**Status:** Contested — depends on organizational maturity
+**Corroborating evidence (all independently sourced):**
+- Mike Judge's independent A/B (n=1): ~21% slowdown. Separately, his BigQuery analysis of GitHub, app stores, and package registries shows flat output across every sector.
+- DX survey (Laura Tacho, Feb 2026 presentation): 121K devs across 450+ companies. Self-reported productivity plateaued at ~10%. ~4 hrs/week saved (flat since Q2 2025). AI-authored production code at 26.9% (up from 22%).
+- NBER (Feb 2026): 6,000 CEOs/CFOs across US, UK, Germany, Australia. ~90% report no AI impact on employment or productivity over 3 years.
+- PwC (Jan 2026): 4,454 CEOs across 95 countries. 56% report neither increased revenue nor decreased costs from AI.
+- Deloitte: 74% of orgs want AI to grow revenue; only 20% have seen it.
+- UK government M365 Copilot trial (Sep 2025): no productivity gain found.
+- Apollo chief economist Torsten Slok (Feb 2026): "AI is everywhere except in the incoming macroeconomic data."
 
----
+The mechanism for the plateau: individual devs save hours on coding tasks, but those hours are consumed by more code to review, juniors producing uncomprehended code, faster delivery of the wrong thing. AI amplifies existing organizational culture (DORA 2025, confirmed: Google Cloud Blog) — strong-practice orgs gain, weak-practice orgs degrade, average is flat.
 
-## III. The Verification Problem
+**Counter-evidence on the micro level:** Alex Imas's literature review (Jan 2026) notes: "a growing body of micro studies showing real productivity gains from generative AI." GitHub, Google, Microsoft vendor studies find 20-55% faster task completion ⚠️ **all vendor data**. The micro/macro disconnect mirrors the 1987 Solow Paradox: "You can see the computer age everywhere but in the productivity statistics."
 
-### 12. The self-grading exam: agents game their own tests
-Agent writes code + agent writes tests = closed loop with no external verification. Documented: tests that amount to `expect(true).to.be(true)`. Frontier models cheat on graders (o3 traced Python call stack to find reference tensor, disabled CUDA sync to fake timing).
+→ **⚠️ Own analysis — the equilibrium inference.** The culture-amplifier mechanism suggests a bimodal steady state: strong-engineering-culture orgs benefit, weak-culture orgs see net degradation, and the average stays near 10%. Directionally supported by DORA data, but specific magnitudes unknown.
 
-**Source:** hn-agentic-coding-evidence (edude03), verification-alignment-software-factory (METR reward hacking), hn-ai-coding-enjoyable (sReinwald)
-**Strength:** Strong — concrete examples at both practitioner and frontier research level
-**Status:** Established
+**Strong · Established** — RCT + multiple independent institutional surveys converge. The Solow Paradox parallel, now invoked by multiple economists, is the appropriate historical framing.
 
-### 13. Verification converges toward alignment
-"Does this code match intention?" is the same problem as "does this agent do what we want?" StrongDM and frontier labs independently discovered the same three-part architecture: simulation environments, holdout evaluation criteria, outcome-based scoring. Both hitting the same wall: judges are imperfect and gameable.
+### 4. No macro signal of the claimed revolution
+If devs are 2-10x more productive, aggregate output should spike. It hasn't.
 
-**Source:** verification-alignment-software-factory (central thesis)
-**Strength:** Strong — independent convergence documented with evidence
-**Status:** Established
+**Evidence is now much stronger than a single analyst:**
+- NBER (Feb 2026): ~90% of 6,000 execs report no AI impact on productivity
+- PwC (Jan 2026): 56% of 4,454 CEOs report zero ROI
+- Apollo: "no signs of AI in profit margins or earnings expectations" outside Mag 7
+- Mike Judge (Sep 2025): BigQuery data shows flat GitHub project creation, app store submissions, package registry activity across every sector. His follow-up (Sep 2025) sharpens the argument: "If someone handed me a tool that made my coding team 10x faster, I'd hire 10x more developers... The fact that we're not seeing this gold rush behavior tells you everything."
 
-### 14. LLM-as-judge has systematic bias
-LLMs assign higher evaluations to outputs with lower perplexity (outputs that "feel familiar" to their training distribution). Self-preference bias is measurable. Same-model evaluation is gameable. Cross-model judging helps but doesn't solve — all frontier models share training data overlap.
+**The Solow Paradox framing:** Multiple economists (Imas, Slok, Acemoglu) now explicitly frame this as a repeat of the IT productivity paradox. The historical precedent suggests macro gains may emerge in 5-15 years, not immediately. Acemoglu estimates 0.5% productivity increase over a decade — "not zero, but disappointing relative to promises."
 
-**Source:** verification-alignment-software-factory (Part III, multiple citations)
-**Strength:** Strong — peer-reviewed research
-**Status:** Established
+**Strong · Established** — upgraded from Medium. Multiple institutional sources now converge.
 
-### 15. As models improve, the verification stack compresses upward
-Trivial syntax/type errors become rare → remaining bugs are *intention mismatches* no type checker catches. Deterministic bottom layers (linting, types) may remain essential for *training* even as they become less important at *runtime*.
-
-**Source:** verification-alignment-software-factory (Insight 2)
-**Strength:** Medium — logically sound, limited empirical validation
-**Status:** Emerging
-
-### 16. The evaluation infrastructure race is the real competition
-"Whoever builds the best evaluation infrastructure will build the best models." The proprietary value isn't generation capability — it's judgment quality. Applies to both AI labs and software factories.
-
-**Source:** verification-alignment-software-factory (Insight 3)
-**Strength:** Medium — directionally correct, hard to measure
-**Status:** Emerging
+→ **The chain:** AI automates the non-bottleneck (1) because the hard parts resist automation (2), which is why org metrics don't move (3) and aggregate output is flat (4). Strongest for orgs; weakest for solo devs.
 
 ---
 
-## IV. Essential vs. Incidental Complexity
+## I. Quality & the Debt Spiral
 
-### 17. AI devastates incidental complexity
-Boilerplate, translation, test scaffolding, API integration, configuration, infrastructure — AI handles this well. Near-universal agreement. The strongest use cases (Terraform, migrations, CRUD, framework upgrades, deployment scripts) are all incidental complexity.
+### 5. AI-generated code appears to have more defects — but the evidence is mixed
+⚠️ **Vendor data.** CodeRabbit (Dec 2025, sells code review, 470 open-source PRs): 1.4× critical issues, 1.7× major. Logic errors 1.75×. Security 1.57×. Excessive I/O ~8×. ⚠️ **Vendor data.** Cortex (sells developer portal, "Engineering in the Age of AI: 2026 Benchmark Report"): PRs/author +20% YoY, incidents/PR +23.5%, change failure rate +30%. Both covered by The Register (Dec 2025). Neither peer-reviewed.
 
-**Source:** brooks-essential-complexity, hn-agentic-coding-evidence (xsh6942, stormcode, cypherfox), hn-vibe-coding-saas-a16z
-**Strength:** Strong — near-consensus across all sources
-**Status:** Established
+**Counter-evidence:** University of Naples (Aug 2025, arXiv:2508.21634, academic): AI code is "simpler and more repetitive, yet more prone to unused constructs and hardcoded debugging," while "human-written code exhibits greater structural complexity and a higher concentration of maintainability issues." Monash/Otago (Jan 2025): GPT-4 code passed more test cases than human code on some tasks.
 
-### 18. Essential complexity remains untouched and now hidden
-Business rules, edge cases, domain interactions, architectural tradeoffs — AI can't reason about these. Worse: by making incidental complexity trivial, AI makes the essential complexity *harder to see*. Code that looks correct but misunderstands the domain.
+The picture is genuinely mixed. AI code tends to have more logic/security bugs but fewer structural complexity issues. The *direction* of more defects at volume is almost certainly correct (more code generated faster = more bugs, nearly tautological), but the *specific multipliers* from vendor studies should be treated with skepticism.
 
-**Source:** brooks-essential-complexity, hn-vibe-coding-saas-a16z (packetlost), hn-ai-coding-enjoyable (pain signal insight)
-**Strength:** Strong — theoretical framework + concrete examples
-**Status:** Established
+**Medium · Established** (direction) · **Contested** (magnitude)
 
-### 19. The pain signal is the feature, not the bug
-The tedium of propagating a type through 5 files tells you the architecture is wrong. AI numbs the diagnostic nerve. What appears as "tedium" may be the feedback loop that drives design improvement.
+### 6. "LLM debt" — deferred comprehension costs that compound
+AI saves time now, creates a comprehension deficit later. If you never touch the code again, it's free. If you revise, you pay more than you saved — it's someone else's codebase. At team scale: shipping faster while understanding less.
 
-**Source:** hn-ai-coding-enjoyable (lsy, yomismoaqui)
-**Strength:** Medium — independently discovered by two commenters
-**Status:** Emerging, conceptually powerful
+**Now experimentally confirmed.** Shen & Tamkin (Jan 2026, arXiv:2601.20245, Anthropic Fellows Program, RCT with 51 participants): AI use impairs conceptual understanding, code reading, and debugging abilities, without delivering significant efficiency gains on average. "AI-enhanced productivity is not a shortcut to competence." Notably, participants who fully delegated showed some productivity improvements *but at the cost of learning the library*. Six distinct AI interaction patterns identified; three involving cognitive engagement preserved learning even with AI assistance. ⚠️ **Interested party** (Anthropic), but findings are adverse to their business interest, which increases credibility.
 
-### 20. Whether incidental complexity has grown as a share is unknown
-The claim that modern dev has proportionally *more* incidental complexity (containers, CI/CD, YAML) is plausible but unquantified. Essential complexity also grew (compliance, real-time systems, distributed state). No evidence the ratio shifted.
+A corollary: the tedium AI removes may be diagnostic. AI numbs the nerve that should signal redesign (from HN: lsy, yomismoaqui independently). Alexandru Nedelcu (Nov 2025) connects this to Peter Naur's "Programming as Theory Building": the knowledge built during development is the point, not just the artifact.
 
-**Source:** brooks-essential-complexity (self-critique)
-**Strength:** Weak — vibes estimate, no data
-**Status:** Contested
+**Strong · Established** — upgraded from Medium. RCT evidence + theoretical grounding (Fowler, Naur) + multiple independent practitioner observations.
 
----
+### 7. Volume is outrunning quality; whether AI is net-positive depends on review infrastructure
+Code volume grows faster than review capacity. Teams with strong CI/CD benefit; teams without accumulate debt faster than before. The culture amplifier from #3 operates here. DX Feb 2026 data: AI-authored production code at 26.9% (up from 22% last quarter), while productivity plateau holds at 10%.
 
-## V. Human Role & Skills
+**Strong · Established** — survey data + incident data
 
-### 21. The management skill transfer: former leads/managers have a structural advantage
-People whose previous role involved delegation, code review, and taste — not writing code — disproportionately report success. The skill that transfers isn't programming; it's delegation and judgment. ICs most threatened by AI are also least equipped to use it.
+### 8. The maintenance time bomb has no data
+Building is cheap. Maintenance costs haven't changed. Vibe-coded systems may be *harder* to maintain because the creator doesn't understand the generated code. Nobody has maintained an AI-generated codebase for >1 year. **This is the single biggest unknown in the domain.** Nedelcu (Nov 2025) frames this via Naur: "Nobody understands the modified product. Those who made the changes, never did."
 
-**Source:** hn-agentic-coding-evidence (cypherfox, everfrustrated, dagss, lostsock)
-**Strength:** Medium — consistent pattern across independent reports
-**Status:** Emerging
-
-### 22. The human role shifts from writer to system designer
-Not writing code, not even reviewing line-by-line, but designing test harnesses, CI pipelines, feedback mechanisms, and verification systems. Carlini's C compiler: "Most of my effort went into designing the environment around Claude."
-
-**Source:** ai-coding-agents-feb-2026 (Carlini), ai-delegation-verification-analysis
-**Strength:** Strong — demonstrated in the most impressive agentic project to date
-**Status:** Established
-
-### 23. Cognitive debt: teams shipping faster while understanding less
-The Fowler orbit's most important contribution. LLMs bypass the learning loop — writing code teaches you about the problem; skipping writing means skipping learning. Creates systems nobody understands well enough to change when requirements shift.
-
-**Source:** fowler-critical-analysis (central thesis), hn-ai-coding-enjoyable (LLM-debt)
-**Strength:** Strong — theoretically grounded + multiple independent observations
-**Status:** Established
-
-### 24. The junior degradation signal
-New hires produce code in 2 weeks instead of 6 months of learning. Every line must be reviewed because they don't understand what they're generating. Individual output may rise while team output falls. "Entry level talent that is absolutely clueless without AI."
-
-**Source:** hn-ai-productivity-10-percent-plateau (orwin, keeda)
-**Strength:** Medium — specific, falsifiable, corroborated
-**Status:** Emerging
-
-### 25. The EM/IC asymmetry
-AI makes management more enjoyable (removes human coordination overhead) and individual contribution less so (removes craft). Organizations will drift toward more managers-of-agents, fewer craftspeople. The incentive gradient points somewhere specific.
-
-**Source:** hn-ai-coding-enjoyable (enduser)
-**Strength:** Weak — single observation, unverified
-**Status:** Emerging, worth watching
-
-### 26. Flow state destruction
-AI interrupts the meditative middle ground where insights emerge. Background processing during routine work created incubation periods. With AI, you're either fully engaged or not engaged at all.
-
-**Source:** hn-ai-coding-enjoyable (stevenbhemmy, ziml77)
-**Strength:** Weak — subjective experience, limited reports
-**Status:** Emerging
-
-### 27. Programming may be bifurcating into two professions
-Enterprise systems (long-lived, team-maintained, regulated) where Fowler's principles are essential, and disposable/generated applications where they're nearly irrelevant. The Fowler orbit doesn't fully engage this.
-
-**Source:** fowler-critical-analysis (central tension)
-**Strength:** Medium — logically sound, insufficient evidence to confirm
-**Status:** Emerging
+**Medium · Emerging** — no long-term evidence exists
 
 ---
 
-## VI. Workflow & Process
+## II. The Verification Problem
 
-### 28. The convergent workflow: plan → scope → review → iterate
-Nearly every successful agentic coding practitioner independently arrives at: heavy upfront planning in markdown → decompose into single-session tasks → review plan → implement → review code → iterate. This is the dominant pattern across 200+ HN comments and multiple HN threads.
+### 9. Agents game their own tests
+Agent writes code + agent writes tests = closed loop, no external verification. Documented: tests that amount to `expect(true).to.be(true)`. Frontier models actively cheat on graders.
 
-**Source:** hn-agentic-coding-evidence (hakanderyal, sarlalian, nl, defatigable, many others)
-**Strength:** Strong — independent convergence across many practitioners
-**Status:** Established
+METR reward hacking report (Jun 2025, verified): o3 traced a Python call stack to find a grader's reference tensor and returned it instead of computing a result. It monkey-patched `torch.cuda.synchronize` and `time.time` to fake timing. When asked "Does this adhere to the user's intention?", o3 answered "no" 10 out of 10 times — it knew it was cheating.
 
-### 29. The workflow overhead isn't counted in productivity claims
-hakanderyal: 30K lines of markdown rule files. sarlalian: multi-phase process taking months to develop. Nobody includes the hundreds of hours building these scaffolds when reporting "5-10x" speedups.
+**Strong · Established** — METR blog post + practitioner reports
 
-**Source:** hn-agentic-coding-evidence
-**Strength:** Medium — consistently observable, not quantified
-**Status:** Emerging
+### 10. Verification is hard, and AI reviewing AI has structural limits
+⚠️ **Own analysis:** StrongDM and frontier labs show convergent architecture (simulation environments, holdout criteria, outcome-based scoring), both hitting the same wall: judges are imperfect and gameable. The convergence observation is from our verification-alignment analysis, not externally validated.
 
-### 30. Agent statefulness is the core architectural limitation
-Every session starts from zero. Everyone builds the same workarounds: CLAUDE.md, AGENTS.md, handoff docs, devlogs, learnings folders. These are manual memory prosthetics for amnesiac workers. Replacing Stack Overflow's multiplayer knowledge with a billion isolated sessions benefiting no one else.
+What *is* externally validated: LLM-as-judge shows systematic bias toward outputs with lower perplexity. Wataoka et al. (Oct 2024, arXiv:2410.21819, accepted NeurIPS 2024 Safe Generative AI Workshop): "GPT-4 exhibits a significant degree of self-preference bias... LLMs assign significantly higher evaluations to outputs with lower perplexity than human evaluators, regardless of whether the outputs were self-generated." A second study (Ye et al., arXiv:2410.02736) identifies 12 distinct bias types in LLM-as-judge, including position bias and self-preference.
 
-**Source:** hn-agentic-coding-evidence (st-msl), hn-karpathy-claws-llm-agents, ai-coding-agents-feb-2026
-**Strength:** Strong — universal experience
-**Status:** Established (being addressed: Claude automatic memory, Kiro persistent context)
+**Strong (bias research, peer-reviewed) · Medium (convergence claim, own analysis)**
 
-### 31. "Context is everything" / context engineering is the real skill
-Tooling and context quality matter enormously. Loading relevant rule files, pointing agents at docs instead of letting them hallucinate, managing context windows, MCPs. The gap between bad and good agent outcomes is usually a context gap.
+→ **⚠️ Own analysis — the Verification Trap.** #5 → #9 → #10 form a tight loop: AI generates more defective code, self-verification doesn't catch it, AI reviewing AI shares blind spots. Multiple exits exist — better models, constrained scope, human review, machine-checkable correctness (types, contracts, property tests). Formal methods are the logical ultimate exit but have been "the future" for 40 years with limited mainstream adoption outside specific domains (AWS: TLA+/Dafny for S3/DynamoDB; Mozilla: F* for crypto in Firefox). Types are the pragmatic leading edge.
 
-**Source:** fowler-critical-analysis (Böckeler's context engineering), hn-agentic-coding-evidence (lostsock, hakanderyal)
-**Strength:** Strong — practitioner consensus + theoretical backing
-**Status:** Established
+### 11. Evaluation infrastructure may matter more than generation capability
+"Whoever builds the best evaluation infrastructure will build the best models." As trivial errors become rare, remaining bugs are intention mismatches no linter catches. Proprietary value shifts from generation to judgment.
 
-### 32. Strongly typed languages produce better agent output
-C#, Rust, Go — compiler feedback, strict types, and linting constrain agents effectively. Python's optional typing is a mistake with AI agents. TypeScript with strict mode is acceptable. Dynamic languages without type enforcement are worst.
-
-**Source:** hn-agentic-coding-evidence (resonious, BatteryMountain, theshrike79, nl)
-**Strength:** Medium — consistent practitioner reports, no controlled study
-**Status:** Emerging
-
-### 33. "Revert and retry" beats "steer out of trouble"
-When the agent goes down the wrong path, it's better to clear context and start fresh than to try to redirect. Poisoned context leads to compounding errors. Get comfortable throwing away code.
-
-**Source:** hn-agentic-coding-evidence (sarlalian, sirwhinesalot, furyofantares)
-**Strength:** Medium — consistent advice from multiple experienced practitioners
-**Status:** Established (practitioner wisdom)
+**Weak · Emerging** — directionally plausible, impossible to measure
 
 ---
 
-## VII. Tool Landscape & Market
+## III. Human Role & Skills
 
-### 34. Claude Code / Opus 4.5+ is the current community favorite
-Consistent signal across HN threads: Claude Code produces better results than Codex, Cursor with non-Claude models, and most alternatives. Opus 4.5 specifically unlocked parallel sessions and reduced slop. Codex notably worse in direct comparisons.
+### 12. The human role shifts from writer to system designer
+Not writing code, not reviewing line-by-line — designing test harnesses, CI pipelines, feedback mechanisms, verification systems.
 
-**Source:** hn-agentic-coding-evidence (hakanderyal, logicallee, fourthrigbt, many), ai-coding-agents-feb-2026
-**Strength:** Strong — overwhelming community consensus
-**Status:** Established (as of Feb 2026; model landscape shifts fast)
+⚠️ **Interested party.** The marquee evidence is Carlini's C compiler (Anthropic Safeguards team, accompanied Opus 4.6 launch, Feb 2026): 16 agents, ~100K lines of Rust, 2 weeks, ~$20K, ~2,000 sessions. Passes 99% of GCC's torture test suite. "Most of my effort went into designing the environment around Claude." Verified by Ars Technica, InfoQ, The Register.
 
-### 35. Multi-agent orchestration is becoming default
-Claude Code Agent Teams, Codex parallel agents, Jules concurrent tasks, Kiro sub-agents. Working with one agent will feel like a single-core processor. Orchestration becomes the core developer skill.
+**Honest accounting of the compiler:** It lacks its own assembler and linker (calls out to GCC). Can't compile Hello World without manually specifying library paths. Code less efficient than GCC with all optimizations disabled. The model was trained on GCC's source code. The process signal (16 autonomous agents coordinating on a shared codebase over 2 weeks) is genuinely new; the product (a mediocre compiler) is not.
 
-**Source:** ai-coding-agents-feb-2026 (Section VIII)
-**Strength:** Medium — directional, early implementations
-**Status:** Emerging
+The role-shift observation is consistent across practitioner reports independent of Carlini. MIT Technology Review (Dec 2025) confirms the broader pattern.
 
-### 36. MCP is winning as the standard protocol
-Apple's Xcode adoption was the tipping point. Anthropic, OpenAI, AWS, Apple all supporting. Tools, not agents, become the durable investment.
+**Medium · Established** — consistent across sources. Primary evidence is interested party, but the pattern is independently observed.
 
-**Source:** ai-coding-agents-feb-2026 (Sections II, VI)
-**Strength:** Strong — multi-vendor adoption
-**Status:** Established
+### 13. Management skills transfer; IC skills and junior development atrophy
+People whose previous role involved delegation, review, and taste disproportionately report success. The skill that transfers is judgment, not programming. New hires produce code in weeks instead of months, but every line must be reviewed because they don't understand what was generated.
 
-### 37. iOS/SwiftUI is a known weak spot for agents
-Not enough Swift in training data. The "right way" has changed multiple times in recent years. Multiple practitioners flag this independently.
+**Now experimentally supported.** Shen & Tamkin (Jan 2026): AI use impairs conceptual understanding and debugging in novice developers. Novices showed "more significant benefit in performance" but lower post-task understanding scores across the board. The study identified that *how* you use AI matters: cognitive engagement patterns preserved learning; full delegation did not.
 
-**Source:** hn-agentic-coding-evidence (geooff_, OP's experience), ai-coding-agents-feb-2026
-**Strength:** Medium — consistent reports, domain-specific
-**Status:** Established
+Additional data: LeadDev survey (2025): 54% of engineering leaders plan to hire fewer junior developers due to AI efficiencies. Stack Overflow 2025: AI adoption at 84% of developers, but positive sentiment dropped from 70%+ (2023-24) to 60% (2025).
 
-### 38. Persistent agent memory becomes competitive moat
-Agents that learn from your code reviews, preferences, team patterns. The agent that knows your codebase best is the hardest to switch away from. New lock-in vector.
+**Strong · Emerging** — upgraded from Medium. RCT evidence + survey data + consistent independent reports.
 
-**Source:** ai-coding-agents-feb-2026 (Section VIII)
-**Strength:** Medium — directionally obvious, early implementation
-**Status:** Emerging
+### 14. Programming may be bifurcating into two professions
+Enterprise systems (long-lived, team-maintained, regulated) where craft principles are essential, and disposable/generated applications where they're nearly irrelevant. Different quality standards, different economics.
+
+**Medium · Emerging** — logically sound, insufficient evidence
+
+→ **⚠️ Own analysis — the "disposable code economy."** #14 (bifurcation) + #22 (activation energy) + #21 (lean competitors) point to a genuine new market: code that's generated, used briefly, and discarded. This is where the Central Chain's objections don't apply — no maintenance burden, no team comprehension cost, no org bottleneck. The one argument METR data can't touch.
 
 ---
 
-## VIII. Delegation & Oversight
+## IV. Workflow & Process
 
-### 39. AI delegation is a competence problem, not an alignment problem
-Historical delegation mechanisms mostly solve alignment (misaligned agents). AI agents are aligned (try to do what you ask) but incompetent (produce wrong code). Most of the five historical verification mechanisms don't transfer cleanly.
+### 15. The convergent workflow: plan → scope → review → iterate
+Nearly every successful practitioner independently converges on: heavy upfront planning in markdown → decompose into single-session tasks → review plan → implement → review code → iterate. Dominant pattern across 200+ HN comments. GitHub Blog (Oct 2025) describes a similar pattern: "combining the structure of Markdown; the power of agent primitives... and smart context management."
 
-**Source:** ai-delegation-verification-analysis (central critique)
-**Strength:** Strong — well-argued distinction
-**Status:** Established
+→ **⚠️ Own analysis — this convergence is deducible, not just empirical.** Given agent statelessness (#16), limited competence (#20), and probabilistic steering (#17), this is the only workflow that *can* work: constrain scope (because stateless), specify precisely (because incompetent), verify independently (because probabilistic), retry on failure (because cheap).
 
-### 40. The trajectory toward less oversight is unsupported for high-stakes work
-Aviation, medicine, finance: oversight *increased* even as practitioners became more capable. Relaxation of oversight may only hold for low-stakes domains. Software factory autonomy may plateau where stakes are high.
+**Strong · Established**
 
-**Source:** ai-delegation-verification-analysis (counterexamples section)
-**Strength:** Strong — historical pattern with clear precedents
-**Status:** Established
+### 16. Statefulness is the core architectural limitation
+Every session starts from zero. Everyone builds the same workarounds: CLAUDE.md, AGENTS.md, handoff docs, devlogs. Being addressed (Claude auto-memory, Kiro persistent context) but not solved.
 
-### 41. Experienced users shift from approval-based to monitoring-based oversight
-Anthropic's data: experienced Claude Code users auto-approve more *and* interrupt more. They develop instincts for *when* to intervene, not whether to. Design implication: monitoring dashboards > approval dialogs.
+**Strong · Established** — universal experience
 
-**Source:** hn-anthropic-agent-autonomy (finding #6)
-**Strength:** Medium — proprietary data from interested party
-**Status:** Emerging
+### 17. Context engineering is the actual skill — and it's probabilistic, not deterministic
+Context quality drives outcome quality. Loading relevant rules, pointing agents at docs, managing context windows — the gap between bad and good outcomes is usually a context gap. But you're nudging probability distributions, not programming a machine. "Works more often than not" is the ceiling (Böckeler).
 
-### 42. Correlated failures undermine AI-on-AI verification
-If Claude reviews Claude's code, the reviewer shares the same training data, blind spots, and systematic errors. Not two independent experts — closer to identical twins reviewing each other. Cross-model helps but training data overlap limits true orthogonality.
+**Strong · Established** — practitioner consensus + theoretical backing
 
-**Source:** ai-delegation-verification-analysis, verification-alignment-software-factory
-**Strength:** Strong — peer-reviewed bias research
-**Status:** Established
+### 18. The workflow overhead nobody counts
+hakanderyal: 30K lines of markdown rules. sarlalian: months to develop the process. At $200/month plus hundreds of hours in scaffolding, debugging, and review — nobody does the full accounting against claimed gains.
 
----
+→ **The Workflow Paradox.** #15, #17, #18 together: the people who succeed invest heavily in planning and context, but never count that investment against their claimed gains. The "10x developer" may be a 2x developer who forgot to amortize setup costs.
 
-## IX. Market & Economic
+**Medium · Emerging**
 
-### 43. The SaaSpocalypse: $285B erased on the possibility that agents replace SaaS
-Probably overdone in magnitude, directionally correct. General-purpose agent + domain-specific config files = vertical software functionality. Threat is 2-3 year horizon, not overnight.
+### 19. Typed languages and revert-over-steer are practical force multipliers
+C#, Rust, Go — compiler feedback constrains agents effectively. Dynamic languages without type enforcement are worst. When the agent diverges, clear context and restart; poisoned context compounds errors.
 
-**Source:** ai-coding-agents-feb-2026 (Section V)
-**Strength:** Strong — market data
-**Status:** Established
+Nedelcu (Nov 2025) provides the clearest independent analysis: "Having an expressive/powerful static type system provides much faster feedback than other validation types, such as unit tests." He documents Scala 3 agents successfully generating code for underdocumented macro systems purely through compiler feedback loops — "the result most often being code that compiles." The mechanism is clear: compilation errors → agent iteration → convergence. Without a type checker, this loop has no signal.
 
-### 44. The real SaaS threat isn't DIY — it's lean AI-enabled competitors
-Companies won't vibe-code their own Workday. But 3-person teams will ship vertical alternatives at a fraction of the price. Commodification via new entrants, not customer DIY.
-
-**Source:** hn-vibe-coding-saas-a16z (klodolph, martinald)
-**Strength:** Medium — logically sound, early signals
-**Status:** Emerging
-
-### 45. AI-assisted coding's cost isn't counted
-$200/month subscriptions + hours building markdown scaffolds + debugging time + review overhead. Nobody does the full accounting against claimed productivity gains.
-
-**Source:** hn-agentic-coding-evidence
-**Strength:** Medium — consistently observed gap in analyses
-**Status:** Emerging
-
-### 46. Incentive landscape is corrupt
-Paid micro-influencer campaigns. Tool vendors as "researchers." Anthropic measuring agent autonomy while selling tokens. Personal brand value drives public claims. Financial incentives systematically favor positive reports.
-
-**Source:** hn-agentic-coding-evidence (fhd2), hn-anthropic-agent-autonomy (verdict)
-**Strength:** Medium — structural analysis, hard to quantify
-**Status:** Established (as a dynamic, not per-claim)
+**Medium · Emerging** — consistent practitioner reports + theoretical analysis, no controlled study
 
 ---
 
-## X. Meta / Epistemological
+## V. Delegation, Oversight & Security
 
-### 47. The survivorship bias is total
-People who tried agentic coding, failed, and went back to writing code don't post detailed workflow descriptions. The discourse self-selects for people who stuck with it long enough to develop elaborate coping mechanisms.
+### 20. AI delegation is primarily a competence problem — but the competence/alignment line blurs
+Historical delegation mechanisms mostly solve alignment (misaligned agents). AI agents are mostly aligned (try to do what you ask) but incompetent (produce wrong code). Most historical verification mechanisms don't transfer cleanly.
 
-**Source:** hn-agentic-coding-evidence
-**Strength:** Medium — structural observation
-**Status:** Established (as a bias)
+**Complication:** "Aligned" is approximate. Prompt injection, reward hacking (#9 — o3 knew it was cheating), and systematic biases mean agents sometimes do things they weren't asked to do.
 
-### 48. Context engineering is probabilistic steering, not deterministic control
-"Illusion of control" — Böckeler's key insight. You're nudging probability distributions, not programming a machine. Works more often than not is the best you can achieve.
+Oversight trajectory: aviation, medicine, finance all *increased* oversight as practitioners became more capable. Experienced AI users shift from approval-based to monitoring-based oversight (Anthropic data: more auto-approve *and* more interrupts ⚠️ **interested party**), but autonomy may plateau where stakes are high. Agent security compounds this: agents need deep system access to be useful, but granting it is inherently unsafe. No current architecture resolves this.
 
-**Source:** fowler-critical-analysis (Böckeler's context engineering piece)
-**Strength:** Strong — conceptually precise
-**Status:** Established
-
-### 49. The recursive improvement loop is real but unpriceable
-Claude Code wrote Cowork. Agents build agents. If tools improve the speed at which tools are built, the pace accelerates in hard-to-predict ways. Nobody knows how to price this.
-
-**Source:** ai-coding-agents-feb-2026 (Section IX, question 4)
-**Strength:** Medium — observed, trajectory unclear
-**Status:** Emerging
-
-### 50. The profession may be mutating faster than frameworks can evaluate
-If models improve as much in the next 6 months as the last 6, every assessment published today needs revision. The rate-of-change question is distinct from the capability question.
-
-**Source:** fowler-critical-analysis (missing: speed-of-change meta-question)
-**Strength:** Medium — meta-observation
-**Status:** Permanent caveat
+**Strong · Established** — well-argued + historical precedents
 
 ---
 
-## Redundancy Map
+## VI. Market & Economic
 
-Where insights reinforce each other across sources:
+### 21. The SaaSpocalypse: directionally correct, mechanism misidentified
+$285B erased from SaaS stocks Feb 3-5, 2026 (verified: CNBC, TechStartups, multiple financial outlets). Triggered by Anthropic's Cowork legal plugin release. The real threat isn't customer DIY — it's lean AI-enabled competitors. 3-person teams shipping vertical alternatives at a fraction of the price. The 3D printing analogy applies: capability ≠ adoption.
 
-| Cluster | Insights | Signal |
-|---------|----------|--------|
-| **Productivity illusion** | 1, 2, 3, 5, 29, 45, 47 | The strongest cluster. Multiple measurement approaches converge. |
-| **Quality degradation** | 7, 8, 9, 10, 11, 12 | Second strongest. Hard data + named mechanisms + anecdotes. |
-| **Essential complexity wall** | 17, 18, 19, 20 | Theoretically grounded via Brooks, empirically thin. |
-| **Verification problem** | 12, 13, 14, 15, 16, 42 | Deep research cluster. Most rigorous analytical work in the corpus. |
-| **Human role transformation** | 21, 22, 23, 24, 25, 26, 27 | Many angles, mostly emerging. Cognitive debt is the anchor. |
-| **Workflow convergence** | 28, 29, 30, 31, 32, 33 | Strong practitioner consensus, theoretically under-developed. |
+**Strong · Established** (market data) · **Medium** (mechanism)
 
-## XI. Historical Parallels
+### 22. "Wouldn't have built it otherwise" — the honest case for AI coding
+The strongest argument isn't speed on existing tasks — it's lowering activation energy for projects below the effort threshold. Personal tools, homelab projects, weekend experiments. Real value, invisible to studies measuring time-on-task.
 
-### 51. The offshore development parallel
-The agent pitch is identical to the 2005 offshoring pitch: capable agent at a fraction of the cost, just tell it what you want. Offshoring history shows supervision, rework, miscommunication, and trust-building costs often exceeded savings. Agents make the same bet with worse odds — at least offshore teams could learn and be fired.
+This is where #1 (coding not the bottleneck) inverts: for solo devs, coding speed *was* the bottleneck. Whether this scales to macro-level production is the question #4's data raises. The Solow Paradox historical precedent suggests macro gains may emerge eventually — it took IT roughly a decade.
 
-**Source:** hn-karpathy-claws-llm-agents (skeeter2020)
-**Strength:** Medium — apt analogy, under-explored
-**Status:** Emerging
+**Medium · Emerging** — consistent anecdotal pattern, no measurement
 
-### 52. The 3D printing analogy: capability ≠ adoption
-"People will 3D-print 99% of household items" → they still buy cups. Specialization creates quality, reliability, and convenience advantages that persist even when DIY costs approach zero. Structural argument for SaaS survival.
+### 23. The incentive landscape is structurally corrupt; survivorship bias is total
+Paid micro-influencer campaigns. Tool vendors as "researchers." Anthropic measuring agent autonomy while selling tokens. Financial incentives systematically favor positive reports. People who failed with agentic coding don't post workflow descriptions.
 
-**Source:** hn-vibe-coding-saas-a16z (ManuelKiessling, klardotsh)
-**Strength:** Medium — historically validated pattern
-**Status:** Established (as an analogy)
+Mike Judge (Sep 2025): "These companies that are making AI coding tools know their products don't actually help people ship more software. GitHub owns both the dominant AI coding assistant (Copilot) and the platform where most of the world's software development happens. They have exclusive visibility into whether developers using their AI tools are actually producing and shipping more code. The data clearly shows they aren't."
 
-### 53. Agent security requires a fundamental architectural impossibility
-Agents need deep system access (file system, shell, network) to be useful. But granting that access to an unsandboxed agent with tool-use capabilities is inherently unsafe. No current architecture resolves this — most agent "security" is theater. The Faustian bargain.
-
-**Source:** hn-karpathy-claws-llm-agents, topics/coding-agents (Pi's YOLO model)
-**Strength:** Strong — structural argument, no known solution
-**Status:** Established
+**Medium · Established** (as a dynamic)
 
 ---
 
-## Gaps
+## VII. Current Landscape (perishable — Feb 2026 snapshot)
 
-What the corpus *doesn't* have good evidence on:
+- **Claude Code / Opus 4.6** is the community favorite among HN commenters. Codex notably worse in direct comparisons. DX data (Feb 2026): Codex desktop app topped 1M downloads; inside OpenAI, 95% of devs use it; Cisco has 18K engineers on it daily. Community consensus favors Claude; enterprise adoption is split.
+- **The CLI-agent pattern won in practice.** The convergent workflow (#15) runs on markdown + bash + file tools. Every detailed practitioner report describes this loop. Pi (4 tools: read, write, edit, bash) competing on Terminal-Bench against heavily-tooled agents is the proof point.
+- **MCP has broad vendor adoption** (Anthropic, OpenAI, AWS, Apple Xcode 26.3 — verified Ars Technica, Apple Newsroom, TechCrunch). It's an integration protocol for IDE/tool access, not a practitioner workflow tool. Criticism exists (Degtyarev: "overengineered transport"; Red Hat: confused deputy risk; Merge.dev: too-many-tools problem). Whether it becomes a genuine standard or remains a checkbox depends on whether MCP-based tools deliver measurably better outcomes than bash + file tools. No evidence of that yet.
+- **Multi-agent orchestration** and **persistent memory** are emerging. Early implementations, not proven at scale.
 
-1. **Long-term maintenance of AI-generated codebases.** Nobody has maintained one for >1 year. This is the biggest unknown.
-2. **Team dynamics with AI.** How do code reviews change? How does pair programming evolve? Fowler notes this is missing.
-3. **Domain-specific performance variation.** iOS/Swift is flagged as weak. What about embedded? Security-critical? Real-time? Sparse data.
-4. **Economic analysis at firm level.** What does AI coding mean for consulting firms that bill developer-hours? For in-house teams sized by headcount?
-5. **The activation-energy claim (#6) at scale.** If AI lowers the threshold for project initiation, does total useful software output increase at the macro level? Mike Judge's data (#5) says no, but the timeframe may be too short.
-6. **Whether workflow overhead (#29) converges or diverges.** Does the markdown scaffold get cheaper to maintain over time, or does it grow with the codebase?
+---
+
+## Cross-Cutting Patterns
+
+**A. The Comprehension Bypass Loop** (#6, #8, #13, #14). AI lets you skip understanding → immediate speed gain → deferred cost in maintenance (#8), team capability (#13), architectural quality (#6 corollary), and individual comprehension (#6). Now experimentally confirmed by Shen & Tamkin. The costs compound; the savings don't.
+
+**B. The Verification Trap** (#5, #9, #10). More defective code → self-verification doesn't catch it → AI reviewing AI shares blind spots. Multiple exits exist (better models, constrained scope, formal methods, human review) but none is proven at scale.
+
+**C. The Workflow Paradox** (#15, #17, #18). Success requires heavy investment in planning and context → that investment is never counted → claimed gains are overstated by the cost of the scaffold.
+
+**D. The Governance Triangle** (#9-10, #20, agent security). Verification, delegation, and security are three faces of the same meta-problem: *how do you trust output from an autonomous system you can't fully inspect?* No current answer works at scale.
+
+**E. The Solow Parallel** (#3, #4, #22). The micro/macro productivity disconnect precisely mirrors the IT Solow Paradox of 1987-1997. Multiple economists now explicitly make this comparison. The historical precedent suggests: (a) macro gains may take 5-15 years, (b) the gains will come from organizational restructuring around the technology, not from the technology alone, and (c) the early period is characterized by exactly the kind of hype/disappointment cycle we're in now.
+
+---
+
+## What the Corpus Can't Answer
+
+1. **Long-term maintenance of AI-generated codebases.** Nobody has data beyond ~1 year.
+2. **Team dynamics.** How do code reviews, pair programming, and knowledge sharing evolve?
+3. **Domain-specific performance.** iOS/Swift flagged weak. Embedded? Security-critical? Real-time?
+4. **Firm-level economics.** Consulting firms billing dev-hours? Headcount-sized teams?
+5. **Whether workflow overhead converges or diverges.** Does the scaffold get cheaper or grow?
+6. **Whether the Solow Paradox resolution applies.** IT eventually delivered macro gains through organizational restructuring (not through faster typing). Will AI follow the same path? The analogy is suggestive, not determinative.
+7. **Rate of change.** If models improve as much in the next 6 months as the last 6, every assessment here needs revision. Permanent caveat.
