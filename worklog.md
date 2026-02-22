@@ -3,6 +3,12 @@
 > **Note:** File paths in entries before 2026-02-17 session 7 refer to the flat structure
 > before the notes reorg. See [README.md](README.md) for current file locations.
 
+## 2026-02-22 — Session 1
+
+- Distilled HN thread on DuckDB as first choice for data processing (310pts, 119 comments)
+- Key findings: real moat is relational guarantees not speed, SQL-vs-dataframes debate conflates declarative with SQL, Ibis emerges as thread's implicit answer, governance advantage underappreciated
+- Saved to `research/hn-duckdb-first-choice-data-processing.md`, linked from README
+
 ## 2026-02-22 — Session 14 (HN distill: Skip open source + Solow critique)
 
 - Distilled HN thread on Skip going free & open source (515pts, 226 comments)
@@ -295,3 +301,22 @@
 - Emerging pattern: LuLu outbound firewall + dedicated agent service accounts (ChatPRD pattern) = highest value for interactive use
 - Separate user is Tier 3 (optional) for interactive use when LuLu + dedicated accounts are in place
 - Wrote `research/agent-security-landscape-what-people-do.md`
+
+## 2026-02-22
+- HN distill: "Dead Internet Theory" (697 comments)
+- Key thesis: Dead Internet Theory is really Dead Incentive Theory — ad-funded attention economy rewards exactly what bots excel at
+- Best framework: shadowgovt's PageRank analogy (filtering interregnum, not terminal condition)
+- Non-obvious dynamic: humans converging expression downward to avoid AI suspicion, closing the gap from both sides
+- Wrote `research/hn-dead-internet-theory.md`
+
+## 2026-02-22
+
+- HN distill: "The recurring dream of replacing developers" (524 comments, 646 pts)
+- Article itself flagged as AI slop — meta-irony: AI-written article arguing humans are essential
+- Star comment (davnicwil): dream is about manifesting without details; details are fractal
+- Key framework: Twey's "constant complexity budget" — we always operate at max complexity, abstractions just reallocate upward
+- dijit's democratization insight: Excel succeeded by accepting catastrophic failure; you can't have accessibility + reliability
+- Near-term consensus: junior squeeze is real, bar keeps rising, but nobody follows the pipeline problem forward
+- Non-obvious: essential/accidental complexity boundary is being reclassified in real time, not fixed
+- Offshoring smokescreen: layoffs may be offshoring dressed as AI disruption (strict9, complicated by Tade0)
+- Wrote `research/hn-replacing-developers-dream.md`
