@@ -31,6 +31,7 @@ Not yet grouped into topics:
 - [PRS Profile Analysis Review](research/pacific-ridge-profile-analysis-review.md) — critical review of the above analysis
 - [PRS Comprehensive Profile Review](research/pacific-ridge-school-profile-comprehensive-review.md) — definitive AO-grade profile assessment with full contextualization
 - [HN: Karpathy on "Claws"](research/hn-karpathy-claws-llm-agents.md) — persistent AI agent systems, security impossibility, emotional vs functional appeal
+- [NanoClaw Deep Dive](research/nanoclaw-deep-dive.md) — ~4K LOC container-isolated Claw alternative, security model, skills-over-features philosophy
 
 ## Conventions
 

@@ -37,6 +37,10 @@ OpenClaw (Peter Steinberger) is the viral agent (180K+ stars) that runs Pi under
 - **Selective skill injection** — only relevant skills loaded per turn (vs blind prompt stuffing)
 - **Security concern:** "Faustian bargain" — root-like access + community skills with ~15% malicious rate
 
+### NanoClaw
+
+Lightweight alternative to OpenClaw by Gavriel Cohen (ex-Wix). ~3.9K LOC TypeScript, ~10K GitHub stars in 3 weeks. Key differentiator: OS-level container isolation (Apple Container / Docker) instead of app-level permission checks. Claude-only, WhatsApp-only by design — other integrations added via "skills" (Claude Code rewrites your fork). Novel contribution model: no plugins, no config files, just code changes mediated by AI. Genuinely improves blast radius on compromise but doesn't solve prompt injection or network exfiltration. → [Deep dive](../research/nanoclaw-deep-dive.md)
+
 ## Agent Landscape (Feb 2026)
 
 A phase transition between Jan 12 – Feb 14, 2026: Anthropic launched Cowork + Agent Teams, OpenAI launched Codex macOS app with parallel agents, Apple opened Xcode to third-party agents via MCP, AWS upgraded Kiro with autonomous agent.
