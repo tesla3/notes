@@ -1,6 +1,29 @@
 This is scratchpads captures insights on the moment by the owner, a human.
 DO NOT modify it. Instead, create a seperate copy when you improve or comment on it, and save it to a different md file.
 ---
+**source: https://news.ycombinator.com/item?id=46932343
+**insight: confused deputed (social-engineered agents). VM is foundamentally inadequate for LLM/agent security (need to seperate data and code). Agents 
+**Gondolin, Matchlock
+
+The thread correctly identifies that VM-level isolation is the minimum viable sandbox for AI agents in 2026 —
+  containers and bubblewrap are insufficient, as both the technical arguments and the Claude Cowork exfiltration
+  demonstrate. But it circles without ever stating the harder truth: network allowlisting doesn't solve exfiltration
+  when the allowed hosts are themselves general-purpose APIs. The secret injection model (shared by both Matchlock and
+  Gondolin) protects credentials but not data. The real problem is that a prompt-injected agent and a correctly-
+  functioning agent produce identical network traffic to identical endpoints. Until someone builds content-aware
+  egress
+  policies — essentially, an LLM judging another LLM's outputs — the "hard defense" this thread yearns for doesn't
+  exist. The sandbox buys time; it doesn't buy safety.
+
+ 1. The "confused deputy" (**Agent can be social-engineered**) consensus emerges immediately — and the creator agrees
+
+  The top-voted comment (DanMcInerney) sets the entire frame: sandboxing is "soft defense." A prompt-injected email
+  agent exfiltrates through the same send-email path that's its legitimate function. The creator agrees on the spot:
+  "sandboxing by itself doesn't solve prompt injection. If the agent can read and send emails, no sandbox can tell a
+  legit send from an exfiltration." clarity_hacker names it explicitly: the confused deputy problem at the application
+  layer.
+
+---
 **source: HN Thread Distillation: "AI makes the easy part easier and the hard part harder"
  1. "Embarrassingly solved problems" is the thread's best analytical lens
 

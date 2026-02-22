@@ -1,4 +1,4 @@
-← [Separate User Pre-Commit](agent-separate-user-precommit-analysis.md) · [Index](../README.md)
+← [Separate User Pre-Commit](agent-separate-user-precommit-analysis.md) · [Index](../README.md) · → [Google Dedicated Account Setup](agent-google-dedicated-account-setup.md)
 
 # Agent Security in Practice: What People Actually Do (Feb 2026)
 
