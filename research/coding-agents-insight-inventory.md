@@ -253,6 +253,22 @@ Mike Judge (Sep 2025): "These companies that are making AI coding tools know the
 
 **E. The Solow Parallel** (#3, #4, #22). The micro/macro productivity disconnect precisely mirrors the IT Solow Paradox of 1987-1997. Multiple economists now explicitly make this comparison. The historical precedent suggests: (a) macro gains may take 5-15 years, (b) the gains will come from organizational restructuring around the technology, not from the technology alone, and (c) the early period is characterized by exactly the kind of hype/disappointment cycle we're in now.
 
+→ **⚠️ Own analysis — the analogy is descriptively accurate but predictively weak.** Six problems:
+
+1. **Survivorship bias in analogy selection.** We reach for Solow *because* IT eventually delivered. Other technologies showed the same early pattern (promised revolution, flat productivity) and never resolved. The base rate of "productivity paradox → eventual macro gains" vs. "productivity paradox → technology just wasn't that transformative" is never addressed by those making the comparison.
+
+2. **The mechanisms are fundamentally different.** IT created genuinely *new capabilities* (networking, e-commerce, real-time global communication) that enabled new organizational forms. AI coding tools make an existing, non-bottleneck activity faster. The Central Chain (#1-#4) itself argues coding speed isn't the bottleneck — so what new organizational structure emerges from faster boilerplate? The Solow resolution required IT enabling previously impossible business processes. Faster CRUD generation doesn't do that.
+
+3. **The timeline is unfalsifiable.** "5-15 years" means the prediction can't be tested until the 2030s. Without a specified falsification point, it's a hope, not a prediction.
+
+4. **Conflates AI-broadly with AI-coding-specifically.** Solow concerned IT as a *general-purpose technology* that restructured entire industries (retail, finance, logistics). AI coding tools are a narrow application within one profession. If a Solow-style resolution comes, it'll be from AI applied to healthcare, science, and logistics — not from faster programming. Citing Solow for AI coding is like citing it for a specific spreadsheet product.
+
+5. **The simpler explanation needs no paradox.** The micro/macro gap is the "paradox." But the micro side is already explained: vendor data, self-report inflation (METR: +20% estimated, -19% measured), lab tasks that don't generalize. Occam's razor: the macro data is simply correct, the micro data is systematically biased, and there is no paradox to explain.
+
+6. **Rapid model change breaks the analogy's structure.** The IT Solow Paradox involved mature technology applied to mature organizations. AI tools change every quarter. If near-future models handle essential complexity, the Central Chain collapses and there's nothing left for Solow to explain. You can't simultaneously hold "this is like the 10-year IT paradox" and "the technology might be fundamentally different in 6 months" — those are contradictory frames.
+
+**The strongest defensible position:** the Solow parallel is a useful *description* of where we are (micro claims, macro silence, widespread adoption, flat output), but has no predictive power about where we're going. Using it to imply "gains will come eventually" borrows the *conclusion* of a historical episode and grafts it onto a situation where the enabling mechanism (new capabilities → new organizational forms) may not apply.
+
 ---
 
 ## What the Corpus Can't Answer
@@ -262,5 +278,5 @@ Mike Judge (Sep 2025): "These companies that are making AI coding tools know the
 3. **Domain-specific performance.** iOS/Swift flagged weak. Embedded? Security-critical? Real-time?
 4. **Firm-level economics.** Consulting firms billing dev-hours? Headcount-sized teams?
 5. **Whether workflow overhead converges or diverges.** Does the scaffold get cheaper or grow?
-6. **Whether the Solow Paradox resolution applies.** IT eventually delivered macro gains through organizational restructuring (not through faster typing). Will AI follow the same path? The analogy is suggestive, not determinative.
+6. **Whether the Solow Paradox resolution applies — and whether the analogy even has predictive power.** IT eventually delivered macro gains through organizational restructuring, not faster typing. But the analogy may be structurally flawed: IT enabled genuinely new capabilities (networking, e-commerce); AI coding accelerates an existing non-bottleneck. The parallel is descriptively accurate today but the mechanism that drove IT's resolution (new organizational forms from new capabilities) may not have an equivalent here. See Pattern E critical evaluation.
 7. **Rate of change.** If models improve as much in the next 6 months as the last 6, every assessment here needs revision. Permanent caveat.

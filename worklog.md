@@ -3,6 +3,16 @@
 > **Note:** File paths in entries before 2026-02-17 session 7 refer to the flat structure
 > before the notes reorg. See [README.md](README.md) for current file locations.
 
+## 2026-02-22 — Session 14 (HN distill: Skip open source + Solow critique)
+
+- Distilled HN thread on Skip going free & open source (515pts, 226 comments)
+- Created `research/hn-skip-open-source.md`
+- Key insights: LGPL-3 license choice creates enterprise friction vs. permissive-licensed competitors; no production case studies after 3 years; Liquid Glass as competitive wedge is a bet on Apple's design instability; paid dev tools are dead but sponsorship model has no successful precedent for frameworks
+- Updated README with link
+- Added critical evaluation of Solow Paradox analogy to `research/coding-agents-insight-inventory.md` (Pattern E + open question #6)
+  - Six structural problems: survivorship bias in analogy selection, different mechanisms (new capabilities vs. speed-up), unfalsifiable timeline, AI-broadly vs. AI-coding conflation, simpler explanation (no paradox needed), rapid model change breaks the frame
+  - Verdict: descriptively accurate, predictively weak
+
 ## 2026-02-21 — Session 13 (NanoClaw deep dive)
 
 - Created `research/nanoclaw-deep-dive.md` — comprehensive analysis of NanoClaw
