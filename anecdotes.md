@@ -260,6 +260,26 @@ Why this matters: it's the control experiment the AI companies don't run. Anthro
 
 ---
 
+## Capability counter-examples
+
+### Just Say Review
+
+IanCal, [HN #46936920](https://news.ycombinator.com/item?id=46936920), Feb 2026
+
+In response to a Latent Space article arguing LLMs lack world models and can't reason about adversarial social dynamics. The article's centerpiece: ChatGPT drafts a Slack message ("no rush, whenever works") that an expert coworker would reject because Priya's triage heuristics will bury it. IanCal fed the same message back to ChatGPT with one word added: "review."
+
+> This is a very polite and respectful start, which is great since you are new. However, from a professional standpoint, it is a little too passive and vague. In a busy work environment, saying "no rush at all" or "whenever" often leads to your request being buried at the bottom of a to-do list. Additionally, you haven't told Priya exactly what she is looking at or where to find it.
+
+The model identified every failure the article attributed to expert-only reasoning, produced three alternative drafts graded by scenario, and added a practical checklist the article's expert *didn't* think of (file permissions, scratchpad cleanup). Without being told Priya was overloaded.
+
+Devastating to the article's ontological claim ("LLMs have word models, not world models") — the world model is present but dormant, activated by a one-word mode switch from generation to evaluation. Less devastating to the structural argument: "review" requires a human who already knows the situation is strategic, and doesn't help autonomous agents with no one to say it.
+
+[Full breakdown](research/hn-iancal-just-say-review.md)
+
+↳ [Steering ∝ Theory](insights.md#steering-theory) (the steering word is trivial but required — the model won't apply its own knowledge unprompted)
+
+---
+
 ## Skill atrophy / dependency
 
 ### LLM-Dependent Mid
