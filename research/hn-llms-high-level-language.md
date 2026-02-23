@@ -1,4 +1,4 @@
-← [Index](../README.md)
+← [Coding Agents](../topics/coding-agents.md) · [Index](../README.md)
 
 ## HN Thread Distillation: "LLMs as the new high level language"
 
@@ -62,5 +62,7 @@ The most remarkable moment: the author adds an update acknowledging that "the an
 - **The Zechner counterexample works against the thesis.** The author cites Mario Zechner's "prompts are code" work as validation, but Zechner's actual article describes the enormous engineering effort needed to make LLM workflows *barely reproducible* — structured sequential prompts, serialized state to JSON/markdown, clipboard workarounds for transcription errors. This is evidence for how far LLMs are from being a "language," not how close.
 
 ### Verdict
+
+**Insight cross-references:** Confirms [Broken Abstraction Contract](../insights.md#broken-abstraction-contract) (all four contract properties violated), [Democratization-Failure Tradeoff](../insights.md#democratization-failure-tradeoff) (defenders retreat to accepting failure modes), and [Theory Formation Threshold](../insights.md#theory-formation-threshold) (author concedes analogy requires crossing it). No new standalone insights.
 
 The article bundles two claims: "LLMs are economically transformative for software development" (broadly true, broadly uncontested) and "LLMs are the next step in the high-level language progression" (the actual thesis, which the thread thoroughly demolishes). The analogy fails on every formal property that defines the HLL progression: determinism, sufficiency, locality, and reproducibility. What the thread circles but never quite states is that the language analogy isn't just wrong — it's *actively harmful* because it encourages people to think about LLMs using a mental model (compilation) that will lead them to skip the verification step that currently makes LLM-assisted development actually work. The author's own concession — the analogy holds only if you stop reading the code — inadvertently names the danger: the analogy is most convincing precisely when it's most reckless.
