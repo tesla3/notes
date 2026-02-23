@@ -4,11 +4,13 @@
 
 First-hand reports from practitioners. Raw quotes, light editing for readability. Updated as new threads are processed.
 
+Each anecdote has a short name and cross-references to [insights](insights.md) it evidences.
+
 ---
 
 ## Autonomous agent workflows
 
-### Sentry debugging via Playwright + MCP loop
+### Sentry Guess-and-Check
 
 bblcla (article author), [HN #46618042](https://news.ycombinator.com/item?id=46618042), Jan 2026
 
@@ -24,9 +26,11 @@ bblcla (article author), [HN #46618042](https://news.ycombinator.com/item?id=466
 
 Stack: Claude Code + Playwright + Sentry MCP. ~90 min autonomous. Estimated savings: ~1.5 days.
 
+↳ [Activation Energy](insights.md#activation-energy) (tedious task below effort threshold), [Fixed-Point Workflow](insights.md#fixed-point-workflow) (guess-check loop = plan→execute→observe→revise)
+
 ---
 
-### Datadog errors → bug-fix PRs
+### Datadog Bug Hoover
 
 frde_me, [HN #46618042](https://news.ycombinator.com/item?id=46618042), Jan 2026
 
@@ -36,19 +40,23 @@ frde_me, [HN #46618042](https://news.ycombinator.com/item?id=46618042), Jan 2026
 >
 > Something I've started doing is feeding it errors we see in datadog and having it generate PRs. That alone has fixed a bunch of bugs we wouldn't have had time to address / that were low volume. The quality of the product is most probably net better right now than it would have been without AI. And velocity / latency of changes is much better than it was a year ago (working at the same company, with the same people)
 
+↳ [Activation Energy](insights.md#activation-energy) (low-volume bugs below effort threshold)
+
 ---
 
-### Autonomous performance profiling
+### Cache Discovery
 
 ako, [HN #46618042](https://news.ycombinator.com/item?id=46618042), Jan 2026
 
 > Yesterday I asked it why some functionality was slow, it did some research, and then came back with all the right performance numbers, how often certain code was called, and opportunities to cache results to speed up execution. It refactored the code, ran performance tests, and reported the performance improvements.
 
+↳ [Activation Energy](insights.md#activation-energy) (profiling task that wouldn't have been prioritized)
+
 ---
 
 ## One-shot infrastructure tasks
 
-### AWS ECS migration from Modal
+### ECS One-Shot
 
 bblcla (article author), [HN #46618042](https://news.ycombinator.com/item?id=46618042), Jan 2026
 
@@ -62,19 +70,23 @@ bblcla (article author), [HN #46618042](https://news.ycombinator.com/item?id=466
 
 Stack: Claude Code + Terraform + `aws` CLI. First try, ~3 hours. Author had never used ECS/Kubernetes. Estimated savings: 1-2 days.
 
+↳ [Activation Energy](insights.md#activation-energy) (put off by learning curve), [Steering ∝ Theory](insights.md#steering-theory) (theory-sparse infra work — well-documented APIs, standard patterns)
+
 ---
 
 ## Specific failure modes
 
-### Copies data rather than rearchitect (Rust)
+### Lazy Copy
 
 michalsustr (minfx.ai), [HN #46618042](https://news.ycombinator.com/item?id=46618042), Jan 2026
 
 > At minfx.ai (a Neptune/wandb alternative), we cache time series that can contain millions of floats for fast access. Any engineer worth their title would never make a copy of these and would pass around pointers for access. Opus, when stuck in a place where passing the pointer was a bit more difficult (due to async and Rust lifetimes), would just make the copy, rather than rearchitect or at least stop and notify user. Many such examples of 'lazy' and thus bad design.
 
+↳ [Naur's Nightmare](insights.md#naurs-nightmare) (no theory → path of least resistance), [Diagnostic Pain](insights.md#diagnostic-pain) (Rust lifetime difficulty was signaling a design issue the agent ignored)
+
 ---
 
-### Python anti-patterns survive explicit CLAUDE.md rules
+### Stubborn Anti-Patterns
 
 bblcla, [HN #46618042](https://news.ycombinator.com/item?id=46618042), Jan 2026
 
@@ -92,9 +104,11 @@ chapel corroborates across model generations:
 >
 > In the Python projects I've been using Opus 4.5 with, it hasn't been showing those issues as often, but then again the projects are throwaway and I cared more about the output than the code itself.
 
+↳ [Broken Abstraction Contract](insights.md#broken-abstraction-contract) (CLAUDE.md instructions are not a contract the LLM reliably honors)
+
 ---
 
-### Branch confusion / version drift
+### Version Drift
 
 0x457, [HN #46618042](https://news.ycombinator.com/item?id=46618042), Jan 2026
 
@@ -110,9 +124,11 @@ chapel corroborates across model generations:
 >
 > It might do a good junior dev work, but it must be reviewed as if it's from junior dev that got hired today and this is his first PR.
 
+↳ [Naur's Nightmare](insights.md#naurs-nightmare) (no coherent model of branch state or codebase intent)
+
 ---
 
-### Requires domain knowledge to produce quality output
+### Domain Knowledge Gate
 
 bblcla, [HN #46618042](https://news.ycombinator.com/item?id=46618042), Jan 2026
 
@@ -122,35 +138,43 @@ michalsustr adds:
 
 > I also believe that overall repository code quality is important for AI agents — the more "beautiful" it is, the more the agent can mimic the "beauty".
 
+↳ [Steering ∝ Theory](insights.md#steering-theory) (you need theory to steer effectively)
+
 ---
 
-### Hand-holding in agentic workflows
+### Hand-Holding Tax
 
 joduplessis, [HN #46618042](https://news.ycombinator.com/item?id=46618042), Jan 2026
 
 > Recently I've put Claude/others to use in some agentic workflows with easy menial/repetitive tasks. I just don't understand how people are using these agents in production. The automation is absolutely great, but it requires an insane amount of hand-holding and cleanup.
 
+↳ [Hidden Denominator](insights.md#hidden-denominator) (hand-holding cost not counted against productivity claims)
+
 ---
 
-### Ploughs ahead instead of asking
+### Plough-Ahead Problem
 
 Scrapemist, [HN #46618042](https://news.ycombinator.com/item?id=46618042), Jan 2026
 
 > Eventually you can show Claude how you solve problems, and explain the thought process behind it. It can apply these learnings but it will encounter new challenges in doing so. It would be nice if Claude could instigate a conversation to go over the issues in depth. Now it wants quick confirmation to plough ahead.
 
+↳ [Inverted Principal-Agent](insights.md#inverted-principal-agent) (aligned but incompetent — wants to help, doesn't know when to stop and ask)
+
 ---
 
 ## Practitioner techniques
 
-### Context hygiene
+### Context Hygiene
 
 chapel, [HN #46618042](https://news.ycombinator.com/item?id=46618042), Jan 2026
 
 > The biggest unlock for me with these tools is not letting the context get bloated, not using compaction, and focusing on small chunks of work and clearing the context before working on something else.
 
+↳ [Fixed-Point Workflow](insights.md#fixed-point-workflow) (the plan→scope→review cycle requires fresh context)
+
 ---
 
-### Linting as hard constraint
+### Linting as Guardrail
 
 bblcla + chapel, [HN #46618042](https://news.ycombinator.com/item?id=46618042), Jan 2026
 
@@ -160,17 +184,21 @@ chapel:
 bblcla:
 > Arguably linting is a kind of abstraction block!
 
+↳ [Verification Gate](insights.md#verification-gate) (linting is cheap verification that gates output quality)
+
 ---
 
-### Sub-agent review structure
+### Sub-Agent Review
 
 ekidd, [HN #46618042](https://news.ycombinator.com/item?id=46618042), Jan 2026
 
 > If you want code review, start by writing a code review "skill". Have that skill ask Opus to fork off several subagents to review different aspects, and then synthesize the reports, with issues broken down by Critical, Major and Minor. Have the skill describe all the things *you* want from a review.
 
+↳ [Verification Gate](insights.md#verification-gate) (structured verification as part of the agent loop)
+
 ---
 
-### Minimal-edit default as feature, not bug
+### Minimal-Edit Default
 
 simonw, [HN #46618042](https://news.ycombinator.com/item?id=46618042), Jan 2026
 
@@ -182,11 +210,13 @@ iamleppert:
 
 > It's very good at doing the least amount of work to just make something work by default, but that's not always what you want. Sometimes it is. I'd much rather prefer that as the default mode of operation than something that makes a project out of every little change.
 
+↳ [Diagnostic Pain](insights.md#diagnostic-pain) (minimal edit preserves the status quo, which may be the wrong abstraction)
+
 ---
 
 ## Process bottleneck evidence
 
-### S3 upload: 1 minute of AI, 4.9 days of organization
+### The 4.9-Day S3
 
 dent9, [HN #46933223](https://news.ycombinator.com/item?id=46933223), Feb 2026
 
@@ -194,11 +224,11 @@ dent9, [HN #46933223](https://news.ycombinator.com/item?id=46933223), Feb 2026
 >
 > AI reduced this from a 5-day process to a 4.9-day process
 
-Sharpest single anecdote for the Amdahl's Law dynamic: coding speed was never the bottleneck. See [insights](insights.md) — "Brooks (1986) and Naur (1985) are winning their most expensive test."
+↳ [Brooks-Naur Vindication](insights.md#brooks-naur-vindication) (Amdahl's Law — coding speed was never the bottleneck)
 
 ---
 
-### Coding done in hours, PR/CI wait in days
+### PR Queue Wall
 
 gbuk2013, [HN #46933223](https://news.ycombinator.com/item?id=46933223), Feb 2026
 
@@ -206,13 +236,13 @@ gbuk2013, [HN #46933223](https://news.ycombinator.com/item?id=46933223), Feb 202
 >
 > Coding speed was never really a bottleneck anywhere I have worked - it's all the processes around it that take the most time and AI doesn't help that much there.
 
-Same Amdahl dynamic as dent9 above, stated as a recurring pattern rather than a single incident.
+↳ [Brooks-Naur Vindication](insights.md#brooks-naur-vindication) (same Amdahl dynamic as The 4.9-Day S3, stated as recurring pattern)
 
 ---
 
 ## Autonomous agent limits
 
-### $170 Google Docs clone: "abstractly impressive, completely useless"
+### The $170 Clone
 
 amarble, [HN #46933223](https://news.ycombinator.com/item?id=46933223) + [full write-up](https://www.marble.onl/posts/this_cost_170.html), Feb 2026
 
@@ -224,16 +254,20 @@ amarble, [HN #46933223](https://news.ycombinator.com/item?id=46933223) + [full w
 
 Setup: Claude Code / Opus 4.6, autonomous loop for 8 hours with minimal intervention, 233M input tokens. [Repo public](https://github.com/rbitr/altdocs).
 
-Why this matters: it's the control experiment the AI companies don't run. Anthropic demos a C compiler ($20K). Cursor demos a browser (1M+ LOC). Both are spec-tractable — detailed behavioral specs make verification easy and taste irrelevant. amarble tried a taste-requiring product (document editor) and got spec-compliance without usability. The "no pathway" claim is the strongest part — not "it didn't work this time" but "more money, better prompts, and specialized agents wouldn't fix this." The only public, cost-accounted experiment of autonomous agentic coding on a real product. Evidence for [steering value ∝ theory density](insights.md).
+Why this matters: it's the control experiment the AI companies don't run. Anthropic demos a C compiler ($20K). Cursor demos a browser (1M+ LOC). Both are spec-tractable — detailed behavioral specs make verification easy and taste irrelevant. amarble tried a taste-requiring product (document editor) and got spec-compliance without usability. The "no pathway" claim is the strongest part — not "it didn't work this time" but "more money, better prompts, and specialized agents wouldn't fix this." The only public, cost-accounted experiment of autonomous agentic coding on a real product.
+
+↳ [Steering ∝ Theory](insights.md#steering-theory) (unsteered agent on medium-theory work → average/obvious output), [Naur's Nightmare](insights.md#naurs-nightmare) (no taste/theory in the artifact)
 
 ---
 
 ## Skill atrophy / dependency
 
-### LLM-dependent mid-level
+### LLM-Dependent Mid
 
 fastasucan, [HN #46618042](https://news.ycombinator.com/item?id=46618042), Jan 2026
 
 > One guy I work with has little formal training (and mid level experience), but do a lot with LLM's. But in every situation he has to do anything without an LLM he heavily struggles/are not able to anything (say a basic sql query). There is no way someone with his experience and position would still be at that level.
 >
 > I guess people differ in thinking that is a good or a bad thing. I think it makes up for a huge risk, as he cant really judge good from bad code (or architecture), but his supervisors have put him in a position where he should.
+
+↳ [Apprenticeship Doom Loop](insights.md#apprenticeship-doom-loop) (AI impairs conceptual understanding — Shen & Tamkin confirmed this experimentally)
