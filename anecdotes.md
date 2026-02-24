@@ -260,6 +260,26 @@ Why this matters: it's the control experiment the AI companies don't run. Anthro
 
 ---
 
+### The $20K Semantic Transpiler
+
+Nicholas Carlini (Anthropic), [blog post](https://www.anthropic.com/engineering/building-c-compiler) + [repo](https://github.com/anthropics/claudes-c-compiler), Feb 2026. Lattner analysis: [review](../research/lattner-ccc-review.md). Rastogi analysis: [agent scaling laws](https://vizops.ai/blog/agent-scaling-laws/).
+
+16 parallel Claude Opus 4.6 agents, ~2,000 sessions over 14 days, $20K in API costs. Produced a 100K-line Rust C compiler that can build Linux 6.9 on x86, ARM, and RISC-V, passes 99% of GCC torture tests, compiles Doom, SQLite, Redis, FFmpeg, postgres.
+
+The limitations reveal more than the achievements:
+
+> The compiler successfully builds many projects, but not all. It's not yet a drop-in replacement for a real compiler. The generated code is not very efficient. Even with all optimizations enabled, it outputs less efficient code than GCC with all optimizations *disabled*. — Carlini
+
+The code generator reparses assembly text instead of using an IR. The parser hard-codes system header information rather than actually parsing headers — it can't handle real-world system headers, so it fakes what it needs for its test suite. Error recovery is poor. The architecture is LLVM-derived down to specific constructs (`getelementptr`, block terminators, `Mem2Reg`) that appear in no other compiler IR. As Lattner (creator of LLVM) observes: CCC "optimizes toward passing tests rather than building general abstractions."
+
+Rastogi's independent analysis concludes CCC is best understood as a "semantic transpiler" — given a 205-line prompt and a test suite, it converts existing compiler knowledge from training data into Rust. The test suite is what turned a weekend hack into a Linux-compiling compiler: "building that test infrastructure required deep domain expertise that the agents themselves do not have — at least not yet."
+
+Why this matters alongside The $170 Clone: CCC is the *success case* that proves the same point. Compilers are a maximally spec-tractable domain — deterministic feedback, layered abstractions, decades of well-documented consensus. The LLM output looks competent precisely because the training distribution mean IS the established best practice (Lattner's "distribution follower" insight). Switch to a domain without that consensus (The $170 Clone's document editor) and the same architecture produces mediocrity. **The quality ceiling isn't model capability — it's the consensus quality of the training domain.**
+
+↳ [Verification Gate](insights.md#verification-gate) (test suites gated quality; GCC oracle created verifiable sub-tasks), [Verification Scales Parallelism](insights.md#verification-scales-parallelism) (16 agents stuck on same kernel bug until tasks were decomposed), [Naur's Nightmare](insights.md#naurs-nightmare) (hard-coded headers = code faking understanding it doesn't have), [Steering ∝ Theory](insights.md#steering-theory) (compiler = consensus-rich domain; mean of training data ≈ correct)
+
+---
+
 ## Capability counter-examples
 
 ### Just Say Review
