@@ -311,3 +311,51 @@ fastasucan, [HN #46618042](https://news.ycombinator.com/item?id=46618042), Jan 2
 > I guess people differ in thinking that is a good or a bad thing. I think it makes up for a huge risk, as he cant really judge good from bad code (or architecture), but his supervisors have put him in a position where he should.
 
 ↳ [Apprenticeship Doom Loop](insights.md#apprenticeship-doom-loop) (AI impairs conceptual understanding — Shen & Tamkin confirmed this experimentally)
+
+---
+
+## Quality / reliability evidence
+
+### Cloudflare Post-AI Outage Cluster
+
+TacticalCoder, [HN #47125374](https://news.ycombinator.com/item?id=47125374), Feb 2026
+
+> If we look at a company like Cloudflare who basically didn't have any serious outage for five years then had five serious outages in six months since they drank the AI kool-aid, we kinda have a first data point on how amazing AI is from a maintenance point of view.
+>
+> We all *know* we're generating more lines of underperforming, insecure, probably buggy, code than ever before. We're in for a wild ride.
+
+**Caveat:** Unverified claim — correlation/causation not established. But specific, named, and falsifiable. Nobody in the thread challenged or confirmed it.
+
+↳ [Volume-Value Divergence](insights.md#volume-value-divergence) (more AI code ≠ more value), [Culture Amplifier](insights.md#culture-amplifier) (if true, evidence of AI degrading a previously strong-practice org)
+
+---
+
+### Claude Cowork "Feels Like Two Weeks"
+
+sjaiisba, [HN #47125374](https://news.ycombinator.com/item?id=47125374), Feb 2026
+
+Context: Simon Willison cited Claude Cowork as evidence of AI velocity — *"apparently built in less than two weeks using Claude Code, and appears to be getting significant usage already."*
+
+> Only a personal anecdote, but the humans I know that have used it are all aware of how buggy it is. It feels like it was made in 2 weeks.
+>
+> Which gets back to the outsourcing argument: it's always been cheap to make buggy code. If we were able to solve this, outsourcing would have been ubiquitous. Maybe LLMs change the calculus here too?
+
+Parallels [The $170 Clone](#the-170-clone) — but for a first-party Anthropic product presented as a success story. The speed IS the quality signal, just not in the direction intended.
+
+↳ [Volume-Value Divergence](insights.md#volume-value-divergence) (fast production ≠ good production), [Broken Abstraction Contract](insights.md#broken-abstraction-contract) (quality can't be contracted away by speed)
+
+---
+
+## Review burden
+
+### Zero-Sum Review Transfer
+
+sjaiisba, [HN #47125374](https://news.ycombinator.com/item?id=47125374), Feb 2026
+
+> AI has been a lifesaver for my low performing coworkers. They're still heavily reliant on reviews, but their output is up. One of the lowest output guys I ever worked with is a massive LinkedIn LLM promoter.
+>
+> Not sure how long it'll last though. With the time I spend on reviews I could have done it myself, so if they don't start learning…
+
+Individual output up, team output flat — the productivity gain is an accounting illusion that moves work from generation to review. The senior engineer absorbs the cost the LLM supposedly eliminated.
+
+↳ [Hidden Denominator](insights.md#hidden-denominator) (review time not counted against productivity claims), [Apprenticeship Doom Loop](insights.md#apprenticeship-doom-loop) (reliance without learning → no skill development)
