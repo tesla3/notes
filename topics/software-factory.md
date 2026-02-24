@@ -33,6 +33,8 @@ Key ideas: specification sandwich (types → contracts → PBT wrapping every fu
 
 ## Deep Research
 
+- [Harness Engineering Playbook — Distilled](../research/harness-engineering-playbook.md) — tactical tips from OpenAI, Stripe, Steinberger, Hashimoto, Tane convergence
+- [Harness Engineering — Critical Review](../research/harness-engineering-critical-review.md) — survivorship bias, hidden denominator, macro counter-evidence, source credibility
 - [Absurd & Durable Execution Landscape](../research/absurd-durable-execution-landscape.md) — Absurd vs Temporal vs DBOS vs Inngest vs Restate; durable execution for agent workflows
 - [Dark Software Factory Review](../research/dark-software-factory-review.md) — the frame shift from developer tools to autonomous production
 - [StrongDM Detective Report](../research/strongdm-detective-report.md) — forensic analysis of Attractor/CXDB repos, what they kept proprietary
