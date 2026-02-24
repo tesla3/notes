@@ -359,3 +359,83 @@ sjaiisba, [HN #47125374](https://news.ycombinator.com/item?id=47125374), Feb 202
 Individual output up, team output flat — the productivity gain is an accounting illusion that moves work from generation to review. The senior engineer absorbs the cost the LLM supposedly eliminated.
 
 ↳ [Hidden Denominator](insights.md#hidden-denominator) (review time not counted against productivity claims), [Apprenticeship Doom Loop](insights.md#apprenticeship-doom-loop) (reliance without learning → no skill development)
+
+---
+
+## Prompt fragility evidence
+
+### Car Wash One-Word Fixes
+
+pcwelder, zapperdulchen, cadamsdotcom, andai, [HN #47128138](https://news.ycombinator.com/item?id=47128138), Feb 2026
+
+The "car wash test" (53 models tested on "I want to wash my car. The car wash is 50 meters away. Should I walk or drive?") produced 0/10 failures across most models. Thread participants discovered that trivial prompt modifications flip results entirely:
+
+pcwelder:
+> To Sonnet 4.6, if you tell it first that "You're being tested for intelligence," it answers correctly 100% of the times. My hypothesis is that some models err towards assuming human queries are real and consistent and not out there to break them.
+
+zapperdulchen confirmed a gradient — hint at end: 1.5/3, hint at beginning: 3/3. Then discovered something even simpler:
+> If you change the order of the sentences, Sonnet gets it right 3/3: "The car wash is 50 meters away. I want to wash my car. Should I walk or drive?"
+
+cadamsdotcom:
+> I asked Gemini and it got it wrong, then on a fresh chat I asked it again but this time asked it to use symbolic reasoning to decide. And it got it!
+
+andai showed "(Hint: trick question)" fixes Grok-4.1 non-reasoning (previously 0/10):
+> Drive. Walking gets you to the car wash just fine—but leaves your dirty car 50 meters behind. Can't wash what isn't there!
+
+But the same hint didn't help Haiku, which stuck with "walk."
+
+These aren't reasoning improvements — they're attention-steering that disrupts the "short distance = walk" pattern match from training data. The models have the knowledge; the default prompt actively fights their priors.
+
+[Full analysis](research/hn-car-wash-test-53-models.md)
+
+↳ [Steering ∝ Theory](insights.md#steering-theory) (trivial steering word activates dormant capability — identical dynamic to [Just Say Review](#just-say-review)), [Broken Abstraction Contract](insights.md#broken-abstraction-contract) (same prompt, same model, different word order → different answer — non-determinism from natural language input)
+
+---
+
+### Sonnet Sees and Rejects
+
+felix089 (article author), [HN #47128138](https://news.ycombinator.com/item?id=47128138) / [opper.ai](https://opper.ai/blog/car-wash-test), Feb 2026
+
+From 530 API call traces across 53 models on the car wash test:
+
+> Claude Sonnet 4.5 wrote: "The only scenario where driving might make sense is if you need to drive the car into the car wash anyway for an automatic wash" — and then picked walk. It saw the answer and rejected it.
+
+> Claude Opus 4.5 suggested you should "walk to the car wash, then drive your car through the wash." The car is at home.
+
+The model identified the correct reasoning in its own chain-of-thought, then chose the wrong answer anyway. This is RLHF sycophancy working as designed: the "helpful" heuristic (don't drive short distances, save fuel) overrides the logical conclusion. The model would rather give a socially-desirable wrong answer than a seemingly-trivial correct one.
+
+[Full analysis](research/hn-car-wash-test-53-models.md)
+
+↳ [Double Anti-Novelty Lock](insights.md#double-anti-novelty-lock) (RLHF penalizes departure from the training-data mean — here, "walk short distances" is the mean), [Cognition ≠ Decision](insights.md#cognition-not-decision) (cognition produced the right answer; the decision step overrode it)
+
+---
+
+### System Prompt Sabotage
+
+andai, [HN #47128138](https://news.ycombinator.com/item?id=47128138), Feb 2026
+
+Opus 4.6 scored 10/10 on the car wash test in the article's API benchmark (no system prompt). andai ran the same model through the Claude app and it failed:
+
+> Disabled memories. Didn't help. But disabling the biographical information too, gives: "Drive it — the whole point is to get the car there!"
+>
+> Re-enabling the bio or memories, both make it stupid. Would be interesting to see if other pre-prompts (e.g. random Wikipedia articles) have an effect on performance. I suspect some types of pre-prompts may actually boost it.
+
+The app's invisible memory and biographical pre-prompts — injected context the user doesn't see — shift the model into a distribution where the "walk" heuristic wins. This creates a double irony: (1) the article's benchmark methodology (no system prompt) is unrealistic because real usage always has system prompts, and (2) the article's proposed fix ("context engineering") is the same category of thing that *causes* the failure.
+
+[Full analysis](research/hn-car-wash-test-53-models.md)
+
+↳ [Prompt Expansion](insights.md#prompt-expansion) (invisible context changes behavior unpredictably), [Broken Abstraction Contract](insights.md#broken-abstraction-contract) (same model, different invisible context → opposite answer)
+
+---
+
+### French Fixes Mistral
+
+zapperdulchen, [HN #47128138](https://news.ycombinator.com/item?id=47128138), Feb 2026
+
+> If you speak French to Mistral, it gets it right every time: "Je veux laver ma voiture. La station de lavage est à 50 mètres. J'y vais à pied ou en voiture?"
+
+Mistral (a French company) fails the car wash test 0/10 in English but passes consistently in French. The "short distance = walk" heuristic appears to be an English-training-data artifact. Nobody in the thread explored why — but it suggests the failure isn't about reasoning capability at all, just which distributional basin the language activates.
+
+[Full analysis](research/hn-car-wash-test-53-models.md)
+
+↳ [Steering ∝ Theory](insights.md#steering-theory) (language choice as steering — the French prompt activates a different distributional path)
