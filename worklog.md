@@ -3,6 +3,14 @@
 > **Note:** File paths in entries before 2026-02-17 session 7 refer to the flat structure
 > before the notes reorg. See [README.md](README.md) for current file locations.
 
+## 2026-02-23 — Session 1
+
+- Deep critical review of pi_agent_rust (Dicklesworthstone's Rust port of Pi Agent)
+- Key findings: 556K lines of Rust in 23 days, 79% Claude co-authored, contains "phantom complexity" — modules named after advanced CS concepts (AMAC, trace-JIT, io_uring, S3-FIFO, e-graphs) that don't implement what their names claim
+- Central critique: AMAC "interleaving" is a sequential loop; "JIT" can't exist under `forbid(unsafe_code)`; io_uring module explicitly disclaims doing any io_uring; S3-FIFO cache for a system processing ~5 calls/second
+- Also flagged: 48K-line single file, custom async runtime (asupersync) with zero external users, MIT+Anthropic-exclusion license on 79% Claude-generated code, benchmark methodology gaps
+- Saved to `research/pi-agent-rust-review.md`
+
 ## 2026-02-22 — Session 1
 
 - Distilled HN thread on DuckDB as first choice for data processing (310pts, 119 comments)
