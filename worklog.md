@@ -3,6 +3,19 @@
 > **Note:** File paths in entries before 2026-02-17 session 7 refer to the flat structure
 > before the notes reorg. See [README.md](README.md) for current file locations.
 
+## 2026-02-23 — Session 2
+
+- Distilled HN thread: "Pi – A minimal terminal coding harness" (202 pts, 92 comments)
+  - Saved to `research/hn-pi-minimal-terminal-coding-harness.md`
+  - Fetched and analyzed article (pi.dev), can1357's "harness problem" blog post, thevinter's negative experience report
+- Cross-referenced against insights.md and additional_insights.md — found 7 deeper structural connections:
+  - Hashline as Prompt Expansion at tool boundary; recursive Naur's Nightmare (living software = 3rd theory-less layer)
+  - LISP Curse at tool layer; Knowledge Integration Decay explains small-prompt advantage
+  - Hidden Denominator made visible via thevinter; Fixed-Point Workflow validated (Plan.md despite omission)
+  - Approval Fatigue validates Pi's no-popups stance
+- Updated: topics/coding-agents.md (new research link)
+- No new insights promoted — connections deepen existing entries
+
 ## 2026-02-23 — Session 1
 
 - Deep critical review of pi_agent_rust (Dicklesworthstone's Rust port of Pi Agent)

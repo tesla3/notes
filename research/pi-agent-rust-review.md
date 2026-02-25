@@ -138,6 +138,44 @@ The author has also written `rich_rust`, `charmed_rust` (bubbletea port), and `s
 
 ---
 
+## What Other Experts Are Saying
+
+### Direct expert commentary on pi_agent_rust: None
+
+Extensive search across Reddit, Hacker News, X/Twitter, tech blogs, and GitHub discussions turned up **zero external reviews, critiques, or technical discussions** of pi_agent_rust specifically. The project has 382 stars and 39 forks (as of Feb 25), 8 closed issues (all from real users hitting real bugs — QuickJS GC crashes, IO write-zero panics, build failures from missing submodule files), zero PRs from outside contributors, and zero community discussion threads.
+
+This absence is itself a signal. A project claiming to be a materially better replacement for an established tool (Pi has 16K stars) would normally generate discussion. The silence suggests the project hasn't reached the threshold of real-world usage where experts encounter and evaluate it.
+
+### Expert commentary on the patterns pi_agent_rust exhibits
+
+The broader expert community has converged on several findings that map directly onto this codebase:
+
+**Ox Security "Army of Juniors" report (Oct 2025):** Analyzed 300+ repos, found AI-generated code is "highly functional but systematically lacking in architectural judgment." Their 10 anti-patterns include:
+- **"Over-Specification" (80–90% prevalence):** "Creates hyper-specific, single-use solutions instead of generalizable, reusable components." → pi_agent_rust's seven hostcall_* modules are textbook over-specification: purpose-built S3-FIFO cache policies, AMAC batch executors, and trace-JIT compilers for a system processing single-digit calls per second.
+- **"Phantom Bugs" (20–30% prevalence):** "Over-engineers for improbable edge cases, causing performance degradation and resource waste." → The io_uring lane policy module for a macOS CLI tool, NUMA slab tracking for a single-binary coding agent.
+- **"Vanilla Style" (40–50% prevalence):** "Reimplements from scratch instead of using established libraries." → Custom async runtime (asupersync) instead of tokio, custom TUI framework instead of ratatui, custom SQLite ORM instead of established options.
+- **"Fake Test Coverage" (40–50% prevalence):** Not exactly fake, but the 275K lines of tests primarily validate internal data structures in isolation (hostcall queue policies, AMAC grouping logic, S3-FIFO admission decisions) — not end-to-end user scenarios.
+
+**GitClear research (Feb 2025):** 211 million lines analyzed showed AI-assisted code drove code refactoring down from 25% to under 10% of changed lines, while code clones grew 4×. "AI-generated code resembles an itinerant contributor, prone to violate the DRY-ness of the repos visited." → pi_agent_rust's 48K-line extensions.rs with inline JSON serializers, SHA-256 utilities, and path normalization that could be separate modules exemplifies this pattern.
+
+**Google DORA 2024 benchmarks:** Found a 7.2% decrease in delivery stability for every 25% increase in AI adoption. The mechanism: AI generates more code but doesn't enforce architectural best practices like reuse, modularity, or thorough testing.
+
+**Julia Valenti (AI-driven Rust future, 2025):** "AI can generate a million lines of code overnight, but that doesn't mean it can maintain a cohesive, structured system over time... Codebases get bloated, patterns become inconsistent." She argues Rust's compiler is a natural guardrail — but pi_agent_rust shows that `rustc` catches type errors, not architectural bloat. The code compiles. The question is whether it should exist.
+
+**Kumar Gauraw (Vibe Coding Trap, Feb 2026):** "The problem is not the tools. The problem is the assumption that the tool replaces the architect." pi_agent_rust is architecturally ambitious but the architecture appears to have been designed by Claude, not by a human with deep Rust systems experience making cost/benefit tradeoffs.
+
+**Ana Bildea (Hidden Technical Debt in GenAI, 2025):** "Traditional technical debt accumulates linearly... AI technical debt is different. It compounds." Three vectors: model versioning chaos, code generation bloat, organizational fragmentation. pi_agent_rust compresses all three vectors into a single 23-day sprint.
+
+### Emanuel's own framing
+
+On X/Twitter, Emanuel describes his workflow openly: "This is such a ridiculous way to develop world-class software. The funniest part is that it WORKS!" His GitHub README describes the methodology: "In this README, 'we' means the project owner and collaborating coding agents." His contribution policy on agentic_coding_flywheel_setup explicitly states: "I'll have Claude or Codex review submissions via gh and independently decide whether and how to address them." The project is self-aware about its AI-generation provenance but presents the output as equivalent to expert-written code.
+
+### The star count question
+
+382 stars in 23 days is modest but not negligible. However, stars on AI-generated repos correlate more with the author's social media reach and GitHub profile traffic (Emanuel has 1,123 stars on agentic_coding_flywheel_setup, 595 on beads_rust, 565 on destructive_command_guard) than with adoption or expert validation. Zero external PRs and zero technical discussions suggest the stars are largely from the agentic-coding enthusiast community, not from Rust practitioners who've evaluated the code.
+
+---
+
 ## Comparisons and Context
 
 ### vs. Original Pi (TypeScript)
