@@ -28,6 +28,7 @@ Not yet grouped into topics:
 - [HN: Ring/Nest Surveillance State](research/hn-ring-nest-surveillance-state.md) — selective enforcement, voluntary corporate compliance, Pinkerton parallel
 - [Pacific Ridge School — Critical Analysis](research/pacific-ridge-school.md) — college placement deep dive, San Diego peer comparison, price-to-value
 - [PRS Profile Analysis (original)](research/pacific-ridge-school-profile-analysis.md) — AO-perspective reading of the 2025-26 profile
+- [HN: IBM Plunges After Anthropic COBOL Blog Post](research/hn-ibm-cobol-anthropic.md) — narrative-driven stock crash, mainframe lock-in reality, content-marketing-as-market-event
 - [HN: Claude's New Constitution](research/hn-claude-constitution-2026.md) — institutional vs. individual priorities, judgment-over-rules as untested empirical bet
 - [PRS Profile Analysis Review](research/pacific-ridge-profile-analysis-review.md) — critical review of the above analysis
 - [PRS Comprehensive Profile Review](research/pacific-ridge-school-profile-comprehensive-review.md) — definitive AO-grade profile assessment with full contextualization
@@ -57,6 +58,7 @@ Not yet grouped into topics:
 - [HN: News Publishers Limit Internet Archive over AI Scraping](research/hn-news-publishers-internet-archive-ai-scraping.md) — security theater, paywall-as-pretext, gatekeeper inversion, astroturf meta-irony, "compliant get punished" dynamic
 - [HN: Eight More Months of Agents](research/hn-eight-more-months-agents.md) — founder testimonial vs organizational reality, $170 taste gap, tribal knowledge scaling, process bottleneck blindspot
 - [HN: LocalGPT Rust Assistant](research/hn-localgpt-rust-assistant.md) — OpenClaw clone pattern crystallization, lethal trifecta security exchange, LLM-slop credibility problem, confirmatory of existing insights
+- [HN: 1Password Pricing +33%](research/hn-1password-price-increase.md) — enterprise deprioritization of consumers, passkey lock-in, password manager market failure, performative churn
 - [HN: Vouch — Community Trust Management](research/vouch-hn-thread.md) — judgment laundering through mechanism, kayfabe insight, web-of-trust redux, newcomer exclusion tradeoff
 - [HN: Coding Agents Replaced Every Framework](research/hn-coding-agents-replaced-frameworks.md) — LISP curse redux, training data commons depletion, sovereignty transfer not reclamation, retirement manifesto
 - [AI Workplace Mandates vs. Productivity Paradox](research/ai-workplace-mandates-productivity-paradox.md) — Goodhart's Law in AI KPIs, vendor-customer ouroboros, cargo-cult mandates, Solow parallel limits
