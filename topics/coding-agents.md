@@ -79,12 +79,14 @@ Kiro CLI's context model: guidance (conventions) + instructions (task-specific) 
 ## Deep Research
 
 ### Pi & OpenClaw
+- [HN: Pi – A Minimal Terminal Coding Harness](../research/hn-pi-minimal-terminal-coding-harness.md) — harness problem empirics (hashline 10× gains), vendor API lockdown as platform re-aggregation, Prompt Expansion at tool boundary, recursive Naur's Nightmare (living software), LISP Curse at tool layer, Hidden Denominator made visible, Fixed-Point Workflow validated
 - [Pi Practitioner Review](../research/pi-practitioner-review.md) — power user analysis (Ronacher, Januschka), provider abstraction, KV cache
 - [Pi Blog Review](../research/pi-blog-review-conversation.md) — critical review of Ronacher's Pi blog post
 - [Pi Terminal-Bench](../research/pi-terminal-bench.md) — why Pi isn't on the leaderboard (submitted but never added)
 - [OpenClaw Analysis](../research/openclaw-analysis.md) — value proposition, security risks, competitive context
 - [OpenClaw Innovations](../research/openclaw-innovations.md) — architecture deep dive (Gateway, A2UI, memory, heartbeat)
 - [OpenClaw Real-World Uses](../research/openclaw-real-world-uses.md) — use cases from Reddit, blogs, X threads
+- ["Bad Vibes From Pi" — Critical Blog Review](../research/thevinter-bad-vibes-from-pi.md) — detailed migration failure diary, ecosystem quality evidence, pi-guardrails regex/blocklist critique, vibecoded supply chain argument
 
 ### Landscape & Tool Comparisons
 - [AI Coding Agents Feb 2026](../research/ai-coding-agents-feb-2026-deep-assessment.md) — state of the landscape: Anthropic, OpenAI, Google, AWS, Apple
