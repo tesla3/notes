@@ -5,6 +5,7 @@
 **Date:** February 2026
 **Scope:** Economics, power, geopolitics, social fabric, historical precedent
 **Method:** Evidence synthesis from academic research, prediction markets, institutional reports, and practitioner data
+**Epistemic status:** Synthesis with known blind spots. See [Section 12: Epistemic Audit](#12-epistemic-audit) for what this document gets wrong or presents with false confidence.
 
 ---
 
@@ -52,7 +53,7 @@ The strongest analytical framework for AI's trajectory comes not from AI researc
 
 ### The electricity parallel (Paul David, Stanford, 1990)
 
-David's landmark paper "The Dynamo and the Computer" showed:
+David's influential — but contested — paper "The Dynamo and the Computer" argued:
 
 - Electric light bulbs available 1879. Generating stations in New York/London by 1881.
 - A thoughtful observer in 1900 would have found **little evidence** the electricity revolution was making business more efficient.
@@ -61,6 +62,8 @@ David's landmark paper "The Dynamo and the Computer" showed:
 - **US productivity growth leapt in the 1920s — four decades after commercialization.** Manufacturing productivity grew >5% per year in that decade.
 
 **The mechanism:** GPTs don't produce gains through simple substitution. They require complementary innovations — organizational redesign, new skills, new business models, new institutional arrangements. These take decades, not quarters.
+
+**Important caveat:** David's thesis is influential but not uncontested. Some economic historians argue the electricity lag was shorter than he claimed, or that other factors (WWI, immigration policy, unrelated industrial organization changes) drove the 1920s productivity leap. The paper is a framework, not a law. I lean on it throughout this document and should be transparent that the foundation is suggestive, not proven.
 
 ### The computing parallel (Solow paradox, 1987-1995)
 
@@ -77,6 +80,8 @@ If AI follows the GPT pattern:
 - **2040-2055:** Full deployment effects. Macro-level productivity impact. Institutional adaptation largely complete.
 
 **Critical caveat:** AI may be *faster* than electricity because it's a software technology that doesn't require physical infrastructure reorganization to the same degree. The counter-caveat: the complementary innovations (legal frameworks, social institutions, workforce transitions) are no faster than they were in 1920.
+
+**The "this time is different" argument deserves more weight than I initially gave it.** Previous technology transitions displaced manual labor, and workers moved upward to cognitive work. AI targets cognitive work directly — the very category that historically absorbed the displaced. Where do displaced cognitive workers go? The honest answer is: we don't know, and there is no historical precedent for automating the *destination* of previous transitions, not just the origin. Saying "new jobs always emerge" is pattern-matching against a history where the escape route was always cognitive work. If that route closes, the pattern may not hold. I can't assess the probability of this with any confidence.
 
 ---
 
@@ -95,7 +100,7 @@ The expert landscape is not a binary debate. It's a three-way disagreement:
 - Advocates "pro-worker AI" — tax policy to steer investment toward augmentation over replacement.
 
 **Strengths:** Methodologically rigorous. Based on task-level empirical data, not extrapolation. Calibrated uncertainty.
-**Weaknesses:** May underestimate the pace of capability improvement. His 2024 model was based on GPT-4-era capabilities; models have improved substantially since.
+**Weaknesses:** May significantly underestimate the pace of capability improvement. His 2024 model was based on GPT-4-era capabilities; models have improved substantially since. This is not a minor caveat — if capabilities continue advancing at current rates, his inputs become stale within 1-2 years, which could make his GDP estimates badly wrong in either direction. I lean heavily on Acemoglu throughout this document because his method is the most rigorous, but rigor applied to outdated inputs can produce precise answers to the wrong question.
 
 ### School 2: Augmentation (Autor)
 
@@ -117,14 +122,14 @@ The expert landscape is not a binary debate. It's a three-way disagreement:
 - Found 16% drop in new hires across AI-exposed sectors.
 - Identifies a "small cohort of power users" automating end-to-end workstreams, completing tasks in hours instead of weeks.
 
-**Strengths:** Only researcher with a clear, testable claim about *current* data. If he's right, we'll know within 2-3 years.
-**Weaknesses:** Conflict of interest (co-founded AI consulting firm). GDP growth could reflect infrastructure spending, not use. Causation not established. Data is noisy.
+**Strengths:** Only researcher with a clear, testable claim about *current* data. If he's right, we'll know within 2-3 years. That falsifiability is itself a virtue.
+**Weaknesses:** GDP growth could reflect infrastructure spending, not actual use of AI. Causation not established. Data is noisy. He co-founded an AI consulting firm (Workhelix), which is worth disclosing but is not an argument against his data — his numbers are either right or wrong regardless of his business interests. I flagged this COI repeatedly in earlier drafts as if it were dispositive. It isn't. I should engage with his methodology more and his incentives less.
 
 ### Synthesis
 
 Acemoglu and Autor are probably right about the next 5 years. Brynjolfsson may be right about the trajectory beyond that. The honest forecast: **AI will produce meaningful but not revolutionary economic effects through 2035, with the possibility of accelerating thereafter if organizational and institutional adaptation catches up.**
 
-The more important point: **the distribution of effects matters more than the aggregate.** Even if GDP grows, the benefits may accrue overwhelmingly to capital owners and a thin layer of AI-skilled workers, while displacing a much larger group. This is Acemoglu's real warning — not that AI will fail to boost productivity, but that it will boost productivity in ways that worsen inequality.
+The more important point — **and I should be transparent that this is partly a values judgment, not purely an empirical finding** — is that the distribution of effects may matter more than the aggregate. Even if GDP grows, the benefits may accrue overwhelmingly to capital owners and a thin layer of AI-skilled workers, while displacing a much larger group. Many growth economists would disagree, arguing that total productivity matters more because you can always redistribute later. They may be right in theory; they have been wrong in practice for the past 40 years of rising inequality. This is Acemoglu's real warning — not that AI will fail to boost productivity, but that it will boost productivity in ways that worsen inequality unless actively counteracted by policy.
 
 ---
 
@@ -161,7 +166,9 @@ Liberty exists in a "narrow corridor" between despotism and anarchy. It requires
 
 **Applied to AI:** The risk isn't that AI enables a specific dystopian outcome. It's that AI shifts the balance of power between state/corporate actors and society in ways that push us out of the corridor. If the capacity to organize collective action depends partly on information access, economic independence, and institutional leverage — and AI affects all three — then the corridor narrows.
 
-**But:** Acemoglu's own framework shows this isn't a one-way ratchet. The Gilded Age was reversed by the Progressive Era. Post-WWII social democracies emerged from the wreckage of fascism. Power concentration *often triggers* correction. The question is whether correction happens through democratic reform or violent rupture.
+**But:** Acemoglu's own framework shows this isn't a one-way ratchet. The Gilded Age was reversed by the Progressive Era. Post-WWII social democracies emerged from the wreckage of fascism. Power concentration *often triggers* correction.
+
+**However, I should not be breezy about what "correction" cost.** The Gilded Age → New Deal arc involved a Great Depression, mass labor organizing under violent suppression, and two World Wars. The post-fascism social democracies were built on the rubble of regimes that murdered millions. "History shows power concentration gets corrected" is true and also sanitizes an enormous amount of suffering. The question is not just *whether* correction happens but *at what cost* — and whether the cost can be reduced through early institutional response rather than catastrophic breakdown.
 
 ---
 
@@ -176,7 +183,9 @@ The AI discussion is overwhelmingly Anglophone and US-centric. This is a blind s
 - India and the Philippines are global hubs for outsourced customer support — the exact roles AI is displacing first. *"These workers are literally teaching AI systems to recognise the same harmful content they review, making their own jobs redundant."* — LSE, Nov 2025.
 - The DRC produces 70%+ of global cobalt supply, essential for AI infrastructure. The value chain: extractive mining → data labeling → model training → consumer product → all profits flow to Silicon Valley.
 
-**Assessment:** AI's global impact isn't speculative — it's already here, and it mirrors colonial extraction patterns. Low-wage workers in the Global South build the infrastructure, train the models, and are displaced first, while value concentrates in the North. This is the least discussed and most immediately harmful dimension of AI's societal impact.
+**Assessment:** AI's global impact isn't speculative — it's already here, and the structure resembles colonial extraction: low-wage workers in the Global South build the infrastructure, train the models, and are displaced first, while value concentrates in the North. This is the least discussed and most immediately harmful dimension of AI's societal impact.
+
+**Counter-argument I should engage with rather than dismiss:** Development economists would note that low-wage insertion into global supply chains has historically been a pathway to industrialization — South Korea, China, and Vietnam all bootstrapped through stages that looked exploitative by wealthy-country standards. Whether data labeling follows this pattern (building local expertise and eventually higher-value work) or breaks it (pure extraction with no technology transfer) is an open empirical question, not a settled one. My framing leans toward the pessimistic interpretation.
 
 ### Geopolitical competition creates a race to the bottom
 
@@ -200,7 +209,7 @@ Researchers at the University of Florida have proposed "AI Replacement Dysfuncti
 - Reuters survey: 71% of Americans worry AI will permanently eliminate large numbers of jobs.
 - The psychological harm may be coming from the *discourse* as much as from actual displacement. The constant drumbeat of "AI will take your job" from tech leaders (Amodei: "half of entry-level white-collar jobs within five years") creates ambient dread regardless of whether the predictions are accurate.
 
-**Assessment:** This is a case where the narrative itself becomes a causal factor. Even if AI displacement is gradual and manageable in economic terms, the *fear* of displacement — amplified by tech executives who have financial incentives to hype AI capabilities — may produce real psychological and political consequences. This is a genuinely novel risk that previous technology transitions didn't face at this scale.
+**Assessment:** This is a plausible hypothesis, not an established finding. The evidence base is thin: one proposed (not formally recognized) clinical diagnosis from two researchers, one Reuters poll, and the general observation that tech executives have financial incentives to hype. The mechanism is plausible — the narrative becomes a causal factor, producing psychological harm independent of actual displacement. But I should be honest that I found this idea compelling and elevated it beyond what the evidence strictly supports. It deserves investigation, not the confident framing I initially gave it.
 
 ### Education: the brightest spot
 
@@ -257,7 +266,7 @@ The GiveDirectly experiment in Kenya is the world's largest and longest randomiz
 
 ## 9. Scenarios: Grounded Projections
 
-Rather than predict a single future, here are four scenarios with rough probability assessments. These are informed by the evidence above but are inherently uncertain.
+Rather than predict a single future, here are four scenarios. I've attached probability estimates because refusing to quantify uncertainty is its own form of intellectual cowardice — but I want to be explicit that **these probabilities are my subjective judgment, not calibrated forecasts.** They reflect the weight of evidence as I read it, filtered through my priors. A different analyst with different priors could defensibly assign very different numbers. The value is in the scenarios themselves and the evidence behind them, not the percentages.
 
 ### Scenario A: "The Boring Transition" (40% probability)
 
@@ -312,25 +321,75 @@ Rather than debate hypotheticals, monitor these empirical signals:
 
 **The tech optimists** assume productivity gains automatically translate to widely shared prosperity. History emphatically disagrees. The gains from electrification were shared broadly only after decades of labor organizing, progressive taxation, and institutional reform. The technology doesn't determine the outcome; the political fight does.
 
-### What the evidence actually supports
+### What the evidence supports (with confidence levels)
 
-1. **AI is a genuine general-purpose technology** that will produce significant economic effects over 15-30 years. It is not hype, and it is not imminent apocalypse.
+1. **AI is a genuine general-purpose technology.** *(High confidence.)* The evidence for this is strong across multiple dimensions: task-level capability, breadth of application, investment scale, early productivity signals. It is not hype. Whether it reaches the transformative scale of electricity or remains closer to computing's more bounded impact is genuinely uncertain.
 
-2. **The transition period (now through ~2035) is the danger zone** — not because of full labor obsolescence, but because displacement will be real and concentrated (entry-level white-collar, Global South BPO, routine cognitive tasks) while institutional adaptation lags. The most acute harm will fall on those least equipped to absorb it.
+2. **The transition period (now through ~2035) is the danger zone.** *(Medium-high confidence.)* Not because of full labor obsolescence, but because displacement will be real and concentrated (entry-level white-collar, Global South BPO, routine cognitive tasks) while institutional adaptation lags. The most acute harm will fall on those least equipped to absorb it.
 
-3. **The distribution question is the real question.** Even under modest productivity scenarios (Acemoglu), AI will widen the capital-labor income gap. Under aggressive scenarios (Brynjolfsson), it may generate enormous surplus — but there is no automatic mechanism to distribute it. Every previous GPT required political struggle to translate productivity gains into broadly shared prosperity.
+3. **The distribution question matters enormously.** *(High confidence on the problem; low confidence on the framing.)* Even under modest productivity scenarios, AI will widen the capital-labor income gap. Under aggressive scenarios, it may generate enormous surplus — but there is no automatic mechanism to distribute it. I believe this is *the* central question, but I should acknowledge this is partly a values commitment, not a purely empirical finding.
 
-4. **The financial bubble is real and will correct.** The circular financing structures, extreme concentration, and gap between investment and revenue are unsustainable. But the technology will survive the bubble, just as the internet survived the dot-com crash. The bubble is a financial phenomenon, not a technological one.
+4. **The financial bubble's structure is unsustainable.** *(Medium-high confidence.)* Circular financing, extreme concentration, and the spending-revenue gap point to a correction. But timing is uncertain, severity is uncertain, and the technology will survive the correction. I'm more confident something corrects than I am about when or how.
 
-5. **The geopolitical dimension is underweighted in most analyses.** The US-China AI arms race, the colonial extraction of Global South labor, and the regulatory fragmentation between major powers may matter more than any domestic policy debate. There is no global institutional framework remotely adequate to the challenge.
+5. **The geopolitical dimension is underweighted in most analyses.** *(High confidence.)* The US-China AI arms race, Global South labor extraction, and regulatory fragmentation may matter more than any domestic policy debate. No adequate global institutional framework exists.
 
-6. **The psychological harm from AI *discourse* may be a larger near-term problem than AI displacement itself.** Tech executives hyping capabilities to justify valuations, combined with media amplification, is creating ambient dread that has measurable mental health consequences — independent of whether the predictions are accurate.
+6. **AI discourse may be causing independent psychological harm.** *(Low-medium confidence. Hypothesis, not finding.)* The mechanism is plausible — tech executives hype capabilities to justify valuations, media amplifies, ambient dread follows. But the evidence base is thin and I elevated this beyond what the data strictly supports.
+
+7. **Previous GPT patterns may not hold because cognitive work is the target this time.** *(Uncertain. This is the key unknown.)* I initially underweighted this. The standard reassurance — "new jobs always emerge" — depends on historical patterns where workers moved from manual to cognitive work. If cognitive work is itself being automated, the escape route may be blocked. I cannot assess the probability of this with any honesty.
+
+### What I'm not sure about
+
+- Whether the electricity analogy is the right framework or a misleading one
+- Whether Acemoglu's modest estimates or Brynjolfsson's bullish estimates will look better in 3 years
+- Whether the "this time is different" argument about cognitive work displacement is correct
+- Whether democratic institutions will respond to AI-driven concentration before or after significant damage
+- Whether the Global South's role in the AI supply chain is extraction or a developmental stepping stone
 
 ### The one thing nobody wants to hear
 
-The most likely future is not dramatic. It's not utopia or dystopia. It's a **slow, uneven grind** where AI makes some things better (education, scientific research, routine productivity), makes some things worse (inequality, concentration, Global South exploitation), and the outcome depends almost entirely on political choices that haven't been made yet.
+The most likely future is probably not dramatic. But I should be honest that **"the most likely future is a slow, uneven grind" is almost unfalsifiable** — so vague that nearly any outcome could be retrofitted to match it. It sounds measured and wise. It predicts nothing testable. That's a failure of analysis, not a feature.
+
+What I can say with more specificity: **the next 5 years will be defined more by the financial bubble's trajectory and the political response to early displacement than by AI capabilities themselves.** The technology is developing faster than institutions can adapt. The gap between those two speeds is where the damage happens.
 
 The technology is not deciding our future. We are. And we're not doing a great job of it so far.
+
+---
+
+## 12. Epistemic Audit
+
+This section exists because the rest of the document reads as authoritative synthesis, and authoritative-sounding synthesis is dangerous when it conceals genuine uncertainty. Here's what this document gets wrong, presents with false confidence, or skates past.
+
+### Where I was overconfident
+
+| Claim | Problem |
+|---|---|
+| Electricity analogy as framework | Influential but contested among economic historians. I treated it as established. It's suggestive. |
+| Scenario probabilities (40/25/25/10) | Subjective judgment presented in a format that implies calibration. Not calibrated. |
+| "Distribution is the real question" | Partly a values commitment, not purely empirical. Growth economists would push back. |
+| "AI fear matters more than displacement near-term" | Thin evidence base (two researchers, one poll). Hypothesis, not finding. |
+| "Democratic correction will happen" | Historically true, but "correction" involved world wars and depressions. Sanitized framing. |
+| "Slow, uneven grind" as most likely outcome | Nearly unfalsifiable. Vague enough to match almost any future. Not a prediction. |
+
+### Where I was too dismissive
+
+| Argument I dismissed | Why it deserves more weight |
+|---|---|
+| HN thread's doomers (tavavex, bm3719) | Algorithmic control of information is already real, not speculative. The moderate version of "surplus humans as cost center" (neglect, disinvestment) has historical precedent. |
+| "This time is different" | Cognitive work is the traditional escape route for displaced workers. Automating the destination of previous transitions, not just the origin, has no historical precedent. The pattern may not hold. |
+| Global South "colonial extraction" counterargument | Low-wage supply chain insertion has historically been a pathway to industrialization. Whether data labeling follows that pattern is empirically open. |
+| Brynjolfsson's data | I reached for his COI rather than engaging seriously with his methodology. Ad hominem is not analysis. |
+
+### What I genuinely don't know
+
+- Whether AI capabilities plateau, continue linearly, or accelerate
+- Whether the financial bubble corrects gently (dot-com style) or catastrophically (2008 style)
+- Whether cognitive work displacement produces new job categories or permanent structural unemployment
+- Whether Acemoglu's Narrow Corridor framework applies to a world where AI shifts the balance of power between states/corporations and society
+- Whether any democratic polity will implement meaningful AI redistribution before the concentration trap closes
+
+### The meta-problem
+
+I wrote a 35KB document that reads as measured and comprehensive. "Measured" can be a form of intellectual dishonesty — hedged enough to never be wrong, which means never saying anything falsifiable. The parts of this document I'm most confident about (the bubble's financial structure, Global South exploitation *right now*, the gap between AI discourse and AI reality) are the most specific and testable. The parts I'm least confident about (the timeline, the scenarios, the "most likely future") are the most general and unfalsifiable. The reader should weight accordingly.
 
 ---
 
