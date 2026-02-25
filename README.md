@@ -58,6 +58,7 @@ Not yet grouped into topics:
 - [HN: News Publishers Limit Internet Archive over AI Scraping](research/hn-news-publishers-internet-archive-ai-scraping.md) — security theater, paywall-as-pretext, gatekeeper inversion, astroturf meta-irony, "compliant get punished" dynamic
 - [HN: Eight More Months of Agents](research/hn-eight-more-months-agents.md) — founder testimonial vs organizational reality, $170 taste gap, tribal knowledge scaling, process bottleneck blindspot
 - [HN: LocalGPT Rust Assistant](research/hn-localgpt-rust-assistant.md) — OpenClaw clone pattern crystallization, lethal trifecta security exchange, LLM-slop credibility problem, confirmatory of existing insights
+- [HN: AI Labor Obsolescence — Who Gets to Eat?](research/hn-ai-labor-obsolescence-who-eats.md) — power-asymmetry ratchet, identity-as-labor psychological barrier, democracy's structural dependency on labor leverage
 - [HN: 1Password Pricing +33%](research/hn-1password-price-increase.md) — enterprise deprioritization of consumers, passkey lock-in, password manager market failure, performative churn
 - [HN: Vouch — Community Trust Management](research/vouch-hn-thread.md) — judgment laundering through mechanism, kayfabe insight, web-of-trust redux, newcomer exclusion tradeoff
 - [HN: Coding Agents Replaced Every Framework](research/hn-coding-agents-replaced-frameworks.md) — LISP curse redux, training data commons depletion, sovereignty transfer not reclamation, retirement manifesto
