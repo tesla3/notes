@@ -33,6 +33,7 @@ Key ideas: specification sandwich (types → contracts → PBT wrapping every fu
 
 ## Deep Research
 
+- **[Harness Engineering — Insights & Operational Best Practices](../research/harness-engineering-insights-and-practices.md)** — deep synthesis: empirical evidence for harness > model, leverage hierarchy, operational implementation, what doesn't work
 - [Harness Engineering Playbook — Distilled](../research/harness-engineering-playbook.md) — tactical tips from OpenAI, Stripe, Steinberger, Hashimoto, Tane convergence
 - [Harness Engineering — Critical Review](../research/harness-engineering-critical-review.md) — survivorship bias, hidden denominator, macro counter-evidence, source credibility
 - [Absurd & Durable Execution Landscape](../research/absurd-durable-execution-landscape.md) — Absurd vs Temporal vs DBOS vs Inngest vs Restate; durable execution for agent workflows

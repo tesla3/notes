@@ -114,6 +114,7 @@ Kiro CLI's context model: guidance (conventions) + instructions (task-specific) 
 - [HN: Cursor Browser Experiment](../research/hn-cursor-browser-experiment.md) — autonomous agents produce 3M LOC non-compiling browser, "from scratch" claim debunked, verification as missing primitive
 
 ### Harness Engineering
+- **[Harness Engineering — Insights & Operational Best Practices](../research/harness-engineering-insights-and-practices.md)** — deep synthesis: why harness > model (LangChain +13.7pts, can1357 10×, Vercel 80→100%), hierarchy of leverage, operational implementation, ETH Zurich AGENTS.md evaluation, honest assessment of unproven claims
 - [Harness Engineering Playbook — Distilled](../research/harness-engineering-playbook.md) — tactical tips from Ignorance.ai synthesis (OpenAI, Stripe, Steinberger, Hashimoto, Tane)
 - [Harness Engineering — Critical Review](../research/harness-engineering-critical-review.md) — cross-checked against primary sources, macro data, our research corpus; survivorship bias, hidden denominator, source credibility issues
 

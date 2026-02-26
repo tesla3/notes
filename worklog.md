@@ -396,3 +396,16 @@
   - **anecdotes.md**: 5 new entries under "Agent tool architecture" section — 150 Tool Calls vs 1 For Loop (martinald), CLI Accuracy on Small Models (cmdtab), CLI Discovery Chain (thellimist), Per-Turn Replay Dwarfs Tool Definitions (OsrsNeedsf2P), MCP Non-Composability (_pdp_)
   - **additional_insights.md**: New insight "Shell Composability Advantage" — three structural advantages (composability eliminates round-trips, training distribution alignment, KV cache preservation) with security counterpoint
   - **additional_insights.md**: Updated "Skill Loading Illusion" with convergence evidence (5 independent MCP-to-CLI converters + Cloudflare Code Mode + Anthropic Tool Search, all in same week)
+
+- Deep research on harness engineering insights and operational best practices
+  - Searched 30+ sources: LangChain Terminal Bench experiments, ETH Zurich AGENTS.md evaluation (arXiv:2602.11988), Pappas convergence analysis, can1357 hashline benchmark, Vercel tool reduction study, Böckeler's independent analysis, Demmel's feedback loop hierarchy, pi-reflect, Arize telemetry analysis, EQ Engineered, New Stack
+  - Key empirical findings:
+    - LangChain: harness-only changes +13.7pts on Terminal Bench (model fixed)
+    - can1357: single edit tool change improved 15 models, weakest by 10×
+    - Vercel: removing 80% of tools → 80→100% accuracy, 3.5× faster
+    - ETH Zurich: LLM-generated AGENTS.md reduces success by 3%, increases cost 20%+
+  - Synthesized hierarchy of leverage: feedback gauntlet > tool simplification > mechanical architecture enforcement > incremental AGENTS.md > self-verification loops > doom loop detection > observability > garbage collection
+  - Honest assessment: all success stories are greenfield, hidden denominator uncounted, verification gap structural, zero long-term maintenance data
+  - Meta-insight: harness engineering is the industry belatedly realizing skipped engineering practices are now load-bearing
+  - Saved to `research/harness-engineering-insights-and-practices.md`
+  - Updated topic pages: coding-agents.md, software-factory.md (forward links)
