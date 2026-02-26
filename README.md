@@ -28,6 +28,7 @@ Not yet grouped into topics:
 - [AI Future Careers Forecast](research/ai-future-careers-deep-forecast.md) — cascade effects, future careers, practical playbook for teens
 - [HN: LLM Car Wash Reasoning Failure](research/hn-llm-car-wash-reasoning.md) — goal-constraint violations, token commitment, whack-a-mole patching
 - [HN: Ring/Nest Surveillance State](research/hn-ring-nest-surveillance-state.md) — selective enforcement, voluntary corporate compliance, Pinkerton parallel
+- [HN: Em-Dash Bots on HN](research/hn-em-dash-bots-2026.md) — new accounts 10x more em-dashes, AI startup astroturfing vocabulary, humans degrading their own writing
 - [Pacific Ridge School — Critical Analysis](research/pacific-ridge-school.md) — college placement deep dive, San Diego peer comparison, price-to-value
 - [PRS Profile Analysis (original)](research/pacific-ridge-school-profile-analysis.md) — AO-perspective reading of the 2025-26 profile
 - [HN: IBM Plunges After Anthropic COBOL Blog Post](research/hn-ibm-cobol-anthropic.md) — narrative-driven stock crash, mainframe lock-in reality, content-marketing-as-market-event
