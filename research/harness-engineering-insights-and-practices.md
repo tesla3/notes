@@ -2,8 +2,8 @@
 
 # Harness Engineering: Insights and Operational Best Practices
 
-**Compiled:** February 25, 2026
-**Sources:** 30+ primary sources cross-referenced against internal research corpus (insight inventory, verification analysis, critical review v3, maximum-leverage brainstorm). New sources include LangChain Terminal Bench experiments, ETH Zurich AGENTS.md evaluation, Pappas convergence analysis (APEX-Agents, Vercel, Manus), Demmel's feedback loop hierarchy, Böckeler's independent analysis, can1357's hashline benchmark, pi-reflect behavioral loop, and practitioner reports from New Stack, Arize, EQ Engineered.
+**Compiled:** February 25, 2026. **Reviewed:** February 25, 2026 (self-review against latest evidence).
+**Sources:** 30+ primary sources cross-referenced against internal research corpus (insight inventory, verification analysis, critical review v3, maximum-leverage brainstorm). New sources include LangChain Terminal Bench experiments, ETH Zurich AGENTS.md evaluation, Pappas convergence analysis (APEX-Agents, Vercel, Manus), Demmel's feedback loop hierarchy, Böckeler's independent analysis, can1357's hashline benchmark, pi-reflect behavioral loop, JUXT Allium spec-first case study, O'Reilly multi-agent memory analysis (Cemri et al. MAST taxonomy), HN thread on AGENTS.md evaluation (47034087), and practitioner reports from New Stack, Arize, EQ Engineered, r/ExperiencedDevs.
 
 ---
 
@@ -31,11 +31,13 @@ The LangChain result is the most rigorous: same model, same benchmark, same task
 
 The can1357 result is the most visceral: a single tool change (the edit interface) improved *15 different models simultaneously*. The weakest models gained the most because their coding ability was completely hidden behind mechanical edit failures. As can1357 puts it: "You're blaming the pilot for the landing gear."
 
-The Vercel result is the most counterintuitive: *removing* capabilities improved performance. Fewer tools = smaller decision space = less misrouting = fewer tokens wasted choosing.
+The Vercel result is the most counterintuitive: *removing* capabilities improved performance. Fewer tools = smaller decision space = less misrouting = fewer tokens wasted choosing. **⚠️ Critical caveat:** Vercel's benchmark was 5 queries. The direction is striking, but n=5 is anecdotal, not statistical evidence. The 80%→100% framing (4/5→5/5) sounds dramatic but is one additional correct answer. Treat as a suggestive signal, not proof. The mechanism (fewer tools reduces decision space) is sound and independently confirmed by Manus's iterative simplification and the broader Bitter Lesson pattern, but the specific Vercel numbers shouldn't be cited as rigorous evidence.
 
 **First-principles explanation:** Agent failure modes are predominantly orchestration failures, not reasoning failures. The APEX-Agents benchmark (Mercor, Jan 2026) tested frontier models on real professional tasks — banking, consulting, law. Best pass@1: 24%. The models had the knowledge; they got lost, looped, forgot objectives. These are harness problems: context management, error recovery, state persistence. Above a model capability floor, improving the harness yields better marginal returns than swapping the model.
 
 **The qualification:** Below the capability floor, no harness compensates. You can't harness-engineer GPT-3.5 into solving complex multi-step tasks. The harness amplifies capability; it doesn't create it.
+
+**The temporal counter-argument (taken seriously):** A strict reading of Sutton's Bitter Lesson predicts that harness engineering will be obsoleted by sufficiently capable models. Manus rebuilt their harness four times as models evolved — each rebuild *removed* complexity. This is evidence that model improvements erode harness value. Pappas's honest assessment: "My position is that multi-step execution tasks have irreducible coordination requirements — context management, state persistence, error recovery — that are not reasoning problems for the model to solve but infrastructure problems for the system to handle." But this distinction may not hold. If a model can learn to checkpoint its own state, manage its own context, and recover from its own errors, the harness becomes overhead. The practical implication: **build for deletion. Every piece of harness logic should have an expiration date.** If the next model handles something without your scaffolding, delete the scaffolding. The practices that survive model improvement are the ones that would be good engineering regardless of AI (linting, testing, architecture enforcement, observability). The model-specific guardrails (doom loop detection, forced verification, reasoning budget management) should be explicitly flagged as temporal.
 
 ---
 
@@ -109,6 +111,8 @@ The ETH Zurich study (Gloaguen et al., Feb 2026, arXiv:2602.11988) is the first 
 2. **Expensive inference caching** — facts that cost many tokens to discover. Canonical patterns, migration boundaries, build entry points, authoritative examples.
 
 Everything else is overhead. The agent can read your README, test config, and existing docs on its own.
+
+**⚠️ ETH Zurich study limitations (important nuance):** The study tested on SWE-bench tasks — focused, well-defined bug fixes in popular, well-documented repos. HN practitioners pushed back forcefully: "In large projects, having a specific AGENTS.md makes the difference between the agent spending half of its context window searching for the right commands, navigating the repo, understanding what is what, etc." (47046571). The study's own finding — that removing documentation made context files helpful — implies the value of AGENTS.md is inversely proportional to how well-documented the repo already is. Most real-world repos are *not* as well-documented as popular open-source projects. The 4% improvement from developer-written files may be much larger in messy, enterprise codebases. The study measured SWE-bench task completion; it didn't measure token efficiency across sessions, developer time saved from reduced exploration, or the value of preventing known recurring mistakes. The "start empty, build from friction" recommendation holds, but the ETH Zurich numbers should not be over-generalized to all repository contexts.
 
 **OpenAI's progressive disclosure model is the right architecture:**
 - AGENTS.md ≈ 100 lines, a table of contents
@@ -269,11 +273,19 @@ Böckeler's critique remains unanswered: "Applying these techniques to a ten-yea
 
 The METR RCT tested brownfield (experienced devs on their own mature repos) and found *slowdowns*. This may not be coincidence.
 
-### 3. The Verification Gap Is Structural
+### 3. The Verification Gap Is Structural — But the Specification Approach Has New Evidence
 
 Your corpus (verification-alignment-software-factory) identifies the core problem: agent writes code + agent writes tests = closed loop, no external verification. OpenAI's agent-to-agent review makes this *worse* (same distributional biases). The harness provides *syntactic and structural* verification (types, linters, architectural constraints). It doesn't verify *semantic correctness* (does this code do what the user actually intended?).
 
-The specification sandwich (from your maximum-leverage brainstorm) is the best theoretical answer: human writes specifications (types + contracts + properties), agent implements against them. But this requires the human to invest upfront specification time — the very thing harness engineering's productivity narrative promises to reduce.
+The specification sandwich (from your maximum-leverage brainstorm) was the best *theoretical* answer: human writes specifications, agent implements against them. **It's no longer just theoretical.** The JUXT Allium case study (Feb 2026) demonstrated it at serious scale: 3,000 lines of behavioral specification in a formal-ish language (between TLA+ and structured prose), fed to Claude Code, produced a distributed system with Byzantine fault tolerance, strong consistency, and crash recovery — 5,500 lines of production Kotlin + 5,000 lines of tests. The system sustained 10,000+ RPS with sub-100ms p99 latency and survived all four crash-recovery scenarios.
+
+The critical lessons from JUXT that weren't in the theoretical framing:
+- **Specs aren't written upfront and frozen.** They evolved through 64 commits as load tests and resilience tests exposed gaps. "When crash testing revealed that a recovering instance needed to account for the gap between what it had persisted and what its peers had published, we revised the recovery spec before changing the code."
+- **Specs catch integration gaps that code can't.** Each component spec was faithfully implemented, but federation wiring — "where and when TCP connections get established" — fell through because it wasn't any single component's responsibility. This is Brooks' essential complexity concentrating at boundaries, and the spec is where you catch it.
+- **The specification IS the theory.** This directly addresses Naur's Nightmare: the spec is the domain understanding that survives the implementation. Anyone can read 3,000 lines of Allium and understand the system's intended behavior. They can't do that with 5,500 lines of generated Kotlin.
+- **The investment ratio:** ~2 lines of working code per line of spec. The spec work IS the engineering; the code generation is the implementation detail.
+
+The tension remains: this requires the human to invest in specifications. But the JUXT case reframes the cost: specification isn't overhead on top of coding — it's the engineering *instead of* coding. The question isn't "does specification cost time?" but "is it faster to specify and verify than to write and debug?"
 
 ### 4. Long-Term Maintenance: Zero Data
 
@@ -285,26 +297,35 @@ pi-reflect (auto-updating AGENTS.md from session frustration data) shows correct
 
 LangChain's trace analysis approach (boosting-like iteration on failure modes) is more systematic but faces the same generalization problem: changes that improve one task class can regress others.
 
+### 6. Multi-Agent Harnesses Have a Shared Memory Problem Nobody Has Solved
+
+Cemri et al.'s MAST taxonomy (O'Reilly, Feb 2026), built from 1,600+ annotated execution traces across AutoGen, CrewAI, and LangGraph, found that **interagent misalignment accounts for 36.9% of all multi-agent failures**. Agents don't fail because they can't reason — they fail because they operate on inconsistent views of shared state. The harness engineering literature is almost entirely about single-agent loops. As teams move toward multi-agent patterns (Claude Agent Teams, Codex parallel agents), the harness must solve state synchronization — and nobody has a good answer yet. Manus's filesystem-as-memory is the most battle-tested approach, but it's fundamentally single-agent.
+
+### 7. Documentation-Based Rules Are Structurally Unreliable — Mechanical Enforcement Is Not Optional
+
+The HN thread on the AGENTS.md evaluation (47034087) provided the strongest practitioner confirmation of a key claim in this document. A developer reported: "I have a line [in AGENTS.md] that says Codex should never use Node APIs where Bun APIs exist for the same thing. Routinely, Claude Code and now Codex would ignore this. I just replaced that rule with a TypeScript-compiler-powered AST-based deterministic rule. Now the agent can attempt to commit code with banned Node API usage and the pre-commit script will fail." Multiple practitioners independently reported migrating AGENTS.md rules to mechanical checks. The pattern is clear: **every rule that CAN be a linter/test SHOULD be a linter/test.** AGENTS.md is for what can't be mechanically enforced — team decisions, migration boundaries, architectural intent. This upgrades practice E (architectural constraints) from "high evidence" to "consensus" — the gap between documented rules and mechanical enforcement is now widely observed and independently confirmed.
+
 ---
 
 ## VI. The Hierarchy of Leverage
 
 Based on the evidence, ranked by marginal return on investment:
 
-| Rank | Practice | Why | Evidence |
-|------|----------|-----|----------|
-| 1 | **Close the feedback loop** — linters, type checkers, test runners inline with every write | Provides external verification signal; prevents premature completion | LangChain +13.7pts, Stripe 1000+ merged PRs/week, universal practitioner consensus |
-| 2 | **Simplify tools** — fewer, general-purpose (bash + files) over many specialized | Reduces decision space, saves tokens, maps to training distribution | Vercel 80→100%, can1357 10× on weakest models |
-| 3 | **Enforce architecture mechanically** — linters + structural tests, not documentation | Creates the contract the LLM can't provide; prevents drift at scale | OpenAI million-line product, Böckeler independent confirmation |
-| 4 | **Start AGENTS.md empty, build from friction** — only ambiguity resolution + expensive inference caching | Avoids the context bloat penalty measured by ETH Zurich | ETH Zurich -3% from generated files; OpenAI progressive disclosure |
-| 5 | **Force self-verification before completion** — checklist middleware / pre-exit hooks | Counters models' bias toward first plausible solution | LangChain build-verify loop, Anthropic harness guide |
-| 6 | **Detect and break doom loops** — edit count tracking, forced reconsideration | Prevents 10+ iteration waste on broken approaches | LangChain LoopDetectionMiddleware, consistent failure mode in traces |
-| 7 | **Build observability access** — browser CLI, logs, DB, traces, metrics | "If you can't measure it, you can't improve it" applies to agents | OpenAI DevTools integration, Demmel's practitioner report |
-| 8 | **Run garbage collection** — background agents scanning for drift from golden patterns | Prevents entropy accumulation that compounds faster with agent code | OpenAI Friday cleanup → automated scans |
+| Rank | Practice | Why | Evidence | Shelf Life |
+|------|----------|-----|----------|-----------|
+| 1 | **Close the feedback loop** — linters, type checkers, test runners inline with every write | Provides external verification signal; prevents premature completion | LangChain +13.7pts, Stripe 1000+ merged PRs/week, universal practitioner consensus | **Durable** |
+| 2 | **Enforce architecture mechanically** — linters + structural tests, not documentation | Creates the contract the LLM can't provide; prevents drift at scale. Every rule that CAN be a test SHOULD be a test. | OpenAI million-line product, Böckeler, HN practitioner migration from AGENTS.md→AST checks | **Durable** |
+| 3 | **Simplify tools** — fewer, general-purpose (bash + files) over many specialized | Reduces decision space, saves tokens, maps to training distribution | can1357 10× on weakest models, Manus 4 rebuilds toward simplicity, Vercel directional (⚠️ n=5) | **Durable** |
+| 4 | **Write specifications, not just instructions** — formal-ish behavioral specs as ground truth | Spec IS the engineering; code is implementation detail. Catches integration gaps. Preserves theory. | JUXT Allium (3K spec → 5.5K Kotlin, distributed BFT system), maximum-leverage brainstorm | **Unknown** (may be permanent equilibrium) |
+| 5 | **Start AGENTS.md empty, build from friction** — only ambiguity resolution + expensive inference caching | Avoids context bloat penalty. Value inversely proportional to repo documentation quality. | ETH Zurich -3% from generated files (⚠️ SWE-bench only); OpenAI progressive disclosure; HN practitioner consensus | **Unknown** |
+| 6 | **Force self-verification before completion** — checklist middleware / pre-exit hooks | Counters models' bias toward first plausible solution | LangChain build-verify loop, Anthropic harness guide | **Temporal** (models improving) |
+| 7 | **Build observability access** — browser CLI, logs, DB, traces, metrics | "If you can't measure it, you can't improve it" applies to agents | OpenAI DevTools integration, Demmel's practitioner report | **Durable** |
+| 8 | **Detect and break doom loops** — edit count tracking, forced reconsideration | Prevents 10+ iteration waste on broken approaches | LangChain LoopDetectionMiddleware, consistent failure mode in traces | **Temporal** (models improving) |
+| 9 | **Run garbage collection** — background agents scanning for drift from golden patterns | Prevents entropy accumulation that compounds faster with agent code | OpenAI Friday cleanup → automated scans | **Unknown** |
 
 ### The One-Sentence Version
 
-Build the tightest possible feedback loop between the agent's output and mechanical verification, and invest everything else in making that loop faster, richer, and cheaper to maintain.
+Build the tightest possible feedback loop between the agent's output and mechanical verification, write specifications that encode your intent in a form both agents and tests can check, and classify every piece of harness logic as durable or temporal so you know what to delete when models improve.
 
 ---
 
@@ -317,6 +338,47 @@ Demmel says it directly: "If the AI bubble pops next month, you're left with eas
 The reason harness engineering *matters more now* is that agents amplify whatever they find (DORA 2025's culture amplifier). A codebase with strong verification catches agent mistakes the way it catches human mistakes. A codebase without verification has a new, faster way to accumulate debt.
 
 The harness engineering revolution isn't a revolution. It's the industry belatedly realizing that the engineering practices it skipped for decades are now load-bearing.
+
+An HN commenter (47046959) crystallized this perfectly: "My pet peeve with AI is that it tends to work better in codebase where humans do well and for the same reason. Large orchestration package without any tests that relies on a bunch of microservices to work? Claude Code will be as confused as our SDEs. This in turn leads to broader effort to refactor our antiquated packages in the name of 'making it compatible with AI' which actually means compatible with humans."
+
+This is the DORA culture amplifier made concrete: the codebases where harness engineering works are the ones that were already well-engineered. For the median codebase — patchy tests, unclear boundaries, accumulated entropy — harness engineering is a prescription to fix existing dysfunction first. The prescription is correct; the implied claim that AI makes it easy is not.
+
+### The Temporal Structure of Harness Practices
+
+Not all harness practices have the same shelf life. Cross-checking against the Bitter Lesson and Manus's four rebuilds reveals a useful classification:
+
+**Durable (good engineering regardless of AI):**
+- Linting, type checking, CI/CD
+- Enforced architecture (structural tests, dependency validation)
+- Observability (logs, metrics, traces accessible via CLI)
+- Test infrastructure (fast, incremental, composable)
+- Documentation as code (versioned, co-located, mechanically checked for freshness)
+
+**Temporal (compensating for current model limitations, build for deletion):**
+- Doom loop detection (models will get better at recognizing futile approaches)
+- Forced pre-completion verification checklists (models will learn to self-verify)
+- Reasoning budget sandwiches (adaptive reasoning is already emerging)
+- Context compaction heuristics (context windows keep growing)
+- Negative instruction avoidance (models may learn to handle negation reliably)
+
+**Unknown shelf life:**
+- AGENTS.md / progressive disclosure architecture (may become unnecessary as models internalize repo conventions, or may become MORE important as codebases grow)
+- Garbage collection agents (may be solved by models that maintain coherence natively, or may remain necessary forever because entropy is a property of the codebase, not the model)
+- Specification-first development (may be superseded by models that can extract intent from examples, or may be the permanent equilibrium because specification IS the engineering)
+
+---
+
+## VIII. Self-Critique: What This Document Gets Wrong or Oversells
+
+**1. The "harness > model" framing is partially a category error.** The LangChain and can1357 experiments show that harness improvements yield large gains. But they don't show that harness improvements yield *larger* gains than model improvements on the same tasks. A proper comparison would fix the harness and vary the model, then fix the model and vary the harness, measuring both deltas. Nobody has done this controlled comparison. The strongest version of "harness > model" would be: "past a capability floor, the *marginal* return on harness investment exceeds the marginal return on model switching." This is plausible but unproven.
+
+**2. The evidence base is dominated by benchmarks, not production.** LangChain used Terminal Bench. can1357 used React mutation fixtures. Vercel used a 5-query benchmark. APEX-Agents used simulated professional tasks. The ETH Zurich study used SWE-bench. These are all useful proxies, but none measures what actually matters: sustained developer productivity over weeks/months on real production codebases. The OpenAI and Stripe examples are production-scale but vendor-reported without independent verification.
+
+**3. The document underweights the "harness engineering as labor" problem.** The r/ExperiencedDevs thread raised a crucial point: "The issue was never the quality of the tools, it was leadership decisions on how hard to push them." Harness engineering requires sustained engineering investment. In most organizations, nobody is staffed to build custom linters, structural tests, and garbage collection agents. The practices described here are most accessible to small, high-agency teams — exactly the teams that were already well-engineered.
+
+**4. The LangChain evidence has a vendor conflict.** LangChain sells LangSmith, which is their observability/tracing product. Their harness engineering blog post concludes by recommending traces (stored in LangSmith) as the primary improvement mechanism. The +13.7 point result is real, but the methodology recommendation ("use our product to improve your agent") is marketing. I should have flagged this more prominently in v1.
+
+**5. The "specification-first" recommendation from the JUXT case may not generalize.** The JUXT case involved a single expert with deep distributed systems knowledge writing formal specs in a custom language. This is the expert-with-AI pattern, not a generalizable methodology. Most developers can't write 3,000 lines of behavioral specification for a distributed system. The question is whether a lighter-weight version (types + contracts + property tests, per the maximum-leverage brainstorm) captures enough of the benefit at lower skill cost. No data exists on this.
 
 ---
 
@@ -340,4 +402,9 @@ The harness engineering revolution isn't a revolution. It's the industry belated
 | [Vercel, "We removed 80% of our agent's tools"](https://vercel.com/blog/we-removed-80-percent-of-our-agents-tools) | Primary, vendor | Moderate | Fewer tools = better results data |
 | [OpenAI, "Harness Engineering"](https://openai.com/index/harness-engineering/) | Primary, vendor | ⚠️ Sells Codex | Architectural constraints, progressive disclosure, garbage collection |
 | [Anthropic, "Effective Harnesses for Long-Running Agents"](https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents) | Primary, vendor | ⚠️ Sells tokens | Two-agent pattern, JSON > markdown for state |
+| [JUXT, "From specification to stress test"](https://www.juxt.pro/blog/from-specification-to-stress-test/) | Primary, practitioner | **High** | Specification-first development with Allium + Claude Code; distributed system case study |
+| [O'Reilly, "Why Multi-Agent Systems Need Memory Engineering"](https://www.oreilly.com/radar/why-multi-agent-systems-need-memory-engineering/) | Independent analysis | **High** | Cemri et al. MAST taxonomy; 36.9% interagent misalignment failure rate |
+| [HN thread: Evaluating AGENTS.md](https://news.ycombinator.com/item?id=47034087) | Community | **High** | Practitioner counter-evidence to ETH Zurich conclusions; mechanical enforcement migration pattern |
+| [Mtrajan, "Harness Engineering Is Not Context Engineering"](https://mtrajan.substack.com/p/harness-engineering-is-not-context) | Independent analysis | **High** | Context vs. harness distinction; constraint/feedback/observability framing |
+| [Sonnet 4.6 benchmarks](https://venturebeat.com/technology/anthropics-sonnet-4-6-matches-flagship-ai-performance-at-one-fifth-the-cost) | Journalism | Moderate | SWE-bench 79.6%, Terminal-Bench ~59% — model capability context |
 | Internal corpus | Own analysis | Own analysis | Insight inventory, verification analysis, critical reviews |
