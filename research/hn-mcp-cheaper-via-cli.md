@@ -4,70 +4,65 @@
 
 - **HN:** https://news.ycombinator.com/item?id=47157398
 - **Article:** https://kanyilmaz.me/2026/02/23/cli-vs-mcp.html
-- **Score:** 161 · 76 comments · 54 unique authors
-- **Date:** 2026-02-25
+- **Score:** 163 | **Comments:** 76 | **Date:** 2026-02-25
 
-**Article summary:** The author argues that MCP's approach of dumping full JSON schemas into context is token-wasteful (~15.5K tokens for 84 tools), while CLI equivalents using lazy `--help` discovery cost ~94% less. He built CLIHub, a converter that compiles MCP servers into standalone CLI binaries. The article also benchmarks against Anthropic's Tool Search and claims CLI still wins by 74–88%.
+**Article summary:** The author built CLIHub, a tool that converts MCP servers into standalone CLI binaries. The pitch: MCP dumps all tool schemas into context upfront (~15,540 tokens for 84 tools), while CLI uses lazy discovery via `--help` (~300 tokens at session start, ~610 per tool discovered). Claims ~94% token savings overall, and 74-88% savings even versus Anthropic's Tool Search.
 
-### Dominant Sentiment: CLI vindication, MCP fatigue
+### Dominant Sentiment: MCP is the wrong abstraction layer
 
-The thread leans strongly pro-CLI, but the interesting commenters don't care about the article's token arithmetic — they're reaching for deeper arguments about composability, training data advantages, and what MCP actually contributes. The few MCP defenders make weak structural arguments ("just don't load everything") that get swatted down.
+The thread broadly agrees that stuffing tool schemas into context is wasteful, but splits on whether CLI is the right fix or just one symptom of a larger convergence toward lazy discovery and composability.
 
 ### Key Insights
 
-**1. Composability is the real CLI advantage, not token savings**
+**1. The composability gap is the real advantage, not token counts**
 
-The article fixates on token counts, but the thread's sharpest commenters identify a different mechanism entirely. `martinald`: "Imagine you want to sum the total of say 150 order IDs (and the API behind the scenes only allows one ID per API calls). With MCP the agent would have to do 150 tool calls and explode your context. With CLIs the agent can write a for loop… in *one tool call*." `_pdp_` makes the same point: "Coding assistant will typically pipe the tool in jq or tail to process the data chunk by chunk because this is how they are trained these days."
+The article leads with token savings, but the thread's sharpest comments identify a deeper structural issue. `_pdp_` nails it: "MCP tools are not composable. When I call the notion search tool I get a dump of whatever they decide to return which might be a lot. The model has no means to decide how much data to process." CLI tools are scriptable — agents pipe through `jq`, `head`, `grep` — because that's how they're trained. `martinald` extends this with a killer example: summing values from 150 order IDs requires 150 MCP tool calls (each round-tripping through the model), but one CLI `for` loop handles it in ~500 tokens. The token savings from lazy discovery are a one-time win; composability savings compound with task complexity.
 
-This is the argument the article should have led with. Token savings on schema loading are a one-time cost; composability savings compound across every multi-step workflow.
+**2. Five independent teams converged on the same idea in the same week**
 
-**2. Models are RL-trained on shell — CLI gets a free accuracy boost**
+CLIHub, mcpshim, mcporter, mcp-cli, CMCP — all MCP-to-CLI converters, all launched within days. `cmdtab` built mini-browser for the same reason. Cloudflare shipped Code Mode (search + execute over the full API in ~1,000 tokens). Anthropic shipped Tool Search. The convergence is the signal: "don't dump everything upfront" is now consensus. The debate is over *where* the lazy-loading happens — client-side (Tool Search), server-side (Code Mode), or at the protocol boundary (CLI).
 
-`cmdtab` drops the thread's most empirically grounded claim: "Even the smallest models are RL trained to use shell commands perfectly. Gemini 3 flash performs better with a cli with 20 commands vs 20+ tools in my testing." He also notes CLI preserves KV cache better than swapping tool definitions, and that models can "compose a giant command sequence to one shot task" — something tool-call protocols structurally prevent.
+**3. The article's framing is already outdated — but that doesn't kill the thesis**
 
-This is non-obvious and underreported. CLI isn't just a cheaper transport; it maps onto a capability models already have baked into their weights. MCP's JSON-RPC tool-call format is learned only through fine-tuning on tool-use datasets, which are smaller and less diverse than the shell-command corpus.
+`philfreo` correctly points out that Claude Code already does progressive tool loading via Skills and Tool Search, making the "MCP dumps everything" premise stale for best-in-class clients. `eongchen` echoes: "the issue isn't MCP vs CLI, it's that you've turned on everything without thinking." But `thellimist` (OP) counters that *most* MCP servers in the wild still dump — Cloudflare is the exception, not the rule. The gap between what's possible and what's deployed is the actual problem. The article solves for the ecosystem as it exists, not as it should be.
 
-**3. Cumulative conversation re-sending dwarfs schema cost — and CLI doesn't fix it**
+**4. The real token killer is per-turn context replay, not tool definitions**
 
-`OsrsNeedsf2P` delivers the strongest structural counterpoint: "The real killer is the input tokens on each step. If you have 100k tokens in the conversation, and the LLM calls an MCP tool, the output *and the existing* conversation is sent back… Now imagine 10 tool calls per user message — or 50. You're sending 1-5M input tokens." He reports cache hit rates as low as 40% in production.
+`OsrsNeedsf2P` (building a Godot agent) reframes the entire debate: "The real killer is the input tokens on each step. If you have 100k tokens in the conversation, and the LLM calls an MCP tool, the output *and the existing* conversation is sent back." Ten tool calls on a 100k conversation means 1-5M input tokens — dwarfing any tool definition overhead. Cache hit rates can be as low as 40% in practice. CLI doesn't solve this. Neither does Tool Search. The article is optimizing a second-order cost while the first-order cost goes unaddressed. `martinald` agrees: "But this is just the nature of LLMs (so far)."
 
-This partially undermines the article's thesis. If schema overhead is ~15K tokens but conversation re-sending costs millions, optimizing the schema is polishing the wrong knob. CLI's composability (insight #1) *does* help here — fewer round-trips means fewer re-sends — but the article doesn't make this connection.
+**5. CLIs unlock the KV cache in ways tool definitions don't**
 
-**4. MCP's actual contribution is auth, and CLI fragments it**
+`cmdtab` surfaces a non-obvious technical detail: "changing tools mid-conversation suffers from KV cache invalidation, vs CLI `--help` which only shows the manual for a specific command in append-only fashion." MCP tool definitions are injected at the beginning of the prompt, so adding or removing tools invalidates the cache for everything after. CLI discovery happens as append-only conversation turns, preserving the KV cache. This is a real, measurable advantage that the article doesn't mention and the thread mostly ignores.
 
-`crazylogger`: "MCP is a thin toolcall auth layer that has to be there so that ChatGPT and claude.ai can 'connect to your Slack.'" `martinald`: "MCP defines a consistent authentication protocol. This is the real issue with CLIs, each CLI can (and will) have a different way of handling authentication." The author himself admits "mainly oauth is the blocker since that logic needs to be custom implemented to the CLI."
+**6. Smaller models benefit disproportionately**
 
-The thread surfaces a real tension: CLI wins on execution but loses on auth standardization. CLIHub's answer (supporting OAuth2/PKCE/etc.) is essentially rebuilding MCP's auth layer inside each binary. Whether that's elegant or redundant depends on your perspective.
+`cmdtab` again: "Even the smallest models are RL trained to use shell commands perfectly. Gemini 3 Flash performs better with a CLI with 20 commands vs 20+ tools in my testing." This makes sense — shell command usage is massively overrepresented in training data compared to MCP tool-call JSON. The implication: CLI isn't just cheaper, it's more accurate for non-frontier models, which is where cost-sensitive production deployments actually live.
 
-**5. Everyone is converging on the same pattern from different directions**
+**7. Cloudflare's Code Mode is the most radical approach and the thread undervalues it**
 
-Anthropic's Tool Search, Cloudflare's Code Mode (search + execute two-tool pattern), Skills' progressive disclosure, and CLI's `--help` lazy loading are all implementations of the same idea: don't load tool definitions until you need them, and let the agent decide what to load. `philfreo` points this out directly, citing Skills' specification for progressive disclosure. `eggplantiny` tries to abstract further to "normalized semantic primitives" but `TeMPOraL` correctly notes that shell already provides this: "`cat`, `grep` and pipes and redirects may not be semantically pure, but they're pretty close to universal."
+Two tools — `search()` and `execute()` — covering 2,500+ API endpoints in ~1,000 tokens. The agent writes JavaScript against a typed OpenAPI spec, runs it in a V8 sandbox, and only relevant results enter context. This is fundamentally different from both MCP (pre-loaded schemas) and CLI (lazy discovery via `--help`). It's closer to giving the agent a *programming environment* rather than a *tool catalog*. `aceelric` built CMCP inspired by this, but the thread doesn't engage with the deeper implication: if server-side code execution works, the entire tool-definition paradigm is a dead end.
 
-Nobody names the converged pattern explicitly: **deferred schema resolution with agent-driven discovery**. The debate isn't "CLI vs MCP" — it's push vs. pull for tool metadata. Every serious implementation has landed on pull.
+**8. MCP won as the universal source format, even for its critics**
 
-**6. "You reinvented Skills" — and the author's defense is weak**
-
-`jbellis`: "You just reinvented Skills." The author's response — "I don't prefer to use online skills where half has malware. Official MCPs are trusted." — is a non-sequitur. Skills are a protocol pattern (progressive disclosure of CLI tools), not a package registry. The article's actual contribution is the MCP-to-CLI compiler, not the lazy-loading concept, but it's marketed as an insight about architecture.
-
-**7. The Cloudflare Code Mode approach may leapfrog both**
-
-Cloudflare's Code Mode collapses the entire API surface to two tools (search + execute) at ~1,000 tokens, achieving 99.9% reduction for their 2,500-endpoint API. The agent writes JavaScript against the OpenAPI spec rather than learning individual tool schemas. `aceelric` built CMCP using the same pattern. This is structurally superior to both MCP's schema dumping *and* CLI's `--help` approach because it eliminates per-tool overhead entirely — the agent discovers and invokes through code in a sandbox.
+The meta-irony: every project in this thread — CLIHub, mcpshim, mcporter, CMCP — takes MCP servers as *input*. Nobody is writing CLI tools from scratch; they're converting MCP. `paulddraper` puts it plainly: "MCP is just JSON-RPC plus dynamic OAuth plus some lifecycle things. It's a convention. That everyone follows." MCP's value isn't as a runtime protocol — it's as a catalog standard that CLI converters, Code Mode, and Tool Search all consume. The "MCP vs CLI" framing is wrong; it's "MCP as source of truth, CLI/Code Mode as execution surface."
 
 ### Common Pushbacks
 
 | Pushback | Quality | Note |
 |----------|---------|------|
-| "Just don't load all 84 tools" (`eongchen`) | Weak | "You're holding it wrong." Doesn't address the protocol's default behavior or that most MCP clients don't filter. |
-| "Prompt caching makes schema cost negligible" (`kanodiaayush`) | Medium | Partially true for single-provider setups, but OsrsNeedsf2P reports 40% cache hit rates in production. |
-| "Tool Search already solves this" (`philfreo`) | Strong | Correct, but Anthropic-only. CLI is vendor-neutral. |
-| "CLI auth is fragmented" (`martinald`) | Strong | Real unsolved problem. CLIHub rebuilds auth per-binary, which doesn't scale. |
+| "Models are trained on CLI, not MCP JSON" | Strong | Training data distribution genuinely favors shell usage; measurable accuracy gains on smaller models |
+| "Tool Search already solves this" | Medium | True for Claude, but Anthropic-only and still loads full JSON Schema per tool; doesn't help Gemini/GPT users |
+| "The real cost is context replay, not definitions" | Strong | Correct reframe, but doesn't invalidate CLI benefits — just shows they're smaller than advertised |
+| "CLI has a broader attack surface than sandboxed MCP" | Medium | Cloudflare flags this explicitly; real concern for deployed agents, less so for human-in-the-loop coding assistants |
+| "Just don't load 84 tools at once" | Weak-to-Medium | Correct in theory, but ignores that most MCP clients still do exactly this |
 
 ### What the Thread Misses
 
-- **Security model regression.** CLI turns every LLM into a shell agent. MCP at least has a permission model and sandboxed tool execution. Nobody discusses that giving an agent `notion --help` also gives it `rm -rf` unless you build a separate allowlist. The thread celebrates "the Unix way" without acknowledging that Unix's permission model wasn't designed for untrusted AI executors.
-- **Training data dependency.** CLI's accuracy advantage (insight #2) exists because models were trained on shell commands. This means CLI's superiority is contingent on training data, not protocol design. If labs started training heavily on MCP tool-call traces, the gap would close. Nobody frames it this way.
-- **The MCP-to-CLI pipeline is a transitional hack.** If the converged answer is deferred schema resolution, the clean solution is fixing MCP clients to do lazy loading (which Tool Search and Code Mode already do), not maintaining a parallel CLI binary for every MCP server. CLIHub is useful today but architecturally temporary.
+- **Auth is the buried lede.** `martinald` mentions it in passing, but nobody explores it: every CLI has a different auth mechanism (env vars, config files, OAuth flows, API keys). MCP's standardized OAuth is its strongest remaining value proposition. CLIHub supports multiple auth patterns, but "each CLI authenticates differently" is a real operational burden at scale that the token-savings pitch glosses over.
+- **Nobody discusses failure modes.** What happens when `--help` output is poorly formatted, or a CLI returns unexpected output? MCP's typed schemas provide a contract; CLI discovery is best-effort. The thread assumes CLIs are well-behaved because `gh` and `aws` are. Most won't be.
+- **The "semantic primitives" angle (`eggplantiny`) got dismissed too quickly.** Normalizing operations above the tool level (search, read, create, update) is what Cloudflare's Code Mode actually achieves with search() + execute(). `TeMPOraL` correctly notes that shell already provides these primitives (`cat`, `grep`, pipes), but the thread doesn't connect these dots.
+- **No one asks whether this matters at all in 6 months.** Context windows are getting longer and cheaper fast. `2001zhaozhao` hints at this — permanently cached system prompts with deep discounts could make all of this optimization irrelevant. The thread is optimizing for today's constraints.
 
 ### Verdict
 
-The thread circles an insight it never quite lands: **the CLI advantage isn't the CLI itself — it's that shell is the largest, most battle-tested "tool use" dataset in LLM training**. Models don't need JSON Schema to understand `grep`; they need it for `notion-search` because `notion-search` doesn't exist in their pretraining. The real question is whether to bring tools to the model's existing competence (CLI) or bring the model's competence to the tools (better fine-tuning on MCP traces). The industry is currently choosing the former because it's cheaper and works now, but the long-term winner is whoever makes deferred discovery a first-class protocol feature — which Anthropic and Cloudflare are already doing. CLIHub is a well-executed bridge solution for the gap between MCP's current defaults and the lazy-loading future everyone agrees on.
+The thread reveals that "MCP vs CLI" is a false dichotomy — MCP is becoming the catalog layer while execution surfaces diversify (CLI, Code Mode, Tool Search). The real convergence is on lazy discovery and composability, not on any particular protocol. But the thread circles without stating the deeper tension: **MCP's value is inversely proportional to how much of it you actually load into context**. The less MCP you use at runtime, the better MCP works as an ecosystem. That's either a sign of a maturing protocol finding its right abstraction level, or a sign that the runtime protocol is dead and only the registry survives. The answer probably depends on whether Cloudflare's Code Mode pattern — where the agent writes code instead of calling tools — becomes the norm. If it does, tool definitions as a concept are obsolete, and MCP becomes just an OpenAPI catalog with better OAuth.

@@ -3,6 +3,20 @@
 > **Note:** File paths in entries before 2026-02-17 session 7 refer to the flat structure
 > before the notes reorg. See [README.md](README.md) for current file locations.
 
+## 2026-02-24
+
+- Deep research: "Who are the most accurate long-range (10+ year) predictors?"
+- Searched and analyzed: Dan Luu's futurist scoring, Tetlock's superforecasting research, Open Philanthropy's long-range forecasting feasibility study, Samotsvety, IPCC climate models, Cold Takes futurist track record analysis
+- Key finding: **Nobody has a rigorously verified track record for 10+ year predictions.** Climate models are the sole exception (physics-based, 30+ year verified accuracy). All other "great predictors" are either validated at short horizons only (superforecasters: ~1yr) or scored by cherry-picked anecdotes.
+- Hierarchy: IPCC > deep domain experts (Gates/MS 1990s) > foxes/superforecasters > Asimov (~50% on 50yr) > professional futurists (Kurzweil ~7%, Kaku ~3-6%)
+- Saved to `research/long-range-prediction-accuracy.md`
+- Follow-up: what Samotsvety + Tier 3 predictors (Caplan, Yegge, Asimov) say about AI
+- Samotsvety: 31% AGI by 2030, 63% by 2050, 81% by 2100 (Jan 2023 update). Epoch AI rated them best judgment-based AGI forecast.
+- Caplan: about to lose his first-ever public bet (AI exam bet), unprecedented signal. Still bets against extinction.
+- Yegge: all-in on AI coding transformation, predicts 50% engineering cuts, "big companies are doomed"
+- Key finding: every forecasting group without exception shortened AI timelines 2022→2025. The convergence is the strongest signal.
+- Saved to `research/ai-predictions-best-forecasters.md`
+
 ## 2026-02-23 — Session 2
 
 - Distilled HN thread: "Pi – A minimal terminal coding harness" (202 pts, 92 comments)
@@ -369,3 +383,12 @@
   - **Rejection machinery ∝ courtesy norms**: communities build automated rejection systems not for efficiency but for emotional cover. The stronger the professional courtesy norm, the more elaborate the machinery. Placed after Democratization-Failure Tradeoff.
 - Existing insights already covered: Apprenticeship Doom Loop (Vouch tightens it), Democratization-Failure Tradeoff (Vouch enacts it), intent vectors (the algorithmic alternative the thread mostly misses)
 - Updated: insights.md (new entry), README.md (new research link)
+
+## 2026-02-25
+
+- Distilled HN thread "Making MCP cheaper via CLI" (47157398, 76 comments, 163 score)
+- Key finding: MCP is becoming the catalog/registry layer while execution surfaces diversify (CLI, Code Mode, Tool Search) — the "MCP vs CLI" framing is a false dichotomy
+- Thread's best insights: composability via piping > token savings, per-turn context replay dwarfs tool definitions, KV cache preservation advantage of CLI, smaller models benefit disproportionately
+- Cloudflare's Code Mode (search + execute, ~1K tokens for 2,500 endpoints) undervalued by thread — potentially makes tool definitions obsolete
+- Meta-irony: every MCP critic's project takes MCP servers as input
+- Saved to `research/hn-mcp-cheaper-via-cli.md`, updated README.md
