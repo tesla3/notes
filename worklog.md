@@ -409,3 +409,20 @@
   - Meta-insight: harness engineering is the industry belatedly realizing skipped engineering practices are now load-bearing
   - Saved to `research/harness-engineering-insights-and-practices.md`
   - Updated topic pages: coding-agents.md, software-factory.md (forward links)
+
+- Self-review of harness engineering research against latest evidence (30+ sources cross-checked)
+  - **Corrections applied:**
+    - Vercel n=5 sample size: flagged as directional signal, not statistical evidence
+    - ETH Zurich AGENTS.md study: added limitations (SWE-bench only, well-documented repos, doesn't measure token efficiency or recurring mistake prevention); HN practitioners pushed back hard, especially for large/messy codebases
+    - LangChain vendor conflict: LangSmith recommendation is marketing, flagged more prominently
+    - "Harness > model" framing: partially category error — nobody has done controlled marginal comparison
+  - **New evidence integrated:**
+    - JUXT Allium case study: spec-first development producing distributed BFT system (3K spec → 5.5K Kotlin). Strongest evidence yet for specification approach, but expert-dependent
+    - Cemri et al. MAST taxonomy (O'Reilly): 36.9% of multi-agent failures are interagent misalignment — harness literature ignores multi-agent state synchronization
+    - HN thread (47034087): practitioner consensus on migrating AGENTS.md rules to mechanical checks (AST linters, pre-commit hooks). "Every rule that CAN be a test SHOULD be a test"
+    - Bitter Lesson temporal counter-argument: Manus 4 rebuilds = model improvements erode harness value
+  - **Structural additions:**
+    - Temporal classification: durable practices (linting, architecture, observability) vs temporal (doom loops, forced verification) vs unknown (AGENTS.md, specs, garbage collection)
+    - Specification promoted to rank 4 in leverage hierarchy (was absent)
+    - 5-point self-critique section added
+    - r/ExperiencedDevs "harness as labor" problem: most orgs can't staff for this
