@@ -439,3 +439,87 @@ Mistral (a French company) fails the car wash test 0/10 in English but passes co
 [Full analysis](research/hn-car-wash-test-53-models.md)
 
 ↳ [Steering ∝ Theory](insights.md#steering-theory) (language choice as steering — the French prompt activates a different distributional path)
+
+---
+
+## Agent tool architecture
+
+### 150 Tool Calls vs 1 For Loop
+
+martinald, [HN #47157398](https://news.ycombinator.com/item?id=47157398), Feb 2026
+
+> Imagine you want to sum the total of say 150 order IDs (and the API behind the scenes only allows one ID per API call).
+>
+> With MCP the agent would have to do 150 tool calls and explode your context.
+>
+> With CLIs the agent can write a for loop in whatever scripting language it needs, parse out the order value and sum, _in one tool call_. This would be maybe 500 tokens total, probably 1% of trying to do it with MCP.
+
+The clearest formulation of why composability matters more than token savings at session start. Each MCP tool call round-trips through the model, adding the full conversation history to input tokens. A CLI for loop runs in a single shell invocation. The savings aren't linear — they compound with task complexity because each avoided round-trip avoids re-sending the entire conversation.
+
+↳ [Shell Composability Advantage](additional_insights.md#shell-composability-advantage) (CLI piping/scripting as structural advantage over RPC-style tool calls)
+
+---
+
+### CLI Accuracy on Small Models
+
+cmdtab, [HN #47157398](https://news.ycombinator.com/item?id=47157398), Feb 2026
+
+> Even the smallest models are RL trained to use shell commands perfectly. Gemini 3 Flash performs better with a CLI with 20 commands vs 20+ tools in my testing.
+>
+> CLI also works well in terms of maintaining KV cache (changing tools mid-conversation suffers from KV cache invalidation vs CLI --help command only showing manual for specific command in append-only fashion).
+>
+> Writing your tools as unix-like CLI also has a nice benefit of model being able to pipe multiple commands together. In the case of browser, I wrote mini-browser which frontier models use much better than explicit tools to control browser because they can compose a giant command sequence to one shot a task.
+
+Three distinct practitioner-observed advantages: (1) training distribution — shell commands massively overrepresented in training data vs MCP JSON; (2) KV cache — MCP definitions injected at prompt start invalidate cache on change, CLI discovery is append-only; (3) composability — piping lets models one-shot complex tasks. [mini-browser repo](https://github.com/runablehq/mini-browser).
+
+↳ [Shell Composability Advantage](additional_insights.md#shell-composability-advantage)
+
+---
+
+### CLI Discovery Chain
+
+thellimist (article author), [HN #47157398](https://news.ycombinator.com/item?id=47157398), Feb 2026
+
+Demonstrating how an agent discovers and uses an unknown CLI tool with zero pre-loaded schema:
+
+> LLM only knows `linear` tool exists. I ask "get me the comments in the last issue." Next call LLM does is:
+>
+> `linear --help 2>&1 | grep -i -E "search|list.*issue|get.*issue"`
+>
+> then `linear list-issues --raw '{"limit": 3}' -o json 2>&1 | head -80`
+>
+> then `linear list-comments --issue-id "abc1ceae-aaaa-bbbb-9aaa-6bef0325ebd0"`
+>
+> So even the --help has filtering by default. Current models are pretty good.
+
+Progressive discovery via grep on help text — the agent never loads the full tool schema. Each step adds only the tokens it needs. The `grep` on `--help` output is the CLI equivalent of Anthropic's Tool Search, but works with any model and any tool.
+
+↳ [Skill Loading Illusion](additional_insights.md#skill-loading-illusion) (progressive disclosure working in practice via CLI discovery rather than skill selection)
+
+---
+
+### Per-Turn Replay Dwarfs Tool Definitions
+
+OsrsNeedsf2P (building [ziva.sh](https://ziva.sh), Godot agent), [HN #47157398](https://news.ycombinator.com/item?id=47157398), Feb 2026
+
+> The real killer is the input tokens on each step. If you have 100k tokens in the conversation, and the LLM calls an MCP tool, the output *and the existing* conversation is sent back. So now you've input 200k tokens to the LLM.
+>
+> Now imagine 10 tool calls per user message — or 50. You're sending 1-5M input tokens, not because the MCP definitions or tool responses are large, but because at each step, you have to send the whole conversation again.
+>
+> "What about caching" — Only 90% savings, also cache misses are surprisingly common (we see as low as 40% cache hit rate).
+
+Reframes the entire MCP cost debate: tool definitions are ~15K tokens; per-turn context replay on a 100K conversation with 10 tool calls is 1M+ tokens. The 40% cache hit rate from production data is especially notable — most cost analyses assume near-perfect caching.
+
+↳ [Hidden Denominator](insights.md#hidden-denominator) (the uncounted cost that dwarfs the visible optimization target)
+
+---
+
+### MCP Non-Composability
+
+_pdp_, [HN #47157398](https://news.ycombinator.com/item?id=47157398), Feb 2026
+
+> MCP tools are not composable. When I call the notion search tool I get a dump of whatever they decide to return which might be a lot. The model has no means to decide how much data to process. You normally get a JSON data dump with many token-unfriendly data-points like identifiers, urls, etc. The CLI-based approach on the other hand is scriptable. Coding assistants will typically pipe the tool in jq or tail to process the data chunk by chunk because this is how they are trained these days.
+
+The structural observation: MCP returns opaque blobs the model must accept wholesale. CLI output can be filtered (`jq`, `head`, `grep`) before entering context. The agent controls *how much* of the output it processes — a form of attention management that MCP's tool-call interface doesn't support.
+
+↳ [Shell Composability Advantage](additional_insights.md#shell-composability-advantage)

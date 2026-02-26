@@ -392,3 +392,7 @@
 - Cloudflare's Code Mode (search + execute, ~1K tokens for 2,500 endpoints) undervalued by thread — potentially makes tool definitions obsolete
 - Meta-irony: every MCP critic's project takes MCP servers as input
 - Saved to `research/hn-mcp-cheaper-via-cli.md`, updated README.md
+- Extracted from MCP/CLI distillation:
+  - **anecdotes.md**: 5 new entries under "Agent tool architecture" section — 150 Tool Calls vs 1 For Loop (martinald), CLI Accuracy on Small Models (cmdtab), CLI Discovery Chain (thellimist), Per-Turn Replay Dwarfs Tool Definitions (OsrsNeedsf2P), MCP Non-Composability (_pdp_)
+  - **additional_insights.md**: New insight "Shell Composability Advantage" — three structural advantages (composability eliminates round-trips, training distribution alignment, KV cache preservation) with security counterpoint
+  - **additional_insights.md**: Updated "Skill Loading Illusion" with convergence evidence (5 independent MCP-to-CLI converters + Cloudflare Code Mode + Anthropic Tool Search, all in same week)
