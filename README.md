@@ -68,6 +68,7 @@ Not yet grouped into topics:
 - [HN: Coding Agents Replaced Every Framework](research/hn-coding-agents-replaced-frameworks.md) — LISP curse redux, training data commons depletion, sovereignty transfer not reclamation, retirement manifesto
 - [AI Workplace Mandates vs. Productivity Paradox](research/ai-workplace-mandates-productivity-paradox.md) — Goodhart's Law in AI KPIs, vendor-customer ouroboros, cargo-cult mandates, Solow parallel limits
 - [HN: Making MCP Cheaper via CLI](research/hn-mcp-cheaper-via-cli.md) — MCP-as-catalog not runtime, composability > token savings, five convergent projects, Code Mode endgame
+- [Exemplary Codebases for LLM Context](research/exemplary-codebases-for-llm-context.md) — tiered list of best-architected open source projects, what to learn, how to use as coding agent reference material
 
 ## Collections
 
