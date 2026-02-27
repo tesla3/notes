@@ -5,6 +5,13 @@
 
 ## 2026-02-26
 
+- **New research: HN — What Claude Code Chooses** (`research/hn-claude-code-picks.md`)
+  - Amplifying.ai ran 2,430 prompts against Claude Code across 3 models, 4 repos, 20 tool categories
+  - Thread treats findings as confirmation that LLMs are now the most powerful dev tool distribution channel
+  - Key insights: Tailwind wins structurally (co-located tokens = better S:N ratio), AGENTS.md works ~80% with imperative prohibitions, LLMs treat their own output as intentional human design (self-deference ratchet), recency gradient likely curated via RL not just training data
+  - Thread blind spots: supply-side market power (Anthropic→vendor negotiation), Tailwind paradox (adoption up, revenue down), EU AI Act applicability, the report site itself is archetypal Opus 4.6 output
+  - Updated README
+
 - **New research: Architecturally Remarkable Repos** — broad web research across Brave Search, HN, Lobsters, InfoQ, expert blogs
   - 15 modern projects (2020-2026) with novel architectural bets, tiered by depth
   - Tier 1 (study deeply): TigerBeetle, DuckDB, FoundationDB DST pattern

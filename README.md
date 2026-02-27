@@ -70,6 +70,7 @@ Not yet grouped into topics:
 - [HN: Making MCP Cheaper via CLI](research/hn-mcp-cheaper-via-cli.md) — MCP-as-catalog not runtime, composability > token savings, five convergent projects, Code Mode endgame
 - [Exemplary Codebases for LLM Context](research/exemplary-codebases-for-llm-context.md) — deeply interesting designs with unique constraints, trade-offs, and what to learn; includes [counter-evidence](research/exemplary-codebases-counter-evidence.md) challenging every project
 - [Architecturally Remarkable Repos](research/architecturally-remarkable-repos.md) — modern projects with novel architectural bets, plus critical self-review: ScyllaDB/Seastar, TigerBeetle, DuckDB, vLLM, FoundationDB DST, Redpanda, Ghostty, Jujutsu, llama.cpp/GGML, Neon, Cilium, and more
+- [HN: What Claude Code Chooses](research/hn-claude-code-picks.md) — LLM tool recommendations as invisible kingmaking, Tailwind's structural advantage, AGENTS.md 80% compliance, build-vs-buy bias, recency gradient as curated RL
 
 ## Collections
 
