@@ -417,6 +417,131 @@ The [classics](exemplary-codebases-for-llm-context.md) succeed through **constra
 
 ---
 
+---
+
+## Critical Self-Review: What's Wrong With This List
+
+**Added:** February 26, 2026 (second pass after research and self-critique).
+
+### 1. The "Inversion" Thesis Is Partly Narrative, Not Analysis
+
+I framed every project as "inverting convention." But not all of them actually do. DuckDB doesn't *invert* "analytics needs a server" — it *transfers* SQLite's design to OLAP. That's not an inversion; it's an application of an existing pattern to a new domain. Ghostty doesn't invert anything — "library core + native frontends" is the standard pattern for any serious cross-platform project (every game engine, every multimedia framework). I was retrofitting a clean narrative onto messy reality.
+
+The honest version: some of these are genuine inversions (TigerBeetle's single-thread, Dragonfly's shared-nothing), some are cross-domain transfers (vLLM ← OS paging), some are incremental improvements (Valkey over Redis), and some are just "good engineering" without a novel architectural idea (Tantivy). Lumping them all under "inversion" makes the list feel more coherent than it is. **Beware of narrative coherence as a substitute for analytical precision.**
+
+### 2. Massive Database Bias — The Dog That Isn't Barking
+
+Count the entries: TigerBeetle (DB), DuckDB (DB), FoundationDB (DB), Dragonfly (cache/DB), Pebble (storage engine), Turso/libSQL (DB), Valkey (cache/DB), NATS (messaging), Tantivy (search index). That's **9 out of 15 entries** in the data infrastructure category. Plus ClickHouse, CockroachDB, and etcd in honorable mentions. This isn't a "list of architecturally remarkable projects" — it's a **database showcase with a few guests.**
+
+**What's missing entirely:**
+
+- **Operating systems / kernels:** bcachefs (copy-on-write filesystem with B-tree innovations — log-structured nodes inside B-trees, snapshot versioning without COW tree cloning), io_uring itself (the Linux async I/O subsystem that TigerBeetle depends on — arguably more architecturally interesting than TigerBeetle)
+- **Networking / eBPF:** Cilium (eBPF-based networking that bypasses the entire Linux network stack — iptables replacement in the kernel, programmable datapath). This is a genuine architectural revolution happening in Kubernetes networking and I didn't mention it.
+- **Build systems:** Buck2 (Meta's Rust rewrite of Buck, with a dynamic/monadic computation graph inspired by build system theory — "Build Systems à la Carte" paper). Turbopack (incremental memoization framework for bundling, inspired by Salsa/Rust-Analyzer). These solve a genuinely hard problem: correct incrementality in build graphs.
+- **ML infrastructure beyond serving:** llama.cpp / GGML — arguably the most impactful single project in the local AI revolution. Georgi Gerganov, one person, made LLMs run on consumer laptops. The GGML tensor library is architecturally interesting: pure C, no dependencies, custom quantization formats (GGUF), cross-platform inference on CPU/GPU/NPU. Simon Willison (Feb 2026): "It's hard to overstate the impact Georgi Gerganov and llama.cpp have had on the local model space." This is a *glaring* omission.
+- **Serverless Postgres:** Neon (storage-compute separation for PostgreSQL — compute nodes write to a shared WAL service, page service handles reads, branching via copy-on-write page references). This is "what if Aurora but open-source" and the architecture is genuinely novel.
+- **JS runtimes:** Bun (Zig + JavaScriptCore, all-in-one runtime/bundler/test-runner). The architectural bet is "one tool replaces Node + npm + webpack + jest" via a monolithic runtime written in a systems language. Worth studying for the "monolith vs. ecosystem" design tension.
+- **WebAssembly Component Model:** A cross-language, shared-nothing component system with interface types, a genuinely hard problem in language interop. Not a single project but a standards-level architectural innovation.
+- **CRDTs in practice:** Corrosion (Fly.io's distributed service discovery using gossip protocol + CR-SQLite for conflict resolution). The interesting idea: use CRDTs to make SQLite eventually consistent across a cluster. Each node owns specific rows, gossip propagates changes, CRDTs resolve conflicts. This is "distributed SQLite" from a completely different angle than LiteFS or Turso.
+
+### 3. ScyllaDB: The Missing Progenitor
+
+This is the most embarrassing omission. I described Redpanda's thread-per-core architecture as if it were Redpanda's innovation. **It isn't. ScyllaDB invented it.** ScyllaDB (2015) created the Seastar framework and the entire shard-per-core model. Redpanda (2020) adopted Seastar from ScyllaDB. Crediting Redpanda for the architecture without featuring ScyllaDB is like crediting Chrome for V8 without mentioning Node.js... actually it's worse, because ScyllaDB literally *wrote the framework Redpanda uses.*
+
+**ScyllaDB deserves its own Tier 1 entry:**
+
+- **Repo:** [github.com/scylladb/scylladb](https://github.com/scylladb/scylladb) + [github.com/scylladb/seastar](https://github.com/scylladb/seastar)
+- **Founded by:** Avi Kivity (creator of KVM, the hypervisor underlying most production clouds) and Dor Laor — these aren't random startup founders; they built the virtualization layer the cloud runs on, then applied the same kernel-bypass, per-core-sharding philosophy to databases.
+- **The architectural bet:** Take Cassandra's data model (wide-column, distributed, eventual consistency) and rewrite it in C++ with thread-per-core, NUMA-aware memory allocation, userspace I/O scheduling, and zero GC. Same API, 10x fewer nodes.
+- **The production evidence is real:** Discord migrated *trillions* of messages from Cassandra to ScyllaDB (Bo Ingram, 2023). 177 Cassandra nodes → dramatically fewer ScyllaDB nodes. The migration blog is one of the best real-world architecture case studies available. Their Cassandra problems: unpredictable latency, GC pauses, compaction backlogs, constant paging. ScyllaDB's shard-per-core eliminated the GC entirely and gave each core its own compaction schedule.
+- **The hard problem ScyllaDB had to solve that Redpanda didn't:** Cooperative scheduling in a database context. When everything is one thread per core, *any blocking operation stalls the entire core*. ScyllaDB had to build a userspace disk I/O scheduler, a userspace CPU scheduler (with priority classes for reads vs. writes vs. compaction vs. repair), and a custom memory allocator — all to avoid ever blocking. Their 2017 blog on CPU-bound optimization goes down to PMU counters and instruction-per-cycle analysis. This is operating-system-level work inside a database.
+- **What Seastar (ScyllaDB's framework) actually provides:** Single-producer/single-consumer lock-free queues for inter-core communication, custom memory barriers optimized for x86 (they wrote a detailed blog post on this), cooperative task scheduling, a futures/promises model that's *not* based on threads. The Seastar tutorial is the best introduction to thread-per-core programming that exists.
+
+**Why I missed it:** Survivorship bias in my search queries. I searched for "modern 2020-2026 projects." ScyllaDB started in 2015. It fell outside my date filter. But the Seastar *pattern* is a 2015 innovation that's still being adopted — Redpanda (2020), Dragonfly-style shared-nothing (2022). The progenitor is more architecturally interesting than its children.
+
+### 4. Insufficient Counter-Evidence for Projects I Did Cover
+
+**TigerBeetle:** I noted the Oct 2025 scrutiny but didn't stress: the "1000x faster" claims were from their *own investor's blog post* (Amplify Partners). Independent verification is thin. The single-threaded architecture that I praised has a concrete ceiling: one core's throughput, period. Their answer ("you can have another core once you've saturated the first one") is witty but doesn't address the scaling question for workloads that *do* saturate a core.
+
+**vLLM:** I praised PagedAttention without noting that SGLang (from the same UC Berkeley group) is now *outperforming* vLLM on multi-turn conversations through better KV cache reuse strategies. r/LocalLLaMA (Mar 2025): "SGLang crushes it with Data Parallelism." vLLM is also "crashier than SGLang" on some hardware. The architectural idea (paged KV cache) remains brilliant, but the *project*'s dominance is already being challenged — within 2 years of the paper.
+
+**Jujutsu:** I didn't mention the real adoption blockers: no Git LFS support, no submodules, no .gitattributes. An HN commenter (Sep 2025) returned to Git because jj doesn't have named branches, breaking their shared-branch workflow. The conceptual model is elegant but the missing features are precisely the "ugly but necessary" parts of Git that real teams depend on. This is a Plan-9-style risk: conceptual purity that can't handle messy reality.
+
+**Redpanda:** The thread-per-core model's difficulty is real but I understated it. Cooperative scheduling means *any* CPU-intensive operation (compression, encryption, serialization) must be manually broken into small chunks that yield control. This is viral — every line of code in the system must be aware of the scheduling model. One blocking call, anywhere, stalls the core. This is why Seastar-based development is restricted to a small number of teams: the programming model is hostile to normal engineering.
+
+### 5. Missing Meta-Observation: The C++ / Rust / Zig Axis
+
+Almost every project on this list is written in C++, Rust, or Zig. Zero are in Java, Go, Python, or JavaScript (the languages most software is actually written in). This is a selection bias: I was looking for *architectural* novelty, and the interesting architectural decisions tend to happen at the systems level where C++/Rust/Zig operate.
+
+But this means the list is nearly useless for learning architectural lessons applicable to **application-level software** — web services, API backends, mobile apps, data pipelines. A web developer studying TigerBeetle's io_uring integration won't extract anything they can use in their Express.js API. The transferable lessons are at the *philosophy* level (constraint, simulation testing, cross-domain transfer), not at the implementation level.
+
+### 6. The "Novel" Bar Is Inconsistent
+
+- **Genuinely novel:** TigerBeetle's simulation testing in Zig, vLLM's PagedAttention, Jujutsu's conflict-as-data model, ScyllaDB's shard-per-core (in 2015 it was genuinely new)
+- **Well-executed but not novel:** DuckDB (columnar embedded DB existed — MonetDB/e, then MonetDBLite), Oxc (rewriting JS tools in Rust is the same bet as esbuild/swc/Biome, they're just faster at it), Tantivy (Lucene-in-Rust, explicitly derivative), Valkey (Redis fork with engineering improvements)
+- **Novel framing of existing ideas:** Ghostty (library-core is standard), NATS (subject-based routing has been around for decades), LiteFS (FUSE interposition is a well-known technique)
+
+I should have been more honest about this gradient instead of presenting everything as equally novel.
+
+---
+
+## Additions From Self-Review
+
+### ScyllaDB + Seastar — The Progenitor of Thread-Per-Core
+
+**Repo:** [github.com/scylladb/scylladb](https://github.com/scylladb/scylladb) + [github.com/scylladb/seastar](https://github.com/scylladb/seastar)
+**Language:** C++ · **Started:** 2015 · **Founders:** Avi Kivity (KVM creator), Dor Laor
+
+**Should be Tier 1.** ScyllaDB invented the shard-per-core model that Redpanda and others adopted. Avi Kivity brought kernel-level thinking (from building KVM) to database architecture. The Seastar framework is the foundational innovation — lock-free inter-core SPSC queues, cooperative scheduling, userspace I/O scheduler, NUMA-aware memory allocation. Discord's migration from Cassandra (trillions of messages, 177 → fewer nodes) is the strongest production validation on this list.
+
+**The hard problem ScyllaDB uniquely had to solve:** Making cooperative scheduling work for a database. Unlike Redpanda (which processes relatively simple message append/read operations), ScyllaDB must handle complex operations: range scans, secondary index lookups, materialized view maintenance, repair, compaction — all without blocking. Every operation must yield cooperatively. This required building a complete userspace OS inside the database: CPU scheduler with priority classes, I/O scheduler with bandwidth allocation, memory allocator with per-core pools.
+
+**What to study:** The [Seastar tutorial](https://github.com/scylladb/seastar/blob/master/doc/tutorial.md), the I/O scheduler blog series, the memory barrier optimization blog, and the Discord migration post.
+
+### llama.cpp / GGML — One Person Changes Local AI
+
+**Repo:** [github.com/ggml-org/llama.cpp](https://github.com/ggml-org/llama.cpp) + [github.com/ggml-org/ggml](https://github.com/ggml-org/ggml)
+**Language:** C/C++ · **Author:** Georgi Gerganov · **Started:** March 2023
+
+**Should be Tier 2 at minimum.** Gerganov made LLaMA run on a MacBook in an evening. The first README (March 10, 2023): "The main goal is to run the model using 4-bit quantization on a MacBook. [...] This was hacked in an evening - I have no idea if it works correctly."
+
+**The architectural ideas worth studying:**
+
+1. **GGML tensor library:** Pure C, no dependencies, strict memory management (pre-allocated contiguous blocks for cache locality), custom quantization formats. The design mirrors SQLite's philosophy: minimal, embeddable, zero dependencies.
+2. **GGUF format:** A self-describing binary format for model serialization with extensible metadata, backward compatibility, and cross-platform support. Solves the "how do you ship a model" problem cleanly.
+3. **Multi-backend abstraction:** CPU (x86 AVX/AVX2/AVX-512, ARM NEON), GPU (CUDA, Metal, Vulkan, SYCL, HIP), NPU — all behind a unified interface. The backend abstraction lets the same model run on any hardware without code changes.
+4. **4-bit quantization making inference accessible:** The key insight: you don't need full-precision weights for inference. 4-bit quantization with clever block-based schemes (Q4_K_M, Q5_K_M) retains most quality at 1/4 the memory. This is what made "LLMs on consumer hardware" possible.
+
+**Why it's remarkable:** This is the strongest modern example of the SQLite/Redis pattern — solo author, C, no dependencies, extreme portability, disproportionate impact. Gerganov is to local AI what drh is to embedded databases. GGML just joined Hugging Face (Feb 2026) for long-term sustainability.
+
+### Neon — Serverless Postgres via Storage-Compute Separation
+
+**Repo:** [github.com/neondatabase/neon](https://github.com/neondatabase/neon)
+**Language:** Rust + C (Postgres) · **Started:** 2021
+
+**The hard problem:** PostgreSQL is a monolith — compute and storage are coupled. You can't scale them independently. You can't branch a database like you branch code. You can't scale to zero (idle databases still consume resources).
+
+**The architectural bet:** Split Postgres into a stateless compute layer and a shared storage layer:
+- **Compute nodes** run standard Postgres but write WAL to a shared **Safekeeper** service instead of local disk.
+- **Pageserver** stores actual data pages, serving them to compute on demand (like a network-attached page cache).
+- **Branching** is copy-on-write at the page level — creating a branch is near-instant regardless of database size.
+- **Scale to zero:** When no queries arrive, compute shuts down completely. Storage persists independently.
+
+**Why it matters:** This is the "Aurora but open-source" bet. AWS Aurora proved storage-compute separation works for OLTP databases. Neon does it with standard Postgres, in Rust, open-source. Jack Vanlightly's analysis (Nov 2023) provides rigorous technical evaluation.
+
+### Cilium — eBPF Replaces the Linux Network Stack
+
+**Repo:** [github.com/cilium/cilium](https://github.com/cilium/cilium)
+**Language:** Go + C (eBPF programs) · **Started:** 2016
+
+**The hard problem:** Kubernetes networking uses iptables — a 20-year-old packet filtering system that doesn't scale. With thousands of services, iptables rules become a performance bottleneck and a debugging nightmare. Can you replace the entire Linux network stack for container networking?
+
+**The architectural bet:** Write networking, security, and observability logic as eBPF programs that run *inside the Linux kernel* — bypassing iptables, kube-proxy, and the traditional network stack entirely. Packets are processed at the XDP (eXpress Data Path) layer before they even reach the TCP/IP stack.
+
+**Why it's remarkable:** This is one of the few projects that genuinely changes the platform it runs on. Cilium doesn't work *on top of* Linux networking — it *replaces* it. The eBPF programs are JIT-compiled, verified by the kernel's eBPF verifier (provably safe), and run at near-hardware speed. This is a genuine paradigm shift in how container networking works, and it's becoming the default CNI for major Kubernetes distributions.
+
+---
+
 ## Sources
 
 - [TigerBeetle ARCHITECTURE.md](https://github.com/tigerbeetle/tigerbeetle/blob/main/docs/internals/ARCHITECTURE.md)
@@ -444,3 +569,26 @@ The [classics](exemplary-codebases-for-llm-context.md) succeed through **constra
 - [Tantivy ARCHITECTURE.md](https://github.com/quickwit-oss/tantivy/blob/main/ARCHITECTURE.md)
 - [DuckDB Academic Overview](https://clickhouse.com/docs/academic_overview) + [DuckDB Beyond the Hype](https://www.pracdata.io/p/duckdb-beyond-the-hype)
 - Own notes: [Exemplary Codebases (Classics)](exemplary-codebases-for-llm-context.md), [Counter-Evidence](exemplary-codebases-counter-evidence.md), [HN: DuckDB as First Choice](hn-duckdb-first-choice-data-processing.md)
+
+### Self-Review Sources (second pass)
+- [ScyllaDB Shard-per-Core Architecture](https://www.scylladb.com/product/technology/shard-per-core-architecture/)
+- [Why ScyllaDB's Shard Per Core Architecture Matters (Oct 2024)](https://www.scylladb.com/2024/10/21/why-scylladbs-shard-per-core-architecture-matters/) — Dor Laor, Bo Ingram, Tzach Livyatan perspectives
+- [How Discord Stores Trillions of Messages (Aug 2023)](https://discord.com/blog/how-discord-stores-trillions-of-messages) — Bo Ingram, Cassandra → ScyllaDB migration
+- [Seastar Memory Barriers Blog](https://www.scylladb.com/2018/02/15/memory-barriers-seastar-linux/) — inter-core communication optimization
+- [ScyllaDB I/O Scheduler Design (2016)](https://www.scylladb.com/2016/04/14/io-scheduler-1/) — userspace disk I/O scheduling
+- [ScyllaDB CPU-Bound Optimization (2017)](https://www.scylladb.com/2017/07/06/scyllas-approach-improve-performance-cpu-bound-workloads/) — PMU analysis, IPC optimization
+- [40 Cassandra Nodes vs 4 ScyllaDB Nodes Benchmark](https://thenewstack.io/benchmarking-apache-cassandra-40-nodes-vs-scylladb-4-nodes/)
+- [Simon Willison on llama.cpp impact (Feb 2026)](https://news.ycombinator.com/item?id=47090880)
+- [llama.cpp Wikipedia](https://en.wikipedia.org/wiki/Llama.cpp) — history, GGML origins
+- [GGML Technical Architecture (Oreate AI)](https://www.oreateai.com/blog/practical-quantization-of-llama-models-detailed-explanation-of-gguf-and-llamacpp-technologies/)
+- [Neon Architecture Overview](https://neon.com/docs/introduction/architecture-overview)
+- [Jack Vanlightly: Neon Serverless PostgreSQL Analysis (Nov 2023)](https://jack-vanlightly.com/analyses/2023/11/15/neon-serverless-postgresql-asds-chapter-3)
+- [Neon: Storage-Compute Separation Performance (Jul 2025)](https://neon.com/blog/separation-of-storage-and-compute-perf)
+- [Cilium GitHub + eBPF Architecture](https://docs.cilium.io/en/v1.13/bpf/architecture/)
+- [Fly.io Corrosion: Gossip + CRDTs + SQLite](https://fly.io/blog/corrosion/)
+- [Buck2: Why Buck2](https://buck2.build/docs/about/why/)
+- [Turbopack Incremental Computation (Jan 2026)](https://nextjs.org/blog/turbopack-incremental-computation)
+- [Bun: Why Zig for JavaScriptCore](https://www.reddit.com/r/Zig/comments/16ho53m/why_did_the_bunjs_team_use_zig_to_create_bun/)
+- [SGLang vs vLLM KV Cache Reuse](https://www.runpod.io/blog/sglang-vs-vllm-kv-cache)
+- [Jujutsu adoption barriers (HN Sep 2025)](https://news.ycombinator.com/item?id=45083952)
+- [TigerBeetle scrutiny (BigGo Oct 2025)](https://biggo.com/news/202510011913_TigerBeetle_Database_Community_Scrutiny)

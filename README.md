@@ -69,7 +69,7 @@ Not yet grouped into topics:
 - [AI Workplace Mandates vs. Productivity Paradox](research/ai-workplace-mandates-productivity-paradox.md) — Goodhart's Law in AI KPIs, vendor-customer ouroboros, cargo-cult mandates, Solow parallel limits
 - [HN: Making MCP Cheaper via CLI](research/hn-mcp-cheaper-via-cli.md) — MCP-as-catalog not runtime, composability > token savings, five convergent projects, Code Mode endgame
 - [Exemplary Codebases for LLM Context](research/exemplary-codebases-for-llm-context.md) — deeply interesting designs with unique constraints, trade-offs, and what to learn; includes [counter-evidence](research/exemplary-codebases-counter-evidence.md) challenging every project
-- [Architecturally Remarkable Repos](research/architecturally-remarkable-repos.md) — modern (2020–2026) projects with novel architectural bets: TigerBeetle, DuckDB, vLLM, Redpanda, Ghostty, Jujutsu, Dragonfly, LiteFS, Pebble, Oxc, and more
+- [Architecturally Remarkable Repos](research/architecturally-remarkable-repos.md) — modern projects with novel architectural bets, plus critical self-review: ScyllaDB/Seastar, TigerBeetle, DuckDB, vLLM, FoundationDB DST, Redpanda, Ghostty, Jujutsu, llama.cpp/GGML, Neon, Cilium, and more
 
 ## Collections
 

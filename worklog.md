@@ -14,6 +14,15 @@
   - Key meta-insight: classics succeed through *constraint* (refusing features), modern projects through *inversion* (doing the opposite of convention enabled by specific technical insight)
   - Cross-linked with existing `exemplary-codebases-for-llm-context.md` and counter-evidence
   - Saved to `research/architecturally-remarkable-repos.md`, updated README
+- **Critical self-review of the above list** — found 6 major problems:
+  1. "Inversion" thesis is partly imposed narrative, not analysis
+  2. Massive database bias (9/15 entries are data infrastructure)
+  3. **ScyllaDB missing** — the progenitor of thread-per-core (Seastar), credited Redpanda for ScyllaDB's innovation
+  4. Insufficient counter-evidence (TigerBeetle investor-written praise, vLLM losing to SGLang, jj adoption blockers)
+  5. C++/Rust/Zig bias — useless for application-level architecture lessons
+  6. Inconsistent novelty bar (DuckDB well-executed but not novel, Tantivy explicitly derivative)
+  - **Added 4 missing projects:** ScyllaDB+Seastar (Tier 1), llama.cpp/GGML, Neon, Cilium
+  - **Identified 6+ other missing categories:** build systems (Buck2, Turbopack), CRDTs (Corrosion), JS runtimes (Bun), Wasm Component Model, filesystems (bcachefs)
 - Deep web research: agent harness engineering — new papers, practitioner reports, anecdotes
 - **METR RCT update (Feb 24):** Study is literally breaking — devs refuse to work without AI. Raw data now shows speedup but selection effects make it unreliable. Redesigning study.
 - **METR transcript analysis (Feb 17):** 1.5x-13x time savings on Claude Code tasks. Highest savings correlate with agent concurrency (2.3+ parallel sessions). Caveat: soft upper bound, not productivity multiplier.
