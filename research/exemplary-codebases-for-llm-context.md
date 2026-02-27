@@ -270,6 +270,10 @@ In the coding agent era, this tension resolves differently: one person + AI can 
 
 ---
 
+## Counter-Evidence
+
+See [exemplary-codebases-counter-evidence.md](exemplary-codebases-counter-evidence.md) — systematic challenge to every project on this list. Every constraint that produces quality also produces a specific failure mode.
+
 ## Sources
 
 - [Ask HN: What open source project has the highest code quality? (2018)](https://news.ycombinator.com/item?id=18037613) — Go stdlib as top answer
