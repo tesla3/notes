@@ -3,6 +3,29 @@
 > **Note:** File paths in entries before 2026-02-17 session 7 refer to the flat structure
 > before the notes reorg. See [README.md](README.md) for current file locations.
 
+## 2026-02-26
+
+- **New research: Architecturally Remarkable Repos** — broad web research across Brave Search, HN, Lobsters, InfoQ, expert blogs
+  - 15 modern projects (2020-2026) with novel architectural bets, tiered by depth
+  - Tier 1 (study deeply): TigerBeetle, DuckDB, FoundationDB DST pattern
+  - Tier 2 (novel bets): Dragonfly, vLLM, Redpanda, Ghostty, Jujutsu
+  - Tier 3 (specific ideas): LiteFS, Turso/libSQL, Pebble, Oxc, Valkey, NATS, Tantivy
+  - Honorable mentions: Mojo, Roc, SerenityOS, CockroachDB, ClickHouse, etcd/Raft
+  - Key meta-insight: classics succeed through *constraint* (refusing features), modern projects through *inversion* (doing the opposite of convention enabled by specific technical insight)
+  - Cross-linked with existing `exemplary-codebases-for-llm-context.md` and counter-evidence
+  - Saved to `research/architecturally-remarkable-repos.md`, updated README
+- Deep web research: agent harness engineering — new papers, practitioner reports, anecdotes
+- **METR RCT update (Feb 24):** Study is literally breaking — devs refuse to work without AI. Raw data now shows speedup but selection effects make it unreliable. Redesigning study.
+- **METR transcript analysis (Feb 17):** 1.5x-13x time savings on Claude Code tasks. Highest savings correlate with agent concurrency (2.3+ parallel sessions). Caveat: soft upper bound, not productivity multiplier.
+- **Lulla et al. (arxiv 2601.20404):** AGENTS.md makes agents 29% faster, 17% fewer tokens. Developer-written files help efficiency; LLM-generated hurt accuracy. Studies reconciled.
+- **Codified Context paper (arxiv 2602.20478):** 3-tier architecture (hot constitution/specialist agents/cold knowledge base) for 108K LOC project. 283 sessions, 24.2% knowledge-to-code ratio, 4.3% meta-infrastructure overhead. Discovered "brevity bias" — iterative optimization collapses context toward useless brevity.
+- **Configuration Landscape (arxiv 2602.14690):** 2,926 repos analyzed. AGENTS.md converging as standard. 83% of Skills have no scripts. Zero repos use subagent persistent memory. Ecosystem still at "markdown file only" maturity.
+- **CodeAct/Code Mode:** Agents writing Python instead of JSON tool calls → 20% accuracy gain, 32-81% token reduction. May be next major harness improvement.
+- **CSDD (arxiv 2602.02584):** Constitutional security specs → 73% fewer security defects in AI-generated code.
+- **Brownfield playbook:** First serious practitioner report. Tests-first, doc tacit knowledge, compromise hierarchy, incremental autonomy.
+- **100% autonomy wall:** Gorman's controlled experiments confirm full autonomy doesn't work. Doom loops are unfixable at model level.
+- Saved to `research/harness-engineering-update-feb26-2026.md`
+
 ## 2026-02-24
 
 - Deep research: "Who are the most accurate long-range (10+ year) predictors?"

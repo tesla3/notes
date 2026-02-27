@@ -270,6 +270,10 @@ In the coding agent era, this tension resolves differently: one person + AI can 
 
 ---
 
+## Modern Projects (2020–2026)
+
+See [architecturally-remarkable-repos.md](architecturally-remarkable-repos.md) — projects that succeed through *inversion* (doing the opposite of convention), not just constraint. TigerBeetle, DuckDB, vLLM, Redpanda, Ghostty, Jujutsu, Dragonfly, LiteFS, Pebble, Oxc, and more.
+
 ## Counter-Evidence
 
 See [exemplary-codebases-counter-evidence.md](exemplary-codebases-counter-evidence.md) — systematic challenge to every project on this list. Every constraint that produces quality also produces a specific failure mode.
