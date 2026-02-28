@@ -5,6 +5,13 @@
 
 ## 2026-02-28
 
+- **New research: Agent Skills Emerging Winners** (`research/agent-skills-emerging-winners.md`)
+  - Deep web research across 15+ sources (Firecrawl, Bright Data, TestCollab, SupaTest, Tembo, Faros AI, skills.sh, agent-skills.cc, DEV Community, Reddit, GitHub issues, DeepLearning.AI)
+  - Three structural shifts: CLI beating MCP (4-35x token efficiency), Agent Skills standard at 25+ platforms in 2 months, flywheel operating at pattern level not tool level
+  - Category winners: Agent Browser (token-efficient browser), Browser Use (autonomous browser), Brave Search (search), Superpowers (workflow/meta), Anthropic official (docs), skills.sh (distribution)
+  - Key finding: Microsoft's Playwright CLI adopted Agent Browser's ref pattern, validating it while threatening commoditization. Microsoft's own repo recommends CLI over their own MCP.
+  - Critical: skills.sh "57K skills" inflated, security model is a ticking time bomb, cross-platform portability promise stronger in theory than practice
+
 - **New research: Agent Skills** (`research/agent-skills.md`)
   - Deep read of pi skills system: docs, specification, all 7 installed skills (commit, github, tmux, brave-search, youtube-transcript, hn-distill, agent-browser), source code of scripts
   - Walked through simplest (commit: 36-line pure-prompt behavioral override) and most sophisticated (agent-browser: 350+ line framework with refs, state, iOS, diffing, 7 reference docs)
