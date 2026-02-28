@@ -77,6 +77,7 @@ Not yet grouped into topics:
 - [Agent Skills & Tools: Emerging Winners](research/agent-skills-emerging-winners.md) — category-by-category analysis (browser, search, workflow, docs), CLI vs MCP token math, Playwright CLI vs Agent Browser, skills.sh ecosystem, flywheel at platform level not tool level
 - [Agent Skills: Category Landscape & Non-Obvious Winners](research/agent-skills-landscape-categories-winners.md) — 12-category deep map, Block's 3 design principles, self-improvement loops as sleeper hit, bug pattern libraries, security attack taxonomy (Oathe/Snyk audits), vendor skills as GTM, non-obvious creative uses (video→QA, session compounding)
 - [LLM Capability vs. Pseudo-Capability](research/llm-capability-vs-pseudo-capability.md) — what's real vs illusion in LLM reasoning; mechanistic interpretability evidence (Anthropic circuit tracing, Gemma Scope 2); faithfulness problem (0.04–13% CoT fabrication); METR 19% slowdown RCT; Apple "Illusion of Thinking" full debate; context-directed extrapolation framework; practitioner reality check; capability trust map
+- [Post-Nov 2025 Model Failures: Antidotes](research/post-nov-2025-model-failure-antidotes.md) — 20 evaluated countermeasures across isolation/verification/structure; CRV, NLDD, asymmetric verification, code health scoring, DeepMind scaling principles, environment-dependent strategy; each rated on evidence, first-principles soundness, and practitioner viability
 
 ## Collections
 
