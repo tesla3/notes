@@ -43,3 +43,4 @@ Google's free tier is the most generous in the industry (no credit card, 1M cont
 - [Sonnet 4.6 Analysis](../research/sonnet-4-6-analysis.md) — benchmarks, cost trap, thinking modes, community reception
 - [HN: Consistency Diffusion LMs](../research/hn-consistency-diffusion-language-models.md) — CDLM speedups, DLM adoption blockers, hybrid AR+diffusion future thesis
 - [HN: Gemini 3.1 Pro](../research/gemini-3-1-pro-hn-thread.md) — intelligence vs agency gap, benchmark-buying with compute, Google product chaos, Feb 2026
+- [LLM Capability vs. Pseudo-Capability](../research/llm-capability-vs-pseudo-capability.md) — what's real reasoning vs pattern retrieval, mechanistic interpretability evidence, faithfulness problem, METR productivity RCT, practitioner reality check, capability trust map

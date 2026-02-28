@@ -75,6 +75,8 @@ Not yet grouped into topics:
 - [Signal-to-Value: High-Level Languages for Exploration](research/signal-to-value-high-level-languages-exploration.md) — deep dive testing whether high-level languages are truly better for exploration (LLM or not), evidence/counter-evidence on semantic density vs verification density, Gall's Law, borrow-checker death spirals, breadth-first vs depth-first resolution
 - [Agent Skills: Architecture & Analysis](research/agent-skills.md) — pi skills mechanism, progressive disclosure, commit (simplest) vs agent-browser (most sophisticated), critical assessment, MCP comparison
 - [Agent Skills & Tools: Emerging Winners](research/agent-skills-emerging-winners.md) — category-by-category analysis (browser, search, workflow, docs), CLI vs MCP token math, Playwright CLI vs Agent Browser, skills.sh ecosystem, flywheel at platform level not tool level
+- [Agent Skills: Category Landscape & Non-Obvious Winners](research/agent-skills-landscape-categories-winners.md) — 12-category deep map, Block's 3 design principles, self-improvement loops as sleeper hit, bug pattern libraries, security attack taxonomy (Oathe/Snyk audits), vendor skills as GTM, non-obvious creative uses (video→QA, session compounding)
+- [LLM Capability vs. Pseudo-Capability](research/llm-capability-vs-pseudo-capability.md) — what's real vs illusion in LLM reasoning; mechanistic interpretability evidence (Anthropic circuit tracing, Gemma Scope 2); faithfulness problem (0.04–13% CoT fabrication); METR 19% slowdown RCT; Apple "Illusion of Thinking" full debate; context-directed extrapolation framework; practitioner reality check; capability trust map
 
 ## Collections
 
