@@ -3,6 +3,23 @@
 > **Note:** File paths in entries before 2026-02-17 session 7 refer to the flat structure
 > before the notes reorg. See [README.md](README.md) for current file locations.
 
+## 2026-02-28 (session 4)
+
+- **LLM Capability vs. Pseudo-Capability** (`research/llm-capability-vs-pseudo-capability.md`)
+  - Follow-up from agent-skills-landscape research to deeply assess what LLMs can/can't actually do
+  - Searched and synthesized 20+ sources across academic research, mechanistic interpretability, practitioner evidence
+  - **Key findings:**
+    - "Stochastic parrot vs AGI" is dead — best framework is "context-directed extrapolation from training data priors" (Bonial et al.)
+    - Apple "Illusion of Thinking" debate: rebuttals fixed evaluation artifacts but 8-disk Hanoi wall is real; code generation ≠ domain reasoning
+    - Anthropic circuit tracing: genuine internal representations (cross-lingual concepts, multi-hop reasoning), but "grab it, rabbit" counter-evidence challenges poetry planning claim
+    - CoT faithfulness: 0.04–13% fabrication rate across production models; *scalability paradox* — bigger models fake better
+    - METR RCT: experienced devs 19% slower with AI, believed they were 20% faster (40-point perception gap)
+    - MIT Tech Review: 30+ practitioner interviews confirm "slot machine" experience — remember jackpots, forget hours of wrangling
+    - ARC-AGI-2: Gemini 3 Deep Think at 84.6% suggests genuine progress but mechanism unknown
+    - Built practical capability trust map: high trust for pattern retrieval/classification, low for counterfactual reasoning/self-assessment
+  - Updated `topics/llm-models.md` Deep Research section, `README.md` Other Research section
+  - **Next:** Watch for METR study replication with current-gen tools; ARC-AGI-3 interactive reasoning results; interpretability scaling to frontier models
+
 ## 2026-02-28 (session 3)
 
 - **Harness & Leverage Critical Review** (`research/harness-leverage-critical-review-feb28-2026.md`)
@@ -542,3 +559,11 @@
     - Vendor skills (Firebase, Stripe, AWS) = new go-to-market channel
     - Non-obvious: video transcription→QA, receiving-code-review > requesting, anti-sycophancy as design requirement
   - Updated README with new research link
+  - **Deep-dive conversation:** self-improvement skills, bug pattern libraries, all non-obvious winners
+    - Elaborated "design for the arc" (Block's bonus principle) — skill creates conversation loop where output feeds next step
+    - Clarified: arc is NOT a decision tree (absolute difference, not semantic) — decision tree is finite/enumerable/Markovian; arc is open-ended/generative/context-dependent
+    - Identified arc failure modes: amplifies bad reasoning (wrong diagnosis → wrong treatment → wrong verification), hallucinated vulnerabilities generate cascading work from nothing
+    - **New insight: Skill Author Competence Paradox** — added to both research note (#8 non-obvious winner) and insights.md (Section VI)
+    - Three faces: authoring paradox (expert doesn't need it), evaluation circularity (judging output requires the expertise skill provides), calibration drift (skills untethered to models)
+    - Block's internal marketplace as proof it's solvable under narrow conditions (same org, fast feedback)
+    - Connected to 5 existing insights: Cognition ≠ Decision, Steering ∝ Theory, Inverted Principal-Agent, Naur's Nightmare, Workflow as Tribal Knowledge
