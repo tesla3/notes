@@ -316,6 +316,31 @@ A plausible flywheel: popular tool → most agent usage → most training data �
 
 4. **Dev tools historically fragment, not consolidate.** Playwright/Puppeteer/Selenium/Cypress all coexist. Preferences are context-dependent and switching costs are low. The agent layer doesn't change this structural dynamic.
 
-What's more likely: **soft defaults** — when a user says "scrape this website" without specifying a tool, the model reaches for whatever it knows best from training data. First-mover advantage in the "uninstructed" case, but no lock-in. Easily overridden by a skill, a system prompt, or a user preference.
+**Initial counter-arguments and why most don't hold up:**
 
-The convergence actually happening is at the **format layer** — the Agent Skills standard adopted across harnesses (pi, Claude Code, Codex). Standardization of the *interface* (how tools are documented for agents), not monopolization of *which* tools win. Format convergence with tool diversity — like REST winning as an API style without any single REST API winning.
+1. ~~"Skills are the antidote — a newcomer with a good SKILL.md works just as well."~~ Wrong. Training data provides *fluency* (error recovery, edge cases, implicit understanding); skills provide *compliance* (mechanical instruction-following). Fluency > compliance in practice. Users experience this as "the agent keeps messing up with this new tool."
+
+2. ~~"Switching costs are near-zero."~~ Misstated. Rewriting a SKILL.md is cheap. But the real switching cost is the fluency gap + accumulated workflows + the need for a new tool designed for LLM constraints (not just new docs).
+
+3. "Multiple models, multiple training mixes." Partially valid — multi-model market does prevent any single model-tool coupling from monopolizing. But models converge on similar training data (same internet, same GitHub), so the divergence is overstated.
+
+4. ~~"Dev tools historically fragment."~~ Cherry-picked. Some fragment (test frameworks), some consolidate hard (Git, Docker, npm, VS Code). The agent era adds a **new selection pressure** — training data representation — that creates a feedback loop historical dev tool markets didn't face.
+
+**The flywheel, taken seriously:**
+
+1. Tool gains early adoption → appears in training data
+2. Model becomes *fluent*, not just *compliant* → better error recovery, edge cases, implicit understanding
+3. Users experience fluency gap → "why fight the model?" → stick with the default
+4. More usage → tool authors optimize for model interaction (agent-browser's ref system is designed for LLM token budgets, not humans)
+5. **Co-evolution** of tool + model → fit that competitors can't replicate without both a good tool AND training data volume
+6. Competitor faces chicken-and-egg: needs training data for fluency, needs fluency for adoption
+
+Step 5 — co-evolution — is the key moat. The ref system isn't a neutral tool feature; it's co-evolved with LLM constraints. The tool shapes itself to the model; the model shapes its behavior to the tool.
+
+**What still resists pure winner-takes-all:**
+
+- Skills provide a bootstrapping mechanism for newcomers (explicit instructions while building training data)
+- Open-source tools can be forked; the co-evolutionary fit isn't proprietary like Google's click data
+- Multi-model market creates multiple possible "winners" per category
+
+**Revised verdict:** The outcome is likely **oligopoly with real barriers to entry** — 2-3 dominant tools per category, with the training-data flywheel making it genuinely hard for newcomers to break in. Not pure winner-takes-all, but much closer to it than "soft defaults with easy override." Format-layer convergence (Agent Skills standard across harnesses) coexists with tool-layer consolidation.
