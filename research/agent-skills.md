@@ -303,3 +303,19 @@ What's genuinely durable is narrower: **private tool interfaces** (can't leak to
 There is one additional role that survives: **skills as a patching mechanism for stale training data.** Training data is frozen at a cutoff. Skills are mutable. When a tool adds a flag or changes its interface, the skill is current on day one; training data catches up months later. This makes skills a **live documentation layer** — useful, but a humbler role than "durable capability extension."
 
 **Revised verdict:** The permanently durable use cases for skills are (a) private/internal tool interfaces and (b) personal conventions and editorial judgment. Popular agent-tool patterns will be absorbed into training data. Skills' residual value for public tools is as a version-lag patch — keeping the agent current between training cutoffs. The format's lasting core value is as **a structured interface between human intent and agent behavior for inherently local context.**
+
+### Will popular tools converge winner-takes-all?
+
+A plausible flywheel: popular tool → most agent usage → most training data → model learns it best → more usage → dominance. But the conditions for winner-takes-all don't hold:
+
+1. **Skills are self-antidoting.** The mechanism that absorbs tools into training data (skills teach models → usage → training data) is the same mechanism that lets new tools override defaults. A newcomer with a good SKILL.md works just as well in-context — training data familiarity becomes marginal when the skill is loaded.
+
+2. **Switching costs are near-zero.** Rewriting a SKILL.md is an afternoon. No API integration, no SDK, no data migration. Compare to actual winner-takes-all platforms (AWS, iOS) where switching costs are enormous.
+
+3. **Multiple models, multiple training mixes.** No single "training data" to dominate. Claude, GPT, Gemini, Llama have different corpora. Multi-model market prevents any single feedback loop from creating monopoly.
+
+4. **Dev tools historically fragment, not consolidate.** Playwright/Puppeteer/Selenium/Cypress all coexist. Preferences are context-dependent and switching costs are low. The agent layer doesn't change this structural dynamic.
+
+What's more likely: **soft defaults** — when a user says "scrape this website" without specifying a tool, the model reaches for whatever it knows best from training data. First-mover advantage in the "uninstructed" case, but no lock-in. Easily overridden by a skill, a system prompt, or a user preference.
+
+The convergence actually happening is at the **format layer** — the Agent Skills standard adopted across harnesses (pi, Claude Code, Codex). Standardization of the *interface* (how tools are documented for agents), not monopolization of *which* tools win. Format convergence with tool diversity — like REST winning as an API style without any single REST API winning.
