@@ -117,6 +117,8 @@ Kiro CLI's context model: guidance (conventions) + instructions (task-specific) 
 - **[Harness Engineering — Insights & Operational Best Practices](../research/harness-engineering-insights-and-practices.md)** — deep synthesis: why harness > model (LangChain +13.7pts, can1357 10×, Vercel 80→100%), hierarchy of leverage, operational implementation, ETH Zurich AGENTS.md evaluation, honest assessment of unproven claims
 - [Harness Engineering Playbook — Distilled](../research/harness-engineering-playbook.md) — tactical tips from Ignorance.ai synthesis (OpenAI, Stripe, Steinberger, Hashimoto, Tane)
 - [Harness Engineering — Critical Review](../research/harness-engineering-critical-review.md) — cross-checked against primary sources, macro data, our research corpus; survivorship bias, hidden denominator, source credibility issues
+- [Harness Engineering Update — Feb 26](../research/harness-engineering-update-feb26-2026.md) — METR updates, Lulla AGENTS.md study, Codified Context paper, CodeAct paradigm, brownfield methodology, Configuration Landscape study
+- **[Harness & Leverage Critical Review — Feb 28](../research/harness-leverage-critical-review-feb28-2026.md)** — reassessment against latest evidence: model-harness co-training dissolves "harness > model", skill atrophy death spiral, macro productivity gap widening, SDD mainstreaming, observation-generation inversion
 
 ### Practitioner Tips & Productivity Evidence
 - [Zechner & Steinberger Tips Review](../research/critical-review-v3-final.md) — corroborated, contested, and complicated

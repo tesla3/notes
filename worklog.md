@@ -3,6 +3,20 @@
 > **Note:** File paths in entries before 2026-02-17 session 7 refer to the flat structure
 > before the notes reorg. See [README.md](README.md) for current file locations.
 
+## 2026-02-28 (session 3)
+
+- **Harness & Leverage Critical Review** (`research/harness-leverage-critical-review-feb28-2026.md`)
+  - Reassessed three core docs (harness insights, Feb 26 update, maximum leverage brainstorm) against latest evidence
+  - Searched web for new evidence: model-harness co-training (Codex), Anthropic skill atrophy study, macro productivity data (Economist, SF Fed, Bloomberg, DX survey), SDD mainstreaming, Willison's Agentic Engineering Patterns
+  - **Key new findings:**
+    - Model-harness co-training (confirmed by OpenAI insider) may dissolve the "harness > model" separation — models trained WITH their harness
+    - Anthropic study: 17% comprehension loss from AI coding → potential skill atrophy → spec quality death spiral
+    - Macro productivity gap widening: 93% adoption, ~10% productivity, zero aggregate macro impact (Economist, SF Fed)
+    - SDD went from our brainstorm idea to mainstream movement in 2-3 weeks — validated but diluted
+    - "Review debt" concept (InfoWorld): parallelizing agents creates validation debt faster than humans can pay it down
+  - Updated `topics/coding-agents.md` with links to new research and the Feb 26 update
+  - **Next:** Monitor co-training evidence, longitudinal skill studies, brownfield SDD tooling, macro productivity inflection
+
 ## 2026-02-28 (session 2)
 
 - **Signal-to-Value deep dive** (`research/signal-to-value-high-level-languages-exploration.md`)
