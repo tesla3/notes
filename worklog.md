@@ -3,6 +3,27 @@
 > **Note:** File paths in entries before 2026-02-17 session 7 refer to the flat structure
 > before the notes reorg. See [README.md](README.md) for current file locations.
 
+## 2026-02-28
+
+- **New research: Agent Skills** (`research/agent-skills.md`)
+  - Deep read of pi skills system: docs, specification, all 7 installed skills (commit, github, tmux, brave-search, youtube-transcript, hn-distill, agent-browser), source code of scripts
+  - Walked through simplest (commit: 36-line pure-prompt behavioral override) and most sophisticated (agent-browser: 350+ line framework with refs, state, iOS, diffing, 7 reference docs)
+  - Pattern taxonomy: pure prompt → thin wrapper → orchestration → multi-step pipeline → full framework
+  - Critical assessment: elegant simplicity and progressive disclosure are genuinely good; LLM routing unreliability, no dependency management, no testing framework, trust-the-file security model are real weaknesses
+  - Compared to MCP, AGENTS.md, function calling, GPT Actions
+  - Meta-insight: skills are structured knowledge injection — closer to training data than plugins. Transitional technology, but editorial-judgment skills (like hn-distill) have lasting value
+
+- **New research: Rust Critical Evaluation** (`research/rust-language-critical-evaluation-2026.md`)
+  - Deep web research across JetBrains DevEco 2025, State of Rust Survey, Stack Overflow, TIOBE, LWN, devclass, enterprise case studies, academic benchmarks, practitioner blogs, arxiv
+  - Key findings: 2.27M devs, 45.5% orgs in production, Linux kernel permanent (Dec 2025), enterprise commitments real (AWS/Cloudflare/Microsoft/Google/Discord/Dropbox)
+  - Performance: within 5% of C++, 1.5x faster than Go Fiber, concurrency safety is the real differentiator
+  - Steelmanned criticisms: compile times structural and unsolvable, mutable shared state genuinely hostile, complexity irreducible, memory safety ≠ reliability (Cloudflare unwrap() outage)
+  - Forward-looking: AI coding agents may be the structural solution to Rust's learning curve — strict type system + uniform corpus = better LLM output. Rust-SWE-bench (ICSE 2026) and RunMat case study support this
+  - Government/CISA pressure is a one-way ratchet creating structural demand
+  - Job market: $150K–$225K, supply-constrained, sector-concentrated
+  - Verdict: best language for things that must not break. Not for everything.
+  - Updated README
+
 ## 2026-02-26
 
 - **New research: HN — What Claude Code Chooses** (`research/hn-claude-code-picks.md`)

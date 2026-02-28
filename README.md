@@ -71,6 +71,8 @@ Not yet grouped into topics:
 - [Exemplary Codebases for LLM Context](research/exemplary-codebases-for-llm-context.md) — deeply interesting designs with unique constraints, trade-offs, and what to learn; includes [counter-evidence](research/exemplary-codebases-counter-evidence.md) challenging every project
 - [Architecturally Remarkable Repos](research/architecturally-remarkable-repos.md) — modern projects with novel architectural bets, plus critical self-review: ScyllaDB/Seastar, TigerBeetle, DuckDB, vLLM, FoundationDB DST, Redpanda, Ghostty, Jujutsu, llama.cpp/GGML, Neon, Cilium, and more
 - [HN: What Claude Code Chooses](research/hn-claude-code-picks.md) — LLM tool recommendations as invisible kingmaking, Tailwind's structural advantage, AGENTS.md 80% compliance, build-vs-buy bias, recency gradient as curated RL
+- [Rust: Critical Evaluation (Feb 2026)](research/rust-language-critical-evaluation-2026.md) — adoption numbers, Linux kernel permanence, enterprise deployments, performance benchmarks, steelmanned criticisms, AI-agent synergy thesis, job market, forward outlook
+- [Agent Skills: Architecture & Analysis](research/agent-skills.md) — pi skills mechanism, progressive disclosure, commit (simplest) vs agent-browser (most sophisticated), critical assessment, MCP comparison
 
 ## Collections
 
