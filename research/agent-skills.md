@@ -289,14 +289,17 @@ The most interesting thing about agent skills is what they reveal about the curr
 
 An initial instinct is to call skills transitional — models will learn tool usage from training data and need less hand-holding. But this conflates three different types of knowledge that skills encode:
 
-| What the skill encodes | Will models learn it? | Example |
+| What the skill encodes | Durable? | Example |
 |---|---|---|
-| **Public tool syntax** | Yes, already mostly know it | `gh pr checks 55`, basic git commands |
-| **Custom tool interfaces & agent-specific patterns** | No — local, not in training data | `agent-browser snapshot -i`, tmux socket conventions, `search.js --freshness pw` |
-| **Personal conventions & editorial judgment** | No — inherently local/subjective | Commit format preferences, `hn-distill` analysis guidelines |
+| **Public tool syntax** | No — already in training data | `gh pr checks 55`, basic git commands |
+| **Popular agent-tool patterns** | No — will be absorbed in 1-2 training cycles | `agent-browser` refs, tmux socket conventions, `PYTHON_BASIC_REPL=1` |
+| **Private/internal tool interfaces** | Yes — can't leak to public training data | Company CLIs, team deploy scripts, internal APIs |
+| **Personal conventions & editorial judgment** | Yes — choices, not knowledge | Commit format preferences, `hn-distill` analysis guidelines |
 
-Only the first category is genuinely transitional (and already marginal — the `github` skill is arguably unnecessary for strong models that know `gh` well). The other two are **durable by nature**: custom tool CLIs can't be in training data because they're local scripts, and personal conventions are subjective choices that must be specified explicitly.
+The first category is already marginal (the `github` skill is arguably unnecessary for strong models). The second category — agent-specific patterns for popular tools — seems durable today but isn't. The absorption pipeline is clear: skills repos are public on GitHub and will be crawled; agent session transcripts feed RLHF training; blog posts and tutorials proliferate. Within 1-2 training cycles, models will know `agent-browser` ref patterns and tmux socket conventions natively, the way they already know Docker commands.
 
-Even procedural knowledge like "after clicking, you MUST re-snapshot to get new refs" serves a purpose: the `agent-browser` ref system is novel enough that no training data covers it. As such tools become widespread and appear in training corpora, the hand-holding will become less necessary — but that's a small fraction of what skills actually do.
+What's genuinely durable is narrower: **private tool interfaces** (can't leak to training data) and **personal conventions/editorial judgment** (subjective choices that must be specified, not learned).
 
-**Revised verdict:** Skills for well-known public tools are marginal already. Skills for custom tools, local conventions, and editorial judgment are durable — they encode context that is inherently too local or too subjective to ever appear in training data. The format's lasting value is as **a structured interface between human intent and agent behavior**, not as a substitute for training data.
+There is one additional role that survives: **skills as a patching mechanism for stale training data.** Training data is frozen at a cutoff. Skills are mutable. When a tool adds a flag or changes its interface, the skill is current on day one; training data catches up months later. This makes skills a **live documentation layer** — useful, but a humbler role than "durable capability extension."
+
+**Revised verdict:** The permanently durable use cases for skills are (a) private/internal tool interfaces and (b) personal conventions and editorial judgment. Popular agent-tool patterns will be absorbed into training data. Skills' residual value for public tools is as a version-lag patch — keeping the agent current between training cutoffs. The format's lasting core value is as **a structured interface between human intent and agent behavior for inherently local context.**
