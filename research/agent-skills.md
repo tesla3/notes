@@ -285,6 +285,18 @@ The skill format scales from 36-line behavioral overrides to 350+ line tool manu
 
 The most interesting thing about agent skills is what they reveal about the current state of AI coding agents: **the bottleneck is not capability but workflow knowledge.** The agent can already run any shell command. What it lacks is the *judgment* of when to run which command, in what order, with what error handling. Skills are structured knowledge injection — they're closer to training data than to plugins.
 
-This suggests skills are a transitional technology. As models get better at autonomous task decomposition and tool discovery, the need for hand-written step-by-step instructions should decrease. But right now, in February 2026, the models still benefit enormously from being told "after you click a link, you MUST re-snapshot to get new refs." That kind of procedural knowledge isn't in the training data because the tools are too new.
+### Are skills transitional?
 
-The best skills (like `hn-distill`) encode *editorial judgment*, not just procedural steps. That kind of knowledge won't be obsoleted by better models — it's domain expertise compressed into a format agents can consume. That's where the lasting value is.
+An initial instinct is to call skills transitional — models will learn tool usage from training data and need less hand-holding. But this conflates three different types of knowledge that skills encode:
+
+| What the skill encodes | Will models learn it? | Example |
+|---|---|---|
+| **Public tool syntax** | Yes, already mostly know it | `gh pr checks 55`, basic git commands |
+| **Custom tool interfaces & agent-specific patterns** | No — local, not in training data | `agent-browser snapshot -i`, tmux socket conventions, `search.js --freshness pw` |
+| **Personal conventions & editorial judgment** | No — inherently local/subjective | Commit format preferences, `hn-distill` analysis guidelines |
+
+Only the first category is genuinely transitional (and already marginal — the `github` skill is arguably unnecessary for strong models that know `gh` well). The other two are **durable by nature**: custom tool CLIs can't be in training data because they're local scripts, and personal conventions are subjective choices that must be specified explicitly.
+
+Even procedural knowledge like "after clicking, you MUST re-snapshot to get new refs" serves a purpose: the `agent-browser` ref system is novel enough that no training data covers it. As such tools become widespread and appear in training corpora, the hand-holding will become less necessary — but that's a small fraction of what skills actually do.
+
+**Revised verdict:** Skills for well-known public tools are marginal already. Skills for custom tools, local conventions, and editorial judgment are durable — they encode context that is inherently too local or too subjective to ever appear in training data. The format's lasting value is as **a structured interface between human intent and agent behavior**, not as a substitute for training data.
