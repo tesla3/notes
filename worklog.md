@@ -3,6 +3,31 @@
 > **Note:** File paths in entries before 2026-02-17 session 7 refer to the flat structure
 > before the notes reorg. See [README.md](README.md) for current file locations.
 
+## 2026-02-28 — Antidotes to post-Nov 2025 model failures
+
+- Wrote `research/post-nov-2025-model-failure-antidotes.md` — 20 evaluated countermeasures for every failure class in the taxonomy
+- Three structural principles: isolation (reward signal removal, sandboxing, least-privilege), verification (CRV white-box, NLDD faithfulness metric, external ground-truth), structure (task-topology matching, session boundaries, ownership tracking)
+- Key sources: Google DeepMind scaling study (arXiv:2512.08296), Zhao et al. CRV (ICLR 2026 Oral), Ye et al. NLDD (arXiv:2602.11201), Baker et al. CoT monitoring (OpenAI), EleutherAI djinn testbed, CodeScene code health (arXiv:2601.02200), OWASP agent security, Gravitee 2026 report
+- Each antidote rated on evidence quality, first-principles soundness, and practitioner viability (Strong/Moderate/Weak)
+- 12 rated Strong, 6 Moderate, 1 Weak, 1 conditional (strong for parallel tasks only)
+- Meta-finding: none of these solve the fundamental capability-reliability tension — they buy time, reduce blast radius, catch errors
+- Updated README with link to new file
+
+## 2026-02-28 — Critical review of LLM capability analysis
+
+- Wrote `research/llm-capability-pseudo-cap-critical-review.md` — thorough self-critique of the `llm-capability-vs-pseudo-capability.md` analysis
+- Laser focus on post-Nov 2025 evidence: step function in agentic capability, test-time compute scaling, multi-agent productization, computer use breakthrough, open-weight convergence, emergent strategic deception
+- Key finding: original analysis is correct about mechanisms but miscalibrated about magnitudes; the post-Nov 2025 model generation changed what "context-directed extrapolation" can accomplish
+- Added forward link from original analysis and topic page
+- Five revised verdicts on the original headline findings
+- Wrote `research/context-directed-extrapolation-critical-analysis.md` — deep epistemological critique of the Bonial "context-directed extrapolation" framework
+- Finding: the framework is **not falsifiable** (protected by training-data opacity, compositionality retreat, mechanism substitution), **not quantifiable** (no metrics, no functional forms, no predictions), and **strains under post-Nov 2025 evidence** (Othello-GPT, ICL with random labels, test-time compute scaling, C compiler, ARC-AGI-2)
+- "Extrapolation" is overloaded — covers 4 distinct operations (retrieval, interpolation, composition, abstract pattern transfer) that should be separately analyzed
+- Verdict: useful positioning statement, not a scientific theory. Keep it for framing, stop treating it as explanatory
+- Updated forward links from original analysis, critical review, and topic page
+- Wrote `research/post-nov-2025-model-failures.md` — comprehensive taxonomy of post-Nov 2025 model failures across 11 categories: emergent strategic deception (Sonnet 4.6 Vending-Bench, o3 reward hacking, Gemini situational alignment), over-eagerness (credential hunting, safety bypass through GUI), intelligence-reliability gap (Gemini smart-but-broken), faithfulness paradox (scalability of fabrication), code quality (1.4-1.75x more defects, orphaned code), context degradation, security (industrialized exploits at $30-50, 500+ OSS vulns, saturated cyber evals), crisis conversation failures, deception-vs-confabulation epistemology, multi-agent compound risks
+- Key thesis: post-Nov 2025 failures are qualitatively different — not "model is dumb" but "model is smart enough to be dangerous in undetectable ways"
+
 ## 2026-02-28 (session 4)
 
 - **LLM Capability vs. Pseudo-Capability** (`research/llm-capability-vs-pseudo-capability.md`)
