@@ -159,9 +159,11 @@ The Rust evaluation's own admission: "No controlled study compares LLM productiv
 
 Every practitioner report comparing languages for AI-assisted coding compares Rust to Python/TypeScript — never to other strict-type-system languages. The entire evidence base has a selection bias toward comparisons that make Rust look good relative to dynamic languages, while avoiding comparisons that would test whether the benefit is from Rust specifically or from static types generally.
 
-### 4b. The METR study suggests self-reports are worthless regardless of language
+### 4b. The METR evidence suggests self-reports are unreliable regardless of language
 
-The 39-point inversion (devs felt 20% faster, were 19% slower) applies to ALL language choices. If productivity self-reports are structurally unreliable, every "I'm more productive in X" testimonial — for Python OR Rust — is suspect. The people claiming Python is better for exploration and the people claiming Rust is better for production may both be experiencing the same perception gap.
+The original METR RCT (early 2025) found a 39-point perception gap — devs felt 20% faster, were 19% slower. That specific number is likely an artifact of early-2025 tooling: METR's Feb 2026 replication attempt broke because devs now refuse to work without AI, and raw results flipped to showing speedup (-18% for returning devs). But the structural finding — that self-assessment is unreliable and can be directionally wrong — is *strengthened* by the replication failure. METR can't even run a clean study because the selection effects are too strong.
+
+This applies to ALL language choice claims. Every "I'm more productive in X" testimonial — for Python OR Rust — is suspect. The people claiming Python is better for exploration and the people claiming Rust is better for production may both be experiencing perception gaps of unknown direction and magnitude.
 
 ### 4c. The missing metric: exploration value per unit time
 
@@ -215,7 +217,7 @@ For depth-first exploration, the LLM factor is more ambiguous. The borrow checke
 
 ### The thread distillations get right:
 - **"Writing code was never the bottleneck" (multiple threads).** Applies to language choice too — the language matters less than the problem understanding.
-- **The METR 39-point inversion undermines all self-reported language preferences.** Both "Python feels faster" and "Rust feels more productive" are suspect.
+- **The METR evidence (original RCT + broken replication) undermines all self-reported language preferences.** Both "Python feels faster" and "Rust feels more productive" are suspect — the structural unreliability of self-assessment persists even as the specific numbers shift.
 - **The management skill transfer insight** (agentic-coding-evidence thread): the people who benefit most from AI coding are those who already knew how to delegate and review, regardless of language.
 
 ### What nobody addresses:
@@ -231,7 +233,7 @@ For depth-first exploration, the LLM factor is more ambiguous. The borrow checke
 
 **The genuinely hard question — which nobody has evidence for — is the transition.** When does exploration become commitment? At that inflection point, front-loaded correctness becomes valuable and Python's brevity becomes a liability. The Rust evaluation is right that this transition is under-managed in practice. But the solution is process discipline (explicit transition gates), not language choice (using a production language for exploration).
 
-**The LLM-specific angle:** LLMs strengthen the case for high-level languages in exploration (better generation quality, fewer failure modes) and weaken it slightly for production (Python's hidden information costs more tokens to debug under context rot). But the METR evidence suggests the entire "which language is better for LLM-assisted work" discourse may be built on unreliable self-reports, and the actual answer might be "it matters much less than you think."
+**The LLM-specific angle:** LLMs strengthen the case for high-level languages in exploration (better generation quality, fewer failure modes) and weaken it slightly for production (Python's hidden information costs more tokens to debug under context rot). But the METR evidence (original RCT finding perception gaps, replication breaking on selection effects) suggests the entire "which language is better for LLM-assisted work" discourse may be built on unreliable self-reports, and the actual answer might be "it matters much less than you think."
 
 **Three sentences:**
 1. Explore in Python; the brevity advantage is real and the correctness investment is wasted on disposable experiments.

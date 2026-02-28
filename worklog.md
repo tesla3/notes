@@ -3,6 +3,25 @@
 > **Note:** File paths in entries before 2026-02-17 session 7 refer to the flat structure
 > before the notes reorg. See [README.md](README.md) for current file locations.
 
+## 2026-02-28 (session 2)
+
+- **Signal-to-Value deep dive** (`research/signal-to-value-high-level-languages-exploration.md`)
+  - Critically reviewed whether high-level languages are truly better for exploration, with/without LLMs
+  - Decomposed "token efficiency" into two independent metrics: semantic density (Python wins) vs verification density (Rust wins)
+  - Resolution: breadth-first exploration decisively favors high-level languages; depth-first favors strict-type languages; the transition is the hard question
+  - Key finding: the Rust evaluation's signal-to-value argument is correct but misscoped to exploration
+  - Gall's Law applied to language choice — front-loaded correctness is premature optimization in exploration
+
+- **Updated 39-Point Inversion** in `insights.md`
+  - Major rewrite: specific number likely obsolete (early-2025 tooling artifact)
+  - Added METR Feb 24, 2026 replication: study broke — devs refuse to work without AI, selection effects dominate, raw results now show speedup
+  - Structural finding (self-assessment unreliable) strengthened by replication failure
+  - Updated all METR references in signal-to-value piece
+
+- **Two new insights** added to `insights.md`
+  - **Two Densities**: semantic vs verification density, total-token-to-working-code as correct metric
+  - **Exploration Phase Mismatch**: Gall's Law applied to language choice, breadth/depth split
+
 ## 2026-02-28
 
 - **New research: Agent Skills Emerging Winners** (`research/agent-skills-emerging-winners.md`)
@@ -29,7 +48,9 @@
   - Government/CISA pressure is a one-way ratchet creating structural demand
   - Job market: $150K–$225K, supply-constrained, sector-concentrated
   - Verdict: best language for things that must not break. Not for everything.
-  - Updated README
+  - **Revision 1**: Corrected AI-agent section — "strict type system" is not a differentiator vs C++. Real advantage is UB-is-silent-in-C++ vs loud-in-Rust, uniform corpus, actionable errors, single toolchain. Counter-evidence: LLMs spiral on borrow checker. No comparison to C++/Haskell exists.
+  - **Revision 2**: Added Section 5b — token efficiency, context rot, and the high-level language counter-thesis. Python's brevity wins for throwaway exploration but may lose on total-tokens-to-working-code for long-horizon projects. Context rot research (Stanford/UW, Anthropic) shows attention degrades with volume, making front-loaded correctness (Rust's verbosity) potentially cheaper than deferred debugging (Python's brevity). Prototypes ship — exploration language = production commitment. No rigorous measurement of total token cost exists yet.
+  - Updated README, verdict, bottom-line table
 
 ## 2026-02-26
 
@@ -493,3 +514,17 @@
     - Specification promoted to rank 4 in leverage hierarchy (was absent)
     - 5-point self-critique section added
     - r/ExperiencedDevs "harness as labor" problem: most orgs can't staff for this
+
+## 2026-02-28
+
+- **Agent Skills: Comprehensive category research**
+  - Created `research/agent-skills-landscape-categories-winners.md` — 12-category deep analysis
+  - Sources: skills.sh, Tessl Registry, Oathe audit (1,620 skills), Snyk ToxicSkills (3,984 skills), Block Engineering blog, Pulumi blog, r/ClaudeCode, ScriptByAI, multiple practitioner reports
+  - **Key findings:**
+    - Self-improvement loops (wrap-up, session hygiene) are the sleeper hit — compounds over time
+    - Bug pattern libraries emerged as new software artifact category (112 production war stories as skills)
+    - Block published best design framework: 3 principles (what agent should NOT decide, SHOULD decide, constitutional constraints)
+    - Security is worse than previously reported: Oathe found 5.4% malicious, leading scanner missed 91%, attacks are English in markdown not code
+    - Vendor skills (Firebase, Stripe, AWS) = new go-to-market channel
+    - Non-obvious: video transcription→QA, receiving-code-review > requesting, anti-sycophancy as design requirement
+  - Updated README with new research link
