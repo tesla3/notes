@@ -41,6 +41,7 @@ Key ideas: specification sandwich (types → contracts → PBT wrapping every fu
 - [StrongDM Detective Report](../research/strongdm-detective-report.md) — forensic analysis of Attractor/CXDB repos, what they kept proprietary
 - [Verification, Alignment & Software Factory](../research/verification-alignment-software-factory.md) — convergence of factory verification with AI training (RLHF/GRPO)
 - [Maximum Leverage Brainstorm](../research/maximum-leverage-brainstorm.md) — verification harness design: type hints, contracts, PBT for agent loops
+- [HN: What AI Coding Costs You](../research/hn-ai-coding-costs-47194847.md) — StrongDM factory as "ghost at the banquet" in developer cognitive-cost debate
 
 ## Related
 

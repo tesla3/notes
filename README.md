@@ -58,6 +58,7 @@ Not yet grouped into topics:
 - [HN: Shellbox.dev — SSH Linux Boxes](research/hn-shellbox-dev.md) — suspend/resume VMs via SSH, pricing death spiral, SSH-as-management-plane insight, AI agent sandbox market timing
 - [HN: News Publishers Limit Internet Archive over AI Scraping](research/hn-news-publishers-internet-archive-ai-scraping.md) — security theater, paywall-as-pretext, gatekeeper inversion, astroturf meta-irony, "compliant get punished" dynamic
 - [HN: Eight More Months of Agents](research/hn-eight-more-months-agents.md) — founder testimonial vs organizational reality, $170 taste gap, tribal knowledge scaling, process bottleneck blindspot
+- [HN: What AI Coding Costs You](research/hn-ai-coding-costs-47194847.md) — cognitive debt vs technical debt, Shen-Tamkin study misreadings, review paradox, seniority pipeline collapse, joy erosion
 - [HN: LocalGPT Rust Assistant](research/hn-localgpt-rust-assistant.md) — OpenClaw clone pattern crystallization, lethal trifecta security exchange, LLM-slop credibility problem, confirmatory of existing insights
 - [HN: AI Labor Obsolescence — Who Gets to Eat?](research/hn-ai-labor-obsolescence-who-eats.md) — power-asymmetry ratchet, identity-as-labor psychological barrier, democracy's structural dependency on labor leverage
 - [AI and Future Society: Deep Research](research/ai-future-society-deep-research.md) — GPT adoption timelines, Acemoglu/Autor/Brynjolfsson schools, bubble anatomy, Global South extraction, Narrow Corridor framework, four grounded scenarios
@@ -81,6 +82,8 @@ Not yet grouped into topics:
 ## Collections
 
 - [Insights](insights.md) — durable, transferable structural insights with strong evidence
+- [Meta-Review](meta-review.md) — critical self-review: what survives scrutiny, what's overstated, blind spots, epistemic lessons
+- [LLM Analysis Failure Mode](lesson-llm-analysis-failure-mode.md) — the three-turn tax: why LLM analysis requires adversarial review, how to reduce the cost
 - [AI Coding Agent Anecdotes](anecdotes.md) — first-hand practitioner reports on AI coding tools
 - [Product Design Observations](product-design.md) — novel implementation patterns and UX choices observed in the wild
 

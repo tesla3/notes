@@ -137,6 +137,7 @@ Kiro CLI's context model: guidance (conventions) + instructions (task-specific) 
 - [Amazon AI Culture Amplification](../research/amazon-ai-culture-amplification-assessment.md) — prediction audit: internal tooling lagging, self-undermining loop already active, talent drain dominant
 - [Nanoagent Survey](../research/nanoagent-survey.md) — all 5 "nano" agent repos critically assessed
 - [HN: Elixir/BEAM for AI Agents](../research/hn-elixir-agent-frameworks.md) — actor model vs agent model, "let it crash" semantic gap, durability problem, ecosystem lock-in
+- [HN: What AI Coding Costs You](../research/hn-ai-coding-costs-47194847.md) — cognitive debt vs technical debt, Shen-Tamkin study misreadings, review paradox, seniority pipeline collapse, joy erosion
 
 ## Related
 
