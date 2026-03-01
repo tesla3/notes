@@ -21,11 +21,13 @@ Our SKILL.md only covers `site=` targeting. The full DSL includes:
 | Both anchors | `\|https://example.com\|$boost=3` | Exact domain match |
 | Caret (separator) | `/api^$boost=3` | Match `/api` followed by separator or end (max 2) |
 
-**Unimplemented / future features** (listed in quickstart as "we will add... in the future", commented out, zero goggles use them):
-- `$intitle`, `$indescription`, `$incontent`/`$intext`, `$inurl`, `$lang`, `$inquery`
-- The awesome-goggles repo (rjaus) lists these as available, but the official quickstart explicitly marks them as future. No official or community goggle uses any of them.
+**Unimplemented / future features** (zero goggles use any of them):
+- `$intitle`, `$indescription`, `$incontent`/`$intext`, `$inurl` — listed in official quickstart.goggle as "we will add... in the future", commented out
+- `$lang`, `$inquery` — listed in awesome-goggles repo (rjaus) only; NOT mentioned in official Brave docs at all, status unknown
 
-**Source:** Brave's official goggles-quickstart repo (quickstart.goggle, getting-started.md).
+The awesome-goggles repo presents all of these as available syntax, but the official quickstart contradicts this for the first group. No official or community goggle uses any of them.
+
+**Source:** Brave's official goggles-quickstart repo (quickstart.goggle, getting-started.md); rjaus/awesome-goggles for `$lang`/`$inquery`.
 
 ### 2. The `$discard` + `$boost=1` Pattern Is Critical
 

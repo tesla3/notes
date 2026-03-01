@@ -1,5 +1,15 @@
 # Worklog
 
+## 2026-03-01
+
+- Deep accuracy review of brave-search goggle optimization (all claims validated against live API + official docs)
+  - Verified API param behavior: `goggles_id` silently ignored on LLM Context (200 OK, no filtering); `goggles` works for both hosted + inline
+  - Fixed rule counts in goggles-reference.md: tech_blogs 1,295→1,469, banana-boost 7,468→7,838, netsec 3,896→3,903, hacker_news 6,238→6,239 (previous counts only counted `$boost=` lines, missed URL patterns + $discard + $downrank)
+  - Fixed misleading descriptions: hacker_news/tech_blogs are **allow-lists** (global `$discard`), not just boosts; banana-boost embeds 190 copycats_removal discard rules
+  - Fixed research file: split `$lang`/`$inquery` attribution — only in awesome-goggles repo, NOT in official Brave quickstart (which only lists `$intitle`/`$indescription`/`$incontent`/`$inurl` as future)
+  - Added flag-as-value guard to extractOpt in llm-context.js + search.js (refactored search.js to use shared extractOpt pattern)
+  - Fixed SKILL.md hacker_news comment to say "allow-list" not "boost"
+
 ## 2026-02-28
 
 - Added `--goggles` to brave-search `llm-context.js` — passes Brave Goggles re-ranking rules to API
