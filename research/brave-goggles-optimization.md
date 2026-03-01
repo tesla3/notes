@@ -15,18 +15,17 @@ Our SKILL.md only covers `site=` targeting. The full DSL includes:
 |---------|--------|---------|
 | Site targeting | `$boost=5,site=example.com` | Boost a domain |
 | URL pattern | `/blog/$boost=3` | Boost URLs containing `/blog/` |
-| Wildcard | `/docs/*/api$boost=3` | Match URL patterns with `*` |
+| Wildcard | `/docs/*/api$boost=3` | Match URL patterns with `*` (max 2) |
 | Left anchor | `\|https://docs.$boost=3` | URLs starting with `https://docs.` |
 | Right anchor | `.pdf\|$boost=2` | URLs ending with `.pdf` |
 | Both anchors | `\|https://example.com\|$boost=3` | Exact domain match |
-| Caret (separator) | `/api^$boost=3` | Match `/api` followed by separator or end |
-| Title match | `tutorial$intitle,$boost=2` | Match "tutorial" in page title |
-| URL match | `docs$inurl,$boost=2` | Match "docs" in URL |
-| Description match | `guide$indescription,$boost=2` | Match in meta description |
-| Content match | `python$incontent,$boost=2` | Match in page content |
-| Language filter | `$boost=3,$lang=en` | Target language |
+| Caret (separator) | `/api^$boost=3` | Match `/api` followed by separator or end (max 2) |
 
-**Source:** Brave's official goggles-quickstart repo, API documentation at api-dashboard.search.brave.com/documentation/resources/goggles, and the awesome-goggles repo (rjaus/awesome-goggles).
+**Unimplemented / future features** (listed in quickstart as "we will add... in the future", commented out, zero goggles use them):
+- `$intitle`, `$indescription`, `$incontent`/`$intext`, `$inurl`, `$lang`, `$inquery`
+- The awesome-goggles repo (rjaus) lists these as available, but the official quickstart explicitly marks them as future. No official or community goggle uses any of them.
+
+**Source:** Brave's official goggles-quickstart repo (quickstart.goggle, getting-started.md).
 
 ### 2. The `$discard` + `$boost=1` Pattern Is Critical
 
@@ -64,23 +63,23 @@ For agent use with `--goggles`, we're passing inline rules. Practical limit is ~
 
 The API accepts both inline rules AND URLs to hosted `.goggle` files. Our implementation currently only supports inline rules. Could reference pre-built hosted goggles for complex filters:
 
-- `https://raw.githubusercontent.com/brave/goggles-quickstart/main/goggles/copycats_removal.goggle` — ~170 StackOverflow/GitHub copycat domains
-- `https://raw.githubusercontent.com/brave/goggles-quickstart/main/goggles/hacker_news.goggle` — ~3,000 domains popular on HN (boosted)
+- `https://raw.githubusercontent.com/brave/goggles-quickstart/main/goggles/copycats_removal.goggle` — 189 StackOverflow/GitHub copycat domains
+- `https://raw.githubusercontent.com/brave/goggles-quickstart/main/goggles/hacker_news.goggle` — 6,238 domains popular on HN (boosted)
 - `https://raw.githubusercontent.com/brave/goggles-quickstart/main/goggles/no_pinterest.goggle` — all Pinterest domains
 
 ### 6. The SEO Spam Landscape (Community Consensus)
 
 Cross-referencing Kagi's most-blocked domains, Bobby Hiltz's "16 Companies" research, Brave's copycats_removal goggle, and the Super SEO Spam Suppressor project, there are clear tiers:
 
-#### Tier 1: Programming SEO Spam (copycat/scraper sites)
+#### Tier 1: Programming SEO Spam
 
-These are the domains that poison technical searches. Brave's official copycats_removal.goggle lists ~170 of them. The worst offenders:
+Two distinct categories that get conflated:
 
-**StackOverflow copycats:** w3schools.com, geeksforgeeks.org, tutorialspoint.com, javatpoint.com, programiz.com, educba.com, codegrepper.com, newbedev.com, 9to5answer.com, appsloveworld.com, programcreek.com
+**Actual SO/GitHub translation scrapers** (targeted by Brave's copycats_removal.goggle — 189 domains): These are sites that machine-translate or scrape StackOverflow/GitHub content verbatim. Examples: newbedev.com, stackoom.com, githubmemory.com, githubplus.com, giters.com, bleepcoder.com, awesomeopensource.com, opensourcelibs.com, reposhub.com, codeflow.site, code-examples.net. The full list is in the copycats_removal.goggle.
 
-**GitHub copycats:** awesomeopensource.com, githubhelp.com, githubmemory.com, githubplus.com, giters.com, bleepcoder.com, opensourcelibs.com, reposhub.com, geekrepos.com
+**SEO tutorial farms** (NOT in copycats_removal — these produce original but low-quality content): w3schools.com, geeksforgeeks.org, tutorialspoint.com, javatpoint.com, programiz.com, educba.com, programcreek.com. These are not "copycats" per Brave's definition — they have original (if shallow) content. Still worth discarding/downranking for serious programming queries.
 
-**General tech spam:** blog.csdn.net, kknews.cc, lightrun.com, solveforum.com, otosection.com, drivereasy.com
+**General tech spam:** blog.csdn.net, kknews.cc, lightrun.com, solveforum.com, otosection.com, drivereasy.com, 9to5answer.com, appsloveworld.com, codegrepper.com
 
 #### Tier 2: Media Conglomerates (SEO-optimized listicles)
 
@@ -103,7 +102,7 @@ These are legitimate sites but frequently pollute results when searching for tec
 
 ### 7. High-Value Authoritative Domains
 
-From Brave's hacker_news.goggle (~3,000 domains popular on HN), the narwhalizer tool (Reddit-signal-based goggle generator), and general community consensus:
+From Brave's hacker_news.goggle (6,238 domains popular on HN), the narwhalizer tool (Reddit-signal-based goggle generator), and general community consensus:
 
 **Programming:** docs.python.org, docs.rust-lang.org, doc.rust-lang.org, docs.rs, developer.mozilla.org, stackoverflow.com, github.com, realpython.com, docs.djangoproject.com, nodejs.org, typescriptlang.org, go.dev
 
@@ -141,7 +140,7 @@ Instead of generic examples, give the agent task-specific recipes:
 
 ### 2. Document Advanced Syntax
 
-Add `$intitle`, `$inurl`, `/path/` patterns, wildcards, anchors. These let the agent write more precise goggles. Example: `/docs/$boost=3` boosts any URL with `/docs/` in the path — works across all documentation sites without listing each one.
+Add `/path/` patterns, wildcards, anchors, and the caret separator. These let the agent write more precise goggles. Example: `/docs/$boost=3` boosts any URL with `/docs/` in the path — works across all documentation sites without listing each one. Note: `$intitle`, `$incontent`, etc. are listed in some community docs but remain unimplemented per official Brave sources.
 
 ### 3. Explain the `$discard` + `$boost=1` Allow-List Pattern
 
