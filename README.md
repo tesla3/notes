@@ -29,12 +29,10 @@ Not yet grouped into topics:
 - [HN: LLM Car Wash Reasoning Failure](research/hn-llm-car-wash-reasoning.md) — goal-constraint violations, token commitment, whack-a-mole patching
 - [HN: Ring/Nest Surveillance State](research/hn-ring-nest-surveillance-state.md) — selective enforcement, voluntary corporate compliance, Pinkerton parallel
 - [HN: Em-Dash Bots on HN](research/hn-em-dash-bots-2026.md) — new accounts 10x more em-dashes, AI startup astroturfing vocabulary, humans degrading their own writing
-- [Pacific Ridge School — Critical Analysis](research/pacific-ridge-school.md) — college placement deep dive, San Diego peer comparison, price-to-value
-- [PRS Profile Analysis (original)](research/pacific-ridge-school-profile-analysis.md) — AO-perspective reading of the 2025-26 profile
+
 - [HN: IBM Plunges After Anthropic COBOL Blog Post](research/hn-ibm-cobol-anthropic.md) — narrative-driven stock crash, mainframe lock-in reality, content-marketing-as-market-event
 - [HN: Claude's New Constitution](research/hn-claude-constitution-2026.md) — institutional vs. individual priorities, judgment-over-rules as untested empirical bet
-- [PRS Profile Analysis Review](research/pacific-ridge-profile-analysis-review.md) — critical review of the above analysis
-- [PRS Comprehensive Profile Review](research/pacific-ridge-school-profile-comprehensive-review.md) — definitive AO-grade profile assessment with full contextualization
+
 - [HN: Karpathy on "Claws"](research/hn-karpathy-claws-llm-agents.md) — persistent AI agent systems, security impossibility, emotional vs functional appeal
 - [NanoClaw Deep Dive](research/nanoclaw-deep-dive.md) — ~4K LOC container-isolated Claw alternative, security model, skills-over-features philosophy
 - [HN: AI uBlock Blacklist](research/hn-ai-ublock-blacklist.md) — blocklist governance, false positives, professionalization pressure
