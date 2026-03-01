@@ -47,7 +47,7 @@ Not all skills work the same way. Connecting the evidence across harness enginee
 **Evidence strength:** Consensus-level. LangChain +13.7 pts. Stripe's 1000+ merged PRs/week. Every serious harness engineering source confirms. The [hierarchy of leverage](harness-engineering-insights-and-practices.md) ranks it #1.
 
 **Examples:**
-- PostToolUse hooks: `ruff check` + `pyright` + `pytest -x` after every file write
+- Extensions with `tool_result` handlers: `ruff check` + `pyright` + `pytest -x` after every file write (in Pi, an extension intercepts tool events programmatically — the model can't skip or forget it)
 - Pre-commit gates: AST-based banned-API detection (the HN practitioner who replaced an AGENTS.md rule with a TypeScript compiler check)
 - Architectural constraint tests: `test_no_backward_imports()` — a 20-line pytest that enforces layered dependencies
 
@@ -57,7 +57,7 @@ Not all skills work the same way. Connecting the evidence across harness enginee
 - **Research/notes users** — low ROI. No code to verify.
 
 **ROI calculation:**
-- **Investment:** 30 minutes to 2 hours of one-time setup (hooks, linter config, architectural test)
+- **Investment:** 30 minutes to 2 hours of one-time setup (extensions, linter config, architectural test)
 - **Return:** Every agent session benefits. Prevents the #1 harness failure mode: "agent wrote solution, re-read own code, confirmed it looks ok, stopped." Based on LangChain data, this is worth ~13 percentage points of task success rate.
 - **Compounding:** The gauntlet improves with each rule added. Each production bug becomes a new lint rule. Ratchet effect.
 - **Durability:** **Permanent.** Good engineering regardless of AI. If the AI bubble pops, you still have a linted, type-checked, architecturally-tested codebase. This is the [harness engineering meta-insight](harness-engineering-insights-and-practices.md#vii-the-meta-insight): these were best practices before LLMs existed.
@@ -72,7 +72,7 @@ Not all skills work the same way. Connecting the evidence across harness enginee
 **Evidence strength:** Strong practitioner signal, no controlled studies. The `wrap-up` skill is the canonical example (4-phase: Ship → Remember → Review & Apply → Publish). Reddit testimonials are specific and consistent. Block's 100+ internal skills are a scaled version of this pattern.
 
 **Examples:**
-- Session wrap-up: auto-commit, review what was learned, categorize as skill gap / friction / knowledge / automation, update CLAUDE.md or rules files, identify publishable content
+- Session wrap-up: auto-commit, review what was learned, categorize as skill gap / friction / knowledge / automation, update memory/rules files (AGENTS.md, CLAUDE.md, etc.), identify publishable content
 - Continuous learning agent: logs errors to markdown, promotes recurring patterns to project memory
 - Bug pattern libraries (the 112-skill collection): each production incident becomes a permanent pattern trigger
 
@@ -179,13 +179,15 @@ The five archetypes describe *engineering practices*, not SKILL.md files. The sk
 
 | Archetype | Best delivery mechanism | Why |
 |---|---|---|
-| Verification Gauntlet | **Hooks + linter/test config** | Must run unconditionally on every change; depending on skill loading defeats the purpose |
+| Verification Gauntlet | **Extensions (`tool_result` handlers) + linter/test config** | Must run unconditionally on every change; depending on skill loading defeats the purpose |
 | Compounding Loop | **Skill** | Conditional (triggered at session end), periodic, benefits from on-demand loading |
 | Specification Scaffold | **Project template + AGENTS.md** | One-time setup per project, not session-conditional |
 | Behavioral Constitution | **AGENTS.md rules or always-loaded config** | Must be active every session; conditional loading creates gaps |
 | Tribal Knowledge Codifier | **Skill or structured documentation** | Benefits from on-demand loading when the specific domain surfaces |
 
-Only Archetypes 2 and 5 are genuinely well-suited to the skill format. The gauntlet is hooks and CI. The constitution is always-loaded rules. The spec scaffold is a project template. Packaging them as skills conflates the *practice* (what creates value) with the *format* (how it's delivered). The value is in the practice. Use whatever delivery mechanism makes the practice most reliable.
+Only Archetypes 2 and 5 are genuinely well-suited to the skill format. The gauntlet is extensions and CI. The constitution is always-loaded rules (AGENTS.md). The spec scaffold is a project template. Packaging them as skills conflates the *practice* (what creates value) with the *format* (how it's delivered). The value is in the practice. Use whatever delivery mechanism makes the practice most reliable.
+
+**Pi-specific note:** Pi's three delivery mechanisms map cleanly to these roles. **Extensions** (TypeScript modules with `tool_call`/`tool_result` event handlers) run unconditionally and programmatically — the model can't skip them. **Skills** (SKILL.md files) are natural-language instructions loaded on-demand — the model must choose to read and follow them. **AGENTS.md/context files** are always loaded into the system prompt. The gauntlet belongs in extensions. The constitution belongs in AGENTS.md. The compounding loop and tribal knowledge codifier belong in skills.
 
 ---
 
@@ -226,7 +228,7 @@ The archetypes aren't mutually exclusive. They stack. The highest-leverage setup
 | Spec scaffold | 30 min/module | Zero per iteration | Complex projects only |
 | Tribal knowledge | 1-4 hours/runbook | Active — stale knowledge is worse than none | First time the runbook fires |
 
-**Estimated initial investment: ~6-12 hours for a complete stack.** These are estimates, not measurements — no empirical ROI data exists for any skill archetype. The [Hidden Denominator](../insights.md#hidden-denominator) applies to this table too: the 6-12 hours doesn't include learning time (understanding linting, type checking, property testing), debugging time (getting the hooks right), or the prerequisite knowledge that makes the setup possible. The actual cost includes an unknown amount of prior investment that's itself a hidden denominator. Be as skeptical of these numbers as of anyone else's.
+**Estimated initial investment: ~6-12 hours for a complete stack.** These are estimates, not measurements — no empirical ROI data exists for any skill archetype. The [Hidden Denominator](../insights.md#hidden-denominator) applies to this table too: the 6-12 hours doesn't include learning time (understanding linting, type checking, property testing), debugging time (getting the extensions right), or the prerequisite knowledge that makes the setup possible. The actual cost includes an unknown amount of prior investment that's itself a hidden denominator. Be as skeptical of these numbers as of anyone else's.
 
 Skills are also maintenance commitments, not one-time investments. Every skill is a promise to keep it current. A skill encoding permanent knowledge in a format that changes every 6 months has the same practical half-life as a transitional skill. The "ongoing maintenance" column is where the real cost hides.
 
@@ -252,7 +254,7 @@ Not all skills help. Some actively harm. The research identifies three failure m
 
 **The math:** At ~50-100 tokens per skill description × 15 skills = 750-1500 tokens of system prompt overhead. At current Opus 4.6 pricing, that's ~$0.02-0.04 per turn. Over a 50-turn session, $1-2 per session. Trivial in dollar cost — but the context window cost is what matters. Each skill description competes for attention with the actual task.
 
-**The [Skill Loading Illusion](../additional_insights.md#skill-loading-illusion):** Models can't reliably decide when to load a skill. You end up with hooks forcing evaluation at session start, which defeats the "progressive disclosure" promise.
+**The [Skill Loading Illusion](../additional_insights.md#skill-loading-illusion):** Models can't reliably decide when to load a skill. You end up with extensions or forced prompting at session start, which defeats the "progressive disclosure" promise.
 
 **When it's safe:** When you have ≤7-8 well-chosen skills with non-overlapping descriptions. Your current setup (7 skills) is near the sweet spot.
 
@@ -313,7 +315,7 @@ The first four unbuilt skills above are coding-centric. But the archetype framew
 
 **Research synthesis skill (Archetype 5 + 2).** The `hn-distill` skill encodes editorial judgment for individual threads. No equivalent exists for "you have 8 research files on this topic — synthesize them." The methodology (follow backlinks, check for contradictions, cross-reference evidence strength, identify what the corpus circles but never states) is tribal knowledge that's currently implicit. A skill that codifies this would combine tribal knowledge codification with session accumulation — each synthesis refines the methodology.
 
-**Knowledge base consistency checker (Archetype 1 for notes).** Link rot, stale claims, contradictory conclusions across files, orphaned research without topic-page backlinks. This is the verification gauntlet for a non-code repository. Best delivered as a hook or periodic check, not as a skill — it should run unconditionally, same as a linter.
+**Knowledge base consistency checker (Archetype 1 for notes).** Link rot, stale claims, contradictory conclusions across files, orphaned research without topic-page backlinks. This is the verification gauntlet for a non-code repository. Best delivered as an extension or periodic script, not as a skill — it should run unconditionally, same as a linter.
 
 **Source credibility protocol (Archetype 4 for research).** Account age checks, burst-vs-sustained posting patterns, AI-generation signals — this already exists in project AGENTS.md but competes for attention with everything else there. Formalizing it as a standalone always-loaded rule or a skill invoked during source evaluation would make it reliably applied rather than sometimes-noticed.
 
@@ -350,6 +352,6 @@ That's why the [Culture Amplifier](../insights.md#culture-amplifier) is the mast
 
 The most valuable skill is the one you write yourself, for your own codebase, encoding your own hard-won knowledge. It will never appear on a leaderboard. It will never get 45K stars. It will be 50 lines of opinionated instructions that save you 20 minutes every day because nobody else on earth has your exact combination of tools, conventions, and production war stories.
 
-**The format question this raises:** If the value is in the *practices* and not the *packaging*, then SKILL.md files are just one delivery mechanism among several — and not always the best one (see [Delivery Mechanism Fit](#delivery-mechanism-fit-not-everything-is-a-skill) above). AGENTS.md rules, hooks, CI config, project templates, and linter settings all deliver engineering practices to agents. The Agent Skills specification adds progressive disclosure and portability, which matter for some archetypes (tribal knowledge codification, session loops) and are irrelevant for others (verification gauntlets, constitutions). The framework in this document is about engineering practices that happen to benefit from agent awareness, not about a markdown file format. Use whatever mechanism makes the practice most reliable.
+**The format question this raises:** If the value is in the *practices* and not the *packaging*, then SKILL.md files are just one delivery mechanism among several — and not always the best one (see [Delivery Mechanism Fit](#delivery-mechanism-fit-not-everything-is-a-skill) above). AGENTS.md rules, extensions, CI config, project templates, and linter settings all deliver engineering practices to agents. The Agent Skills specification adds progressive disclosure and portability, which matter for some archetypes (tribal knowledge codification, session loops) and are irrelevant for others (verification gauntlets, constitutions). The framework in this document is about engineering practices that happen to benefit from agent awareness, not about a markdown file format. Use whatever mechanism makes the practice most reliable.
 
 That's the durable value. Everything else is transitional.

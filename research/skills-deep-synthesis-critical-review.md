@@ -42,7 +42,7 @@ The synthesis presents specific ROI estimates throughout:
 
 | Claim | Basis |
 |---|---|
-| "~13 percentage points of task success rate" (gauntlet) | Extrapolated from LangChain's overall harness improvement, not specifically from verification hooks |
+| "~13 percentage points of task success rate" (gauntlet) | Extrapolated from LangChain's overall harness improvement, not specifically from verification extensions |
 | "5-15% reduction in recurring friction per month" (compounding loop) | Invented. No measurement. No citation. |
 | "5-10x ROI for complex systems" (spec scaffold) | Extrapolated from JUXT's 2:1 code-to-spec ratio, which measures *volume*, not *productivity* |
 | "15-60 minutes saved per runbook use" (tribal knowledge) | Plausible but fabricated. No measurement exists. |
@@ -54,22 +54,22 @@ This is the same failure the research corpus repeatedly flags in others. The [Hi
 
 ### Problem 2: Category Confusion Between Skills and Harness Engineering
 
-The Verification Gauntlet (Archetype 1) is the document's most confidently recommended archetype. But a PostToolUse hook isn't a skill — it's a hooks configuration. A `test_no_backward_imports()` pytest isn't a skill — it's a test. A `ruff check` linter config isn't a skill — it's a toolchain setting.
+The Verification Gauntlet (Archetype 1) is the document's most confidently recommended archetype. But a `tool_result` extension isn't a skill — it's programmatic event handling. A `test_no_backward_imports()` pytest isn't a skill — it's a test. A `ruff check` linter config isn't a skill — it's a toolchain setting.
 
 The document conflates the *format* (SKILL.md files with progressive disclosure) with the *practice* (verification infrastructure). These are different things:
 
 | Concept | What it is | Where it lives |
 |---|---|---|
 | Skill | SKILL.md with instructions, loaded on-demand | `~/.pi/agent/skills/` |
-| Hook | Automated command triggered by tool use events | `.claude/settings.json` or harness config |
+| Extension | TypeScript module with `tool_call`/`tool_result` event handlers, runs unconditionally | `~/.pi/agent/extensions/` |
 | Linter/test | Mechanical check in CI or local dev | `pyproject.toml`, `tests/`, CI config |
-| AGENTS.md rule | Always-loaded instruction | Project root |
+| AGENTS.md rule | Always-loaded instruction | Project root or `~/.pi/agent/` |
 
-The verification gauntlet is best implemented as **hooks + linter config + tests**, not as a skill. Skills are for on-demand, conditional loading; the gauntlet should run *every time*, unconditionally. Packaging it as a skill defeats the purpose — it might not get loaded.
+The verification gauntlet is best implemented as **extensions + linter config + tests**, not as a skill. Skills are natural-language instructions that the model must choose to load and follow — unreliable for things that must happen every time. Extensions intercept tool events programmatically — the model can't skip or forget them. Packaging the gauntlet as a skill defeats the purpose.
 
 This confusion runs throughout the document. The "build bottom-up" stack mixes skills (constitution, compounding loop), harness config (gauntlet), and engineering practices (spec scaffold, tribal knowledge codification). These are different layers of abstraction presented as if they're the same thing.
 
-**The fix:** Separate "skill archetypes" from "engineering practice archetypes." Acknowledge that some of the highest-leverage practices are better delivered as hooks, tests, and config than as skills. The synthesis would be more honest and more useful if it said: "Of these five, only archetypes 2, 4, and 5 are well-suited to the skill format. Archetypes 1 and 3 are engineering practices that happen to benefit from agent awareness but don't need the skill delivery mechanism."
+**The fix:** Separate "skill archetypes" from "engineering practice archetypes." Acknowledge that some of the highest-leverage practices are better delivered as extensions, tests, and config than as skills. The synthesis would be more honest and more useful if it said: "Of these five, only archetypes 2, 4, and 5 are well-suited to the skill format. Archetypes 1 and 3 are engineering practices that happen to benefit from agent awareness but don't need the skill delivery mechanism."
 
 ### Problem 3: Survivorship Bias Applied Selectively
 
@@ -164,13 +164,13 @@ The synthesis never addresses *why skills are the right delivery mechanism* for 
 
 | Archetype | Best delivery mechanism | Why |
 |---|---|---|
-| Verification Gauntlet | **Hooks + CI config** | Must run unconditionally; shouldn't depend on skill loading |
+| Verification Gauntlet | **Extensions (`tool_result` handlers) + CI config** | Must run unconditionally; shouldn't depend on skill loading |
 | Compounding Loop | **Skill** (triggered at session end) | Conditional, periodic, benefits from on-demand loading |
 | Specification Scaffold | **Project template + AGENTS.md** | One-time setup, project-specific, not session-conditional |
-| Behavioral Constitution | **AGENTS.md rules or .claude/rules/** | Should be always-loaded, not conditionally loaded |
+| Behavioral Constitution | **AGENTS.md rules** (always-loaded context files) | Should be always-loaded, not conditionally loaded |
 | Tribal Knowledge Codifier | **Skill or documentation** | Benefits from on-demand loading when the domain surfaces |
 
-Only 2 of 5 archetypes are genuinely well-suited to the skill format. The others are better served by hooks, config, or always-loaded rules. The synthesis's implicit assumption — that "skill" is the universal delivery mechanism for all five — distorts the practical recommendations.
+Only 2 of 5 archetypes are genuinely well-suited to the skill format. The others are better served by extensions, config, or always-loaded rules (AGENTS.md). The synthesis's implicit assumption — that "skill" is the universal delivery mechanism for all five — distorts the practical recommendations.
 
 ### Missing 6: Which Archetypes Erode First Under Model Improvement?
 
@@ -212,7 +212,7 @@ The synthesis applies the Hidden Denominator insight to others ("the people repo
 
 ### Contradiction 3: Skills Are Infrastructure, But the Format Claims Aren't Validated
 
-The meta-insight says "skills are infrastructure, not features" — they're a delivery mechanism for engineering practices. But the synthesis never validates whether the *skill format* adds value over alternative delivery mechanisms (AGENTS.md, hooks, inline comments, CI config). If the value is in the practices and not the packaging, then the Agent Skills specification, skills.sh, and this entire analysis are about... a markdown file format? That's a much weaker claim than "here's a framework for investing in durable engineering value."
+The meta-insight says "skills are infrastructure, not features" — they're a delivery mechanism for engineering practices. But the synthesis never validates whether the *skill format* adds value over alternative delivery mechanisms (AGENTS.md, extensions, inline comments, CI config). If the value is in the practices and not the packaging, then the Agent Skills specification, skills.sh, and this entire analysis are about... a markdown file format? That's a much weaker claim than "here's a framework for investing in durable engineering value."
 
 The synthesis needs to either: (a) argue that the skill format adds specific value (progressive disclosure, portability, on-demand loading) that alternatives don't, or (b) acknowledge that the framework is about engineering practices delivered through whatever mechanism works, and skills are one option among several.
 
