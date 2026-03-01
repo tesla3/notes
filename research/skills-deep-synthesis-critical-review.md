@@ -232,12 +232,7 @@ The skills format is only as durable as Anthropic's commitment to it. If Anthrop
 
 ### Risk 2: The "Write It Yourself" Conclusion May Be Self-Limiting
 
-The synthesis concludes "the most valuable skill is the one you write yourself." This is true but potentially self-limiting. It implies the skills *ecosystem* (marketplaces, sharing, community) is low-value. But:
-- Block's 100+ skills work precisely because they're shared *within the organization* — not one person's skills, the team's skills
-- Vendor skills (Firebase, Stripe, AWS) provide value that no individual could replicate
-- The training-data-staleness patches only work because someone external maintains them
-
-The "write it yourself" conclusion is correct for *personal conventions* but misleading for *organizational knowledge* and *vendor integrations*. The synthesis overgeneralizes from the individual case to all cases.
+~~The synthesis concludes "the most valuable skill is the one you write yourself." This is true but potentially self-limiting. It implies the skills *ecosystem* (marketplaces, sharing, community) is low-value.~~ *Resolved.* The synthesis now identifies four market tiers (private knowledge, methodology seeds, tool bridges, staleness patches) with different scopes and durabilities. The "write it yourself" framing was replaced with a market structure analysis that acknowledges real value in community/vendor skills while maintaining that private knowledge is the most durable tier.
 
 ### Risk 3: The Framework May Already Be Stale
 
@@ -299,4 +294,4 @@ That's less impressive but more honest.
 
 ---
 
-*Post-review update (Feb 28, 2026):* The synthesis has been revised to address Problems 1 (ROI estimates labeled as estimates), 2 (delivery mechanism fit table added), and Contradiction 1 (durability ≠ value). The compounding metaphor was replaced with sediment/accumulation. Non-coding unbuilt skills were added. Maintenance cost is now explicit in the ROI table. The remaining open issues — co-training challenge, atrophy death spiral as first-class risk, observability as missing archetype — are noted but unresolved.*
+*Post-review update (Feb 28, 2026):* The synthesis has been revised to address Problems 1 (ROI estimates labeled as estimates), 2 (delivery mechanism fit table added, Pi-specific extension/skill/AGENTS.md distinction clarified), Contradiction 1 (durability ≠ value), and Risk 2 ("write it yourself" replaced with four-tier market structure: private knowledge / methodology seeds / tool bridges / staleness patches). The compounding metaphor was replaced with sediment/accumulation. Non-coding unbuilt skills were added. Maintenance cost is now explicit in the ROI table. All "hooks" terminology corrected to Pi's "extensions." The remaining open issues — co-training challenge, atrophy death spiral as first-class risk, observability as missing archetype — are noted but unresolved.*
