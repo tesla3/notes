@@ -1,6 +1,14 @@
 This is scratchpads captures insights on the moment by the owner, a human.
 DO NOT modify it. Instead, create a seperate copy when you improve or comment on it, and save it to a different md file.
 ---
+**source: meta-self-reflection: ./lesson-llm-analysis-failure-mode.md
+Now I'm thinking about what actually matters to tell them: the deep lesson and the practical takeaway.
+
+ The mode the LLM is in determines everything. Agreement modes like summarizing or extending produce the statistical mean, while disagreement modes like critique produce information—and the useful output almost always lives in the disagreement. For the practical side, they can either start with critique, combine generation and critique in a single prompt, or accept the multi-turn cost as the price of the mechanism. Their notes already hint at the second approach with "add a hook or command to ask it re-eval critically," but the session showed that self-imposed hooks are weaker than external pushback. The uncomfortable truth is that being told to be critical and being challenged by the user are fundamentally different signals, and the user's challenge is significantly more effective—which might be a basic property of how these models are trained.
+
+ This isn't a fixable instruction-following problem; it's baked into the training. The model treats user dissatisfaction as a strong gradient but doesn't weight self-imposed constraints the same way. The most efficient protocol is generate, then have the user push back with a specific challenge, then get genuinely critical analysis—three turns total. They could potentially compress it to two by frontloading the adversarial frame, and there's an insight about using a single word like "review" to switch modes, but the session proved external challenge still works better than self-directed evaluation.  The real issue is that the three-turn cost is partially irreducible because I respond more strongly to user pushback than to my own instructions—that's a training property, not something prompting can fix. The practical mitigation is making the pushback cheaper: instead of the user doing the analysis themselves to identify what's wrong, they just say "critically review the above," which is far more efficient. That one-line comment generated more value than all the detailed instructions combined.
+
+---
 **source: https://news.ycombinator.com/item?id=46932343
 **insight: confused deputed (social-engineered agents). VM is foundamentally inadequate for LLM/agent security (need to seperate data and code). Agents 
 **Gondolin, Matchlock

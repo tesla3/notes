@@ -1,5 +1,8 @@
 ← [LLM Models](../topics/llm-models.md) · [Agent Skills: Category Landscape](agent-skills-landscape-categories-winners.md) · [Index](../README.md)
 
+> **⚠️ Critical review:** [Post-Nov 2025 Reality Check](llm-capability-pseudo-cap-critical-review.md) — reassesses this analysis against the step function in model capability after November 2025.
+> **⚠️ Framework critique:** ["Context-Directed Extrapolation": Is It Actually Good?](context-directed-extrapolation-critical-analysis.md) — epistemological examination of the Bonial framework's falsifiability, quantifiability, and counter-evidence.
+
 # LLM Capability vs. Pseudo-Capability: What's Real, What's Illusion
 
 *February 28, 2026*

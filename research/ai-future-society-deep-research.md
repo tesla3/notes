@@ -1,4 +1,4 @@
-← [Index](../README.md)
+← [AI Predictions: Social & Economic Impact](ai-predictions-social-economic-impact.md) · [Index](../README.md)
 
 # AI and Future Society: A Grounded Assessment
 

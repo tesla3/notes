@@ -3,6 +3,51 @@
 > **Note:** File paths in entries before 2026-02-17 session 7 refer to the flat structure
 > before the notes reorg. See [README.md](README.md) for current file locations.
 
+## 2026-02-28 — Meta-review: critical self-analysis of insights corpus
+
+- Created `meta-review.md` — thorough critical review of the entire insights corpus, its interpretation, and two rounds of LLM analysis
+- **What I got wrong in the "surprises" analysis:**
+  - "No historical precedent" for writing degradation — false (code-switching, hiding literacy, many precedents)
+  - Tobacco comparison — irresponsible (n=54 preprint vs 480K deaths/year)
+  - Democracy/labor leverage as discovery — well-trodden (Standing 2011, Susskind 2020, Acemoglu 2019)
+  - Gemini "four-alarm finding" — credulous (broken demo, unmasked model names, shredded methodology)
+  - "Pre-war steel" contamination as unsolvable — ignored corpus's own semantic-search evidence
+  - Non-transferable workflows as novel — familiar phenomenon, different scale
+  - "Goodhart's Law everywhere" as unifying theory — just Goodhart's Law (1975)
+- **Structural blind spots in the corpus:**
+  - 58% of research files are HN thread distillations — narrow, non-representative population
+  - Systematic negativity bias — almost every insight argues AI fails; positive evidence treated as exceptions
+  - Temporal boundary acknowledged but not enforced per-citation
+  - Almost no evidence from outside Anglophone tech world
+  - Cross-referencing creates illusion of convergent evidence when upstream sources are shared
+- **Key structural findings:**
+  - Culture Amplifier is the containing insight — most other insights are special cases
+  - Two completely different AI stories (organizational ~10% / individual activation energy) need separate frameworks
+  - Skill atrophy → specification quality death spiral (from harness-leverage review) deserves elevation
+  - Compliance-without-conviction spiral (mandates + flat productivity + falling confidence) is real and undernamed
+- **Tier classification:** Broken Abstraction Contract, Brooks-Naur, Volume-Value Divergence, Verification Gate strongest. Naur's Nightmare, Apprenticeship Doom Loop, Anticipatory Displacement have thinner evidence than presentation suggests.
+- **Epistemic lesson:** First response performed curation as analysis. Second response performed insight as analysis. Both demonstrated the failure modes the corpus predicts (Cognition ≠ Decision, Double Anti-Novelty Lock).
+- Added meta-review.md to README collections
+- Next: consider restructuring insights.md around Culture Amplifier as meta-principle; add evidence-tier tags; elevate Activation Energy
+
+## 2026-02-28 — Skills deep synthesis: when, why, ROI
+
+- Wrote `research/skills-deep-synthesis-when-why-roi.md` — structural analysis of when skills create durable value vs waste
+- Durability filter: most skills on skills.sh are transitional (categories 1-2 get absorbed into training data). Only private knowledge, personal conventions, and staleness patches survive.
+- Five structural archetypes: Verification Gauntlet (#1 leverage, consensus evidence), Compounding Loop (sleeper hit, requires frequency), Specification Scaffold (JUXT case, SDD mainstream), Behavioral Constitution (cheapest, universal), Tribal Knowledge Codifier (most durable, hardest to outsource)
+- ROI matrix: total initial investment ~6-12 hours for complete stack. Build bottom-up (gauntlet → constitution → loop → scaffold → tribal knowledge)
+- Three anti-patterns: Competence Illusion (downloading expertise you can't evaluate), Context Tax (too many skills), Delegation Spiral (automation without engagement)
+- Five unbuilt skills with structural demand: verification scaffold generator, cross-session memory architect, skill auditor that isn't itself an attack, brownfield onboarding, cognitive rest pacer
+- Meta-insight: skills are engineering infrastructure not features. The most valuable skill is the one you write yourself, for your own codebase. Everything else is transitional.
+- Connected insights: Skill Author Competence Paradox, Steering ∝ Theory, Hidden Denominator, Culture Amplifier, Workflow as Tribal Knowledge, Broken Abstraction Contract, Cognitive Rest Erosion
+- Critical self-review (`research/skills-deep-synthesis-critical-review.md`):
+  - Seven problems: fabricated ROI numbers, category confusion (skills vs harness engineering), selective survivorship bias, unvalidated compounding metaphor
+  - Six missing pieces: co-training dissolution, skill atrophy death spiral, observability archetype, audience mismatch, skill format vs alternatives, archetype erosion timelines
+  - Three internal contradictions: transitional-but-valuable, hidden-denominator hypocrisy, infrastructure-claim without format validation
+  - Key correction: archetypes erode top-down under model improvement (constitutions first, tribal knowledge last) — may invert "build bottom-up" for long-horizon planning
+  - Honest version: "Five types of engineering practices that work. I don't know the ROI. Nobody does."
+- Updated README with link
+
 ## 2026-02-28 — Antidotes to post-Nov 2025 model failures
 
 - Wrote `research/post-nov-2025-model-failure-antidotes.md` — 20 evaluated countermeasures for every failure class in the taxonomy
@@ -628,3 +673,11 @@
 - Saved review to `research/semantic-search-practitioner-playbook-review.md`
 - Updated `topics/coding-agents.md` with links to both files
 - **Lesson**: Always check which token category a tool actually affects (input vs output vs cache) before making cost claims. "CLI output" ≠ "LLM output tokens."
+
+## 2026-02-28 — Session: FDE (Forward Deployed Engineer) Research
+
+- Researched the FDE trend: origin (Palantir early 2010s), current hype cycle (800%+ job posting surge in 2025), and critical assessment
+- Sources consulted: First Round Review (expert panel), SVPG/Marty Cagan, a16z thesis, Pragmatic Engineer, Constellation Research, Thomas Otter (Angular Ventures), David Peterson (Angular Ventures), Reddit/HN threads
+- Key finding: genuine structural need (AI products are harder to deploy than traditional SaaS) but massive hype overlay — follows exact PLG hype cycle pattern from 2018–2022
+- Verdict: real but narrow need being indiscriminately applied; most "FDE" jobs are rebranded solutions/implementation roles; VC pattern-matching in full effect
+- Saved to `research/forward-deployed-engineers-fde-analysis.md`
