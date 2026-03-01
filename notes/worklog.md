@@ -1,0 +1,21 @@
+# Worklog
+
+## 2026-02-28
+
+- Added `--goggles` to brave-search `llm-context.js` — passes Brave Goggles re-ranking rules to API
+- Added `extra_snippets=true` to `search.js` — 3-5× more context per result, always on
+- Deep research on Brave Goggles optimization → `research/brave-goggles-optimization.md`
+  - Analyzed official Brave docs, HN threads (31837986, 32599269, 39013497), Reddit discussions
+  - Cross-referenced Kagi most-blocked domains, Bobby Hiltz "16 Companies" SEO list, Super-SEO-Spam-Suppressor, Brave's copycats_removal.goggle
+  - Key findings: `$discard` + `$boost=1` allow-list pattern, advanced syntax (wildcards, anchors, `$intitle`), URL length limits for inline goggles, comprehensive SEO spam domain list
+- Rewrote SKILL.md goggles section: full syntax reference, task-specific recipes, known spam domain lists, decision guidance for when to apply goggles
+- Distilled HN thread "Leaving Google has actively improved my life" (47184288) → `research/hn-leaving-google-improved-life.md`
+- Researched Brave vs Kagi vs Google search APIs for agent and personal use → `research/search-api-comparison-brave-kagi-google.md`
+  - Key finding: Brave is optimal for agent use (only independent Western index with public API after Bing API died Aug 2025)
+  - Google Custom Search API closed to new customers, sunset Jan 2027
+  - Kagi API invite-only, beta, 5× more expensive
+  - Current brave-search skill was missing the LLM Context endpoint
+- Built `llm-context.js` for brave-search skill — single API call for search + pre-extracted LLM-optimized content
+  - Replaces the `search.js --content` + `content.js` multi-step pattern for agent use
+  - Same price ($5/1k), better extraction, fewer calls, no bot-wall issues
+- Updated brave-search SKILL.md with LLM Context docs, corrected pricing/setup info
