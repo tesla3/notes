@@ -7,7 +7,11 @@
 - Deep research on Brave Goggles optimization → `research/brave-goggles-optimization.md`
   - Analyzed official Brave docs, HN threads (31837986, 32599269, 39013497), Reddit discussions
   - Cross-referenced Kagi most-blocked domains, Bobby Hiltz "16 Companies" SEO list, Super-SEO-Spam-Suppressor, Brave's copycats_removal.goggle
-  - Key findings: `$discard` + `$boost=1` allow-list pattern, advanced syntax (wildcards, anchors, `$intitle`), URL length limits for inline goggles, comprehensive SEO spam domain list
+  - Key findings: `$discard` + `$boost=1` allow-list pattern, advanced syntax (wildcards, anchors, caret), URL length limits for inline goggles, comprehensive SEO spam domain list
+- Accuracy review of goggles research + SKILL.md — verified all hosted goggle URLs (7/7 live), counted actual rules vs claimed:
+  - Fixed: tech_blogs 1,465→1,295, banana-boost 7,835→7,468, hacker_news ~3,000→6,238
+  - Removed `$intitle`/`$inurl`/`$incontent`/`$lang` from docs — all unimplemented (official quickstart says "future", zero goggles use them)
+  - Fixed domain categorization: w3schools/geeksforgeeks/etc are NOT in copycats_removal.goggle (which targets translation scrapers), relabeled as "SEO tutorial farms"
 - Rewrote SKILL.md goggles section: full syntax reference, task-specific recipes, known spam domain lists, decision guidance for when to apply goggles
 - Distilled HN thread "Leaving Google has actively improved my life" (47184288) → `research/hn-leaving-google-improved-life.md`
 - Researched Brave vs Kagi vs Google search APIs for agent and personal use → `research/search-api-comparison-brave-kagi-google.md`
