@@ -607,3 +607,24 @@
     - Output trimming: built-in output budget controls (--min-score, -n, -l, --max-bytes, --files format)
   - **Verdict:** Best on-device knowledge retrieval tool for AI coding agents as of Feb 2026. Natural fit for Pi + terminal-native workflow.
   - Updated `topics/dev-tools.md` with QMD section, `topics/coding-agents.md` with forward link
+
+## 2026-02-28 (session 6) — Semantic search practitioner playbook + self-review
+
+- **Created** `research/semantic-search-practitioner-playbook.md` — distilled from `semantic-search-llm-token-savings-research.md`
+  - Decision framework: 3 yes/no questions (codebase size, query type, pricing model)
+  - 3-tier implementation stack ranked by impact-to-effort
+  - Tool comparison table: Augment Code, claude-context, GrepAI, CodeGrok
+  - Persona-specific priorities (solo API, solo Max, team Cursor, team custom agent)
+  - Validated against latest data: Augment Context Engine MCP (Feb 6, 30-80% quality on Elasticsearch), MCP Tool Search (Jan 14, 95% context savings), RTK (Feb 2026, 89% CLI output savings)
+- **Critical self-review** found and corrected significant issues:
+  - **RTK token category error (must-fix)**: Claimed RTK saves output tokens at $25/M — wrong. RTK saves input tokens (tool results) at $5/M or $0.50/M cached. "5× dollar impact" claim was false. Corrected to lead with quality argument (less noise → better attention allocation).
+  - **Augment 30-80% overstated**: Single-repo vendor benchmark (Elasticsearch). 30% marginal over Cursor is the honest number. 80% on Claude Code partly reflects Claude Code's weak default retrieval on unfamiliar Java monorepos. Added caveat.
+  - **Serena "most underutilized" without evidence**: Demoted to "architecturally promising, undervalidated." No rigorous benchmarks exist.
+  - **Missing: AGENTS.md as Tier 0**: Added as first recommendation — highest-ROI optimization (zero tokens, zero infra, zero staleness)
+  - **Missing: model selection as cost lever**: Opus→Sonnet = 40% savings, more than any tool in the playbook
+  - **Self-Route conflated**: Separated Li et al. academic architecture (trained classifier) from ad-hoc AGENTS.md approximation
+  - **"Quality not cost" too binary**: Added cost = session sustainability for API users, rate-limit windows for Max users
+  - **Action bias**: Added "do nothing baseline is improving" caveat
+- Saved review to `research/semantic-search-practitioner-playbook-review.md`
+- Updated `topics/coding-agents.md` with links to both files
+- **Lesson**: Always check which token category a tool actually affects (input vs output vs cache) before making cost claims. "CLI output" ≠ "LLM output tokens."
