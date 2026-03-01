@@ -12,6 +12,14 @@
   - Fixed: tech_blogs 1,465→1,295, banana-boost 7,835→7,468, hacker_news ~3,000→6,238
   - Removed `$intitle`/`$inurl`/`$incontent`/`$lang` from docs — all unimplemented (official quickstart says "future", zero goggles use them)
   - Fixed domain categorization: w3schools/geeksforgeeks/etc are NOT in copycats_removal.goggle (which targets translation scrapers), relabeled as "SEO tutorial farms"
+- Discovered hosted goggle URLs silently ignored by LLM Context API (`goggles_id` only works on web search API)
+  - All hosted goggle examples in SKILL.md were non-functional — agent thought filtering was applied but it wasn't
+- Added `--preset` flag to `llm-context.js`: `code`, `research`, `docs` — inline rules baked into code
+  - Tested all 3: code removes SEO farms, research boosts arxiv, docs allow-lists official sources only
+- Added `--goggles` to `search.js` with proper `goggles_id` for hosted URLs + inline `goggles` for rules
+- llm-context.js now errors on hosted URLs instead of silently ignoring
+- Rewrote SKILL.md: 250→90 lines, decision-tree structure, presets front and center
+- Moved goggles syntax, hosted goggle catalog, domain lists → `goggles-reference.md`
 - Rewrote SKILL.md goggles section: full syntax reference, task-specific recipes, known spam domain lists, decision guidance for when to apply goggles
 - Distilled HN thread "Leaving Google has actively improved my life" (47184288) → `research/hn-leaving-google-improved-life.md`
 - Researched Brave vs Kagi vs Google search APIs for agent and personal use → `research/search-api-comparison-brave-kagi-google.md`
