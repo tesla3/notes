@@ -44,6 +44,20 @@ Runners-up: mdcat (best correctness, but archived/dead Jan 2025), MD-TUI (best n
 
 ---
 
+## Local Knowledge Search (QMD)
+
+**Decision:** QMD is the best on-device knowledge retrieval tool for AI coding agents (Feb 2026).
+
+Tobi Lütke's hybrid search engine: BM25 + vector + LLM reranker, all running locally via GGUF models. CLI + MCP dual interface. Agent-optimized output (lazy discovery, scored retrieval, structured formats). Zero infrastructure — one SQLite file, one process.
+
+**Why it matters:** Fills the private knowledge gap that external search APIs (Brave, Serper) can't reach. Implements the CLI lazy discovery pattern for knowledge bases. Used as OpenClaw's memory layer.
+
+**Caveats:** sqlite-vec is alpha, 2GB model download on first use, bus factor = 1 (Lütke).
+
+→ [Full evaluation](../research/qmd-evaluation-and-context-connection.md)
+
+---
+
 ## Web Browsers (macOS)
 
 **Decision:** Safari as daily driver, Firefox kept for specific use cases.

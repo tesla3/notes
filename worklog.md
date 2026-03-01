@@ -592,3 +592,18 @@
     - Three faces: authoring paradox (expert doesn't need it), evaluation circularity (judging output requires the expertise skill provides), calibration drift (skills untethered to models)
     - Block's internal marketplace as proof it's solvable under narrow conditions (same org, fast feedback)
     - Connected to 5 existing insights: Cognition ≠ Decision, Steering ∝ Theory, Inverted Principal-Agent, Naur's Nightmare, Workflow as Tribal Knowledge
+
+- **QMD: Deep evaluation & strategic context analysis**
+  - Created `research/qmd-evaluation-and-context-connection.md` — full source code review, architecture assessment, competitive landscape, connected to 5 prior research threads
+  - **What QMD is:** Tobi Lütke's (Shopify CEO) on-device hybrid search engine for markdown. BM25 + vector (embeddinggemma-300M) + LLM reranker (Qwen3-0.6B) + fine-tuned query expansion (Qwen3-1.7B SFT). ~9,700 LOC TypeScript, 295 commits since Dec 7 2025, ~20 external contributors. CLI + MCP + HTTP daemon.
+  - **Key architectural strengths:** query document format (lex:/vec:/hyde: typed sub-queries), hierarchical context annotations, smart markdown chunking with break-point scoring, position-aware RRF blending, agent-optimized output formats with lazy discovery
+  - **Weaknesses:** sqlite-vec alpha quality, 2GB cold-start download, Node 22+ requirement, bus factor concerns, no incremental embedding
+  - **Competitive landscape:** closest competitor is Khoj (RAG chatbot) but different abstraction — QMD returns results, doesn't generate answers. Kiro Knowledge Bases are enterprise cloud equivalent. rg+fzf is the floor for small collections.
+  - **Connections to prior research:**
+    - Context-as-precious-resource: QMD implements lazy scored retrieval (discovery → selective full retrieval), exactly the pattern identified in CLI-vs-MCP research
+    - Harness engineering: occupies context engineering layer; value depends on whether knowledge retrieval is the agent's actual bottleneck
+    - CLI > MCP: QMD's CLI path is superior for coding agents; MCP daemon is smart hedge for non-terminal agents
+    - Search APIs: QMD fills the private knowledge gap external APIs can't reach
+    - Output trimming: built-in output budget controls (--min-score, -n, -l, --max-bytes, --files format)
+  - **Verdict:** Best on-device knowledge retrieval tool for AI coding agents as of Feb 2026. Natural fit for Pi + terminal-native workflow.
+  - Updated `topics/dev-tools.md` with QMD section, `topics/coding-agents.md` with forward link

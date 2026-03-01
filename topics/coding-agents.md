@@ -120,6 +120,9 @@ Kiro CLI's context model: guidance (conventions) + instructions (task-specific) 
 - [Harness Engineering Update — Feb 26](../research/harness-engineering-update-feb26-2026.md) — METR updates, Lulla AGENTS.md study, Codified Context paper, CodeAct paradigm, brownfield methodology, Configuration Landscape study
 - **[Harness & Leverage Critical Review — Feb 28](../research/harness-leverage-critical-review-feb28-2026.md)** — reassessment against latest evidence: model-harness co-training dissolves "harness > model", skill atrophy death spiral, macro productivity gap widening, SDD mainstreaming, observation-generation inversion
 
+### QMD & Knowledge Retrieval
+- **[QMD: Critical Evaluation & Strategic Context](../research/qmd-evaluation-and-context-connection.md)** — hybrid search architecture, competitive landscape, connection to context engineering/harness leverage/CLI-vs-MCP research, strategic assessment
+
 ### Practitioner Tips & Productivity Evidence
 - [Zechner & Steinberger Tips Review](../research/critical-review-v3-final.md) — corroborated, contested, and complicated
 - [Steinberger Final Evaluation](../research/steipete-final-evaluation.md) — claims vs METR study, macro productivity data
