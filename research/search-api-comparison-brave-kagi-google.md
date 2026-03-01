@@ -1,4 +1,4 @@
-← [Index](../README.md)
+← [Kagi Deep Evaluation](kagi-search-deep-evaluation.md) · [Index](../README.md)
 
 # Search APIs for Agent Use: Brave vs Kagi vs Google
 
