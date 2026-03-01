@@ -126,6 +126,7 @@ Kiro CLI's context model: guidance (conventions) + instructions (task-specific) 
 ### Semantic Search & Token Optimization
 - [Semantic Search + LLM Token Savings](../research/semantic-search-llm-token-savings-research.md) — evidence/counter-evidence review: Cursor A/B (+12.5% accuracy), GrepAI benchmark (27.5% cost savings, not 97%), Anthropic abandoned RAG as primary, hybrid consensus
 - **[Semantic Search Practitioner Playbook](../research/semantic-search-practitioner-playbook.md)** — actionable distillation: decision framework, tiered implementation stack, tool comparison (Augment/GrepAI/claude-context/Serena), cost reality check, what NOT to do
+- [Practitioner Playbook — Critical Self-Review](../research/semantic-search-practitioner-playbook-review.md) — corrections: RTK input-vs-output token error, Augment single-repo caveat, Serena evidence gap, action bias, "do nothing" baseline improving
 
 ### Practitioner Tips & Productivity Evidence
 - [Zechner & Steinberger Tips Review](../research/critical-review-v3-final.md) — corroborated, contested, and complicated

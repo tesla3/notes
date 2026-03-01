@@ -9,7 +9,7 @@
 
 ## The One-Paragraph Summary
 
-Semantic search is a **quality lever, not primarily a cost lever**. The strongest evidence (Cursor A/B: +12.5% accuracy; Augment Code: +30–80% on PR quality benchmarks) shows it helps agents write correct code faster — which *indirectly* reduces tokens by eliminating retry loops and subagent spawning. Don't chase the "97% token reduction" headlines; chase fewer failed attempts. The optimal stack is hybrid: agentic search (grep/ls/read) as backbone, semantic search for concept queries on large repos, structural search (AST/LSP) for symbol navigation, output compression for CLI noise, and prompt caching for cost. Set up only the layers that match your actual pain points.
+Semantic search is a **quality lever, not primarily a cost lever** — but cost efficiency also matters because it extends session budgets and rate-limit windows. The strongest evidence (Cursor A/B: +12.5% accuracy; Augment Code: +30% marginal improvement over Cursor's existing retrieval) shows it helps agents write correct code faster — which *indirectly* reduces tokens by eliminating retry loops and subagent spawning. Don't chase the "97% token reduction" headlines; chase fewer failed attempts. The optimal stack is hybrid: agentic search (grep/ls/read) as backbone, semantic search for concept queries on large repos, structural search (AST/LSP) for symbol navigation, output compression for CLI noise, and prompt caching for cost. But before reaching for tools, **write better project documentation** — a thorough AGENTS.md is the highest-ROI context optimization, and the "do nothing" baseline improves with every model generation.
 
 ---
 
@@ -31,18 +31,24 @@ Answer these three questions:
 
 ### Tier 1: Do These First (High Impact, Low Effort)
 
+#### 0. Write a Good AGENTS.md / Project Documentation
+- **What**: A structured file at the repo root describing project architecture, key files, conventions, build/test commands, and known gotchas. Gives the agent "map knowledge" so it doesn't have to discover structure through expensive exploration.
+- **Impact**: Front-loads the context that agentic search would otherwise spend dozens of tool calls discovering. Zero infrastructure, zero staleness (versioned with code), helps human onboarding too. For most small-to-medium codebases, this single file may eliminate the need for any retrieval tooling.
+- **Effort**: 30-60 minutes of writing. Update when architecture changes.
+- **Why first**: This is the only optimization that costs zero tokens, requires zero tools, and improves *every* agent interaction — regardless of which agent, model, or retrieval stack you use.
+
 #### 1. Enable Prompt Caching
 - **What**: Anthropic and OpenAI cache repeated system prompts at 90% discount (cache reads = $0.50/M vs $5/M on Opus 4.5).
 - **How**: Happens automatically on Anthropic for prompts >1024 tokens that share a prefix. For API users, structure prompts with static content first.
 - **Impact**: This is the single biggest cost lever. GrepAI's benchmark showed cache reads dominated cost structure — $4.92 total with 7.7M cache read tokens at $0.50/M.
 - **Effort**: Zero. It's automatic on Claude Code / Cursor.
 
-#### 2. Output Compression (RTK or Equivalent)
-- **What**: Filter noisy CLI output (test results, git log, build output) before it enters the LLM context window.
+#### 2. CLI Output Compression (RTK or Equivalent)
+- **What**: Filter noisy CLI output (test results, git log, build output) before it re-enters the LLM context window as tool-result input tokens.
 - **Tool**: [RTK](https://github.com/rtk-ai/rtk) — Rust CLI proxy. Wrap commands: `rtk cargo test` instead of `cargo test`.
-- **Impact**: 60–90% output token reduction. Real-world: 10.2M tokens saved over 2 weeks (89.2% reduction). `cargo test`: 155 lines → 3 lines (-98%).
-- **Effort**: Low. `cargo install rtk`, prefix commands. Claude Code can be configured to use it via AGENTS.md instructions or custom tool aliases.
-- **Why first**: Output tokens are expensive ($25/M on Opus 4.5). This targets the most expensive token category with zero retrieval quality risk.
+- **Impact**: 60–90% input token reduction on tool results. Real-world: 10.2M tokens saved over 2 weeks (89.2% reduction). `cargo test`: 155 lines → 3 lines (-98%). **Caveat**: These numbers are from Rust/Cargo workflows, which are unusually verbose. Python/Go projects will see lower savings.
+- **Effort**: Low. `brew install rtk-ai/tap/rtk`, prefix commands. Claude Code can be configured to use it via hooks or AGENTS.md instructions.
+- **Why it matters (quality, then cost)**: The primary benefit is **quality** — less noise means the LLM allocates attention to signal, not verbose test output or `npm install` progress bars. This directly addresses context rot. The cost benefit is real but secondary: tool results are input tokens ($5/M on Opus 4.5, or $0.50/M if cache-read), not LLM output tokens ($25/M). Don't confuse RTK's "output" column (compressed CLI output) with LLM output token pricing — both sides of RTK's compression become input tokens to the model.
 
 #### 3. MCP Tool Search (If Using Multiple MCP Servers)
 - **What**: Claude Code 2.1.7+ lazy-loads MCP tool definitions instead of stuffing all into context upfront.
@@ -66,7 +72,8 @@ Answer these three questions:
   - [Code Pathfinder](https://codepathfinder.dev/mcp) — Python-focused code graph.
 - **Impact**: Avoids the staleness problem entirely (reads live code, no index). Perfect for "find all callers of X", "show the type hierarchy", "what implements this interface?" — queries where grep is imprecise and semantic search is overkill.
 - **Effort**: Install MCP server, configure in `.claude.json`. No indexing step.
-- **When to add**: If you work in statically-typed languages (TypeScript, Go, Rust, Java) and frequently navigate cross-file relationships. This is the **most underutilized layer** in the stack.
+- **When to add**: If you work in statically-typed languages (TypeScript, Go, Rust, Java) and frequently navigate cross-file relationships.
+- **Honesty note**: Structural search is architecturally promising but **undervalidated** — no rigorous benchmarks exist. Anecdotal claims of "70% token savings" (one blog post) and "50% reduction" (serena-slim marketing) lack controlled methodology. The mechanism is sound (precise symbol navigation without indexing overhead or staleness), but don't expect transformation based on current evidence. Worth trying if grep is clearly insufficient for your navigation patterns.
 
 #### 6. Semantic Search via MCP (For Large/Unfamiliar Codebases)
 - **What**: Embedding-based code search that understands concepts, not just keywords.
@@ -74,7 +81,7 @@ Answer these three questions:
 
 | Tool | Embedding | Privacy | Setup | Best For |
 |------|-----------|---------|-------|----------|
-| **[Augment Code Context Engine](https://docs.augmentcode.com/context-services/mcp/overview)** | Proprietary (trained on code) | Remote (code sent to Augment) | 2 min, MCP | Best quality — 30–80% improvement on PR benchmarks. 1000 free requests/mo. **Current best option if privacy allows.** |
+| **[Augment Code Context Engine](https://docs.augmentcode.com/context-services/mcp/overview)** | Proprietary (trained on code) | Remote (code sent to Augment) | 2 min, MCP | Strongest vendor benchmarks (30–80% on Elasticsearch PRs — see caveat below). 1000 free requests/mo. **Current best option if privacy allows.** |
 | **[claude-context (Zilliz)](https://github.com/zilliztech/claude-context)** | Generic + hybrid (BM25+dense) | Remote (Milvus Cloud) or local | Moderate | Agent-agnostic, AST-aware chunking. Good if you already use Milvus. |
 | **[GrepAI](https://github.com/yoan-bernabeu/grepai)** | Local via Ollama | Fully local | `grepai index`, then use | Privacy-first. Good for solo devs. Generic embeddings = lower quality than Augment/Cursor. |
 | **[CodeGrok](https://github.com/rdondeti/CodeGrok_mcp)** | Local (AST + vectors) | Fully local | Moderate | AST-aware chunking + local embeddings. Newer, less battle-tested. |
@@ -90,15 +97,17 @@ Answer these three questions:
   - Rapidly changing code with frequent conflicts — index staleness will hurt you
   - Single-session exploratory work — index setup cost exceeds savings
 
+- **Augment benchmark caveat**: The 30-80% improvement was measured on 300 Elasticsearch PRs (one large Java/Kotlin repo) using Augment's own composite scoring. The 80% figure is Claude Code + Opus 4.5, which may reflect Claude Code's weak default retrieval on unfamiliar Java monorepos as much as Augment's strength. The 30% on Cursor (which already has semantic search) is the more honest *marginal* number. Still impressive, but single-repo vendor benchmarks deserve the usual skepticism.
+
 - **Critical quality note**: Generic embeddings (GrepAI, most open-source tools) have a "similarity ≠ relevance" problem. A test file for authentication is semantically similar to the auth implementation — but you probably want the implementation. Purpose-trained embeddings (Augment, Cursor) handle this better. If using generic embeddings, combine with keyword filters to improve precision.
 
 ### Tier 3: Strategic / Org-Level (High Impact, High Effort)
 
 #### 7. Self-Route Hybrid Retrieval
 - **What**: Let the LLM decide whether a semantic search result is sufficient, or whether it needs full agentic exploration. Based on Li et al. (EMNLP 2024) "Self-Route" approach.
-- **Impact**: 39–65% cost reduction while maintaining full-context accuracy on hard queries.
-- **How to approximate today**: In your AGENTS.md or system prompt, instruct the agent to try semantic search first for concept queries, fall back to grep/read for precise queries, and escalate to full exploration only when initial retrieval is insufficient.
-- **This is where the field is heading**: Cursor already does this implicitly (their agent uses both grep and semantic search). The explicit routing layer will likely become a standard agent architecture pattern in 2026.
+- **Academic result**: 39–65% cost reduction while maintaining full-context accuracy on hard queries — but this used a *trained confidence classifier*, not a system prompt instruction.
+- **How to approximate today (rough)**: In your AGENTS.md, instruct the agent to try semantic search first for concept queries, fall back to grep/read for precise queries, and escalate to full exploration only when initial retrieval is insufficient. **Caveat**: this is an ad-hoc prompt engineering approximation, not the actual Self-Route architecture. There's no evidence this achieves the paper's cost reduction. It's a reasonable heuristic, not a validated technique.
+- **Where the field is heading**: Cursor already does this implicitly (their agent uses both grep and semantic search). Explicit routing will likely become a standard agent architecture pattern, but today's approximations are crude.
 
 #### 8. Team Index Sharing (Cursor-Specific)
 - **What**: Cursor's secure indexing shares embeddings across team members via Merkle tree diffs (92% codebase similarity across clones).
@@ -131,14 +140,20 @@ For practitioners doing mental math on whether optimization is worth it:
 | Claude Sonnet 4.5 | $3/M | $0.30/M | $15/M | $3.75/M |
 | Claude Haiku 4 | $1/M | $0.10/M | $5/M | $1.25/M |
 
-**Key insight**: Output tokens cost 5× input tokens. This means:
-- Output compression (RTK) has 5× the dollar impact per token saved vs. input compression (semantic search)
-- A single verbose test output (say 50K tokens) costs $1.25 on Opus 4.5 output pricing
-- That same 50K through RTK → 5K tokens = $0.125. Savings: $1.125 from one command
+**Key insight**: Output tokens cost 5× input tokens. This means LLM-generated text is the most expensive token category — but it's also the one you have least direct control over (it's what the model writes). What you *can* control:
+- **Input selection** (semantic search, grep): determines which tokens enter the context at $5/M (or $0.50/M cached)
+- **Tool result compression** (RTK): reduces re-ingested CLI output, also at input pricing ($5/M or $0.50/M cached) — **not** at output pricing, despite RTK's column labels
+- **Context window efficiency**: less noise → better attention allocation → fewer retry loops → fewer total output tokens generated across a session
 
-**For Max plan users** ($100–200/mo flat rate): Token optimization matters less for cost, but context window efficiency still matters for quality. Context rot is pricing-independent.
+The real cost lever RTK provides is *indirect*: by reducing noise, the model makes fewer mistakes, which reduces the expensive output tokens spent on wrong answers and retries.
+
+**For Max plan users** ($100–200/mo flat rate): Token optimization matters less for unit cost, but there are still rate-limit windows (5-hour usage caps). Token efficiency extends how long you can work before being throttled. Context rot is pricing-independent.
+
+**Model selection as cost lever**: Dropping from Opus 4.5 ($5/$25) to Sonnet 4.5 ($3/$15) for routine exploration saves 40% immediately — more than any tool in this playbook. Consider model routing: Sonnet for exploration/search, Opus for complex reasoning/generation. This is orthogonal to retrieval strategy but often higher-ROI.
 
 **Falling prices trajectory**: Opus went from $15/$75 (4.0) → $5/$25 (4.5) — a 67% drop. If this continues, the cost argument for semantic search weakens further. The quality argument is durable.
+
+**The "do nothing" baseline is improving**: Models get better at agentic search every generation. Context windows are growing. Claude Code's search heuristics are being actively improved. Any optimization tool's value proposition degrades over time as the baseline improves. What's worth adding today may be redundant in 6 months. Don't over-invest in infrastructure for a problem that's shrinking.
 
 ---
 
