@@ -123,6 +123,10 @@ Kiro CLI's context model: guidance (conventions) + instructions (task-specific) 
 ### QMD & Knowledge Retrieval
 - **[QMD: Critical Evaluation & Strategic Context](../research/qmd-evaluation-and-context-connection.md)** — hybrid search architecture, competitive landscape, connection to context engineering/harness leverage/CLI-vs-MCP research, strategic assessment
 
+### Semantic Search & Token Optimization
+- [Semantic Search + LLM Token Savings](../research/semantic-search-llm-token-savings-research.md) — evidence/counter-evidence review: Cursor A/B (+12.5% accuracy), GrepAI benchmark (27.5% cost savings, not 97%), Anthropic abandoned RAG as primary, hybrid consensus
+- **[Semantic Search Practitioner Playbook](../research/semantic-search-practitioner-playbook.md)** — actionable distillation: decision framework, tiered implementation stack, tool comparison (Augment/GrepAI/claude-context/Serena), cost reality check, what NOT to do
+
 ### Practitioner Tips & Productivity Evidence
 - [Zechner & Steinberger Tips Review](../research/critical-review-v3-final.md) — corroborated, contested, and complicated
 - [Steinberger Final Evaluation](../research/steipete-final-evaluation.md) — claims vs METR study, macro productivity data
