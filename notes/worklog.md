@@ -20,6 +20,12 @@
 - llm-context.js now errors on hosted URLs instead of silently ignoring
 - Rewrote SKILL.md: 250→90 lines, decision-tree structure, presets front and center
 - Moved goggles syntax, hosted goggle catalog, domain lists → `goggles-reference.md`
+- CORRECTION: hosted goggles DO work with LLM Context API — earlier test used wrong param name
+  - LLM Context API uses `goggles` param for BOTH inline rules and hosted URLs
+  - Web Search API uses `goggles` for inline, `goggles_id` for hosted URLs
+  - My earlier test used `goggles_id` on LLM Context (wrong), concluded hosted URLs broken
+  - Verified with POST body, GET with delays, proper param name — all work
+  - Reverted the error message, updated docs to reflect both tools support hosted goggles
 - Rewrote SKILL.md goggles section: full syntax reference, task-specific recipes, known spam domain lists, decision guidance for when to apply goggles
 - Distilled HN thread "Leaving Google has actively improved my life" (47184288) → `research/hn-leaving-google-improved-life.md`
 - Researched Brave vs Kagi vs Google search APIs for agent and personal use → `research/search-api-comparison-brave-kagi-google.md`
