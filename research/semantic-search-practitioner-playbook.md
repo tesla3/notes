@@ -19,7 +19,7 @@ Answer these three questions:
 
 | Question | If YES → | If NO → |
 |----------|----------|---------|
-| **Is your codebase >1000 files?** | Semantic search has proven value (Cursor: 2.6% code retention lift on large repos vs 0.3% baseline) | Agentic search (grep) is sufficient; skip the complexity |
+| **Is your codebase large (roughly >1000 files)?** | Signal strengthens with codebase size. Cursor data shows clearest benefit above ~1000 files (2.6% code retention lift vs 0.3% baseline) — but this is one data point, not a validated threshold. The mechanism is sound: larger repos → more exploration → more room for shortcutting. | Agentic search (grep) is sufficient; skip the complexity |
 | **Do you frequently ask concept queries?** ("where is auth handled?", "how does caching work here?") | Semantic search excels — these can't be grepped | If your queries are keyword-precise ("find function `parseConfig`"), grep wins |
 | **Are you using Claude Code / API and paying per token?** | The indirect savings (fewer retries) are real; worth the setup | On flat-rate plans (Max $100–200/mo), the cost math matters less — focus on quality |
 
@@ -160,9 +160,9 @@ The real cost lever RTK provides is *indirect*: by reducing noise, the model mak
 ## Implementation Priority by Persona
 
 ### Solo Developer on Claude Code (API)
-1. RTK output compression → immediate savings
-2. `/compact` habit → prevent context rot
-3. Good AGENTS.md files → give the agent map knowledge instead of exploration
+1. Good AGENTS.md files → give the agent map knowledge instead of exploration (Tier 0)
+2. RTK output compression → immediate savings
+3. `/compact` habit → prevent context rot
 4. Add Serena MCP if in typed language → structural navigation
 5. Add GrepAI or Augment MCP only if working on large/unfamiliar codebases
 
@@ -178,6 +178,15 @@ The real cost lever RTK provides is *indirect*: by reducing noise, the model mak
 2. Use team index sharing → instant onboarding
 3. RTK for CLI noise → applies even within Cursor terminal
 4. Trust the hybrid — Cursor's agent already combines grep + semantic search
+
+### Pi / Minimal Harness User
+1. Good AGENTS.md → the single highest-leverage move; Pi's minimal system prompt leaves maximum room for project context
+2. RTK-equivalent output filtering → Pi uses bash directly; configure via skills or AGENTS.md instructions to prefer compact output
+3. Model routing → Pi supports mid-session model switching; use Sonnet for exploration, Opus for generation
+4. Serena or ast-grep MCP → if Pi supports MCP, structural search transfers directly; if not, equivalent LSP queries via bash
+5. Semantic search → GrepAI (local, CLI-based) integrates with any agent that can run shell commands; Augment MCP requires MCP support
+
+**Transferability note**: Tier 1 items 0-2 (AGENTS.md, prompt caching, output compression) are agent-agnostic. Items 3-4 (`/compact`, MCP Tool Search) are Claude Code-specific — Pi's session trees and compact system prompt address similar problems differently. Tier 2-3 tools work with any agent that supports MCP or shell commands.
 
 ### Team Using API Directly (Custom Agent)
 1. Prompt caching architecture → structure prompts for maximum cache hits
