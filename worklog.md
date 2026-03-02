@@ -689,3 +689,20 @@
 - 14 problem domains, 70+ patterns cataloged with critical assessments and when-to-use guidance
 - Includes pattern interaction map showing common compositions
 - Saved to `research/software-design-patterns-by-problem-domain.md`
+
+## 2026-03-01
+
+- Brainstormed software architecture patterns for AI/agent-pervasive future
+- Synthesized across existing research: dark factory thesis, harness engineering, MCP/CLI convergence, design patterns, HN practitioner threads (frameworks debate, beyond agentic coding, eight more months, MCP CLI)
+- Identified 10 architectural patterns: verified-by-construction, orchestration-as-architecture, progressive discovery, memory-as-architecture, reviewability-first, adversarial interfaces, event-sourced actions, collapsing middle, HITL control flow, cost-aware design
+- Pattern survival analysis: which traditional patterns are reinforced/transformed/dying
+- Key thesis: the transition is a structural inversion from "optimize for human comprehension" to "optimize for machine navigability + automated verification"
+- Saved to `research/software-architecture-ai-agent-era.md`
+
+### Session 41 continued
+
+- Follow-up research: how design patterns shift in an agent-everywhere future
+- Deep web research across: multi-agent orchestration frameworks (LangGraph, Google ADK, AgentOrchestra), agent interoperability protocols (MCP, A2A, ACP, ANP), context engineering (Karpathy, SitePoint, Henry Vu), guardian/guardrail patterns (TRiSM, Spring AI LLM-as-Judge, Patronus AI, OWASP), human-in-the-loop architectures, hierarchical agent delegation
+- Analysis in three categories: (1) existing patterns that become load-bearing (State Machine, Circuit Breaker, Saga, Idempotency, Pipes & Filters, Pub-Sub, Observability, Hexagonal), (2) patterns needing adaptation (CQRS, Repository→RAG, ACL for LLM output, Feature Flags→Capability Flags), (3) genuinely new patterns (Context Engineering, Guardian/Sentinel, HITL Gate, Capability Card, Nondeterminism Envelope, Memory Hierarchy, Prompt-as-Contract, Hierarchical Delegation, Sandboxed Execution, Asymmetric Verification)
+- Identified 6 open problems not yet crystallized into patterns: agent identity/trust, cost-aware routing, graceful capability degradation, long-horizon consistency, multi-agent conflict resolution, adversarial robustness as architecture
+- Saved to `research/design-patterns-agent-future.md`
