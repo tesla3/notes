@@ -2,6 +2,29 @@
 
 ## 2026-03-01
 
+- Source-level review of Rig (github.com/0xPlaygrounds/rig) — Rust AI agent framework
+  - 98K LOC Rust, v0.31.0, 911 commits, 21 months, 169 contributors (89% from one person)
+  - Core value: best provider abstraction in Rust (20+ providers, 10+ vector stores, WASM)
+  - Strengths: clean trait hierarchy, streaming, hooks, OpenTelemetry, MIT license
+  - Weaknesses: thin testing (436 tests for 54K LOC, zero mocked providers, needs live API keys), 156 panics in production paths, no memory/orchestration
+  - Verdict: excellent completion client library, weak as "agent framework" — the agent is just model + preamble + tools
+  - Full analysis: `research/rig-review.md`
+- Installed and researched Kiro CLI (v1.26.2) — AWS's terminal coding agent
+  - Compared with Pi and Claude Code across architecture, pricing, tools, extensibility, sessions, benchmarks
+  - Key findings: Kiro fastest in benchmarks (168s), unique built-in LSP/web search/AWS tools, but locked to Claude models via AWS credit system
+  - Pi most extensible (TypeScript extensions, 20+ providers, session branching); Claude Code most powerful (Opus 4.5, deep autonomy)
+  - Full analysis: `research/kiro-cli-vs-pi-vs-claude-code.md`
+- Built `serper-search` pi skill as Google fallback for when Brave misses niche docs
+  - `search.js` with `--content`, `--site`, `--period` flags
+  - Reuses same Readability/Turndown content extraction as brave-search
+  - SKILL.md documents when to use Serper vs Brave
+  - Needs `SERPER_API_KEY` env var (free 2,500 queries at serper.dev, no CC)
+- Researched search API landscape: what experts/practitioners actually use
+  - Brave = benchmark winner (AIMultiple: 14.89, fastest at 669ms)
+  - Tavily = popular due to LangChain ecosystem inertia, not quality superiority
+  - Serper = best value ($1/1K), Google's index best for niche technical docs
+  - Exa = specialist for semantic/code search, not worth adding (5 QPS, complex pricing, index gaps)
+  - Decision: keep Brave as primary, Serper as fallback, skip Tavily and Exa
 - Deep accuracy review of brave-search goggle optimization (all claims validated against live API + official docs)
   - Verified API param behavior: `goggles_id` silently ignored on LLM Context (200 OK, no filtering); `goggles` works for both hosted + inline
   - Fixed rule counts in goggles-reference.md: tech_blogs 1,295→1,469, banana-boost 7,468→7,838, netsec 3,896→3,903, hacker_news 6,238→6,239 (previous counts only counted `$boost=` lines, missed URL patterns + $discard + $downrank)
