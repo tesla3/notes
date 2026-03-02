@@ -681,3 +681,11 @@
 - Key finding: genuine structural need (AI products are harder to deploy than traditional SaaS) but massive hype overlay — follows exact PLG hype cycle pattern from 2018–2022
 - Verdict: real but narrow need being indiscriminately applied; most "FDE" jobs are rebranded solutions/implementation roles; VC pattern-matching in full effect
 - Saved to `research/forward-deployed-engineers-fde-analysis.md`
+
+## 2026-03-01 — Session 41
+
+- Researched software design patterns organized by problem domain (language-agnostic, not paradigm-specific)
+- Deep web research across: DDD tactical/strategic patterns, CQRS/Event Sourcing, distributed coordination (Saga, Outbox, Compensating Transaction), resilience (Circuit Breaker, Bulkhead, Backpressure), Enterprise Integration Patterns (Pipes & Filters, Routing, Scatter-Gather), concurrency models (Actor, CSP, Structured Concurrency), architecture (Hexagonal, Clean, Vertical Slice), data access (Repository, Data Mapper, Active Record, Unit of Work), caching strategies, migration patterns (Strangler Fig, ACL), deployment patterns, business rules (State Machine, Rules Engine), API boundaries (Gateway, BFF, Sidecar), observability
+- 14 problem domains, 70+ patterns cataloged with critical assessments and when-to-use guidance
+- Includes pattern interaction map showing common compositions
+- Saved to `research/software-design-patterns-by-problem-domain.md`
