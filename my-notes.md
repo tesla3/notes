@@ -1,6 +1,19 @@
 This is scratchpads captures insights on the moment by the owner, a human.
 DO NOT modify it. Instead, create a seperate copy when you improve or comment on it, and save it to a different md file.
 ---
+**Source: https://newsletter.pragmaticengineer.com/p/the-future-of-software-engineering-with-ai
+**expert evidence: 
+
+One declaration was drafted. Kent Beck, Laura Tacho, and Steve Yegge, came up with an apposite statement on inflated expectations upon AI to magically improve everything in workplaces:
+
+“Organizations are constrained by human and systems-level problems. We remain skeptical of the promise of any technology to improve organizational performance without first addressing human and systems-level constraints.
+
+We remain skeptical and we remain human”. – Kent Beck, Laura Tacho, and Steve Yegge.
+---
+**source: https://michaellivs.com/blog/knowledge-distillation-into-skills/
+**insight: Agent Skills can be used for taste (local preference)
+
+---
 **source: meta-self-reflection: ./lesson-llm-analysis-failure-mode.md
 Now I'm thinking about what actually matters to tell them: the deep lesson and the practical takeaway.
 
