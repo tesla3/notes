@@ -3,6 +3,18 @@
 > **Note:** File paths in entries before 2026-02-17 session 7 refer to the flat structure
 > before the notes reorg. See [README.md](README.md) for current file locations.
 
+## 2026-03-02 — Brainstorm: Pi as Stateful Actor with A2A
+
+- Synthesized research across A2A integration analysis, Durable Objects/Rivet Actors, Software Architecture AI Era, Elixir agent frameworks HN thread, durable execution landscape, and fresh internet search (ActorCore launch, AgentMaster paper, Spring AI A2A patterns, Google ADK Interactions API)
+- Core insight: Pi sessions and stateful actors are structurally isomorphic — Pi is already an actor that doesn't know it's an actor
+- Designed three-layer architecture: Actor Runtime (Rivet) → Pi Agent Core → A2A Protocol Adapter
+- Identified novel patterns: agent specialization via actor templates, agent swarms via actor spawning, institutional memory as shared actor, durable multi-step workflows, A2A service mesh for coding
+- Addressed hard problems: filesystem access (git worktrees), preemptive scheduling gap, cost model, trust tiers, context window management, ACP bridge
+- Estimated ~3,500 LOC for full system, proposed 5-phase implementation path
+- Output: `research/brainstorm-pi-a2a-stateful-actor.md`
+- Self-critique and consolidation: graded B-. Consolidated critique back into main document — corrected LOC estimates (3.5K → 10-18K realistic), cost model ($90 → $3-10K per fleet op), added verification gap as biggest issue, Rivet maturity risk, competitive landscape (Agent Teams, Codex, Kiro), durable checkpoint limits for LLM agents, git worktree merge conflict realities, A2A opacity tension. Deleted separate critique file.
+- Key conclusion: "Beautiful architecture. Wrong year. Do verification first. Revisit late 2026."
+
 ## 2026-03-01 — Pi A2A integration analysis & RPC deep dive review
 
 - Reviewed `research/pi-rpc-mode-deep-dive.md` — architecture analysis still solid, A2A section now stale (spec moved to RC v1.0 with renamed methods, new data model)
