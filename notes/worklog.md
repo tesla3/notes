@@ -70,3 +70,10 @@
   - Replaces the `search.js --content` + `content.js` multi-step pattern for agent use
   - Same price ($5/1k), better extraction, fewer calls, no bot-wall issues
 - Updated brave-search SKILL.md with LLM Context docs, corrected pricing/setup info
+
+## 2026-03-01
+- Distilled HN thread 47212355: "If AI writes code, should the session be part of the commit?"
+  - git-memento tool (git notes for AI sessions), 138 comments, 119 points
+  - Key finding: overwhelming rejection of raw sessions, emerging consensus around structured intent capture (CIRs, spec files, plan docs)
+  - Notable: dang's meta-comment about Show HN drowning in AI-generated submissions
+  - Saved to `research/hn-ai-session-commits.md`, linked from `topics/coding-agents.md`

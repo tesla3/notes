@@ -138,6 +138,7 @@ Kiro CLI's context model: guidance (conventions) + instructions (task-specific) 
 - [Nanoagent Survey](../research/nanoagent-survey.md) — all 5 "nano" agent repos critically assessed
 - [HN: Elixir/BEAM for AI Agents](../research/hn-elixir-agent-frameworks.md) — actor model vs agent model, "let it crash" semantic gap, durability problem, ecosystem lock-in
 - [HN: What AI Coding Costs You](../research/hn-ai-coding-costs-47194847.md) — cognitive debt vs technical debt, Shen-Tamkin study misreadings, review paradox, seniority pipeline collapse, joy erosion
+- [HN: AI Sessions as Commit Artifacts](../research/hn-ai-session-commits.md) — raw session vs distilled intent, compiler analogy demolished, CIRs/spec-first emerging, dang's Show HN governance crisis, "Ape Coding" fiction as cultural marker
 
 ## Related
 
