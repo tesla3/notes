@@ -3,6 +3,22 @@
 > **Note:** File paths in entries before 2026-02-17 session 7 refer to the flat structure
 > before the notes reorg. See [README.md](README.md) for current file locations.
 
+## 2026-03-01 — Pi A2A integration analysis & RPC deep dive review
+
+- Reviewed `research/pi-rpc-mode-deep-dive.md` — architecture analysis still solid, A2A section now stale (spec moved to RC v1.0 with renamed methods, new data model)
+- Researched broader pi RPC use cases beyond editor integration: CI/CD pipelines, multi-agent orchestration, platform bots, web dashboards, desktop app embedding, automated benchmarking
+- Deep dive into A2A protocol: read RC v1.0 spec, Agent Card structure, task lifecycle states, message/send and message/stream methods, Parts/Artifacts data model, SSE streaming, auth requirements
+- Researched ACP (Agent Client Protocol): Zed/JetBrains/Neovim/Cline/Kiro/Gemini CLI/PraisonAI ecosystem, JSON-RPC 2.0 over stdin/stdout, TypeScript SDK
+- Created `research/pi-a2a-integration-analysis.md`:
+  - 8-layer implementation breakdown: HTTP server, Agent Card generation, JSON-RPC dispatch, task lifecycle, content translation, SSE, auth, session mapping
+  - Total estimate: ~1,500-2,200 LOC (3-4× the RPC mode)
+  - Hardest part: extension UI protocol → A2A INPUT_REQUIRED state mapping
+  - Open problems: concurrency (pi is single-threaded), multi-tenancy, tool permissions for non-human A2A clients, working directory isolation
+  - Key recommendation: **ACP first** (~500-800 LOC, 10× more value, mechanical translation), A2A second as extension/package
+  - Architecture diagram for A2A-via-extension approach
+  - Critical assessment: architecturally misaligned with pi's local/interactive/single-user design, but extension system makes it feasible without core changes
+- Updated README with new research entry
+
 ## 2026-02-28 — Meta-review: critical self-analysis of insights corpus
 
 - Created `meta-review.md` — thorough critical review of the entire insights corpus, its interpretation, and two rounds of LLM analysis
@@ -706,3 +722,20 @@
 - Analysis in three categories: (1) existing patterns that become load-bearing (State Machine, Circuit Breaker, Saga, Idempotency, Pipes & Filters, Pub-Sub, Observability, Hexagonal), (2) patterns needing adaptation (CQRS, Repository→RAG, ACL for LLM output, Feature Flags→Capability Flags), (3) genuinely new patterns (Context Engineering, Guardian/Sentinel, HITL Gate, Capability Card, Nondeterminism Envelope, Memory Hierarchy, Prompt-as-Contract, Hierarchical Delegation, Sandboxed Execution, Asymmetric Verification)
 - Identified 6 open problems not yet crystallized into patterns: agent identity/trust, cost-aware routing, graceful capability degradation, long-horizon consistency, multi-agent conflict resolution, adversarial robustness as architecture
 - Saved to `research/design-patterns-agent-future.md`
+
+## 2026-03-01
+
+- Deep dive into Pi RPC mode from pi-mono repo
+  - Read all source: rpc-mode.ts, rpc-types.ts, rpc-client.ts, tests, examples, extension UI demo
+  - Analyzed all consumers: Mom (SDK direct), Web UI (agent-core direct), tests (RpcClient), examples (spawn subprocess)
+  - Key finding: zero production consumers — RPC is well-designed but untested by real apps
+  - Identified bugs: fire-and-forget error swallowing on prompt, shutdown hang, no backpressure
+  - Compared integration patterns: RPC vs SDK vs agent-core direct
+  - Saved to `research/pi-rpc-mode-deep-dive.md`
+  - Self-review round: searched internet for broader ecosystem context
+  - Key correction: stdin/stdout JSON agent protocol is now industry standard (ACP by Zed, adopted by JetBrains/Neovim/Cline/Gemini CLI/Kiro/Claude Code)
+  - Pi's custom protocol vs JSON-RPC 2.0 is the real competitive disadvantage, not "no consumers"
+  - A2A (Google) is a different layer entirely — agent-to-agent orchestration, not editor-to-agent control
+  - AAIF (Linux Foundation) now governs MCP + AGENTS.md + A2A; protocol landscape crystallizing
+  - Revised verdict: "good answer in the wrong dialect" — ACP implementation is the obvious next step
+  - Updated research file with self-corrections and broader protocol landscape
