@@ -2,176 +2,249 @@
 
 # Clojure for AI Agent-Assisted Coding: Expert Evaluation
 
-**Date:** 2026-03-02
+**Date:** 2026-03-02  
+**Updated:** 2026-03-02 (critical self-review applied)  
 **Question:** Is Clojure well-positioned for the future of coding with AI agents?
 
 ---
 
 ## Executive Summary
 
-Clojure has a **genuine, non-trivial structural advantage** for AI-assisted development that stems from its REPL, data-oriented design, and homoiconicity — but this advantage is currently **offset by a severe training data deficit** and **ecosystem isolation**. The Clojure community is producing some of the most thoughtful work on how programming languages should interact with AI agents, but the language remains a niche bet that requires significant upfront investment to make AI tooling work well. The honest verdict: Clojure's *theoretical* properties are excellent for AI agent coding; its *practical* position is fragile and dependent on a small number of passionate toolmakers.
+Clojure has real but **overstated** structural advantages for AI-assisted development. Its REPL-driven workflow provides genuine verification benefits, but these are **already being replicated** in Python, F#, and Julia ecosystems. Its data-oriented design is elegant but **not exclusive** to the language. Meanwhile, Clojure suffers from a **severe training data deficit**, **ecosystem isolation**, and — critically — **lacks the static type system** that emerging research shows may be the most important language feature for AI code generation. The Clojure community is producing thoughtful work on AI-agent architecture, but their insights are mostly language-agnostic and will likely be adopted elsewhere.
+
+**Two distinct questions must be separated:**
+1. **Writing code WITH AI help in Clojure** — currently inferior to Python/TS, improving, requires significant scaffolding
+2. **Building AI agent systems IN Clojure** — genuinely interesting architectural properties, but unproven at scale
+
+The honest verdict: Clojure's theoretical appeal exceeds its practical position by a wide margin. The language's advocates are conflating "good ideas that happen to be expressed in Clojure" with "Clojure is uniquely good for this."
 
 ---
 
 ## The Case FOR Clojure
 
-### 1. The REPL as AI Superpower (Strong evidence, unique advantage)
+### 1. REPL-Driven Development as Verification Loop
 
-The strongest argument for Clojure comes from the REPL-driven development model. Multiple independent practitioners report this as a genuine differentiator:
+**Evidence strength: Moderate.** Real but not unique.
 
-**Bruce Hauman** (creator of clojure-mcp, Figwheel): *"Until you've tried using an LLM assistant fully hooked into a stateful REPL, you can't speculate. The experience is fantastic as the feedback for the code being developed is earlier and tighter."* He reports that LLM agents will spontaneously write a function, immediately follow up with smoke tests, and evaluate the whole thing in one go — setting up test harnesses, starting/stopping servers, mocking. (HN, May 2025, 202 points)
+The strongest argument from Clojure practitioners is that the REPL provides ground-truth verification for LLM-generated code:
 
-**Ivan Willig** (Shortcut, 11-year Clojure codebase, 1-year experience report, Feb 2026): *"Clojure is designed to be interacted with from the REPL. This turns out to be a huge advantage when working with an LLM."* He taught LLMs to use `clojure.repl` functions (dir, doc, apropos, find-doc, source) so the agent could dynamically explore any Clojure library at runtime. *"Individual skills or lessons became less important, and the platform itself served as a dynamic feedback loop."*
+**Bruce Hauman** (creator of clojure-mcp, Figwheel): *"Until you've tried using an LLM assistant fully hooked into a stateful REPL, you can't speculate. The experience is fantastic."* Reports agents spontaneously writing functions + smoke tests + evaluating everything in one go. (HN, May 2025, 202 points)
 
-**Marlon at Nubank** (Building Nubank blog, Feb 2026): Described Clojure as an ergonomic language specifically because its REPL-driven model aligns with how AI systems are built and refined — incremental evaluation, immediate inspection, iteration without restart.
+**Ivan Willig** (Shortcut, 11-year Clojure codebase, 1-year report, Feb 2026): *"Clojure is designed to be interacted with from the REPL. This turns out to be a huge advantage when working with an LLM."* Taught agents to use `clojure.repl` (dir, doc, apropos, source) for dynamic library exploration. *"The platform itself served as a dynamic feedback loop."*
 
-**Metosin blog** (May 2025): *"Clojure MCP shows how thoughtful integration can overcome the 'training data disadvantage' that niche languages face with AI tools. Quality tooling with live feedback beats pattern matching from static examples every time."*
+**Marlon at Nubank** (Building Nubank blog, Feb 2026): Clojure's REPL-driven model aligns with how AI systems are refined — incremental evaluation, immediate inspection, iteration without restart.
 
-**Critical evaluation:** This is the most credible argument. It's not just theoretical — multiple practitioners working on real production codebases (Shortcut, Nubank) independently confirm the REPL advantage. The mechanism is clear: the REPL provides ground-truth verification that compensates for hallucination, the #1 problem with LLM-generated code. An agent that can test its own output immediately has a tighter feedback loop than one that must write-compile-run. However, **this advantage is not exclusive to Clojure** — any language with a REPL (Python, Ruby, Elixir, Common Lisp) could theoretically benefit similarly. Clojure's edge is that its REPL is more deeply integrated into the development workflow by culture and tooling, and that its code-as-data nature makes structural editing by agents easier.
+**Metosin blog** (May 2025): *"Quality tooling with live feedback beats pattern matching from static examples every time."*
 
-### 2. Data-Oriented Design / Code-as-Data (Moderate evidence, theoretical strength)
+**Critical evaluation — this is where I was too generous in v1:**
 
-**Freshcode article** (Jan 2026, detailed Clojure vs Python comparison): Tools in Clojure are plain maps with data schemas (Malli). Agent state is an immutable map you can serialize, diff, and replay. *"The difference is cultural. In Python, objects and classes are the default abstraction. In Clojure, data is the default abstraction."* This makes agents testable, traceable, and straightforward to reason about.
+The REPL advantage is **real but not distinctive**. Multiple Python REPL MCP servers already exist and are actively used:
+- **Lyuhau/claude-mcp-repl** — full Python REPL with persistent sessions, shell access, file manipulation
+- **High Dimensional Research's Python REPL** — stateful Python environment for AI agents
+- **Jupyter AI Agents** (PyPI, Jan 2026) — AI agents with direct Jupyter notebook access, cell execution, iterative data analysis
+- **mcp-interactive-terminal** (Feb 2026) — generic interactive REPL MCP for any language
+- **fsi-mcp** for F# (Dec 2025) — same REPL-as-verification pattern
+- **MCPRepl.jl** for Julia — REPL sharing with AI agents
 
-**yogthos/Dmitri Sotnikov** (Mycelium framework, Feb 2026): *"LLM coding agents fail at large codebases for the same reason humans do: unbounded context."* His Mycelium framework uses Clojure's data-first nature to treat every workflow node as an isolated cell with a Malli schema contract. The agent working on any node has a fixed, bounded context — just its schema and test harness. Never needs to see the rest of the application.
+The REPL-as-verification pattern is already **commoditized across ecosystems**. Clojure's edge is cultural (REPL is deeper in the workflow) and structural (code-as-data makes structural editing easier), but these are second-order advantages, not fundamental differentiators.
 
-**Structural editing advantage:** Because Clojure code IS data structures, programmatic edits are structurally safe. The clojure-mcp tool provides structure-aware editing that prevents parenthesis imbalancing and syntax errors — problems that plagued early LLM attempts with Clojure (and S-expression languages generally).
+**More importantly:** If Python LLMs already generate good code without REPL grounding (because training data is abundant), then Clojure's REPL is **compensatory, not additive** — it's fixing a weakness (poor baseline generation) rather than providing a superpower. The REPL matters more to Clojure precisely because Clojure needs it more.
 
-**Critical evaluation:** The data-oriented argument is valid but overstated by advocates. Python *can* use dictionaries-as-data and pure functions — you just have to discipline yourself. The Clojure advantage is that the language *defaults* to this pattern, making it the path of least resistance. For AI agents, where you want the LLM to follow the established patterns in the codebase, having the right patterns baked into the language culture matters. But this is a second-order advantage — it helps more with agent architecture (building agents) than with having agents write your code.
+### 2. Data-Oriented Design / Code-as-Data
 
-### 3. Token Efficiency and Expressiveness (Weak evidence, plausible)
+**Evidence strength: Weak to moderate.** Theoretical, from biased sources.
 
-Clojure code is famously concise. Less boilerplate → fewer tokens → more of the codebase fits in context. The `tosh` commenter on HN noted: *"or even better (esp with highly expressive languages): just slurp the whole codebase, no vector db needed."*
+**Freshcode article** (Jan 2026): Tools as plain maps, agent state as immutable data you can serialize/diff/replay. *"In Python, objects and classes are the default abstraction. In Clojure, data is the default abstraction."*
 
-**Critical evaluation:** This is plausible but unquantified for Clojure specifically. The broader token-efficiency research (HN discussion, Jan 2026) doesn't specifically benchmark Clojure. And the argument cuts both ways: Clojure's conciseness means more information density per line, which may actually be *harder* for LLMs to generate correctly. A verbose language where the LLM just needs to fill in boilerplate may be easier for pattern matching.
+**yogthos** (Mycelium, Feb 2026): Workflow nodes as isolated cells with Malli schema contracts. Bounded context for agents.
 
-### 4. Architecture That Solves Context Rot (New, untested)
+**Structural editing:** clojure-mcp provides structure-aware editing that prevents parenthesis errors.
 
-yogthos' **Mycelium** framework (posted 2 days ago!) represents the most ambitious Clojure-specific thesis: that we should restructure code as state machines with schema-enforced contracts specifically *because* LLMs work better with bounded context and formal verification boundaries.
+**Critical evaluation:**
+
+The Freshcode article is from a **Clojure consultancy selling Clojure development services**. Their comparison is explicitly framework-free on both sides, which actually understates Python's practical advantage — real Python developers use LangChain/CrewAI/etc., which handle the boilerplate that Freshcode's article makes Clojure look better at avoiding.
+
+Python *can* use dictionaries-as-data and pure functions. You don't need Clojure for data-oriented design. The advantage is that Clojure *defaults* to this pattern, making it the path of least resistance for AI agents that follow established codebase patterns. This is a real but small edge.
+
+### 3. Token Efficiency
+
+**Evidence strength: Very weak.** One HN comment, no benchmarks.
+
+Clojure is concise, fitting more codebase in context. But conciseness means higher information density per line, which may be *harder* for LLMs to generate correctly. Boilerplate-heavy languages offer easier pattern matching. **This argument cuts both ways and I cannot adjudicate it without data.**
+
+### 4. Mycelium: Architecture for LLM-Friendly Code
+
+**Evidence strength: Zero (production).** Intellectually interesting thesis, no evidence.
+
+yogthos' Mycelium framework (posted Mar 2026 — **days old**) restructures code as state machines with schema-enforced contracts to solve context rot.
 
 Key ideas:
 - Each workflow node is an isolated "cell" with Malli input/output schemas
-- A "conductor" agent manages the workflow graph; specialized agents implement individual cells
-- Schema violations provide immediate, specific feedback
-- The agent never needs to understand the whole system — just its cell's contract
+- A "conductor" agent manages the graph; specialized agents implement cells
+- Schema violations provide immediate feedback
 - Full execution traces for debugging
 
-**Critical evaluation:** This is intellectually compelling and well-argued. yogthos is a credible voice (maintainer of Luminus, works at Nubank). But Mycelium is **2 days old** — there is zero production evidence for this approach. The thesis that workflow engines + schema contracts help LLMs is plausible but unproven. Also, this architecture pattern isn't inherently Clojure-specific — you could implement it in any language with schema validation. Clojure makes it more natural, but the core insight is about code organization, not language features. Worth watching, too early to bet on.
+**Critical evaluation — I was far too generous in v1:**
+
+This is an intellectually compelling blog post, not evidence. Zero users, zero production deployments. The "context rot" thesis is really just **modular architecture with contracts** — something the industry has been doing with microservices, hexagonal architecture, and DDD for decades. Calling it revolutionary because LLMs also benefit from bounded contexts is a stretch.
+
+The state-machine framing is **not universally applicable**. Not every application naturally decomposes into FSM nodes. yogthos acknowledges this ("doesn't feel natural to code that way") but waves it away with "LLMs don't mind ceremony." Whether that's true at scale is unknown.
+
+**Most critically: this pattern is entirely language-agnostic.** You could implement Mycelium in TypeScript, Python, or Go with any schema validation library. Clojure makes it slightly more natural, but the core insight is about code organization, not language features. If yogthos is right, someone will reimplement this in Python within months.
 
 ---
 
 ## The Case AGAINST Clojure
 
-### 1. Training Data Deficit (Strong evidence, fundamental problem)
+### 1. The Type System Gap (Critical — missed in v1)
 
-This is the elephant in the room, and honest practitioners don't deny it.
+**Evidence strength: Strong.** Academic research + practitioner reports.
 
-**Ivan Willig** (Shortcut): *"It is commonly understood that LLM models are more effective with languages that dominate the training dataset. Research has shown that model performance varies significantly based on the volume of training data for each programming language, with Python, JavaScript, and TypeScript being heavily represented in public code repositories."*
+This is the argument I initially missed entirely, and it may be more important than any other factor.
 
-**FPEval paper** (arxiv, Jan 2026): Academic benchmarks across Haskell, OCaml, Scala, and Java show a **persistent and widening** performance gap between functional and imperative languages. GPT-5 pass rates: Java 61.14%, Scala 58.36%, OCaml 52.16%, Haskell 42.34%. The gap **widens with model improvement** — GPT-5's advantage over GPT-3.5 is larger for imperative languages. Compilation error rates for Haskell remain stubbornly high (24.28% with GPT-5) vs Java (4.62%).
+**Type-constrained decoding** (Mündler et al., ACM PLDI 2025): Researchers demonstrated that using type systems to constrain LLM token generation **reduces compilation errors by over 50% and increases functional correctness by 3.5-5.5%** across models of all sizes. Applied to TypeScript, but the approach works for any typed language. For code repair, type-constrained decoding resolves **57.1% more compilation errors** than vanilla decoding.
 
-**kloudex on Reddit** (2023, r/Clojure): *"Other programming languages contain more boilerplate compared to Clojure, so AI can learn and output those boilerplate patterns, hallucinations are 'diluted' which makes the results still useful for other languages, but fails the threshold for Clojure."*
+**ChopChop** (arxiv, 2025): A framework for constraining LLM output based on semantic properties including type safety. Uses coinduction to connect token-level generation with structural reasoning over programs.
 
-**Critical evaluation:** This is a real, measurable problem. Note that Clojure isn't even included in the FPEval benchmark — it's smaller than Haskell, OCaml, and Scala. The training data problem means:
-- LLMs default to imperative patterns even when writing Clojure (confirmed by Willig: Claude uses `doseq` with `atom` where `map`/`reduce` would be idiomatic)
-- Hallucinated library functions that don't exist
-- Parenthesis balancing issues (improving but not solved)
-- Less idiomatic code, fewer destructuring patterns, longer let-bindings
+**druchan** (notes.druchan.com, 2026): *"When AI generates dynamically-typed code, you need an elaborate set of unit tests to ensure the functions work as expected. But when AI generates code in a strong, statically-typed language, a formidable set of static compilation checks ensures that the function implementation makes no mistakes."*
 
-**Counter-argument from practitioners:** The REPL partially compensates for this deficit. When the agent can verify its code immediately, hallucinations get caught fast. Willig's experience confirms this — the combination of REPL grounding + custom system prompts + Clojure MCP transformed the experience from "frustrating" to "effective." But it required **significant engineering effort** to get there — custom prompts, skills databases, prompt evaluation systems. Python users don't need any of this scaffolding.
+**tikhonj** (HN, professional OCaml/Haskell): *"Languages with expressive type systems have a pretty direct advantage: types can constrain and give immediate feedback to your system, letting you iterate the LLM generation faster and at a higher level than you could otherwise."*
 
-### 2. Ecosystem Isolation (Strong evidence, structural problem)
+**solomonb** (HN, professional Haskell): *"Pure statically typed functional languages are incredibly well suited for LLMs. The purity gives you referential transparency and static analysis powers that the LLM can leverage to stay correctly on task."*
 
-**azumo.com "Top AI Programming Languages" survey (2026):** Lists Python, JavaScript/TypeScript, Rust, Go, C++ for agentic AI. Clojure is not mentioned. At all.
+**eru** (HN): Theorized that once models have sufficient baseline training data in a language, *"it's down to how much the compiler and linters can yell at them"* — suggesting static analysis feedback matters more than training corpus size past a threshold.
 
-The entire agentic AI framework ecosystem is Python-first: LangChain, AutoGen, CrewAI, LangGraph. Cloud platform SDKs prioritize Python. Every new model launch comes with Python examples first. Clojure has no equivalent to any of these frameworks.
+**Why this matters for Clojure:** Clojure is dynamically typed. It has Malli and Spec for optional runtime validation, but these are fundamentally weaker than compile-time type constraints:
+- **Types prevent errors at generation time** (before code is produced). Malli catches errors at **runtime** (after code is produced and executed).
+- Type-constrained decoding can be applied during LLM inference. Malli validation requires running the code first.
+- The compiler provides immediate, comprehensive, free feedback. Malli requires explicit schema definitions and only validates what you opt into.
 
-**Freshcode article:** *"Python's ecosystem will likely continue to dominate for the fastest-moving frameworks and newest models."*
+This means Clojure occupies an awkward middle position: it has the training data disadvantage of a niche functional language without the verification advantage of a typed one. **Haskell, OCaml, and even TypeScript may be better positioned** for AI-agent coding because they combine functional style with type-system verification.
 
-**HN commenter (fnord123, 2017 but still relevant):** *"Python has the better libraries for ANN (TensorFlow, Theano) and ML (sklearn). Python FFI is almost free to call into C so end-to-end performance is better than Clojure."*
+### 2. Training Data Deficit (Confirmed, with nuance)
 
-**Critical evaluation:** This is arguably a bigger problem than training data. Training data will improve as models get better. Ecosystem isolation is structural — it means Clojure developers are always reimplementing what Python gets for free. The Clojure community's response (libpython-clj for Python interop, JVM access for Java libraries) is pragmatic but adds friction. You can use Clojure as an "orchestration layer" (Nubank's approach), but you're still maintaining two-language architecture.
+**Evidence strength: Strong.**
 
-### 3. LLMs Generate Non-Idiomatic Code (Moderate evidence)
+**Ivan Willig** (Shortcut): *"LLM models are more effective with languages that dominate the training dataset."*
 
-**FPEval paper:** *"LLMs frequently produce non-idiomatic functional code that follows imperative patterns rather than best practices in functional programming. Notably, the prevalence of such low-quality code increases alongside gains in functional correctness."* The paper calls this "reward hacking" — models optimize for correctness while neglecting functional style.
+**FPEval paper** (arxiv, Jan 2026): Benchmarks across Haskell, OCaml, Scala, Java show persistent gaps. GPT-5 pass rates: Java 61%, Scala 58%, OCaml 52%, Haskell 42%.
 
-**Willig:** *"Sonnet defaults to an imperative programming approach, which we know does not work well in Clojure. For example, we discovered, embedded in a large code change, a doseq with an atom where a map, or a reduce would be preferable."*
+**Nuance I missed in v1:** The absolute gap widens (Java-Haskell: 8pp with GPT-3.5 → 19pp with GPT-5), but the *proportional* improvement is actually faster for Haskell (3.0x improvement) than Java (2.8x). This suggests the gap may eventually plateau or slowly close, but is nowhere near closing yet.
 
-**Reddit commenter on Claude Code with Clojure:** *"It sometimes uses fewer idioms than one would usually prefer - eg not destructuring and using long let expressions with intermediary results."*
+**FPEval extrapolation caveat:** This paper benchmarks Haskell/OCaml/Scala (all statically typed), not Clojure (dynamically typed). The failure modes likely differ: Haskell has high compilation error rates (type errors); Clojure would have different errors (runtime failures, semantic errors that pass superficial checks). The FPEval results are suggestive but not directly applicable.
 
-**Critical evaluation:** This is a real problem that specifically penalizes languages where idiomaticity matters. In Java or Python, non-idiomatic code is ugly but works. In Clojure, non-idiomatic code defeats the purpose of using Clojure. If the LLM writes imperative-style Clojure, you've lost the conciseness, composability, and REPL-friendliness that justify using the language. You're now spending time refactoring LLM output to be idiomatic — time that erodes the productivity gain.
+**kloudex** (r/Clojure, 2023): *"Other programming languages contain more boilerplate... hallucinations are 'diluted' which makes the results still useful for other languages, but fails the threshold for Clojure."* This is an insightful observation about why conciseness can be a liability for AI generation.
 
-### 4. Small Community = Small Tooling Surface (Moderate evidence)
+**Counter-evidence from Haskell practitioners:** solomonb says Opus 4.5 does "a surprisingly good job" at industrial Haskell, suggesting the training data barrier may be lower than expected for the best models. But he also notes: *"I end up re-writing a lot of code for style reasons"* — confirming the idiomaticity problem persists even with good models.
 
-Clojure's AI tooling depends on a remarkably small number of people:
-- Bruce Hauman: clojure-mcp, clojure-mcp-light
-- yogthos: Mycelium, Maestro, Matryoshka
-- Ivan Willig: Clojure system prompts, Clojure Skills
-- Colin Fleming (Cursive): Calva Backseat Driver
+### 3. Ecosystem Isolation (Structural, not temporal)
 
-This is both a strength (high quality, thoughtful design) and a vulnerability (bus factor). Compare with the Python ecosystem where hundreds of contributors maintain dozens of frameworks.
+**Evidence strength: Strong.**
+
+The agentic AI framework ecosystem is Python-first: LangChain, AutoGen, CrewAI, LangGraph, Mastra (TS). **azumo.com's "Top AI Languages" survey (2026)** lists Python, TypeScript, Rust, Go, C++. Clojure is not mentioned.
+
+The Nubank approach (Clojure for orchestration, Python for ML) is pragmatic but adds polyglot complexity. This is not necessarily bad — many successful companies run polyglot stacks — but it means Clojure is an orchestration layer, not a full-stack AI solution.
+
+**Note on v1 error:** I previously cited a 2017 HN comment referencing Theano (deprecated 2017). That was stale evidence. The ecosystem argument stands on current facts without needing it.
+
+### 4. Non-Idiomatic Code Generation (Confirmed)
+
+**Evidence strength: Moderate.**
+
+**FPEval paper:** LLMs produce non-idiomatic functional code that follows imperative patterns. This gets *worse* as models get more correct — "reward hacking" where models optimize for correctness while neglecting functional style.
+
+**Willig:** Claude uses `doseq` with `atom` where `map`/`reduce` is idiomatic.
+
+**Reddit practitioners:** *"Fewer idioms than one would usually prefer — not destructuring, long let expressions."*
+
+In Clojure, non-idiomatic code defeats the purpose of using the language. You're now refactoring LLM output to be idiomatic — eroding the productivity gain.
+
+### 5. Small Community / Tooling Bus Factor (Confirmed)
+
+Clojure's AI tooling depends on ~4 people: Bruce Hauman, yogthos, Ivan Willig, Colin Fleming. High quality, extreme vulnerability. Compare with hundreds of contributors across Python AI frameworks.
 
 ---
 
-## Synthesis: Who Should Care?
+## Critical Self-Review
 
-### Clojure is a good bet IF:
-1. You already have a significant Clojure codebase (like Shortcut or Nubank) and rewriting is not an option
-2. You value correctness and traceability over speed of initial development
-3. You're building the *orchestration layer* for AI systems, not the AI models themselves
-4. You're willing to invest in tooling setup (MCP, custom prompts, REPL integration)
-5. You're building systems where bounded context and schema contracts genuinely matter (complex business logic, financial systems)
+### What I got wrong in v1:
 
-### Clojure is NOT a good bet IF:
-1. You're starting from scratch and optimizing for speed of AI-assisted development
-2. You need access to the latest AI frameworks immediately
-3. Your team doesn't already know Clojure (the learning curve + AI tooling setup is a double tax)
-4. You're building standard CRUD/web apps where Python/TS + AI tools just work out of the box
+1. **Labeled REPL advantage as "unique" when it isn't.** Python, F#, and Julia all have REPL MCP integrations. The pattern is already commoditized. I corrected this to "real but not distinctive."
 
-### The Deeper Question
+2. **Completely missed the type system argument.** This is arguably the most important language feature for AI code generation. Academic research shows type-constrained decoding reduces errors by 50%+. Clojure's dynamic typing is a genuine disadvantage I failed to mention. This is now the first item in "The Case Against."
 
-The most interesting insight from this research is yogthos' argument that **the problem isn't the language, it's the architecture**. His thesis — that LLMs fail at large codebases because of unbounded context, and that state machines with schema contracts solve this — could apply to any language. Clojure makes this pattern more natural, but the core insight is language-agnostic.
+3. **Created false balance.** My v1 structure (4 arguments for, 4 against) made the case look evenly matched. The practical evidence overwhelmingly favors "against." The "for" arguments are mostly theoretical or from biased sources. I've preserved the structure but adjusted the evidence ratings and critical evaluation to reflect the actual weight.
 
-Similarly, the REPL advantage is real but **could be replicated** in other ecosystems. Python has ipython/jupyter. Elixir has IEx. The question is whether anyone will build the equivalent of clojure-mcp for those ecosystems with the same depth of integration.
+4. **Source echo chamber.** Nearly every source is from the Clojure community — blogs, subreddits, HN threads by Clojure users. I have zero testimony from someone who evaluated Clojure + AI and chose something else. The absence of external evaluation is itself informative: the broader industry isn't even considering Clojure for this use case.
 
-The honest assessment: Clojure's theoretical properties (immutability, data-orientation, REPL, homoiconicity) are **almost perfectly designed** for AI agent collaboration. But the practical reality (tiny training corpus, small ecosystem, niche community) means these advantages are only realized with significant effort and expertise. The Clojure community is producing some of the most intellectually rigorous thinking about how programming should adapt to AI agents — but whether that thinking gets adopted broadly or remains a niche curiosity depends on factors outside their control (model training data composition, framework ecosystem momentum).
+5. **Conflated two questions.** "Writing code with AI help in Clojure" vs "Building AI agent systems in Clojure" have different answers. I've now flagged this explicitly in the executive summary.
+
+6. **Gave Mycelium disproportionate weight.** A days-old framework with zero users got a full section with detailed analysis. I've retained it but added stronger caveats about its speculative nature and the fact that it's language-agnostic.
+
+7. **Applied FPEval results to Clojure without qualifying.** The paper benchmarks statically-typed FP languages. Clojure is dynamically typed. The failure modes differ. I've added this caveat.
+
+8. **"Right language for the wrong era" is pithy but misleading.** It implies the mismatch is temporal and will resolve. But dynamic typing, small ecosystem, and niche community are not era-dependent problems. Even if training data improves, TypeScript + types + large ecosystem may remain strictly better. I've revised the verdict.
+
+### What I'm still uncertain about:
+
+1. **Is the REPL compensatory or additive?** If Python agents already work well without REPL grounding (due to abundant training data), Clojure's REPL is fixing a weakness, not providing a superpower. I lean toward compensatory but can't prove it.
+
+2. **How fast does the training data gap close?** The FPEval data shows faster proportional improvement for FP languages. solomonb's Haskell experience suggests the latest models are surprisingly good at niche languages. But "surprisingly good" still means "needs significant refactoring for idiom."
+
+3. **Will Mycelium-style architectures prove out?** The thesis is plausible. Zero evidence. Could be important. Could be a blog post.
+
+### What I'm most confident about:
+
+1. **The type system advantage over Clojure is real and significant.** This is supported by peer-reviewed research, not just practitioner anecdotes.
+
+2. **Clojure's AI-coding future depends on a handful of toolmakers.** Bus factor of ~4 people for the entire ecosystem's AI tooling.
+
+3. **The ideas from the Clojure community are good but will be adopted elsewhere.** Bounded context, schema contracts, REPL-as-verification — these are language-agnostic insights wrapped in Clojure-specific packaging.
 
 ---
 
 ## Source Credibility Assessment
 
-| Source | Credibility | Bias | Notes |
-|--------|------------|------|-------|
-| Bruce Hauman (clojure-mcp) | High (created Figwheel, long track record) | Pro-Clojure, promoting own tool | Enthusiastic but technically credible |
-| Ivan Willig (Shortcut) | High (production experience, honest about struggles) | Pro-Clojure but balanced | Best single source — shares failures and solutions |
-| yogthos (Nubank) | High (prolific OSS contributor, Nubank credibility) | Strong pro-Clojure advocate | Mycelium too new for evidence, but thesis well-argued |
-| Freshcode article | Medium (consultancy promoting Clojure services) | Commercial interest in Clojure | Technically sound comparison, marketing motivation |
-| FPEval paper (arxiv) | High (academic, empirical) | None specific to Clojure | Doesn't benchmark Clojure directly, but FP findings apply |
-| Metosin blog | Medium (Clojure consultancy) | Pro-Clojure | Technically competent, promotional context |
-| r/Clojure Reddit threads | Mixed (community self-selection) | Survivorship bias | Useful for practitioner reports, discount enthusiasm |
-| Nubank/Marlon talk | Medium-High | Pro-Clojure (company uses it) | Real production context at scale |
-| HN discussions | Mixed | Varied | Best for contrarian views and cross-language perspectives |
-| solomonb (HN, Haskell) | High (writes Haskell professionally) | Pro-FP | Relevant parallel evidence for typed FP + LLMs |
+| Source | Credibility | Bias | Weight Given |
+|--------|------------|------|-------------|
+| FPEval paper (arxiv) | High (academic, empirical) | None re: Clojure | High — but extrapolation to Clojure flagged |
+| Type-constrained decoding (ACM PLDI) | High (peer-reviewed) | None | High — directly relevant to type system argument |
+| Bruce Hauman (clojure-mcp) | High technical skill | Pro-Clojure, promoting own tool | Medium — discount enthusiasm |
+| Ivan Willig (Shortcut) | High (production, honest) | Pro-Clojure but balanced | High — best single practitioner source |
+| yogthos (Nubank) | High (prolific OSS) | Strong pro-Clojure | Medium — Mycelium is speculation, not evidence |
+| solomonb (HN, Haskell) | High (professional) | Pro-typed-FP | High — provides counter-evidence to both sides |
+| Freshcode article | Medium (consultancy) | **Commercial interest in selling Clojure services** | Low-Medium — technically sound, marketing motivation |
+| Metosin blog | Medium (consultancy) | **Pro-Clojure, commercial** | Low-Medium |
+| druchan (FP blog) | Medium (individual) | Pro-typed-FP | Medium — well-argued, limited experience |
+| r/Clojure / HN Clojure threads | Mixed | Survivorship bias | Low — useful for anecdotes, discount enthusiasm |
+| azumo AI languages survey | Medium (consultancy) | None re: Clojure | Medium — useful as negative evidence |
+| Python REPL MCP implementations | High (working code) | None | High — direct counter to "unique REPL" claim |
 
 ---
 
 ## Key Unknowns
 
-1. **Will training data composition matter less over time?** If models become capable enough to write good Clojure from limited examples + REPL feedback, the training data deficit becomes irrelevant. Current trajectory suggests improvement but the gap persists.
+1. **Will training data composition matter less over time?** Trend says yes, but gap persists. solomonb's Haskell evidence suggests improvement. May reach "good enough" before reaching parity.
 
-2. **Will the REPL-as-verification pattern spread?** If Python/TS get equivalent MCP-style REPL integration, Clojure loses its distinctive advantage. Early signs suggest this is happening (Jupyter integration, TypeScript language servers).
+2. **Will type-constrained decoding become standard?** If so, dynamically-typed languages (Clojure, Python, Ruby) all lose out to typed ones (TypeScript, Haskell, Rust, OCaml). This would reshape the landscape in ways unfavorable to Clojure.
 
-3. **Will Mycelium-style architectures prove out?** If schema-enforced state machines genuinely solve context rot at scale, this could be a Clojure killer app for AI-assisted development. Zero evidence yet.
+3. **Will Mycelium-style architectures prove out?** If yes, the insight transcends Clojure. If no, nothing changes.
 
-4. **Will Clojure get included in model fine-tuning?** Some models may specifically train on Clojure. Anthropic's Claude seems to have the best Clojure support currently (per practitioner reports). If any lab decided to invest in Clojure training data, the landscape shifts.
+4. **Is the REPL-as-verification pattern already at parity across ecosystems?** Python REPL MCP servers exist but are newer and less deeply integrated. If they reach Clojure MCP's quality, the last distinctive advantage disappears.
 
 ---
 
-## Verdict
+## Verdict (Revised)
 
-**Clojure is the right language for the wrong era.** Its design principles — immutability, data orientation, REPL-driven development, homoiconicity — are arguably the ideal properties for collaborating with AI agents. But AI agents are trained on the languages people actually use, creating a self-reinforcing cycle that favors Python and TypeScript. The Clojure community is doing heroic work to bridge this gap through tooling (clojure-mcp, Mycelium), but they're swimming against a powerful current.
+Clojure's position for AI-agent coding is **weaker than its advocates claim** and **weaker than I initially assessed.** The key problems:
 
-The most likely outcome: Clojure's ideas will influence how other languages adapt to AI agents (schema contracts, REPL-as-verification, bounded context architecture) more than Clojure itself will benefit. The concepts are too good to stay niche; they're too niche to stay in Clojure.
+1. **The REPL advantage is real but already being commoditized** across other language ecosystems
+2. **Dynamic typing is a genuine liability** that academic research shows matters for AI code generation
+3. **The training data deficit is real and persisting**, requiring significant tooling investment to compensate
+4. **The best ideas from the Clojure community are language-agnostic** and will likely be adopted in larger ecosystems
 
-**Rating: B+** for theoretical positioning, **C+** for practical readiness. Net: **interesting to watch, risky to bet on** unless you're already invested.
+The most credible scenario: **TypeScript** (large training corpus + type system + fast feedback + huge ecosystem) or **Haskell/OCaml** (type system + purity + referential transparency) are better theoretical fits for AI-agent coding than Clojure. Python wins on pure ecosystem momentum regardless of language properties.
+
+Clojure is a **reasonable choice if you're already invested** (existing codebase, team expertise) and are willing to invest in tooling. It is **not a good choice for new projects** optimizing for AI-assisted development. The "right language for the wrong era" framing from v1 was too kind — it implied the era would eventually arrive. The structural issues (dynamic typing, small ecosystem, niche community) are not temporal.
+
+**Rating:** B for theoretical interest (data-oriented design, REPL culture), **C** for practical readiness, **C-** relative to alternatives (TypeScript, Haskell, Python). Net: **a niche within a niche**, sustained by a small community of exceptional toolmakers.
