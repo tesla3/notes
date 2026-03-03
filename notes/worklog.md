@@ -77,3 +77,23 @@
   - Key finding: overwhelming rejection of raw sessions, emerging consensus around structured intent capture (CIRs, spec files, plan docs)
   - Notable: dang's meta-comment about Show HN drowning in AI-generated submissions
   - Saved to `research/hn-ai-session-commits.md`, linked from `topics/coding-agents.md`
+
+## 2026-03-02
+- Deep verification pass on `research/clojure-ai-agent-coding.md` (v3)
+  - Verified all major claims against primary sources: Mündler PLDI 2025, FPEval, ChopChop, Willig report, Nubank blogs
+  - **New sources added:**
+    - Felix Barbalet "Simple Made Inevitable" (Feb 19, 2026) — strongest pro-Clojure argument, token efficiency data from Rosetta Code
+    - GitHub Blog "Why AI is pushing developers toward typed languages" (Jan 2026) — high-credibility pro-types evidence
+    - Nubank Feb 2026 blog (Clojure South) — Marlon explicitly positions Clojure as orchestration layer
+    - serefayar's Substack (Jan 2026) — agent engine from scratch in Clojure
+    - State of Clojure 2025 Survey — notable: AI not mentioned as adoption driver
+    - lobste.rs discussion of Barbalet piece — sharp counter-arguments
+  - **Corrections:**
+    - ChopChop: arxiv 2025 → POPL 2026 (stronger venue)
+    - Mycelium date: Mar → Feb 25, 2026
+    - Freshcode: Jan 2026 → Dec 31, 2025
+    - Nubank: two separate blog posts conflated, now properly attributed
+    - druchan explicitly places Clojure Spec in "far less" category
+  - **New argument engaged:** brownfield barrier thesis (maintainability > generation quality). Compelling but unfalsifiable at present.
+  - **Verdict slightly adjusted:** C→C+ practical readiness (MCP ecosystem growth), added third question about long-term maintainability
+  - Key takeaway: dynamic typing remains the critical structural weakness. Best pro-Clojure argument now is about the future, not the present.
