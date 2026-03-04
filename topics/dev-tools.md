@@ -58,6 +58,14 @@ Tobi Lütke's hybrid search engine: BM25 + vector + LLM reranker, all running lo
 
 ---
 
+## Modern CLI Tools
+
+**Reference:** Comprehensive tally of 100+ modern CLI tools — Rust/Go/Zig replacements for classic Unix commands, community consensus tiers, the Yazelix terminal IDE pattern.
+
+→ [Full tally](../research/modern-cli-tools-tally.md)
+
+---
+
 ## Web Browsers (macOS)
 
 **Decision:** Safari as daily driver, Firefox kept for specific use cases.
