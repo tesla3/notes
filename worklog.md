@@ -3,6 +3,21 @@
 > **Note:** File paths in entries before 2026-02-17 session 7 refer to the flat structure
 > before the notes reorg. See [README.md](README.md) for current file locations.
 
+## 2026-03-04 — Second-round edge case review of tool-use rules
+
+- Re-reviewed `research/agent-tool-use-self-review.md` stress test with 22 independent tests against 273 session files
+- **7 broken rules found:**
+  - `head -1 | wc -c` safety check broken on ALL JSONL files (first record = 147-byte header, data records up to 700x larger)
+  - `rg -A/-B` context lines completely absent from both docs — it's the best single-call section extractor
+  - `rg -l` is a dead end when `rg -n` is always the better first call
+  - `ls` default sort is alphabetical; `ls -t` is almost always more useful for agents
+  - Snowball "~10 remaining turns" is wrong: 4x underestimate at session start, 2.5x overestimate at end
+  - `| tail -20` doesn't capture stderr-only output; needs `2>&1 |`
+  - File size < 5KB threshold fires on only 2% of research files; wrong axis (search-target-available is correct)
+- **2 missing tools:** `rg -A/-B` (context lines), `rg -F` (literal string search)
+- **Meta-finding:** conditional rules spawning sub-rules for each exception → rules keep getting longer. Tool selection is a decision tree, not a rule set.
+- Decision: not restructuring into decision tree yet — evidence first, format second
+
 ## 2026-03-03 — HN distill: "Nobody Gets Promoted for Simplicity"
 
 - Distilled HN thread (173 pts, 65 comments) on terriblesoftware.org article
