@@ -111,6 +111,7 @@ Kiro CLI's context model: guidance (conventions) + instructions (task-specific) 
 
 ### Multi-Agent Coordination
 - [HN: Parallel Coding Agents with tmux & Markdown Specs](../research/hn-parallel-coding-agents-tmux-47218318.md) — spec-driven FD workflow, ~8 agent cognitive ceiling, "don't sync, own" pattern, deny-list security broken, output is personal/internal tooling, tool churn outpacing workflow stabilization
+- **[Distributed Systems Lessons for Parallel Agents](../research/distributed-systems-parallel-agents.md)** — CAP theorem analog, saga patterns, optimistic concurrency, semantic state gap (syntactic/semantic/process layers), NERDs entity-centered memory, why types+tests are the non-rotting semantic state layer
 - [HN: Cord — Coordinating Agent Trees](../research/hn-cord-coordinating-agent-trees.md) — spawn/fork primitives, context flow debate, framework ephemerality thesis
 - [HN: Cursor Browser Experiment](../research/hn-cursor-browser-experiment.md) — autonomous agents produce 3M LOC non-compiling browser, "from scratch" claim debunked, verification as missing primitive
 
