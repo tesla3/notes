@@ -87,6 +87,8 @@ Not yet grouped into topics:
 - [HN: Claude Outage March 2026](research/hn-claude-outage-2026-03.md) — dependency crisis masked by tribal politics, OpenAI migration DDoS, AWS drone strikes, skill atrophy generational split, knowledge-hoarding feedback loop
 - [CLI Tools & Context Efficiency for Coding Agents](research/cli-tools-context-efficiency.md) — agentic search beats RAG, 10x token efficiency variation between agents, AgentDiet trajectory reduction, CLI over MCP, tool usage patterns for minimal context consumption
 - [Agent Tool Use Self-Review](research/agent-tool-use-self-review.md) — critical audit of my own tool use across 271 sessions; 74% of context wasted on max-token web searches; anti-patterns and fixes
+- [Expert CLI Tricks for Context Saving](research/expert-cli-tricks-for-context-saving.md) — cross-reference of expert human knowledge against agent rules; 9 missing techniques; operation-vs-tool meta-lesson
+- [AGENTS.md Best Practices](research/agents-md-best-practices.md) — practitioner consensus from 13 sources (Anthropic, GitHub 2500-repo analysis, HumanLayer, Arize prompt learning); instruction budget, progressive disclosure, critical review of our own file
 
 ## Collections
 

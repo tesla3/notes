@@ -833,3 +833,20 @@
     - Measured trajectory turn cost: 1,206 chars/turn non-thinking, ~12 KB snowball per extra turn
     - grep vs rg in node_modules dir: 1,208,782 vs 1,240 chars (99.9% savings — rg's biggest win)
     - git diff --stat overhead is only 225 chars (~1-3%) — always worth it even worst case
+
+### 2026-03-04 (session 5) — AGENTS.md Best Practices Research & Critical Review
+
+- **Fixed**: "4x" → "~10x" in CLI Tool Use snowball cost (was wrong per self-review data: 39/4≈10x)
+- **Researched**: 13 credible sources on AGENTS.md/CLAUDE.md best practices
+  - Key sources: Anthropic official docs, GitHub Blog (2,500-repo analysis), HumanLayer (instruction budget),
+    Arize (prompt learning +5-11% from instructions alone), Buildcamp (2026 guide), rosmur (12-source synthesis)
+- **Key findings**:
+  - Instruction budget: ~150-200 for frontier LLMs; Claude Code system prompt uses ~50; our file has ~55 instructions (well within budget)
+  - Performance degrades uniformly as instruction count increases (not just later instructions)
+  - LLMs bias toward instructions at prompt peripheries (beginning + end) — our layout is optimal
+  - "Document corrections, not education" — every rule in our file passes this test
+  - Progressive disclosure is the unanimous recommendation — we already do this via skills + conditional navigation
+  - Arize's prompt learning: +5.19% accuracy from instructions alone, +10.87% for repo-specific
+- **Critical review verdict**: Our AGENTS.md is in the top tier. No material changes recommended.
+  95 lines, ~55 instructions, correction-oriented, no fluff, CLI section uniquely valuable
+- **Saved**: research/agents-md-best-practices.md, updated README index
