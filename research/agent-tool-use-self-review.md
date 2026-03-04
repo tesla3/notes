@@ -237,7 +237,162 @@ The companion research document has stronger factual grounding but the citation 
 
 ---
 
+## Second-Round Edge Case Review (2026-03-04)
+
+Independent re-review found **7 broken rules, 2 missing tools, and 3 wrong assumptions** that the original stress test missed. The stress test caught surface-level edge cases but didn't think broadly enough about the actual tool-use workflow.
+
+### BROKEN: `head -1 | wc -c` Safety Check for JSONL
+
+The rule says: "check record size first with `head -1 file | wc -c`."
+
+**Tested:** ALL 273 session files have first record = exactly 147 bytes (session metadata header). Actual data records start at line 2+ and range up to 104K+ chars — a **700:1 ratio** between first and largest record. In 20/20 recent sessions tested, `head -1 | wc -c` returns 147, which passes the 5KB safety threshold, but later records routinely exceed 50KB.
+
+**The rule would greenlight `jq '.'` on every session file and get burned on every one.**
+
+| File | head -1 | Max record | Ratio |
+|---|---|---|---|
+| All 273 files | 147 bytes | varies | - |
+| Session with images | 147 | 104,738 | 713x |
+| Typical session | 147 | 17,714 | 120x |
+
+**Fix:** `head -1 | wc -c` only works when records are homogeneous. For JSONL with a header line (which is the norm in pi, and common in ML/analytics formats), use `awk 'NR>1{print length; exit}'` or check multiple lines: `head -5 | awk '{print length}'`. The 5KB threshold should apply to the MAX of the first few records, not just line 1.
+
+### MISSING: `rg -A/-B` Context Lines (Single-Call Alternative)
+
+Neither document mentions `rg -A N` or `rg -B N` anywhere. This is a major gap — it's often the **single best tool for the job**.
+
+**Tested against the doc's own anti-pattern #3 (3 read calls with offsets):**
+
+| Approach | Chars | Calls |
+|---|---|---|
+| 3 `read` calls with offsets | 17,493 | 3 |
+| `rg -n` + `read` 10 lines | ~1,050 | 2 |
+| `rg -A 20 "^## section"` | **954** | **1** |
+| Read whole 19KB file | 19,310 | 1 |
+
+`rg -A 20` gets the same information in 1 call and fewer chars than any multi-call approach. Break-even with full-file-read is ~2.1 KB — meaning for any file > 2KB, `rg -A N` is better when you know what section you want.
+
+Also useful: `rg -B 2 -A 5 "pattern"` for getting context around matches — 2,308 chars for "snowball" in a 19KB file, vs 19,310 for the whole file. For clustered matches, `rg` auto-deduplicates overlapping context regions.
+
+**This should be the PRIMARY recommendation for "find a section in a known file," not `rg -n` + `read`.**
+
+### BROKEN: `rg -l` When You Need `rg -n` Anyway
+
+The rules recommend `rg -l` to find which file, then further search. But in practice, if you need to know *where* in the file, you always follow `rg -l` with `rg -n` — two calls when one suffices.
+
+**Tested:**
+
+| Approach | Chars | Calls |
+|---|---|---|
+| `rg -l "AgentDiet" research/` | 80 | 1 (but need another call) |
+| `rg -n "AgentDiet" research/` | 1,918 | 1 (done) |
+
+`rg -l` is only correct when the question is literally "which files contain X?" and you don't need line numbers. For the common "find and read" workflow, `rg -n` (or `rg -A N`) is always the right first call.
+
+**Exception:** `rg -l` is still better than `ls` for large directories where you're filtering (the original doc's point). But it's not a step in a multi-call pipeline.
+
+### BROKEN: `ls` Default Sort for Agent Workflows
+
+`ls` alphabetizes by default. For an agent, the most recent files are almost always more relevant.
+
+**Tested:** `ls research/ | head -5` returns `absurd-durable-execution-landscape.md` through `agent-security-synthesis.md` (alphabetically early but months old). `ls -t research/ | head -5` returns today's files. Same character count (733 vs 597 — time sort is actually 18% shorter because recent filenames happen to be shorter).
+
+**Fix:** The rule should say `ls -t | head -20` for discovery, not `ls | head -20`. Alphabetical sort is only useful when you know the filename prefix.
+
+### WRONG: "~10 Remaining Turns" Snowball Estimate
+
+The trajectory snowball formula uses "~10 remaining turns" as a constant. The actual session turn count distribution (273 sessions):
+
+| Percentile | Turns |
+|---|---|
+| P25 | 20 |
+| P50 (median) | 44 |
+| P75 | 73 |
+| P90 | 119 |
+
+At turn 5 of a median session, you have ~39 remaining turns — the snowball cost is **4x higher** than claimed (230 KB, not 60 KB). At turn 40, only 4 remaining — **2.5x lower** (24 KB). The doc's fixed estimate of ~60 KB for 5 extra turns is wrong for **both** early and late sessions.
+
+| Position | Remaining | 5-turn snowball cost |
+|---|---|---|
+| Turn 5 | ~39 | 230 KB |
+| Turn 10 | ~34 | 200 KB |
+| Turn 20 | ~24 | 141 KB |
+| Turn 30 | ~14 | 82 KB |
+| Turn 40 | ~4 | 24 KB |
+
+**Implication:** Turn reduction matters MORE early in a session and LESS late. The fixed "~10 remaining" estimate understates early-session waste by 4x — which is when multi-probe exploration (#4) most commonly happens.
+
+### BROKEN: `| tail -20` on stderr-Only Commands
+
+The doc's advice: "`| tail -20` for error-checking."
+
+**Tested:** A command that writes only to stderr (common with `pip install`, `curl -s`, progress bars):
+- `command | tail -5` → captures nothing (pipe only catches stdout)
+- `command 2>&1 | tail -5` → captures the errors
+
+The doc mentions `2>&1` once in a combined recipe but doesn't flag that `| tail` is BROKEN for stderr-only output. Many common error-producing commands (pip, curl, cargo) write progress to stderr and errors to stderr. Piping stdout catches neither.
+
+**Fix:** The error-checking rule should always be `2>&1 | tail -20`, never just `| tail -20`.
+
+### WRONG: "< 5KB Just Read Whole File" Threshold
+
+**Tested against actual project data:**
+
+| Directory | Files < 5KB | Total files | % under threshold |
+|---|---|---|---|
+| research/ | 6 | 281 | **2.1%** |
+| topics/ | 3 | 4 | 75% |
+| root .md files | 2 | 10 | 20% |
+
+The rule fires on 2% of research files. The median research file is 10.6 KB. For this project, a 5KB threshold means "always use targeted reading" on almost everything. 
+
+The break-even calculation (with `rg -A N` as the alternative) shows full-file-read loses at ~2.1 KB. So the 5KB threshold is actually too *generous* — `rg -A N` beats full read starting at 2KB, not 5KB. But if `rg -A N` isn't in the toolkit (and it isn't in the current rules), the break-even for rg-n-then-read is ~2.2 KB (2 calls).
+
+**The real rule:** If you have a search pattern, use `rg -A N` regardless of file size. If you're exploring without a pattern, just read the file. The size threshold is a red herring — what matters is whether you have a search target.
+
+### MISSING: `rg -F` for Literal Searches
+
+`rg` uses regex by default. Searching for code patterns with `|`, `(`, `.`, `*`, `[` will produce wrong results silently.
+
+**Tested:** `rg -c '|' file` matches ALL 53 lines containing pipe characters (regex OR). `rg -Fc '|---|' file` correctly finds 4 table separators.
+
+The rules recommend rg throughout but never mention `-F` for literal strings. An agent searching for `console.log(` or `import { x }` will get garbage regex matches unless it knows to use `-F` or escape.
+
+### Additional Finding: Per-Turn Overhead in Current Session
+
+This session's own tool calls (43 calls, 42 results) show:
+- Average tool call framing: 600 chars
+- Average tool result: 2,766 chars
+- Total tool result content: 113 KB in 42 calls
+
+This session spent 43 tool calls collecting evidence for a review document. Whether that's efficient depends on the alternative — but it's a live demonstration of the "many small probes" pattern that anti-pattern #4 warns about. The difference: these probes are independent (parallel-safe), not sequential trial-and-error.
+
+### Summary: What the Stress Test Got Right and Wrong
+
+**Got right:**
+- Breadth vs depth search tool selection (llm-context vs search+content)
+- `| head` hiding errors
+- Large JSONL records breaking `jq '.'`
+- `rg -l` worse than `ls` for small dirs
+- `git diff --stat` always worth it
+
+**Missed:**
+1. `head -1 | wc -c` broken on files with header lines (all JSONL in this project)
+2. `rg -A/-B` context lines — the best single-call alternative for section extraction
+3. `rg -l` is a dead end when you need `rg -n` anyway
+4. `ls` vs `ls -t` for agent-relevant sort order
+5. Snowball cost is position-dependent (4x underestimate early, 2.5x overestimate late)
+6. `| tail` doesn't capture stderr without `2>&1`
+7. File size threshold is the wrong axis — search-target-available is the right one
+8. `rg -F` for literal strings never mentioned
+9. Multiple small reads: batch with `cat` saves turns (~15% at 3 files)
+
+**Meta-pattern:** The stress test found edge cases where absolute rules break, then replaced them with conditional rules. But the conditional rules themselves have edge cases (header lines, stderr routing, regex vs literal). The lesson isn't "make rules more conditional" — it's that **tool selection is a decision tree, not a rule set.** The rules keep getting longer because each exception spawns a sub-rule. A decision tree (if/then) is more compact and executable than a list of caveated rules.
+
+---
+
 ## Sources
-- Self-analysis of 271 pi sessions in `/Users/js/.pi/agent/sessions/`
+- Self-analysis of 273 pi sessions in `/Users/js/.pi/agent/sessions/`
 - [CLI Tools & Context Efficiency for Coding Agents](cli-tools-context-efficiency.md)
 - Verification: independent re-parse of all session JSONL files, Brave Search for source verification
+- Second-round edge case testing: 2026-03-04, 22 independent tests against project data
