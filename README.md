@@ -85,6 +85,8 @@ Not yet grouped into topics:
 - [Design Patterns in an Agent-Everywhere Future](research/design-patterns-agent-future.md) — what shifts when LLM agents are primary actors; 10 existing patterns that become load-bearing (State Machine, Circuit Breaker, Saga, Idempotency), patterns needing adaptation (CQRS, Repository/RAG, ACL for LLM output), 10 genuinely new patterns (Context Engineering, Guardian/Sentinel, Human-in-the-Loop Gate, Capability Card, Nondeterminism Envelope, Memory Hierarchy, Prompt-as-Contract, Hierarchical Delegation, Sandboxed Execution, Asymmetric Verification), open problems, pattern interaction map for agent systems
 - [Clojure for AI Agent-Assisted Coding](research/clojure-ai-agent-coding.md) — REPL advantage real but commoditized, type system gap (critical), training data deficit, Mycelium thesis (language-agnostic), source echo chamber; revised verdict: weaker than advocates claim
 - [HN: Claude Outage March 2026](research/hn-claude-outage-2026-03.md) — dependency crisis masked by tribal politics, OpenAI migration DDoS, AWS drone strikes, skill atrophy generational split, knowledge-hoarding feedback loop
+- [CLI Tools & Context Efficiency for Coding Agents](research/cli-tools-context-efficiency.md) — agentic search beats RAG, 10x token efficiency variation between agents, AgentDiet trajectory reduction, CLI over MCP, tool usage patterns for minimal context consumption
+- [Agent Tool Use Self-Review](research/agent-tool-use-self-review.md) — critical audit of my own tool use across 271 sessions; 74% of context wasted on max-token web searches; anti-patterns and fixes
 
 ## Collections
 

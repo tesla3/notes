@@ -98,6 +98,18 @@
   - **Verdict slightly adjusted:** C→C+ practical readiness (MCP ecosystem growth), added third question about long-term maintainability
   - Key takeaway: dynamic typing remains the critical structural weakness. Best pro-Clojure argument now is about the future, not the present.
 
+## 2026-03-04
+- Assessed QMD feasibility on this machine (i3-1000NG4, 8GB RAM, Intel Iris Plus)
+  - BM25 mode would work fine; hybrid pipeline (3 GGUF models on CPU, no Metal) would be 30-60s+ per query — borderline unusable
+- Researched and compiled comprehensive modern CLI tools tally
+  - 100+ tools across 16 categories, community consensus tiers, Yazelix terminal IDE pattern
+  - Sources: GitHub awesome lists, Reddit r/rust polls, curated blogs, dotfiles repos (2024-2026)
+  - Saved to `research/modern-cli-tools-tally.md`, linked from `topics/dev-tools.md`
+- Installed agent-useful tools: `tokei`, `scc`, `ast-grep` (code metrics + structural search)
+- Installed human-UX tools: `bat`, `eza`, `git-delta`, `dust`
+  - delta was already configured in `.gitconfig` (side-by-side, navigate, line-numbers)
+  - Updated `.zshrc`: `cat→bat`, `ls→eza`, `ll→eza -la`, `tree→eza --tree`, `treed→eza -TD`
+
 ## 2026-03-03
 - **Critical review of `research/distributed-systems-parallel-agents.md`**
   - Verified claims against primary sources (Dria mem-agent blog, USL literature, CAP theorem critiques, saga pattern definitions)
