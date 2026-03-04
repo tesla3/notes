@@ -4,6 +4,8 @@
 
 **Source:** [HN thread](https://news.ycombinator.com/item?id=46635345) · 799 points · 1245 comments · ~1 month old (Feb 2026)
 
+**See also:** [HN: How to talk to anyone](hn-how-to-talk-to-anyone.md) — the individual/tactical companion to this thread's structural/systemic focus.
+
 **Thread summary:** OP asks how to help "countless voiceless people [who] sit alone every day and have no one to talk to" and default to social media. An Ask HN with no external link, 200 comments sampled from a 1245-comment thread.
 
 ### Dominant Sentiment: Earnest but self-contradicting helpfulness
