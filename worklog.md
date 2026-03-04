@@ -772,3 +772,34 @@
   - Star comment: vidarh's sub-agent workflow for context management
   - Thread meta-irony: moral conviction driving migration IS the scaling pressure causing outages
   - Saved to research/hn-claude-outage-2026-03.md, linked from README
+
+## 2026-03-04
+
+- Deep research: CLI tools & context efficiency for coding agents
+  - Explored available CLI tools in pi environment (rg, fd, ast-grep, jq, sqlite3, tokei, bat, eza, delta, gh, curl, tmux, rodney)
+  - Researched what experts/practitioners are doing for context efficiency
+  - Key findings:
+    - 99% of agent tokens are re-sent input (trajectory), not output — context efficiency is THE optimization
+    - Claude Code deliberately abandoned RAG for agentic search (rg/grep) — simpler tools, better results
+    - Token efficiency varies 10x between agents: Aider (8.5-13k via tree-sitter+PageRank) vs Codex CLI (highest)
+    - AgentDiet (Sep 2025): 40-60% token reduction via trajectory pruning, no performance loss
+    - Simple observation masking beats LLM summarization (cheaper, Pareto-optimal)
+    - CLI > MCP for token efficiency (~40% savings — no persistent tool definitions, no JSON-RPC framing)
+    - ast-grep practitioners forcing it as primary search tool for accuracy + less noise
+    - Sub-agents for context isolation (explored by sub-agent, summary returned to main)
+  - Synthesized into research/cli-tools-context-efficiency.md, linked from README
+  - Self-audited tool use across 271 sessions in this project
+    - 121MB total tool output (~30M tokens); 72% read, 26% bash
+    - This session: 74% of context consumed by web searches at max token settings
+    - Identified 6 anti-patterns: max-token searches before surveying, large dir listings, incremental file reads, trial-and-error schema probing, redundant tool discovery, no `| head` safety
+    - Key fix: search.js → content.js pipeline instead of llm-context.js --tokens 16384
+    - Saved to research/agent-tool-use-self-review.md
+  - Critical review of agent-tool-use-self-review.md — independent verification
+    - Re-parsed all 272 session JSONL files; verified every quantitative claim
+    - Numbers directionally correct but inflated 3-6%: 114.4 MB actual vs 121 MB claimed
+    - Image session claim wrong: 37 unique images (not 44), 65 MB consumed (not 33 MB), 36 duplicated across sessions
+    - Web search % on "this session" actually worse than stated (79% vs 74%)
+    - Found citation error in companion doc: arxiv:2508.11126 is "AI Agentic Programming: A Survey," NOT the code retrieval study
+    - ContextBench framing inconsistency: paper says "marginal gains," doc presented it as supporting 10x efficiency differences
+    - Verified: AgentDiet, Lindenbauer, CompLLM, Chroma context rot, NVIDIA RULER — all check out
+    - Updated both research files with corrections and verification notes
