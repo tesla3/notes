@@ -850,3 +850,10 @@
 - **Critical review verdict**: Our AGENTS.md is in the top tier. No material changes recommended.
   95 lines, ~55 instructions, correction-oriented, no fluff, CLI section uniquely valuable
 - **Saved**: research/agents-md-best-practices.md, updated README index
+- **AGENTS.md optimizations applied** (4 changes total this session):
+  1. `4x` → `~10x` snowball cost (factual fix from self-review data)
+  2. `"Verify accuracy before acting and after changing"` — closes verify-after gap (Anthropic's #1 best practice)
+  3. `"Suggest CLI/TUI alternatives, not GUI"` — alternative instead of bare prohibition
+  4. `IMPORTANT:` on decision ladder — marks high-violation-risk rule
+- **Skipped** (justified): one-sentence scope description, IMPORTANT consistency review, CLI section extraction to skill
+- Synced AGENTS.md via chezmoi, committed and pushed to dotfiles repo
