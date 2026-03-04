@@ -803,3 +803,12 @@
     - ContextBench framing inconsistency: paper says "marginal gains," doc presented it as supporting 10x efficiency differences
     - Verified: AgentDiet, Lindenbauer, CompLLM, Chroma context rot, NVIDIA RULER — all check out
     - Updated both research files with corrections and verification notes
+  - Stress-tested all anti-pattern rules against edge cases
+    - Ran actual commands for each rule: bad vs good approach, measured savings
+    - Found 6 of 8 rules break under edge cases — converted absolute rules to conditional
+    - Key findings: search.js→content.js 2.6x WORSE for breadth (llm-context 4096 covers 16 sources in 21K);
+      content.js on arxiv/wikipedia dumps 65K chars (no cap); 2-search limit misses critical papers;
+      rg -l worse than ls for <20 files; head|jq dangerous on large records; |head hides tail errors
+    - Measured trajectory turn cost: 1,206 chars/turn non-thinking, ~12 KB snowball per extra turn
+    - grep vs rg in node_modules dir: 1,208,782 vs 1,240 chars (99.9% savings — rg's biggest win)
+    - git diff --stat overhead is only 225 chars (~1-3%) — always worth it even worst case
