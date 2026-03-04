@@ -3,6 +3,20 @@
 > **Note:** File paths in entries before 2026-02-17 session 7 refer to the flat structure
 > before the notes reorg. See [README.md](README.md) for current file locations.
 
+## 2026-03-03 — HN distill: "Nobody Gets Promoted for Simplicity"
+
+- Distilled HN thread (173 pts, 65 comments) on terriblesoftware.org article
+- Article bundles two claims: simplicity is unrewarded (headline) + here's how to get rewarded for it (body). Thread notices the contradiction.
+- Key thread findings:
+  - Multiple commenters (kstrauser, cyberax, ChadMoran, semiinfinitely) report being promoted for simplicity — but always by *replacing* visible complexity, not building simple from scratch
+  - sssilver (former EM): promotions decided by manager's manager who can't distinguish "easy problem" from "hard problem made easy" — legibility at distance is the structural barrier
+  - bob001: promotion ladders literally encode complexity in criteria ("year-long initiative", "multiple teams")
+  - Swizec: on-call ownership as simplicity incentive — engineers simplify fast when they carry the pager
+  - al_borland + abustamam: firefighter-arsonist anti-pattern confirmed from personal experience
+  - losalah: unearned complexity as leverage — builder gets the bonus, team services the payments
+- Thread misses: AI-generated code amplifies the problem (complexity bottleneck was effort, now removed); measurement void is the real story (no metrics for changeability/maintenance cost); third option beyond "ship simple and hope" or "overbuild" is deliberate judgment trail (ADRs, threshold triggers)
+- Saved to `research/hn-nobody-gets-promoted-for-simplicity.md`
+
 ## 2026-03-02 — Brainstorm: Pi as Stateful Actor with A2A
 
 - Synthesized research across A2A integration analysis, Durable Objects/Rivet Actors, Software Architecture AI Era, Elixir agent frameworks HN thread, durable execution landscape, and fresh internet search (ActorCore launch, AgentMaster paper, Spring AI A2A patterns, Google ADK Interactions API)
@@ -751,3 +765,10 @@
   - AAIF (Linux Foundation) now governs MCP + AGENTS.md + A2A; protocol landscape crystallizing
   - Revised verdict: "good answer in the wrong dialect" — ACP implementation is the obvious next step
   - Updated research file with self-corrections and broader protocol landscape
+
+## 2026-03-03
+- Distilled HN thread on Claude outage (47227647, 162 comments)
+  - Key dynamics: OpenAI→Anthropic migration surge causing the outages, DoD standoff as retention moat, AWS ME data centers hit by drone strikes (first military strike on US Big Tech infra), skill atrophy debate crystallized into 3 camps, knowledge-hoarding feedback loop (LLM as sole knowledge repository)
+  - Star comment: vidarh's sub-agent workflow for context management
+  - Thread meta-irony: moral conviction driving migration IS the scaling pressure causing outages
+  - Saved to research/hn-claude-outage-2026-03.md, linked from README
