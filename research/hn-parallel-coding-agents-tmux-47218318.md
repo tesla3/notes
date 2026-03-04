@@ -22,7 +22,7 @@ Schipper caps at 8. sluongng's "H2A ratio" framework from his Substack formalize
 
 **3. The "don't sync, own" model is emerging as the winning pattern**
 
-briantakita's agent-doc makes each agent own one markdown document with its own conversation history. CloakHQ tried shared "ground truth" files and hit drift. The article's FD system implicitly follows the same pattern: one spec = one agent = one worktree. tdaltonc's NERDs paper (entity-centered rather than chronological shared memory) provides a theoretical frame for why this works — agents need to answer "what is the current state of X" not "what happened in what order" (CloakHQ). The thread is rediscovering a distributed systems principle: avoid shared mutable state.
+briantakita's agent-doc makes each agent own one markdown document with its own conversation history. CloakHQ tried shared "ground truth" files and hit drift. The article's FD system implicitly follows the same pattern: one spec = one agent = one worktree. tdaltonc's NERDs concept (entity-centered rather than chronological shared memory, described in an HN comment — not a published paper) provides a theoretical frame for why this works — agents need to answer "what is the current state of X" not "what happened in what order" (CloakHQ). The thread is rediscovering a distributed systems principle: avoid shared mutable state.
 
 **4. The deny-list security model is fundamentally broken and everyone knows it**
 

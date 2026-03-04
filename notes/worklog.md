@@ -97,3 +97,14 @@
   - **New argument engaged:** brownfield barrier thesis (maintainability > generation quality). Compelling but unfalsifiable at present.
   - **Verdict slightly adjusted:** C→C+ practical readiness (MCP ecosystem growth), added third question about long-term maintainability
   - Key takeaway: dynamic typing remains the critical structural weakness. Best pro-Clojure argument now is about the future, not the present.
+
+## 2026-03-03
+- **Critical review of `research/distributed-systems-parallel-agents.md`**
+  - Verified claims against primary sources (Dria mem-agent blog, USL literature, CAP theorem critiques, saga pattern definitions)
+  - **5 issues found and corrected:**
+    1. NERDs "paper" doesn't exist — it's tdaltonc's HN comment concept, not a published paper. Fixed in both this file and the source HN distillation.
+    2. mem-agent claim ("outperforms GPT-5 and Claude Opus") was misleading — added caveats about self-benchmarking, Qwen3 prompt optimization, Claude Opus 4.1 scaffold incompatibility.
+    3. CAP theorem analog was presented as direct mapping — added Kleppmann critique, voluntary vs involuntary isolation distinction, PACELC suggestion.
+    4. Saga pattern was overapplied — qualified that FD lifecycle is a state machine, not a saga (no distributed transactions, no compensating rollbacks).
+    5. USL applied to human cognition was presented as literal — reframed as metaphorical, noted Miller's Law as better explanation.
+  - **Strengths confirmed:** Section 7 (event sourcing/state taxonomy) is genuinely insightful and original. Sections 1, 5, 8 are well-grounded.
