@@ -391,6 +391,10 @@ This session spent 43 tool calls collecting evidence for a review document. Whet
 
 ---
 
+## Related
+
+- [Expert CLI Tricks for Context Saving](expert-cli-tricks-for-context-saving.md) — cross-reference of expert human knowledge against these rules. Identifies 9 missing techniques and proposes operation-oriented rule structure.
+
 ## Sources
 - Self-analysis of 273 pi sessions in `/Users/js/.pi/agent/sessions/`
 - [CLI Tools & Context Efficiency for Coding Agents](cli-tools-context-efficiency.md)
