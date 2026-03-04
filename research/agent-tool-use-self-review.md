@@ -59,7 +59,9 @@ Excluding those image sessions, `bash` dominates most sessions.
 
 **The fix:** `head -2 file.jsonl | jq '.'` — read one or two full records first to understand the schema. Then write the correct query. One call instead of six.
 
-**Nuance (verified):** The "good" approach actually produces *more* raw output (~2.4 KB vs ~0.8 KB from 6 probes) because a full JSON pretty-print is verbose. The savings are in **trajectory turns, not output bytes** — each turn adds ~500 tokens of assistant reasoning that snowball through the context window. 6 turns ≈ 3,000 extra trajectory tokens the raw comparison misses.
+**Nuance (verified):** The "good" approach actually produces *more* raw output (~2.4 KB vs ~0.8 KB from 6 probes) because a full JSON pretty-print is verbose. The savings are in **trajectory turns, not output bytes** — each turn adds ~1.2 KB of non-thinking assistant content (text + tool call args, measured across 50 sessions) that snowballs through the context window. 6 turns × 1.2 KB × ~10 remaining turns ≈ 72 KB of extra trajectory cost.
+
+**Safety caveat (tested):** `head -2 | jq '.'` on files with large records (e.g., session JSONL with base64 images at 1.1 MB/line) can dump megabytes. **Always check record size first:** `head -1 file | wc -c`. If > 5 KB, use `head -5 | jq -c '{type, keys: keys}'` (396 chars) instead of full pretty-print.
 
 ### 5. Tool discovery for tools I already know about
 
@@ -67,38 +69,63 @@ Excluding those image sessions, `bash` dominates most sessions.
 
 **The fix:** Only check tools I don't already know about from my system prompt / AGENTS.md.
 
-### 6. Verbose bash output without `| head` safety
+### 6. Verbose bash output without output caps
 
 **The sin:** Several exploratory commands without output caps. `brew list` (2.7KB), `find /Users/js/.pi ...` (3.6KB) — not catastrophic individually, but the habit matters.
 
-**The fix:** Default to `| head -20` on any exploratory command. Remove the cap only after confirming the output is manageable.
+**The fix:** Cap exploratory commands — but **choose head vs tail based on where the signal is.**
+- Discovery/sampling (`ls`, `find`, `brew list`): `| head -20`
+- Error checking (`make`, `pytest`, `pip install`): `| tail -20` — errors are at the end, head hides them
+- Both: `cmd 2>&1 | { head -5; echo '...'; tail -10; }` when you need structure + error
 
 ---
 
-## Rules to Internalize
+## Rules to Internalize (Stress-Tested)
+
+_Every rule below was tested against edge cases. Caveats are noted where the original recommendation was too absolute._
 
 ### Search Discipline
-- **`search.js` → `content.js`** is almost always better than **`llm-context.js --tokens 16384`**
-- Start `llm-context.js` at `--tokens 4096`, not 16384
-- Never run more than 2 web searches before reviewing results and narrowing
+
+**Choose by query type, not by default:**
+
+| Query type | Best tool | Why |
+|---|---|---|
+| Known URL | `content.js` | Skip search entirely |
+| Specific answer (1-2 facts) | `search.js` → `content.js` on best hit | Targeted, 56% savings vs max-token llm-context |
+| Survey / breadth | `llm-context.js --tokens 4096` | Aggregates 16+ sources into ~21 KB — best signal density per byte |
+| Deep on one source | `content.js` | But beware: arxiv HTML = 65K chars, Wikipedia = 65K chars. No built-in cap. |
+| Almost never | `llm-context.js --tokens 16384` | 77K chars; rarely justified |
+
+~~**`search.js` → `content.js`** is almost always better than **`llm-context.js`**~~ — **Wrong.** For breadth/survey queries, `llm-context.js --tokens 4096` gives 16 sources in 21K chars. The `search.js → content.js` pipeline excels at depth on 1-2 sources but costs *more* for breadth (content.js on 3 URLs = 99K chars vs llm-context 4096 = 38K chars).
+
+~~Never run more than 2 web searches before reviewing results and narrowing~~ — **Too aggressive for research.** Tested: 2 focused searches found 6 unique URLs; 5 searches found 15 (including 2 critical papers missed by the 2-search approach). 57% token savings but real coverage gaps. **Better rule:** For fact-checking, 2 searches max. For genuine research, search broadly but review before fetching content.
 
 ### File Reading Discipline
+
 - Before `read`, ask: can `rg` answer this? (`rg -l`, `rg -c`, `rg -n "pattern"`)
-- Use `read` with `offset`/`limit` aggressively — don't read a 200-line file to find one line
-- Never `ls` a directory with 100+ items — use `fd` or `rg -l` with a pattern
+- **Files < 5 KB:** just read the whole file. 1 call beats `rg -n` + targeted `read` (2 calls). _Median research file in this project: 10 KB. 75th percentile: 15 KB. Most files are large enough that targeted reading matters._
+- **For structural tasks** (e.g., "find last list item"): `rg -n "^## "` for section boundaries + `sed -n 'X,Yp'` beats reading the whole file. But `rg` requires a searchable pattern — for pure exploration, read with offset/limit.
+- ~~Never `ls` a directory with 100+ items~~ → **Threshold matters.** For small dirs (< 20 files), `ls` is fine and actually cheaper than `rg -l` (which requires a pattern and adds path prefixes). For 20-100 files, `ls | head -20`. For 100+, `rg -l` or `fd` with a pattern. Tested: `rg -l` on a 4-file dir produced MORE output (92 chars) than `ls` (64 chars).
 
 ### Data Exploration Discipline
-- Read one full record before writing `jq` queries
-- Combine probing steps: `head -1 file | jq '{keys: keys, type: .type, sample_content: (.content | tostring | .[0:200])}'`
+
+- ~~Read one full record before writing `jq` queries~~ → **Check record size first.** `head -1 file | wc -c` costs almost nothing. If records are < 5 KB, `head -2 | jq '.'` is safe. If records contain base64 images (1.1 MB/line in this project's session files), a blind `jq '.'` dumps megabytes.
+- **Safer approach:** `head -5 file | jq -c '{type, keys: keys}'` → 396 chars. Inspect the schema skeleton, THEN pretty-print only small records.
 
 ### Output Discipline
-- `| head -20` on anything exploratory
-- `2>/dev/null` on anything that might produce irrelevant stderr
-- Prefer `--quiet`, `-l`, `-c` flags that produce minimal output
+
+- ~~`| head -20` on anything exploratory~~ → **Depends on where the signal is.**
+  - Errors from builds, `pytest`, `pip install` are at the **end**. `| head -20` hides them.
+  - `| tail -20` for error-checking. `| head -5; echo '...'` + `| tail -10` for structure + errors.
+  - `| head -20` is correct for discovery commands (`ls`, `find`, `brew list`) where you want a sample.
+- `2>/dev/null` on anything that might produce irrelevant stderr — still valid.
+- Prefer `--quiet`, `-l`, `-c` flags that produce minimal output — still valid.
+- `git diff --stat` before full `git diff` — **overhead is ~1%** (225 chars). Always worth it when the full diff might be 30K+ chars. If you proceed to full diff anyway, you lost only 225 chars.
 
 ### Meta Discipline
 - After writing about best practices, **check your own session** for violations
 - The biggest context waste isn't a single bad call — it's the **habit of defaulting to maximum output**
+- **Rules with "never" and "always" are wrong.** Conditional rules survive edge cases. Absolute rules don't.
 
 ---
 
@@ -156,7 +183,9 @@ The companion [CLI Tools & Context Efficiency](cli-tools-context-efficiency.md) 
 
 ### Anti-Pattern Validation (Tested)
 
-Every anti-pattern and proposed rule was tested with actual commands against this project's data:
+Every anti-pattern and proposed rule was tested with actual commands against this project's data. Then each was stress-tested against edge cases to find where the recommendation breaks.
+
+#### Basic Validation
 
 | # | Anti-Pattern → Fix | Bad | Good | Savings |
 |---|---|---|---|---|
@@ -164,14 +193,41 @@ Every anti-pattern and proposed rule was tested with actual commands against thi
 | 1 | `llm-context --tokens 16384` → `llm-context --tokens 4096` | 77,787 ch | 21,021 ch | 73% |
 | 2 | `ls research/` → `rg -l "pattern" research/` | 8,901 ch | 39 ch | 99.6% |
 | 3 | 3 `read` calls with offsets → `rg -n` + `read` 5 lines | 17,493 ch | 1,823 ch | 90% |
-| 4 | 6 `jq` probes → `head -2 \| jq '.'` | 806 ch (6 calls) | 2,380 ch (1 call) | -195% raw, but saves ~3K trajectory tokens from turn reduction |
+| 4 | 6 `jq` probes → `head -2 \| jq '.'` | 806 ch (6 calls) | 2,380 ch (1 call) | -195% raw, saves ~72K trajectory tokens |
 | 5 | `which` loops (15 tools) → check 3 unknown only | 583 ch | 84 ch | 86% |
 | 6 | `brew list` without `\| head -20` | 448 ch | 157 ch | 65% |
 | R | `grep -r` → `rg -l` | 2,130 ch | 101 ch | 95% |
+| R | `grep -r` → `rg` (in dir with node_modules) | **1,208,782 ch** | 1,240 ch | **99.9%** |
 | R | `git log` → `git log --oneline` | 1,927 ch | 361 ch | 81% |
 | R | `git diff` → `git diff --stat` | 30,556 ch | 342 ch | 99% |
 
-**Key finding:** Anti-pattern #4 (schema probing) is the only one where the "good" approach produces more raw output. Its benefit is turn reduction (1 call vs 6), not output reduction. Every other anti-pattern delivers substantial output savings, with the biggest wins from targeted search (#2, #3, `rg -l`) and progressive disclosure (`--stat` before full diff).
+#### Edge Cases That Break the Rules
+
+| Rule | Edge case | What happens | Correction |
+|---|---|---|---|
+| `search.js→content.js` always better | **Breadth query** (need multiple sources) | `content.js` on 3 URLs = 99K chars. `llm-context --tokens 8192` = 38K chars covering 16 sources. Pipeline is **2.6x worse.** | Use `llm-context --tokens 4096` for breadth. Pipeline for depth. |
+| `search.js→content.js` always better | **Long page** (arxiv HTML, Wikipedia) | `content.js` returns 65K chars — no built-in truncation. Can exceed `llm-context --tokens 16384`. | content.js has no output cap. Dangerous on docs/reference pages. |
+| Never > 2 searches | **Research task** | 2 searches found 6 URLs. 5 searches found 15, including AgentDiet paper and JetBrains blog **missed by 2-search approach.** | 2-search limit for fact-checking. Research needs broader sweeps. |
+| `rg -l` over `ls` | **Small directory** (4 files) | `rg -l` = 92 chars. `ls` = 64 chars. rg is **44% worse** and needs a pattern you may not have. | ls is fine for < 20 files. |
+| `rg -l` over `ls` | **Exploration** (no pattern) | `rg -l` requires a search pattern. If exploring, you don't have one. | `ls \| head -20` for exploration. `rg -l` for known-target search. |
+| `head -2 \| jq '.'` for schema | **Large records** (base64 images) | Records can be 1.1 MB each. `head -2 \| jq '.'` dumps megabytes. | `head -1 \| wc -c` first. If > 5KB, use `jq -c '{type, keys: keys}'` instead. |
+| `\| head -20` on everything | **Build/test output** | Errors from pytest, make, pip are at the **end**. `head -20` hides them entirely. | `\| tail -20` for error checking. `head` for discovery/sampling only. |
+| `git diff --stat` first | **Small change** (1 file, 5 lines) | `--stat` adds 225 chars overhead. Full diff is only 7.5K. Overhead = 3%. | 3% overhead is always worth it — stat tells you whether to proceed. The rule holds even in the worst case. |
+
+#### Trajectory Turn Cost (Measured)
+
+Anti-pattern #4 requires quantifying trajectory snowball to justify "fewer turns > less output":
+
+| Metric | Value | Source |
+|---|---|---|
+| Avg non-thinking assistant content per turn | 1,206 chars | 50 sessions, 1,186 turns |
+| Breakdown: visible text | 444 KB (31%) | |
+| Breakdown: tool call args | 987 KB (69%) | |
+| Thinking tokens per turn | 269 chars | NOT in trajectory (provider-dependent) |
+| Snowball cost per extra turn | ~12 KB | 1,206 chars × ~10 remaining turns |
+| 6-probe vs 1-probe: extra 5 turns | ~60 KB trajectory waste | 5 × 12 KB |
+
+**Conclusion:** For schema exploration (#4), the turn reduction argument is valid — 5 extra turns cost ~60 KB in trajectory snowball, far exceeding the 1.5 KB extra from a full pretty-print. But this only applies to tool calls that trigger multiple round trips. For single-call optimizations (#1-3, #5-6), raw output reduction is the dominant factor.
 
 ### Self-Assessment
 
