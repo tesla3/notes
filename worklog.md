@@ -17,6 +17,12 @@
 - **2 missing tools:** `rg -A/-B` (context lines), `rg -F` (literal string search)
 - **Meta-finding:** conditional rules spawning sub-rules for each exception → rules keep getting longer. Tool selection is a decision tree, not a rule set.
 - Decision: not restructuring into decision tree yet — evidence first, format second
+- **Follow-up: Expert CLI tricks research** (`research/expert-cli-tricks-for-context-saving.md`)
+  - Searched and read: "The Art of Command Line" (jlevy), wooledge BashPitfalls, learnbyexample grep/rg gotchas, HN threads (41031837, 20493467), MIT Missing Semester, Eric Pement awk one-liners
+  - 9 techniques missing from agent rules: process substitution `<()`, `comm` for set operations, `jq -e` for zero-output boolean checks, `awk` for single-pass field extraction, `--` for hyphen-prefixed patterns, `LC_ALL=C` (36% speed boost, tested), `stat` for metadata, `sed -n` with quit-early, `find -exec {} +` for safe batching
+  - 5 expert-level edge cases: pipe subshell trap (variables don't persist), redirect order (`2>&1` position matters), `set -e` kills `grep -c` on zero matches, word splitting after command substitution, glob expansion of unquoted `*`
+  - Meta-finding: experts think in **operations** ("extract a section", "compare two sets", "check a condition"), not **tools** ("when to use rg", "when to use jq"). Operation-oriented rules naturally compose the right tools; tool-oriented rules miss compositions.
+  - Cross-linked from `agent-tool-use-self-review.md`
 
 ## 2026-03-03 — HN distill: "Nobody Gets Promoted for Simplicity"
 
