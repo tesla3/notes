@@ -39,7 +39,7 @@ Excluding those image sessions, `bash` dominates most sessions.
 3. Use `content.js` on those specific URLs
 4. Only use `llm-context.js` with `--tokens 4096` as a starting point, increase if insufficient
 
-**Estimated savings:** ~70-80% of search token cost.
+**Estimated savings:** ~70-80% of search token cost. **Verified:** `llm-context.js --tokens 16384` → 77.8 KB. `search.js` + `content.js` on best URL → 34 KB (56% savings). `llm-context.js --tokens 4096` → 21 KB (73% savings). The 70-80% estimate holds when you factor in the original session's *five* calls at max tokens vs what a disciplined pipeline would produce.
 
 ### 2. Directory listing on large dirs instead of targeted search
 
@@ -58,6 +58,8 @@ Excluding those image sessions, `bash` dominates most sessions.
 **The sin:** 6 sequential `jq` calls probing the JSONL session format — trying `keys`, then `type`, then `role`, then `content[].type`, then `toolName` vs `name`.
 
 **The fix:** `head -2 file.jsonl | jq '.'` — read one or two full records first to understand the schema. Then write the correct query. One call instead of six.
+
+**Nuance (verified):** The "good" approach actually produces *more* raw output (~2.4 KB vs ~0.8 KB from 6 probes) because a full JSON pretty-print is verbose. The savings are in **trajectory turns, not output bytes** — each turn adds ~500 tokens of assistant reasoning that snowball through the context window. 6 turns ≈ 3,000 extra trajectory tokens the raw comparison misses.
 
 ### 5. Tool discovery for tools I already know about
 
@@ -151,6 +153,25 @@ The companion [CLI Tools & Context Efficiency](cli-tools-context-efficiency.md) 
    - "99% of tokens are input tokens" (attributed to OpenRouter data) — plausible for agentic trajectories but no specific source located.
    - "Retrieve-then-solve: Improved Mistral from 35.5% to 66.7%" — could not find this specific result.
    - "Claude Code's team deliberately abandoned RAG (including Voyage embeddings)" — attributed to the misidentified arxiv paper; may originate from the actual preprints.org code retrieval study or from practitioner blog posts.
+
+### Anti-Pattern Validation (Tested)
+
+Every anti-pattern and proposed rule was tested with actual commands against this project's data:
+
+| # | Anti-Pattern → Fix | Bad | Good | Savings |
+|---|---|---|---|---|
+| 1 | `llm-context --tokens 16384` → `search.js + content.js` | 77,787 ch | 34,033 ch | 56% |
+| 1 | `llm-context --tokens 16384` → `llm-context --tokens 4096` | 77,787 ch | 21,021 ch | 73% |
+| 2 | `ls research/` → `rg -l "pattern" research/` | 8,901 ch | 39 ch | 99.6% |
+| 3 | 3 `read` calls with offsets → `rg -n` + `read` 5 lines | 17,493 ch | 1,823 ch | 90% |
+| 4 | 6 `jq` probes → `head -2 \| jq '.'` | 806 ch (6 calls) | 2,380 ch (1 call) | -195% raw, but saves ~3K trajectory tokens from turn reduction |
+| 5 | `which` loops (15 tools) → check 3 unknown only | 583 ch | 84 ch | 86% |
+| 6 | `brew list` without `\| head -20` | 448 ch | 157 ch | 65% |
+| R | `grep -r` → `rg -l` | 2,130 ch | 101 ch | 95% |
+| R | `git log` → `git log --oneline` | 1,927 ch | 361 ch | 81% |
+| R | `git diff` → `git diff --stat` | 30,556 ch | 342 ch | 99% |
+
+**Key finding:** Anti-pattern #4 (schema probing) is the only one where the "good" approach produces more raw output. Its benefit is turn reduction (1 call vs 6), not output reduction. Every other anti-pattern delivers substantial output savings, with the biggest wins from targeted search (#2, #3, `rg -l`) and progressive disclosure (`--stat` before full diff).
 
 ### Self-Assessment
 
