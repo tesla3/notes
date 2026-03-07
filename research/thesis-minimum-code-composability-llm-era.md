@@ -40,4 +40,6 @@ Requires all three: skilled practitioner providing taste, automated verification
 
 ---
 
+**Applied to SaaS dynamics:** The flywheel is the specific micro-mechanism behind the SaaS margin collapse — positive flywheel = the "engineering discipline" moat, negative flywheel = why vibe-coded competitors die. See [SaaS Chat-Pattern Generalization](saas-margin-collapse-chat-pattern-generalization.md).
+
 **Sources:** Chroma "Context Rot" (2025) · Factory.ai "Context Window Problem" (2025) · Brooks "No Silver Bullet" (1986) · Osmani "80% Problem" (2026) · Marmelab "Agent Experience" (2026) · METR RCT (2025) · katanaquant "Plausible Code" (2026) · RLHF length bias papers (2025-2026)

@@ -1,4 +1,4 @@
-← [Index](../README.md) · [Insights](../insights.md) · [a16z SaaS thread](hn-vibe-coding-saas-a16z.md) · [Slack thread](hn-anthropic-new-slack.md) · [Only Moat Left](hn-the-only-moat-left-is-money.md)
+← [Index](../README.md) · [Insights](../insights.md) · [a16z SaaS thread](hn-vibe-coding-saas-a16z.md) · [Slack thread](hn-anthropic-new-slack.md) · [Only Moat Left](hn-the-only-moat-left-is-money.md) · [Bloat Flywheel](thesis-minimum-code-composability-llm-era.md) · [Why Minimality Instructions Fail](llm-code-bloat-minimality-instructions.md) · [Plausible Code](hn-llm-plausible-code.md) · [Show HN Drowning](hn-show-hn-drowning.md)
 
 # Will the "Chat Pattern" Generalize Across SaaS?
 
@@ -153,6 +153,72 @@ The interaction between [Activation Energy](../insights.md#activation-energy) an
 In the chat market, this dynamic stabilized because *building chat was always cheap* — the stream was always there. For other SaaS categories, the stream is *new* and *accelerating*. The market hasn't reached equilibrium yet.
 
 The Red Queen dynamic also explains why the [SaaSacre Paradox](hn-vibe-coding-saas-a16z.md) (investors simultaneously punishing hyperscalers AND software stocks) may not be contradictory after all: if AI infrastructure spending generates returns through *destroying incumbent software margins* rather than through *direct AI product revenue*, both can be rational. The hyperscaler spend pays off by enabling the supply-side flood that compresses SaaS margins.
+
+---
+
+## The Bloat Flywheel: Why New Entrants Die (The Micro-Mechanism)
+
+The SaaS collapse thesis says "most competitors die" through [Liability Acceleration](../insights.md#liability-acceleration). But Liability Acceleration is a description, not a mechanism. The [minimality research](thesis-minimum-code-composability-llm-era.md) and [bloat analysis](llm-code-bloat-minimality-instructions.md) identify the **specific technical mechanism** — and it turns out to be structural, not fixable by better prompts or instructions.
+
+### The flywheel is the mechanism
+
+The [thesis](thesis-minimum-code-composability-llm-era.md) identifies two flywheels:
+
+- **Positive:** Clean code → fits in context → better LLM output → cheaper refactoring → cleaner code
+- **Negative:** Bloated code → context rot → worse LLM output → more bloat → worse code
+
+The negative flywheel IS why vibe-coded SaaS competitors die. The sequence:
+
+1. **Vibe-code the MVP** — works, ships fast, looks like a product
+2. **RLHF length bias generates 5-10× more code than needed** — [five structural reasons](llm-code-bloat-minimality-instructions.md) why instructions like "keep it minimal" can't fix this: it's in the weights, not the prompt
+3. **Codebase grows past context window threshold** — the agent can no longer hold the system in working memory; [Context-Task Crossover](../insights.md#context-task-crossover) flips from "agent helps" to "agent hurts"
+4. **Maintenance requests produce more bloat** — pornel's [compounding-code observation](hn-llm-plausible-code.md): LLMs' default failure mode isn't wrong code, it's *adding more code* in response to every problem. Slow? Add fast paths. Buggy? Add tests. Duplication? Build an adapter framework. Never delete.
+5. **The negative flywheel accelerates** — each fix makes the next fix harder; context rot compounds; the codebase becomes unmaintainable
+6. **The competitor dies** — not because the product was bad, but because nobody on the team has the [theory](../insights.md#naurs-nightmare) of why the system is shaped the way it is, and the agent can no longer effectively work on a codebase it helped create
+
+This is the [SQLite rewrite parable](hn-llm-plausible-code.md) scaled to a business: 576K lines, compiles, passes tests, 20,171× slower on primary key lookups. The vibe-coded SaaS competitor is this — looks like a product, works on demo day, ships to customers, dies when real-world usage hits dimensions nobody thought to test. "Plausible software" that's too plausible to catch before it ships.
+
+### Why the positive flywheel IS the "engineering discipline" moat
+
+The [thesis](thesis-minimum-code-composability-llm-era.md) makes a claim that directly maps to the SaaS survivor profile:
+
+> "The people with taste — who know the right decomposition — have always existed. They were bottlenecked by execution cost. Coding agents collapse that cost."
+
+The SaaS survivors — hunterpayne's "high scale with engineering discipline" — are precisely the teams running the **positive flywheel**: taste + verification + architectural constraints → codebase stays small and composable → agents work effectively on it → maintenance stays cheap → margins stay viable.
+
+This is [Culture Amplifier](../insights.md#culture-amplifier) operating at the product level: "AI doesn't create organizational excellence — it amplifies what already exists." Strong-practice teams get the positive flywheel and survive. Weak-practice teams get the negative flywheel and die. The amplification is *why* the outcome is bimodal, not gradual.
+
+The [anti-patterns](workflow-anti-patterns.md) document catalogs exactly what kills new entrants:
+
+| Anti-pattern | Why it kills SaaS competitors |
+|---|---|
+| Fighting the weights (RLHF length bias) | Bloat is default; minimality requires external constraints most teams lack |
+| Patching forward (never reverting) | Technical debt compounds exponentially; autoregressive momentum makes each fix worse |
+| Assuming agent knowledge (no codebase awareness) | Utility reinvention, duplication — the codebase grows without the agent knowing what already exists |
+| Unbounded sessions | Quality degrades across long sessions; startups under pressure run marathon sessions |
+| Verification without taste | Green CI ≠ good code; the 576K-line SQLite passes all tests |
+
+Every effective counter-measure requires something most vibe-coded startups don't have: **a human with domain expertise providing judgment at the point where minimality decisions are made.** Plan-then-execute with human review. TDD. Active interruption. Reference implementations. These all require someone who knows what "right" looks like — which is the [Skill Author Competence Paradox](../insights.md#skill-author-competence-paradox) applied to entire products.
+
+### The supply-side flood has its own flywheel
+
+The [Show HN drowning thread](hn-show-hn-drowning.md) documents the supply-side flood operating at the discovery layer — post volume 3x'd, graveyard posts hit 37%, page-1 dwell time collapsed to ~3 hours. The SaaS marketplace experiences the same dynamic: more competitors, more noise, harder to find quality. Discovery cost exceeds expected value of trying a random product. This is the [1983 video game crash parallel](hn-show-hn-drowning.md) applied to B2B software:
+
+> "Because products of poor quality are too many, customers simply refuse to spend time identifying the high-quality ones from the enormous poor-quality ones."
+
+The [Sideprocalypse's domain-knowledge escape hatch](hn-show-hn-drowning.md) maps directly onto the tier structure: commodity CRUD apps drown in the flood (Tier 1), domain-expertise products survive because "where the vibe coders with their slop cannons aren't present is in things that require hard won domain knowledge" (Tier 2/3). overgard's observation from Show HN is the supply-side counterpart to hunterpayne's demand-side observation about chat.
+
+### The unsurfaced tension: where does taste come from?
+
+The positive flywheel requires taste. The SaaS survivors need engineers who can provide it. But:
+
+- The [Apprenticeship Doom Loop](../insights.md#apprenticeship-doom-loop) says the pipeline producing those engineers is breaking — 54% of engineering leaders plan fewer junior hires; the training mechanisms (pairing, code review, progressive responsibility) are degrading
+- [Shen & Tamkin](../insights.md#naurs-nightmare) confirmed that AI use impairs conceptual understanding even when it speeds artifact production — the taste *doesn't form* when coding is delegated
+- The [plausible code thread](hn-llm-plausible-code.md)'s kill shot (2god3): "How does the Junior grow and become the senior with those characteristics, if their starting point is LLMs?"
+
+The positive flywheel requires taste → taste requires apprenticeship → apprenticeship is collapsing → the supply of people who can run the positive flywheel is *shrinking* even as demand for them increases. This is a 5-10 year lag bomb. The SaaS survivors of 2028 depend on engineers trained in 2020-2024, before the apprenticeship collapse hit. The SaaS survivors of 2033 may not have the talent pipeline to sustain the flywheel.
+
+This connects to [Commoditized Labor](../insights.md#commoditized-labor): AI commoditizes the *building* of software, shifting value to taste/judgment. But taste is the one thing that can't be commoditized, and the pipeline producing it is under structural attack. The thin-margin survivors need the one resource whose supply is declining.
 
 ---
 

@@ -124,3 +124,5 @@ The pattern: **every effective approach either constrains the output space exter
 - humanlayer.dev, "Writing a good CLAUDE.md" (Nov 2025)
 - heyuan110, "CLAUDE.md Best Practices" (Mar 2026)
 - HN thread on "LLMs write plausible code" (Mar 2026)
+
+**Cross-reference:** The five structural reasons bloat can't be instruction-fixed explain *why* vibe-coded SaaS competitors die — RLHF length bias, autoregressive momentum, and statelessness create the negative flywheel that drives [Liability Acceleration](../insights.md#liability-acceleration) at the product level. See [SaaS Chat-Pattern Generalization](saas-margin-collapse-chat-pattern-generalization.md).
