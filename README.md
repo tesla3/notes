@@ -93,7 +93,7 @@ Not yet grouped into topics:
 - [LLM Code Bloat: Why Instructions Don't Fix It](research/llm-code-bloat-minimality-instructions.md) — RLHF length bias, autoregressive momentum, curse of instructions, statelessness; what actually works
 - [Thesis: Minimum Code + Composability](research/thesis-minimum-code-composability-llm-era.md) — the flywheel (clean→context→better output→cheaper refactoring), why now, boundary conditions
 - [Playbook: Getting Agents to Write Minimal Code](research/coding-agent-minimal-code-playbook.md) — before/during/after techniques, AGENTS.md rules that work vs don't
-- [Workflow: Minimal Composable Systems](research/workflow-minimal-composable-systems.md) — actionable checklist for human+agent collaboration, grounded in Dijkstra/Hoare/Kernighan/Beck/Hickey/Gall/Lehman/Glass
+- [Workflow: Minimal Composable Systems](research/workflow-minimal-composable-systems.md) — actionable checklist for human+agent collaboration; first-order questions, build/verify/maintain phases · [appendix (quotes, evidence)](research/workflow-minimal-composable-appendix.md)
 
 ## Collections
 
