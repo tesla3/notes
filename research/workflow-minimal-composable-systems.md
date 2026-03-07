@@ -43,7 +43,7 @@ Before design, before planning, before any code. These kill the most waste.
 - [ ] (HUMAN) Write a plan, not code — review and cut scope 1-3 rounds
 - [ ] Success criteria defined as tests or contracts ("these 3 tests pass, nothing else")
 - [ ] (HUMAN) Reference implementation provided if one exists (agent pattern-matches on structure, not prose)
-- [ ] Agent has read existing code in the area of change
+- [ ] Agent has read existing code in the area of change — check if a codebase research note exists; if missing or stale, write findings to a file for review before implementing
 
 > "Do the simplest thing that could possibly work."
 > — Kent Beck & Ward Cunningham, Extreme Programming (c. 1999)
@@ -58,8 +58,10 @@ Not the dumbest thing. The *simplest*. This requires understanding the problem w
 > — Doug McIlroy, Unix Philosophy (1978)
 
 - [ ] One task, one module, one concern per prompt — fresh context per task
+- [ ] Production code: TDD — write a failing test → implement until it passes → refactor → repeat per requirement. Exploratory/research/glue: implement → run → fix → iterate
 - [ ] Interfaces declared as stable ("these signatures don't change; callers adapt")
 - [ ] (HUMAN) Interrupt at first sign of drift ("didn't ask for this," "use the existing helper")
+- [ ] (HUMAN) When an approach fails, revert and restart with narrower scope — don't patch forward
 - [ ] No new abstraction without 2+ concrete use cases
 
 > "Duplication is far cheaper than the wrong abstraction."
@@ -113,6 +115,8 @@ Entropy is the default. Agents make fighting it cheap. Use that.
 If an abstraction doesn't reduce cognitive load, delete it.
 
 ---
+
+**See also:** [Anti-Patterns — what doesn't work](workflow-anti-patterns.md)
 
 **Synthesized from:** [Thesis](thesis-minimum-code-composability-llm-era.md) · [Playbook](coding-agent-minimal-code-playbook.md) · [Root Cause Analysis](llm-code-bloat-minimality-instructions.md) · [Agent Limitations](workflow-agent-structural-limitations.md)
 

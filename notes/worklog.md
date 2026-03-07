@@ -142,3 +142,8 @@
   - Resolved duplication tension: Metz "tolerate duplication" (Build) vs "cleanup duplicates" (Verify) — clarified as temporal (tolerate early, consolidate at 2+ use cases)
   - Withdrew suggestions: strip quotes (they're structural constraints via pattern-matching, not decoration), add thresholds (task-relative judgment from quotes + periodic `wc -l`), separate cognitive load for human vs agent (converges on same recommendations)
   - Key insight: quotes induce minimality behavior structurally; "structural constraint beats behavioral instruction" applies to the document itself
+- Reviewed workflow against playbook, identified 4 gaps:
+  1. Created `research/workflow-anti-patterns.md` — 8 categories of what doesn't work (vague rules, instruction overload, fighting weights, patching forward, assuming agent knowledge, expecting agent judgment, unbounded sessions, verification without taste). Referenced from workflow footer.
+  2. Added "revert, don't patch" to Build — when approach fails, discard and restart with narrower scope
+  3. Added TDD loop to Build — TDD for production code, implement-run-fix for exploratory/research/glue
+  4. Strengthened codebase research in Plan — check if research note exists or is stale, write findings to file before implementing
