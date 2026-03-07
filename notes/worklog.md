@@ -147,3 +147,14 @@
   2. Added "revert, don't patch" to Build — when approach fails, discard and restart with narrower scope
   3. Added TDD loop to Build — TDD for production code, implement-run-fix for exploratory/research/glue
   4. Strengthened codebase research in Plan — check if research note exists or is stale, write findings to file before implementing
+
+## 2026-03-06
+
+- Distilled HN thread "We might all be AI engineers now" (47272734, 303 comments)
+  - Saved to `research/hn-we-might-all-be-ai-engineers.md`
+  - Key finding: article's own writing triggered AI-detection, creating perfect meta-irony
+  - Thread's unstated conclusion: AI changed the job description (writing → reviewing) more than the output
+- Added **Context-Task Crossover** insight to `insights.md` (Section II)
+  - "If context > task, just do it yourself" — originated from thread, converged on independently by multiple practitioners
+  - Connects to 5 existing insights: Prompt Expansion (Kolmogorov bound), Steering ∝ Theory (crossover point), Culture Amplifier (externalized context), Facts Without Judgment (context = task), Diagnostic Pain (neglected work)
+  - Novel contribution: first decision-boundary insight (tells you what to DO), shifts with model capability (tracking metric), predicts what AI will never automate (context IS task)
