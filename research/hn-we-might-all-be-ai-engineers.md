@@ -1,4 +1,4 @@
-← [Index](../README.md)
+← [Insights](../insights.md) · [Index](../README.md)
 
 ## HN Thread Distillation: "We might all be AI engineers now"
 
