@@ -90,6 +90,10 @@ Not yet grouped into topics:
 - [Expert CLI Tricks for Context Saving](research/expert-cli-tricks-for-context-saving.md) — cross-reference of expert human knowledge against agent rules; 9 missing techniques; operation-vs-tool meta-lesson
 - [AGENTS.md Best Practices](research/agents-md-best-practices.md) — practitioner consensus from 13 sources (Anthropic, GitHub 2500-repo analysis, HumanLayer, Arize prompt learning); instruction budget, progressive disclosure, critical review of our own file
 - [Mojo GPU Programming: Deep Dive](research/mojo-gpu-programming-deep-dive.md) — MLIR-native GPU portability, ORNL benchmarks (87–102% of CUDA for memory-bound, gaps in compute-bound), CUDA moat analysis, competitive landscape (vs Triton/JAX/Julia/Rust), Apple Silicon play, Lattner pattern, honest limitations, verdict by user type
+- [LLM Code Bloat: Why Instructions Don't Fix It](research/llm-code-bloat-minimality-instructions.md) — RLHF length bias, autoregressive momentum, curse of instructions, statelessness; what actually works
+- [Thesis: Minimum Code + Composability](research/thesis-minimum-code-composability-llm-era.md) — the flywheel (clean→context→better output→cheaper refactoring), why now, boundary conditions
+- [Playbook: Getting Agents to Write Minimal Code](research/coding-agent-minimal-code-playbook.md) — before/during/after techniques, AGENTS.md rules that work vs don't
+- [Workflow: Minimal Composable Systems](research/workflow-minimal-composable-systems.md) — actionable checklist for human+agent collaboration, grounded in Dijkstra/Hoare/Kernighan/Beck/Hickey/Gall/Lehman/Glass
 
 ## Collections
 

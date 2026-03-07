@@ -864,3 +864,11 @@
 - **Key findings**: MLIR-native approach is architecturally sound; memory-bound kernels competitive (87–102% of CUDA); compute-bound has gaps (38–59% on some workloads); AMD support immature; Apple Silicon is the sleeper play
 - Flagged "markaicode.com" Rust-vs-Mojo article as likely AI-generated SEO content with unverifiable claims
 - Filed as `research/mojo-gpu-programming-deep-dive.md`, added to README
+
+## 2026-03-06
+
+- Synthesized workflow document from three existing research files: thesis (flywheel), playbook (tactics), root cause analysis (why instructions fail)
+- Created `research/workflow-minimal-composable-systems.md` — actionable checklist for human+agent collaboration on maintainable code
+- Grounded in historical expert quotes: Dijkstra (humble programmer), Hoare (two ways), Kernighan (debugging twice as hard), McIlroy (Unix philosophy), Beck (simplest thing), Gall's Law, Hickey (simple≠easy), Metz (wrong abstraction), Lehman's Laws, Glass (maintenance 60-80%)
+- Key structural insight: five agent self-awareness items (RLHF length bias, autoregressive momentum, statelessness, context degradation, sycophancy) — not behavioral tips, but architectural constraints
+- Added all four related files to README (three source files were missing)
