@@ -158,3 +158,18 @@
   - "If context > task, just do it yourself" — originated from thread, converged on independently by multiple practitioners
   - Connects to 5 existing insights: Prompt Expansion (Kolmogorov bound), Steering ∝ Theory (crossover point), Culture Amplifier (externalized context), Facts Without Judgment (context = task), Diagnostic Pain (neglected work)
   - Novel contribution: first decision-boundary insight (tells you what to DO), shifts with model capability (tracking metric), predicts what AI will never automate (context IS task)
+- Distilled HN thread "Anthropic, please make a new Slack" (47280200, 216 comments)
+  - Saved to `research/hn-anthropic-new-slack.md`
+  - Key finding: Fivetran CEO lobbying for Slack data access, dressed in AI hype; Anthropic's actual interoperability record contradicts the thesis
+  - hunterpayne's chat observation ("capital intensive, low margin, most die") identified as potentially generalizable
+- Deep research: **Will the "Chat Pattern" Generalize Across SaaS?**
+  - Saved to `research/saas-margin-collapse-chat-pattern-generalization.md`
+  - Three independent compression mechanisms: supply-side flood, demand-side seat compression, inference cost margin squeeze
+  - Three-tier collapse: Tier 1 (simple tools) = full chat-pattern; Tier 2 (enterprise SoR) = margin compression; Tier 3 (infrastructure) = strengthened
+  - Key structural revaluation: SaaS era valued building; post-agent era values running (operations, compliance, distribution, maintenance)
+  - Connected bloat flywheel and minimality thesis as the specific micro-mechanism behind Liability Acceleration:
+    - Negative flywheel (RLHF length bias → bloat → context rot → unmaintainable) = why vibe-coded competitors die
+    - Positive flywheel (taste + verification → clean code → cheap maintenance) = the "engineering discipline" moat
+    - Surfaced unsolved tension: taste pipeline collapsing (Apprenticeship Doom Loop) while demand for taste increases
+  - Cross-referenced with: bloat thesis, minimality instructions, plausible code, Show HN drowning, a16z SaaS thread, Only Moat Left, multiple insights
+  - Searched and integrated external evidence: SaaSacre data (IGV -23% YTD), Bain framework, Calcalist/Chargebee/Goldman analyses, Lemkin seat compression
