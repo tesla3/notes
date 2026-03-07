@@ -137,3 +137,8 @@
   - Five structural reasons it can't fully work: RLHF length bias in weights, no stop-and-think mechanism, curse of instructions, statelessness, "minimal" requires domain judgment
   - What works: plan-then-execute, TDD, post-hoc cleanup, architectural constraints, active interruption
   - Saved: `research/llm-code-bloat-minimality-instructions.md`
+- Critical review of `workflow-minimal-composable-systems.md` — section-by-section agent comprehension audit
+  - Added `(HUMAN)` reading instruction: agent should prompt human on these items, not skip silently
+  - Resolved duplication tension: Metz "tolerate duplication" (Build) vs "cleanup duplicates" (Verify) — clarified as temporal (tolerate early, consolidate at 2+ use cases)
+  - Withdrew suggestions: strip quotes (they're structural constraints via pattern-matching, not decoration), add thresholds (task-relative judgment from quotes + periodic `wc -l`), separate cognitive load for human vs agent (converges on same recommendations)
+  - Key insight: quotes induce minimality behavior structurally; "structural constraint beats behavioral instruction" applies to the document itself
