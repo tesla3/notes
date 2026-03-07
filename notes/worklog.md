@@ -120,3 +120,20 @@
     4. Saga pattern was overapplied — qualified that FD lifecycle is a state machine, not a saga (no distributed transactions, no compensating rollbacks).
     5. USL applied to human cognition was presented as literal — reframed as metaphorical, noted Miller's Law as better explanation.
   - **Strengths confirmed:** Section 7 (event sourcing/state taxonomy) is genuinely insightful and original. Sections 1, 5, 8 are well-grounded.
+- Optimized global AGENTS.md `## CLI Tool Use` section against three research files:
+  - `cli-tools-context-efficiency.md`, `agent-tool-use-self-review.md`, `expert-cli-tricks-for-context-saving.md`
+  - Added: explicit motivation (trajectory snowball, early-turn cost multiplier), decision ladder (don't read → minimum → fully), operation-oriented structure with sub-decisions (extract section: pattern → `rg -A N`, line numbers → `sed -n`, exploring → `read`), `rg -n` vs `rg -l` guidance, output discipline (head for discovery, `2>&1 | tail` for errors, git shortcuts), quoting safety
+  - Kept: all existing patterns (comm, jq -e, awk, rg -F, --, stat, ls -t)
+  - Removed: nothing — restructured flat list into 4 logical subsections (motivation, ladder, operations, output, safety)
+
+## 2026-03-06
+
+- Distilled HN thread "LLMs work best when the user defines their acceptance criteria first" (106pts, 83 comments)
+  - Article: 20,171× slower SQLite rewrite (576K LoC Rust), 82K-line disk daemon that should be a cron one-liner
+  - Key thread insight: pornel's compounding-code dynamic (LLMs add code, never delete), "skill issue" defense is unfalsifiable tautology
+  - Saved: `research/hn-llm-plausible-code.md`
+- Deep research: why "write minimal code" instructions don't fix LLM code bloat
+  - People DO try (r/ClaudeAI thread, 33 upvotes, KISS/YAGNI in CLAUDE.md)
+  - Five structural reasons it can't fully work: RLHF length bias in weights, no stop-and-think mechanism, curse of instructions, statelessness, "minimal" requires domain judgment
+  - What works: plan-then-execute, TDD, post-hoc cleanup, architectural constraints, active interruption
+  - Saved: `research/llm-code-bloat-minimality-instructions.md`
