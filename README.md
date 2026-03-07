@@ -89,6 +89,7 @@ Not yet grouped into topics:
 - [Agent Tool Use Self-Review](research/agent-tool-use-self-review.md) — critical audit of my own tool use across 271 sessions; 74% of context wasted on max-token web searches; anti-patterns and fixes
 - [Expert CLI Tricks for Context Saving](research/expert-cli-tricks-for-context-saving.md) — cross-reference of expert human knowledge against agent rules; 9 missing techniques; operation-vs-tool meta-lesson
 - [AGENTS.md Best Practices](research/agents-md-best-practices.md) — practitioner consensus from 13 sources (Anthropic, GitHub 2500-repo analysis, HumanLayer, Arize prompt learning); instruction budget, progressive disclosure, critical review of our own file
+- [Mojo GPU Programming: Deep Dive](research/mojo-gpu-programming-deep-dive.md) — MLIR-native GPU portability, ORNL benchmarks (87–102% of CUDA for memory-bound, gaps in compute-bound), CUDA moat analysis, competitive landscape (vs Triton/JAX/Julia/Rust), Apple Silicon play, Lattner pattern, honest limitations, verdict by user type
 
 ## Collections
 

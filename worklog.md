@@ -857,3 +857,10 @@
   4. `IMPORTANT:` on decision ladder — marks high-violation-risk rule
 - **Skipped** (justified): one-sentence scope description, IMPORTANT consistency review, CLI section extraction to skill
 - Synced AGENTS.md via chezmoi, committed and pushed to dotfiles repo
+
+## 2026-03-06 — Mojo GPU Programming Deep Dive
+- Researched Mojo language for GPU programming: architecture, benchmarks, competitive landscape
+- **Key sources**: ORNL peer-reviewed paper (arxiv:2509.21039), Modular GitHub/blog, Lattner's own comments, HN/Reddit threads, Modular forum
+- **Key findings**: MLIR-native approach is architecturally sound; memory-bound kernels competitive (87–102% of CUDA); compute-bound has gaps (38–59% on some workloads); AMD support immature; Apple Silicon is the sleeper play
+- Flagged "markaicode.com" Rust-vs-Mojo article as likely AI-generated SEO content with unverifiable claims
+- Filed as `research/mojo-gpu-programming-deep-dive.md`, added to README
