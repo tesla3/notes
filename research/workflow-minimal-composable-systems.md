@@ -2,6 +2,8 @@
 
 ## Workflow: Building Minimal, Composable Systems with Coding Agents
 
+**Reading this:** Items marked `(HUMAN)` are prompts — ask the human these questions before proceeding. Don't skip them silently.
+
 > "The competent programmer is fully aware of the strictly limited size of his own skull; therefore he approaches the programming task in full humility."
 > — Edsger Dijkstra, EWD340 (1972)
 
@@ -22,10 +24,10 @@ Before design, before planning, before any code. These kill the most waste.
 > "The cheapest, fastest, and most reliable components of a computer system are those that aren't there."
 > — Gordon Bell
 
-- [ ] **Does this need to exist at all?** What problem does it solve? Is it a real problem or an anticipated one? (The 82K-line disk cleanup daemon vs. a one-line cron job.)
-- [ ] **Why me? Why us?** Is there an existing system — well-built, actively maintained, not flaky — that solves this? Can I use it directly? Fork and refit? Wrap it?
-- [ ] **Is this durable?** Will this matter in 6 months? 2 years? ROI = (value per day × useful shelf life) / (build cost + maintenance cost). Be honest about which one you're building.
-- [ ] **What's the narrowest version that delivers value?** Not "MVP" as in "bad version of the full thing." The smallest thing that's actually *complete* for the core need.
+- [ ] (HUMAN) **Does this need to exist at all?** What problem does it solve? Is it a real problem or an anticipated one?
+- [ ] (HUMAN) **Why me? Why us?** Is there an existing system — well-built, actively maintained, not flaky — that solves this? Can I use it directly? Fork and refit? Wrap it?
+- [ ] (HUMAN) **Is this durable?** Will this matter in 6 months? 2 years? ROI = (value per day × useful shelf life) / (build cost + maintenance cost). Be honest about which one you're building.
+- [ ] (HUMAN) **What's the narrowest version that delivers value?** Not "MVP" as in "bad version of the full thing." The smallest thing that's actually *complete* for the core need.
 
 > "A complex system that works is invariably found to have evolved from a simple system that worked."
 > — John Gall, *Systemantics* (1975)
@@ -38,9 +40,9 @@ Before design, before planning, before any code. These kill the most waste.
 > — C.A.R. Hoare, Turing Award Lecture (1981)
 
 - [ ] One-sentence description of what this does
-- [ ] Write a plan, not code — review and cut scope 1-3 rounds
+- [ ] (HUMAN) Write a plan, not code — review and cut scope 1-3 rounds
 - [ ] Success criteria defined as tests or contracts ("these 3 tests pass, nothing else")
-- [ ] Reference implementation provided if one exists (agent pattern-matches on structure, not prose)
+- [ ] (HUMAN) Reference implementation provided if one exists (agent pattern-matches on structure, not prose)
 - [ ] Agent has read existing code in the area of change
 
 > "Do the simplest thing that could possibly work."
@@ -57,7 +59,7 @@ Not the dumbest thing. The *simplest*. This requires understanding the problem w
 
 - [ ] One task, one module, one concern per prompt — fresh context per task
 - [ ] Interfaces declared as stable ("these signatures don't change; callers adapt")
-- [ ] Interrupt at first sign of drift ("didn't ask for this," "use the existing helper")
+- [ ] (HUMAN) Interrupt at first sign of drift ("didn't ask for this," "use the existing helper")
 - [ ] No new abstraction without 2+ concrete use cases
 
 > "Duplication is far cheaper than the wrong abstraction."
@@ -66,9 +68,9 @@ Not the dumbest thing. The *simplest*. This requires understanding the problem w
 **Bloat signals:**
 - Function name contains "and" → split it
 - File exceeds 200 lines → split by concern
-- Agent creates a new utility → check if one exists
-- Agent adds error handling you didn't ask for → question it
-- Agent builds abstraction for one use case → flatten it
+- Before creating a new utility → search the codebase for an existing one
+- Adding error handling not asked for → question it, don't add silently
+- Building abstraction for one use case → flatten it
 
 > "Simple is not easy. Simple means 'not complected' — not interleaved, not braided together."
 > — Rich Hickey, "Simple Made Easy" (2011)
@@ -83,10 +85,10 @@ When the agent writes a function that does parsing AND validation AND persistenc
 > — Brian Kernighan & P.J. Plauger, *The Elements of Programming Style* (1978)
 
 - [ ] Tests pass
-- [ ] `git diff --stat` — does diff size match expectations? Unexpected file count = scope creep
-- [ ] "What can I delete?" pass — ask agent to remove everything non-essential
-- [ ] Cleanup pass — duplicates, orphaned code, dead imports, consolidation
-- [ ] Metrics: `scc` or `wc -l` before/after. 300 lines where you expected 50 = investigate
+- [ ] Run `git diff --stat` after changes — flag if diff size or file count exceeds expectations
+- [ ] After completing a task, do a "what can I delete?" pass — remove everything non-essential
+- [ ] Cleanup pass — consolidate duplication only when the pattern has proven itself (2+ use cases), remove orphaned code, dead imports
+- [ ] Report `wc -l` or `scc` before/after changes — flag if growth exceeds expectations
 
 > "Perfection is achieved, not when there is nothing more to add, but when there is nothing left to take away."
 > — Antoine de Saint-Exupéry, *Terre des hommes* (1939)
@@ -101,9 +103,9 @@ When the agent writes a function that does parsing AND validation AND persistenc
 Entropy is the default. Agents make fighting it cheap. Use that.
 
 - [ ] The codebase IS the instruction — clean code teaches clean code, messy teaches messy
-- [ ] Refactor each session — leave it cleaner than you found it
+- [ ] Refactor each session — leave code cleaner than found
 - [ ] Keep files small, modules focused, names clear — structural constraint beats behavioral instruction
-- [ ] Periodic audit: can you explain every file? Hold the module structure in your head? If not, simplify
+- [ ] Periodic audit: can you explain every file? Can you hold the module structure in your head? If not, simplify. Applies to both human and agent
 
 > "The purpose of abstraction is not to be vague, but to create a new semantic level in which one can be absolutely precise."
 > — Edsger Dijkstra, EWD340 (1972)
