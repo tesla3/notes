@@ -1,0 +1,3339 @@
+
+
+
+Skip to content
+
+		
+			
+		
+				
+				
+									
+							
+									
+				
+				
+		
+				
+				
+			window.addEventListener('DOMContentLoaded', function() {
+    jQuery($ => {
+    $(document).ready(function() {
+        let itemsList = $('.mainHeader').find('.wpml-ls-sub-menu');
+        
+        if (itemsList.children().length === 0) {
+            $('.langContainer').hide();
+          $('.leftContainer').css('width', '100%');
+        
+        
+        } else {
+            
+        }
+    });
+});
+});		
+				
+		
+		
+		
+				
+				
+			Strategic Selection: Building Your School List & Planning College Visits in 11th Grade>>		
+				
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+			+1.800.722.3105		
+				
+				
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+			
+
+	
+
+		
+			
+                English
+
+			
+				
+					
+						
+                            简体中文
+					
+
+				
+					
+						
+                            繁體中文
+					
+
+				
+					
+						
+                            한국어
+					
+
+							
+
+		
+
+	
+
+		
+				
+				
+				
+		
+		
+				
+				
+						
+				Our Services
+
+	College Counseling
+	
+		College Admissions (G7-12)
+		Young Leaders (G5-8)
+		Academic Mentorships
+		Test Prep
+		Writing Seminars
+		Leadership & Innovation Lab
+		Competition Preparation
+		Subject Tutoring
+		Soft Skills Courses
+	
+
+	More Services
+	
+		Internships
+		Medical School Admissions
+		Private High School Admissions
+		Graduate School Admissions
+		UK Admissions
+		Non-US Admissions
+		Law School Admissions
+		Career Counseling
+		Business School Admissions
+	
+
+
+
+About us
+
+	about sub
+	
+		Why InGenius Prep
+		Our Results
+		Our Educational Approach
+		Our Process
+		Our Technology Platform
+	
+
+	about sub
+	
+		Our Reviews
+		Pro Bono & Partnerships
+		Honor Code
+		Diversity Statement
+		Where We Serve
+	
+
+
+
+Our team
+
+	Our Counselors
+	Our Leadership Team
+	Careers
+
+
+Webinars
+Blog
+Resources
+
+	Resources sub
+	
+		Case Studies
+		Library
+		Podcast
+		FAQ
+	
+
+	Resources sub1
+	
+		School-Specific Guides
+		Press
+		Journal
+	
+
+
+
+Guides
+
+	All Colleges
+	
+		Johns Hopkins University
+		New York University
+		Duke University
+		Massachusetts Institute of Technology
+		The California Institute of Technology
+		Northwestern University
+		Stanford University
+		University of Chicago
+		University of Michigan
+		University of California, Berkeley
+		University of Southern California
+		University of California, Los Angeles
+	
+
+	Ivy League Admissions Guides
+	
+		Columbia University
+		Cornell University
+		Brown University
+		Harvard University
+		Princeton University
+		Dartmouth University
+		Yale University
+		University of Pennsylvania
+	
+
+
+
+Contact Us
+			
+					
+						Menu
+		
+					
+				Our Services
+
+	College Counseling
+	
+		College Admissions (G7-12)
+		Young Leaders (G5-8)
+		Academic Mentorships
+		Test Prep
+		Writing Seminars
+		Leadership & Innovation Lab
+		Competition Preparation
+		Subject Tutoring
+		Soft Skills Courses
+	
+
+	More Services
+	
+		Internships
+		Medical School Admissions
+		Private High School Admissions
+		Graduate School Admissions
+		UK Admissions
+		Non-US Admissions
+		Law School Admissions
+		Career Counseling
+		Business School Admissions
+	
+
+
+
+About us
+
+	about sub
+	
+		Why InGenius Prep
+		Our Results
+		Our Educational Approach
+		Our Process
+		Our Technology Platform
+	
+
+	about sub
+	
+		Our Reviews
+		Pro Bono & Partnerships
+		Honor Code
+		Diversity Statement
+		Where We Serve
+	
+
+
+
+Our team
+
+	Our Counselors
+	Our Leadership Team
+	Careers
+
+
+Webinars
+Blog
+Resources
+
+	Resources sub
+	
+		Case Studies
+		Library
+		Podcast
+		FAQ
+	
+
+	Resources sub1
+	
+		School-Specific Guides
+		Press
+		Journal
+	
+
+
+
+Guides
+
+	All Colleges
+	
+		Johns Hopkins University
+		New York University
+		Duke University
+		Massachusetts Institute of Technology
+		The California Institute of Technology
+		Northwestern University
+		Stanford University
+		University of Chicago
+		University of Michigan
+		University of California, Berkeley
+		University of Southern California
+		University of California, Los Angeles
+	
+
+	Ivy League Admissions Guides
+	
+		Columbia University
+		Cornell University
+		Brown University
+		Harvard University
+		Princeton University
+		Dartmouth University
+		Yale University
+		University of Pennsylvania
+	
+
+
+
+Contact Us
+			
+				
+				
+				
+				
+						
+				Our Services
+
+	College Counseling
+	
+		College Admissions (G7-12)
+		Young Leaders (G5-8)
+		Academic Mentorships
+		Test Prep
+		Writing Seminars
+		Leadership & Innovation Lab
+		Competition Preparation
+		Subject Tutoring
+		Soft Skills Courses
+	
+
+	More Services
+	
+		Internships
+		Medical School Admissions
+		Private High School Admissions
+		Graduate School Admissions
+		UK Admissions
+		Non-US Admissions
+		Law School Admissions
+		Career Counseling
+		Business School Admissions
+	
+
+
+
+About Us NEW
+
+	Why InGenius Prep
+	Our Results
+	Our Approach
+	Our Process
+	Our Technology Platform
+	Our Reviews
+	Pro Bono & Partnerships
+	Honor Code
+	Diversity Statement
+
+
+Our Team
+
+	Our Counselors
+	Our Leadership Team
+	Careers
+
+
+Webinars
+Blog
+Resources
+
+	Case Studies
+	Library
+	Podcast
+	Our Offices
+	FAQ
+	School-Specific Guides
+	Press
+
+
+Guides
+
+	All Colleges
+	
+		Johns Hopkins University
+		New York University
+		Duke University
+		Massachusetts Institute of Technology
+		California Institute of Technology
+		Northwestern University
+		Stanford University
+		University of Chicago
+		University of Michigan
+		University of California, Berkeley
+		University of Southern California
+		University of California, Los Angeles
+	
+
+	Ivy League Admissions Guides
+	
+		Columbia University
+		Cornell University
+		Brown University
+		Harvard University
+		Princeton University
+		Dartmouth University
+		Yale University
+		University of Pennsylvania
+	
+
+
+
+			
+					
+						Menu
+		
+					
+				Our Services
+
+	College Counseling
+	
+		College Admissions (G7-12)
+		Young Leaders (G5-8)
+		Academic Mentorships
+		Test Prep
+		Writing Seminars
+		Leadership & Innovation Lab
+		Competition Preparation
+		Subject Tutoring
+		Soft Skills Courses
+	
+
+	More Services
+	
+		Internships
+		Medical School Admissions
+		Private High School Admissions
+		Graduate School Admissions
+		UK Admissions
+		Non-US Admissions
+		Law School Admissions
+		Career Counseling
+		Business School Admissions
+	
+
+
+
+About Us NEW
+
+	Why InGenius Prep
+	Our Results
+	Our Approach
+	Our Process
+	Our Technology Platform
+	Our Reviews
+	Pro Bono & Partnerships
+	Honor Code
+	Diversity Statement
+
+
+Our Team
+
+	Our Counselors
+	Our Leadership Team
+	Careers
+
+
+Webinars
+Blog
+Resources
+
+	Case Studies
+	Library
+	Podcast
+	Our Offices
+	FAQ
+	School-Specific Guides
+	Press
+
+
+Guides
+
+	All Colleges
+	
+		Johns Hopkins University
+		New York University
+		Duke University
+		Massachusetts Institute of Technology
+		California Institute of Technology
+		Northwestern University
+		Stanford University
+		University of Chicago
+		University of Michigan
+		University of California, Berkeley
+		University of Southern California
+		University of California, Los Angeles
+	
+
+	Ivy League Admissions Guides
+	
+		Columbia University
+		Cornell University
+		Brown University
+		Harvard University
+		Princeton University
+		Dartmouth University
+		Yale University
+		University of Pennsylvania
+	
+
+
+
+			
+				
+				
+				
+		
+				
+				
+									
+							
+									
+				
+				
+		
+				
+				
+			Free consultation		
+				
+				
+				
+				
+				
+		
+					
+				
+				
+					
+			
+						
+									SCHEDULE A FREE CONSULTATION
+					
+					
+		
+				
+				
+					
+				
+				
+				
+				
+					
+				
+				
+					
+							
+										our team
+									
+								
+										Our Counselors
+									
+						
+				
+				
+				
+				
+			Best Admissions Consultants: Meet Our Team of Former Admissions Officers & Graduate Coaches		
+				
+				
+				
+							Our admissions experts – Former Admissions Officers and Graduates Coaches from top universities – will bring your dream schools into reach.						
+				
+					
+				
+		
+					
+		
+		
+		
+				
+				
+			Our Counselors		
+				
+				
+				
+			
+	
+		
+					
+			
+			
+	
+		
+				
+				
+		
+		
+				
+				
+					
+				
+				
+				
+			
+	
+		Clear	
+		
+				
+				
+		
+				
+				
+			
+	Division
+	
+		OUR COUNSELORS DIVISIONS FILTER
+	
+		
+		
+							
+						Bilingual Counselor
+					
+	
+
+	
+		
+		
+							
+						BUSINESS
+					
+	
+
+	
+		
+		
+							
+						CAREER COUNSELING
+					
+	
+
+	
+		
+		
+							
+						COLLEGE
+					
+	
+
+	
+		
+		
+							
+						GRADUATE
+					
+	
+
+	
+		
+		
+							
+						Graduate School
+					
+	
+
+	
+		
+		
+							
+						LAW
+					
+	
+
+	
+		
+		
+							
+						MEDICAL
+					
+	
+
+	
+		
+		
+							
+						PRIVATE HIGH SCHOOL
+					
+	
+
+	
+		
+		
+							
+						Subject Tutor
+					
+	
+
+	
+		
+		
+							
+						Writing Instructor
+					
+	
+
+	
+		
+				
+				
+				
+			
+	type
+	
+		OUR COUNSELORS TYPE FILTER
+	
+		
+		
+							
+						Academic Mentors
+					
+	
+
+	
+		
+		
+							
+						Former Admissions Guide
+					
+	
+
+	
+		
+		
+							
+						Former Admissions Officer
+					
+	
+
+	
+		
+		
+							
+						Graduate Coach
+					
+	
+
+	
+		
+		
+							
+						Test Prep
+					
+	
+
+	
+		
+		
+							
+						Writing Instructor
+					
+	
+
+	
+		
+				
+				
+				
+			
+	
+				
+							Sort
+														A-Z
+											Z-A
+											 A-Z School Name
+											 Z-A School Name
+					
+	
+		
+				
+				
+				
+				
+				
+				
+				
+			      
+      		
+		.elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-dc06b41c-0cb3-4d6d-935e-39f32ed4fa98);}		
+			
+					
+		
+		
+		#post-49606 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-49606 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-e2ceb63e-64f1-4e5b-8352-ba81307e06d2);}
+				
+				
+				
+				
+			Alfredo Rodriguez		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							
+
+PhD Mechanical Engineering, Minors in Electrical Engineering and Communication | Cornell University
+
+
+BEng Mechanical Engineering, Minor in Management and Administration | The City College of New York
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-49245 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-49245 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-b23cdb79-1857-446f-8e0a-276920aa84f2);}
+				
+				
+				
+				
+			Nick Strohl		
+				
+				
+				
+			Former Senior Assistant Director of Admissions, Yale University		
+				
+				
+				
+							
+PhD, History and Educational Policy Studies, University of Wisconsin-Madison
+MPhil, Education, University of Cambridge
+BA, History, Yale University
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-49369 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-49369 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-6410a493-1d91-4d44-ad09-398febe3c88e);}
+				
+				
+				
+				
+			Zak Harris		
+				
+				
+				
+			Former Admissions Officer		
+				
+				
+				
+							
+Former Senior Assistant Director & Multicultural Recruiting Coordinator, Johns Hopkins University
+Former Director of Undergraduate Admission, Regis College | Former Associate Dean of Admissions, Undergraduate Admissions, Bowdoin College | Former
+Assistant Director & Multicultural Recruitment Team Member, The George Washington University
+MA, The George Washington University
+BA, Connecticut College
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-49366 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-49366 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-a62292a2-286a-4ecf-8614-d30a9ae65f1f);}
+				
+				
+				
+				
+			Bruno Villegas		
+				
+				
+				
+			Former Admissions Officer		
+				
+				
+				
+							
+Former Admissions Officer, Harvard College
+EdM, Education Policy and Analysis, Harvard Graduate School of Education
+AB, Social Studies, Harvard University
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-49368 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-49368 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-bc629986-2cac-4a34-b7d0-1ee718821bb4);}
+				
+				
+				
+				
+			DJ Rock		
+				
+				
+				
+			Former Admissions Officer		
+				
+				
+				
+							
+Former Assistant Director of Admissions for Multicultural Recruitment, Massachusetts Institute of Technology
+MEd, Higher Education Administration, Northeastern University
+BS, Journalism, Boston University
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-49367 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-49367 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-14b0dbf4-bd18-4dd1-9980-94a8f3165b68);}
+				
+				
+				
+				
+			Marianna Irizarry		
+				
+				
+				
+			Former Admissions Officer		
+				
+				
+				
+							
+Former Part-Time Admissions Reader, Stanford University
+JD, Harvard Law School
+Master’s in Education, Stanford Graduate School of Education
+BA, Political Science, Stanford Universit
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-49372 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-49372 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-6cecee08-c1fb-4398-9c42-6505720c42e5);}
+				
+				
+				
+				
+			Wes Mills		
+				
+				
+				
+			Assistant Director of Enrollment		
+				
+				
+				
+							
+Former Senior Admissions Counselor, University of Chicago
+MA, Humanities, The University of Chicago
+BA, Cinema and Media Studies, The University of Chicago
+BA, English Language and Literature, The University of Chicago
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-49370 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-49370 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-6c367979-2993-4b0e-9b7c-f7cf5c82acc2);}
+				
+				
+				
+				
+			Natalia Ostrowski		
+				
+				
+				
+			Former Admissions Officer		
+				
+				
+				
+							
+Former Assistant Director of Admissions, University of Chicago Former Director of India, University of Chicago
+BA, History, University of Chicago
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-49371 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-49371 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-10940b7f-a3f3-4d43-b15d-7d1280b4e78b);}
+				
+				
+				
+				
+			Heather McCutchen		
+				
+				
+				
+			Former Admissions Officer		
+				
+				
+				
+							
+Former Admissions Reader, Dartmouth College
+MFA, Playwrights’ Workshop, University of Iowa
+BA, Dartmouth College
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-49569 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-49569 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-5ef5571e-d139-483c-b700-3b431dffce39);}
+				
+				
+				
+				
+			Faithe Beadle		
+				
+				
+				
+			Former Admissions Officer		
+				
+				
+				
+							
+
+Former Assistant Director of Admissions | University of Chicago
+
+
+BA | Temple University
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-49559 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-49559 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-b4677a8e-28b4-486b-aad3-77c9b85363c6);}
+				
+				
+				
+				
+			Helen Kwan		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							
+MA Communication | Stanford University
+BA Urban Studies | Stanford University
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-49564 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-49564 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-f51bee15-91dc-4da1-9471-3c0afa7620d8);}
+				
+				
+				
+				
+			Natalie Shteiman		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							
+
+MPhil in Global and Area Studies | University of Oxford
+
+
+BA Middle Eastern Studies modified with Art History | Dartmouth College
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-49554 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-49554 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-15f756f4-820b-450a-be05-f10bc53e07e9);}
+				
+				
+				
+				
+			Raymond Crouch		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							BA Degree in Environmental Studies; Anthropology Focus | Yale University
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-49574 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-49574 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-ca3d1446-36e6-4821-94d6-9cd338297ce4);}
+				
+				
+				
+				
+			Allan Davis		
+				
+				
+				
+			Former Admissions Officer		
+				
+				
+				
+							
+
+Assistant Dean, Advising, Washington University in St. Louis
+
+
+Former Assistant Dean, Admissions and Recruitment | University of Missouri-Kansas City, School of Medicine, Office of Admissions
+
+
+Former Manager, Admissions and Recruitment | University of Missouri-Kansas City, School of Medicine, Office of Admissions
+
+
+PhD Philosophy, Theatre & Performance Studies | College Park
+
+
+BA American Studies | Brigham Young University
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-49549 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-49549 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-2460a129-aa8f-4120-9056-133092b2a2db);}
+				
+				
+				
+				
+			Meghan DeFord		
+				
+				
+				
+			Former Admissions Officer		
+				
+				
+				
+							
+
+Former Seasonal Application Reader | University of Maryland – Office of Undergraduate Admissions & College Park Scholars
+
+
+Former Independent College Admissions Consultant
+
+
+BA English | University of Maryland
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-49579 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-49579 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-3d1bdbee-1d45-489a-8b08-ddee50a807ba);}
+				
+				
+				
+				
+			Cassandra Clifford		
+				
+				
+				
+			Former Admissions Officer		
+				
+				
+				
+							
+
+Former Assistant Director of Admission, Wellesley College
+
+
+Former Admissions Staff, Barnard College
+
+
+B.A., History, Barnard College
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-49223 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-49223 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-121c6343-6f0a-48f3-b5a6-f17a3e67751d);}
+				
+				
+				
+				
+			Cameron Bowskill		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							Master of Mathematical and Theoretical Physics | University of Oxford
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-49218 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-49218 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-04220dcf-f0a9-41c0-8170-55700df94b89);}
+				
+				
+				
+				
+			Laura Gitelson		
+				
+				
+				
+			Former Admissions Officer		
+				
+				
+				
+							
+
+Admissions Reader, Massachusetts Institute of Technology
+
+
+Former Associate Director of Admissions, Boston University School of Law
+
+
+J.D., New York University School of Law
+
+
+B.A., Economics, Swarthmore College
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-49213 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-49213 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-38f854e3-88c2-4bdd-ae1c-ce9be1f882a9);}
+				
+				
+				
+				
+			Callum Lennie		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							
+
+BSc Mathematics with Economics | London School of Economics
+
+
+MSc Statistics | London School of Economics
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-49175 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-49175 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-7594f40a-a4b1-4bce-966e-5041de4f3db8);}
+				
+				
+				
+				
+			Kerri Budhu		
+				
+				
+				
+			Former Admissions Officer		
+				
+				
+				
+							
+Director of Admissions & Financial Aid | NYU Grossman School of Medicine
+Former Director of Admissions | NYU Grossman School of Medicine
+Former Assistant Director of Admissions | NYU Grossman School of Medicine
+Former Coordinator of Admissions | NYU Grossman School of Medicine
+MBA | SUNY Empire State College
+BS Management of Sports Industries | University of New Haven
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-49012 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-49012 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-5e41939a-d63c-49d0-94e6-70714abf4619);}
+				
+				
+				
+				
+			Gary Yeritsian		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							
+PhD, Sociology, University of California, Los Angeles
+BA, History, University of Southern California 
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-48695 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-48695 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-e8e2ff76-2beb-4c5e-9213-17958346fce1);}
+				
+				
+				
+				
+			Caitlin LaFontaine		
+				
+				
+				
+			Former Admissions Officer		
+				
+				
+				
+							
+
+Former Application Review Specialist Seasonal | University of Michigan – Ann Arbor, MI | Office of Undergraduate Admissions & College of Engineering
+
+
+M.A.Ed, Institutional Research, Higher Education | University of Michigan
+
+
+B.S.E. Mechanical Engineering | University of Michigan
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-48685 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-48685 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-282f3a4b-75fc-49da-a71c-e4e659a87e62);}
+				
+				
+				
+				
+			Steph Moreno Jimenez		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							
+
+BA Major in Sociology, Minor in Government | Harvard University
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-48690 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-48690 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-ec9bfd2d-c33f-40de-9474-7ec19b3ba04e);}
+				
+				
+				
+				
+			Bryce Ervin		
+				
+				
+				
+			Former Admissions Officer		
+				
+				
+				
+							
+
+Former Associate Dean of Admissions | Bowdoin College
+
+
+Former Admissions Reader | Harvard Law School J.D. Admissions
+
+
+Ed.M Specialization: Higher Education Administration | Harvard University Graduate School of Education
+
+
+BA Coordinate Major in Economics and Environmental Studies | Bowdoin College
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-48680 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-48680 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-cc2e160c-ec4a-4566-811d-7e623b05e1c8);}
+				
+				
+				
+				
+			Callum Webb		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							
+Mphil in Politics, Political Theory | University of Oxford
+BA Philosophy, Politics, Economics | University of Oxford
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-48675 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-48675 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-ccb68a3d-4a20-4e1b-80c5-3c5c0429b868);}
+				
+				
+				
+				
+			George Shorthouse		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							
+MSc Artificial Intelligence | University of London
+BA Mathematics | University of Cambridge
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-48145 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-48145 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-fca35561-2f38-44c0-8905-976716696db1);}
+				
+				
+				
+				
+			Griffin Leonard		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							BS Computation and Cognition | Massachusetts Institute of Technology
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-47892 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-47892 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-dd35f399-0a3e-491f-9e9e-6d31e519b66c);}
+				
+				
+				
+				
+			Melanie Lachance		
+				
+				
+				
+			Former Admissions Officer		
+				
+				
+				
+							
+
+Former Admissions Reader, Duke University
+
+
+Former Assistant Director, Academic and College Counseling | Saint Mary’s School
+
+
+Former Admission Counselor | Wittenberg University
+
+
+MEd Counselor Education | North Carolina State University
+
+
+BA Psychology | Kenyon College
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-47452 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-47452 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-4a4dd066-e6c2-48c7-a8ce-66bd39bf8276);}
+				
+				
+				
+				
+			Zhangbo (David) Cheng		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							
+
+M.S. in Computer Science & Information Systems, Johns Hopkins University
+
+
+B.S. in Computational Data Sciences, Pennsylvania State University
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-47442 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-47442 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-259fa9ea-ee02-4f6c-9033-0ab1675a428b);}
+				
+				
+				
+				
+			Lakmali Jayasinghe		
+				
+				
+				
+			Writing Instructor		
+				
+				
+				
+							
+Ph.D., Comparative Literature, Stanford University
+M.A., Comparative Literature, Fulbright Fellowship
+B.A., English Literature and Language (First Class Honours), Top of Cohort
+Recipient of the Andrew W. Mellon Foundation Dissertation Fellowship
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-47159 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-47159 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-c9ecb577-bf35-4ebc-9ce1-6d5f0c91403a);}
+				
+				
+				
+				
+			Juno (Tianyi) Zhu		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							
+
+MA East Asian Studies | University of Toronto, Toronto, Canada
+
+
+BS Mathematics and Statistics | University of Toronto, Toronto, Canada
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-47154 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-47154 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-8f67f983-27e2-4512-ae90-76e75b455b75);}
+				
+				
+				
+				
+			Samuel Pugh		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							BA Hons Philosophy, Politics and Economics | University of Oxford, Keble College
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-47149 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-47149 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-783029bd-b64f-4af4-a23c-0af3913146fd);}
+				
+				
+				
+				
+			Weina Yu		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							
+
+MA, Media and Cultural Analysis, Loughborough University (U.K.)
+
+
+Background studies in Architecture
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-47138 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-47138 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-d2aac3a4-2d23-4aed-8de2-c52261cc5a0f);}
+				
+				
+				
+				
+			Alisa (Xiangying) Guo		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							
+
+M.A., Asian Studies, University of British Columbia (UBC)
+
+
+B.A., International Relations (Minor in Japanese), University of Nottingham
+
+
+Teaching Chinese as a Second Language (TCSL) certificate
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-47132 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-47132 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-93e7110a-4dc4-440b-a509-90a3459fa557);}
+				
+				
+				
+				
+			Anja Gogo		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							
+
+BA in Psychology and Behavioural Sciences | St John’s College, Cambridge (Specialization in Social Anthropology)
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-47126 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-47126 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-f672e16a-ddec-4ae0-bb5a-1c63c7816454);}
+				
+				
+				
+				
+			Jeremy He		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							
+
+M.Ed., Education, Western University (Canada)
+
+
+B.S. , Accounting, Smeal College of Business, Pennsylvania State University
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-47111 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-47111 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-db1aa9d0-e583-476f-91ce-704d89f5762f);}
+				
+				
+				
+				
+			Linxuan Zhao		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							
+
+MEd, Developmental Psychology and Education (Program Evaluation Emphasis) | University of Toronto, Ontario Institute for Studies in Education (OISE)
+
+
+BA International Journalism | Shanghai International Studies University
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-47104 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-47104 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-d4080aa2-d47e-4f62-af44-517d96cc7902);}
+				
+				
+				
+				
+			Mihir Kumar		
+				
+				
+				
+			Former Admissions Officer		
+				
+				
+				
+							
+
+MD Candidate | Johns Hopkins University School of Medicine
+
+
+BS Human Biology, Economics; Minor in Mathematical Finance | University of Southern California
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-47031 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-47031 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-7d900637-991f-45d8-8efe-c928de982963);}
+				
+				
+				
+				
+			Aaron Morrill		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							
+
+Master of Public Health, Sociomedical Sciences | Columbia University
+
+
+MA Jewish Ethics | Jewish Theological Seminary of America
+
+
+BA Data Science | Columbia University
+
+
+BA Jewish Thought | Jewish Theological Seminary of America
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-46977 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-46977 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-2e3e03f2-7303-43ce-bb7a-34ee8e59df41);}
+				
+				
+				
+				
+			Ana-Maria Piso-Grigore		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							
+
+PhD Astronomy and Astrophysics | Harvard University
+
+
+BS Physics, Mathematics | Massachusetts Institute of Technology
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-46969 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-46969 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-5d4e8f08-b365-4539-aeb6-2d273b3044e2);}
+				
+				
+				
+				
+			Mina Yamanaka		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							B.A. Physics | Columbia University
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-46925 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-46925 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-c5c5a0fb-a908-4e6a-a93d-f0763f55455e);}
+				
+				
+				
+				
+			Andrew Wesselmann		
+				
+				
+				
+			Former Admissions Officer		
+				
+				
+				
+							
+Senior Assistant Director | Washington University in St. Louis
+Former Assistant Director | Washington University in St. Louis
+Former International Admissions Coordinator & Counselor | University of Northern Colorado
+Former International Admissions Evaluator | University of Missouri
+MA International Relations | Webster University
+BA Political Science | Columbia College
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-46897 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-46897 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-0700c5c3-080d-4aaf-b728-c45ee7c4085f);}
+				
+				
+				
+				
+			Meng-Run Zhang		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							
+
+PhD Educational Psychology | The Chinese University of Hong Kong
+
+
+MEd Child Studies | Peabody College of Education and Human Development, Vanderbilt University
+
+
+BM Information Management and Information Systems | Tsinghua University
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-46887 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-46887 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-daae3292-d6f9-4643-804d-c27429c6aa3c);}
+				
+				
+				
+				
+			Matthew Parsons		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							
+
+MSc Clinical Pharmacology | King’s College London
+
+
+MBBS Medicine | Imperial College London
+
+
+BSc Management | Imperial College London
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+			
+					
+		
+		
+		#post-46892 .elementor-1962 .elementor-element.elementor-element-048212d:not(.elementor-motion-effects-element-type-background), #post-46892 .elementor-1962 .elementor-element.elementor-element-048212d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: var(--wpr-bg-c8d7a8d9-7974-4002-93cc-dd9dc90ae479);}
+				
+				
+				
+				
+			Max Watson		
+				
+				
+				
+			Graduate Coach		
+				
+				
+				
+							
+
+DPhil, Military History | St Edmund Hall, University of Oxford
+
+
+MPhil, Modern British History | St Edmund Hall, University of Oxford
+
+
+BA | Columbia College, Columbia University
+
+
+						
+				
+				
+		
+				
+					
+				
+				
+				
+				
+				
+				
+				
+				
+					
+				
+				
+				
+					
+			
+						
+		
+				
+				
+					
+				
+		
+					
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+			Our Leadership Team Gets Results. Take the First Step in Your Higher Education Journey Today.		
+				
+				
+				
+					
+			
+						
+									SCHEDULE A FREE CONSULTATION
+					
+					
+		
+				
+				
+				
+				
+					
+			
+						
+		
+				
+				
+					
+				
+		
+					
+				
+				
+			
+
+
+
+window.addEventListener('DOMContentLoaded', function() {
+
+jQuery( document ).ready(function($) {
+    
+    
+    function initSelect(){
+        jQuery('.elementor-widget-jet-smart-filters-sorting select').select2({
+            minimumResultsForSearch: -1
+        });
+    };
+    
+    initSelect();
+    
+    
+    var down = {
+        "background-image": "url(/wp-content/uploads/2024/09/chevron-down.svg)"};
+    
+     var up = {
+        "background-image": "url(/wp-content/uploads/2024/09/chevron-up.svg)"};
+    
+    var item =  jQuery('.jet-sorting-select');
+
+    jQuery(item).on({
+        "change": function() {
+            jQuery(this).blur();
+            item.css(down);
+        },
+        "focus": function() {
+             item.css(up);
+        },
+        "blur": function() {
+             item.css(down);
+        },
+    });
+    
+    jQuery('.filterListBlock input[type=checkbox]').change(function() {
+        
+        var value = jQuery(this).attr("value");
+        
+        if (jQuery(this).is(':checked')) {
+            
+            var label = jQuery(this).data("label");
+            
+            jQuery(".active-filters").append("<div class='active-filter-item active-filter-item-chekbox' data-value="+value+">"+label+"</div>" );
+        } else {
+            
+            jQuery(".active-filter-item[data-value="+value+"]").remove();
+            
+        }
+        
+    });
+    
+    jQuery('.filterListBlock input[type=radio]').change(function() {
+        
+        var value = jQuery(this).attr("value");
+        
+        var label = jQuery(this).data("label");
+        
+        jQuery(".active-filter-item-radio").remove();
+        
+        if(label !== "All") {
+        
+            if (jQuery(this).is(':checked')) {
+            
+                jQuery(".active-filters").append("<div class='active-filter-item active-filter-item-radio' data-value="+value+">"+label+"</div>" );
+            }
+        
+        }        
+        
+    });
+    
+    jQuery( 'body' ).on( 'click', '.active-filter-item', function () { 
+        
+        var value = jQuery(this).data("value");
+        
+        if(jQuery(this).hasClass("active-filter-item-chekbox")) {
+            
+            jQuery(".filterListBlock input[value="+value+"]").parent().click();
+        
+        } else {
+            
+            jQuery(".filterListBlock input[data-label=All]").parent().click();
+            
+        }
+    
+    
+    });
+    
+    
+    jQuery('.jet-remove-all-filters__button').on('click', function(event) {
+        
+        jQuery(".active-filters").empty();
+        
+    });
+    
+            
+});
+
+});		
+				
+					
+				
+		
+					
+					
+				
+				
+				
+			
+					
+		
+				
+				
+			Our Service		
+				
+				
+				
+						
+				College Admissions Consulting
+Admissions Guidance
+Medical School Admissions Consulting
+Law School Admissions Consulting
+Graduate School Admissions Consulting
+Business School Admissions Consulting
+Career Counseling
+Private High School Admissions
+Subject Tutoring
+Test Prep
+Competition Prep
+UK Admissions
+Academic & Extracurricular Programs
+			
+						
+				College Admissions Consulting
+Admissions Guidance
+Medical School Admissions Consulting
+Law School Admissions Consulting
+Graduate School Admissions Consulting
+Business School Admissions Consulting
+Career Counseling
+Private High School Admissions
+Subject Tutoring
+Test Prep
+Competition Prep
+UK Admissions
+Academic & Extracurricular Programs
+			
+				
+				
+				
+		
+				
+				
+			Who We Are		
+				
+				
+				
+						
+				Why Us
+Our Leaders
+Our Counselors
+Our Process
+Our Results
+Careers at Ingenius Prep
+			
+						
+				Why Us
+Our Leaders
+Our Counselors
+Our Process
+Our Results
+Careers at Ingenius Prep
+			
+				
+				
+				
+		
+				
+				
+			Our Offices		
+				
+				
+				
+					
+							
+											
+
+											United States
+											
+									
+								
+											
+
+											CANADA
+											
+									
+								
+											
+
+											CHINA
+											
+									
+								
+											
+
+											HONG KONG SAR
+											
+									
+								
+											
+
+											SINGAPORE
+											
+									
+								
+											
+
+											VIETNAM
+											
+									
+								
+											
+
+											AUSTRALIA/NEW ZEALAND
+											
+									
+								
+											
+
+											KOREA
+											
+									
+						
+				
+				
+				
+		
+		
+				
+				
+			Headquarters		
+				
+				
+				
+					
+							
+											
+
+											50 Mitchell Drive, Suite 104 New Haven, CT 06511
+											
+									
+								
+											
+
+											1.800.722.3105
+											
+									
+								
+											
+
+											contact@ingeniusprep.com
+											
+									
+						
+				
+				
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+					
+				
+		
+					
+		
+				
+				
+					
+						
+				
+					 Our Services 
+							
+			
+			
+		
+
+						
+				
+		
+					
+				
+				
+						
+				College Admissions Consulting
+Admissions Guidance
+Medical School Admissions Consulting
+Law School Admissions Consulting
+Graduate School Admissions Consulting
+Business School Admissions Consulting
+Career Counseling
+Private High School Admissions
+Subject Tutoring
+Test Prep
+Competition Prep
+UK Admissions
+Academic & Extracurricular Programs
+			
+						
+				College Admissions Consulting
+Admissions Guidance
+Medical School Admissions Consulting
+Law School Admissions Consulting
+Graduate School Admissions Consulting
+Business School Admissions Consulting
+Career Counseling
+Private High School Admissions
+Subject Tutoring
+Test Prep
+Competition Prep
+UK Admissions
+Academic & Extracurricular Programs
+			
+				
+				
+					
+				
+				
+					
+						
+				
+					 Who We Are 
+							
+			
+			
+		
+
+						
+				
+		
+					
+				
+				
+						
+				Why Us
+Our Leaders
+Our Counselors
+Our Process
+Our Results
+Careers at Ingenius Prep
+			
+						
+				Why Us
+Our Leaders
+Our Counselors
+Our Process
+Our Results
+Careers at Ingenius Prep
+			
+				
+				
+					
+				
+				
+					
+						
+				
+					 Our Offices 
+							
+			
+			
+		
+
+						
+				
+		
+					
+				
+				
+					
+							
+											
+
+											United States
+											
+									
+								
+											
+
+											Canada
+											
+									
+								
+											
+
+											China
+											
+									
+								
+											
+
+											Hong Kong
+											
+									
+								
+											
+
+											Singapore
+											
+									
+								
+											
+
+											Vietnam
+											
+									
+								
+											
+
+											Australia/New Zealand
+											
+									
+								
+											
+
+											Korea
+											
+									
+						
+				
+				
+					
+				
+				
+					
+						
+				
+					 Headquarters 
+							
+			
+			
+		
+
+						
+				
+		
+					
+				
+				
+					
+							
+											
+
+											50 Mitchell Drive, Suite 104 New Haven, CT 06511
+											
+									
+								
+											
+
+											1.800.722.3105
+											
+									
+								
+											
+
+											contact@ingeniusprep.com
+											
+									
+						
+				
+				
+					
+				
+				
+					
+					
+				
+				
+				
+		
+				
+					
+				
+		
+					
+		
+				
+				
+									
+							
+									
+				
+		
+				
+				
+													<img width="84" height="33" src="https://ingeniusprep.com/wp-content/uploads/2024/07/footer-logo-1-2.svg" class="attachment-large size-large wp-image-239" alt="" />													
+				
+				
+				
+													<img width="39" height="64" src="https://ingeniusprep.com/wp-content/uploads/2024/07/footer-logo-2-2.svg" class="attachment-large size-large wp-image-238" alt="" />													
+				
+				
+				
+		
+				
+				
+					
+							
+										©2026 Ingenius Prep. All Rights Reserved. 
+									
+								
+											
+
+											Privacy Policy
+											
+									
+								
+											
+
+											Terms of Service
+											
+									
+						
+				
+				
+				
+				
+							Website By DIGITECH						
+				
+				
+		
+				
+				
+					
+							
+					
+						Facebook
+											
+				
+							
+					
+						Instagram
+											
+				
+							
+					
+						Linkedin
+											
+				
+							
+					
+						Youtube
+											
+				
+							
+					
+						Mes
+											
+				
+							
+					
+						Tik Tok
+											
+				
+							
+					
+						Spotify
+											
+				
+					
+				
+				
+				
+					
+				
+				
+		
+
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/hello-elementor/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+
+		 
+    
+    
+
+window.crwpVer = 1;    window.addEventListener('DOMContentLoaded', function() {
+        jQuery(document).ready(function($) {
+            console.log("Script is working"); // Confirms script loaded
+
+            $('.elementor-menu-toggle').on('click', function() {
+                console.log("Menu toggle clicked"); // Confirms click
+                $('body').toggleClass('menu-open');
+                $('.mainHeader').toggleClass('active');
+            });
+        });
+    });
+		
+@media (max-width: 768px) {
+	body.menu-open {
+			overflow: hidden;
+		height: 100vh;
+	}
+	body.menu-open .mainHeader .elementor-nav-menu__container {
+	            overflow-y: auto;
+        overflow-x: hidden;
+        height: calc(100vh - 90px);
+	}
+	body.menu-open .mainHeader .elementor-nav-menu__container ul.elementor-nav-menu li.menu-item:nth-last-child(1){
+		padding-bottom:10vh;
+	}
+	body.menu-open .mainHeader .elementor-nav-menu__container ul.elementor-nav-menu li li.menu-item:nth-last-child(1){
+		padding-bottom:0vh;
+	}
+}
+form.post-password-form {
+    margin-top: 183px;
+    margin: 183px auto 183px auto;
+    max-width: 65%;
+}
+    		
+			
+					
+				
+				
+							
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+
+
+                #gform_wrapper_8[data-form-index="0"].gform-theme,[data-parent-form="8_0"]{--gf-color-primary: #204ce5;--gf-color-primary-rgb: 32, 76, 229;--gf-color-primary-contrast: #fff;--gf-color-primary-contrast-rgb: 255, 255, 255;--gf-color-primary-darker: #001AB3;--gf-color-primary-lighter: #527EFF;--gf-color-secondary: #fff;--gf-color-secondary-rgb: 255, 255, 255;--gf-color-secondary-contrast: #112337;--gf-color-secondary-contrast-rgb: 17, 35, 55;--gf-color-secondary-darker: #F5F5F5;--gf-color-secondary-lighter: #FFFFFF;--gf-color-out-ctrl-light: rgba(17, 35, 55, 0.1);--gf-color-out-ctrl-light-rgb: 17, 35, 55;--gf-color-out-ctrl-light-darker: rgba(104, 110, 119, 0.35);--gf-color-out-ctrl-light-lighter: #F5F5F5;--gf-color-out-ctrl-dark: #585e6a;--gf-color-out-ctrl-dark-rgb: 88, 94, 106;--gf-color-out-ctrl-dark-darker: #112337;--gf-color-out-ctrl-dark-lighter: rgba(17, 35, 55, 0.65);--gf-color-in-ctrl: #fff;--gf-color-in-ctrl-rgb: 255, 255, 255;--gf-color-in-ctrl-contrast: #112337;--gf-color-in-ctrl-contrast-rgb: 17, 35, 55;--gf-color-in-ctrl-darker: #F5F5F5;--gf-color-in-ctrl-lighter: #FFFFFF;--gf-color-in-ctrl-primary: #204ce5;--gf-color-in-ctrl-primary-rgb: 32, 76, 229;--gf-color-in-ctrl-primary-contrast: #fff;--gf-color-in-ctrl-primary-contrast-rgb: 255, 255, 255;--gf-color-in-ctrl-primary-darker: #001AB3;--gf-color-in-ctrl-primary-lighter: #527EFF;--gf-color-in-ctrl-light: rgba(17, 35, 55, 0.1);--gf-color-in-ctrl-light-rgb: 17, 35, 55;--gf-color-in-ctrl-light-darker: rgba(104, 110, 119, 0.35);--gf-color-in-ctrl-light-lighter: #F5F5F5;--gf-color-in-ctrl-dark: #585e6a;--gf-color-in-ctrl-dark-rgb: 88, 94, 106;--gf-color-in-ctrl-dark-darker: #112337;--gf-color-in-ctrl-dark-lighter: rgba(17, 35, 55, 0.65);--gf-radius: 3px;--gf-font-size-secondary: 14px;--gf-font-size-tertiary: 13px;--gf-icon-ctrl-number: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4 0C4.26522 5.96046e-08 4.51957 0.105357 4.70711 0.292893L7.70711 3.29289C8.09763 3.68342 8.09763 4.31658 7.70711 4.70711C7.31658 5.09763 6.68342 5.09763 6.29289 4.70711L4 2.41421L1.70711 4.70711C1.31658 5.09763 0.683417 5.09763 0.292893 4.70711C-0.0976311 4.31658 -0.097631 3.68342 0.292893 3.29289L3.29289 0.292893C3.48043 0.105357 3.73478 0 4 0ZM0.292893 9.29289C0.683417 8.90237 1.31658 8.90237 1.70711 9.29289L4 11.5858L6.29289 9.29289C6.68342 8.90237 7.31658 8.90237 7.70711 9.29289C8.09763 9.68342 8.09763 10.3166 7.70711 10.7071L4.70711 13.7071C4.31658 14.0976 3.68342 14.0976 3.29289 13.7071L0.292893 10.7071C-0.0976311 10.3166 -0.0976311 9.68342 0.292893 9.29289Z' fill='rgba(17, 35, 55, 0.65)'/%3E%3C/svg%3E");--gf-icon-ctrl-select: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.292893 0.292893C0.683417 -0.097631 1.31658 -0.097631 1.70711 0.292893L5 3.58579L8.29289 0.292893C8.68342 -0.0976311 9.31658 -0.0976311 9.70711 0.292893C10.0976 0.683417 10.0976 1.31658 9.70711 1.70711L5.70711 5.70711C5.31658 6.09763 4.68342 6.09763 4.29289 5.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683418 0.292893 0.292893Z' fill='rgba(17, 35, 55, 0.65)'/%3E%3C/svg%3E");--gf-icon-ctrl-search: url("data:image/svg+xml,%3Csvg width='640' height='640' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M256 128c-70.692 0-128 57.308-128 128 0 70.691 57.308 128 128 128 70.691 0 128-57.309 128-128 0-70.692-57.309-128-128-128zM64 256c0-106.039 85.961-192 192-192s192 85.961 192 192c0 41.466-13.146 79.863-35.498 111.248l154.125 154.125c12.496 12.496 12.496 32.758 0 45.254s-32.758 12.496-45.254 0L367.248 412.502C335.862 434.854 297.467 448 256 448c-106.039 0-192-85.962-192-192z' fill='rgba(17, 35, 55, 0.65)'/%3E%3C/svg%3E");--gf-label-space-y-secondary: var(--gf-label-space-y-md-secondary);--gf-ctrl-border-color: #686e77;--gf-ctrl-size: var(--gf-ctrl-size-md);--gf-ctrl-label-color-primary: #112337;--gf-ctrl-label-color-secondary: #112337;--gf-ctrl-choice-size: var(--gf-ctrl-choice-size-md);--gf-ctrl-checkbox-check-size: var(--gf-ctrl-checkbox-check-size-md);--gf-ctrl-radio-check-size: var(--gf-ctrl-radio-check-size-md);--gf-ctrl-btn-font-size: var(--gf-ctrl-btn-font-size-md);--gf-ctrl-btn-padding-x: var(--gf-ctrl-btn-padding-x-md);--gf-ctrl-btn-size: var(--gf-ctrl-btn-size-md);--gf-ctrl-btn-border-color-secondary: #686e77;--gf-ctrl-file-btn-bg-color-hover: #EBEBEB;--gf-field-img-choice-size: var(--gf-field-img-choice-size-md);--gf-field-img-choice-card-space: var(--gf-field-img-choice-card-space-md);--gf-field-img-choice-check-ind-size: var(--gf-field-img-choice-check-ind-size-md);--gf-field-img-choice-check-ind-icon-size: var(--gf-field-img-choice-check-ind-icon-size-md);--gf-field-pg-steps-number-color: rgba(17, 35, 55, 0.8);}
+                        
+                            
+                        
+        
+        	Step 1 of 2
+        	
+            
+                50%
+            
+                        
+					Ready to Stand Out to Top Colleges?
+
+Sign up and get insider strategies from Former Admissions Officers – straight to your inbox.Email(Required)
+                            
+                        
+                    
+                    
+                          
+                    
+                
+                
+                    
+                        Your DetailsFirst Name(Required)Last Name(Required)Number(Required)Division(Required)Division*UndergraduateAssorted GraduateLaw SchoolBusiness SchoolMedical SchoolCareer CounselingSecondary School (Boarding School)Are You A Parent or Student?(Required)Are You A Parent or Student?*Parent/GuardianStudentOtherStudent Graduation Year(Required)Student Graduation Year*201420152016201720182019202020212022202320242025Aside from English, what other languages are spoken in your home? (Required)What other languages are spoken in your home?* Chinese (Mandarin, Cantonese, etc.)SpanishKoreanHindiJapaneseArabicNoneOtherAcademic Interest(Required)Academic Interest*STEMHumanitiesMathEnglishCreative WritingBusinessComputer ScienceEngineeringEconomicsMusicArtsPre-MedBiologyOtherSportsPolitical ScienceThis field is hidden when viewing the formEmail
+                            
+                        SMS Consent(Required) I agree to receive SMS communications from InGenius Prep.(Required)InGenius Prep respects your privacy and will use your information to manage your account and deliver requested services. We may contact you about our offerings via SMS text messages if you give us your consent above. 
+          
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+             
+                        
+                        window.addEventListener('DOMContentLoaded', function() {
+gform.initializeOnLoaded( function() {gformInitSpinner( 8, 'https://ingeniusprep.com/wp-content/plugins/gravityforms/images/spinner.svg', false );jQuery('#gform_ajax_frame_8').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_8');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_8').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_8').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_8').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_8').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */  }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_8').val();gformInitSpinner( 8, 'https://ingeniusprep.com/wp-content/plugins/gravityforms/images/spinner.svg', false );jQuery(document).trigger('gform_page_loaded', [8, current_page]);window['gf_submitting_8'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_8').replaceWith(confirmation_content);jQuery(document).trigger('gform_confirmation_loaded', [8]);window['gf_submitting_8'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_8').text());}else{jQuery('#gform_8').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "8", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_8" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_8";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_8" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 8, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} );
+});
+						
+				
+					
+				
+				
+					
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			
+			
+
+(function(d,s,i,r) {
+if (d.getElementById(i)){return;}
+var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/5109206.js';
+e.parentNode.insertBefore(n, e);
+})(document,"script","hs-analytics",300000);
+
+
+
+var wpilFrontend = {"ajaxUrl":"/wp-admin/admin-ajax.php","postId":"1844","postType":"post","openInternalInNewTab":"0","openExternalInNewTab":"0","disableClicks":"0","openLinksWithJS":"0","trackAllElementClicks":"0","clicksI18n":{"imageNoText":"Image in link: No Text","imageText":"Image Title: ","noText":"No Anchor Text Found"}};
+//# sourceURL=wpil-frontend-script-js-extra
+
+
+
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+
+
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://ingeniusprep.com","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+
+
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+
+
+var rocket_lazyload_css_data = {"threshold":"300"};
+//# sourceURL=rocket_lazyload_css-js-extra
+
+
+!function o(n,c,a){function u(t,e){if(!c[t]){if(!n[t]){var r="function"==typeof require&&require;if(!e&&r)return r(t,!0);if(s)return s(t,!0);throw(e=new Error("Cannot find module '"+t+"'")).code="MODULE_NOT_FOUND",e}r=c[t]={exports:{}},n[t][0].call(r.exports,function(e){return u(n[t][1][e]||e)},r,r.exports,o,n,c,a)}return c[t].exports}for(var s="function"==typeof require&&require,e=0;e<a.length;e++)u(a[e]);return u}({1:[function(e,t,r){"use strict";{const c="undefined"==typeof rocket_pairs?[]:rocket_pairs,a=(("undefined"==typeof rocket_excluded_pairs?[]:rocket_excluded_pairs).map(t=>{var e=t.selector;document.querySelectorAll(e).forEach(e=>{e.setAttribute("data-rocket-lazy-bg-"+t.hash,"excluded")})}),document.querySelector("#wpr-lazyload-bg-container"));var o=rocket_lazyload_css_data.threshold||300;const u=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&c.filter(e=>t.target.matches(e.selector)).map(t=>{var e;t&&((e=document.createElement("style")).textContent=t.style,a.insertAdjacentElement("afterend",e),t.elements.forEach(e=>{u.unobserve(e),e.setAttribute("data-rocket-lazy-bg-"+t.hash,"loaded")}))})})},{rootMargin:o+"px"});function n(){0<(0<arguments.length&&void 0!==arguments[0]?arguments[0]:[]).length&&c.forEach(t=>{try{document.querySelectorAll(t.selector).forEach(e=>{"loaded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&"excluded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&(u.observe(e),(t.elements||=[]).push(e))})}catch(e){console.error(e)}})}n(),function(){const r=window.MutationObserver;return function(e,t){if(e&&1===e.nodeType)return(t=new r(t)).observe(e,{attributes:!0,childList:!0,subtree:!0}),t}}()(document.querySelector("body"),n)}},{}]},{},[1]);
+//# sourceURL=rocket_lazyload_css-js-after
+
+
+
+
+
+
+
+
+
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+
+
+
+
+var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":1,"iconText":"Select date"}};
+var gf_legacy_multi = [];
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled","error":"Error","message":"Message"},"vars":{"images_url":"https://ingeniusprep.com/wp-content/plugins/gravityforms/images"}};
+//# sourceURL=gform_gravityforms-js-extra
+
+
+
+
+
+
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"4d5e484f1615493b74b97c35b6df2abf"},"ajax":{"ajaxurl":"https://ingeniusprep.com/wp-admin/admin-ajax.php","ajax_submission_nonce":"70f03755a4","i18n":{"step_announcement":"Step %1$s of %2$s, %3$s","unknown_error":"There was an unknown error processing your request. Please try again."}}}},"hmr_dev":"","public_path":"https://ingeniusprep.com/wp-content/plugins/gravityforms/assets/js/dist/","config_nonce":"b6043f3a2b"};
+//# sourceURL=gform_gravityforms_theme-js-extra
+
+
+
+
+
+
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/ingeniusprep.com\/wp-admin\/admin-ajax.php","nonce":"527cbbd7f3","urls":{"assets":"https:\/\/ingeniusprep.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/ingeniusprep.com\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/ingeniusprep.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+//# sourceURL=elementor-pro-frontend-js-before
+
+
+
+
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselWrapperAriaLabel":"Carousel | Horizontal scrolling: Arrow Left & Right","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":true},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.24.0","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"container_grid":true,"e_swiper_latest":true,"e_nested_atomic_repeaters":true,"e_optimized_control_loading":true,"e_onboarding":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"home_screen":true,"ai-layout":true,"nested-elements":true,"editor_v2":true,"e_element_cache":true,"link-in-bio":true,"floating-buttons":true,"display-conditions":true,"form-submissions":true,"taxonomy-filter":true,"search":true},"urls":{"assets":"https:\/\/ingeniusprep.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/ingeniusprep.com\/wp-admin\/admin-ajax.php"},"nonces":{"floatingButtonsClickTracking":"2141390f42"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet","viewport_tablet_extra"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"logo","hello_header_menu_layout":"horizontal","hello_footer_logo_type":"logo"},"post":{"id":1844,"title":"Meet%20Our%20Admissions%20Counselors%3A%20InGenius%20Prep%20Experts","excerpt":"","featuredImage":false}};
+//# sourceURL=elementor-frontend-js-before
+
+
+
+
+
+
+var JetSmartFilterSettings = {"ajaxurl":"https://ingeniusprep.com/wp-admin/admin-ajax.php","siteurl":"https://ingeniusprep.com","sitepath":"","baseurl":"/counselors/","selectors":{"epro-archive-products":{"selector":".elementor-widget-wc-archive-products .elementor-widget-container","action":"replace","inDepth":false,"idPrefix":"#","list":".products","item":".product"},"epro-archive":{"selector":".elementor-widget-archive-posts .elementor-widget-container","action":"replace","inDepth":false,"idPrefix":"#","list":".elementor-posts","item":".elementor-post"},"epro-loop-builder":{"selector":".elementor-loop-container","action":"replace","inDepth":true,"idPrefix":"#","item":".e-loop-item"},"epro-portfolio":{"selector":".elementor-portfolio","action":"insert","inDepth":true,"idPrefix":"#","item":".elementor-portfolio-item"},"epro-posts":{"selector":".elementor-widget-posts .elementor-widget-container","action":"replace","inDepth":false,"idPrefix":"#","list":".elementor-posts","item":".elementor-post"},"epro-products":{"selector":".elementor-widget-woocommerce-products .elementor-widget-container","action":"replace","inDepth":false,"idPrefix":"#","list":".products","item":".product"},"jet-engine-calendar":{"selector":".jet-listing-calendar","action":"replace","inDepth":true,"idPrefix":"#"},"jet-engine":{"selector":".jet-listing-grid.jet-listing","action":"replace","inDepth":true,"idPrefix":"#","list":".jet-listing-grid__items","item":".jet-listing-grid__item"},"jet-woo-products-grid":{"selector":".elementor-jet-woo-products.jet-woo-builder","action":"insert","inDepth":true,"idPrefix":"#","list":".jet-woo-products","item":".jet-woo-builder-product"},"jet-woo-products-list":{"selector":".elementor-jet-woo-products-list.jet-woo-builder","action":"insert","inDepth":true,"idPrefix":"#","list":".jet-woo-products-list","item":".jet-woo-builder-product"},"woocommerce-archive":{"selector":".jet-woo-products-wrapper","action":"insert","inDepth":false,"idPrefix":"#","list":".products","item":".product"},"woocommerce-shortcode":{"selector":"body .woocommerce[class*=\"columns\"]","action":"replace","inDepth":false,"idPrefix":".","list":".products","item":".product"}},"queries":{"epro-posts":{"default":{"post_type":"counselor","paged":1,"posts_per_page":45,"tax_query":"","category_name":""}}},"settings":{"epro-posts":{"default":{"_skin":"custom","custom_skin_template":"1962","classic_show_excerpt":"yes","classic_meta_separator":"///","classic_read_more_text":"Read More \u00bb","cards_meta_separator":"\u2022","cards_read_more_text":"Read More \u00bb","classic_columns":"3","classic_columns_tablet":"2","classic_columns_mobile":"1","classic_posts_per_page":6,"classic_thumbnail":"top","classic_masonry":"","classic_thumbnail_size_size":"medium","classic_item_ratio":"","classic_item_ratio_tablet":"","classic_item_ratio_mobile":"","classic_image_width":"","classic_image_width_tablet":"","classic_image_width_mobile":"","classic_show_title":"yes","classic_title_tag":"h3","classic_excerpt_length":25,"classic_meta_data":["date","comments"],"classic_show_read_more":"yes","classic_open_new_tab":"no","cards_columns":"3","cards_columns_tablet":"2","cards_columns_mobile":"1","cards_posts_per_page":6,"cards_thumbnail":"top","cards_masonry":"","cards_thumbnail_size_size":"medium","cards_item_ratio":"","cards_item_ratio_tablet":"","cards_item_ratio_mobile":"","cards_show_title":"yes","cards_title_tag":"h3","cards_show_excerpt":"yes","cards_excerpt_length":25,"cards_meta_data":["date","comments"],"cards_show_read_more":"yes","cards_open_new_tab":"no","cards_show_badge":"yes","cards_badge_taxonomy":"category","cards_show_avatar":"show-avatar","pagination_type":"","pagination_numbers_shorten":"","pagination_page_limit":"5","pagination_prev_label":"&laquo; Previous","pagination_next_label":"Next &raquo;","nothing_found_message":"","posts_post_type":"counselor","posts_posts_ids":"","posts_include_term_ids":"","posts_include_authors":[],"posts_related_taxonomies":"","posts_include":[],"posts_exclude":"","posts_exclude_ids":"","posts_exclude_term_ids":"","posts_exclude_authors":"","posts_avoid_duplicates":"","posts_authors":"","posts_category_ids":"","posts_post_tag_ids":"","posts_post_format_ids":"","orderby":"","order":"","offset":"","exclude":"","exclude_ids":"","avoid_duplicates":"","posts_query_id":"jet-smart-filters","posts_offset":0,"posts_related_fallback":"fallback_none","posts_fallback_ids":"","posts_select_date":"anytime","posts_date_before":"","posts_date_after":"","posts_orderby":"menu_order","posts_order":"asc","posts_ignore_sticky_posts":"yes","full_content_show_title":"yes","full_content_title_tag":"h3","full_content_thumbnail":"","full_content_thumbnail_size_size":"medium","full_content_meta_data":["date","comments"],"full_content_meta_separator":"///","full_content_open_new_tab":"no","_el_widget_id":"656752e"}}},"misc":{"week_start":"1","url_type":false},"props":{"epro-posts":{"default":{"found_posts":483,"max_num_pages":11,"page":1}}},"extra_props":[],"templates":{"active_filter":"/% if ($label) { %/\n\t\u003Cdiv class=\"jet-active-filter__label\"\u003E/% $label %/\u003Cspan class=\"jet-active-filter__label-separator\"\u003E:\u003C/span\u003E\u003C/div\u003E\n/% } %/\n/% if ($value) { %/\n\t\u003Cdiv class=\"jet-active-filter__val\"\u003E/% $value %/\u003C/div\u003E\n/% } %/\n\u003Cdiv class=\"jet-active-filter__remove\"\u003E&times;\u003C/div\u003E","active_tag":"/% if ($label) { %/\n\t\u003Cdiv class=\"jet-active-tag__label\"\u003E/% $label %/\u003Cspan class=\"jet-active-tag__label-separator\"\u003E:\u003C/span\u003E\u003C/div\u003E\n/% } %/\n/% if ($value) { %/\n\t\u003Cdiv class=\"jet-active-tag__val\"\u003E/% $value %/\u003C/div\u003E\n/% } %/\n\u003Cdiv class=\"jet-active-tag__remove\"\u003E&times;\u003C/div\u003E","pagination_item":"\u003Cdiv class=\"jet-filters-pagination__link\"\u003E/% $value %/\u003C/div\u003E","pagination_item_dots":"\u003Cdiv class=\"jet-filters-pagination__dots\"\u003E&hellip;\u003C/div\u003E","pagination_load_more":"\u003Cdiv class=\"jet-filters-pagination__link\"\u003E/% $value %/\u003C/div\u003E"},"plugin_settings":{"use_tabindex":false,"use_url_aliases":false,"url_aliases":[]},"datePickerData":{"closeText":"Done","prevText":"Prev","nextText":"Next","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["Su","Mo","Tu","We","Th","Fr","Sa"],"weekHeader":"Wk"}};
+//# sourceURL=jet-smart-filters-js-extra
+
+
+Top
+
+
+	html {
+  scroll-behavior: smooth;
+	}
+	
+	#myBtn {
+		width:45px;
+		height: 45px;
+		display: none;
+		position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #077fe866;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 12px;
+	}
+
+	@media (any-hover: hover) {
+			#myBtn:hover {
+			background-color: #077FE7;
+	}
+	}
+
+
+
+
+	let mybutton = document.getElementById("myBtn");
+
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = 'block';
+		} else {
+			mybutton.style.display = 'none';
+		}
+	}
+
+	function topFunction() {
+		document.body.scrollTop = 0; 
+		document.documentElement.scrollTop = 0; 
+	}
+
+window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)function lazyLoadThumb(e,alt,l){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="Play Youtube video"></button>';if(l){t=t.replace('data-lazy-','');t=t.replace('loading="lazy"','');t=t.replace(/<noscript>.*?<\/noscript>/g,'');}t=t.replace('alt=""','alt="'+alt+'"');return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?"":"&"+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var exclusions=[];var e,t,p,u,l,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)(e=document.createElement("div")),(u='https://i.ytimg.com/vi/ID/hqdefault.jpg'),(u=u.replace('ID',a[t].dataset.id)),(l=exclusions.some(exclusion=>u.includes(exclusion))),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query",a[t].dataset.query),e.setAttribute("data-src",a[t].dataset.src),(e.innerHTML=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt,l)),a[t].appendChild(e),(p=e.querySelector(".play")),(p.onclick=lazyLoadYoutubeIframe)});
+"use strict";function wprRemoveCPCSS(){var preload_stylesheets=document.querySelectorAll('link[data-rocket-async="style"][rel="preload"]');if(preload_stylesheets&&0<preload_stylesheets.length)for(var stylesheet_index=0;stylesheet_index<preload_stylesheets.length;stylesheet_index++){var media=preload_stylesheets[stylesheet_index].getAttribute("media")||"all";if(window.matchMedia(media).matches)return void setTimeout(wprRemoveCPCSS,200)}var elem=document.getElementById("rocket-critical-css");elem&&"remove"in elem&&elem.remove()}window.addEventListener?window.addEventListener("load",wprRemoveCPCSS):window.attachEvent&&window.attachEvent("onload",wprRemoveCPCSS);(()=>{class RocketElementorPreload{constructor(){this.deviceMode=document.createElement("span"),this.deviceMode.id="elementor-device-mode-wpr",this.deviceMode.setAttribute("class","elementor-screen-only"),document.body.appendChild(this.deviceMode)}t(){let t=getComputedStyle(this.deviceMode,":after").content.replace(/"/g,"");this.animationSettingKeys=this.i(t),document.querySelectorAll(".elementor-invisible[data-settings]").forEach((t=>{const e=t.getBoundingClientRect();if(e.bottom>=0&&e.top<=window.innerHeight)try{this.o(t)}catch(t){}}))}o(t){const e=JSON.parse(t.dataset.settings),i=e.m||e.animation_delay||0,n=e[this.animationSettingKeys.find((t=>e[t]))];if("none"===n)return void t.classList.remove("elementor-invisible");t.classList.remove(n),this.currentAnimation&&t.classList.remove(this.currentAnimation),this.currentAnimation=n;let o=setTimeout((()=>{t.classList.remove("elementor-invisible"),t.classList.add("animated",n),this.l(t,e)}),i);window.addEventListener("rocket-startLoading",(function(){clearTimeout(o)}))}i(t="mobile"){const e=[""];switch(t){case"mobile":e.unshift("_mobile");case"tablet":e.unshift("_tablet");case"desktop":e.unshift("_desktop")}const i=[];return["animation","_animation"].forEach((t=>{e.forEach((e=>{i.push(t+e)}))})),i}l(t,e){this.i().forEach((t=>delete e[t])),t.dataset.settings=JSON.stringify(e)}static run(){const t=new RocketElementorPreload;requestAnimationFrame(t.t.bind(t))}}document.addEventListener("DOMContentLoaded",RocketElementorPreload.run)})();<link data-minify="1" rel="stylesheet" href="https://ingeniusprep.com/wp-content/cache/background-css/1/ingeniusprep.com/wp-content/cache/min/1/wp-content/themes/hello-elementor/custom.css?ver=1771880482&wpr_t=1772989663" type="text/css" media="all"><link data-minify="1" rel='stylesheet' id='wpml-blocks-css' href='https://ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/sitepress-multilingual-cms/dist/css/blocks/styles.css?ver=1771880482' media='all' /><link rel='stylesheet' id='wpml-legacy-dropdown-0-css' href='https://ingeniusprep.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-dropdown/style.min.css?ver=1' media='all' /><link data-minify="1" rel='stylesheet' id='cms-navigation-style-base-css' href='https://ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/wpml-cms-nav/res/css/cms-navigation-base.css?ver=1771880482' media='screen' /><link data-minify="1" rel='stylesheet' id='cms-navigation-style-css' href='https://ingeniusprep.com/wp-content/cache/background-css/1/ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/wpml-cms-nav/res/css/cms-navigation.css?ver=1771880482&wpr_t=1772989663' media='screen' /><link rel='stylesheet' id='hello-elementor-css' href='https://ingeniusprep.com/wp-content/themes/hello-elementor/style.min.css?ver=3.1.0' media='all' /><link rel='stylesheet' id='hello-elementor-theme-style-css' href='https://ingeniusprep.com/wp-content/themes/hello-elementor/theme.min.css?ver=3.1.0' media='all' /><link rel='stylesheet' id='hello-elementor-header-footer-css' href='https://ingeniusprep.com/wp-content/themes/hello-elementor/header-footer.min.css?ver=3.1.0' media='all' /><link rel='stylesheet' id='elementor-frontend-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/custom-frontend.min.css?ver=1771625893' media='all' /><link rel='stylesheet' id='elementor-post-7-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-7.css?ver=1771625893' media='all' /><link data-minify="1" rel='stylesheet' id='swiper-css' href='https://ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=1771880482' media='all' /><link rel='stylesheet' id='e-swiper-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='elementor-pro-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/custom-pro-frontend.min.css?ver=1771625893' media='all' /><link rel='stylesheet' id='elementor-global-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/global.css?ver=1771625894' media='all' /><link rel='stylesheet' id='widget-icon-list-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/custom-widget-icon-list.min.css?ver=1771625893' media='all' /><link rel='stylesheet' id='e-animation-fadeIn-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/lib/animations/styles/fadeIn.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='widget-heading-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='widget-text-editor-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/widget-text-editor.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='widget-divider-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='elementor-post-1844-css' href='https://ingeniusprep.com/wp-content/cache/background-css/1/ingeniusprep.com/wp-content/uploads/elementor/css/post-1844.css?ver=1771626685&wpr_t=1772989663' media='all' /><link rel='stylesheet' id='elementor-post-41735-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-41735.css?ver=1772213503' media='all' /><link rel='stylesheet' id='elementor-post-27886-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-27886.css?ver=1771625896' media='all' /><link rel='stylesheet' id='elementor-post-46592-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-46592.css?ver=1771625896' media='all' /><link rel='stylesheet' id='elementor-post-41597-css' href='https://ingeniusprep.com/wp-content/cache/background-css/1/ingeniusprep.com/wp-content/uploads/elementor/css/post-41597.css?ver=1771625896&wpr_t=1772989663' media='all' /><link data-minify="1" rel='stylesheet' id='tablepress-default-css' href='https://ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/tablepress/css/build/default.css?ver=1771880482' media='all' /><link data-minify="1" rel='stylesheet' id='ecs-styles-css' href='https://ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/ele-custom-skin/assets/css/ecs-style.css?ver=1771880482' media='all' /><link rel='stylesheet' id='elementor-post-1962-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-1962.css?ver=1757946669' media='all' /><link rel='stylesheet' id='elementor-post-2060-css' href='https://ingeniusprep.com/wp-content/cache/background-css/1/ingeniusprep.com/wp-content/uploads/elementor/css/post-2060.css?ver=1727975799&wpr_t=1772989663' media='all' /><link rel='stylesheet' id='elementor-post-2522-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-2522.css?ver=1727722097' media='all' /><link rel='stylesheet' id='elementor-post-2623-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-2623.css?ver=1727868231' media='all' /><link rel='stylesheet' id='elementor-post-3297-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-3297.css?ver=1728550730' media='all' /><link rel='stylesheet' id='elementor-post-3343-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-3343.css?ver=1727776026' media='all' /><link rel='stylesheet' id='elementor-post-4309-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-4309.css?ver=1727788581' media='all' /><link rel='stylesheet' id='elementor-post-5306-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-5306.css?ver=1727799323' media='all' /><link rel='stylesheet' id='elementor-post-6461-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-6461.css?ver=1727429347' media='all' /><link rel='stylesheet' id='elementor-post-27477-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-27477.css?ver=1767878385' media='all' /><link rel='stylesheet' id='elementor-post-46816-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-46816.css?ver=1759488076' media='all' /><link rel='stylesheet' id='widget-image-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='widget-nested-accordion-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/widget-nested-accordion.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='widget-social-icons-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='e-apple-webkit-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/conditionals/apple-webkit.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='gravity_forms_theme_reset-css' href='https://ingeniusprep.com/wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-theme-reset.min.css?ver=2.9.28' media='all' /><link rel='stylesheet' id='gravity_forms_theme_foundation-css' href='https://ingeniusprep.com/wp-content/cache/background-css/1/ingeniusprep.com/wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-theme-foundation.min.css?ver=2.9.28&wpr_t=1772989663' media='all' /><link data-minify="1" rel='stylesheet' id='gravity_forms_theme_framework-css' href='https://ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-theme-framework.min.css?ver=1771880482' media='all' /><link rel='stylesheet' id='gravity_forms_orbital_theme-css' href='https://ingeniusprep.com/wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-orbital-theme.min.css?ver=2.9.28' media='all' /><link data-minify="1" rel='stylesheet' id='font-awesome-v4shim-css' href='https://ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/types/vendor/toolset/toolset-common/res/lib/font-awesome/css/v4-shims.css?ver=1771880658' media='screen' /><link data-minify="1" rel='stylesheet' id='font-awesome-css' href='https://ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/types/vendor/toolset/toolset-common/res/lib/font-awesome/css/all.css?ver=1771880658' media='screen' /><link data-minify="1" rel='stylesheet' id='jet-smart-filters-css' href='https://ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/jet-smart-filters1/assets/css/public.css?ver=1771880658' media='all' /><link data-minify="1" href="https://ingeniusprep.com/wp-content/cache/min/1/ajax/libs/select2/4.0.10/css/select2.min.css?ver=1771880658" rel="stylesheet"/>
+
+
+

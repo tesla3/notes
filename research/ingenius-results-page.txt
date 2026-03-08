@@ -1,0 +1,3425 @@
+
+
+
+Skip to content
+
+		
+			
+		
+				
+				
+									
+			<img width="202" height="36" src="https://ingeniusprep.com/wp-content/uploads/2024/07/header-logo.svg" class="attachment-full size-full wp-image-27" alt="Logo InGenius" />				
+									
+				
+				
+		
+				
+				
+			window.addEventListener('DOMContentLoaded', function() {
+    jQuery($ => {
+    $(document).ready(function() {
+        let itemsList = $('.mainHeader').find('.wpml-ls-sub-menu');
+        
+        if (itemsList.children().length === 0) {
+            $('.langContainer').hide();
+          $('.leftContainer').css('width', '100%');
+        
+        
+        } else {
+            
+        }
+    });
+});
+});		
+				
+		
+		
+		
+				
+				
+			Strategic Selection: Building Your School List & Planning College Visits in 11th Grade>>		
+				
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+			+1.800.722.3105		
+				
+				
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+			
+
+	
+
+		
+			
+                English
+
+			
+				
+					
+						
+                            简体中文
+					
+
+				
+					
+						
+                            繁體中文
+					
+
+				
+					
+						
+                            한국어
+					
+
+							
+
+		
+
+	
+
+		
+				
+				
+				
+		
+		
+				
+				
+						
+				Our Services
+
+	College Counseling
+	
+		College Admissions (G7-12)
+		Young Leaders (G5-8)
+		Academic Mentorships
+		Test Prep
+		Writing Seminars
+		Leadership & Innovation Lab
+		Competition Preparation
+		Subject Tutoring
+		Soft Skills Courses
+	
+
+	More Services
+	
+		Internships
+		Medical School Admissions
+		Private High School Admissions
+		Graduate School Admissions
+		UK Admissions
+		Non-US Admissions
+		Law School Admissions
+		Career Counseling
+		Business School Admissions
+	
+
+
+
+About us
+
+	about sub
+	
+		Why InGenius Prep
+		Our Results
+		Our Educational Approach
+		Our Process
+		Our Technology Platform
+	
+
+	about sub
+	
+		Our Reviews
+		Pro Bono & Partnerships
+		Honor Code
+		Diversity Statement
+		Where We Serve
+	
+
+
+
+Our team
+
+	Our Counselors
+	Our Leadership Team
+	Careers
+
+
+Webinars
+Blog
+Resources
+
+	Resources sub
+	
+		Case Studies
+		Library
+		Podcast
+		FAQ
+	
+
+	Resources sub1
+	
+		School-Specific Guides
+		Press
+		Journal
+	
+
+
+
+Guides
+
+	All Colleges
+	
+		Johns Hopkins University
+		New York University
+		Duke University
+		Massachusetts Institute of Technology
+		The California Institute of Technology
+		Northwestern University
+		Stanford University
+		University of Chicago
+		University of Michigan
+		University of California, Berkeley
+		University of Southern California
+		University of California, Los Angeles
+	
+
+	Ivy League Admissions Guides
+	
+		Columbia University
+		Cornell University
+		Brown University
+		Harvard University
+		Princeton University
+		Dartmouth University
+		Yale University
+		University of Pennsylvania
+	
+
+
+
+Contact Us
+			
+					
+						Menu
+		
+					
+				Our Services
+
+	College Counseling
+	
+		College Admissions (G7-12)
+		Young Leaders (G5-8)
+		Academic Mentorships
+		Test Prep
+		Writing Seminars
+		Leadership & Innovation Lab
+		Competition Preparation
+		Subject Tutoring
+		Soft Skills Courses
+	
+
+	More Services
+	
+		Internships
+		Medical School Admissions
+		Private High School Admissions
+		Graduate School Admissions
+		UK Admissions
+		Non-US Admissions
+		Law School Admissions
+		Career Counseling
+		Business School Admissions
+	
+
+
+
+About us
+
+	about sub
+	
+		Why InGenius Prep
+		Our Results
+		Our Educational Approach
+		Our Process
+		Our Technology Platform
+	
+
+	about sub
+	
+		Our Reviews
+		Pro Bono & Partnerships
+		Honor Code
+		Diversity Statement
+		Where We Serve
+	
+
+
+
+Our team
+
+	Our Counselors
+	Our Leadership Team
+	Careers
+
+
+Webinars
+Blog
+Resources
+
+	Resources sub
+	
+		Case Studies
+		Library
+		Podcast
+		FAQ
+	
+
+	Resources sub1
+	
+		School-Specific Guides
+		Press
+		Journal
+	
+
+
+
+Guides
+
+	All Colleges
+	
+		Johns Hopkins University
+		New York University
+		Duke University
+		Massachusetts Institute of Technology
+		The California Institute of Technology
+		Northwestern University
+		Stanford University
+		University of Chicago
+		University of Michigan
+		University of California, Berkeley
+		University of Southern California
+		University of California, Los Angeles
+	
+
+	Ivy League Admissions Guides
+	
+		Columbia University
+		Cornell University
+		Brown University
+		Harvard University
+		Princeton University
+		Dartmouth University
+		Yale University
+		University of Pennsylvania
+	
+
+
+
+Contact Us
+			
+				
+				
+				
+				
+						
+				Our Services
+
+	College Counseling
+	
+		College Admissions (G7-12)
+		Young Leaders (G5-8)
+		Academic Mentorships
+		Test Prep
+		Writing Seminars
+		Leadership & Innovation Lab
+		Competition Preparation
+		Subject Tutoring
+		Soft Skills Courses
+	
+
+	More Services
+	
+		Internships
+		Medical School Admissions
+		Private High School Admissions
+		Graduate School Admissions
+		UK Admissions
+		Non-US Admissions
+		Law School Admissions
+		Career Counseling
+		Business School Admissions
+	
+
+
+
+About Us NEW
+
+	Why InGenius Prep
+	Our Results
+	Our Approach
+	Our Process
+	Our Technology Platform
+	Our Reviews
+	Pro Bono & Partnerships
+	Honor Code
+	Diversity Statement
+
+
+Our Team
+
+	Our Counselors
+	Our Leadership Team
+	Careers
+
+
+Webinars
+Blog
+Resources
+
+	Case Studies
+	Library
+	Podcast
+	Our Offices
+	FAQ
+	School-Specific Guides
+	Press
+
+
+Guides
+
+	All Colleges
+	
+		Johns Hopkins University
+		New York University
+		Duke University
+		Massachusetts Institute of Technology
+		California Institute of Technology
+		Northwestern University
+		Stanford University
+		University of Chicago
+		University of Michigan
+		University of California, Berkeley
+		University of Southern California
+		University of California, Los Angeles
+	
+
+	Ivy League Admissions Guides
+	
+		Columbia University
+		Cornell University
+		Brown University
+		Harvard University
+		Princeton University
+		Dartmouth University
+		Yale University
+		University of Pennsylvania
+	
+
+
+
+			
+					
+						Menu
+		
+					
+				Our Services
+
+	College Counseling
+	
+		College Admissions (G7-12)
+		Young Leaders (G5-8)
+		Academic Mentorships
+		Test Prep
+		Writing Seminars
+		Leadership & Innovation Lab
+		Competition Preparation
+		Subject Tutoring
+		Soft Skills Courses
+	
+
+	More Services
+	
+		Internships
+		Medical School Admissions
+		Private High School Admissions
+		Graduate School Admissions
+		UK Admissions
+		Non-US Admissions
+		Law School Admissions
+		Career Counseling
+		Business School Admissions
+	
+
+
+
+About Us NEW
+
+	Why InGenius Prep
+	Our Results
+	Our Approach
+	Our Process
+	Our Technology Platform
+	Our Reviews
+	Pro Bono & Partnerships
+	Honor Code
+	Diversity Statement
+
+
+Our Team
+
+	Our Counselors
+	Our Leadership Team
+	Careers
+
+
+Webinars
+Blog
+Resources
+
+	Case Studies
+	Library
+	Podcast
+	Our Offices
+	FAQ
+	School-Specific Guides
+	Press
+
+
+Guides
+
+	All Colleges
+	
+		Johns Hopkins University
+		New York University
+		Duke University
+		Massachusetts Institute of Technology
+		California Institute of Technology
+		Northwestern University
+		Stanford University
+		University of Chicago
+		University of Michigan
+		University of California, Berkeley
+		University of Southern California
+		University of California, Los Angeles
+	
+
+	Ivy League Admissions Guides
+	
+		Columbia University
+		Cornell University
+		Brown University
+		Harvard University
+		Princeton University
+		Dartmouth University
+		Yale University
+		University of Pennsylvania
+	
+
+
+
+			
+				
+				
+				
+		
+				
+				
+									
+			<img width="202" height="36" src="https://ingeniusprep.com/wp-content/uploads/2024/07/header-logo.svg" class="attachment-full size-full wp-image-27" alt="Logo InGenius" />				
+									
+				
+				
+		
+				
+				
+			Free consultation		
+				
+				
+				
+				
+				
+		
+					
+				
+				
+					
+			
+						
+									SCHEDULE A FREE CONSULTATION
+					
+					
+		
+				
+				
+					
+				
+				
+				
+				
+					
+		
+		
+				
+				
+					
+							
+											
+
+											Why us
+											
+									
+								
+										Admissions Results – InGenius Prep
+									
+						
+				
+				
+				
+				
+			Increase Your Chances of Getting into Top Schools with Leading College Admissions Counselors and a 99% Acceptance Rate		
+				
+				
+				
+							Individualized Guidance for Exceptional Students						
+				
+				
+		
+				
+				
+			schedule free consultation		
+				
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+		
+				
+					
+				
+		
+					
+				
+				
+			2024-2025 Admissions Results Overview		
+				
+				
+				
+							Our students enjoy a  7x chance  of being admitted to the top 1% of colleges and universities.  Better than the most elite Prep Schools in the world by a wide measure, our candidates outperform the competition.We are proud to share that our students’ admissions results have been independently verified and audited by a reputable accounting firm, providing transparency and demonstrating the effectiveness of our services. This external validation underscores our commitment to delivering genuine results, trustworthy guidance, and ethical practices to our families.						
+				
+		
+		
+		
+				
+				
+					
+			High School Seniors			
+				
+				470
+				+
+			
+		
+				
+				
+				
+		
+				
+				
+					
+			Ivy League Offers			
+				
+				99
+				
+			
+		
+				
+				
+				
+		
+				
+				
+					
+			Top 10 Offers			
+				
+				121
+				
+			
+		
+				
+				
+				
+		
+				
+				
+					
+			Top 20 Offers			
+				
+				306
+				
+			
+		
+				
+				
+				
+		
+				
+				
+					
+			Top 30 Offers			
+				
+				617
+				
+			
+		
+				
+				
+				
+		
+				
+				
+					
+			Top 40 Offers			
+				
+				920
+				
+			
+		
+				
+				
+				
+		
+				
+				
+					
+			Top 50 Offers			
+				
+				1105
+				+
+			
+		
+				
+				
+				
+				
+		
+				
+				
+					
+			
+										
+							
+					
+		
+				
+				
+			Results Overview		
+				
+		
+				
+				
+						
+				Acceptance Rate			
+		
+		
+			
+				
+							
+		
+				
+				
+				
+				
+						
+				InGenius Acceptance Rate			
+		
+		
+			
+				
+							
+		
+				
+				
+				
+		
+		
+				
+				
+			Princeton University		
+				
+		
+		
+		
+				
+				
+				
+			4.6%		
+				
+				
+		
+		
+				
+				
+				
+			15%		
+				
+				
+				
+				
+				
+		
+		
+				
+				
+			Massachusetts Institute of Technology		
+				
+		
+		
+		
+				
+				
+				
+			4.5%		
+				
+				
+		
+		
+				
+				
+				
+			21%		
+				
+				
+				
+				
+				
+		
+		
+				
+				
+			Harvard University		
+				
+		
+		
+		
+				
+				
+				
+			3.7%		
+				
+				
+		
+		
+				
+				
+				
+			8.6%		
+				
+				
+				
+				
+				
+		
+		
+				
+				
+			Stanford University		
+				
+		
+		
+		
+				
+				
+				
+			3.9%		
+				
+				
+		
+		
+				
+				
+				
+			11.9%		
+				
+				
+				
+				
+				
+		
+		
+				
+				
+			Yale University		
+				
+		
+		
+		
+				
+				
+				
+			3.9%		
+				
+				
+		
+		
+				
+				
+				
+			11.8%		
+				
+				
+				
+				
+				
+				
+					
+				
+								
+											
+							
+					
+		
+				
+				
+			Results Overview		
+				
+		
+				
+				
+						
+				Acceptance Rate			
+		
+		
+			
+				
+							
+		
+				
+				
+				
+				
+						
+				InGenius Acceptance Rate			
+		
+		
+			
+				
+							
+		
+				
+				
+				
+		
+		
+				
+				
+			University of Chicago		
+				
+		
+		
+		
+				
+				
+				
+			4.5%		
+				
+				
+		
+		
+				
+				
+				
+			26.3%		
+				
+				
+				
+				
+				
+		
+		
+				
+				
+			University of Pennsylvania		
+				
+		
+		
+		
+				
+				
+				
+			3.7%		
+				
+				
+		
+		
+				
+				
+				
+			24.3%		
+				
+				
+				
+				
+				
+		
+		
+				
+				
+			Columbia University		
+				
+		
+		
+		
+				
+				
+				
+			3.9%		
+				
+				
+		
+		
+				
+				
+				
+			22.2%		
+				
+				
+				
+				
+				
+		
+		
+				
+				
+			Duke University		
+				
+		
+		
+		
+				
+				
+				
+			5.4%		
+				
+				
+		
+		
+				
+				
+				
+			20%		
+				
+				
+				
+				
+				
+		
+		
+				
+				
+			Johns Hopkins University		
+				
+		
+		
+		
+				
+				
+				
+			2.9%		
+				
+				
+		
+		
+				
+				
+				
+			27.7%		
+				
+				
+				
+				
+				
+				
+					
+				
+								
+								
+		
+					
+							
+			
+							
+					
+				
+				
+				
+				
+					
+				
+		
+					
+				
+				
+			2024-2025 College Admissions Results - By School		
+				
+		
+				
+				
+					
+
+
+
+	Rank
+UniversityClass of 2029 Offers5 Year Total
+
+
+
+
+	1Princeton University827
+
+
+	2Massachusetts Institute of Technology641
+
+
+	3Harvard University835
+
+
+	4Stanford University1847
+
+
+	5Yale University1345
+
+
+	6California Institute of Technology411
+
+
+	6Duke University1451
+
+
+	6Johns Hopkins University1957
+
+
+	6Northwestern University1668
+
+
+	10University of Pennsylvania1469
+
+
+	11Cornell University2795
+
+
+	11University of Chicago847
+
+
+	13Brown University1261
+
+
+	13Columbia University1454
+
+
+	15Dartmouth University323
+
+
+	15University of California--Los Angeles48172
+
+
+	17University of California--Berkeley42181
+
+
+	18Rice University1656
+
+
+	18University of Notre Dame320
+
+
+	18Vanderbilt University1243
+
+
+	21Carnegie Mellon University1867
+
+
+	21University of Michigan--Ann Arbor28122
+
+
+	21Washington University in St Louis1748
+
+
+	24Emory University1883
+
+
+	24Georgetown University1137
+
+
+	24University of Virginia1463
+
+
+	27University of North Carolina at Chapel Hill2587
+
+
+	27University of Southern California38129
+
+
+	29University of California--San Diego70267
+
+
+	30New York University43178
+
+
+	30University of Texas at Austin2257
+
+
+
+
+				
+				
+				
+		
+				
+				
+					
+
+
+
+	Rank
+LIBERAL ARTS COLLEGESOffers 5 Year Total
+
+
+
+
+	1Williams College212
+
+
+	2Amherst College110
+
+
+	3Swarthmore College29
+
+
+	7Wellesley College417
+
+
+
+
+				
+				
+				
+		
+				
+				
+					
+
+
+
+	Rank
+UK UNIVERSITIESOffers5 Year Total
+
+
+
+
+	1University of Cambridge26
+
+
+	5Imperial College, London222
+
+
+	7Durham University226
+
+
+	10University College London1050
+
+
+
+
+				
+				
+				
+		
+				
+				
+					
+
+
+
+	Rank
+Art and Design SchoolsOffers5 Year Total
+
+
+
+
+	★Pratt Institute620
+
+
+	★Savannah College of Art and Design46
+
+
+	★Parsons School of Design210
+
+
+	★Rhode Island School of Design614
+
+
+
+
+				
+				
+				
+					
+				
+		
+					
+				
+				
+							InGenius Prep Student Results						
+				
+				
+				
+					
+			
+						
+									SEE CASE STUDIES
+					
+					
+		
+				
+				
+		
+				
+				
+					
+			More Likely Into Top 10 Schools			
+				
+				1
+				x
+			
+		
+				
+				
+				
+				
+					
+			Acceptance Rate			
+				
+				1
+				%
+			
+		
+				
+				
+				
+				
+					
+			Family Satisfaction Rate			
+				
+				1
+				%
+			
+		
+				
+				
+				
+				
+					
+			Students Admitted to Reach or Target  Schools			
+				
+				1
+				%
+			
+		
+				
+				
+				
+				
+					
+			More Likely Into Top 30 Schools 			
+				
+				1
+				x
+			
+		
+				
+				
+				
+				
+					
+			In Scholarships			
+				$
+				1
+				M+
+			
+		
+				
+				
+				
+				
+					
+			Ivy League Acceptances			
+				
+				1
+				+
+			
+		
+				
+				
+				
+				
+					
+			Top 10 Acceptances In 2023			
+				
+				1
+				+
+			
+		
+				
+				
+				
+				
+					
+			Top 30 Acceptances			
+				
+				1
+				+
+			
+		
+				
+				
+				
+				
+					
+			Top-Ranked Former Admissions Officers			
+				
+				1
+				+
+			
+		
+				
+				
+				
+					
+				
+		
+				
+				
+			No Matter Your Scores, We’ll Help You Beat the Admissions Odds		
+				
+				
+				
+					
+				
+		.e-loop-item-15107 .elementor-element.elementor-element-7e635c5:not(.elementor-motion-effects-element-type-background), .e-loop-item-15107 .elementor-element.elementor-element-7e635c5 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-2579fd78-a8df-4a42-97ae-c2f39bed567a);}.elementor-754 .elementor-element.elementor-element-000667e{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--justify-content:flex-end;--background-transition:0.3s;--overlay-opacity:0.61;--margin-top:0px;--margin-bottom:0px;--margin-left:0px;--margin-right:0px;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-754 .elementor-element.elementor-element-000667e::before, .elementor-754 .elementor-element.elementor-element-000667e > .elementor-background-video-container::before, .elementor-754 .elementor-element.elementor-element-000667e > .e-con-inner > .elementor-background-video-container::before, .elementor-754 .elementor-element.elementor-element-000667e > .elementor-background-slideshow::before, .elementor-754 .elementor-element.elementor-element-000667e > .e-con-inner > .elementor-background-slideshow::before, .elementor-754 .elementor-element.elementor-element-000667e > .elementor-motion-effects-container > .elementor-motion-effects-layer::before{--background-overlay:'';}.elementor-754 .elementor-element.elementor-element-7e635c5{--display:flex;--min-height:600px;--justify-content:flex-end;--gap:0px 0px;--background-transition:0.3s;--overlay-opacity:0;--padding-top:60px;--padding-bottom:60px;--padding-left:36px;--padding-right:36px;}.elementor-754 .elementor-element.elementor-element-7e635c5::before, .elementor-754 .elementor-element.elementor-element-7e635c5 > .elementor-background-video-container::before, .elementor-754 .elementor-element.elementor-element-7e635c5 > .e-con-inner > .elementor-background-video-container::before, .elementor-754 .elementor-element.elementor-element-7e635c5 > .elementor-background-slideshow::before, .elementor-754 .elementor-element.elementor-element-7e635c5 > .e-con-inner > .elementor-background-slideshow::before, .elementor-754 .elementor-element.elementor-element-7e635c5 > .elementor-motion-effects-container > .elementor-motion-effects-layer::before{background-color:#95B3D7;--background-overlay:'';}.elementor-754 .elementor-element.elementor-element-7e635c5:hover::before, .elementor-754 .elementor-element.elementor-element-7e635c5:hover > .elementor-background-video-container::before, .elementor-754 .elementor-element.elementor-element-7e635c5:hover > .e-con-inner > .elementor-background-video-container::before, .elementor-754 .elementor-element.elementor-element-7e635c5 > .elementor-background-slideshow:hover::before, .elementor-754 .elementor-element.elementor-element-7e635c5 > .e-con-inner > .elementor-background-slideshow:hover::before{background-color:#95B3D7;--background-overlay:'';}.elementor-754 .elementor-element.elementor-element-7e635c5:not(.elementor-motion-effects-element-type-background), .elementor-754 .elementor-element.elementor-element-7e635c5 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-position:center center;background-repeat:no-repeat;background-size:cover;}.elementor-754 .elementor-element.elementor-element-7e635c5:hover{--overlay-opacity:0.5;}.elementor-754 .elementor-element.elementor-element-7e635c5, .elementor-754 .elementor-element.elementor-element-7e635c5::before{--overlay-transition:0.5s;--border-transition:0.3s;}.elementor-754 .elementor-element.elementor-element-227d617{width:initial;max-width:initial;}.elementor-754 .elementor-element.elementor-element-227d617 > .elementor-widget-container{margin:0px 0px 12px 0px;padding:0px 0px 0px 0px;}.elementor-754 .elementor-element.elementor-element-227d617.elementor-element{--align-self:flex-start;}.elementor-754 .elementor-element.elementor-element-227d617 .elementor-heading-title{color:var( --e-global-color-secondary );font-family:"Poppins", Sans-serif;font-size:24px;font-weight:600;line-height:1.345em;}.elementor-754 .elementor-element.elementor-element-1ac6b6c > .elementor-widget-container{margin:0px 0px 19px 0px;padding:0px 0px 0px 0px;}.elementor-754 .elementor-element.elementor-element-1ac6b6c .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child){padding-bottom:calc(20px/2);}.elementor-754 .elementor-element.elementor-element-1ac6b6c .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:first-child){margin-top:calc(20px/2);}.elementor-754 .elementor-element.elementor-element-1ac6b6c .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item{margin-right:calc(20px/2);margin-left:calc(20px/2);}.elementor-754 .elementor-element.elementor-element-1ac6b6c .elementor-icon-list-items.elementor-inline-items{margin-right:calc(-20px/2);margin-left:calc(-20px/2);}body.rtl .elementor-754 .elementor-element.elementor-element-1ac6b6c .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after{left:calc(-20px/2);}body:not(.rtl) .elementor-754 .elementor-element.elementor-element-1ac6b6c .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:after{right:calc(-20px/2);}.elementor-754 .elementor-element.elementor-element-1ac6b6c .elementor-icon-list-item:not(:last-child):after{content:"";height:16%;border-color:#ddd;}.elementor-754 .elementor-element.elementor-element-1ac6b6c .elementor-icon-list-items:not(.elementor-inline-items) .elementor-icon-list-item:not(:last-child):after{border-top-style:solid;border-top-width:2px;}.elementor-754 .elementor-element.elementor-element-1ac6b6c .elementor-icon-list-items.elementor-inline-items .elementor-icon-list-item:not(:last-child):after{border-left-style:solid;}.elementor-754 .elementor-element.elementor-element-1ac6b6c .elementor-inline-items .elementor-icon-list-item:not(:last-child):after{border-left-width:2px;}.elementor-754 .elementor-element.elementor-element-1ac6b6c .elementor-icon-list-icon i{transition:color 0.3s;}.elementor-754 .elementor-element.elementor-element-1ac6b6c .elementor-icon-list-icon svg{transition:fill 0.3s;}.elementor-754 .elementor-element.elementor-element-1ac6b6c .elementor-icon-list-icon{padding-right:0px;}.elementor-754 .elementor-element.elementor-element-1ac6b6c{--icon-vertical-offset:-6px;}.elementor-754 .elementor-element.elementor-element-1ac6b6c .elementor-icon-list-item > .elementor-icon-list-text, .elementor-754 .elementor-element.elementor-element-1ac6b6c .elementor-icon-list-item > a{font-family:"Poppins", Sans-serif;font-size:16px;font-weight:500;text-transform:uppercase;letter-spacing:2.5px;}.elementor-754 .elementor-element.elementor-element-1ac6b6c .elementor-icon-list-text{transition:color 0.3s;}.elementor-754 .elementor-element.elementor-element-8408de2 > .elementor-widget-container{margin:0px 0px 0px 0px;}.elementor-754 .elementor-element.elementor-element-8408de2{color:var( --e-global-color-secondary );font-family:"Lato", Sans-serif;font-size:16px;font-weight:400;line-height:1.5em;}.elementor-754 .elementor-element.elementor-element-1309282 .elementor-button{background-color:var( --e-global-color-text );font-family:"Poppins", Sans-serif;font-size:16px;font-weight:500;text-transform:uppercase;fill:var( --e-global-color-secondary );color:var( --e-global-color-secondary );padding:20px 26px 20px 26px;}.elementor-754 .elementor-element.elementor-element-1309282 .elementor-button:hover, .elementor-754 .elementor-element.elementor-element-1309282 .elementor-button:focus{background-color:var( --e-global-color-secondary );color:var( --e-global-color-text );}.elementor-754 .elementor-element.elementor-element-1309282{width:var( --container-widget-width, 100% );max-width:100%;--container-widget-width:100%;--container-widget-flex-grow:0;}.elementor-754 .elementor-element.elementor-element-1309282 > .elementor-widget-container{margin:33px 0px 0px 0px;}.elementor-754 .elementor-element.elementor-element-1309282.elementor-element{--align-self:center;--flex-grow:0;--flex-shrink:0;}.elementor-754 .elementor-element.elementor-element-1309282 .elementor-button:hover svg, .elementor-754 .elementor-element.elementor-element-1309282 .elementor-button:focus svg{fill:var( --e-global-color-text );}/* Start custom CSS for container, class: .elementor-element-000667e */.case-slider .slider-button, .case-slider-text {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .5s;
+}
+
+.case-slider .slider-name, .case-slider-text-title {
+    transform: translateY(210px);
+    transition: .4s;
+}
+
+@media (min-width: 1230px) {
+    .case-slider .slider-name, .case-slider-text-title {
+    transform: translateY(250px);
+    }
+}
+
+.case-slider:hover .slider-button {
+    opacity: 1;
+     transform: translateY(0);
+    
+}
+
+.case-slider:hover .case-slider-text {
+    opacity: 1;
+     transform: translateY(0);
+}
+
+.case-slider:hover 
+.slider-name {
+     transform: translateY(0);
+    
+}
+
+.case-slider:hover 
+.case-slider-text-title  {
+     transform: translateY(0);
+    
+}
+
+.case-slider .elementor-icon-list-item:after {
+    transform: translateY(-5px);
+}
+
+
+.elementor-754 .elementor-element.elementor-element-000667e .elementor-icon-list-item::after {
+    transform: translateY(-7px);
+}
+
+@media (max-width: 767px) {
+    .case-slider .slider-name, .case-slider-text-title {
+    transform: translateY(160px);
+    }
+}/* End custom CSS */		
+			
+		
+				
+				
+			Student C Gets Accepted to Tufts!		
+				
+				
+				
+					
+							
+										Tufts
+									
+								
+										  
+									
+						
+				
+				
+				
+				
+							Student C signed up for Candidacy Building, an Academic Mentorship, and Application Counseling. He was accepted his dream school, Tufts, Early Decision!						
+				
+				
+				
+					
+			
+						
+									view case study
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-15101 .elementor-element.elementor-element-7e635c5:not(.elementor-motion-effects-element-type-background), .e-loop-item-15101 .elementor-element.elementor-element-7e635c5 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-0c8199d9-64c0-4693-82df-d4e1f8954c70);}		
+			
+		
+				
+				
+			Student A Gets Accepted to UC Berkeley!		
+				
+				
+				
+					
+							
+										UC Berkeley
+									
+								
+										  
+									
+						
+				
+				
+				
+				
+							Student A is a student from Los Angeles who started working with InGenius Prep during the summer before her senior year. She had low standardized test scores; however, with our help, she was accepted to every single school to which she applied, including UC Berkeley, UCLA, and UC Davis!						
+				
+				
+				
+					
+			
+						
+									view case study
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-15095 .elementor-element.elementor-element-7e635c5:not(.elementor-motion-effects-element-type-background), .e-loop-item-15095 .elementor-element.elementor-element-7e635c5 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-74c474cf-28fc-4bc0-b770-45d7eb052121);}		
+			
+		
+				
+				
+			Student D Gets into Yale and Stanford with $42,000 for Freshman Year Alone!		
+				
+				
+				
+					
+							
+										Yale, Stanford
+									
+								
+										  
+									
+						
+				
+				
+				
+				
+							Student D is an international student. By helping Student D craft his college applications from scratch to perfection, we were able to help him get into his dream schools—Yale and Stanford—with $42,000 in financial aid…for freshman year alone!						
+				
+				
+				
+					
+			
+						
+									view case study
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-15089 .elementor-element.elementor-element-7e635c5:not(.elementor-motion-effects-element-type-background), .e-loop-item-15089 .elementor-element.elementor-element-7e635c5 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-5cf190da-42bd-4802-a134-edae709582da);}		
+			
+		
+				
+				
+			Student J Gets into Penn!		
+				
+				
+				
+					
+							
+										University of Pennsylvania
+									
+								
+										  
+									
+						
+				
+				
+				
+				
+							Student J is a Chinese-American student who was interested in Mathematics, but needed to find a way to stand out among thousands of other applicants with similar interests, backgrounds, and credentials. By working to craft his application strategy with a team of experts, we helped him get accepted to the University of Pennsylvania, Early Decision!						
+				
+				
+				
+					
+			
+						
+									view case study
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-15083 .elementor-element.elementor-element-7e635c5:not(.elementor-motion-effects-element-type-background), .e-loop-item-15083 .elementor-element.elementor-element-7e635c5 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-c22b854e-612d-40f0-8164-b0becd5007bf);}		
+			
+		
+				
+				
+			Student X Gets into Barnard, Early Decision!		
+				
+				
+				
+					
+							
+										Barnard
+									
+								
+										  
+									
+						
+				
+				
+				
+				
+							Student X grew up around the world. She started working with us in 9th grade and got accepted to her dream school, Barnard, Early Decision!						
+				
+				
+				
+					
+			
+						
+									view case study
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-15081 .elementor-element.elementor-element-7e635c5:not(.elementor-motion-effects-element-type-background), .e-loop-item-15081 .elementor-element.elementor-element-7e635c5 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-128e6b57-ea3b-42e6-942d-bed260000e66);}		
+			
+		
+				
+				
+			Student R Gets Accepted to Harvard Business School and Wharton with 680!		
+				
+				
+				
+					
+							
+										Harvard Business School, Wharton
+									
+								
+										 
+									
+						
+				
+				
+				
+				
+							Student R is a Teach For America alum and consultant who wanted to apply to top business schools. By strategizing a unique application persona, diving deep into her personal background, and helping develop her career goals, we helped Student R get accepted to Harvard Business School and Wharton. 						
+				
+				
+				
+					
+			
+						
+									view case study
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-15075 .elementor-element.elementor-element-7e635c5:not(.elementor-motion-effects-element-type-background), .e-loop-item-15075 .elementor-element.elementor-element-7e635c5 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-e01355e8-0769-42e8-b0ef-213f82cae293);}		
+			
+		
+				
+				
+			Student M Gets Accepted to HBS with a 3.0 GPA		
+				
+				
+				
+					
+							
+										Harvard Business School
+									
+								
+										 
+									
+						
+				
+				
+				
+				
+							Student M worked in finance in Los Angeles. By developing a compelling application persona and implementing a strategic plan to overcome his low undergraduate GPA, we helped Student M get accepted to Harvard Business School, University of Chicago Booth with a $60,000 scholarship, and UC Berkeley Haas with a full scholarship!						
+				
+				
+				
+					
+			
+						
+									view case study
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-15061 .elementor-element.elementor-element-7e635c5:not(.elementor-motion-effects-element-type-background), .e-loop-item-15061 .elementor-element.elementor-element-7e635c5 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-220044f3-aa17-4129-b8b5-98c6f920e0d2);}		
+			
+		
+				
+				
+			(2019) Student S Gets Accepted to Harvard Medical School!		
+				
+				
+				
+					
+							
+										Harvard Medical School
+									
+								
+										 
+									
+						
+				
+				
+				
+				
+							Student S was a pre-med student who was interested in applying to top medical schools. By working with her to craft a compelling AMCAS application and secondary essays, we helped her achieve her medical school admissions goals!						
+				
+				
+				
+					
+			
+						
+									view case study
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-15059 .elementor-element.elementor-element-7e635c5:not(.elementor-motion-effects-element-type-background), .e-loop-item-15059 .elementor-element.elementor-element-7e635c5 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-de559702-9027-4bc3-afa9-1148b49080dc);}		
+			
+		
+				
+				
+			Student J Gets Accepted to Cornell, Early Decision!		
+				
+				
+				
+					
+							
+										Cornell University
+									
+								
+										 
+									
+						
+				
+				
+				
+				
+							Student J is from Virginia and she started working with us during 10th grade. She completed our Candidacy Building, Leadership Incubator, and Application Counseling programs. Student J was admitted to Cornell University, Early Decision!						
+				
+				
+				
+					
+			
+						
+									view case study
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-15057 .elementor-element.elementor-element-7e635c5:not(.elementor-motion-effects-element-type-background), .e-loop-item-15057 .elementor-element.elementor-element-7e635c5 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-f9708f05-6039-489b-b6cd-93cf8f9f677b);}		
+			
+		
+				
+				
+			Student R Gets Accepted to MIT and Johns Hopkins!		
+				
+				
+				
+					
+							
+										MIT, Johns Hopkins
+									
+								
+										 
+									
+						
+				
+				
+				
+				
+							Student R attended a New York high school and started working with us in 10th grade. He completed our Candidacy Building, Academic Mentorship, and Application Counseling programs. Student R was admitted to MIT, Johns Hopkins with scholarship, and more!						
+				
+				
+				
+					
+			
+						
+									view case study
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-15055 .elementor-element.elementor-element-7e635c5:not(.elementor-motion-effects-element-type-background), .e-loop-item-15055 .elementor-element.elementor-element-7e635c5 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-2d3c41f1-facb-4262-90cd-3494bd8158bf);}		
+			
+		
+				
+				
+			Student S Gets Accepted to Yale, REA!		
+				
+				
+				
+					
+							
+										Yale University
+									
+								
+										 
+									
+						
+				
+				
+				
+				
+							Student S is from Virginia and he started working with us in 10th grade. He completed our Candidacy Building, Academic Mentorship, and Application Counseling programs. Student S was admitted to Yale University, Restrictive Early Action, as a Hahn Scholar!						
+				
+				
+				
+					
+			
+						
+									view case study
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-15053 .elementor-element.elementor-element-7e635c5:not(.elementor-motion-effects-element-type-background), .e-loop-item-15053 .elementor-element.elementor-element-7e635c5 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-2efbdc17-3686-4bb8-bd15-4bb818e5f47c);}		
+			
+		
+				
+				
+			Student G Gets Accepted to Carnegie Mellon and UC Berkeley!		
+				
+				
+				
+					
+							
+										Carnegie Mellon & UC Berkeley
+									
+								
+										 
+									
+						
+				
+				
+				
+				
+							Student G attended a high school in Pennsylvania. She started working with us in 10th grade and she completed our Candidacy Building, Writing Seminar, and Application Counseling programs. Student G was admitted to Carnegie Mellon University, University of California–Berkeley, and more, with a 1480 SAT and a lower-than-average GPA!						
+				
+				
+				
+					
+			
+						
+									view case study
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-15051 .elementor-element.elementor-element-7e635c5:not(.elementor-motion-effects-element-type-background), .e-loop-item-15051 .elementor-element.elementor-element-7e635c5 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-c1c86587-6e3e-4586-93bc-880e621cf131);}		
+			
+		
+				
+				
+			Student C Gets Accepted to Tulane!		
+				
+				
+				
+					
+							
+										Tulane University
+									
+								
+										 
+									
+						
+				
+				
+				
+				
+							Student C is from Los Angeles, CA. He started working with us during the summer before junior year through our Candidacy Building and Application Counseling programs. Student C was admitted to his dream school, Tulane, Early Action!						
+				
+				
+				
+					
+			
+						
+									view case study
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-15049 .elementor-element.elementor-element-7e635c5:not(.elementor-motion-effects-element-type-background), .e-loop-item-15049 .elementor-element.elementor-element-7e635c5 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-480bc7b2-2197-4e90-96ad-ae4a5de29db4);}		
+			
+		
+				
+				
+			Student D Gets Accepted to NYU and UMich!		
+				
+				
+				
+					
+							
+										NYU and UMich
+									
+								
+										 
+									
+						
+				
+				
+				
+				
+							Student D is a student from New Jersey. Beginning in the winter of junior year, he worked with us through our 11th Grade Application Counseling program. Student D was admitted to NYU Stern and the Ross School of Business at the University of Michigan!						
+				
+				
+				
+					
+			
+						
+									view case study
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-15045 .elementor-element.elementor-element-7e635c5:not(.elementor-motion-effects-element-type-background), .e-loop-item-15045 .elementor-element.elementor-element-7e635c5 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-01f67cc5-1bba-49bb-a816-aa3a4407f879);}		
+			
+		
+				
+				
+			Student T Gets Accepted to UPenn Wharton!		
+				
+				
+				
+					
+							
+										UPenn Wharton
+									
+								
+										 
+									
+						
+				
+				
+				
+				
+							Student T is from Virginia and he started our Application Counseling program in the summer before 12th grade. Student T was admitted to The Wharton School of the University of Pennsylvania!						
+				
+				
+				
+					
+			
+						
+									view case study
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-15042 .elementor-element.elementor-element-7e635c5:not(.elementor-motion-effects-element-type-background), .e-loop-item-15042 .elementor-element.elementor-element-7e635c5 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-3282ab56-730e-4b4a-8004-38dd75077465);}		
+			
+		
+				
+				
+			Student A Gets Accepted to Northwestern!		
+				
+				
+				
+					
+							
+										Northwestern University
+									
+								
+										 
+									
+						
+				
+				
+				
+				
+							Student A is from Massachusetts and he started working with us in 9th grade. He completed our Candidacy Building, Writing Class, Academic Mentorship, and Application Counseling programs. Student A was admitted to Northwestern University!						
+				
+				
+				
+					
+			
+						
+									view case study
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-15040 .elementor-element.elementor-element-7e635c5:not(.elementor-motion-effects-element-type-background), .e-loop-item-15040 .elementor-element.elementor-element-7e635c5 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-c6e88e5a-7665-4705-a75a-ac4ea282dcab);}		
+			
+		
+				
+				
+			Student K Gets Accepted to Stanford, REA!		
+				
+				
+				
+					
+							
+										Stanford University
+									
+								
+										 
+									
+						
+				
+				
+				
+				
+							Student K is from California and she started our Application Counseling program in the summer before 12th grade. Student K was admitted to Stanford University, Restrictive Early Action!						
+				
+				
+				
+					
+			
+						
+									view case study
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-15030 .elementor-element.elementor-element-7e635c5:not(.elementor-motion-effects-element-type-background), .e-loop-item-15030 .elementor-element.elementor-element-7e635c5 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-a4dbe70f-ed3b-4ec4-9a44-e633a41c0e20);}		
+			
+		
+				
+				
+			Student V Gets Accepted to MIT, Early Action!		
+				
+				
+				
+					
+							
+										MIT
+									
+								
+										 
+									
+						
+				
+				
+				
+				
+							Student V started our Application Counseling program in the summer before 12th grade. She was admitted to the Massachusetts Institute of Technology (MIT), Early Action!						
+				
+				
+				
+					
+			
+						
+									view case study
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-8823 .elementor-element.elementor-element-7e635c5:not(.elementor-motion-effects-element-type-background), .e-loop-item-8823 .elementor-element.elementor-element-7e635c5 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-fb811aad-8fc6-4a09-aea0-227326bf07bd);}		
+			
+		
+				
+				
+			Student D Gets into Columbia, Early Decision!		
+				
+				
+				
+					
+							
+										Columbia University
+									
+								
+										 
+									
+						
+				
+				
+				
+				
+							Student D started the Candidacy Building Program with us in the 10th grade. He was accepted to Columbia University, Early Decision! 						
+				
+				
+				
+					
+			
+						
+									view case study
+					
+					
+		
+				
+				
+				
+				
+				
+				
+		
+					
+							
+			
+							
+					
+				
+				
+				
+		
+					
+				
+				
+							The InGenius Prep Advantage						
+				
+				
+				
+							Upon building a team of over 150 Former Admissions Officers from every top school in the United States, we’ve created a system with a proven track record of getting countless students from all over the world get into their reach schools.						
+				
+		
+		
+		
+		
+		
+				
+				
+			01		
+				
+				
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+		
+				
+				
+			Counselor Experience		
+				
+				
+				
+							Our Former Admissions Officers made admissions decisions at the most competitive universities in the world. Our Graduate Coaches attended elite universities and successfully completed our rigorous training. Our mentors, instructors, and tutors are leading industry experts. Together, our experience is unmatched.						
+				
+				
+				
+		
+		
+		
+		
+				
+				
+			02		
+				
+				
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+		
+				
+				
+			All-in-One Model 		
+				
+				
+				
+							Our company provides families with all of their educational needs from start to finish. With a team approach, our students benefit from comprehensive, multidimensional guidance. Our online model allows students to access leading experts and educational resources no matter where they are in the world.						
+				
+				
+				
+		
+		
+		
+		
+				
+				
+			03		
+				
+				
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+		
+				
+				
+			Comprehensive Curriculum and Management		
+				
+				
+				
+							We meticulously manage service delivery to ensure the best counseling outcomes. By gathering data on admissions decisions from our 150+ Former Admissions Officers and working with 10,000+ students over the years, we’ve built a cutting-edge curriculum that guides our work with students. Our team uses our Student-Management System,“The Genie,” to deliver our curriculum, oversee all counselor work, and track student progress. 						
+				
+				
+				
+		
+		
+		
+		
+				
+				
+			04		
+				
+				
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+		
+				
+				
+			Innovative Resources		
+				
+				
+				
+							To support our students on their personal, academic, and extracurricular journeys, we find and develop innovative resources. Through our network, we source and create unique opportunities for students. Whether it’s academic research, entrepreneurial endeavors, summer programs, online classes, or independent projects, our students engage in activities that set them apart from the competition.						
+				
+				
+				
+		
+		
+		
+		
+				
+				
+			05		
+				
+				
+				
+				
+		
+				
+				
+			Admissions Results 		
+				
+				
+				
+							Our counseling approach has led to stellar results. Every year, our students outperform the admissions odds and gain acceptance to top schools at nearly 10x the average student rate. 						
+				
+				
+				
+				
+		
+				
+				
+					
+			
+						
+									Learn more
+					
+					
+		
+				
+				
+				
+					
+				
+		
+				
+				
+			I’m Interested In:		
+				
+				
+				
+					
+				
+		.e-loop-item-36720 .elementor-element.elementor-element-1bef7fe:not(.elementor-motion-effects-element-type-background), .e-loop-item-36720 .elementor-element.elementor-element-1bef7fe > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-d7cb8ffa-49cd-4c16-9564-a140d8334784);}.elementor-399 .elementor-element.elementor-element-34830a5{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--justify-content:flex-end;--background-transition:0.3s;--margin-top:0px;--margin-bottom:0px;--margin-left:0px;--margin-right:0px;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-399 .elementor-element.elementor-element-34830a5, .elementor-399 .elementor-element.elementor-element-34830a5::before{--border-transition:0.3s;}.elementor-399 .elementor-element.elementor-element-1bef7fe{--display:flex;--min-height:600px;--justify-content:flex-end;--background-transition:0.3s;--overlay-opacity:1;--padding-top:60px;--padding-bottom:60px;--padding-left:15px;--padding-right:15px;}.elementor-399 .elementor-element.elementor-element-1bef7fe::before, .elementor-399 .elementor-element.elementor-element-1bef7fe > .elementor-background-video-container::before, .elementor-399 .elementor-element.elementor-element-1bef7fe > .e-con-inner > .elementor-background-video-container::before, .elementor-399 .elementor-element.elementor-element-1bef7fe > .elementor-background-slideshow::before, .elementor-399 .elementor-element.elementor-element-1bef7fe > .e-con-inner > .elementor-background-slideshow::before, .elementor-399 .elementor-element.elementor-element-1bef7fe > .elementor-motion-effects-container > .elementor-motion-effects-layer::before{background-color:transparent;--background-overlay:'';background-image:linear-gradient(0deg, #00000080 0%, #00000000 30%);}.elementor-399 .elementor-element.elementor-element-1bef7fe, .elementor-399 .elementor-element.elementor-element-1bef7fe::before{--border-transition:0.3s;}.elementor-399 .elementor-element.elementor-element-1bef7fe.e-con{--align-self:center;}.elementor-399 .elementor-element.elementor-element-51448fe > .elementor-widget-container{padding:0px 0px 0px 0px;}.elementor-399 .elementor-element.elementor-element-51448fe.elementor-element{--align-self:center;}.elementor-399 .elementor-element.elementor-element-51448fe{text-align:center;}.elementor-399 .elementor-element.elementor-element-51448fe .elementor-heading-title{color:var( --e-global-color-secondary );font-family:"Poppins", Sans-serif;font-size:24px;font-weight:600;}.elementor-399 .elementor-element.elementor-element-f01f5f2 .elementor-button{background-color:var( --e-global-color-5c72353 );font-family:"Poppins", Sans-serif;font-size:16px;font-weight:500;text-transform:uppercase;letter-spacing:0.96px;fill:var( --e-global-color-secondary );color:var( --e-global-color-secondary );padding:22px 26px 22px 26px;}.elementor-399 .elementor-element.elementor-element-f01f5f2 .elementor-button:hover, .elementor-399 .elementor-element.elementor-element-f01f5f2 .elementor-button:focus{background-color:var( --e-global-color-secondary );color:var( --e-global-color-5c72353 );}.elementor-399 .elementor-element.elementor-element-f01f5f2{width:var( --container-widget-width, 100% );max-width:100%;--container-widget-width:100%;--container-widget-flex-grow:0;}.elementor-399 .elementor-element.elementor-element-f01f5f2 > .elementor-widget-container{padding:0px 0px 0px 0px;}.elementor-399 .elementor-element.elementor-element-f01f5f2.elementor-element{--align-self:center;--flex-grow:0;--flex-shrink:0;}.elementor-399 .elementor-element.elementor-element-f01f5f2 .elementor-button:hover svg, .elementor-399 .elementor-element.elementor-element-f01f5f2 .elementor-button:focus svg{fill:var( --e-global-color-5c72353 );}@media(min-width:768px){.elementor-399 .elementor-element.elementor-element-1bef7fe{--width:100%;}}@media(max-width:767px){.elementor-399 .elementor-element.elementor-element-34830a5{--min-height:0px;--justify-content:center;--align-items:center;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-399 .elementor-element.elementor-element-1bef7fe{--width:280px;--min-height:450px;}.elementor-399 .elementor-element.elementor-element-f01f5f2 .elementor-button{font-size:14px;letter-spacing:0.84px;}}/* Start custom CSS for container, class: .elementor-element-1bef7fe */@media only screen and (max-width: 767px) {
+    .elementor-399 .elementor-element.elementor-element-1bef7fe:before {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.00) 100%) !important;
+    }
+}/* End custom CSS */
+/* Start custom CSS for container, class: .elementor-element-34830a5 */.slider-button {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .5s;
+}
+
+.slider-name {
+    transform: translateY(50px);
+    transition: .3s;
+}
+
+.slider-box:hover .slider-button {
+    opacity: 1;
+     transform: translateY(0);
+    
+}
+
+.slider-box:hover 
+.slider-name {
+     transform: translateY(0);
+    
+}/* End custom CSS */		
+			
+		
+				
+				
+			College Admissions		
+				
+				
+				
+					
+			
+						
+									View service
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-29174 .elementor-element.elementor-element-1bef7fe:not(.elementor-motion-effects-element-type-background), .e-loop-item-29174 .elementor-element.elementor-element-1bef7fe > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-85ac635f-d824-4b1c-9b28-4b50d60aaeb5);}		
+			
+		
+				
+				
+			Graduate School Admissions		
+				
+				
+				
+					
+			
+						
+									View service
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-29173 .elementor-element.elementor-element-1bef7fe:not(.elementor-motion-effects-element-type-background), .e-loop-item-29173 .elementor-element.elementor-element-1bef7fe > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-df08d346-a17e-47ae-901e-768cf893f111);}		
+			
+		
+				
+				
+			Business School Admissions		
+				
+				
+				
+					
+			
+						
+									View service
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-28657 .elementor-element.elementor-element-1bef7fe:not(.elementor-motion-effects-element-type-background), .e-loop-item-28657 .elementor-element.elementor-element-1bef7fe > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-50a1155a-48d2-434f-913d-63c58787b131);}		
+			
+		
+				
+				
+			Law School Admissions		
+				
+				
+				
+					
+			
+						
+									View service
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-28656 .elementor-element.elementor-element-1bef7fe:not(.elementor-motion-effects-element-type-background), .e-loop-item-28656 .elementor-element.elementor-element-1bef7fe > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-7522beb7-8c78-4d9c-bcf1-d672613499d8);}		
+			
+		
+				
+				
+			Medical School Admissions		
+				
+				
+				
+					
+			
+						
+									View service
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-397 .elementor-element.elementor-element-1bef7fe:not(.elementor-motion-effects-element-type-background), .e-loop-item-397 .elementor-element.elementor-element-1bef7fe > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-8fb62df1-8042-4df6-a6ac-ecefdfdf7f50);}		
+			
+		
+				
+				
+			Career Counseling		
+				
+				
+				
+					
+			
+						
+									View service
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-396 .elementor-element.elementor-element-1bef7fe:not(.elementor-motion-effects-element-type-background), .e-loop-item-396 .elementor-element.elementor-element-1bef7fe > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-ccba1756-d07a-443a-8697-253d8e72be4d);}		
+			
+		
+				
+				
+			Test Prep		
+				
+				
+				
+					
+			
+						
+									View service
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-395 .elementor-element.elementor-element-1bef7fe:not(.elementor-motion-effects-element-type-background), .e-loop-item-395 .elementor-element.elementor-element-1bef7fe > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-04b1e979-0fd2-407f-bc06-e59b52b71954);}		
+			
+		
+				
+				
+			Subject Tutoring		
+				
+				
+				
+					
+			
+						
+									View service
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-394 .elementor-element.elementor-element-1bef7fe:not(.elementor-motion-effects-element-type-background), .e-loop-item-394 .elementor-element.elementor-element-1bef7fe > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-3b792c21-4890-40f0-be1e-2491c4898622);}		
+			
+		
+				
+				
+			Academic Mentorships		
+				
+				
+				
+					
+			
+						
+									View service
+					
+					
+		
+				
+				
+				
+				
+				
+				
+		
+					
+							
+			
+							
+					
+				
+				
+				
+		
+					
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+			Pursue Your Reach Schools with InGenius Prep and Increase Your Admissions Chances		
+				
+				
+				
+			Contact our Enrollment Team to learn more about our services and how we can lead your admissions journey.		
+				
+				
+				
+					
+			
+						
+									SCHEDULE A FREE CONSULTATION
+					
+					
+		
+				
+				
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+					
+			
+						
+		
+				
+				
+					
+				
+				
+				
+			
+					
+		
+				
+				
+			Our Service		
+				
+				
+				
+						
+				College Admissions Consulting
+Admissions Guidance
+Medical School Admissions Consulting
+Law School Admissions Consulting
+Graduate School Admissions Consulting
+Business School Admissions Consulting
+Career Counseling
+Private High School Admissions
+Subject Tutoring
+Test Prep
+Competition Prep
+UK Admissions
+Academic & Extracurricular Programs
+			
+						
+				College Admissions Consulting
+Admissions Guidance
+Medical School Admissions Consulting
+Law School Admissions Consulting
+Graduate School Admissions Consulting
+Business School Admissions Consulting
+Career Counseling
+Private High School Admissions
+Subject Tutoring
+Test Prep
+Competition Prep
+UK Admissions
+Academic & Extracurricular Programs
+			
+				
+				
+				
+		
+				
+				
+			Who We Are		
+				
+				
+				
+						
+				Why Us
+Our Leaders
+Our Counselors
+Our Process
+Our Results
+Careers at Ingenius Prep
+			
+						
+				Why Us
+Our Leaders
+Our Counselors
+Our Process
+Our Results
+Careers at Ingenius Prep
+			
+				
+				
+				
+		
+				
+				
+			Our Offices		
+				
+				
+				
+					
+							
+											
+
+											United States
+											
+									
+								
+											
+
+											CANADA
+											
+									
+								
+											
+
+											CHINA
+											
+									
+								
+											
+
+											HONG KONG SAR
+											
+									
+								
+											
+
+											SINGAPORE
+											
+									
+								
+											
+
+											VIETNAM
+											
+									
+								
+											
+
+											AUSTRALIA/NEW ZEALAND
+											
+									
+								
+											
+
+											KOREA
+											
+									
+						
+				
+				
+				
+		
+		
+				
+				
+			Headquarters		
+				
+				
+				
+					
+							
+											
+
+											50 Mitchell Drive, Suite 104 New Haven, CT 06511
+											
+									
+								
+											
+
+											1.800.722.3105
+											
+									
+								
+											
+
+											contact@ingeniusprep.com
+											
+									
+						
+				
+				
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+					
+				
+		
+					
+		
+				
+				
+					
+						
+				
+					 Our Services 
+							
+			
+			
+		
+
+						
+				
+		
+					
+				
+				
+						
+				College Admissions Consulting
+Admissions Guidance
+Medical School Admissions Consulting
+Law School Admissions Consulting
+Graduate School Admissions Consulting
+Business School Admissions Consulting
+Career Counseling
+Private High School Admissions
+Subject Tutoring
+Test Prep
+Competition Prep
+UK Admissions
+Academic & Extracurricular Programs
+			
+						
+				College Admissions Consulting
+Admissions Guidance
+Medical School Admissions Consulting
+Law School Admissions Consulting
+Graduate School Admissions Consulting
+Business School Admissions Consulting
+Career Counseling
+Private High School Admissions
+Subject Tutoring
+Test Prep
+Competition Prep
+UK Admissions
+Academic & Extracurricular Programs
+			
+				
+				
+					
+				
+				
+					
+						
+				
+					 Who We Are 
+							
+			
+			
+		
+
+						
+				
+		
+					
+				
+				
+						
+				Why Us
+Our Leaders
+Our Counselors
+Our Process
+Our Results
+Careers at Ingenius Prep
+			
+						
+				Why Us
+Our Leaders
+Our Counselors
+Our Process
+Our Results
+Careers at Ingenius Prep
+			
+				
+				
+					
+				
+				
+					
+						
+				
+					 Our Offices 
+							
+			
+			
+		
+
+						
+				
+		
+					
+				
+				
+					
+							
+											
+
+											United States
+											
+									
+								
+											
+
+											Canada
+											
+									
+								
+											
+
+											China
+											
+									
+								
+											
+
+											Hong Kong
+											
+									
+								
+											
+
+											Singapore
+											
+									
+								
+											
+
+											Vietnam
+											
+									
+								
+											
+
+											Australia/New Zealand
+											
+									
+								
+											
+
+											Korea
+											
+									
+						
+				
+				
+					
+				
+				
+					
+						
+				
+					 Headquarters 
+							
+			
+			
+		
+
+						
+				
+		
+					
+				
+				
+					
+							
+											
+
+											50 Mitchell Drive, Suite 104 New Haven, CT 06511
+											
+									
+								
+											
+
+											1.800.722.3105
+											
+									
+								
+											
+
+											contact@ingeniusprep.com
+											
+									
+						
+				
+				
+					
+				
+				
+					
+					
+				
+				
+				
+		
+				
+					
+				
+		
+					
+		
+				
+				
+									
+			<img width="202" height="36" src="https://ingeniusprep.com/wp-content/uploads/2024/07/header-logo.svg" class="attachment-full size-full wp-image-27" alt="Logo InGenius" />				
+									
+				
+		
+				
+				
+													<img width="84" height="33" src="https://ingeniusprep.com/wp-content/uploads/2024/07/footer-logo-1-2.svg" class="attachment-large size-large wp-image-239" alt="" />													
+				
+				
+				
+													<img width="39" height="64" src="https://ingeniusprep.com/wp-content/uploads/2024/07/footer-logo-2-2.svg" class="attachment-large size-large wp-image-238" alt="" />													
+				
+				
+				
+		
+				
+				
+					
+							
+										©2026 Ingenius Prep. All Rights Reserved. 
+									
+								
+											
+
+											Privacy Policy
+											
+									
+								
+											
+
+											Terms of Service
+											
+									
+						
+				
+				
+				
+				
+							Website By DIGITECH						
+				
+				
+		
+				
+				
+					
+							
+					
+						Facebook
+											
+				
+							
+					
+						Instagram
+											
+				
+							
+					
+						Linkedin
+											
+				
+							
+					
+						Youtube
+											
+				
+							
+					
+						Mes
+											
+				
+							
+					
+						Tik Tok
+											
+				
+							
+					
+						Spotify
+											
+				
+					
+				
+				
+				
+					
+				
+				
+		
+
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/hello-elementor/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+
+		 
+    
+    
+
+window.crwpVer = 1;    window.addEventListener('DOMContentLoaded', function() {
+        jQuery(document).ready(function($) {
+            console.log("Script is working"); // Confirms script loaded
+
+            $('.elementor-menu-toggle').on('click', function() {
+                console.log("Menu toggle clicked"); // Confirms click
+                $('body').toggleClass('menu-open');
+                $('.mainHeader').toggleClass('active');
+            });
+        });
+    });
+		
+@media (max-width: 768px) {
+	body.menu-open {
+			overflow: hidden;
+		height: 100vh;
+	}
+	body.menu-open .mainHeader .elementor-nav-menu__container {
+	            overflow-y: auto;
+        overflow-x: hidden;
+        height: calc(100vh - 90px);
+	}
+	body.menu-open .mainHeader .elementor-nav-menu__container ul.elementor-nav-menu li.menu-item:nth-last-child(1){
+		padding-bottom:10vh;
+	}
+	body.menu-open .mainHeader .elementor-nav-menu__container ul.elementor-nav-menu li li.menu-item:nth-last-child(1){
+		padding-bottom:0vh;
+	}
+}
+form.post-password-form {
+    margin-top: 183px;
+    margin: 183px auto 183px auto;
+    max-width: 65%;
+}
+    		
+			
+					
+				
+				
+							
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+
+
+                #gform_wrapper_8[data-form-index="0"].gform-theme,[data-parent-form="8_0"]{--gf-color-primary: #204ce5;--gf-color-primary-rgb: 32, 76, 229;--gf-color-primary-contrast: #fff;--gf-color-primary-contrast-rgb: 255, 255, 255;--gf-color-primary-darker: #001AB3;--gf-color-primary-lighter: #527EFF;--gf-color-secondary: #fff;--gf-color-secondary-rgb: 255, 255, 255;--gf-color-secondary-contrast: #112337;--gf-color-secondary-contrast-rgb: 17, 35, 55;--gf-color-secondary-darker: #F5F5F5;--gf-color-secondary-lighter: #FFFFFF;--gf-color-out-ctrl-light: rgba(17, 35, 55, 0.1);--gf-color-out-ctrl-light-rgb: 17, 35, 55;--gf-color-out-ctrl-light-darker: rgba(104, 110, 119, 0.35);--gf-color-out-ctrl-light-lighter: #F5F5F5;--gf-color-out-ctrl-dark: #585e6a;--gf-color-out-ctrl-dark-rgb: 88, 94, 106;--gf-color-out-ctrl-dark-darker: #112337;--gf-color-out-ctrl-dark-lighter: rgba(17, 35, 55, 0.65);--gf-color-in-ctrl: #fff;--gf-color-in-ctrl-rgb: 255, 255, 255;--gf-color-in-ctrl-contrast: #112337;--gf-color-in-ctrl-contrast-rgb: 17, 35, 55;--gf-color-in-ctrl-darker: #F5F5F5;--gf-color-in-ctrl-lighter: #FFFFFF;--gf-color-in-ctrl-primary: #204ce5;--gf-color-in-ctrl-primary-rgb: 32, 76, 229;--gf-color-in-ctrl-primary-contrast: #fff;--gf-color-in-ctrl-primary-contrast-rgb: 255, 255, 255;--gf-color-in-ctrl-primary-darker: #001AB3;--gf-color-in-ctrl-primary-lighter: #527EFF;--gf-color-in-ctrl-light: rgba(17, 35, 55, 0.1);--gf-color-in-ctrl-light-rgb: 17, 35, 55;--gf-color-in-ctrl-light-darker: rgba(104, 110, 119, 0.35);--gf-color-in-ctrl-light-lighter: #F5F5F5;--gf-color-in-ctrl-dark: #585e6a;--gf-color-in-ctrl-dark-rgb: 88, 94, 106;--gf-color-in-ctrl-dark-darker: #112337;--gf-color-in-ctrl-dark-lighter: rgba(17, 35, 55, 0.65);--gf-radius: 3px;--gf-font-size-secondary: 14px;--gf-font-size-tertiary: 13px;--gf-icon-ctrl-number: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4 0C4.26522 5.96046e-08 4.51957 0.105357 4.70711 0.292893L7.70711 3.29289C8.09763 3.68342 8.09763 4.31658 7.70711 4.70711C7.31658 5.09763 6.68342 5.09763 6.29289 4.70711L4 2.41421L1.70711 4.70711C1.31658 5.09763 0.683417 5.09763 0.292893 4.70711C-0.0976311 4.31658 -0.097631 3.68342 0.292893 3.29289L3.29289 0.292893C3.48043 0.105357 3.73478 0 4 0ZM0.292893 9.29289C0.683417 8.90237 1.31658 8.90237 1.70711 9.29289L4 11.5858L6.29289 9.29289C6.68342 8.90237 7.31658 8.90237 7.70711 9.29289C8.09763 9.68342 8.09763 10.3166 7.70711 10.7071L4.70711 13.7071C4.31658 14.0976 3.68342 14.0976 3.29289 13.7071L0.292893 10.7071C-0.0976311 10.3166 -0.0976311 9.68342 0.292893 9.29289Z' fill='rgba(17, 35, 55, 0.65)'/%3E%3C/svg%3E");--gf-icon-ctrl-select: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.292893 0.292893C0.683417 -0.097631 1.31658 -0.097631 1.70711 0.292893L5 3.58579L8.29289 0.292893C8.68342 -0.0976311 9.31658 -0.0976311 9.70711 0.292893C10.0976 0.683417 10.0976 1.31658 9.70711 1.70711L5.70711 5.70711C5.31658 6.09763 4.68342 6.09763 4.29289 5.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683418 0.292893 0.292893Z' fill='rgba(17, 35, 55, 0.65)'/%3E%3C/svg%3E");--gf-icon-ctrl-search: url("data:image/svg+xml,%3Csvg width='640' height='640' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M256 128c-70.692 0-128 57.308-128 128 0 70.691 57.308 128 128 128 70.691 0 128-57.309 128-128 0-70.692-57.309-128-128-128zM64 256c0-106.039 85.961-192 192-192s192 85.961 192 192c0 41.466-13.146 79.863-35.498 111.248l154.125 154.125c12.496 12.496 12.496 32.758 0 45.254s-32.758 12.496-45.254 0L367.248 412.502C335.862 434.854 297.467 448 256 448c-106.039 0-192-85.962-192-192z' fill='rgba(17, 35, 55, 0.65)'/%3E%3C/svg%3E");--gf-label-space-y-secondary: var(--gf-label-space-y-md-secondary);--gf-ctrl-border-color: #686e77;--gf-ctrl-size: var(--gf-ctrl-size-md);--gf-ctrl-label-color-primary: #112337;--gf-ctrl-label-color-secondary: #112337;--gf-ctrl-choice-size: var(--gf-ctrl-choice-size-md);--gf-ctrl-checkbox-check-size: var(--gf-ctrl-checkbox-check-size-md);--gf-ctrl-radio-check-size: var(--gf-ctrl-radio-check-size-md);--gf-ctrl-btn-font-size: var(--gf-ctrl-btn-font-size-md);--gf-ctrl-btn-padding-x: var(--gf-ctrl-btn-padding-x-md);--gf-ctrl-btn-size: var(--gf-ctrl-btn-size-md);--gf-ctrl-btn-border-color-secondary: #686e77;--gf-ctrl-file-btn-bg-color-hover: #EBEBEB;--gf-field-img-choice-size: var(--gf-field-img-choice-size-md);--gf-field-img-choice-card-space: var(--gf-field-img-choice-card-space-md);--gf-field-img-choice-check-ind-size: var(--gf-field-img-choice-check-ind-size-md);--gf-field-img-choice-check-ind-icon-size: var(--gf-field-img-choice-check-ind-icon-size-md);--gf-field-pg-steps-number-color: rgba(17, 35, 55, 0.8);}
+                        
+                            
+                        
+        
+        	Step 1 of 2
+        	
+            
+                50%
+            
+                        
+					Ready to Stand Out to Top Colleges?
+
+Sign up and get insider strategies from Former Admissions Officers – straight to your inbox.Email(Required)
+                            
+                        
+                    
+                    
+                          
+                    
+                
+                
+                    
+                        Your DetailsFirst Name(Required)Last Name(Required)Number(Required)Division(Required)Division*UndergraduateAssorted GraduateLaw SchoolBusiness SchoolMedical SchoolCareer CounselingSecondary School (Boarding School)Are You A Parent or Student?(Required)Are You A Parent or Student?*Parent/GuardianStudentOtherStudent Graduation Year(Required)Student Graduation Year*201420152016201720182019202020212022202320242025Aside from English, what other languages are spoken in your home? (Required)What other languages are spoken in your home?* Chinese (Mandarin, Cantonese, etc.)SpanishKoreanHindiJapaneseArabicNoneOtherAcademic Interest(Required)Academic Interest*STEMHumanitiesMathEnglishCreative WritingBusinessComputer ScienceEngineeringEconomicsMusicArtsPre-MedBiologyOtherSportsPolitical ScienceThis field is hidden when viewing the formEmail
+                            
+                        SMS Consent(Required) I agree to receive SMS communications from InGenius Prep.(Required)InGenius Prep respects your privacy and will use your information to manage your account and deliver requested services. We may contact you about our offerings via SMS text messages if you give us your consent above. 
+          
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+             
+                        
+                        window.addEventListener('DOMContentLoaded', function() {
+gform.initializeOnLoaded( function() {gformInitSpinner( 8, 'https://ingeniusprep.com/wp-content/plugins/gravityforms/images/spinner.svg', false );jQuery('#gform_ajax_frame_8').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_8');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_8').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_8').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_8').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_8').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */  }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_8').val();gformInitSpinner( 8, 'https://ingeniusprep.com/wp-content/plugins/gravityforms/images/spinner.svg', false );jQuery(document).trigger('gform_page_loaded', [8, current_page]);window['gf_submitting_8'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_8').replaceWith(confirmation_content);jQuery(document).trigger('gform_confirmation_loaded', [8]);window['gf_submitting_8'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_8').text());}else{jQuery('#gform_8').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "8", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_8" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_8";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_8" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 8, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} );
+});
+						
+				
+					
+				
+				
+					
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			
+			
+
+(function(d,s,i,r) {
+if (d.getElementById(i)){return;}
+var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/5109206.js';
+e.parentNode.insertBefore(n, e);
+})(document,"script","hs-analytics",300000);
+
+
+
+var wpilFrontend = {"ajaxUrl":"/wp-admin/admin-ajax.php","postId":"1222","postType":"post","openInternalInNewTab":"0","openExternalInNewTab":"0","disableClicks":"0","openLinksWithJS":"0","trackAllElementClicks":"0","clicksI18n":{"imageNoText":"Image in link: No Text","imageText":"Image Title: ","noText":"No Anchor Text Found"}};
+//# sourceURL=wpil-frontend-script-js-extra
+
+
+
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+
+
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://ingeniusprep.com","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+
+
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+
+
+var rocket_lazyload_css_data = {"threshold":"300"};
+//# sourceURL=rocket_lazyload_css-js-extra
+
+
+!function o(n,c,a){function u(t,e){if(!c[t]){if(!n[t]){var r="function"==typeof require&&require;if(!e&&r)return r(t,!0);if(s)return s(t,!0);throw(e=new Error("Cannot find module '"+t+"'")).code="MODULE_NOT_FOUND",e}r=c[t]={exports:{}},n[t][0].call(r.exports,function(e){return u(n[t][1][e]||e)},r,r.exports,o,n,c,a)}return c[t].exports}for(var s="function"==typeof require&&require,e=0;e<a.length;e++)u(a[e]);return u}({1:[function(e,t,r){"use strict";{const c="undefined"==typeof rocket_pairs?[]:rocket_pairs,a=(("undefined"==typeof rocket_excluded_pairs?[]:rocket_excluded_pairs).map(t=>{var e=t.selector;document.querySelectorAll(e).forEach(e=>{e.setAttribute("data-rocket-lazy-bg-"+t.hash,"excluded")})}),document.querySelector("#wpr-lazyload-bg-container"));var o=rocket_lazyload_css_data.threshold||300;const u=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&c.filter(e=>t.target.matches(e.selector)).map(t=>{var e;t&&((e=document.createElement("style")).textContent=t.style,a.insertAdjacentElement("afterend",e),t.elements.forEach(e=>{u.unobserve(e),e.setAttribute("data-rocket-lazy-bg-"+t.hash,"loaded")}))})})},{rootMargin:o+"px"});function n(){0<(0<arguments.length&&void 0!==arguments[0]?arguments[0]:[]).length&&c.forEach(t=>{try{document.querySelectorAll(t.selector).forEach(e=>{"loaded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&"excluded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&(u.observe(e),(t.elements||=[]).push(e))})}catch(e){console.error(e)}})}n(),function(){const r=window.MutationObserver;return function(e,t){if(e&&1===e.nodeType)return(t=new r(t)).observe(e,{attributes:!0,childList:!0,subtree:!0}),t}}()(document.querySelector("body"),n)}},{}]},{},[1]);
+//# sourceURL=rocket_lazyload_css-js-after
+
+
+
+
+
+
+
+
+
+
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+
+
+
+
+var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":1,"iconText":"Select date"}};
+var gf_legacy_multi = [];
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled","error":"Error","message":"Message"},"vars":{"images_url":"https://ingeniusprep.com/wp-content/plugins/gravityforms/images"}};
+//# sourceURL=gform_gravityforms-js-extra
+
+
+
+
+
+
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"4d5e484f1615493b74b97c35b6df2abf"},"ajax":{"ajaxurl":"https://ingeniusprep.com/wp-admin/admin-ajax.php","ajax_submission_nonce":"70f03755a4","i18n":{"step_announcement":"Step %1$s of %2$s, %3$s","unknown_error":"There was an unknown error processing your request. Please try again."}}}},"hmr_dev":"","public_path":"https://ingeniusprep.com/wp-content/plugins/gravityforms/assets/js/dist/","config_nonce":"b6043f3a2b"};
+//# sourceURL=gform_gravityforms_theme-js-extra
+
+
+
+
+
+
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/ingeniusprep.com\/wp-admin\/admin-ajax.php","nonce":"527cbbd7f3","urls":{"assets":"https:\/\/ingeniusprep.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/ingeniusprep.com\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/ingeniusprep.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+//# sourceURL=elementor-pro-frontend-js-before
+
+
+
+
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselWrapperAriaLabel":"Carousel | Horizontal scrolling: Arrow Left & Right","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":true},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.24.0","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"container_grid":true,"e_swiper_latest":true,"e_nested_atomic_repeaters":true,"e_optimized_control_loading":true,"e_onboarding":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"home_screen":true,"ai-layout":true,"nested-elements":true,"editor_v2":true,"e_element_cache":true,"link-in-bio":true,"floating-buttons":true,"display-conditions":true,"form-submissions":true,"taxonomy-filter":true,"search":true},"urls":{"assets":"https:\/\/ingeniusprep.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/ingeniusprep.com\/wp-admin\/admin-ajax.php"},"nonces":{"floatingButtonsClickTracking":"2141390f42"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet","viewport_tablet_extra"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"logo","hello_header_menu_layout":"horizontal","hello_footer_logo_type":"logo"},"post":{"id":1222,"title":"Admissions%20Results%20%7C%20InGenius%20Prep%20Acceptance%20Rates","excerpt":"Admissions ResultsOur system works. We have the results to prove it. No matter which university you aspire to, if you want to maximize your chances, we\u2019re here to help. We\u2019ve done it thousands of times before, and we\u2019re ready to do it again.","featuredImage":false}};
+//# sourceURL=elementor-frontend-js-before
+
+
+
+
+window.addEventListener('DOMContentLoaded', function() {
+var DT_TP = {};
+jQuery(($)=>{
+var DT_language={"en_US":{}};
+DT_TP['1'] = new DataTable('#tablepress-1',{language:DT_language['en_US'],ordering:false,paging:false,searching:false,info:false});
+DT_TP['2'] = new DataTable('#tablepress-2',{language:DT_language['en_US'],ordering:false,paging:false,searching:false,info:false});
+DT_TP['3'] = new DataTable('#tablepress-3',{language:DT_language['en_US'],ordering:false,paging:false,searching:false,info:false});
+DT_TP['9'] = new DataTable('#tablepress-9',{language:DT_language['en_US'],ordering:false,paging:false,searching:false,info:false});
+});
+//# sourceURL=tablepress-datatables-js-after
+});
+Top
+
+
+	html {
+  scroll-behavior: smooth;
+	}
+	
+	#myBtn {
+		width:45px;
+		height: 45px;
+		display: none;
+		position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #077fe866;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 12px;
+	}
+
+	@media (any-hover: hover) {
+			#myBtn:hover {
+			background-color: #077FE7;
+	}
+	}
+
+
+
+
+	let mybutton = document.getElementById("myBtn");
+
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = 'block';
+		} else {
+			mybutton.style.display = 'none';
+		}
+	}
+
+	function topFunction() {
+		document.body.scrollTop = 0; 
+		document.documentElement.scrollTop = 0; 
+	}
+
+window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)function lazyLoadThumb(e,alt,l){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="Play Youtube video"></button>';if(l){t=t.replace('data-lazy-','');t=t.replace('loading="lazy"','');t=t.replace(/<noscript>.*?<\/noscript>/g,'');}t=t.replace('alt=""','alt="'+alt+'"');return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?"":"&"+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var exclusions=[];var e,t,p,u,l,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)(e=document.createElement("div")),(u='https://i.ytimg.com/vi/ID/hqdefault.jpg'),(u=u.replace('ID',a[t].dataset.id)),(l=exclusions.some(exclusion=>u.includes(exclusion))),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query",a[t].dataset.query),e.setAttribute("data-src",a[t].dataset.src),(e.innerHTML=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt,l)),a[t].appendChild(e),(p=e.querySelector(".play")),(p.onclick=lazyLoadYoutubeIframe)});
+"use strict";function wprRemoveCPCSS(){var preload_stylesheets=document.querySelectorAll('link[data-rocket-async="style"][rel="preload"]');if(preload_stylesheets&&0<preload_stylesheets.length)for(var stylesheet_index=0;stylesheet_index<preload_stylesheets.length;stylesheet_index++){var media=preload_stylesheets[stylesheet_index].getAttribute("media")||"all";if(window.matchMedia(media).matches)return void setTimeout(wprRemoveCPCSS,200)}var elem=document.getElementById("rocket-critical-css");elem&&"remove"in elem&&elem.remove()}window.addEventListener?window.addEventListener("load",wprRemoveCPCSS):window.attachEvent&&window.attachEvent("onload",wprRemoveCPCSS);(()=>{class RocketElementorPreload{constructor(){this.deviceMode=document.createElement("span"),this.deviceMode.id="elementor-device-mode-wpr",this.deviceMode.setAttribute("class","elementor-screen-only"),document.body.appendChild(this.deviceMode)}t(){let t=getComputedStyle(this.deviceMode,":after").content.replace(/"/g,"");this.animationSettingKeys=this.i(t),document.querySelectorAll(".elementor-invisible[data-settings]").forEach((t=>{const e=t.getBoundingClientRect();if(e.bottom>=0&&e.top<=window.innerHeight)try{this.o(t)}catch(t){}}))}o(t){const e=JSON.parse(t.dataset.settings),i=e.m||e.animation_delay||0,n=e[this.animationSettingKeys.find((t=>e[t]))];if("none"===n)return void t.classList.remove("elementor-invisible");t.classList.remove(n),this.currentAnimation&&t.classList.remove(this.currentAnimation),this.currentAnimation=n;let o=setTimeout((()=>{t.classList.remove("elementor-invisible"),t.classList.add("animated",n),this.l(t,e)}),i);window.addEventListener("rocket-startLoading",(function(){clearTimeout(o)}))}i(t="mobile"){const e=[""];switch(t){case"mobile":e.unshift("_mobile");case"tablet":e.unshift("_tablet");case"desktop":e.unshift("_desktop")}const i=[];return["animation","_animation"].forEach((t=>{e.forEach((e=>{i.push(t+e)}))})),i}l(t,e){this.i().forEach((t=>delete e[t])),t.dataset.settings=JSON.stringify(e)}static run(){const t=new RocketElementorPreload;requestAnimationFrame(t.t.bind(t))}}document.addEventListener("DOMContentLoaded",RocketElementorPreload.run)})();<link data-minify="1" rel="stylesheet" href="https://ingeniusprep.com/wp-content/cache/background-css/1/ingeniusprep.com/wp-content/cache/min/1/wp-content/themes/hello-elementor/custom.css?ver=1771880482&wpr_t=1772989046" type="text/css" media="all"><link data-minify="1" rel='stylesheet' id='wpml-blocks-css' href='https://ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/sitepress-multilingual-cms/dist/css/blocks/styles.css?ver=1771880482' media='all' /><link rel='stylesheet' id='wpml-legacy-dropdown-0-css' href='https://ingeniusprep.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-dropdown/style.min.css?ver=1' media='all' /><link data-minify="1" rel='stylesheet' id='cms-navigation-style-base-css' href='https://ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/wpml-cms-nav/res/css/cms-navigation-base.css?ver=1771880482' media='screen' /><link data-minify="1" rel='stylesheet' id='cms-navigation-style-css' href='https://ingeniusprep.com/wp-content/cache/background-css/1/ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/wpml-cms-nav/res/css/cms-navigation.css?ver=1771880482&wpr_t=1772989046' media='screen' /><link rel='stylesheet' id='hello-elementor-css' href='https://ingeniusprep.com/wp-content/themes/hello-elementor/style.min.css?ver=3.1.0' media='all' /><link rel='stylesheet' id='hello-elementor-theme-style-css' href='https://ingeniusprep.com/wp-content/themes/hello-elementor/theme.min.css?ver=3.1.0' media='all' /><link rel='stylesheet' id='hello-elementor-header-footer-css' href='https://ingeniusprep.com/wp-content/themes/hello-elementor/header-footer.min.css?ver=3.1.0' media='all' /><link rel='stylesheet' id='elementor-frontend-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/custom-frontend.min.css?ver=1771625893' media='all' /><link rel='stylesheet' id='elementor-post-7-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-7.css?ver=1771625893' media='all' /><link data-minify="1" rel='stylesheet' id='swiper-css' href='https://ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=1771880482' media='all' /><link rel='stylesheet' id='e-swiper-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='elementor-pro-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/custom-pro-frontend.min.css?ver=1771625893' media='all' /><link rel='stylesheet' id='elementor-global-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/global.css?ver=1771625894' media='all' /><link rel='stylesheet' id='widget-icon-list-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/custom-widget-icon-list.min.css?ver=1771625893' media='all' /><link rel='stylesheet' id='widget-heading-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='widget-text-editor-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/widget-text-editor.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='e-animation-fadeIn-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/lib/animations/styles/fadeIn.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='widget-counter-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/widget-counter.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='widget-progress-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/custom-widget-progress.min.css?ver=1771625893' media='all' /><link rel='stylesheet' id='widget-divider-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='elementor-post-1222-css' href='https://ingeniusprep.com/wp-content/cache/background-css/1/ingeniusprep.com/wp-content/uploads/elementor/css/post-1222.css?ver=1771629318&wpr_t=1772989046' media='all' /><link rel='stylesheet' id='elementor-post-41735-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-41735.css?ver=1772213503' media='all' /><link rel='stylesheet' id='elementor-post-27886-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-27886.css?ver=1771625896' media='all' /><link rel='stylesheet' id='elementor-post-46592-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-46592.css?ver=1771625896' media='all' /><link rel='stylesheet' id='elementor-post-41597-css' href='https://ingeniusprep.com/wp-content/cache/background-css/1/ingeniusprep.com/wp-content/uploads/elementor/css/post-41597.css?ver=1771625896&wpr_t=1772989046' media='all' /><link data-minify="1" rel='stylesheet' id='tablepress-default-css' href='https://ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/tablepress/css/build/default.css?ver=1771880482' media='all' /><link data-minify="1" rel='stylesheet' id='ecs-styles-css' href='https://ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/ele-custom-skin/assets/css/ecs-style.css?ver=1771880482' media='all' /><link rel='stylesheet' id='elementor-post-1962-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-1962.css?ver=1757946669' media='all' /><link rel='stylesheet' id='elementor-post-2060-css' href='https://ingeniusprep.com/wp-content/cache/background-css/1/ingeniusprep.com/wp-content/uploads/elementor/css/post-2060.css?ver=1727975799&wpr_t=1772989046' media='all' /><link rel='stylesheet' id='elementor-post-2522-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-2522.css?ver=1727722097' media='all' /><link rel='stylesheet' id='elementor-post-2623-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-2623.css?ver=1727868231' media='all' /><link rel='stylesheet' id='elementor-post-3297-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-3297.css?ver=1728550730' media='all' /><link rel='stylesheet' id='elementor-post-3343-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-3343.css?ver=1727776026' media='all' /><link rel='stylesheet' id='elementor-post-4309-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-4309.css?ver=1727788581' media='all' /><link rel='stylesheet' id='elementor-post-5306-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-5306.css?ver=1727799323' media='all' /><link rel='stylesheet' id='elementor-post-6461-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-6461.css?ver=1727429347' media='all' /><link rel='stylesheet' id='elementor-post-27477-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-27477.css?ver=1767878385' media='all' /><link rel='stylesheet' id='elementor-post-46816-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-46816.css?ver=1759488076' media='all' /><link rel='stylesheet' id='widget-image-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='widget-nested-accordion-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/widget-nested-accordion.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='widget-social-icons-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='e-apple-webkit-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/conditionals/apple-webkit.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='gravity_forms_theme_reset-css' href='https://ingeniusprep.com/wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-theme-reset.min.css?ver=2.9.28' media='all' /><link rel='stylesheet' id='gravity_forms_theme_foundation-css' href='https://ingeniusprep.com/wp-content/cache/background-css/1/ingeniusprep.com/wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-theme-foundation.min.css?ver=2.9.28&wpr_t=1772989046' media='all' /><link data-minify="1" rel='stylesheet' id='gravity_forms_theme_framework-css' href='https://ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-theme-framework.min.css?ver=1771880482' media='all' /><link rel='stylesheet' id='gravity_forms_orbital_theme-css' href='https://ingeniusprep.com/wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-orbital-theme.min.css?ver=2.9.28' media='all' />
+
+
+

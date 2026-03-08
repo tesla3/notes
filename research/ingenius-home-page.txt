@@ -1,0 +1,4767 @@
+
+
+
+Skip to content
+
+		
+			
+		
+				
+				
+									
+							
+									
+				
+				
+		
+				
+				
+			window.addEventListener('DOMContentLoaded', function() {
+    jQuery($ => {
+    $(document).ready(function() {
+        let itemsList = $('.mainHeader').find('.wpml-ls-sub-menu');
+        
+        if (itemsList.children().length === 0) {
+            $('.langContainer').hide();
+          $('.leftContainer').css('width', '100%');
+        
+        
+        } else {
+            
+        }
+    });
+});
+});		
+				
+		
+		
+		
+				
+				
+			Strategic Selection: Building Your School List & Planning College Visits in 11th Grade>>		
+				
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+			+1.800.722.3105		
+				
+				
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+			
+
+	
+
+		
+			
+                English
+
+			
+				
+					
+						
+                            简体中文
+					
+
+				
+					
+						
+                            繁體中文
+					
+
+				
+					
+						
+                            한국어
+					
+
+							
+
+		
+
+	
+
+		
+				
+				
+				
+		
+		
+				
+				
+						
+				Our Services
+
+	College Counseling
+	
+		College Admissions (G7-12)
+		Young Leaders (G5-8)
+		Academic Mentorships
+		Test Prep
+		Writing Seminars
+		Leadership & Innovation Lab
+		Competition Preparation
+		Subject Tutoring
+		Soft Skills Courses
+	
+
+	More Services
+	
+		Internships
+		Medical School Admissions
+		Private High School Admissions
+		Graduate School Admissions
+		UK Admissions
+		Non-US Admissions
+		Law School Admissions
+		Career Counseling
+		Business School Admissions
+	
+
+
+
+About us
+
+	about sub
+	
+		Why InGenius Prep
+		Our Results
+		Our Educational Approach
+		Our Process
+		Our Technology Platform
+	
+
+	about sub
+	
+		Our Reviews
+		Pro Bono & Partnerships
+		Honor Code
+		Diversity Statement
+		Where We Serve
+	
+
+
+
+Our team
+
+	Our Counselors
+	Our Leadership Team
+	Careers
+
+
+Webinars
+Blog
+Resources
+
+	Resources sub
+	
+		Case Studies
+		Library
+		Podcast
+		FAQ
+	
+
+	Resources sub1
+	
+		School-Specific Guides
+		Press
+		Journal
+	
+
+
+
+Guides
+
+	All Colleges
+	
+		Johns Hopkins University
+		New York University
+		Duke University
+		Massachusetts Institute of Technology
+		The California Institute of Technology
+		Northwestern University
+		Stanford University
+		University of Chicago
+		University of Michigan
+		University of California, Berkeley
+		University of Southern California
+		University of California, Los Angeles
+	
+
+	Ivy League Admissions Guides
+	
+		Columbia University
+		Cornell University
+		Brown University
+		Harvard University
+		Princeton University
+		Dartmouth University
+		Yale University
+		University of Pennsylvania
+	
+
+
+
+Contact Us
+			
+					
+						Menu
+		
+					
+				Our Services
+
+	College Counseling
+	
+		College Admissions (G7-12)
+		Young Leaders (G5-8)
+		Academic Mentorships
+		Test Prep
+		Writing Seminars
+		Leadership & Innovation Lab
+		Competition Preparation
+		Subject Tutoring
+		Soft Skills Courses
+	
+
+	More Services
+	
+		Internships
+		Medical School Admissions
+		Private High School Admissions
+		Graduate School Admissions
+		UK Admissions
+		Non-US Admissions
+		Law School Admissions
+		Career Counseling
+		Business School Admissions
+	
+
+
+
+About us
+
+	about sub
+	
+		Why InGenius Prep
+		Our Results
+		Our Educational Approach
+		Our Process
+		Our Technology Platform
+	
+
+	about sub
+	
+		Our Reviews
+		Pro Bono & Partnerships
+		Honor Code
+		Diversity Statement
+		Where We Serve
+	
+
+
+
+Our team
+
+	Our Counselors
+	Our Leadership Team
+	Careers
+
+
+Webinars
+Blog
+Resources
+
+	Resources sub
+	
+		Case Studies
+		Library
+		Podcast
+		FAQ
+	
+
+	Resources sub1
+	
+		School-Specific Guides
+		Press
+		Journal
+	
+
+
+
+Guides
+
+	All Colleges
+	
+		Johns Hopkins University
+		New York University
+		Duke University
+		Massachusetts Institute of Technology
+		The California Institute of Technology
+		Northwestern University
+		Stanford University
+		University of Chicago
+		University of Michigan
+		University of California, Berkeley
+		University of Southern California
+		University of California, Los Angeles
+	
+
+	Ivy League Admissions Guides
+	
+		Columbia University
+		Cornell University
+		Brown University
+		Harvard University
+		Princeton University
+		Dartmouth University
+		Yale University
+		University of Pennsylvania
+	
+
+
+
+Contact Us
+			
+				
+				
+				
+				
+						
+				Our Services
+
+	College Counseling
+	
+		College Admissions (G7-12)
+		Young Leaders (G5-8)
+		Academic Mentorships
+		Test Prep
+		Writing Seminars
+		Leadership & Innovation Lab
+		Competition Preparation
+		Subject Tutoring
+		Soft Skills Courses
+	
+
+	More Services
+	
+		Internships
+		Medical School Admissions
+		Private High School Admissions
+		Graduate School Admissions
+		UK Admissions
+		Non-US Admissions
+		Law School Admissions
+		Career Counseling
+		Business School Admissions
+	
+
+
+
+About Us NEW
+
+	Why InGenius Prep
+	Our Results
+	Our Approach
+	Our Process
+	Our Technology Platform
+	Our Reviews
+	Pro Bono & Partnerships
+	Honor Code
+	Diversity Statement
+
+
+Our Team
+
+	Our Counselors
+	Our Leadership Team
+	Careers
+
+
+Webinars
+Blog
+Resources
+
+	Case Studies
+	Library
+	Podcast
+	Our Offices
+	FAQ
+	School-Specific Guides
+	Press
+
+
+Guides
+
+	All Colleges
+	
+		Johns Hopkins University
+		New York University
+		Duke University
+		Massachusetts Institute of Technology
+		California Institute of Technology
+		Northwestern University
+		Stanford University
+		University of Chicago
+		University of Michigan
+		University of California, Berkeley
+		University of Southern California
+		University of California, Los Angeles
+	
+
+	Ivy League Admissions Guides
+	
+		Columbia University
+		Cornell University
+		Brown University
+		Harvard University
+		Princeton University
+		Dartmouth University
+		Yale University
+		University of Pennsylvania
+	
+
+
+
+			
+					
+						Menu
+		
+					
+				Our Services
+
+	College Counseling
+	
+		College Admissions (G7-12)
+		Young Leaders (G5-8)
+		Academic Mentorships
+		Test Prep
+		Writing Seminars
+		Leadership & Innovation Lab
+		Competition Preparation
+		Subject Tutoring
+		Soft Skills Courses
+	
+
+	More Services
+	
+		Internships
+		Medical School Admissions
+		Private High School Admissions
+		Graduate School Admissions
+		UK Admissions
+		Non-US Admissions
+		Law School Admissions
+		Career Counseling
+		Business School Admissions
+	
+
+
+
+About Us NEW
+
+	Why InGenius Prep
+	Our Results
+	Our Approach
+	Our Process
+	Our Technology Platform
+	Our Reviews
+	Pro Bono & Partnerships
+	Honor Code
+	Diversity Statement
+
+
+Our Team
+
+	Our Counselors
+	Our Leadership Team
+	Careers
+
+
+Webinars
+Blog
+Resources
+
+	Case Studies
+	Library
+	Podcast
+	Our Offices
+	FAQ
+	School-Specific Guides
+	Press
+
+
+Guides
+
+	All Colleges
+	
+		Johns Hopkins University
+		New York University
+		Duke University
+		Massachusetts Institute of Technology
+		California Institute of Technology
+		Northwestern University
+		Stanford University
+		University of Chicago
+		University of Michigan
+		University of California, Berkeley
+		University of Southern California
+		University of California, Los Angeles
+	
+
+	Ivy League Admissions Guides
+	
+		Columbia University
+		Cornell University
+		Brown University
+		Harvard University
+		Princeton University
+		Dartmouth University
+		Yale University
+		University of Pennsylvania
+	
+
+
+
+			
+				
+				
+				
+		
+				
+				
+									
+							
+									
+				
+				
+		
+				
+				
+			Free consultation		
+				
+				
+				
+				
+				
+		
+					
+				
+				
+					
+			
+						
+									SCHEDULE A FREE CONSULTATION
+					
+					
+		
+				
+				
+					
+				
+				
+				
+				
+					
+		
+				
+				
+			
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://www.ingeniusprep.com/#educational-organization",
+      "name": "InGenius Prep",
+      "url": "https://www.ingeniusprep.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ingeniusprep.com/wp-content/uploads/2024/07/header-logo.svg"
+      },
+      "telephone": "+1-888-971-1874",
+      "email": "yosepha@ingeniusprep.com",
+      "foundingDate": "2013-04",
+      "description": "InGenius Prep is a global college admissions counseling organization offering elite guidance from 150+ Former Admissions Officers (FAOs) from Ivy League and Top 30 universities.",
+      "areaServed": {
+        "@type": "Country",
+        "name": "United States"
+      },
+"image": [
+  "https://ingeniusprep.com/wp-content/uploads/2024/07/header-logo.svg",
+  "https://lh3.googleusercontent.com/p/AF1QipNoCZpd5yurQpyj9z5c0RNn9_Zr9RMudoy5scBu"
+],
+"address": {
+  "@type": "PostalAddress",
+  "addressCountry": "US"
+},
+      "knowsAbout": [
+        {
+          "@type": "Thing",
+          "name": "College admissions",
+          "sameAs": "https://en.wikipedia.org/wiki/College_admissions"
+        },
+        {
+          "@type": "Thing",
+          "name": "College application process",
+          "sameAs": "https://en.wikipedia.org/wiki/College_application"
+        },
+        {
+          "@type": "Thing",
+          "name": "Standardized testing",
+          "sameAs": "https://en.wikipedia.org/wiki/Standardized_test"
+        },
+        {
+          "@type": "Thing",
+          "name": "Academic mentorship",
+          "sameAs": "https://en.wikipedia.org/wiki/Mentorship"
+        },
+        {
+          "@type": "Thing",
+          "name": "College application essays",
+          "sameAs": "https://en.wikipedia.org/wiki/College_application_essay"
+        }
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "@id": "https://www.ingeniusprep.com/#college-admissions-counseling",
+            "name": "College Admissions Counseling",
+            "serviceType": "College admissions counseling",
+            "provider": {
+              "@id": "https://www.ingeniusprep.com/#educational-organization"
+            },
+            "areaServed": {
+              "@type": "Country",
+              "name": "United States"
+            },
+            "description": "Comprehensive college admissions counseling including academic mentorship, application strategy, essay coaching, and admissions preparation."
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Standardized Test Preparation",
+            "serviceType": "Test preparation",
+            "additionalType": "https://en.wikipedia.org/wiki/Standardized_test"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Academic Mentorship",
+            "serviceType": "Academic mentoring",
+            "additionalType": "https://en.wikipedia.org/wiki/Mentorship"
+          }
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.2",
+        "reviewCount": "48"
+      },
+      "sameAs": [
+        "https://www.google.com/maps?cid=857752295745011966",
+        "https://www.facebook.com/IngeniusPrep",
+        "https://www.linkedin.com/company/ingenius-prep",
+        "https://x.com/ingeniusprep",
+        "https://www.instagram.com/ingeniusprep/",
+        "https://www.tiktok.com/@ingeniusprep?",
+        "https://www.youtube.com/c/ingeniusprep"
+      ]
+    }
+  ]
+}
+
+
+
+	
+
+
+
+    .mouse {
+    	height: 40px;
+    	width: 30px;
+    	border-radius: 13px;
+    	border: 2px solid #fff;
+    	margin-bottom: 3px;
+		}
+		
+	.wheel {
+	animation: mouse-wheel 1.5s ease infinite;
+	height: 9px;
+	width: 2px;
+	background: #fff;
+	margin: 1px auto;
+	border-radius: 1px;
+}
+
+@keyframes mouse-wheel {
+	0%	 { 
+	    opacity: 1; 
+	    transform: translateY(0);	  
+	    
+	}
+	100% { 
+	    opacity: 0;
+	    transform: translateY( 6px); 
+	    
+	}
+}
+		
+				
+				
+				
+			Scroll		
+				
+				
+		
+				
+				
+			Get Into Top Schools With The World’s Largest Team of Former Admissions Officers		
+				
+				
+				
+							The Best College Admissions Consultants for High-Achieving Students						
+				
+		
+				
+				
+			schedule free consultation		
+				
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+		
+		
+		
+		
+				
+				
+																										
+				
+				
+				
+		
+		
+				
+				
+			Exclusive Event		
+				
+				
+				
+			Williams FAO		
+				
+				
+				
+				
+			Strategic Selection: Building Your School List & Planning College Visits in 11th Grade		
+				
+				
+				
+					
+			
+						
+									Register now
+					
+					
+		
+				
+				
+				
+				
+				
+					
+				
+		
+					
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+			Targeting Top 30 Schools? Get Expert College Admissions Consulting From Our Team of 150+ Former Admissions Officers    
+		
+				
+				
+				
+							Develop your competitive edge in the college application process and increase your student’s chances of acceptance at top-ranking schools with InGenius Prep’s college admissions consultants.						
+				
+				
+				
+					
+			
+						
+		
+				
+				
+					
+				
+		
+					
+				
+				
+							InGenius Prep Student Results						
+				
+				
+				
+					
+			
+						
+									View our results
+					
+					
+		
+				
+				
+		
+				
+				
+					
+			More Likely Into Top 10 Schools			
+				
+				1
+				x
+			
+		
+				
+				
+				
+				
+					
+			Acceptance Rate			
+				
+				1
+				%
+			
+		
+				
+				
+				
+				
+					
+			Family Satisfaction Rate			
+				
+				1
+				%
+			
+		
+				
+				
+				
+				
+					
+			Students Admitted to Reach Schools			
+				
+				1
+				%
+			
+		
+				
+				
+				
+				
+					
+			More Likely Into Top 30 Schools			
+				
+				1
+				x
+			
+		
+				
+				
+				
+				
+					
+			In Scholarships			
+				$
+				1
+				M+
+			
+		
+				
+				
+				
+				
+					
+			Ivy League Acceptances			
+				
+				1
+				+
+			
+		
+				
+				
+				
+				
+					
+			Top 10 Acceptances In 2023			
+				
+				1
+				+
+			
+		
+				
+				
+				
+				
+					
+			Top 30 Acceptances			
+				
+				1
+				+
+			
+		
+				
+				
+				
+				
+					
+			Top-Ranked Team of 150+ Former Admissions Officers			
+				
+				1
+				+
+			
+		
+				
+				
+				
+					
+				
+		
+					
+		
+				
+		
+				
+				
+			Outperform In College Admissions: 
+Our Record In Securing Elite Spots		
+				
+				
+				
+							Our college admissions consulting services have a proven track record of success, helping students secure spots in some of the most prestigious institutions nationwide, from Ivy League to liberal arts colleges.						
+				
+		
+				
+				
+					
+			
+										
+							
+					
+		
+		
+				
+				
+			Proven Success		
+				
+				
+		
+				
+				
+			57%		
+				
+		
+				
+		
+				
+				
+			Average Acceptance Rate Into Top 30 Schools With InGenius Prep		
+				
+				
+				
+		
+				
+				
+			8%		
+				
+		
+				
+		
+				
+				
+			Average Acceptance Rate Into Top 30 Schools Without InGenius Prep		
+				
+				
+				
+				
+					
+				
+								
+											
+							
+					
+		
+		
+				
+				
+			MIT		
+				
+				
+		
+				
+				
+			21%		
+				
+		
+				
+		
+				
+				
+			InGenius Acceptance Rate		
+				
+				
+				
+		
+				
+				
+			4.5%		
+				
+		
+				
+		
+				
+				
+			Average Acceptance Rate		
+				
+				
+				
+				
+					
+				
+								
+											
+							
+					
+		
+		
+				
+				
+			Harvard		
+				
+				
+		
+				
+				
+			8.6%		
+				
+		
+				
+		
+				
+				
+			InGenius Acceptance Rate		
+				
+				
+				
+		
+				
+				
+			3.7%		
+				
+		
+				
+		
+				
+				
+			Average Acceptance Rate		
+				
+				
+				
+				
+					
+				
+								
+											
+							
+					
+		
+		
+				
+				
+			UChicago		
+				
+				
+		
+				
+				
+			26.3%		
+				
+		
+				
+		
+				
+				
+			InGenius Acceptance Rate		
+				
+				
+				
+		
+				
+				
+			4.5%*		
+				
+		
+				
+		
+				
+				
+			Average Acceptance Rate		
+				
+				
+				
+				
+					
+				
+								
+											
+							
+					
+		
+		
+				
+				
+			Johns Hopkins		
+				
+				
+		
+				
+				
+			27.7%		
+				
+		
+				
+		
+				
+				
+			InGenius Acceptance Rate		
+				
+				
+				
+		
+				
+				
+			2.9%*		
+				
+		
+				
+		
+				
+				
+			Average Acceptance Rate		
+				
+				
+				
+				
+					
+				
+								
+											
+							
+					
+		
+		
+				
+				
+			UPenn		
+				
+				
+		
+				
+				
+			24.3%		
+				
+		
+				
+		
+				
+				
+			InGenius Acceptance Rate		
+				
+				
+				
+		
+				
+				
+			3.7%*		
+				
+		
+				
+		
+				
+				
+			Average Acceptance Rate		
+				
+				
+				
+				
+					
+				
+								
+											
+							
+					
+		
+		
+				
+				
+			Columbia		
+				
+				
+		
+				
+				
+			22.2%		
+				
+		
+				
+		
+				
+				
+			InGenius Acceptance Rate		
+				
+				
+				
+		
+				
+				
+			3.9%		
+				
+		
+				
+		
+				
+				
+			Average Acceptance Rate		
+				
+				
+				
+				
+					
+				
+								
+								
+		
+					
+							
+			
+							
+					
+				
+				
+				
+				
+							*Represents 2021-2022. These schools did not publish admissions rates for 2022-2023						
+				
+				
+				
+				
+					
+			
+						
+									See case studies
+					
+					
+		
+				
+				
+				
+		
+		
+		
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+				
+				
+				
+					
+						
+				
+					 Why Does My Child Need A Private College Admissions Consultant? 
+							
+			
+			
+		
+
+						
+				
+				
+				
+							A college admissions consultant is an experienced counselor who can help families and high school students navigate the complex college admissions process. When students have their sights set on Ivy League or other competitive schools, the stakes are higher, and the process is even more involved. By leveraging the industry expertise of Former Admissions Officers and Graduate Coaches, students can develop their competitive advantages to bridge the gap between average applicants and highly desirable assets. Whether you’re pursuing undergraduate or graduate school admissions, a strategic course of action will help your student rise above other applicants and secure a seat at the table. Take the next step with confidence. 						
+				
+				
+					
+					
+				
+				
+				
+					
+				
+		
+					
+				
+				
+							Why Choose InGenius Prep						
+				
+				
+				
+							5 reasons why InGenius is the go-to admissions resource						
+				
+		
+		
+		
+		
+		
+				
+				
+			01		
+				
+				
+				
+				
+		
+				
+				
+			10+ Years Experience From Our Team of 150+ Former Admissions Officers		
+				
+				
+				
+							Depth Of Experience From Former Top-School Admissions Officers and Member of the National Association for College Admissions Counseling (NACAC)						
+				
+				
+				
+		
+		
+		
+		
+				
+				
+			02		
+				
+				
+				
+				
+		
+				
+				
+			Cutting-Edge Resources & Incredible Results		
+				
+				
+				
+							Unmatched Expertise and Unparalleled Resources Delivering Incomparable Results 						
+				
+				
+				
+		
+		
+		
+		
+				
+				
+			03		
+				
+				
+				
+				
+		
+				
+				
+			Superior Strategies & Top-Tier Service		
+				
+				
+				
+							Superior Planning and Preparation For A Strategic Admissions Process with High-End Service						
+				
+				
+				
+				
+		
+				
+				
+					
+			
+						
+									Learn more
+					
+					
+		
+				
+				
+				
+					
+				
+		
+					
+				
+				
+							The InGenius Prep Admissions Consulting Advantage						
+				
+				
+				
+							Our Consulting Approach: Why We’re The Best College Admissions CounselorsWith resources that surpass those of the top US high schools combined, we offer superior support, counselors, and strategies to drive your student’s college admissions journey. Your student will reach their ultimate potential as a leader and scholar, earning their spot at a top-ranked college. 						
+				
+		
+		
+		
+		
+		
+				
+				
+			01		
+				
+				
+				
+				
+		
+				
+				
+			Counselor Experience		
+				
+				
+				
+							Our team of 150+ Former Admissions Officers made admissions decisions at the most competitive universities in the world. Our Graduate Coaches attended elite universities and successfully completed our rigorous training. Our mentors, instructors, and tutors are leading industry experts. Together, our experience is unmatched.						
+				
+				
+				
+		
+		
+		
+		
+				
+				
+			02		
+				
+				
+				
+				
+		
+				
+				
+			All-in-One Model 		
+				
+				
+				
+							Our company provides families with all of their educational needs from start to finish. With a team approach, our students benefit from comprehensive, multidimensional guidance. Our online model allows students to access leading experts and educational resources no matter where they are in the world.						
+				
+				
+				
+		
+		
+		
+		
+				
+				
+			03		
+				
+				
+				
+				
+		
+				
+				
+			Comprehensive Curriculum and Management		
+				
+				
+				
+							We meticulously manage service delivery to ensure the best counseling outcomes. By gathering data on admissions decisions from our 150+ Former Admissions Officers and working with 6,000+ students over the years, we’ve built a cutting-edge curriculum that guides our work with students. Our team uses our Student-Management System,   “The Genie,” to deliver our curriculum, oversee all counselor work, and track student progress. 						
+				
+				
+				
+		
+		
+		
+		
+				
+				
+			04		
+				
+				
+				
+				
+		
+				
+				
+			
+Innovative Resources
+		
+				
+				
+				
+							To support our students on their personal, academic, and extracurricular journeys, we find and develop innovative resources. Through our network, we source and create unique opportunities for students. Whether it’s academic research, entrepreneurial endeavors, summer programs, online classes, or independent projects, our students engage in activities that set them apart from the competition.						
+				
+				
+				
+		
+		
+		
+		
+				
+				
+			05		
+				
+				
+				
+				
+		
+				
+				
+			Admissions Results 		
+				
+				
+				
+							Our counseling approach has led to stellar results. Every year, our students outperform the admissions odds and gain acceptance to top schools at nearly 10x the average student rate. 						
+				
+				
+				
+				
+		
+				
+				
+					
+			
+						
+									Learn more
+					
+					
+		
+				
+				
+				
+					
+				
+		
+					
+				
+				
+			I’m Interested In:		
+				
+				
+				
+			
+    .cursor {
+    top: 0;
+    left: 0;
+	position: fixed;
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	background-color: #000;
+	pointer-events: none;
+	z-index: 999;
+	opacity: 0;
+	transition: transform 0.6s;
+    }
+    
+    @media (max-width: 1024px) {
+        .cursor {
+            display: none !important;
+        }
+    }
+    
+      .cursor:before {
+        content: '';
+        position: absolute;
+        top: 23px;
+        left: 10px;
+        border: solid #fff;
+        border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+       transform: rotate(135deg);
+    }
+    
+    .cursor:after {
+        content: '';
+        position: absolute;
+        top: 23px;
+        right: 10px;
+        border: solid #fff;
+        border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 3px;
+      transform: rotate(-45deg);
+    }
+    
+
+
+
+
+
+
+window.addEventListener('DOMContentLoaded', function() {
+
+let dpkCursor = document.querySelector('.cursor');
+
+
+function initCursor(speedOption = 0.25) {
+  
+    let dpkCursorMouse = { x: -100, y: -100 };
+    let dpkCursorPos = { x: 0, y: 0 };
+    let speed = speedOption;
+   
+    //center the circle around cursor       
+ 
+    window.addEventListener("mousemove", (e) => {
+      dpkCursorMouse.x = e.x;
+      dpkCursorMouse.y = e.y;
+    });
+
+    const updatePosition = () => {
+      dpkCursorPos.x += (dpkCursorMouse.x - dpkCursorPos.x) * speed;
+      dpkCursorPos.y += (dpkCursorMouse.y - dpkCursorPos.y) * speed;
+
+      dpkCursor.style.transform = `translate3d(calc(${dpkCursorPos.x}px - 50%) ,calc(${dpkCursorPos.y}px - 50%),0)`;
+    
+    };
+
+    function loop() {
+      updatePosition();
+      requestAnimationFrame(loop);
+    }
+    requestAnimationFrame(loop);
+  
+}
+
+
+initCursor()
+
+ jQuery($ => {
+        $(document).ready(function() {
+
+	var cursor = $(".cursor");
+
+
+	$(".customSlider .swiper-wrapper")
+		.mouseleave(function() {
+			cursor.css({
+				opacity: "0",
+				transform: "scale(0)"
+			});
+		})
+		.mouseenter(function() {
+			cursor.css({
+				opacity: "1",
+				transform: "scale(1)"
+			});
+		});
+
+});
+     
+ });
+
+});		
+				
+				
+				
+					
+				
+		.e-loop-item-36720 .elementor-element.elementor-element-1bef7fe:not(.elementor-motion-effects-element-type-background), .e-loop-item-36720 .elementor-element.elementor-element-1bef7fe > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-2ca923b5-fef5-4b3f-8038-eca6530d1645);}.elementor-399 .elementor-element.elementor-element-34830a5{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--justify-content:flex-end;--background-transition:0.3s;--margin-top:0px;--margin-bottom:0px;--margin-left:0px;--margin-right:0px;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-399 .elementor-element.elementor-element-34830a5, .elementor-399 .elementor-element.elementor-element-34830a5::before{--border-transition:0.3s;}.elementor-399 .elementor-element.elementor-element-1bef7fe{--display:flex;--min-height:600px;--justify-content:flex-end;--background-transition:0.3s;--overlay-opacity:1;--padding-top:60px;--padding-bottom:60px;--padding-left:15px;--padding-right:15px;}.elementor-399 .elementor-element.elementor-element-1bef7fe::before, .elementor-399 .elementor-element.elementor-element-1bef7fe > .elementor-background-video-container::before, .elementor-399 .elementor-element.elementor-element-1bef7fe > .e-con-inner > .elementor-background-video-container::before, .elementor-399 .elementor-element.elementor-element-1bef7fe > .elementor-background-slideshow::before, .elementor-399 .elementor-element.elementor-element-1bef7fe > .e-con-inner > .elementor-background-slideshow::before, .elementor-399 .elementor-element.elementor-element-1bef7fe > .elementor-motion-effects-container > .elementor-motion-effects-layer::before{background-color:transparent;--background-overlay:'';background-image:linear-gradient(0deg, #00000080 0%, #00000000 30%);}.elementor-399 .elementor-element.elementor-element-1bef7fe, .elementor-399 .elementor-element.elementor-element-1bef7fe::before{--border-transition:0.3s;}.elementor-399 .elementor-element.elementor-element-1bef7fe.e-con{--align-self:center;}.elementor-399 .elementor-element.elementor-element-51448fe > .elementor-widget-container{padding:0px 0px 0px 0px;}.elementor-399 .elementor-element.elementor-element-51448fe.elementor-element{--align-self:center;}.elementor-399 .elementor-element.elementor-element-51448fe{text-align:center;}.elementor-399 .elementor-element.elementor-element-51448fe .elementor-heading-title{color:var( --e-global-color-secondary );font-family:"Poppins", Sans-serif;font-size:24px;font-weight:600;}.elementor-399 .elementor-element.elementor-element-f01f5f2 .elementor-button{background-color:var( --e-global-color-5c72353 );font-family:"Poppins", Sans-serif;font-size:16px;font-weight:500;text-transform:uppercase;letter-spacing:0.96px;fill:var( --e-global-color-secondary );color:var( --e-global-color-secondary );padding:22px 26px 22px 26px;}.elementor-399 .elementor-element.elementor-element-f01f5f2 .elementor-button:hover, .elementor-399 .elementor-element.elementor-element-f01f5f2 .elementor-button:focus{background-color:var( --e-global-color-secondary );color:var( --e-global-color-5c72353 );}.elementor-399 .elementor-element.elementor-element-f01f5f2{width:var( --container-widget-width, 100% );max-width:100%;--container-widget-width:100%;--container-widget-flex-grow:0;}.elementor-399 .elementor-element.elementor-element-f01f5f2 > .elementor-widget-container{padding:0px 0px 0px 0px;}.elementor-399 .elementor-element.elementor-element-f01f5f2.elementor-element{--align-self:center;--flex-grow:0;--flex-shrink:0;}.elementor-399 .elementor-element.elementor-element-f01f5f2 .elementor-button:hover svg, .elementor-399 .elementor-element.elementor-element-f01f5f2 .elementor-button:focus svg{fill:var( --e-global-color-5c72353 );}@media(min-width:768px){.elementor-399 .elementor-element.elementor-element-1bef7fe{--width:100%;}}@media(max-width:767px){.elementor-399 .elementor-element.elementor-element-34830a5{--min-height:0px;--justify-content:center;--align-items:center;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-399 .elementor-element.elementor-element-1bef7fe{--width:280px;--min-height:450px;}.elementor-399 .elementor-element.elementor-element-f01f5f2 .elementor-button{font-size:14px;letter-spacing:0.84px;}}/* Start custom CSS for container, class: .elementor-element-1bef7fe */@media only screen and (max-width: 767px) {
+    .elementor-399 .elementor-element.elementor-element-1bef7fe:before {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.00) 100%) !important;
+    }
+}/* End custom CSS */
+/* Start custom CSS for container, class: .elementor-element-34830a5 */.slider-button {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: .5s;
+}
+
+.slider-name {
+    transform: translateY(50px);
+    transition: .3s;
+}
+
+.slider-box:hover .slider-button {
+    opacity: 1;
+     transform: translateY(0);
+    
+}
+
+.slider-box:hover 
+.slider-name {
+     transform: translateY(0);
+    
+}/* End custom CSS */		
+			
+		
+				
+				
+			College Admissions		
+				
+				
+				
+					
+			
+						
+									View service
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-29174 .elementor-element.elementor-element-1bef7fe:not(.elementor-motion-effects-element-type-background), .e-loop-item-29174 .elementor-element.elementor-element-1bef7fe > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-a2ad2fd1-85f4-46ba-9aae-418d965b2004);}		
+			
+		
+				
+				
+			Graduate School Admissions		
+				
+				
+				
+					
+			
+						
+									View service
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-29173 .elementor-element.elementor-element-1bef7fe:not(.elementor-motion-effects-element-type-background), .e-loop-item-29173 .elementor-element.elementor-element-1bef7fe > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-17b47934-31d2-42df-a7a5-f18beba70f11);}		
+			
+		
+				
+				
+			Business School Admissions		
+				
+				
+				
+					
+			
+						
+									View service
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-28657 .elementor-element.elementor-element-1bef7fe:not(.elementor-motion-effects-element-type-background), .e-loop-item-28657 .elementor-element.elementor-element-1bef7fe > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-464b9c20-819e-41ac-ae8c-bebf4ba9bf54);}		
+			
+		
+				
+				
+			Law School Admissions		
+				
+				
+				
+					
+			
+						
+									View service
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-28656 .elementor-element.elementor-element-1bef7fe:not(.elementor-motion-effects-element-type-background), .e-loop-item-28656 .elementor-element.elementor-element-1bef7fe > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-9efb1323-b92b-4e2b-98e6-eecfa917d0e7);}		
+			
+		
+				
+				
+			Medical School Admissions		
+				
+				
+				
+					
+			
+						
+									View service
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-397 .elementor-element.elementor-element-1bef7fe:not(.elementor-motion-effects-element-type-background), .e-loop-item-397 .elementor-element.elementor-element-1bef7fe > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-a56f28fc-fc71-425b-abe1-05874e7b25e2);}		
+			
+		
+				
+				
+			Career Counseling		
+				
+				
+				
+					
+			
+						
+									View service
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-396 .elementor-element.elementor-element-1bef7fe:not(.elementor-motion-effects-element-type-background), .e-loop-item-396 .elementor-element.elementor-element-1bef7fe > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-54879e01-3e42-470c-bc8a-16a4b57a6c45);}		
+			
+		
+				
+				
+			Test Prep		
+				
+				
+				
+					
+			
+						
+									View service
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-395 .elementor-element.elementor-element-1bef7fe:not(.elementor-motion-effects-element-type-background), .e-loop-item-395 .elementor-element.elementor-element-1bef7fe > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-3056a033-c384-4cb9-be28-bffa72533228);}		
+			
+		
+				
+				
+			Subject Tutoring		
+				
+				
+				
+					
+			
+						
+									View service
+					
+					
+		
+				
+				
+				
+				
+				
+		.e-loop-item-394 .elementor-element.elementor-element-1bef7fe:not(.elementor-motion-effects-element-type-background), .e-loop-item-394 .elementor-element.elementor-element-1bef7fe > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-d51163e1-a6b0-4c89-87f6-fe27aad72b96);}		
+			
+		
+				
+				
+			Academic Mentorships		
+				
+				
+				
+					
+			
+						
+									View service
+					
+					
+		
+				
+				
+				
+				
+				
+				
+		
+					
+							
+			
+							
+					
+				
+				
+					
+				
+		
+					
+		
+		
+				
+				
+														
+							<img fetchpriority="high" decoding="async" width="300" height="300" src="https://ingeniusprep.com/wp-content/uploads/2024/09/natalia.jpg" class="attachment-medium size-medium wp-image-30173" alt="natalia" srcset="https://ingeniusprep.com/wp-content/uploads/2024/09/natalia.jpg 300w, https://ingeniusprep.com/wp-content/uploads/2024/09/natalia-150x150.jpg 150w" sizes="(max-width: 300px) 100vw, 300px" />								
+													
+				
+				
+				
+														
+							<img loading="lazy" decoding="async" width="540" height="540" src="https://ingeniusprep.com/wp-content/uploads/2024/11/test-3-enhanced.jpg" class="attachment-large size-large wp-image-36735" alt="Bruno Villegas" srcset="https://ingeniusprep.com/wp-content/uploads/2024/11/test-3-enhanced.jpg 540w, https://ingeniusprep.com/wp-content/uploads/2024/11/test-3-enhanced-300x300.jpg 300w, https://ingeniusprep.com/wp-content/uploads/2024/11/test-3-enhanced-150x150.jpg 150w, https://ingeniusprep.com/wp-content/uploads/2024/11/test-3-enhanced-400x400.jpg 400w" sizes="(max-width: 540px) 100vw, 540px" />								
+													
+				
+				
+		
+				
+				
+														
+							<img loading="lazy" decoding="async" width="300" height="300" src="https://ingeniusprep.com/wp-content/uploads/2024/09/Nick-Strohl.jpg" class="attachment-medium size-medium wp-image-30161" alt="Nick-Strohl" srcset="https://ingeniusprep.com/wp-content/uploads/2024/09/Nick-Strohl.jpg 300w, https://ingeniusprep.com/wp-content/uploads/2024/09/Nick-Strohl-150x150.jpg 150w" sizes="(max-width: 300px) 100vw, 300px" />								
+													
+				
+				
+				
+														
+							<img loading="lazy" decoding="async" width="300" height="300" src="https://ingeniusprep.com/wp-content/uploads/2024/11/test-2_enhanced.png" class="attachment-large size-large wp-image-36731" alt="Wesley Mills" srcset="https://ingeniusprep.com/wp-content/uploads/2024/11/test-2_enhanced.png 300w, https://ingeniusprep.com/wp-content/uploads/2024/11/test-2_enhanced-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px" />								
+													
+				
+				
+				
+														
+							<img loading="lazy" decoding="async" width="300" height="300" src="https://ingeniusprep.com/wp-content/uploads/2024/11/test_enhanced.png" class="attachment-full size-full wp-image-36727" alt="Zak Harris" srcset="https://ingeniusprep.com/wp-content/uploads/2024/11/test_enhanced.png 300w, https://ingeniusprep.com/wp-content/uploads/2024/11/test_enhanced-150x150.png 150w" sizes="(max-width: 300px) 100vw, 300px" />								
+													
+				
+				
+		
+				
+				
+														
+							<img loading="lazy" decoding="async" width="450" height="450" src="https://ingeniusprep.com/wp-content/uploads/2024/09/Marianna-Irizarry.jpeg" class="attachment-large size-large wp-image-30167" alt="Marianna-Irizarry" srcset="https://ingeniusprep.com/wp-content/uploads/2024/09/Marianna-Irizarry.jpeg 450w, https://ingeniusprep.com/wp-content/uploads/2024/09/Marianna-Irizarry-300x300.jpeg 300w, https://ingeniusprep.com/wp-content/uploads/2024/09/Marianna-Irizarry-150x150.jpeg 150w" sizes="(max-width: 450px) 100vw, 450px" />								
+													
+				
+				
+				
+														
+							<img loading="lazy" decoding="async" width="300" height="300" src="https://ingeniusprep.com/wp-content/uploads/2024/11/Heather-McCutchen-300x300-1.jpeg" class="attachment-large size-large wp-image-36504" alt="" srcset="https://ingeniusprep.com/wp-content/uploads/2024/11/Heather-McCutchen-300x300-1.jpeg 300w, https://ingeniusprep.com/wp-content/uploads/2024/11/Heather-McCutchen-300x300-1-150x150.jpeg 150w" sizes="(max-width: 300px) 100vw, 300px" />								
+													
+				
+		
+		
+				
+				
+			300+		
+				
+				
+				
+							Counselors						
+				
+				
+				
+				
+				
+		
+				
+				
+			Our 150+ Former Admissions Officers Make The Best College Admissions Consultants		
+				
+				
+				
+							At InGenius Prep, we have a global team of 150+ Former Admissions Officers and Graduate Coaches with over 1000+ years of combined experience from U.S. top 30 schools. We don’t just help your student get into top schools. We help them build a legacy of their own.						
+				
+				
+				
+							We’re proud to be officially recognized as the country’s Top College Admissions Consultants over dozens of other options. With the largest admissions team in the world, the collective knowledge of our Former Admissions Officers and Graduate Coaches offers school-specific insights. Our expertise maximizes your student’s admissions chances.						
+				
+				
+				
+					
+			
+						
+									EXPLORE OUR COUNSELORS
+					
+					
+		
+				
+				
+				
+		
+		
+				
+				
+													<img loading="lazy" decoding="async" width="163" height="44" src="https://ingeniusprep.com/wp-content/uploads/2024/08/princeton-university.png" class="attachment-large size-large wp-image-1490" alt="princeton-university" />													
+				
+				
+				
+													<img loading="lazy" decoding="async" width="164" height="43" src="https://ingeniusprep.com/wp-content/uploads/2024/08/harvard.png" class="attachment-large size-large wp-image-1489" alt="" />													
+				
+				
+				
+													<img loading="lazy" decoding="async" width="98" height="42" src="https://ingeniusprep.com/wp-content/uploads/2024/08/yale.png" class="attachment-large size-large wp-image-1488" alt="" />													
+				
+				
+				
+													<img loading="lazy" decoding="async" width="162" height="53" src="https://ingeniusprep.com/wp-content/uploads/2024/08/stanford.png" class="attachment-large size-large wp-image-1487" alt="" />													
+				
+				
+				
+													<img loading="lazy" decoding="async" width="163" height="91" src="https://ingeniusprep.com/wp-content/uploads/2024/08/massachusetts.png" class="attachment-large size-large wp-image-1486" alt="" />													
+				
+				
+				
+													<img loading="lazy" decoding="async" width="163" height="109" src="https://ingeniusprep.com/wp-content/uploads/2024/08/penn.png" class="attachment-large size-large wp-image-1485" alt="" />													
+				
+				
+				
+													<img loading="lazy" decoding="async" width="150" height="37" src="https://ingeniusprep.com/wp-content/uploads/2024/08/berkeley.png" class="attachment-large size-large wp-image-1484" alt="" />													
+				
+				
+				
+													<img loading="lazy" decoding="async" width="150" height="63" src="https://ingeniusprep.com/wp-content/uploads/2024/08/nyu.png" class="attachment-large size-large wp-image-1483" alt="" />													
+				
+				
+				
+													<img loading="lazy" decoding="async" width="150" height="51" src="https://ingeniusprep.com/wp-content/uploads/2024/08/amherst.png" class="attachment-large size-large wp-image-1482" alt="" />													
+				
+				
+				
+													<img loading="lazy" decoding="async" width="200" height="100" src="https://ingeniusprep.com/wp-content/uploads/2024/08/hopkins.png" class="attachment-large size-large wp-image-1481" alt="" />													
+				
+				
+				
+					
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+		
+					
+				
+				
+			as seen in		
+				
+					
+				
+				
+		
+					
+		
+				
+				
+														
+							<img loading="lazy" decoding="async" width="138" height="36" src="https://ingeniusprep.com/wp-content/uploads/2024/08/forbes.png" class="attachment-large size-large wp-image-1495" alt="forbes" />								
+													
+				
+				
+				
+													<img loading="lazy" decoding="async" width="46" height="36" src="https://ingeniusprep.com/wp-content/uploads/2024/08/us.png" class="attachment-large size-large wp-image-1494" alt="" />													
+				
+				
+				
+													<img loading="lazy" decoding="async" width="184" height="36" src="https://ingeniusprep.com/wp-content/uploads/2024/08/entrepreneur.png" class="attachment-large size-large wp-image-1493" alt="" />													
+				
+				
+				
+													<img loading="lazy" decoding="async" width="105" height="36" src="https://ingeniusprep.com/wp-content/uploads/2024/08/inc.png" class="attachment-large size-large wp-image-1492" alt="" />													
+				
+				
+				
+													<img loading="lazy" decoding="async" width="116" height="36" src="https://ingeniusprep.com/wp-content/uploads/2024/08/business.png" class="attachment-large size-large wp-image-1491" alt="" />													
+				
+				
+					
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+		
+					
+				
+				
+			InGenius Prep in the Press		
+				
+					
+				
+				
+		
+					
+		
+				
+				
+							Achieve College Admission to Top Schools & Universities						
+				
+				
+		
+				
+				
+							From wherever you are to wherever you want to be, we’re here to help students achieve their goals. Our consultants are highly experienced and can help you perfect the admissions process for private high school, four-year college, graduate school, and, eventually, the job market. 						
+				
+				
+				
+							We provide a comprehensive service, guiding students from the early stages of their academic development through successful transitions to college and beyond. No matter what age, stage, ability, or interest, we have the team and resources to support your student every step of the way. 						
+				
+				
+				
+							By completing our elite level programs, our prospective students increase their chances of admissions success and gain highly valuable skills that will last a lifetime.						
+				
+				
+		
+		
+		
+		
+		
+				
+				
+				
+				
+			COLLEGE		
+				
+				
+		
+		
+		
+				
+				
+				
+				
+			Business School		
+				
+				
+		
+		
+		
+				
+				
+				
+				
+			Career Counseling		
+				
+				
+		
+		
+		
+				
+				
+				
+				
+			Medical School		
+				
+				
+		
+		
+		
+				
+				
+				
+				
+			Graduate School		
+				
+				
+		
+		
+		
+				
+				
+				
+				
+			UK Schools		
+				
+				
+		
+		
+		
+				
+				
+				
+				
+			LAW SCHOOL		
+				
+				
+		
+		
+		
+				
+				
+				
+				
+			Private High Schools		
+				
+				
+		
+		
+		
+				
+				
+				
+				
+			PhD Programs		
+				
+				
+				
+				
+				
+				
+					
+			
+						
+		
+				
+				
+					
+				
+		
+					
+		
+				
+				
+			The InGenius Prep Consulting Approach		
+				
+				
+				
+			Here’s how to get started with our admissions consultants today.		
+				
+				
+		
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+			FREE INITIAL CONSULTATION		
+				
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+			Match With Your Counseling Team		
+				
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+			Develop Your Competitive Profile		
+				
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+			Craft Your Application 		
+				
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+			Earn Your Seat At Top Schools		
+				
+				
+				
+		
+				
+				
+					
+				
+		.elementor-505 .elementor-element.elementor-element-e7ec776{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--background-transition:0.3s;--padding-top:100px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-505 .elementor-element.elementor-element-35784b3{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--background-transition:0.3s;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-505 .elementor-element.elementor-element-682c266{--display:flex;--min-height:500px;--background-transition:0.3s;--padding-top:86px;--padding-bottom:72px;--padding-left:61px;--padding-right:53px;}.elementor-505 .elementor-element.elementor-element-682c266:not(.elementor-motion-effects-element-type-background), .elementor-505 .elementor-element.elementor-element-682c266 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#95B3D7;}.elementor-505 .elementor-element.elementor-element-682c266, .elementor-505 .elementor-element.elementor-element-682c266::before{--border-transition:0.3s;}.elementor-505 .elementor-element.elementor-element-682c266.e-con{--align-self:center;}.elementor-505 .elementor-element.elementor-element-2d284c5 > .elementor-widget-container{margin:0px 0px 16px 0px;}.elementor-505 .elementor-element.elementor-element-2d284c5{text-align:left;}.elementor-505 .elementor-element.elementor-element-2d284c5 .elementor-heading-title{color:var( --e-global-color-5c72353 );font-family:"Poppins", Sans-serif;font-size:24px;font-weight:500;}.elementor-505 .elementor-element.elementor-element-0575c68 > .elementor-widget-container{margin:0px 0px 38px 0px;}.elementor-505 .elementor-element.elementor-element-0575c68{color:var( --e-global-color-5c72353 );font-family:"Lato", Sans-serif;font-size:16px;font-weight:400;line-height:1.5em;}.elementor-505 .elementor-element.elementor-element-1e494a6 .elementor-button{background-color:var( --e-global-color-5c72353 );font-family:"Poppins", Sans-serif;font-size:16px;font-weight:500;text-transform:uppercase;letter-spacing:0.96px;fill:var( --e-global-color-secondary );color:var( --e-global-color-secondary );padding:23px 28px 23px 28px;}.elementor-505 .elementor-element.elementor-element-1e494a6 .elementor-button:hover, .elementor-505 .elementor-element.elementor-element-1e494a6 .elementor-button:focus{background-color:var( --e-global-color-secondary );color:var( --e-global-color-5c72353 );}.elementor-505 .elementor-element.elementor-element-1e494a6 > .elementor-widget-container{margin:0 0 0 0;}.elementor-505 .elementor-element.elementor-element-1e494a6 .elementor-button:hover svg, .elementor-505 .elementor-element.elementor-element-1e494a6 .elementor-button:focus svg{fill:var( --e-global-color-5c72353 );}.elementor-505 .elementor-element.elementor-element-f240afd{--display:flex;--position:absolute;--min-height:65px;--justify-content:center;--background-transition:0.3s;top:0px;}.elementor-505 .elementor-element.elementor-element-f240afd:not(.elementor-motion-effects-element-type-background), .elementor-505 .elementor-element.elementor-element-f240afd > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:var( --e-global-color-5c72353 );}.elementor-505 .elementor-element.elementor-element-f240afd, .elementor-505 .elementor-element.elementor-element-f240afd::before{--border-transition:0.3s;}body:not(.rtl) .elementor-505 .elementor-element.elementor-element-f240afd{left:0px;}body.rtl .elementor-505 .elementor-element.elementor-element-f240afd{right:0px;}.elementor-505 .elementor-element.elementor-element-1a3e1de{text-align:center;}.elementor-505 .elementor-element.elementor-element-1a3e1de .elementor-heading-title{color:var( --e-global-color-secondary );font-family:"Poppins", Sans-serif;font-size:24px;font-weight:600;}@media(max-width:767px){.elementor-505 .elementor-element.elementor-element-e7ec776{--padding-top:0px;--padding-bottom:50px;--padding-left:0px;--padding-right:0px;}.elementor-505 .elementor-element.elementor-element-682c266{--width:100%;--min-height:500px;--gap:0px 0px;--padding-top:100px;--padding-bottom:25px;--padding-left:15px;--padding-right:15px;}.elementor-505 .elementor-element.elementor-element-2d284c5 > .elementor-widget-container{margin:0px 0px 10px 0px;}.elementor-505 .elementor-element.elementor-element-2d284c5 .elementor-heading-title{font-size:23px;}.elementor-505 .elementor-element.elementor-element-0575c68{font-size:14px;}.elementor-505 .elementor-element.elementor-element-1e494a6{width:100%;max-width:100%;}.elementor-505 .elementor-element.elementor-element-1e494a6 > .elementor-widget-container{margin:0 0 0 0;}.elementor-505 .elementor-element.elementor-element-1e494a6.elementor-element{--align-self:flex-end;}.elementor-505 .elementor-element.elementor-element-1e494a6 .elementor-button{font-size:13px;letter-spacing:0.84px;padding:20px 05px 20px 05px;}.elementor-505 .elementor-element.elementor-element-f240afd{--width:65px;top:25px;}body:not(.rtl) .elementor-505 .elementor-element.elementor-element-f240afd{left:15px;}body.rtl .elementor-505 .elementor-element.elementor-element-f240afd{right:15px;}}@media(min-width:768px){.elementor-505 .elementor-element.elementor-element-35784b3{--width:690px;}.elementor-505 .elementor-element.elementor-element-682c266{--width:580px;}.elementor-505 .elementor-element.elementor-element-f240afd{--width:65px;}}@media(max-width:1024px) and (min-width:768px){.elementor-505 .elementor-element.elementor-element-35784b3{--width:100%;}.elementor-505 .elementor-element.elementor-element-682c266{--width:90%;}}/* Start custom CSS for container, class: .elementor-element-682c266 */@media (max-width: 767px) {
+    .elementor-505 .elementor-element.elementor-element-682c266 .elementor-widget-button {
+        margin-top: auto;
+    }
+}
+
+.elementor-505 .elementor-element.elementor-element-682c266 {
+    cursor: pointer;
+}/* End custom CSS */		
+			
+					
+		
+		
+				
+				
+			Free initial consultation		
+				
+				
+				
+							Schedule a free consultation to share more about your student’s backgrounds, goals, and needs and learn more about the InGenius Prep approach. During this consultation, you will get feedback on your child’s candidacy, and access to relevant case studies, internal resources, and pricing. We work with US-based and international students wishing to secure top school enrollment.
+						
+				
+				
+				
+					
+			
+						
+									SCHEDULE A FREE CONSULTATION
+					
+					
+		
+				
+				
+		
+				
+				
+			01		
+				
+				
+				
+				
+					
+				
+				
+				
+			
+					
+		
+		
+				
+				
+			Match With Your Counseling Team		
+				
+				
+				
+							
+Students are assigned a Former Admissions Officer and Graduate Coach trained in our curriculum and managed by our education team. Your target schools, interests, and personality are central to the pairing process. From there, we do everything through video chat, phone, and email. No matter where you are, we are always one click away.
+ 
+Together, we’ll cover:
+ 
+
+
+
+Extracurricular enhancement
+Academic planning and support
+Interest and major exploration
+Personality type and skill-building
+Summer planning
+Standardized test prep and subject tutoring
+Application Persona development
+Your college list
+Academic and reflective essay writing
+Student needs
+And more
+
+
+
+
+
+						
+				
+				
+				
+					
+			
+						
+									SCHEDULE A FREE CONSULTATION
+					
+					
+		
+				
+				
+		
+				
+				
+			02		
+				
+				
+				
+				
+					
+				
+				
+				
+			
+					
+		
+		
+				
+				
+			Develop Your Competitive Profile		
+				
+				
+				
+							Throughout the counseling process, we’ll help your student develop academic interests, engage in unique extracurricular activities, build a school list, plan summers, develop leadership skills, and stand out from the competition.
+						
+				
+				
+				
+					
+			
+						
+									SCHEDULE A FREE CONSULTATION
+					
+					
+		
+				
+				
+		
+				
+				
+			03		
+				
+				
+				
+				
+					
+				
+				
+				
+			
+					
+		
+		
+				
+				
+			Craft Your Application 		
+				
+				
+				
+							The application is where we will bridge the gap between who you are and how admissions officers will evaluate your application. More than just highlighting good grades, we’ll help students share their stories to make a genuine connection.
+						
+				
+				
+				
+					
+			
+						
+									SCHEDULE A FREE CONSULTATION
+					
+					
+		
+				
+				
+		
+				
+				
+			04		
+				
+				
+				
+				
+					
+				
+				
+				
+			
+					
+		
+		
+				
+				
+			Earn Your Seat At Top Schools		
+				
+				
+				
+							InGenius Prep students are 3x more likely to get into the top 10 schools, 7x more likely to get into top 30 schools, 99% likely to get accepted, and 77% of our students enrolled in their reach schools. Your student’s legacy starts here. And it can start today.
+						
+				
+				
+				
+					
+			
+						
+									SCHEDULE A FREE CONSULTATION
+					
+					
+		
+				
+				
+		
+				
+				
+			05		
+				
+				
+				
+				
+					
+				
+				
+				
+		
+					
+							
+			
+							
+					
+				
+				
+				
+				
+			window.addEventListener('DOMContentLoaded', function() {
+
+jQuery($ => {
+    $(document).ready(() => {
+
+        const mySlides = document.querySelector('.custom-slider');
+        const $itemsContainer = $('.items-container');
+        
+        $('.title').on('click', function() {
+            var slideIndex = $(this).attr('customindex');
+            
+            console.log(slideIndex);
+            
+            $(".custom-slider .swiper-pagination-bullet[data-bullet-index="+ slideIndex +"]").click();
+
+        });
+        
+        $itemsContainer.on('click', '.title', function() {
+         const customIndex = $(this).attr('customIndex'); 
+         console.log('Clicked item custom index:', customIndex);
+
+         });
+        
+        //
+
+
+        mySlides.addEventListener('transitionend', () => {
+            
+            const activeSlide = mySlides.querySelector('.swiper-slide-active');
+            const slideIndex = activeSlide.dataset.swiperSlideIndex;
+
+            // Reset scale for all items
+            $itemsContainer.find('.item').css('transform', 'scale(1)');
+            
+             $itemsContainer.find('.title .elementor-heading-title').css('color', '#fff');
+
+            // Apply scale to the active item
+            switch (slideIndex) {
+                case '0':
+                    $itemsContainer.find('.item-1').css('transform', 'scale(2)');
+                    $itemsContainer.find('.title-1 .elementor-heading-title').css('color', '#95B3D7');
+                    break;
+                case '1':
+                    $itemsContainer.find('.item-2').css('transform', 'scale(2)');
+                     $itemsContainer.find('.title-2 .elementor-heading-title').css('color', '#95B3D7');
+                    break;
+                case '2':
+                    $itemsContainer.find('.item-3').css('transform', 'scale(2)');
+                     $itemsContainer.find('.title-3 .elementor-heading-title').css('color', '#95B3D7');
+                    break;
+                case '3':
+                    $itemsContainer.find('.item-4').css('transform', 'scale(2)');
+                     $itemsContainer.find('.title-4 .elementor-heading-title').css('color', '#95B3D7');
+                    break;
+                case '4':
+                    $itemsContainer.find('.item-5').css('transform', 'scale(2)');
+                     $itemsContainer.find('.title-5 .elementor-heading-title').css('color', '#95B3D7');
+                    break;
+                default:
+
+                    break;
+            }
+        });
+    });
+});
+
+
+});		
+				
+				
+					
+				
+		
+					
+				
+				
+							Our Winning System: The InGenius Prep Process for Gaining College Admissions to Top Schools						
+				
+				
+				
+							Gaining access to your student’s target schools or reach schools requires more than excellent test scores and a strong GPA. It requires a strategic and holistic approach to developing a desirable student brand from an early age and later perfecting the application.						
+				
+					
+				
+		
+					
+		
+				
+				
+					
+
+						
+				
+								
+			
+			
+						
+
+									
+						
+							Intellectual Curiosity and Academic Performance						
+					
+				
+				
+			
+			
+		
+				
+				
+				
+				
+							We aim for our students to demonstrate intellectual curiosity and strong academic track records. Our students develop the right skill sets so that they rise to the challenge when many other students don’t.						
+				
+				
+		
+				
+				
+					
+
+						
+				
+								
+			
+			
+						
+
+									
+						
+							Extracurricular Focus and Enrichment						
+					
+				
+				
+			
+			
+		
+				
+				
+				
+				
+							We create unique opportunities for our students’ extracurricular enrichment as they explore interests that may become life-long passions, impressive achievements, and professional careers.						
+				
+				
+		
+				
+				
+					
+
+						
+				
+								
+			
+			
+						
+
+									
+						
+							Leadership and Personal Growth   						
+					
+				
+				
+			
+			
+		
+				
+				
+				
+				
+							We emphasize more than just admissions results in our approach; we emphasize personal growth, a pursuit of excellence, integrity, and social responsibility. Our students grow as learners and leaders who will make positive impacts on their future college campuses and beyond.						
+				
+				
+		
+				
+				
+					
+
+						
+				
+								
+			
+			
+						
+
+									
+						
+							Selective University Admissions 						
+					
+				
+				
+			
+			
+		
+				
+				
+				
+				
+							We strategically align our students’ personal, academic, and extracurricular pursuits with the demands of the “holistic” college admissions process. Our students outperform the competition and are 7x more likely to get into top 10 schools.						
+				
+				
+		
+				
+				
+					
+
+						
+				
+								
+			
+			
+						
+
+									
+						
+							Top Tier Service with Discretion						
+					
+				
+				
+			
+			
+		
+				
+				
+				
+				
+							We appreciate that education begins and ends with family, and design our service accordingly. Our service is geared towards high-achieving families who want access to the best possible resources, with discretion.						
+				
+				
+				
+				
+					
+			
+						
+									Learn More About Our Process
+					
+					
+		
+				
+				
+					
+				
+		
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+							Rated 4.4 / 5 based on 112 reviews.						
+				
+				
+				
+							Student Success Stories						
+				
+				
+				
+							We’re proud to have served 6,000+ families like yours over the past 10 years.						
+				
+				
+		
+				
+				
+					
+				
+		.elementor-266 .elementor-element.elementor-element-477eb08{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--gap:0px 0px;--background-transition:0.3s;--border-radius:10px 10px 10px 10px;--margin-top:0px;--margin-bottom:0px;--margin-left:0px;--margin-right:0px;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-266 .elementor-element.elementor-element-fbecbe7{--display:flex;--gap:0px 0px;--background-transition:0.3s;border-style:solid;--border-style:solid;border-width:2px 2px 2px 2px;--border-top-width:2px;--border-right-width:2px;--border-bottom-width:2px;--border-left-width:2px;border-color:#B6B6B687;--border-color:#B6B6B687;--border-radius:10px 10px 10px 10px;--padding-top:40px;--padding-bottom:40px;--padding-left:40px;--padding-right:40px;}.elementor-266 .elementor-element.elementor-element-fbecbe7, .elementor-266 .elementor-element.elementor-element-fbecbe7::before{--border-transition:0.3s;}.elementor-266 .elementor-element.elementor-element-9bf6308 > .elementor-widget-container{margin:0px 0px 23px 0px;}.elementor-266 .elementor-element.elementor-element-9bf6308{--e-rating-icon-font-size:18px;--e-rating-gap:3px;--e-rating-icon-marked-color:var( --e-global-color-primary );}.elementor-266 .elementor-element.elementor-element-31f1122{width:var( --container-widget-width, 270px );max-width:270px;--container-widget-width:270px;--container-widget-flex-grow:0;color:var( --e-global-color-5c72353 );font-family:"Lato", Sans-serif;font-size:16px;font-weight:400;line-height:1.5em;}.elementor-266 .elementor-element.elementor-element-31f1122 > .elementor-widget-container{margin:0px 0px 0px 0px;}.elementor-266 .elementor-element.elementor-element-69ce3e4{--display:flex;--flex-direction:row;--container-widget-width:initial;--container-widget-height:100%;--container-widget-flex-grow:1;--container-widget-align-self:stretch;--flex-wrap-mobile:wrap;--gap:0px 0px;--background-transition:0.3s;--margin-top:50px;--margin-bottom:0px;--margin-left:0px;--margin-right:0px;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-266 .elementor-element.elementor-element-69ce3e4.e-con{--align-self:center;}.elementor-266 .elementor-element.elementor-element-a07aea9{--display:flex;--align-items:flex-start;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--background-transition:0.3s;--margin-top:0px;--margin-bottom:0px;--margin-left:0px;--margin-right:0px;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-266 .elementor-element.elementor-element-a07aea9.e-con{--align-self:center;--flex-grow:0;--flex-shrink:0;}.elementor-266 .elementor-element.elementor-element-a303243.elementor-element{--align-self:flex-start;}.elementor-266 .elementor-element.elementor-element-a303243{text-align:center;}.elementor-266 .elementor-element.elementor-element-a303243 img{width:60px;border-style:solid;border-width:0px 0px 0px 0px;border-radius:50% 50% 50% 50%;}.elementor-266 .elementor-element.elementor-element-fc925d6{--display:flex;--background-transition:0.3s;--margin-top:0px;--margin-bottom:0px;--margin-left:0px;--margin-right:0px;--padding-top:5px;--padding-bottom:5px;--padding-left:5px;--padding-right:5px;}.elementor-266 .elementor-element.elementor-element-7fbfe80 > .elementor-widget-container{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;}.elementor-266 .elementor-element.elementor-element-7fbfe80 .elementor-heading-title{color:var( --e-global-color-5c72353 );}.elementor-266 .elementor-element.elementor-element-8abaea1 > .elementor-widget-container{margin:0px 0px 5px 0px;}.elementor-266 .elementor-element.elementor-element-8abaea1 .elementor-heading-title{color:#B6B6B6;font-family:"Poppins", Sans-serif;font-size:14px;font-weight:500;}@media(max-width:1024px){.elementor-266 .elementor-element.elementor-element-fbecbe7{--padding-top:20px;--padding-bottom:20px;--padding-left:20px;--padding-right:20px;}}@media(max-width:767px){.elementor-266 .elementor-element.elementor-element-477eb08{--content-width:100%;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-266 .elementor-element.elementor-element-fbecbe7{--min-height:323px;--padding-top:20px;--padding-bottom:20px;--padding-left:20px;--padding-right:20px;}.elementor-266 .elementor-element.elementor-element-31f1122{font-size:14px;}.elementor-266 .elementor-element.elementor-element-69ce3e4{--flex-wrap:nowrap;--margin-top:10px;--margin-bottom:0px;--margin-left:0px;--margin-right:0px;}.elementor-266 .elementor-element.elementor-element-a07aea9{--width:68.112px;}}@media(min-width:768px){.elementor-266 .elementor-element.elementor-element-477eb08{--content-width:100%;}.elementor-266 .elementor-element.elementor-element-a07aea9{--width:25%;}}@media(max-width:1024px) and (min-width:768px){.elementor-266 .elementor-element.elementor-element-fbecbe7{--width:100%;}}/* Start custom CSS for text-editor, class: .elementor-element-31f1122 */.elementor-266 .elementor-element.elementor-element-31f1122 {
+    max-height: 190px;
+    min-height: 190px;
+    display: -webkit-box;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+@media (max-width: 767px) {
+    .elementor-266 .elementor-element.elementor-element-31f1122 {
+    -webkit-line-clamp: 9;
+}
+}/* End custom CSS */		
+			
+					
+		
+				
+				
+					
+			
+			
+			
+							
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+		
+				
+				
+				
+				
+							The counselors are professional, patient, and very supportive throughout the entire application process. They provided clear and detailed guidance on school selection and academic planning, and also provided professional writing course and academic program, which made everything much easier and less stressful. Thanks team!						
+				
+		
+		
+				
+				
+													<img loading="lazy" decoding="async" width="50" height="50" src="https://ingeniusprep.com/wp-content/uploads/2026/03/Untitled-design.png" class="attachment-large size-large wp-image-49593" alt="" />													
+				
+				
+		
+				
+				
+			Kathy		
+				
+				
+				
+				
+					
+				
+				
+				
+			
+					
+		
+				
+				
+					
+			
+			
+			
+							
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+		
+				
+				
+				
+				
+							My daughter and I were very happy with the advice my daughter received from her counselors. They met at regular weekly intervals and kept her on a tight schedule. They went through nearly 8 drafts for each of her essays until it sounded cohesive. They were able to construct a detailed application persona that I feel presented her strengths and goals clearly on her application. My daughter credits her counselors in helping her get into her top choice college.						
+				
+		
+		
+				
+				
+													<img loading="lazy" decoding="async" width="50" height="50" src="https://ingeniusprep.com/wp-content/uploads/2024/09/logo-review.png" class="attachment-large size-large wp-image-30146" alt="" />													
+				
+				
+		
+				
+				
+			Tony		
+				
+				
+				
+				
+					
+				
+				
+				
+			
+					
+		
+				
+				
+					
+			
+			
+			
+							
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+		
+				
+				
+				
+				
+							The team at Ingenius is very professional. We have an amazing FOA and graduate counselor. They are incredibly knowledgeable with amazing cheerful personalities. Our FOA has been a very supportive person throughout this whole process, her knowledge and guidance provide us a lot of insight into college application. Our graduate counselor is a very hardworking person, we always found her reviewing my son’s essay in the middle of the night. Her feedback is always constructive. Our enrollment and communication counselor is always on top of things and keeps us updated on everything we need periodically. We couldn’t have done it without them.						
+				
+		
+		
+				
+				
+													<img loading="lazy" decoding="async" width="50" height="50" src="https://ingeniusprep.com/wp-content/uploads/2024/09/logo-review.png" class="attachment-large size-large wp-image-30146" alt="" />													
+				
+				
+		
+				
+				
+			Anonymous		
+				
+				
+				
+				
+					
+				
+				
+				
+			
+					
+		
+				
+				
+					
+			
+			
+			
+							
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+		
+				
+				
+				
+				
+							I’ve known one of the founders of Ingenious Prep for many years. And while her accomplishments— personal, educational, and professional — are all incredible, I have been nervous about college counseling because of the price and efficacy. How much could it really move the needle? However, after a few conversations with potential counselors at Ingenious, all who were former admissions officers, I decided to give it a shot. I thought if anyone knew how to help ensure my daughter put her best foot forward to secure a spot at a top university, it would be someone who understood the process from the inside. The guidance my daughter received on developing a unique through-line and choosing which school to apply Early Decision to, coupled with the strict schedule she was kept on, resulted in a relatively stress-free experience and successful outcome. My only complaint is that there is no refund for services paid for but not used: we purchased a five application package, and my daughter got into the first school she applied to, so technically I have a credit for help on four other applications! I do have a rising Junior … who will use Ingenious regardless. STRONGLY RECOMMEND FOR TOP ACADEMIC UNIVERSITIES ESPECIALLY.						
+				
+		
+		
+				
+				
+													<img loading="lazy" decoding="async" width="73" height="73" src="https://ingeniusprep.com/wp-content/uploads/2024/10/ava-PJ-Gunsagar.png" class="attachment-large size-large wp-image-32285" alt="" />													
+				
+				
+		
+				
+				
+			PJ Gunsagar		
+				
+				
+				
+				
+					
+				
+				
+				
+			
+					
+		
+				
+				
+					
+			
+			
+			
+							
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+		
+				
+				
+				
+				
+							InGenius Prep has helped me so much in getting through the college app process! The FAOs and GCs are always supportive and provide valuable and timely feedback on every essay I write.						
+				
+		
+		
+				
+				
+													<img loading="lazy" decoding="async" width="73" height="73" src="https://ingeniusprep.com/wp-content/uploads/2024/10/ava-mih.png" class="attachment-large size-large wp-image-32280" alt="" />													
+				
+				
+		
+				
+				
+			Michael		
+				
+				
+				
+				
+					
+				
+				
+				
+			
+					
+		
+				
+				
+					
+			
+			
+			
+							
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+		
+				
+				
+				
+				
+							InGenius does a great job of joining the student’s thoughts with the perspective of an experienced college admissions officer. They gave constant feedback and suggestions, while making it not seem like a mere question-and-answer relationship but instead a collaboration. Ingenius felt like a family, which was exactly what I wanted.						
+				
+		
+		
+				
+				
+													<img loading="lazy" decoding="async" width="73" height="73" src="https://ingeniusprep.com/wp-content/uploads/2024/10/ava-sun.png" class="attachment-large size-large wp-image-32275" alt="" />													
+				
+				
+		
+				
+				
+			sunkrupt man		
+				
+				
+				
+				
+					
+				
+				
+				
+			
+					
+		
+				
+				
+					
+			
+			
+			
+							
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+		
+				
+				
+				
+				
+							I had a great experience with Ingenius prep!! My advisors were very caring, dedicated, helpful, and efficient. They were able to lead me in the right direction and give me a college application strategy. I found the writing help extremely helpful and they were able to give me tons of writing feedback and help me brainstorm essay ideas that captured my strengths. We were able to write many essays on a good timeline that eased my college application stress. My advisors were always very quick responding to emails and were always there if I had any last minute questions! Overall, I would highly recommend this program and I am confident that it helped highlight my strengths, making me a great candidate for many colleges!						
+				
+		
+		
+				
+				
+													<img loading="lazy" decoding="async" width="50" height="50" src="https://ingeniusprep.com/wp-content/uploads/2024/09/logo-review.png" class="attachment-large size-large wp-image-30146" alt="" />													
+				
+				
+		
+				
+				
+			AH		
+				
+				
+				
+				
+					
+				
+				
+				
+			
+					
+		
+				
+				
+					
+			
+			
+			
+							
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+		
+				
+				
+				
+				
+							We started working with Ingenius Prep when my son started 10th grade. He was paired with a Former Admissions Officer (FAO) and a graduate coach based on his personality and college/career goals. The FAO and graduate coach were very knowledgeable, personable, and able to connect with my son. Their insights, gained from working with so many students and their experience as former admissions officers, helped my son create a compelling application.						
+				
+		
+		
+				
+				
+													<img loading="lazy" decoding="async" width="50" height="50" src="https://ingeniusprep.com/wp-content/uploads/2024/09/logo-review.png" class="attachment-large size-large wp-image-30146" alt="" />													
+				
+				
+		
+				
+				
+			PRG		
+				
+				
+				
+				
+					
+				
+				
+				
+			
+					
+		
+				
+				
+					
+			
+			
+			
+							
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+		
+				
+				
+				
+				
+							I am very happy that I got in to my dream school Cornell and I couldn’t have done this without ingenius. I am so grateful for the candidacy building help and I gained so much more than the admission through the process. I am so glad that I had the opportunity to work with my team who were not only productive and efficient but also supportive. Special thanks to Nam and Amy who were so great at communicating and helping me throughout the process.						
+				
+		
+		
+				
+				
+													<img loading="lazy" decoding="async" width="50" height="50" src="https://ingeniusprep.com/wp-content/uploads/2024/09/logo-review.png" class="attachment-large size-large wp-image-30146" alt="" />													
+				
+				
+		
+				
+				
+			Isabella Guo		
+				
+				
+				
+				
+					
+				
+				
+				
+			
+					
+		
+				
+				
+					
+			
+			
+			
+							
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+				
+									
+				
+									
+			
+						
+		
+				
+				
+				
+				
+							As someone who had been starting late in the US Uni prep, InGenius has been providing me with valuable and pragmatic advices that guided me to finish all my US essays within a short period of time. I have achieved excellent results of receiving many US offers. This would not have happened without the help of my awesome counselors.						
+				
+		
+		
+				
+				
+													<img loading="lazy" decoding="async" width="50" height="50" src="https://ingeniusprep.com/wp-content/uploads/2024/09/logo-review.png" class="attachment-large size-large wp-image-30146" alt="" />													
+				
+				
+		
+				
+				
+			Tif		
+				
+				
+				
+				
+					
+				
+				
+				
+		
+					
+							
+			
+							
+				
+				
+				
+				
+		
+					
+		
+				
+				
+			What Does A College Admissions Consultant Do?		
+				
+				
+		
+				
+				
+							Gaining access to your student’s target schools or reach schools requires more than excellent test scores and a strong GPA. It requires a strategic and holistic approach to developing a desirable student brand from an early age and later perfecting the application.From building a unique extracurricular and intellectual profile to writing memorable college essays, the college search and application process requires strategic thinking and a unique approach. With expert guidance, your student will develop a competitive edge and position themselves for acceptance and success at their top-choice colleges.						
+				
+				
+		
+		
+				
+				
+			Candidacy Building		
+				
+				
+				
+			9-11th Grade		
+				
+				
+				
+							Craft your student profile to match the expectations of your reach schools. Start strategizing as early as 8th grade to build a profile that stands out from your peers. Our counselors will help you explore and develop your academic interests, engage in unique and meaningful extracurricular activities and athletics, strengthen your personal qualities and leadership skills, and ultimately, position you to get into the best school possible. Our most popular program, Candidacy Building, sets InGenius Prep students apart from other competitive applicants						
+				
+				
+				
+					
+			
+						
+		
+				
+				
+				
+		
+				
+				
+			Leadership and Innovation Lab		
+				
+				
+				
+							The InGenius Leadership & Innovation Lab (LIL)  is a selective opportunity for students to launch a business, organization, or platform with leadership and entrepreneurship experts. Students will graduate from the LIL as proven leaders and entrepreneurs, ready to make an impact on their communities.						
+				
+				
+				
+					
+			
+						
+		
+				
+				
+				
+		
+				
+				
+			Academic Mentorships		
+				
+				
+				
+							Through InGenius Prep’s Academic Mentorship program, students work with actual scholars and researchers from U.S. universities. These mentors—professors, associate professors, lecturers, and Ph.D. candidates who teach courses at their universities—design unique research projects and courses for our students. 						
+				
+				
+				
+					
+			
+						
+		
+				
+				
+				
+		
+				
+				
+			Subject Tutoring		
+				
+				
+				
+							Elevating your student’s depth and breadth of knowledge is necessary to become a desirable candidate for the Ivy League and the top 10-30 schools. From introductory to advanced coursework, working with tutors in the relevant subject matters will help our students improve their GPAs and confidently transition from high school to college. 						
+				
+				
+				
+					
+			
+						
+		
+				
+				
+				
+		
+				
+				
+			Test Prep		
+				
+				
+				
+							Whether you’re preparing for SATs, ACTs, or another exam, it’s vitally important to reach your maximum score potential through test prep. Our tutors will help you prepare for these crucial standardized tests.  						
+				
+				
+				
+					
+			
+						
+		
+				
+				
+				
+		
+				
+				
+			Soft Skills Courses		
+				
+				
+				
+							From communication and conflict resolution to time management and teamwork, soft skills and personality traits on a college application influence the overall impact of an application. Our training for soft skill development prepares students for real-life applications and enhances their college applications. 						
+				
+				
+				
+					
+			
+						
+		
+				
+				
+				
+		
+				
+				
+			Application Counseling		
+				
+				
+				
+			12th Grade		
+				
+				
+				
+							Test scores and GPAs are a drop in the bucket of what makes a truly perfected college application. From school lists and essay editing to interview prep and more, we’ll help you and your student outperform the competition in a complex application process. Your college admissions consultants — a Former Admissions Officer and Graduate Coach — will help craft and review every detail of your student’s application. We’ll provide specific and actionable feedback so you can take the next step in your education with confidence and support. 						
+				
+				
+				
+					
+			
+						
+		
+				
+				
+				
+		
+				
+				
+			Career Counseling (College+)		
+				
+				
+				
+							When college is over, it’s time to take that next step with confidence and assurance that you’re building a successful career. With a 95% satisfaction rate, our recruitment specialists are adept at helping students land sought-after internships and positions with industry-leading firms. 						
+				
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+		
+				
+				
+					
+			
+						
+									SCHEDULE A FREE CONSULTATION
+					
+					
+		
+				
+				
+				
+					
+				
+		
+					
+		
+					
+					
+				
+		
+				
+				
+							Admissions Consulting News						
+				
+				
+		
+				
+				
+					
+				
+				
+			<img loading="lazy" decoding="async" width="300" height="169" src="https://ingeniusprep.com/wp-content/uploads/2026/03/Blog-Featured-Image-300x169.png" class="attachment-medium size-medium wp-image-49610" alt="" srcset="https://ingeniusprep.com/wp-content/uploads/2026/03/Blog-Featured-Image-300x169.png 300w, https://ingeniusprep.com/wp-content/uploads/2026/03/Blog-Featured-Image-1024x576.png 1024w, https://ingeniusprep.com/wp-content/uploads/2026/03/Blog-Featured-Image-768x432.png 768w, https://ingeniusprep.com/wp-content/uploads/2026/03/Blog-Featured-Image-1536x864.png 1536w, https://ingeniusprep.com/wp-content/uploads/2026/03/Blog-Featured-Image.png 1920w" sizes="(max-width: 300px) 100vw, 300px" />
+		
+				
+				
+			
+				What College Rankings Actually Tell Us			
+		
+				
+					
+			March 4, 2026		
+				
+				
+				
+				
+				
+			<img loading="lazy" decoding="async" width="300" height="300" src="https://ingeniusprep.com/wp-content/uploads/2026/02/factors-that-affect-your-class-rank-300x300.jpg" class="attachment-medium size-medium wp-image-49524" alt="Class rank is a ranking that shows how you compare to other students in the same graduating cohort." srcset="https://ingeniusprep.com/wp-content/uploads/2026/02/factors-that-affect-your-class-rank-300x300.jpg 300w, https://ingeniusprep.com/wp-content/uploads/2026/02/factors-that-affect-your-class-rank-150x150.jpg 150w, https://ingeniusprep.com/wp-content/uploads/2026/02/factors-that-affect-your-class-rank.jpg 500w" sizes="(max-width: 300px) 100vw, 300px" />
+		
+				
+				
+			
+				Class Rank Reporting: How It Works, Why It Matters, and What to Do If Your School Doesn’t Rank			
+		
+				
+					
+			February 23, 2026		
+				
+				
+				
+				
+				
+			<img loading="lazy" decoding="async" width="300" height="300" src="https://ingeniusprep.com/wp-content/uploads/2026/02/SAT-Score-300x300.jpg" class="attachment-medium size-medium wp-image-49515" alt="Student aiming for a high SAT score" srcset="https://ingeniusprep.com/wp-content/uploads/2026/02/SAT-Score-300x300.jpg 300w, https://ingeniusprep.com/wp-content/uploads/2026/02/SAT-Score-150x150.jpg 150w, https://ingeniusprep.com/wp-content/uploads/2026/02/SAT-Score.jpg 500w" sizes="(max-width: 300px) 100vw, 300px" />
+		
+				
+				
+			
+				What’s the Best SAT Score?			
+		
+				
+					
+			February 16, 2026		
+				
+				
+				
+				
+		
+				
+				
+				
+				
+					
+			
+						
+									VIEW ALL POSTS
+					
+					
+		
+				
+				
+				
+					
+				
+		
+					
+				
+				
+					
+				
+		.e-loop-item-49609 .elementor-element.elementor-element-d7a2a91:not(.elementor-motion-effects-element-type-background), .e-loop-item-49609 .elementor-element.elementor-element-d7a2a91 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-473f2f67-d682-4dfd-814d-760fa166c046);}.elementor-192 .elementor-element.elementor-element-ce9c9d2{--display:flex;--flex-direction:column;--container-widget-width:100%;--container-widget-height:initial;--container-widget-flex-grow:0;--container-widget-align-self:initial;--flex-wrap-mobile:wrap;--background-transition:0.3s;--margin-top:0px;--margin-bottom:0px;--margin-left:0px;--margin-right:0px;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-192 .elementor-element.elementor-element-ce9c9d2.e-con{--flex-grow:0;--flex-shrink:0;}.elementor-192 .elementor-element.elementor-element-d7a2a91{--display:flex;--min-height:430px;--background-transition:0.3s;--margin-top:0px;--margin-bottom:0px;--margin-left:0px;--margin-right:0px;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-192 .elementor-element.elementor-element-d7a2a91:not(.elementor-motion-effects-element-type-background), .elementor-192 .elementor-element.elementor-element-d7a2a91 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-position:center center;background-repeat:no-repeat;background-size:cover;}.elementor-192 .elementor-element.elementor-element-d7a2a91, .elementor-192 .elementor-element.elementor-element-d7a2a91::before{--border-transition:0.3s;}.elementor-192 .elementor-element.elementor-element-df1a372{--display:flex;--gap:0px 0px;--background-transition:0.3s;--margin-top:0px;--margin-bottom:0px;--margin-left:0px;--margin-right:0px;--padding-top:0px;--padding-bottom:0px;--padding-left:0px;--padding-right:0px;}.elementor-192 .elementor-element.elementor-element-b907633 > .elementor-widget-container{margin:0px 0px 12px 0px;}.elementor-192 .elementor-element.elementor-element-b907633 .elementor-icon-list-icon{width:0px;}.elementor-192 .elementor-element.elementor-element-b907633 .elementor-icon-list-icon i{font-size:0px;}.elementor-192 .elementor-element.elementor-element-b907633 .elementor-icon-list-icon svg{--e-icon-list-icon-size:0px;}.elementor-192 .elementor-element.elementor-element-b907633 .elementor-icon-list-text, .elementor-192 .elementor-element.elementor-element-b907633 .elementor-icon-list-text a{color:#A6A6A6;}.elementor-192 .elementor-element.elementor-element-b907633 .elementor-icon-list-item{font-family:"Poppins", Sans-serif;font-size:14px;font-weight:500;line-height:1.5em;letter-spacing:0.84px;}.elementor-192 .elementor-element.elementor-element-b8dba47 .elementor-heading-title{color:var( --e-global-color-5c72353 );font-family:"Poppins", Sans-serif;font-size:21px;font-weight:500;line-height:1.45em;}@media(min-width:768px){.elementor-192 .elementor-element.elementor-element-ce9c9d2{--width:480px;}}/* Start custom CSS for theme-post-title, class: .elementor-element-b8dba47 */@media (any-hover: hover) {
+    
+    .elementor-192 .elementor-element.elementor-element-b8dba47 h3 {
+        transition: .3s;
+    }
+    .elementor-192 .elementor-element.elementor-element-b8dba47 h3:hover {
+        color: #077FE7;
+    }
+}/* End custom CSS */
+/* Start custom CSS for container, class: .elementor-element-ce9c9d2 */.elementor-192 .elementor-element.elementor-element-ce9c9d2 .elementor-icon-list-icon {
+    display: none;
+}/* End custom CSS */		
+			
+		
+				
+		
+				
+				
+					
+								
+										
+															
+									
+										March 4, 2026					
+								
+				
+				
+				
+				
+				
+			What College Rankings Actually Tell Us		
+				
+				
+				
+				
+		.e-loop-item-49489 .elementor-element.elementor-element-d7a2a91:not(.elementor-motion-effects-element-type-background), .e-loop-item-49489 .elementor-element.elementor-element-d7a2a91 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-5af32d62-811f-4bb8-a707-b5859e32b4b8);}		
+			
+		
+				
+		
+				
+				
+					
+								
+										
+															
+									
+										February 23, 2026					
+								
+				
+				
+				
+				
+				
+			Class Rank Reporting: How It Works, Why It Matters, and What to Do If Your School Doesn’t Rank		
+				
+				
+				
+				
+		.e-loop-item-49488 .elementor-element.elementor-element-d7a2a91:not(.elementor-motion-effects-element-type-background), .e-loop-item-49488 .elementor-element.elementor-element-d7a2a91 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-184ce240-c5af-40cc-a5f9-c6e11c5a5664);}		
+			
+		
+				
+		
+				
+				
+					
+								
+										
+															
+									
+										February 16, 2026					
+								
+				
+				
+				
+				
+				
+			What’s the Best SAT Score?		
+				
+				
+				
+				
+		.e-loop-item-49389 .elementor-element.elementor-element-d7a2a91:not(.elementor-motion-effects-element-type-background), .e-loop-item-49389 .elementor-element.elementor-element-d7a2a91 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-9d313886-87d8-4f15-8987-6b1b4ce8abdc);}		
+			
+		
+				
+		
+				
+				
+					
+								
+										
+															
+									
+										February 9, 2026					
+								
+				
+				
+				
+				
+				
+			AI-Generated SAT Practice Tests: What Works and What Does Not		
+				
+				
+				
+				
+		.e-loop-item-49487 .elementor-element.elementor-element-d7a2a91:not(.elementor-motion-effects-element-type-background), .e-loop-item-49487 .elementor-element.elementor-element-d7a2a91 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:var(--wpr-bg-0ac40ead-7b97-4900-a305-5e3452cf8a6e);}		
+			
+		
+				
+		
+				
+				
+					
+								
+										
+															
+									
+										February 9, 2026					
+								
+				
+				
+				
+				
+				
+			Best Degrees to Get: Trending Degrees and Career Options		
+				
+				
+				
+				
+				
+		
+				
+				
+					
+				
+		
+					
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+					
+				
+		
+					
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+			Perfect The College Application Process and Build A Legacy With InGenius Prep's College Admissions Consultants		
+				
+				
+				
+			Contact our expert team to learn how we can help your family start achieving your higher education goals today.		
+				
+				
+				
+					
+			
+						
+									SCHEDULE A FREE CONSULTATION
+					
+					
+		
+				
+				
+				
+				
+					
+			
+						
+		
+				
+				
+					
+				
+				
+				
+			
+					
+		
+				
+				
+			Our Service		
+				
+				
+				
+						
+				College Admissions Consulting
+Admissions Guidance
+Medical School Admissions Consulting
+Law School Admissions Consulting
+Graduate School Admissions Consulting
+Business School Admissions Consulting
+Career Counseling
+Private High School Admissions
+Subject Tutoring
+Test Prep
+Competition Prep
+UK Admissions
+Academic & Extracurricular Programs
+			
+						
+				College Admissions Consulting
+Admissions Guidance
+Medical School Admissions Consulting
+Law School Admissions Consulting
+Graduate School Admissions Consulting
+Business School Admissions Consulting
+Career Counseling
+Private High School Admissions
+Subject Tutoring
+Test Prep
+Competition Prep
+UK Admissions
+Academic & Extracurricular Programs
+			
+				
+				
+				
+		
+				
+				
+			Who We Are		
+				
+				
+				
+						
+				Why Us
+Our Leaders
+Our Counselors
+Our Process
+Our Results
+Careers at Ingenius Prep
+			
+						
+				Why Us
+Our Leaders
+Our Counselors
+Our Process
+Our Results
+Careers at Ingenius Prep
+			
+				
+				
+				
+		
+				
+				
+			Our Offices		
+				
+				
+				
+					
+							
+											
+
+											United States
+											
+									
+								
+											
+
+											CANADA
+											
+									
+								
+											
+
+											CHINA
+											
+									
+								
+											
+
+											HONG KONG SAR
+											
+									
+								
+											
+
+											SINGAPORE
+											
+									
+								
+											
+
+											VIETNAM
+											
+									
+								
+											
+
+											AUSTRALIA/NEW ZEALAND
+											
+									
+								
+											
+
+											KOREA
+											
+									
+						
+				
+				
+				
+		
+		
+				
+				
+			Headquarters		
+				
+				
+				
+					
+							
+											
+
+											50 Mitchell Drive, Suite 104 New Haven, CT 06511
+											
+									
+								
+											
+
+											1.800.722.3105
+											
+									
+								
+											
+
+											contact@ingeniusprep.com
+											
+									
+						
+				
+				
+				
+		
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+					
+			
+						
+		
+				
+				
+				
+				
+					
+				
+		
+					
+		
+				
+				
+					
+						
+				
+					 Our Services 
+							
+			
+			
+		
+
+						
+				
+		
+					
+				
+				
+						
+				College Admissions Consulting
+Admissions Guidance
+Medical School Admissions Consulting
+Law School Admissions Consulting
+Graduate School Admissions Consulting
+Business School Admissions Consulting
+Career Counseling
+Private High School Admissions
+Subject Tutoring
+Test Prep
+Competition Prep
+UK Admissions
+Academic & Extracurricular Programs
+			
+						
+				College Admissions Consulting
+Admissions Guidance
+Medical School Admissions Consulting
+Law School Admissions Consulting
+Graduate School Admissions Consulting
+Business School Admissions Consulting
+Career Counseling
+Private High School Admissions
+Subject Tutoring
+Test Prep
+Competition Prep
+UK Admissions
+Academic & Extracurricular Programs
+			
+				
+				
+					
+				
+				
+					
+						
+				
+					 Who We Are 
+							
+			
+			
+		
+
+						
+				
+		
+					
+				
+				
+						
+				Why Us
+Our Leaders
+Our Counselors
+Our Process
+Our Results
+Careers at Ingenius Prep
+			
+						
+				Why Us
+Our Leaders
+Our Counselors
+Our Process
+Our Results
+Careers at Ingenius Prep
+			
+				
+				
+					
+				
+				
+					
+						
+				
+					 Our Offices 
+							
+			
+			
+		
+
+						
+				
+		
+					
+				
+				
+					
+							
+											
+
+											United States
+											
+									
+								
+											
+
+											Canada
+											
+									
+								
+											
+
+											China
+											
+									
+								
+											
+
+											Hong Kong
+											
+									
+								
+											
+
+											Singapore
+											
+									
+								
+											
+
+											Vietnam
+											
+									
+								
+											
+
+											Australia/New Zealand
+											
+									
+								
+											
+
+											Korea
+											
+									
+						
+				
+				
+					
+				
+				
+					
+						
+				
+					 Headquarters 
+							
+			
+			
+		
+
+						
+				
+		
+					
+				
+				
+					
+							
+											
+
+											50 Mitchell Drive, Suite 104 New Haven, CT 06511
+											
+									
+								
+											
+
+											1.800.722.3105
+											
+									
+								
+											
+
+											contact@ingeniusprep.com
+											
+									
+						
+				
+				
+					
+				
+				
+					
+					
+				
+				
+				
+		
+				
+					
+				
+		
+					
+		
+				
+				
+									
+							
+									
+				
+		
+				
+				
+													<img width="84" height="33" src="https://ingeniusprep.com/wp-content/uploads/2024/07/footer-logo-1-2.svg" class="attachment-large size-large wp-image-239" alt="" />													
+				
+				
+				
+													<img width="39" height="64" src="https://ingeniusprep.com/wp-content/uploads/2024/07/footer-logo-2-2.svg" class="attachment-large size-large wp-image-238" alt="" />													
+				
+				
+				
+		
+				
+				
+					
+							
+										©2026 Ingenius Prep. All Rights Reserved. 
+									
+								
+											
+
+											Privacy Policy
+											
+									
+								
+											
+
+											Terms of Service
+											
+									
+						
+				
+				
+				
+				
+							Website By DIGITECH						
+				
+				
+		
+				
+				
+					
+							
+					
+						Facebook
+											
+				
+							
+					
+						Instagram
+											
+				
+							
+					
+						Linkedin
+											
+				
+							
+					
+						Youtube
+											
+				
+							
+					
+						Mes
+											
+				
+							
+					
+						Tik Tok
+											
+				
+							
+					
+						Spotify
+											
+				
+					
+				
+				
+				
+					
+				
+				
+		
+
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/hello-elementor/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+
+		 
+    
+    
+
+window.crwpVer = 1;    window.addEventListener('DOMContentLoaded', function() {
+        jQuery(document).ready(function($) {
+            console.log("Script is working"); // Confirms script loaded
+
+            $('.elementor-menu-toggle').on('click', function() {
+                console.log("Menu toggle clicked"); // Confirms click
+                $('body').toggleClass('menu-open');
+                $('.mainHeader').toggleClass('active');
+            });
+        });
+    });
+		
+@media (max-width: 768px) {
+	body.menu-open {
+			overflow: hidden;
+		height: 100vh;
+	}
+	body.menu-open .mainHeader .elementor-nav-menu__container {
+	            overflow-y: auto;
+        overflow-x: hidden;
+        height: calc(100vh - 90px);
+	}
+	body.menu-open .mainHeader .elementor-nav-menu__container ul.elementor-nav-menu li.menu-item:nth-last-child(1){
+		padding-bottom:10vh;
+	}
+	body.menu-open .mainHeader .elementor-nav-menu__container ul.elementor-nav-menu li li.menu-item:nth-last-child(1){
+		padding-bottom:0vh;
+	}
+}
+form.post-password-form {
+    margin-top: 183px;
+    margin: 183px auto 183px auto;
+    max-width: 65%;
+}
+    		
+			
+					
+				
+				
+							
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+
+
+                #gform_wrapper_8[data-form-index="0"].gform-theme,[data-parent-form="8_0"]{--gf-color-primary: #204ce5;--gf-color-primary-rgb: 32, 76, 229;--gf-color-primary-contrast: #fff;--gf-color-primary-contrast-rgb: 255, 255, 255;--gf-color-primary-darker: #001AB3;--gf-color-primary-lighter: #527EFF;--gf-color-secondary: #fff;--gf-color-secondary-rgb: 255, 255, 255;--gf-color-secondary-contrast: #112337;--gf-color-secondary-contrast-rgb: 17, 35, 55;--gf-color-secondary-darker: #F5F5F5;--gf-color-secondary-lighter: #FFFFFF;--gf-color-out-ctrl-light: rgba(17, 35, 55, 0.1);--gf-color-out-ctrl-light-rgb: 17, 35, 55;--gf-color-out-ctrl-light-darker: rgba(104, 110, 119, 0.35);--gf-color-out-ctrl-light-lighter: #F5F5F5;--gf-color-out-ctrl-dark: #585e6a;--gf-color-out-ctrl-dark-rgb: 88, 94, 106;--gf-color-out-ctrl-dark-darker: #112337;--gf-color-out-ctrl-dark-lighter: rgba(17, 35, 55, 0.65);--gf-color-in-ctrl: #fff;--gf-color-in-ctrl-rgb: 255, 255, 255;--gf-color-in-ctrl-contrast: #112337;--gf-color-in-ctrl-contrast-rgb: 17, 35, 55;--gf-color-in-ctrl-darker: #F5F5F5;--gf-color-in-ctrl-lighter: #FFFFFF;--gf-color-in-ctrl-primary: #204ce5;--gf-color-in-ctrl-primary-rgb: 32, 76, 229;--gf-color-in-ctrl-primary-contrast: #fff;--gf-color-in-ctrl-primary-contrast-rgb: 255, 255, 255;--gf-color-in-ctrl-primary-darker: #001AB3;--gf-color-in-ctrl-primary-lighter: #527EFF;--gf-color-in-ctrl-light: rgba(17, 35, 55, 0.1);--gf-color-in-ctrl-light-rgb: 17, 35, 55;--gf-color-in-ctrl-light-darker: rgba(104, 110, 119, 0.35);--gf-color-in-ctrl-light-lighter: #F5F5F5;--gf-color-in-ctrl-dark: #585e6a;--gf-color-in-ctrl-dark-rgb: 88, 94, 106;--gf-color-in-ctrl-dark-darker: #112337;--gf-color-in-ctrl-dark-lighter: rgba(17, 35, 55, 0.65);--gf-radius: 3px;--gf-font-size-secondary: 14px;--gf-font-size-tertiary: 13px;--gf-icon-ctrl-number: url("data:image/svg+xml,%3Csvg width='8' height='14' viewBox='0 0 8 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4 0C4.26522 5.96046e-08 4.51957 0.105357 4.70711 0.292893L7.70711 3.29289C8.09763 3.68342 8.09763 4.31658 7.70711 4.70711C7.31658 5.09763 6.68342 5.09763 6.29289 4.70711L4 2.41421L1.70711 4.70711C1.31658 5.09763 0.683417 5.09763 0.292893 4.70711C-0.0976311 4.31658 -0.097631 3.68342 0.292893 3.29289L3.29289 0.292893C3.48043 0.105357 3.73478 0 4 0ZM0.292893 9.29289C0.683417 8.90237 1.31658 8.90237 1.70711 9.29289L4 11.5858L6.29289 9.29289C6.68342 8.90237 7.31658 8.90237 7.70711 9.29289C8.09763 9.68342 8.09763 10.3166 7.70711 10.7071L4.70711 13.7071C4.31658 14.0976 3.68342 14.0976 3.29289 13.7071L0.292893 10.7071C-0.0976311 10.3166 -0.0976311 9.68342 0.292893 9.29289Z' fill='rgba(17, 35, 55, 0.65)'/%3E%3C/svg%3E");--gf-icon-ctrl-select: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M0.292893 0.292893C0.683417 -0.097631 1.31658 -0.097631 1.70711 0.292893L5 3.58579L8.29289 0.292893C8.68342 -0.0976311 9.31658 -0.0976311 9.70711 0.292893C10.0976 0.683417 10.0976 1.31658 9.70711 1.70711L5.70711 5.70711C5.31658 6.09763 4.68342 6.09763 4.29289 5.70711L0.292893 1.70711C-0.0976311 1.31658 -0.0976311 0.683418 0.292893 0.292893Z' fill='rgba(17, 35, 55, 0.65)'/%3E%3C/svg%3E");--gf-icon-ctrl-search: url("data:image/svg+xml,%3Csvg width='640' height='640' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M256 128c-70.692 0-128 57.308-128 128 0 70.691 57.308 128 128 128 70.691 0 128-57.309 128-128 0-70.692-57.309-128-128-128zM64 256c0-106.039 85.961-192 192-192s192 85.961 192 192c0 41.466-13.146 79.863-35.498 111.248l154.125 154.125c12.496 12.496 12.496 32.758 0 45.254s-32.758 12.496-45.254 0L367.248 412.502C335.862 434.854 297.467 448 256 448c-106.039 0-192-85.962-192-192z' fill='rgba(17, 35, 55, 0.65)'/%3E%3C/svg%3E");--gf-label-space-y-secondary: var(--gf-label-space-y-md-secondary);--gf-ctrl-border-color: #686e77;--gf-ctrl-size: var(--gf-ctrl-size-md);--gf-ctrl-label-color-primary: #112337;--gf-ctrl-label-color-secondary: #112337;--gf-ctrl-choice-size: var(--gf-ctrl-choice-size-md);--gf-ctrl-checkbox-check-size: var(--gf-ctrl-checkbox-check-size-md);--gf-ctrl-radio-check-size: var(--gf-ctrl-radio-check-size-md);--gf-ctrl-btn-font-size: var(--gf-ctrl-btn-font-size-md);--gf-ctrl-btn-padding-x: var(--gf-ctrl-btn-padding-x-md);--gf-ctrl-btn-size: var(--gf-ctrl-btn-size-md);--gf-ctrl-btn-border-color-secondary: #686e77;--gf-ctrl-file-btn-bg-color-hover: #EBEBEB;--gf-field-img-choice-size: var(--gf-field-img-choice-size-md);--gf-field-img-choice-card-space: var(--gf-field-img-choice-card-space-md);--gf-field-img-choice-check-ind-size: var(--gf-field-img-choice-check-ind-size-md);--gf-field-img-choice-check-ind-icon-size: var(--gf-field-img-choice-check-ind-icon-size-md);--gf-field-pg-steps-number-color: rgba(17, 35, 55, 0.8);}
+                        
+                            
+                        
+        
+        	Step 1 of 2
+        	
+            
+                50%
+            
+                        
+					Ready to Stand Out to Top Colleges?
+
+Sign up and get insider strategies from Former Admissions Officers – straight to your inbox.Email(Required)
+                            
+                        
+                    
+                    
+                          
+                    
+                
+                
+                    
+                        Your DetailsFirst Name(Required)Last Name(Required)Number(Required)Division(Required)Division*UndergraduateAssorted GraduateLaw SchoolBusiness SchoolMedical SchoolCareer CounselingSecondary School (Boarding School)Are You A Parent or Student?(Required)Are You A Parent or Student?*Parent/GuardianStudentOtherStudent Graduation Year(Required)Student Graduation Year*201420152016201720182019202020212022202320242025Aside from English, what other languages are spoken in your home? (Required)What other languages are spoken in your home?* Chinese (Mandarin, Cantonese, etc.)SpanishKoreanHindiJapaneseArabicNoneOtherAcademic Interest(Required)Academic Interest*STEMHumanitiesMathEnglishCreative WritingBusinessComputer ScienceEngineeringEconomicsMusicArtsPre-MedBiologyOtherSportsPolitical ScienceThis field is hidden when viewing the formEmail
+                            
+                        SMS Consent(Required) I agree to receive SMS communications from InGenius Prep.(Required)InGenius Prep respects your privacy and will use your information to manage your account and deliver requested services. We may contact you about our offerings via SMS text messages if you give us your consent above. 
+          
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        
+             
+                        
+                        window.addEventListener('DOMContentLoaded', function() {
+gform.initializeOnLoaded( function() {gformInitSpinner( 8, 'https://ingeniusprep.com/wp-content/plugins/gravityforms/images/spinner.svg', false );jQuery('#gform_ajax_frame_8').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_8');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_8').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){jQuery('#gform_wrapper_8').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_8').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_8').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */  }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_8').val();gformInitSpinner( 8, 'https://ingeniusprep.com/wp-content/plugins/gravityforms/images/spinner.svg', false );jQuery(document).trigger('gform_page_loaded', [8, current_page]);window['gf_submitting_8'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_8').replaceWith(confirmation_content);jQuery(document).trigger('gform_confirmation_loaded', [8]);window['gf_submitting_8'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_8').text());}else{jQuery('#gform_8').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "8", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_8" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_8";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_8" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 8, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} );
+});
+						
+				
+					
+				
+				
+					
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			
+			
+
+(function(d,s,i,r) {
+if (d.getElementById(i)){return;}
+var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/5109206.js';
+e.parentNode.insertBefore(n, e);
+})(document,"script","hs-analytics",300000);
+
+
+
+var wpilFrontend = {"ajaxUrl":"/wp-admin/admin-ajax.php","postId":"432","postType":"post","openInternalInNewTab":"0","openExternalInNewTab":"0","disableClicks":"0","openLinksWithJS":"0","trackAllElementClicks":"0","clicksI18n":{"imageNoText":"Image in link: No Text","imageText":"Image Title: ","noText":"No Anchor Text Found"}};
+//# sourceURL=wpil-frontend-script-js-extra
+
+
+
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+
+
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://ingeniusprep.com","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+
+
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+
+
+var rocket_lazyload_css_data = {"threshold":"300"};
+//# sourceURL=rocket_lazyload_css-js-extra
+
+
+!function o(n,c,a){function u(t,e){if(!c[t]){if(!n[t]){var r="function"==typeof require&&require;if(!e&&r)return r(t,!0);if(s)return s(t,!0);throw(e=new Error("Cannot find module '"+t+"'")).code="MODULE_NOT_FOUND",e}r=c[t]={exports:{}},n[t][0].call(r.exports,function(e){return u(n[t][1][e]||e)},r,r.exports,o,n,c,a)}return c[t].exports}for(var s="function"==typeof require&&require,e=0;e<a.length;e++)u(a[e]);return u}({1:[function(e,t,r){"use strict";{const c="undefined"==typeof rocket_pairs?[]:rocket_pairs,a=(("undefined"==typeof rocket_excluded_pairs?[]:rocket_excluded_pairs).map(t=>{var e=t.selector;document.querySelectorAll(e).forEach(e=>{e.setAttribute("data-rocket-lazy-bg-"+t.hash,"excluded")})}),document.querySelector("#wpr-lazyload-bg-container"));var o=rocket_lazyload_css_data.threshold||300;const u=new IntersectionObserver(e=>{e.forEach(t=>{t.isIntersecting&&c.filter(e=>t.target.matches(e.selector)).map(t=>{var e;t&&((e=document.createElement("style")).textContent=t.style,a.insertAdjacentElement("afterend",e),t.elements.forEach(e=>{u.unobserve(e),e.setAttribute("data-rocket-lazy-bg-"+t.hash,"loaded")}))})})},{rootMargin:o+"px"});function n(){0<(0<arguments.length&&void 0!==arguments[0]?arguments[0]:[]).length&&c.forEach(t=>{try{document.querySelectorAll(t.selector).forEach(e=>{"loaded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&"excluded"!==e.getAttribute("data-rocket-lazy-bg-"+t.hash)&&(u.observe(e),(t.elements||=[]).push(e))})}catch(e){console.error(e)}})}n(),function(){const r=window.MutationObserver;return function(e,t){if(e&&1===e.nodeType)return(t=new r(t)).observe(e,{attributes:!0,childList:!0,subtree:!0}),t}}()(document.querySelector("body"),n)}},{}]},{},[1]);
+//# sourceURL=rocket_lazyload_css-js-after
+
+
+
+
+
+
+
+
+
+
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+
+
+
+
+var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":1,"iconText":"Select date"}};
+var gf_legacy_multi = [];
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled","error":"Error","message":"Message"},"vars":{"images_url":"https://ingeniusprep.com/wp-content/plugins/gravityforms/images"}};
+//# sourceURL=gform_gravityforms-js-extra
+
+
+
+
+
+
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"4d5e484f1615493b74b97c35b6df2abf"},"ajax":{"ajaxurl":"https://ingeniusprep.com/wp-admin/admin-ajax.php","ajax_submission_nonce":"70f03755a4","i18n":{"step_announcement":"Step %1$s of %2$s, %3$s","unknown_error":"There was an unknown error processing your request. Please try again."}}}},"hmr_dev":"","public_path":"https://ingeniusprep.com/wp-content/plugins/gravityforms/assets/js/dist/","config_nonce":"b6043f3a2b"};
+//# sourceURL=gform_gravityforms_theme-js-extra
+
+
+
+
+
+
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/ingeniusprep.com\/wp-admin\/admin-ajax.php","nonce":"527cbbd7f3","urls":{"assets":"https:\/\/ingeniusprep.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/ingeniusprep.com\/wp-json\/"},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/ingeniusprep.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+//# sourceURL=elementor-pro-frontend-js-before
+
+
+
+
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselWrapperAriaLabel":"Carousel | Horizontal scrolling: Arrow Left & Right","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":true},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}},"version":"3.24.0","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"container_grid":true,"e_swiper_latest":true,"e_nested_atomic_repeaters":true,"e_optimized_control_loading":true,"e_onboarding":true,"theme_builder_v2":true,"hello-theme-header-footer":true,"home_screen":true,"ai-layout":true,"nested-elements":true,"editor_v2":true,"e_element_cache":true,"link-in-bio":true,"floating-buttons":true,"display-conditions":true,"form-submissions":true,"taxonomy-filter":true,"search":true},"urls":{"assets":"https:\/\/ingeniusprep.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/ingeniusprep.com\/wp-admin\/admin-ajax.php"},"nonces":{"floatingButtonsClickTracking":"2141390f42"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet","viewport_tablet_extra"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"logo","hello_header_menu_layout":"horizontal","hello_footer_logo_type":"logo"},"post":{"id":432,"title":"College%20Admissions%20Consulting%20%26%20Counseling%3A%20InGenius%20Prep","excerpt":"","featuredImage":false}};
+//# sourceURL=elementor-frontend-js-before
+
+
+
+Top
+
+
+	html {
+  scroll-behavior: smooth;
+	}
+	
+	#myBtn {
+		width:45px;
+		height: 45px;
+		display: none;
+		position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #077fe866;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 12px;
+	}
+
+	@media (any-hover: hover) {
+			#myBtn:hover {
+			background-color: #077FE7;
+	}
+	}
+
+
+
+
+	let mybutton = document.getElementById("myBtn");
+
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			mybutton.style.display = 'block';
+		} else {
+			mybutton.style.display = 'none';
+		}
+	}
+
+	function topFunction() {
+		document.body.scrollTop = 0; 
+		document.documentElement.scrollTop = 0; 
+	}
+
+window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)function lazyLoadThumb(e,alt,l){var t='<img data-lazy-src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"><noscript><img src="https://i.ytimg.com/vi/ID/hqdefault.jpg" alt="" width="480" height="360"></noscript>',a='<button class="play" aria-label="Play Youtube video"></button>';if(l){t=t.replace('data-lazy-','');t=t.replace('loading="lazy"','');t=t.replace(/<noscript>.*?<\/noscript>/g,'');}t=t.replace('alt=""','alt="'+alt+'"');return t.replace("ID",e)+a}function lazyLoadYoutubeIframe(){var e=document.createElement("iframe"),t="ID?autoplay=1";t+=0===this.parentNode.dataset.query.length?"":"&"+this.parentNode.dataset.query;e.setAttribute("src",t.replace("ID",this.parentNode.dataset.src)),e.setAttribute("frameborder","0"),e.setAttribute("allowfullscreen","1"),e.setAttribute("allow","accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"),this.parentNode.parentNode.replaceChild(e,this.parentNode)}document.addEventListener("DOMContentLoaded",function(){var exclusions=[];var e,t,p,u,l,a=document.getElementsByClassName("rll-youtube-player");for(t=0;t<a.length;t++)(e=document.createElement("div")),(u='https://i.ytimg.com/vi/ID/hqdefault.jpg'),(u=u.replace('ID',a[t].dataset.id)),(l=exclusions.some(exclusion=>u.includes(exclusion))),e.setAttribute("data-id",a[t].dataset.id),e.setAttribute("data-query",a[t].dataset.query),e.setAttribute("data-src",a[t].dataset.src),(e.innerHTML=lazyLoadThumb(a[t].dataset.id,a[t].dataset.alt,l)),a[t].appendChild(e),(p=e.querySelector(".play")),(p.onclick=lazyLoadYoutubeIframe)});
+"use strict";function wprRemoveCPCSS(){var preload_stylesheets=document.querySelectorAll('link[data-rocket-async="style"][rel="preload"]');if(preload_stylesheets&&0<preload_stylesheets.length)for(var stylesheet_index=0;stylesheet_index<preload_stylesheets.length;stylesheet_index++){var media=preload_stylesheets[stylesheet_index].getAttribute("media")||"all";if(window.matchMedia(media).matches)return void setTimeout(wprRemoveCPCSS,200)}var elem=document.getElementById("rocket-critical-css");elem&&"remove"in elem&&elem.remove()}window.addEventListener?window.addEventListener("load",wprRemoveCPCSS):window.attachEvent&&window.attachEvent("onload",wprRemoveCPCSS);(()=>{class RocketElementorPreload{constructor(){this.deviceMode=document.createElement("span"),this.deviceMode.id="elementor-device-mode-wpr",this.deviceMode.setAttribute("class","elementor-screen-only"),document.body.appendChild(this.deviceMode)}t(){let t=getComputedStyle(this.deviceMode,":after").content.replace(/"/g,"");this.animationSettingKeys=this.i(t),document.querySelectorAll(".elementor-invisible[data-settings]").forEach((t=>{const e=t.getBoundingClientRect();if(e.bottom>=0&&e.top<=window.innerHeight)try{this.o(t)}catch(t){}}))}o(t){const e=JSON.parse(t.dataset.settings),i=e.m||e.animation_delay||0,n=e[this.animationSettingKeys.find((t=>e[t]))];if("none"===n)return void t.classList.remove("elementor-invisible");t.classList.remove(n),this.currentAnimation&&t.classList.remove(this.currentAnimation),this.currentAnimation=n;let o=setTimeout((()=>{t.classList.remove("elementor-invisible"),t.classList.add("animated",n),this.l(t,e)}),i);window.addEventListener("rocket-startLoading",(function(){clearTimeout(o)}))}i(t="mobile"){const e=[""];switch(t){case"mobile":e.unshift("_mobile");case"tablet":e.unshift("_tablet");case"desktop":e.unshift("_desktop")}const i=[];return["animation","_animation"].forEach((t=>{e.forEach((e=>{i.push(t+e)}))})),i}l(t,e){this.i().forEach((t=>delete e[t])),t.dataset.settings=JSON.stringify(e)}static run(){const t=new RocketElementorPreload;requestAnimationFrame(t.t.bind(t))}}document.addEventListener("DOMContentLoaded",RocketElementorPreload.run)})();<link data-minify="1" rel="stylesheet" href="https://ingeniusprep.com/wp-content/cache/background-css/1/ingeniusprep.com/wp-content/cache/min/1/wp-content/themes/hello-elementor/custom.css?ver=1771880482&wpr_t=1772989152" type="text/css" media="all"><link data-minify="1" rel='stylesheet' id='wpml-blocks-css' href='https://ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/sitepress-multilingual-cms/dist/css/blocks/styles.css?ver=1771880482' media='all' /><link rel='stylesheet' id='wpml-legacy-dropdown-0-css' href='https://ingeniusprep.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-dropdown/style.min.css?ver=1' media='all' /><link data-minify="1" rel='stylesheet' id='cms-navigation-style-base-css' href='https://ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/wpml-cms-nav/res/css/cms-navigation-base.css?ver=1771880482' media='screen' /><link data-minify="1" rel='stylesheet' id='cms-navigation-style-css' href='https://ingeniusprep.com/wp-content/cache/background-css/1/ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/wpml-cms-nav/res/css/cms-navigation.css?ver=1771880482&wpr_t=1772989152' media='screen' /><link rel='stylesheet' id='hello-elementor-css' href='https://ingeniusprep.com/wp-content/themes/hello-elementor/style.min.css?ver=3.1.0' media='all' /><link rel='stylesheet' id='hello-elementor-theme-style-css' href='https://ingeniusprep.com/wp-content/themes/hello-elementor/theme.min.css?ver=3.1.0' media='all' /><link rel='stylesheet' id='hello-elementor-header-footer-css' href='https://ingeniusprep.com/wp-content/themes/hello-elementor/header-footer.min.css?ver=3.1.0' media='all' /><link rel='stylesheet' id='elementor-frontend-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/custom-frontend.min.css?ver=1771625893' media='all' /><link rel='stylesheet' id='elementor-post-7-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-7.css?ver=1771625893' media='all' /><link data-minify="1" rel='stylesheet' id='swiper-css' href='https://ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=1771880482' media='all' /><link rel='stylesheet' id='e-swiper-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/conditionals/e-swiper.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='elementor-pro-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/custom-pro-frontend.min.css?ver=1771625893' media='all' /><link rel='stylesheet' id='elementor-global-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/global.css?ver=1771625894' media='all' /><link rel='stylesheet' id='widget-heading-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='widget-text-editor-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/widget-text-editor.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='widget-image-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='e-animation-fadeIn-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/lib/animations/styles/fadeIn.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='widget-divider-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='widget-counter-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/widget-counter.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='widget-nested-accordion-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/widget-nested-accordion.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='e-animation-zoomIn-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/lib/animations/styles/zoomIn.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='widget-icon-box-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/custom-widget-icon-box.min.css?ver=1771625893' media='all' /><link rel='stylesheet' id='elementor-post-432-css' href='https://ingeniusprep.com/wp-content/cache/background-css/1/ingeniusprep.com/wp-content/uploads/elementor/css/post-432.css?ver=1772212881&wpr_t=1772989152' media='all' /><link rel='stylesheet' id='elementor-post-41735-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-41735.css?ver=1772213503' media='all' /><link rel='stylesheet' id='elementor-post-27886-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-27886.css?ver=1771625896' media='all' /><link rel='stylesheet' id='elementor-post-46592-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-46592.css?ver=1771625896' media='all' /><link rel='stylesheet' id='elementor-post-41597-css' href='https://ingeniusprep.com/wp-content/cache/background-css/1/ingeniusprep.com/wp-content/uploads/elementor/css/post-41597.css?ver=1771625896&wpr_t=1772989152' media='all' /><link data-minify="1" rel='stylesheet' id='tablepress-default-css' href='https://ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/tablepress/css/build/default.css?ver=1771880482' media='all' /><link data-minify="1" rel='stylesheet' id='ecs-styles-css' href='https://ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/ele-custom-skin/assets/css/ecs-style.css?ver=1771880482' media='all' /><link rel='stylesheet' id='elementor-post-1962-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-1962.css?ver=1757946669' media='all' /><link rel='stylesheet' id='elementor-post-2060-css' href='https://ingeniusprep.com/wp-content/cache/background-css/1/ingeniusprep.com/wp-content/uploads/elementor/css/post-2060.css?ver=1727975799&wpr_t=1772989152' media='all' /><link rel='stylesheet' id='elementor-post-2522-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-2522.css?ver=1727722097' media='all' /><link rel='stylesheet' id='elementor-post-2623-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-2623.css?ver=1727868231' media='all' /><link rel='stylesheet' id='elementor-post-3297-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-3297.css?ver=1728550730' media='all' /><link rel='stylesheet' id='elementor-post-3343-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-3343.css?ver=1727776026' media='all' /><link rel='stylesheet' id='elementor-post-4309-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-4309.css?ver=1727788581' media='all' /><link rel='stylesheet' id='elementor-post-5306-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-5306.css?ver=1727799323' media='all' /><link rel='stylesheet' id='elementor-post-6461-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-6461.css?ver=1727429347' media='all' /><link rel='stylesheet' id='elementor-post-27477-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-27477.css?ver=1767878385' media='all' /><link rel='stylesheet' id='elementor-post-46816-css' href='https://ingeniusprep.com/wp-content/uploads/elementor/css/post-46816.css?ver=1759488076' media='all' /><link rel='stylesheet' id='e-animation-fadeInDown-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/lib/animations/styles/fadeInDown.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='widget-rating-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/widget-rating.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='widget-social-icons-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='e-apple-webkit-css' href='https://ingeniusprep.com/wp-content/plugins/elementor/assets/css/conditionals/apple-webkit.min.css?ver=3.24.0' media='all' /><link rel='stylesheet' id='gravity_forms_theme_reset-css' href='https://ingeniusprep.com/wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-theme-reset.min.css?ver=2.9.28' media='all' /><link rel='stylesheet' id='gravity_forms_theme_foundation-css' href='https://ingeniusprep.com/wp-content/cache/background-css/1/ingeniusprep.com/wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-theme-foundation.min.css?ver=2.9.28&wpr_t=1772989152' media='all' /><link data-minify="1" rel='stylesheet' id='gravity_forms_theme_framework-css' href='https://ingeniusprep.com/wp-content/cache/min/1/wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-theme-framework.min.css?ver=1771880482' media='all' /><link rel='stylesheet' id='gravity_forms_orbital_theme-css' href='https://ingeniusprep.com/wp-content/plugins/gravityforms/assets/css/dist/gravity-forms-orbital-theme.min.css?ver=2.9.28' media='all' />
+
+
+
