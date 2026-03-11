@@ -8,6 +8,8 @@
 
 The prevailing narrative — that AI-generated tests are tautological, that specs must be complete and implementation-informed, and that AI is a syntax-layer tool while humans own the semantic layer — is wrong on all three counts. The evidence supports a different architecture: humans identify and prioritize problems (with LLM assistance), state partial specs, AI implements against TDD constraints, and mutation-guided testing provides an external oracle for quality. The LLM's greatest strength isn't code generation — it's semantic collaboration and fresh-eyes perception.
 
+The unifying principle: **LLMs are positive feedback loop amplifiers.** They amplify whatever signal they receive — error begets error (Test Theatre), but quality also begets quality (mutation-guided TDD), and interesting begets interesting (semantic collaboration). The engineering question isn't "how capable is the LLM?" but "what signal are you feeding the amplifier?"
+
 ---
 
 ## 1. AI Testing Is Not Tautological — When Done Right
@@ -123,6 +125,70 @@ External oracles: Mutation testing, private test suites,
 - **Specification:** Partial is fine (SQL precedent). Natural language + test cases.
 - **Implementation:** Automated. Tests-first breaks confirmation bias. Evidence: +7–39% correctness.
 - **Verification:** Mutation testing provides external oracle independent of both spec and implementation. Evidence: 89–95% mutation scores, Meta production deployment.
+
+---
+
+## 5. The Unifying Principle: LLMs as Positive Feedback Loop Amplifiers
+
+The four sections above share a single underlying mechanism. LLMs don't generate from first principles — they follow patterns, amplifying whatever signal they receive. This is usually described as a weakness (hallucination, confirmation bias, sycophancy). But it's a **symmetric property**: it amplifies good signal just as faithfully as bad signal.
+
+The entire evidence base maps onto this:
+
+### Negative Amplification (Error Begets Error)
+
+```
+Buggy code → LLM sees buggy code → generates tests confirming bugs
+→ bugs now "validated" → more code built on buggy assumptions
+→ error compounds
+```
+
+This is Test Theatre. The LLM amplified the error signal. Each iteration cements the mistake deeper. Huang et al. (2024) confirmed it empirically: tests generated from buggy code pass on that same buggy code at significantly higher rates.
+
+### Positive Amplification (Quality Begets Quality)
+
+```
+Surviving mutant (real blind spot) → LLM sees the gap
+→ generates test targeting it → kills mutant
+→ reveals adjacent blind spots → LLM targets those too
+→ quality compounds
+```
+
+MuTAP going from ~50% to 93.57% mutation score is this loop running to convergence. MutGen iterating from 53% to 89–95% over 4 rounds is the same dynamic. Each iteration surfaces more signal for the next iteration to amplify. Interesting mutants beget more interesting mutants.
+
+### Positive Amplification (Semantic Collaboration)
+
+```
+Human describes workflow → LLM spots inefficiency
+→ human says "yes, and also..." → LLM connects to pattern
+from different domain → human sees deeper problem
+→ LLM refines framing → problem statement sharpens
+```
+
+Each exchange amplifies the interesting signal. The fresh-eyes perception and cross-domain pattern matching feed into each other. Vague intuition crystallizes into a crisp problem statement through iterative amplification.
+
+### The Engineering Implication
+
+This reframes the entire AI-assisted development question from "how capable is the LLM?" to **"what signal are you feeding the amplifier?"**
+
+| Input signal | Amplification result | Example |
+|---|---|---|
+| Implementation (potentially buggy) | Error amplification | Test Theatre |
+| Specification (human intent) | Intent amplification | TDD +7–39% |
+| Surviving mutants (objective gaps) | Quality amplification | 89–95% mutation scores |
+| Habituated workflow description | Inefficiency made visible | Fresh-eyes perception |
+| Vague problem intuition | Problem crystallization | Socratic refinement |
+
+The LLM is the same in every row. The outcomes are radically different because the input signal is different.
+
+### Why Information Barriers Work
+
+This also explains why seanmcdirmid's architecture (from the HN thread) is effective: one agent writes code from spec, another writes tests from spec, neither sees the other's output. The barrier isn't protecting against LLM weakness — it's **curating the input signal** so the amplifier has the right thing to amplify. Both agents amplify spec intent. Neither can amplify the other's errors.
+
+### Why "Different Model to Review" Is Wrong
+
+The HN thread's folk belief — use GPT to review Claude, different model weights give independence — fails because different weights amplifying the same input signal still amplify in the same direction. If both models see the same buggy implementation, both will confirm its behavior. The fix isn't different weights. It's different input signal. Which is exactly what spec-first TDD and mutation feedback provide.
+
+---
 
 ### What Could Undermine This
 
