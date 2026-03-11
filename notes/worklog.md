@@ -195,3 +195,21 @@
   - Key insight: OS sandbox tier has a ceiling (shared kernel), but gap from "nothing" to Ash is larger than Ash to VM for today's threat landscape
   - Also noted Agent Safehouse (HN 400+ pts, 2 days old) — Seatbelt-based, single bash script, open source
   - Saved to `research/ash-ashell-critical-review.md`, updated security synthesis + coding agents topic
+
+## 2026-03-10
+- Distilled HN thread "Agents that run while I sleep" (47327559, 263 comments, 285 pts)
+  - Saved to `research/hn-agents-sleep-verification-tdd.md`
+- Deep adversarial analysis of AI TDD effectiveness, provoked by user pushback on the distillation's dismissal of AI testing
+  - Researched: 10+ papers on LLM test generation, mutation testing, TDD for code gen, confirmation bias
+  - Key finding: "Test Theatre" is real but narrow — only applies to implementation-first test generation. TDD (tests-first from spec) shows +7–39% correctness improvement, replicated across models/benchmarks. Mutation-guided testing (89–95% mutation scores) provides external oracle that breaks confirmation bias entirely.
+  - Developed four-part thesis through adversarial dialogue:
+    1. AI testing works when tests derived from spec, not implementation
+    2. Partial specs are sufficient (SQL precedent) — completeness objection is category error
+    3. LLMs are stronger as semantic collaborators than syntax machines — impedance inversion
+    4. LLMs provide permanently fresh-eyes perception for problem identification (better than habituated insiders)
+  - Distilled to `research/ai-tdd-semantic-collaboration-analysis.md`
+
+## 2026-03-09
+- Distilled HN thread on Meta acquiring Moltbook (47323900, 296 comments, 453 pts)
+- Key findings: acquihire FOMO triggered by OpenAI's Steinberger hire; Moltbook's "verification tech" is trivial OAuth; thread mostly contemptuous but misses that agent identity is a real unsolved problem and that the talent panic is industry-wide
+- Saved to `research/meta-acquires-moltbook-hn.md`
