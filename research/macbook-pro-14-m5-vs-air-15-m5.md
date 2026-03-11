@@ -8,7 +8,7 @@
 
 | Spec | 14" MacBook Pro M5 | 15" MacBook Air M5 |
 |------|---------------------|---------------------|
-| **Price** | $1,399 (sale, $200 off $1,599 MSRP) | $1,299 (MSRP) |
+| **Price** | $1,399 (Costco / sale) | $1,299 (MSRP) / $1,249 (Costco pre-sale) |
 | **Chip** | M5 (10-core CPU) | M5 (10-core CPU) |
 | **GPU** | 10-core | 10-core |
 | **Memory** | 16GB unified, 153 GB/s | 16GB unified, 153 GB/s |
@@ -45,6 +45,8 @@ Both machines have the identical M5 chip. In short bursts (opening apps, benchma
 
 Benchmarks confirm: Geekbench multi-core scores are within 2% of each other (burst), but in sustained workloads like Cinebench R23 extended runs, Blender renders, or 10+ minute code compilations, the Pro pulls ahead significantly because it doesn't throttle.
 
+**Caveat:** The base MBP M5's single-fan design has its own limits. Max Tech testing showed the M5 hits 99°C under Cinebench 2024 multi-core stress (core average 98.95°C), drawing 21.8W sustained. Notebookcheck found it briefly spikes to 44W then settles at 30W under combined CPU/GPU load — meaning even the Pro can't fully exploit the M5 under worst-case stress. Multiple reviewers (Gizmodo, Macworld, BGR) flagged the single-fan as a design constraint, noting that the M5 Pro/Max models with dual fans are where Apple's cooling actually matches the silicon. Still, "constrained active cooling" is materially better than "no cooling" — the Air would throttle harder in the same scenarios.
+
 For light use (browsing, docs, email), this is irrelevant. For development, creative work, or any workload that pushes the chip for more than a few minutes, the fan matters.
 
 **3. Ports: actually useful, not just a spec-sheet item**
@@ -53,7 +55,7 @@ The Pro adds: a 3rd Thunderbolt 4 port, HDMI, and SDXC card slot. HDMI means plu
 
 **4. Battery life: 6 more hours (video) / 1 more hour (web)**
 
-72.4 Wh vs 66.5 Wh, and the Pro's more efficient display management gives it 24hr vs 18hr video streaming. In real-world web use, the gap narrows to ~1 hour (16 vs 15 hr), but the video/media gap is real. The Pro simply lasts longer.
+72.4 Wh vs 66.5 Wh, and the Pro's more efficient display management gives it 24hr vs 18hr video streaming. Mashable independently measured 21h17m for the MBP — our new battery life champ. In real-world web use, the gap narrows to ~1 hour (16 vs 15 hr), but the video/media gap is real. The Pro simply lasts longer.
 
 ### What the Air wins
 
@@ -119,11 +121,20 @@ At MSRP ($1,699 vs $1,299 = $400 gap), the decision is harder and tilts toward t
 - **Content consumers who value display quality.** HDR content on the XDR display is a visible upgrade.
 - **"Buy and hold" buyers.** The Pro's display and build quality age better; the Air's 60Hz panel will feel increasingly dated as 120Hz becomes ubiquitous.
 
+## Costco Pricing (March 2026)
+
+Costco currently lists (as of 2026-03-08):
+- **MBP 14" M5 16/512:** $1,399.99 (valid through 3/23/26)
+- **MBA 15" M5 16/512:** $1,249.99 (pre-sale)
+- **MBP 14" M5 16/1TB:** $1,499.99 (valid through 3/23/26)
+
+At Costco the gap is **$150**, not $100. The verdict still holds — $150 for the Pro's display, cooling, ports, and battery upgrades is excellent value — but the Air's case gets slightly stronger at the wider gap. AppleInsider also tracked the MBP M5 512GB at $1,449 at other retailers ($150 off $1,599 MSRP).
+
 ## The Catch
 
-The $1,399 Pro price is a **sale price** ($200 off the $1,599 MSRP). It's been available at this price repeatedly on Amazon (seen as low as $1,349 in late 2025). If it goes back to $1,599+, the calculus shifts — at $300 more than the Air, it's a closer call and the Air becomes the value play.
+The $1,399 Pro price is a **sale price** ($200 off the $1,599 MSRP). It's been available at this price repeatedly on Amazon (seen as low as $1,349 in late 2025). If it goes back to $1,599+, the calculus shifts — at $300+ more than the Air, the Air becomes the value play.
 
-At $1,399 vs $1,299, buy the Pro. It's $100 for a materially better machine in every dimension except screen size and wireless.
+At $1,399 vs $1,249-$1,299, buy the Pro. It's $100-$150 for a materially better machine in every dimension except screen size and wireless.
 
 ## Sources
 
@@ -135,3 +146,8 @@ At $1,399 vs $1,299, buy the Pro. It's $100 for a materially better machine in e
 - [Macworld pricing analysis](https://www.macworld.com/article/3076520/apple-changes-prices-new-m5-macbook-air-m5-pro-max-macbook-pro.html) (2026-03-03)
 - [nanoreview.net benchmark comparison](https://nanoreview.net/en/laptop-compare/apple-macbook-pro-14-m5-2026-vs-apple-macbook-air-15-m5-2026)
 - Reddit r/macbookpro threads (multiple, 2025-2026)
+- [Max Tech thermal comparison](https://wccftech.com/m5-macbook-pro-can-reach-99-degrees-celsius-when-under-load-but-runs-cooler-than-m4/) — M5 Cinebench 2024 thermals (2025-10-24)
+- [Notebookcheck M5 MBP review](https://www.notebookcheck.net/Apple-MacBook-Pro-M5-2025-review-The-fastest-single-core-performance-in-the-world.1144391.0.html) — sustained power/thermal data (2025-10)
+- [Mashable best MacBooks 2026](https://mashable.com/roundup/best-macbooks-2026) — independent battery test 21h17m (2026-02)
+- [Costco MacBook listings](https://www.costco.com/macbooks.html) — current pricing (2026-03-08)
+- [Gizmodo M5 Pro/Max review](https://gizmodo.com/apple-finally-finishes-off-the-m5-slate-with-new-16-inch-macbook-pros-2000714025) — single-fan constraint noted (2026-03-04)

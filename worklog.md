@@ -872,3 +872,39 @@
 - Grounded in historical expert quotes: Dijkstra (humble programmer), Hoare (two ways), Kernighan (debugging twice as hard), McIlroy (Unix philosophy), Beck (simplest thing), Gall's Law, Hickey (simple≠easy), Metz (wrong abstraction), Lehman's Laws, Glass (maintenance 60-80%)
 - Key structural insight: five agent self-awareness items (RLHF length bias, autoregressive momentum, statelessness, context degradation, sycophancy) — not behavioral tips, but architectural constraints
 - Added all four related files to README (three source files were missing)
+
+## 2026-03-08 — Claire STEM Internships: Critical Review
+
+- Critically reviewed `research/claire-stem-internships-2026.md` against primary sources (Brave Search verification)
+- Found 3 critical errors: Salk deadline already passed (March 1, not March 28), Scripps REACH restricted to 9 partner schools (not generally available), SPARK deadline appears fabricated
+- Found 3 moderate errors: Cooper Union deadline ambiguous (March 22 vs 27), Salk acceptance rate unverified, Salk eligibility more flexible than stated
+- Discovered missed opportunity: Scripps Research Translational Institute (SRTI) — separate program with no school restriction — was on the same page but overlooked
+- Created `research/claire-stem-internships-2026-review.md` with corrected situation table, verified next steps, and meta-analysis of how the errors happened
+- Pattern diagnosis: year confusion on cached deadline pages, eligibility blindness (bold notice missed), precision fabrication (specific numbers without sources)
+- Key takeaway: Cooper Union is the one confirmed viable formal program; everything else needs fresh investigation
+
+## 2026-03-08 — Claire STEM: Decision Brief (with bio constraint)
+
+- Re-assessed all options incorporating the "no biology" constraint
+- Verified every remaining program against primary sources (deadlines, eligibility, biology requirements)
+- Key findings from verification:
+  - UCSD REHS: deadline was March 15 — already past (not caught in first review)
+  - UCSD COSMOS: deadline was Feb 6 — already past
+  - UCSD Academic Connections: cancelled for 2026 entirely
+  - SRTI (Scripps Translational Institute): confirmed still open (~March 30 deadline), no biology requirement, computational/data science focus — strong fit
+  - Cooper Union: confirmed still open (March 22 or 27), detailed all 8 course options with prerequisites
+  - BE WiSE: deadline March 20, year-round community program (not summer-only)
+  - UCSD MAP: opens April 15, 8-month mentorship (not summer program)
+  - UCSD Research Scholars: Summer 2026 Bioengineering track deadline May 8
+- Biology gap is a non-issue: all viable options are engineering/computational
+- Created `research/claire-stem-internships-2026-decision.md` — distilled decision brief with verified data, biology impact table, Cooper Union vs SRTI decision framework, and 12-month credential-building strategy
+- Core insight: the real gap isn't missed deadlines, it's no research experience. 2026 summer = first credential in a 12-month build toward 2027 elite applications
+
+## 2026-03-08 — UCSD MAP Deep Dive
+
+- Deep researched UCSD Mentor Assistance Program from primary sources (SDSC website, UCSD press releases, mentor pages, application details)
+- Created `research/ucsd-map-deep-dive.md` — comprehensive analysis covering: program structure, eligibility, application process, all current mentors with project descriptions, mentor selection strategy for Claire, critical assessment, timeline, strategic positioning
+- Key findings: 10th year of operation, ~60 students / ~13 mentors per cohort, 2-4 hrs/week Oct–May, culminates in poster + lightning talk at SDSC symposium
+- Best mentor matches for Claire: Dr. Jack Silberman (AI/ML on the Edge — hands-on, Python, AI hardware + SDSC supercomputer access) and Dr. Angela Berti (TILOS AI Research Institute — national AI institute, MIT/Yale partnerships)
+- Critical strategic insight: MAP is the cheapest path to "verifiable UCSD research experience with named faculty" — the single credential that transforms 2027 elite program applications
+- Application opens April 15, deadline May 31, notification August 1-15
