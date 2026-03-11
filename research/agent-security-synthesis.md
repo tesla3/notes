@@ -47,6 +47,7 @@ No tool has resolved this. The 25+ sandbox tools that exist as of mid-2026 repre
 | **Nothing** | Bare metal, YOLO mode | — | — | Zero |
 | **Separate OS user** | `useradd`, dedicated macOS account | Kernel-enforced personal file isolation | No network control, no credential protection, shared kernel | Low |
 | **OS sandbox** | bubblewrap, Seatbelt, Landlock | Filesystem + partial network restrictions | Shared kernel; Claude Code's built-in sandbox has a self-escape hatch and known bypasses | Low-medium |
+| **OS sandbox (modern)** | **[Ash](ash-ashell-critical-review.md)** | ES+NE: file/network/process/IO/env control, deny-by-default, observe mode, policy registry | Shared kernel; no secret injection; no content-aware egress; proprietary | Low |
 | **Container** | Docker, devcontainer, Podman | Filesystem + process isolation | Shared kernel (container escape = host compromise); DinD problem for agents that need Docker | Medium |
 | **Micro-VM** | Matchlock, Gondolin, Docker MicroVMs (coming) | Separate kernel + network allowlisting + secret injection | Authorized-channel exfiltration; mounted project dirs still exposed | High |
 | **Dedicated hardware** | Mac Mini, VPS, PXE-boot | Physical air gap | Still exposed to whatever credentials you give the agent | Medium ($$) |

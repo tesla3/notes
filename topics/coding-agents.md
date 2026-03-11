@@ -107,6 +107,7 @@ Kiro CLI's context model: guidance (conventions) + instructions (task-specific) 
 - [Agent as Separate macOS User](../research/agent-separate-macos-user.md) — low-cost OS-level isolation, 80/20 alternative to VM sandboxing
 - [Agent Isolation Friction: Self-Rebuttal](../research/agent-isolation-friction-rebuttal.md) — why "just run open" was wrong, tiered access model
 - [Separate User: Pre-Commitment Analysis](../research/agent-separate-user-precommit-analysis.md) — what you get, pay, forgo, and what remains exposed
+- [Ash (ashell.dev) Critical Review](../research/ash-ashell-critical-review.md) — proprietary macOS sandbox using Endpoint Security + Network Extension. Best OS-level sandbox available; novel policy registry, observe mode, exec argument matching. But shared kernel = ceiling. No secret injection, no confused deputy mitigation, no red-teaming evidence, closed source.
 - [Agent Security: What People Actually Do](../research/agent-security-landscape-what-people-do.md) — interactive vs autonomous, LuLu + dedicated accounts pattern, tiered recommendations
 
 ### Multi-Agent Coordination

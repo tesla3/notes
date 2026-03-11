@@ -173,3 +173,25 @@
     - Surfaced unsolved tension: taste pipeline collapsing (Apprenticeship Doom Loop) while demand for taste increases
   - Cross-referenced with: bloat thesis, minimality instructions, plausible code, Show HN drowning, a16z SaaS thread, Only Moat Left, multiple insights
   - Searched and integrated external evidence: SaaSacre data (IGV -23% YTD), Bain framework, Calcalist/Chargebee/Goldman analyses, Lemkin seat compression
+
+## 2026-03-08
+- Critically evaluated Reddit post: TinyForge — 0.8B model "self-teaching" code on MacBook Air
+  - Fetched post content, GitHub repo, author profile via Serper (Reddit blocked direct access)
+  - Deep research: STaR, Sol-Ver, SRT, model collapse papers, synthetic data verification theory
+  - Key findings: technique is sound (known methods well-combined) but claims are inflated
+  - Evolutionary search does 80%+ of the work; self-teaching adds marginal benefit
+  - Results on n=8 samples — no statistical significance
+  - "Self-teaching" framing misleading — unit tests are the teacher
+  - AlphaGo comparison irresponsible; "works for ad copy" claims pure hype
+  - Saved analysis to `research/tinyforge-self-play-code-eval.md`
+
+## 2026-03-10
+
+- **Ash (ashell.dev) critical review** — deep analysis of new macOS agent sandbox (v0.2.5, 6 days old)
+  - Uses Endpoint Security + Network Extension (modern Apple APIs, not deprecated Seatbelt)
+  - Best-in-class OS-level sandbox: 5 enforcement dimensions, policy registry, observe mode, exec argument matching
+  - Proprietary, closed-source — trust concern for security tool
+  - Compared against full research corpus: Matchlock, Gondolin, Agent Safehouse, sx, separate-user posture
+  - Key insight: OS sandbox tier has a ceiling (shared kernel), but gap from "nothing" to Ash is larger than Ash to VM for today's threat landscape
+  - Also noted Agent Safehouse (HN 400+ pts, 2 days old) — Seatbelt-based, single bash script, open source
+  - Saved to `research/ash-ashell-critical-review.md`, updated security synthesis + coding agents topic
