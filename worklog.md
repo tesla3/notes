@@ -908,3 +908,7 @@
 - Best mentor matches for Claire: Dr. Jack Silberman (AI/ML on the Edge — hands-on, Python, AI hardware + SDSC supercomputer access) and Dr. Angela Berti (TILOS AI Research Institute — national AI institute, MIT/Yale partnerships)
 - Critical strategic insight: MAP is the cheapest path to "verifiable UCSD research experience with named faculty" — the single credential that transforms 2027 elite program applications
 - Application opens April 15, deadline May 31, notification August 1-15
+
+## 2026-03-15
+- Set Claude Opus 4.6 and Sonnet 4.6 context windows back to 200K (from 1M default)
+  - Via `~/.pi/agent/models.json` using `modelOverrides` — survives pi updates
