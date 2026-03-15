@@ -912,3 +912,4 @@
 ## 2026-03-15
 - Set Claude Opus 4.6 and Sonnet 4.6 context windows back to 200K (from 1M default)
   - Via `~/.pi/agent/models.json` using `modelOverrides` — survives pi updates
+  - Added to chezmoi for dotfile sync across machines
