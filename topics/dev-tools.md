@@ -66,6 +66,16 @@ Tobi Lütke's hybrid search engine: BM25 + vector + LLM reranker, all running lo
 
 ---
 
+## Discord Archive Pipeline
+
+**Decision:** DiscordChatExporter → Markdown → QMD. In planning.
+
+Export FTC Discord server history as structured markdown, index with QMD for hybrid search (FTS5 + vector + reranking). Minimal custom code: a JSON-to-markdown converter and an incremental sync wrapper. DiscordChatExporter handles all Discord API complexity; QMD handles all search complexity.
+
+→ [Full plan](../research/discord-ftc-archive-pipeline.md)
+
+---
+
 ## Web Browsers (macOS)
 
 **Decision:** Safari as daily driver, Firefox kept for specific use cases.
