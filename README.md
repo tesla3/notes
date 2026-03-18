@@ -38,6 +38,7 @@ Not yet grouped into topics:
 - [HN: AI uBlock Blacklist](research/hn-ai-ublock-blacklist.md) — blocklist governance, false positives, professionalization pressure
 - [AI Slop Blocking Landscape](research/ai-slop-blocking-landscape.md) — blocklists, detection extensions, temporal filtering, C2PA, platform responses
 - [Gondolin Agent Sandbox](research/gondolin-agent-sandbox.md) — Armin Ronacher's QEMU micro-VM sandbox, competitive landscape, Thoughtworks endorsement
+- [HN: Debian Decides Not to Decide on AI Contributions](research/hn-debian-ai-contributions.md) — asymmetric review cost, reputation infrastructure gap, open-to-curated governance shift
 - [HN: Amazon Senior Sign-Off on AI Code](research/hn-amazon-senior-signoff-ai-code.md) — review mandate after AI outages, throughput trap, apprenticeship collapse, blame architecture
 - [HN: Matchlock Agent Sandbox](research/hn-matchlock-agent-sandbox.md) — VM sandboxing for AI agents, confused deputy problem, Claude Cowork exfiltration, Opus 4.6 red-teaming
 - [Gondolin vs Matchlock](research/gondolin-vs-matchlock.md) — deep security comparison across 7 attack classes, scorecards, recommendation
@@ -95,6 +96,7 @@ Not yet grouped into topics:
 - [Thesis: Minimum Code + Composability](research/thesis-minimum-code-composability-llm-era.md) — the flywheel (clean→context→better output→cheaper refactoring), why now, boundary conditions
 - [Playbook: Getting Agents to Write Minimal Code](research/coding-agent-minimal-code-playbook.md) — before/during/after techniques, AGENTS.md rules that work vs don't
 - [Workflow: Minimal Composable Systems](research/workflow-minimal-composable-systems.md) — actionable checklist for human+agent collaboration; first-order questions, plan/build/verify/maintain phases · [agent limitations](research/workflow-agent-structural-limitations.md)
+- [HN: "Shall I Implement It? No"](research/hn-shall-i-implement-it-no.md) — consent-as-prompt-text design flaw, harness vs model blame, context rot, instruction-following regression, workaround ceremony undermining productivity thesis
 
 ## Collections
 
