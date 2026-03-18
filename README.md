@@ -97,6 +97,8 @@ Not yet grouped into topics:
 - [Playbook: Getting Agents to Write Minimal Code](research/coding-agent-minimal-code-playbook.md) — before/during/after techniques, AGENTS.md rules that work vs don't
 - [Workflow: Minimal Composable Systems](research/workflow-minimal-composable-systems.md) — actionable checklist for human+agent collaboration; first-order questions, plan/build/verify/maintain phases · [agent limitations](research/workflow-agent-structural-limitations.md)
 - [HN: "Shall I Implement It? No"](research/hn-shall-i-implement-it-no.md) — consent-as-prompt-text design flaw, harness vs model blame, context rot, instruction-following regression, workaround ceremony undermining productivity thesis
+- [Rule 5: Data Dominates](research/rule5-data-dominates-education.md) — Pike's Rule 5 deep breakdown: examples, FP connection, Kay–Hickey tension, Lisp Curse, convergence evidence, AI era implications, DDD/DOD/Unix lenses, limitations
+- [Unix Philosophy — Complete Reference](research/unix-philosophy-complete.md) — McIlroy (1978), Pike (1989), Gancarz (1994), Raymond (2003); all formulations with cross-reference table
 
 ## Collections
 

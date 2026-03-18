@@ -3,7 +3,7 @@
 # Rule 5: Data Dominates — A Deep Breakdown
 
 **Origin:** Rob Pike's 5 Rules of Programming (1989)
-**Related:** [HN distillation](./hn-rob-pike-rules-of-programming.md)
+**Related:** [HN distillation](./hn-rob-pike-rules-of-programming.md) · [Unix philosophy — complete reference](./unix-philosophy-complete.md)
 
 > "If you've chosen the right data structures and organized things well, the algorithms will almost always be self-evident. Data structures, not algorithms, are central to programming."
 
