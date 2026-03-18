@@ -1,7 +1,7 @@
 # Notes — Agent Instructions
 
 This is a personal research knowledge base. No code. Pure markdown.
-Extends global AGENTS.md. Overrides: Work Log → see Worklog Convention below.
+Extends global AGENTS.md. Overrides global Work Log section → see Worklog Convention below.
 
 ## Reading Protocol
 - **For decisions/current state:** start at README.md, follow links to topics/, stop when answered.
@@ -47,17 +47,24 @@ Extends global AGENTS.md. Overrides: Work Log → see Worklog Convention below.
 - New accounts with burst-then-silence patterns and zero reply engagement are low-trust sources regardless of comment quality.
 
 ## Worklog Convention
-- `worklog.md` — index with table linking to weekly files. Keep entry counts updated.
-- `worklogs/YYYY-WNN.md` — one file per ISO week. Header: `# Worklog — Mon D to Mon D, YYYY (WNN)`.
-- Entries: `## YYYY-MM-DD — Session Title` — chronological order, no duplicate dates, merge sessions under same day.
-- Agent reads only the current week's file by default. Read older weeks only when asked or when prior context is needed.
 
-**Archive procedure (at session start):**
-1. Check if `worklogs/` has a file for the current ISO week.
-2. If it does — append to the existing day or add a new day entry. Done.
-3. If it doesn't (new week has started):
-   a. Create `worklogs/YYYY-WNN.md` with the new week header.
-   b. Add a row to the `worklog.md` index table.
+**Structure:**
+- `worklog.md` — current week's entries (active scratchpad). Header: `# Worklog — YYYY-WNN (Mon D–D)`.
+- `worklogs/YYYY-WNN.md` — archived weekly files. Same format as worklog.md.
+
+**Entry format:** `## YYYY-MM-DD — Topic`
+- ≤8 concise bullet points. Detail belongs in research files, not here.
+- End with `**Decision:**` and/or `**Next:**` where applicable.
+- Reverse-chronological within the file (newest day first).
+
+**Rotation procedure (BEFORE writing any entry):**
+1. Read the `# Worklog — YYYY-WNN` header in `worklog.md` to get its week number.
+2. Compare against the current ISO week.
+3. If same week → append entry under today's date. Done.
+4. If new week has started:
+   a. Move `worklog.md` content to `worklogs/YYYY-WNN.md` (using the OLD week number).
+   b. Reset `worklog.md` with new week header and a pointer: `> Past weeks: [worklogs/](worklogs/)`.
+   c. Write the new entry.
 
 ## Non-Obvious
 - Some topics have separate operational vs. market research files (e.g., what works on *our* API key vs. general pricing/landscape). Don't conflate them.
