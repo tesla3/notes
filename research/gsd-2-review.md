@@ -191,18 +191,155 @@ GSD-2 includes token optimization (v2.17): budget/balanced/quality profiles prov
 
 ---
 
+## Scalability: Can GSD-2 Handle Large Complex Codebases?
+
+GSD's multi-session architecture solves **horizontal scaling** — distributing many tasks across many modules. But it has a fundamental bottleneck on **vertical understanding** — deep comprehension of how a complex system's parts interact. This section examines both capabilities and limits, based on direct code examination of the dispatch pipeline, prompt templates, context budget engine, and information flow between units.
+
+### What Works: Horizontal Task Distribution
+
+The executor (`execute-task.md`) doesn't need global codebase understanding. Each executor session receives:
+
+- Task plan with exact file paths, steps, and must-haves (3–8 files per task)
+- Slice plan excerpt (goal, demo, verification criteria)
+- Compressed prior task summaries (40% of context budget)
+- Decisions register, knowledge base, active overrides
+
+And the executor has full tools — `read`, `bash`, `edit`, `write` — so it *can* explore beyond what's inlined. But the task plan tells it exactly what to touch. In a well-modularized 500-file codebase, if `T03` says "modify `src/auth/session.ts` and `src/auth/middleware.ts`, verify with `tests/auth.test.ts`" — the executor doesn't need to know about the other 497 files.
+
+This scales horizontally. 10 modules × 5 tasks each = 50 focused sessions. Each sees a small slice of the codebase. Clean.
+
+Source: `prompts/execute-task.md`, `templates/task-plan.md`, `auto-prompts.ts` (`buildExecuteTaskPrompt`).
+
+### What Works: Knowledge Accumulation
+
+GSD has three mechanisms for persistent memory across sessions:
+
+1. **`KNOWLEDGE.md`** — Executors append non-obvious rules, gotchas, and patterns discovered during work. Every subsequent session gets this inlined. The prompt says: *"Only add entries that would save future agents from repeating your investigation."*
+
+2. **Forward Intelligence** — Each slice summary's `Forward Intelligence` section contains: what the next slice should know, what's fragile, authoritative diagnostics, and what assumptions changed. This is inlined into downstream planners and researchers via `inlineDependencySummaries()`.
+
+3. **Decisions register** (`DECISIONS.md`) — Architectural, pattern, library, and observability decisions are recorded and inlined into every planning and execution session.
+
+These form a crude but functional persistent memory. Knowledge accumulates across tasks within a slice (via carry-forward summaries), across slices within a milestone (via dependency summaries and Forward Intelligence), and across milestones (via prior milestone summaries inlined into the next milestone's planner).
+
+Source: `prompts/execute-task.md` step 13, `templates/slice-summary.md` Forward Intelligence section, `auto-prompts.ts` (`inlineDependencySummaries`, `inlinePriorMilestoneSummary`).
+
+### What Works: Explicit Boundary Contracts
+
+The roadmap template (`templates/roadmap.md`) requires a **Boundary Map** — explicit `Produces: / Consumes:` specifications between slices:
+
+> *"Be specific. Name concrete outputs: API endpoints, event payloads, shared types/interfaces, persisted record shapes, CLI contracts, file formats, or invariants."*
+
+The template rejects vague descriptions: *"'Produces: auth system' is too vague. 'Produces: session middleware that attaches authenticated user to request context' is useful."* Dependency summaries from completed slices are inlined into downstream planners. The `reassess-roadmap` unit checks whether boundary contracts still hold after each slice completes.
+
+This means inter-module interfaces are tracked as first-class artifacts, not left implicit. For a large project with clean module boundaries, this is the right structure.
+
+Source: `templates/roadmap.md` Boundary Map section, `prompts/reassess-roadmap.md`, `prompts/plan-slice.md` ("Pay particular attention to Forward Intelligence sections").
+
+### The Bottleneck: Single-Session Research
+
+**`research-milestone` runs in a single LLM session with a single context window.** It explores the codebase using `rg`, `find`, targeted `read` calls, and `scout` — a recon agent (`src/resources/agents/scout.md`) that reads key sections and returns compressed findings.
+
+For a project with 50–100 files, this works. For a project with 500+ files, multiple languages, and deep dependency chains, a single 200K context window cannot hold a meaningful model of the whole system.
+
+The research prompt says: *"For large or unfamiliar codebases, use `scout` to build a broad map efficiently."* But scout is also a single-context-window agent. It can identify *what files exist* and *what interfaces they export*. It cannot reliably understand *how 15 modules interact at runtime* or *why the system was designed this way* — the kind of deep structural knowledge that lives in implicit contracts, runtime behavior, and design rationale rather than type signatures.
+
+**The planner inherits the researcher's blind spots.** `plan-slice` sees the research output, the roadmap, decisions, and requirements. If the researcher missed a critical dependency between modules — because it was implicit, buried in runtime behavior, or spread across multiple abstraction layers — the planner creates task plans that don't account for it. The executor hits the dependency, reports a blocker via `blocker_discovered: true` in the task summary frontmatter, and triggers a replan.
+
+This recovery loop works for **one-hop misses** — a single missed dependency that surfaces on first contact. For **systemic misunderstanding** of a complex codebase's architecture, the replan loop may not converge: each replan reveals another hidden dependency, each at the cost of a fresh LLM session.
+
+Source: `prompts/research-milestone.md`, `src/resources/agents/scout.md`, `prompts/plan-slice.md` step 11 (blocker discovery).
+
+### The Bottleneck: No Persistent Codebase Index
+
+GSD uses TF-IDF semantic chunking (`semantic-chunker.ts`) for selecting relevant portions of inlined context files. But there is:
+
+- No persistent codebase index across sessions
+- No embedding-based semantic search
+- No call graph or dependency graph analysis
+- No AST-level understanding
+
+The researcher explores by grep and targeted reads. In a 200K-line codebase with deep abstractions (dependency injection, event-driven architecture, plugin systems), grep finds string matches, not semantic relationships. A function called via DI container, event bus, or reflection is invisible to `rg`.
+
+Source: `semantic-chunker.ts` (TF-IDF over inlined content only, not codebase-wide), absence of indexing infrastructure in the extension layer.
+
+### The Bottleneck: Context Budget Pressure
+
+With a 200K token context window, `context-budget.ts` allocates:
+
+| Category | Share | Tokens | Chars (≈4 chars/token) |
+|---|---|---|---|
+| Inline context (plans, decisions, code) | 40% | 80K | ~320K |
+| Summaries (dependency + prior task) | 15% | 30K | ~120K |
+| Verification | 10% | 20K | ~80K |
+| LLM reasoning + tool use | 35% | 70K | ~280K |
+
+On a complex project, the slice plan + roadmap + decisions + requirements + dependency summaries + knowledge base can approach the full inline budget. The `prompt-compressor.ts` handles overflow by compressing, and `summary-distiller.ts` condenses summaries, but compression loses signal. The more complex the project, the more signal per task is needed, and the less room there is.
+
+Task count also scales with context: 200K+ windows get up to 6 tasks per slice; 128K+ get 5; smaller windows get 3. Larger context windows help, but the budget ratios remain fixed.
+
+Source: `context-budget.ts` (ratio constants, task count tiers, `computeBudgets()`).
+
+### The Real Limit: Understanding Depth, Not File Count
+
+A 500-file codebase with 50 clean modules is **easier** for GSD than a 100-file codebase with 5 deeply entangled modules. The scaling variable isn't project size — it's:
+
+| Factor | GSD-friendly | GSD-hostile |
+|---|---|---|
+| **Coupling depth** | Each module has 1–2 dependencies | Changing module A cascades through B, C, D |
+| **Contract explicitness** | Types, interfaces, documented APIs | Runtime-only behavior, implicit conventions |
+| **Discoverability** | `find` + `rg` reveals the architecture | Abstractions hide the real structure (DI, events, plugins) |
+| **State management** | Immutable data, clear ownership | Shared mutable state, invisible dependencies |
+| **Test coverage** | Tests verify boundary contracts | No tests, or tests that only cover happy paths |
+
+**Concrete examples:**
+
+- A well-structured Rails app (200 models, 200 controllers, conventions, test suite) — GSD can handle this. Each task stays in one model/controller pair. Conventions are discoverable by pattern. Tests verify contracts.
+
+- A 50K-line event-driven microservice (callbacks, shared state, runtime DI) — GSD's researcher can't map the interaction patterns in one session. The planner can't anticipate side effects. The executor doesn't know what it doesn't know.
+
+### What "Properly Structured" Requires for GSD
+
+For GSD-2 to work effectively on a large codebase, "properly structured" means specifically:
+
+1. **Explicit interfaces** — Types and contracts, not conventions or runtime-only behavior
+2. **Shallow dependency chains** — Changing module A doesn't cascade unpredictably
+3. **Discoverable architecture** — `find` + `rg` reveals the structure, not just file names
+4. **Tests as contract documentation** — Boundary-verifying tests are the most reliable signal the researcher has
+5. **Minimal cross-cutting concerns** — Or at least well-documented ones in `KNOWLEDGE.md` or project docs
+
+If these hold, GSD scales. The researcher maps the architecture. The planner creates tasks scoped to module boundaries. The executor touches 3–8 files with clear inputs and outputs. Boundary maps track inter-module contracts. Knowledge accumulates. It works.
+
+### What's Missing for True Large-Codebase Support
+
+Three capabilities would close the gap between "works on well-structured code" and "works on real large codebases":
+
+1. **Multi-session research with synthesis** — Instead of one researcher with one context window, dispatch multiple researchers to different subsystems and synthesize their findings. The parallel orchestration infrastructure exists (`parallel-orchestrator.ts`); applying it to research is a natural extension.
+
+2. **Persistent codebase index** — An AST-level or embedding-based index that survives across sessions, enabling semantic queries like "what calls this function?" or "what modules depend on this interface?" without consuming context window budget on exploration.
+
+3. **Call graph / dependency graph** — Static analysis that maps runtime relationships invisible to grep: DI wiring, event subscriptions, dynamic dispatch. This would let the planner anticipate interaction effects that the researcher can't discover by reading files.
+
+None of these exist in GSD-2 today. They represent the gap between the current architecture and what would be needed for production-scale autonomous coding on complex systems. This gap is where the next generation of autonomous coding tools will compete.
+
+---
+
 ## Verdict
 
-**GSD-2 is architecturally sound, genuinely differentiated, and early-stage.**
+**GSD-2 is architecturally sound, genuinely differentiated, early-stage, and honest about its constraints.**
 
 It identifies a real problem — long-running LLM sessions degrade without programmatic context control — and solves it with a well-designed disk-based state machine. The fresh-session-per-task architecture pays a visible token cost in exchange for clean, focused context on every unit of work. This is the same trade-off any experienced developer makes when manually restarting sessions — GSD systematizes it.
 
 The extension layer (~84K lines) is original, well-decomposed, and substantively tested (~60K lines of tests). The feature set (crash recovery, cost tracking, stuck detection, worktree isolation, parallel orchestration) addresses pain points that no other tool at this price point currently solves.
 
-The most underappreciated design property: **GSD's effectiveness is proportional to codebase modularity.** Projects with clear separation of concerns, well-defined interfaces, and minimal cross-cutting dependencies give GSD's executors exactly the context they need — making it both cheaper and more reliable. Tightly coupled codebases make every task expensive and error-prone. GSD makes poor architecture immediately and visibly costly, which may be a feature rather than a limitation.
+**Two key architectural properties define GSD's applicability:**
 
-The primary risks are structural, not qualitative: vendoring drift from Pi upstream, dependence on one primary maintainer, and a release cadence that trades soak time for speed. These are normal early-stage risks that can be managed as the project matures.
+1. **Effectiveness scales with codebase modularity.** Projects with explicit interfaces, shallow dependency chains, and discoverable architecture give GSD's executors exactly the context they need — making it both cheaper and more reliable. Tightly coupled codebases make every task expensive and error-prone. GSD makes poor architecture immediately and visibly costly, which is both a limitation and an honest signal.
 
-**For users considering adoption:** GSD-2 offers real autonomous capabilities at API cost. Best fit: large greenfield projects with well-specified requirements. Poor fit: brownfield codebases with tight coupling, small tasks, or budget-constrained use. Token profiles (`budget`/`balanced`/`quality`) allow tuning cost vs. thoroughness. Expect a fast-moving project with frequent releases — pin your version if stability matters.
+2. **Understanding depth is the ceiling, not project size.** GSD handles horizontal scaling well (many tasks across many clean modules) but hits a wall on vertical understanding (deeply interconnected systems where a single research session can't map the interaction patterns). The single-session researcher, lack of persistent codebase index, and absence of call graph analysis mean complex brownfield systems with implicit contracts and deep abstractions remain beyond reach — regardless of how well the task decomposition works.
 
-**For the ecosystem:** GSD-2 validates the Pi SDK's extensibility thesis — that a well-designed agent toolkit enables third parties to build differentiated products on top. Whether GSD ultimately stays vendored or returns to consuming Pi as a dependency will be an interesting signal about the SDK's boundaries.
+The primary risks are structural, not qualitative: vendoring drift from Pi upstream, dependence on one primary maintainer, a release cadence that trades soak time for speed, and the scalability bottlenecks identified above. The first three are normal early-stage risks. The fourth — the vertical understanding ceiling — is the fundamental architectural constraint that separates "works on large well-structured projects" from "works on large real-world projects." Closing that gap (multi-session research, persistent codebase indexing, static analysis) is where GSD-2 and its competitors will compete next.
+
+**For users considering adoption:** GSD-2 offers real autonomous capabilities at API cost. Best fit: large greenfield projects, or large brownfield projects with explicit interfaces, good test coverage, and discoverable architecture. Poor fit: tightly coupled brownfield codebases, small tasks, or budget-constrained use. Token profiles (`budget`/`balanced`/`quality`) allow tuning cost vs. thoroughness. Expect a fast-moving project with frequent releases — pin your version if stability matters.
+
+**For the ecosystem:** GSD-2 validates the Pi SDK's extensibility thesis — that a well-designed agent toolkit enables third parties to build differentiated products on top. It also surfaces the next frontier for autonomous coding: not just task execution, but deep codebase comprehension that persists across sessions and scales beyond what a single context window can hold.

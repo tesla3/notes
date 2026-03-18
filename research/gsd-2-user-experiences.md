@@ -335,9 +335,10 @@ This also means **GSD's token efficiency improves with project quality.** A code
 2. **Large, multi-session projects** where context rot is a real problem (the core use case)
 3. **Non-engineer builders** (data scientists, designers) doing full-stack development for the first time
 4. **Users on $200/mo plans** or API keys with budget — GSD is token-hungry by design
+5. **Large brownfield projects with good structure** — explicit interfaces, test coverage, discoverable architecture (see [Scalability analysis](gsd-2-review.md#scalability-can-gsd-2-handle-large-complex-codebases))
 
 ### Where GSD fails
-1. **Brownfield projects** — understanding existing codebases is expensive and error-prone
+1. **Tightly coupled brownfield projects** — not just "existing codebases" but specifically those with deep coupling, implicit contracts, runtime-only dependency resolution, and shared mutable state. GSD's single-session researcher can't map interaction patterns that grep can't find.
 2. **Small tasks** — the overhead of research → plan → execute → verify exceeds the task itself
 3. **Budget-constrained users** — $20/mo plans hit rate limits during GSD's parallel research phase
 4. **Hackathons / time pressure** — GSD trades speed for thoroughness; Plan Mode is faster for MVPs
