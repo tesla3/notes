@@ -2,7 +2,7 @@
 
 # Discord FTC Archive Pipeline — Research & Plan
 
-**Created:** 2026-03-17. **Revised:** 2026-03-18. **Status:** Planning — architecture selected, critical blockers must be resolved before building.
+**Created:** 2026-03-17. **Revised:** 2026-03-18. **Status:** Planning — architecture selected, ready to build.
 
 ---
 
@@ -30,27 +30,43 @@ Make historical FTC Discord conversations accessible and searchable by an AI age
 
 **⚠️ Unverified:** Server names, sizes, and channel counts not yet confirmed. Size matters — a 50-person server is trivial; a 10k+ server with years of history takes hours due to Discord API rate limits (~5 req/5s per channel for message history).
 
-**Access method per server:** Some servers may not allow adding a bot (you're a member, not admin). Identify which servers require a **user token** fallback vs. bot token. See [Authentication](#authentication).
-
 ---
 
-## Architecture Decision: DiscordChatExporter → Markdown → QMD
+## Architecture Decision: discord.py-self → Markdown → QMD
 
 ### Options Evaluated
 
 | Approach | Pros | Cons | Verdict |
 |----------|------|------|---------|
-| **discord.py custom script** | Full control, direct-to-SQLite | Reimplements pagination, rate limiting, thread discovery. Significant custom code. | ❌ Rejected — reimplements solved problems |
-| **DiscordChatExporter → custom SQLite + FTS5** | Structured queries, incremental via high-water mark | Must build search layer, FTS5 setup, query interface | ❌ Superseded by QMD |
-| **DiscordChatExporter → Markdown → QMD** | QMD handles FTS5 + vector + reranking. CLI + MCP for agent access. | Depends on QMD. Non-trivial converter code. | ✅ Selected |
+| **DiscordChatExporter → Markdown → QMD** | Mature CLI, handles threads/attachments | **Actively detected by Discord as of March 2026** — missing `x-super-properties` header. Fix PRs (#1507, #1510) unmerged. Requires .NET runtime. | ❌ Rejected — broken for user token use |
+| **DiscordChatExporter → custom SQLite + FTS5** | Structured queries | Same detection problem + must build search layer | ❌ Rejected |
+| **discord.py-self → Markdown → QMD** | Proper client emulation (sends `X-Super-Properties`, `Sec-CH-UA`, dynamic build numbers). Rate limiting built in. Direct Python objects — no JSON parsing step. `clean_content` resolves mentions. `message.reference.resolved` gives reply context. Full control over incremental sync. | More custom code than DCE wrapper (~800–1200 LOC). Must implement thread discovery loop manually. | ✅ Selected |
 
-### Why This Architecture
+### Why discord.py-self Over DiscordChatExporter
 
-1. **DiscordChatExporter** is mature, actively maintained (10k+ stars), handles all Discord API complexity: pagination, rate limiting, thread discovery (active + archived + forum), attachments. Supports `--after` for incremental pulls and `--include-threads All`. No reason to rewrite this.
+The March 2026 Discord crackdown changed the calculus. See [risk assessment](discord-user-token-risk-assessment.md) for full evidence.
 
-2. **QMD** ([evaluation](qmd-evaluation-and-context-connection.md)) is already the selected local knowledge search tool. It provides FTS5 keyword search, vector semantic search (sqlite-vec), hybrid search with LLM reranking, smart markdown chunking, and a CLI/MCP interface designed for AI agents. Building a custom SQLite + FTS5 solution would be strictly worse.
+**Detection problem:** Discord started checking for the `X-Super-Properties` header on API requests. DiscordChatExporter doesn't send it — accounts get flagged ("Platform Manipulation" restrictions, forced password resets). Fix PRs exist but aren't merged as of 2026-03-18.
 
-3. **Custom code required:** a converter (DiscordChatExporter JSON → structured markdown) and a sync wrapper (per-channel state tracking, incremental export orchestration, merge logic, `qmd update` trigger). This is a real project — estimated 500–800 lines of Python — not a thin glue script. See [Converter Scope](#converter-scope) for the full requirements.
+**discord.py-self solves this by design:**
+- Sends `X-Super-Properties` on every request (`http.py:805`) with dynamically fetched build numbers and browser versions
+- Generates proper `Sec-CH-UA` client hints, realistic `User-Agent`, all `Sec-Fetch-*` headers
+- Falls back to hardcoded values if Discord's info API is down
+- Emulates a real Discord web client at the HTTP level
+
+**What we gain vs DCE:**
+- Actually works without triggering detection
+- Full control over incremental sync — per-channel, per-thread high-water marks, whatever we want
+- Direct Python objects — `message.clean_content` resolves `<@id>` → `@username`, `<#id>` → `#channel-name` automatically
+- `message.reference.resolved` gives the replied-to message as a full object — no separate lookup needed
+- `attachment.save(path)` downloads files directly
+
+**What we lose vs DCE:**
+- No ready-made `--include-threads All` — must iterate channels → `channel.archived_threads()` + `guild.threads` manually
+- No `--media` flag — must call `attachment.save()` per attachment
+- More custom code (~800–1200 LOC vs ~500–800 with DCE)
+
+**Net:** More code, but the fetch layer works. And the `--after` thread blocker from the previous architecture dissolves — we control fetch logic directly, so per-thread high-water marks are straightforward.
 
 ### Pipeline
 
@@ -58,13 +74,17 @@ Make historical FTC Discord conversations accessible and searchable by an AI age
 Discord API
     │
     ▼
-DiscordChatExporter (--after DATE --include-threads All -f Json)
-    │  (per-channel loop with crash resume — see Sync Strategy)
-    ▼
-JSON export files (one per channel per run)
+discord.py-self (Python script using user token)
+    │  connects as self-bot, iterates guilds → channels → threads
+    │  fetches via channel.history(after=last_message_id, oldest_first=True)
+    │  rate limiting handled internally by library
     │
     ▼
-Converter script (JSON → organized markdown, dedup by message ID)
+Python Message objects → format to markdown in-process
+    │  message.clean_content for resolved mentions
+    │  message.reference.resolved for reply context
+    │  attachment.save() for media download
+    │  per-channel/thread state tracked in .sync-state.json
     │
     ▼
 discord-archive/
@@ -75,11 +95,11 @@ discord-archive/
 │   ├── programming/
 │   │   └── ...
 │   └── threads/
-│       ├── t-123456789-how-to-tune-pid.md   ← thread ID in filename
+│       ├── t-123456789-how-to-tune-pid.md
 │       └── ...
 ├── ftc-unofficial/
 │   └── ...
-└── .sync-state.json   ← per-channel last-exported timestamp + message ID
+└── .sync-state.json   ← per-channel + per-thread last message ID
     │
     ▼
 qmd collection add discord-archive/ftc-discord --name ftc-discord
@@ -88,24 +108,6 @@ qmd update && qmd embed
     ▼
 qmd query "PID tuning"           # hybrid + reranking
 ```
-
----
-
-## Critical Blocker: `--after` Behavior with Threads
-
-**This must be resolved before building anything.** The entire incremental sync strategy depends on the answer.
-
-`--after DATE` in DiscordChatExporter filters messages for channel exports. The open question: **how does it interact with threads?**
-
-| Scenario | Behavior | Consequence |
-|----------|----------|-------------|
-| **A: Filters by thread creation date** | Thread created March 1, new messages March 15. Sync with `--after March 10` → thread is skipped entirely. | **Incremental sync is broken for ongoing threads.** New messages in old threads are silently lost. |
-| **B: Filters by message date within threads** | Same scenario → only March 15 messages are exported from the thread. | Works, but converter must **merge** new messages into existing thread files, matching by message ID. |
-| **C: Threads are always fully re-exported** | `--after` is ignored for threads. | Wastes API calls but is safe. Converter must dedup. |
-
-**Action required:** Run a controlled test — export a thread, post a new message, re-export with `--after` set between the old and new messages. Observe what DiscordChatExporter returns. Document the actual behavior here.
-
-**Fallback if Scenario A:** Must export threads separately without `--after`, or track per-thread high-water marks and fetch threads individually. This significantly complicates the sync wrapper.
 
 ---
 
@@ -163,41 +165,79 @@ One file per thread is natural and decided. One file per channel per day for mai
 
 ## Authentication
 
-DiscordChatExporter supports both bot tokens and user tokens.
+discord.py-self uses a **user token** (self-bot). This is the only viable path — these are community servers where you're a member, not an admin who can invite a bot.
 
-| Method | Access | Setup | Risk |
-|--------|--------|-------|------|
-| **Bot token** | Servers where you can add the bot (need admin or invite permission) | Developer Portal → New Application → Bot → copy token | None — standard API usage |
-| **User token** | Any server you're a member of, including ones where you can't add a bot | Extract from browser DevTools or Discord client | Violates Discord TOS. Risk of account suspension. |
+| Method | Access | Risk | Status |
+|--------|--------|------|--------|
+| **User token via discord.py-self** | Any server you're a member of | Violates Discord TOS. Mitigated by proper client emulation. See [risk assessment](discord-user-token-risk-assessment.md). | ✅ Selected |
+| **Bot token** | Only servers where you have admin/invite permission | None | Not feasible for most target servers |
 
-**Recommendation:** Use a bot token for all servers where possible. For servers where you can't add a bot, decide explicitly whether to use a user token and accept the TOS risk, or skip that server.
+### Token extraction
 
-### Bot setup
+Get your user token from Discord in browser: DevTools → Network tab → any request to `discord.com/api` → copy `Authorization` header value. Store in environment variable, never commit to git.
 
-- **One bot token works across all servers.** A single bot application can be invited to multiple guilds.
-- **Permissions needed:** `Read Message History`, `View Channels`, `Manage Threads` (for private archived threads)
-- **Setup:** Discord Developer Portal → New Application → Bot tab → copy token → OAuth2 URL Generator → `bot` scope → select permissions → generate invite link per server
-- **⚠️ User status:** User said "let me check" whether they have an existing bot. Not yet confirmed.
+### Risk mitigation
+
+discord.py-self's client emulation (proper headers, dynamic build numbers) significantly reduces detection risk compared to DCE. Additional measures:
+- Use reasonable delays between channel fetches (library handles per-route rate limits, but add inter-channel courtesy delays)
+- Don't run during Discord outages or maintenance windows
+- Consider a dedicated alt account for archival if risk tolerance is low
 
 ---
 
-## Discord API — Thread Fetching (Reference)
+## discord.py-self API Reference (Thread & Channel Fetching)
 
-Documented here because the API has non-obvious structure:
+Documented here because the API has non-obvious structure.
 
-| Thread Type | Endpoint | Scope | Pagination |
-|-------------|----------|-------|------------|
-| Active threads | `GET /guilds/{guild_id}/threads/active` | Guild-wide, single call | None (returns all) |
-| Archived public | `GET /channels/{channel_id}/threads/archived/public` | Per-channel | `before` (ISO8601 of `archive_timestamp`), `limit` |
-| Archived private | `GET /channels/{channel_id}/threads/archived/private` | Per-channel, needs `MANAGE_THREADS` | Same as above |
-| Forum posts | Same as archived threads | Per forum channel | Same as above |
+### Channel access
 
-**Key facts:**
-- Archived threads are per-channel — must iterate every text/announcement/forum channel
-- Threads archived before the bot joined ARE accessible (archived threads persist in the API)
+```python
+guild = client.get_guild(GUILD_ID)           # from cache after connect
+channels = guild.text_channels               # List[TextChannel]
+channel = client.get_channel(CHANNEL_ID)     # cached lookup
+channel = await client.fetch_channel(ID)     # API call (if not cached)
+```
+
+### Message history
+
+```python
+# Incremental fetch (after high-water mark, chronological order)
+async for msg in channel.history(after=Object(id=last_msg_id), oldest_first=True):
+    # msg.clean_content — resolved mentions
+    # msg.created_at — UTC datetime
+    # msg.author.display_name — author name
+    # msg.reference.resolved — replied-to message (or None/DeletedReferencedMessage)
+    # msg.attachments — List[Attachment], each has .save(path)
+
+# Full fetch (first sync)
+async for msg in channel.history(limit=None, oldest_first=True):
+    ...
+```
+
+### Thread discovery
+
+```python
+# Active threads (from guild cache — available after connect)
+for thread in guild.threads:
+    if thread.parent_id == channel.id:
+        async for msg in thread.history(...): ...
+
+# Archived public threads (per channel, paginated)
+async for thread in channel.archived_threads(limit=None):
+    async for msg in thread.history(...): ...
+
+# Archived private threads (needs manage_threads permission)
+async for thread in channel.archived_threads(private=True, limit=None):
+    async for msg in thread.history(...): ...
+```
+
+### Key facts
+- `channel.history()` auto-paginates in batches of 100
+- Rate limiting is handled internally by the library's `RateLimiter`
+- `guild.threads` is a cache property — only contains active threads visible to the user
+- `channel.archived_threads()` is an async iterator — handles pagination automatically
+- `Thread` extends `Messageable` — `.history()` works identically to channels
 - Forum channel posts are threads — use `archived_threads()` on forum channels
-- Rate limits: ~50 req/s global, ~5 req/5s per route for message history
-- DiscordChatExporter handles all of this. Listed here for reference if debugging is needed.
 
 ---
 
@@ -205,7 +245,7 @@ Documented here because the API has non-obvious structure:
 
 ### Sync state design
 
-`.sync-state.json` tracks state **per channel** (not per guild — a per-guild timestamp loses data on partial failures):
+`.sync-state.json` tracks state **per channel and per thread** (not per guild — a per-guild timestamp loses data on partial failures):
 
 ```json
 {
@@ -218,9 +258,12 @@ Documented here because the API has non-obvious structure:
           "last_message_id": "123456789",
           "last_sync": "2025-03-16T00:00:00Z",
           "status": "ok"
-        },
-        "channel_id_2": {
-          "name": "programming",
+        }
+      },
+      "threads": {
+        "thread_id_1": {
+          "name": "how-to-tune-pid",
+          "parent_channel_id": "channel_id_1",
           "last_message_id": "987654321",
           "last_sync": "2025-03-16T00:00:00Z",
           "status": "ok"
@@ -233,55 +276,77 @@ Documented here because the API has non-obvious structure:
 
 ### Sync loop
 
-1. For each guild, iterate channels
-2. Per channel: `discordchatexporter export --channel {id} --after {last_message_id} --include-threads All -f Json`
-3. Converter processes JSON → markdown, deduplicating by message ID against existing files
-4. On success: update that channel's entry in `.sync-state.json` (atomic write: write to `.sync-state.json.tmp`, then rename)
-5. On failure: log error, skip channel, continue to next. Failed channel retries on next sync run with its unchanged high-water mark.
+1. Connect as self-bot via discord.py-self
+2. For each guild, iterate `guild.text_channels`
+3. Per channel:
+   a. `channel.history(after=Object(id=last_message_id), oldest_first=True)` → format and append to markdown files
+   b. Discover threads: `guild.threads` (active) + `channel.archived_threads(limit=None)` (public) + `channel.archived_threads(private=True, limit=None)` (private, if permissions allow)
+   c. Per thread: `thread.history(after=Object(id=last_message_id), oldest_first=True)` → format and append to thread file
+4. On success per channel/thread: update that entry's `last_message_id` and `last_sync` in `.sync-state.json` (atomic write: write to `.tmp`, rename)
+5. On failure: log error, skip, continue. Failed entries retry from unchanged high-water mark on next run.
 6. After all channels: `qmd update && qmd embed`
 
 ### Crash recovery
 
-Because state is per-channel and only advanced after successful export + conversion:
-- Crash mid-sync → completed channels are up to date, incomplete channels retry from their last good state
-- No duplicates (converter deduplicates by message ID)
-- No missed messages (high-water mark only advances on success)
+Same principle as before — state is per-channel/thread, only advanced after successful write:
+- Crash mid-sync → completed channels are up to date, incomplete ones retry from last good state
+- Append-only + high-water mark = no duplicates, no missed messages
 
-### Thread-specific sync
+### Thread discovery
 
-**Depends on resolving the [critical blocker](#critical-blocker---after-behavior-with-threads).** Possible strategies once behavior is known:
+discord.py-self provides:
+- `guild.threads` — active threads only (from cache after connection)
+- `channel.archived_threads(limit=None)` — paginated async iterator over all archived public threads
+- `channel.archived_threads(private=True, limit=None)` — archived private threads (needs `manage_threads` permission)
 
-- **If `--after` works per-message within threads:** The standard per-channel sync loop handles threads automatically. Converter merges new messages into existing thread files by message ID.
-- **If `--after` skips old threads entirely:** Must maintain a separate per-thread high-water mark. On each sync, list all threads (active + recently archived), and re-export threads that have new messages since their last sync. Significantly more complex.
+**Strategy:** On each sync, discover all threads (active + archived) per channel. For threads already in `.sync-state.json`, fetch incrementally from high-water mark. For new threads, fetch from the beginning. This handles threads created, archived, or unarchived between syncs.
+
+**Cost:** Thread discovery adds API calls (~1 per channel for active, paginated for archived). For a server with 50 channels and moderate thread usage, this is ~100–200 extra requests per sync — negligible vs message history fetches.
 
 ### Known limitations
 
-- **Message edits:** DiscordChatExporter exports current message state. If a message was edited after initial export, the incremental run won't re-fetch it (it's already past the high-water mark). Edits are silently lost. Acceptable tradeoff for now — full re-export on a schedule (e.g., monthly) could catch edits if needed.
-- **Message deletions:** Same issue. Deleted messages remain in the archive. This is arguably a feature (preserves history) but should be understood.
-- **Thread archival/unarchival:** A thread archived between syncs may or may not appear in subsequent exports depending on DiscordChatExporter's thread discovery logic. Needs testing.
+- **Message edits:** `channel.history()` returns current message state. Edited messages past the high-water mark are silently stale. Acceptable — full re-export on a schedule (e.g., monthly) can catch edits if needed.
+- **Message deletions:** Deleted messages remain in the archive. This is a feature — preserves history.
+- **Archived thread completeness:** `archived_threads()` returns threads in order of decreasing `archive_timestamp`. All archived threads should be reachable, but very old servers with thousands of archived threads will take time on first sync.
 
 ---
 
-## Converter Scope
+## Formatter Scope
 
-The converter is the most significant piece of custom code. Framing it as "simple" would lead to a wrong build estimate.
+The formatter converts discord.py-self `Message` objects to markdown and manages file output. Simpler than the old DCE JSON converter because discord.py-self does the heavy lifting.
 
-### Requirements
+### What the library gives us for free
+
+| Concern | Library Solution |
+|---------|-----------------|
+| **Mention resolution** | `message.clean_content` → `<@id>` becomes `@DisplayName`, `<#id>` becomes `#channel-name` |
+| **Reply context** | `message.reference.resolved` → full parent `Message` object (or `DeletedReferencedMessage`) |
+| **Pagination** | `channel.history()` auto-paginates in batches of 100, handles cursors |
+| **Rate limiting** | Internal `RateLimiter` handles per-route and global limits |
+| **Attachment download** | `attachment.save(path)` — downloads to file |
+| **Thread discovery** | `channel.archived_threads()` (public/private), `guild.threads` (active) |
+| **Timestamps** | `message.created_at` (UTC datetime from snowflake), `message.edited_at` |
+
+### What we build
 
 | Responsibility | Details |
 |---------------|---------|
-| **Parse JSON** | DiscordChatExporter's JSON schema: messages, embeds, attachments, reactions, mentions, replies, system messages |
-| **Resolve Discord markup** | `<@123456789>` → `@username`, `<#channel_id>` → `#channel-name`, `<t:timestamp:F>` → human-readable datetime, `:custom_emoji:` → text placeholder or skip |
-| **Reply context** | Extract parent message content for reply-to messages. Truncate to ~100 chars. Include as blockquote. |
-| **Message ID tracking** | Embed message ID in HTML comment for dedup, edit tracking, and cross-referencing |
-| **Merge logic** | On incremental sync: read existing markdown file, parse out existing message IDs, append only new messages, maintain chronological order |
-| **File naming** | Channel files: `{channel-name}/{YYYY-MM-DD}.md`. Thread files: `threads/t-{thread_id}-{slugified-title}.md` (ID for stability, title for readability) |
+| **Format to markdown** | `Message` → markdown string per the format spec below. Use `clean_content`, format reply blockquotes from `reference.resolved` |
+| **Reply context** | Truncate parent `clean_content` to ~100 chars, render as `> ↩ author: ...` blockquote |
+| **Message ID tracking** | Embed message ID in HTML comment (`<!-- msg:ID -->`) for dedup/linking |
+| **File output** | Append-only writes to date-partitioned channel files and per-thread files |
+| **Incremental sync** | Track last message ID per channel/thread in `.sync-state.json`. Use `after=` parameter. No merge logic needed — append-only with high-water mark means no dedup required |
+| **File naming** | Channel files: `{channel-name}/{YYYY-MM-DD}.md`. Thread files: `threads/t-{thread_id}-{slugified-title}.md` |
 | **Bot/system message filtering** | See [Message Filtering](#message-filtering) |
-| **Attachment handling** | See [Attachments and Media](#attachments-and-media) |
+| **Attachment download** | Call `attachment.save()`, store relative paths. See [Attachments and Media](#attachments-and-media) |
+
+### Key simplification vs DCE approach
+
+**No merge logic.** Because we control the fetch layer, we always fetch `after=last_message_id`. New messages are appended to the end of the current day's file. No need to read existing files, parse message IDs, or merge. The high-water mark guarantees no duplicates. This eliminates the most complex and error-prone part of the old design.
 
 ### Estimated scope
 
-500–800 lines of Python. Non-trivial state management for merge logic. Should have tests for the merge/dedup path — bugs there cause data loss or duplication that's hard to detect after the fact.
+800–1200 lines of Python total (fetcher + formatter + sync state + CLI). The fetch/thread-discovery loop is the bulk of the new code. The formatter itself is simple string formatting.
 
 ---
 
@@ -298,7 +363,7 @@ FTC Discords likely have bots posting match schedules, team registrations, scori
 | **Bot messages — noise** (welcome, role assignment, "please read #rules") | Exclude | Pollutes search results |
 | **System messages** (user joined, boosted server, pinned message) | Exclude | No search value |
 
-**Implementation:** Filter by message type field in DiscordChatExporter JSON. For bot messages, decide per-bot after inspecting actual content during server verification. Start with a simple allowlist/blocklist of bot user IDs, refined after initial export.
+**Implementation:** Filter by `message.type` (discord.py-self `MessageType` enum) and `message.author.bot` flag. For bot messages, decide per-bot after inspecting actual content during server verification. Start with a simple allowlist/blocklist of bot user IDs, refined after initial export.
 
 ---
 
@@ -311,7 +376,7 @@ Discord switched to signed, expiring CDN URLs in late 2023. Image and file links
 | Approach | Storage cost | Durability | Complexity |
 |----------|-------------|------------|------------|
 | **Ignore attachments** | None | Links break | None |
-| **Download with `--media`** | Potentially tens of GB for media-heavy servers | Durable | Low (DiscordChatExporter handles download) but high storage |
+| **Download with `attachment.save()`** | Potentially tens of GB for media-heavy servers | Durable | Per-attachment call, straightforward but high storage |
 | **Download selectively** | Moderate | Durable for selected types | Medium — must filter by file type/size |
 
 ### Recommendation
@@ -324,16 +389,18 @@ In the markdown output, reference downloaded media by relative path rather than 
 
 ## Initial Export — Resumability
 
-The first full export of a large FTC Discord (10k+ members, years of history) could take **4–8 hours** due to rate limits. DiscordChatExporter does not checkpoint — a failed run starts fresh.
+The first full export of a large FTC Discord (10k+ members, years of history) could take **4–8 hours** due to rate limits.
 
 ### Mitigation
 
-The per-channel sync loop (see [Sync Strategy](#sync-loop)) doubles as the resume strategy:
-1. Export channel by channel, not the entire guild at once
-2. After each successful channel export + conversion, update `.sync-state.json`
-3. If the process dies at channel 50 of 100, restart → channels 1–49 are already marked as synced, export resumes from channel 50
+The per-channel sync loop doubles as the resume strategy:
+1. Export channel by channel, writing `.sync-state.json` after each
+2. If the process dies at channel 50 of 100, restart → channels 1–49 already have high-water marks, export resumes from channel 50
+3. Within a channel, if the process dies mid-history-fetch, the high-water mark hasn't been updated yet — that channel restarts from scratch, but already-synced channels are safe
 
-This means the sync wrapper should handle both initial and incremental exports with the same code path. No separate "full export" mode needed.
+Same code path for initial and incremental exports. No separate "full export" mode.
+
+**Improvement over DCE:** discord.py-self maintains a persistent WebSocket connection, so the client stays "alive" during long exports. DCE made independent HTTP requests per export invocation.
 
 ---
 
@@ -352,34 +419,31 @@ Re-indexing time scales with collection size. Monitor `qmd embed` duration as th
 
 ## Open Questions (Must Resolve Before Building)
 
-### P0 — Blocks architecture
+### P0 — Blocks build
 
-1. **`--after` behavior with threads.** Must test empirically. See [Critical Blocker](#critical-blocker---after-behavior-with-threads). Everything downstream depends on this.
-2. **Does the user have a Discord bot application?** Status: "let me check" — not yet confirmed. Required for any export.
-3. **Server access method per server.** Which of the 5 servers allow adding a bot? Which require user token? Which should be skipped?
+1. **User token.** Obtain and store securely (env var or `.env` file, gitignored).
+2. **Server verification.** Join the 5 invite links, confirm server names, sizes, channel counts. Determines data volume and time estimates.
 
-### P1 — Blocks build estimate
+### P1 — Blocks deployment
 
-4. **Server verification.** Join the 5 invite links, confirm server names, sizes, channel counts. Determines data volume and time estimates.
-5. **File granularity.** One file per channel per day vs. per week vs. per month — depends on message density. Need data from server verification.
-6. **DiscordChatExporter installation.** Requires .NET runtime. Is dotnet installed? Preferred install method?
-
-### P2 — Needed before deployment
-
-7. **Storage location.** Where should `discord-archive/` live? Inside `pi-place/notes`? Separate repo? Home directory?
-8. **Attachment storage budget.** How much disk space is acceptable for downloaded media?
-9. **Bot message filtering.** Which bots are present on target servers? Which produce valuable content vs. noise?
+3. **File granularity.** One file per channel per day vs. per week vs. per month — depends on message density. Need data from server verification. Start with per-day, revisit after first export.
+4. **Storage location.** Where should `discord-archive/` live? Inside `pi-place/notes`? Separate repo? Home directory?
+5. **Attachment storage budget.** How much disk space is acceptable for downloaded media?
+6. **Bot message filtering.** Which bots are present on target servers? Which produce valuable content vs. noise? Start with include-all, filter after inspecting output.
 
 ### Resolved
 
 - **QMD installation status:** ✅ Installed and working (confirmed 2026-03-18). No collections indexed yet.
-- **Architecture selection:** ✅ DiscordChatExporter → Markdown → QMD.
+- **Architecture selection:** ✅ discord.py-self → Markdown → QMD.
+- **`--after` thread blocker:** ✅ Dissolved — we control fetch logic directly. Per-thread high-water marks are straightforward.
+- **Bot token vs user token:** ✅ User token via discord.py-self. Bot token not feasible for community servers.
+- **.NET dependency:** ✅ Eliminated — discord.py-self is pure Python.
 
 ---
 
 ## What's NOT in Scope (Decided)
 
-- **Custom discord.py fetcher** — rejected in favor of DiscordChatExporter
+- **DiscordChatExporter** — rejected due to March 2026 detection issues
 - **Custom SQLite + FTS5 search** — superseded by QMD
 - **Vector search from scratch** — QMD handles this
 - **Enrichment/transformation** — not needed now, architecture doesn't preclude adding later
@@ -392,8 +456,9 @@ Re-indexing time scales with collection size. Monitor `qmd embed` duration as th
 
 | Source | Used For |
 |--------|----------|
-| [Discord API docs](https://discord.com/developers/docs) | Thread endpoints, pagination, bot permissions, CDN URL expiry |
-| [DiscordChatExporter](https://github.com/Tyrrrz/DiscordChatExporter) | Fetch layer — capabilities, CLI flags, limitations |
+| [discord.py-self](https://github.com/dolfies/discord.py-self) | Fetch layer — self-bot library with proper client emulation |
+| [Discord user token risk assessment](discord-user-token-risk-assessment.md) | Detection analysis, why DCE is broken, why discord.py-self is safer |
+| [Discord API docs](https://discord.com/developers/docs) | Thread endpoints, pagination, CDN URL expiry |
 | [QMD README](../qmd/README.md) | Search layer — architecture, chunking algorithm, score breakpoints |
 | [QMD evaluation](qmd-evaluation-and-context-connection.md) | Prior assessment of QMD for local knowledge search |
 | [Workflow: Minimal Composable Systems](workflow-minimal-composable-systems.md) | Planning methodology — first-order questions, narrowest useful version |
