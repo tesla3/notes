@@ -11,7 +11,7 @@
 
 Most programmers think about code as **procedures** — a sequence of steps to accomplish a task. Rule 5 says: flip it. Think about the **shape of your data** first. When the data is right, the code writes itself. When the data is wrong, no amount of clever code can save you.
 
-Or as Fred Brooks put it in *The Mythical Man-Month* (1975): "Show me your flowcharts and conceal your tables, and I shall continue to be mystified. Show me your tables, and I won't usually need your flowcharts; it'll be obvious."
+Or as Fred Brooks put it in *The Mythical Man-Month* (1975, pp. 102–103): "Show me your flowcharts and conceal your tables, and I shall continue to be mystified. Show me your tables, and I won't usually need your flowcharts; they'll be obvious."
 
 ## The Intuition
 
@@ -271,6 +271,60 @@ The reason experienced developers converge on this rule is that **data is legibl
 
 ---
 
+## The Same Idea, Different Lenses
+
+Rule 5 is not an isolated observation. Several traditions arrived at the same principle independently, each adding a distinct lens.
+
+### Unix: Rule of Representation
+
+Eric S. Raymond, in *The Art of Unix Programming* (2003), codified Rule 5 as the **Rule of Representation**: "Fold knowledge into data so program logic can be stupid and robust." Raymond explicitly cites Pike's "Notes on Programming in C" as a source. The Unix tradition takes this further: if you can express a domain as a data format (config files, `/proc` entries, `.ini` files, crontabs), you separate the *what* from the *how* and make the system composable with generic tools like `grep`, `awk`, and `sort`.
+
+This is why the Unix filesystem appears in the "codebases in the wild" table: the decision that "everything is a file descriptor" is a data abstraction that made the rest of Unix's design — pipes, redirection, device I/O — fall out naturally. The algorithms are trivial because the representation was right.
+
+### Domain-Driven Design: Rule 5 for Complex Business Software
+
+Eric Evans's *Domain-Driven Design* (2003) is the most systematic methodology for applying Rule 5 to enterprise software. Where Pike gives the principle and a few examples, Evans provides a full toolkit:
+
+- **Entities and Value Objects** — the data-first building blocks. Entities have identity and lifecycle; Value Objects are defined entirely by their data (an `Address` is its fields, not a mutable object with an ID).
+- **Aggregates** — boundaries around data consistency. They answer: "what cluster of data must be consistent together?" This is a data design question, not a code question.
+- **Bounded Contexts** — the recognition that the same real-world concept (e.g., "customer") has different data representations in different parts of a system. A billing context's `Customer` has payment methods; a shipping context's `Customer` has addresses. Forcing one shared model creates the very "code compensating for wrong data" that Rule 5 warns against.
+- **Ubiquitous Language** — the vocabulary that bridges the domain expert's mental model and the data model in code. When the data model's names match the domain's names, the code becomes legible to non-programmers.
+
+DDD is relevant because it addresses a gap in Rule 5's original formulation: **how do you discover the right data model?** Pike assumes the programmer can see it. Evans recognizes that for complex business domains, the model must be co-developed with domain experts through iterative refinement. The data model isn't right on the first try — it converges through conversation and feedback. This connects directly to the convergence discussion below: Stage 2 (informal convergence) is essentially what DDD does within a single team.
+
+### Data-Oriented Design: Rule 5 at the Hardware Level
+
+Mike Acton's CppCon 2014 talk "Data-Oriented Design and C++" applies Rule 5 at the hardware level. His formulation: "The transformation of data is the only purpose of any program" and "Lie #3: Code is more important than data" (Acton, CellPerformance blog, 2008).
+
+Data-Oriented Design (DOD), prevalent in game development and high-performance systems, goes further than Rule 5 by arguing that **data layout** — how data is arranged in memory — matters as much as data structure choice. The key distinction: **struct-of-arrays (SoA) vs. array-of-structs (AoS)**.
+
+```python
+# Array of Structs (AoS) — OOP default
+particles = [
+    {"x": 1.0, "y": 2.0, "vx": 0.1, "vy": 0.2, "color": "red", "name": "p1"},
+    {"x": 3.0, "y": 4.0, "vx": 0.3, "vy": 0.4, "color": "blue", "name": "p2"},
+    # ... 10,000 more
+]
+
+# Updating positions touches x, y, vx, vy but also loads color and name
+# into cache lines — wasting memory bandwidth on irrelevant fields.
+
+# Struct of Arrays (SoA) — data-oriented
+x  = [1.0, 3.0, ...]    # contiguous in memory
+y  = [2.0, 4.0, ...]
+vx = [0.1, 0.3, ...]
+vy = [0.2, 0.4, ...]
+
+# Updating positions touches ONLY the relevant arrays.
+# CPU cache lines are fully utilized. 2-10x faster on hot loops.
+```
+
+DOD demonstrates that Rule 5 operates at multiple levels: the logical level (what entities and relationships exist), the representational level (what structures encode them), and the physical level (how those structures map to hardware). The article's examples address the first two; DOD adds the third.
+
+This matters beyond game engines. Database storage formats (row-oriented vs. columnar), SIMD vectorization, and GPU compute all depend on data layout decisions that make the difference between "fast enough" and "unusable." Apache Arrow and Parquet are column-oriented data formats that exist precisely because SoA layout enables faster analytical queries — the same DOD principle applied to data infrastructure.
+
+---
+
 ## Connection to Functional Programming
 
 Rule 5 and functional programming arrive at the same destination from different starting points. Rule 5 is engineering advice: pick good representations and the code becomes obvious. FP is a paradigm: computation *is* data transformation. Both put data before procedures. Both treat code as secondary to structure.
@@ -400,7 +454,9 @@ Rudolf Winestock's essay *The Lisp Curse* (c. 2011) makes a specific argument: L
 
 The key insight: "Lisp is so powerful that problems which are technical issues in other programming languages are social issues in Lisp" (Winestock). Or as Mark Tarver (quoted by Winestock) observed of Lisp GUI libraries in the 1990s: "No problem, there were 9 different offerings. The trouble was that none of the 9 were properly documented and none were bug free. Basically each person had implemented his own solution and it worked for him so that was fine."
 
-Winestock's essay is specifically about code and library fragmentation — the social dynamics that prevent Lisp communities from building shared infrastructure. **By analogy** (this is my extension, not Winestock's), the same dynamic applies to data representations: where Perlis's epigram envisions "100 functions on 1 data structure," an ecosystem cursed by individual expressiveness produces something closer to 100 incompatible representations of the same domain, each with its own bespoke functions. The fragmentation happens not because anyone chose a bad data model, but because nobody coordinated on a shared one.
+Winestock's essay is specifically about code and library fragmentation — the social dynamics that prevent Lisp communities from building shared infrastructure. **By analogy** (this is my extension, not Winestock's), the same dynamic *could* apply to data representations: where Perlis's epigram envisions "100 functions on 1 data structure," an ecosystem cursed by individual expressiveness produces something closer to 100 incompatible representations of the same domain, each with its own bespoke functions. The fragmentation happens not because anyone chose a bad data model, but because nobody coordinated on a shared one.
+
+**Caveat on this analogy:** it's somewhat strained. Winestock's argument is about *libraries and infrastructure* — the functions and abstractions people build. Different libraries can still operate on the same underlying data structures (that's exactly Perlis's point about 100 functions on one structure). Library fragmentation does not automatically imply data representation fragmentation. The analogy holds best when each library invents its own domain model (e.g., nine Lisp GUI toolkits with nine different event models), but it doesn't hold when libraries fragment while sharing data formats.
 
 Rule 5 is correct at the individual project level. It breaks down at the ecosystem level when there's no forcing function for convergence. This is a **coordination problem**, not an engineering problem.
 
@@ -430,6 +486,47 @@ Not because "data dominates" is wrong. Because language adoption has almost noth
 
 ---
 
+## Where Rule 5 Breaks Down
+
+Rule 5 is powerful advice, but it has domain boundaries. Treating it as universal leads to its own failure mode: **data-first cargo cult** — reaching for lookup tables and state machines where a direct algorithm or a simple function would be clearer and faster.
+
+### Algorithm-Dominant Domains
+
+Some problems are genuinely algorithm-first. The breakthrough is in the *method*, not the *representation*:
+
+- **Numerical methods.** The Fast Fourier Transform (Cooley–Tukey, 1965) is a breakthrough in algorithm, not data structure. The input and output are the same arrays; the insight is *how* to decompose the computation. Same for conjugate gradient descent, interior-point methods, and Newton's method — the data is just vectors and matrices, the algorithm is everything.
+- **Graph algorithms.** Dijkstra's shortest path, A* search, max-flow/min-cut — the adjacency list vs. adjacency matrix choice matters, but the *algorithmic insight* (priority queues, heuristic functions, augmenting paths) is where the real thinking happens. Switching from an adjacency matrix to an adjacency list doesn't make Dijkstra "self-evident."
+- **Compression and encoding.** Huffman coding, LZ77, arithmetic coding — these are fundamentally algorithmic inventions. The data (a stream of bytes) is given; the compression ratio depends entirely on the algorithm's cleverness.
+- **Cryptography.** AES, RSA, elliptic curve operations — the data is just bytes; the security properties emerge from mathematical operations, not from restructuring the input.
+
+In these domains, the right response to "I'm writing complex logic" is not "your data structure is wrong" — it's "this domain is inherently algorithmic." Rule 5 is advice for *business logic and system design*, not for *computational mathematics*.
+
+### When Data Tables Become Code in Disguise
+
+The permission example in this document works because permissions decompose into independent `(role, action, condition)` tuples. Many real business rules don't decompose cleanly:
+
+> "Editors can edit cross-department documents only during the first 48 hours after creation, unless the department head approved an extension, except for compliance-flagged documents which require VP-level approval regardless."
+
+You can encode this in a data table — but the "condition" column becomes a complex lambda that references multiple entities, time calculations, and exception chains. At that point, the data table is just code wearing a data costume: you've moved the complexity into the lambdas without actually making it more inspectable or testable. The table gives a false sense of organization while the real logic hides in the condition functions.
+
+The honest test: **can a non-programmer read your data table and understand the policy?** If yes, data dominates. If the table requires reading code to understand, you've achieved indirection, not clarity.
+
+### Premature Data Modeling
+
+Over-investing in the "right" data model before understanding the domain can be as wasteful as premature optimization. This is DDD's core caution: the data model should be *iteratively refined* through conversation with domain experts, not designed top-down and set in stone.
+
+A common failure mode: spending weeks designing an elaborate schema, then discovering that the domain experts think about the problem differently. The schema gets defended because of sunk cost, and the code compensates for the mismatch — exactly what Rule 5 warns against, but caused by premature commitment to a data model rather than by ignoring data altogether.
+
+The mitigation: start with the simplest representation that could work, write code against it, and refactor the data model as understanding grows. Rule 5 is iterative, not waterfall.
+
+### The "Worse is Better" Tension
+
+Richard Gabriel's 1989 essay *Worse is Better* (also called "The Rise of New Jersey Style") argues that simpler, less correct designs beat more principled ones in adoption and survival. The Unix approach — get 90% right with a simple implementation — outcompetes the MIT/Stanford approach of getting the abstraction perfectly right before shipping.
+
+Rule 5 has an implicit MIT/Stanford flavor: get the data model *right*, and everything follows. But in practice, a mediocre data model that ships and gets iterated beats a perfect one that's still on the whiteboard. The tension isn't that Rule 5 is wrong — it's that *the search for the right data model has diminishing returns*, and shipping with a good-enough model plus willingness to refactor is often the winning strategy.
+
+---
+
 ## Do Data Models Converge?
 
 A natural objection arises: if Rule 5 is correct — if there are "right" data structures for given domains — why hasn't software converged on canonical data models the way science converged on the periodic table or Newtonian mechanics?
@@ -453,6 +550,8 @@ The answer: **it has, far more than is commonly recognized.** And the comparison
 
 These aren't obscure standards. They're the backbone of most business software. The e-commerce data model (product/cart/order/payment) is as standardized in its domain as the periodic table is in chemistry — every Shopify store, every Amazon clone, every payment processor uses essentially the same entities and relationships.
 
+**Normalization theory** is the strongest evidence that data structure correctness is formalizable, not just intuitive. Codd's normal forms (1NF through BCNF, with 4NF and 5NF addressing multi-valued and join dependencies) are mathematical rules for when a relational data model is *correct* — meaning no update anomalies, no redundancy, all dependencies declared. A table in 3NF guarantees that every non-key attribute depends on "the key, the whole key, and nothing but the key" (Bill Kent's mnemonic). This is Rule 5 given a proof system: there are formal criteria for "right data structure" in the relational domain, and violating them produces exactly the maintenance pain Rule 5 predicts.
+
 ### The Convergence Pattern
 
 The pattern across these examples parallels scientific convergence:
@@ -473,7 +572,7 @@ The domains that *haven't* converged share properties that differ from both scie
 
 1. **Genuine diversity.** An "order" at Amazon, a restaurant, and a hospital are fundamentally different entities with different lifecycles, constraints, and relationships. Unlike atoms (which really are the same everywhere), business entities vary because businesses vary.
 2. **Requirements evolve faster than representations stabilize.** Chemistry's subject matter is fixed. Business rules change quarterly. ML pipelines can't stabilize because the research keeps changing what "model," "dataset," and "experiment" mean.
-3. **Conway's Law.** "Organizations which design systems are constrained to produce designs which are copies of the communication structures of those organizations" (Melvin Conway, 1967). Two companies in the same industry with different org structures will produce different schemas for the same domain.
+3. **Conway's Law.** "Organizations which design systems are constrained to produce designs which are copies of the communication structures of those organizations" (Melvin Conway, 1968). Two companies in the same industry with different org structures will produce different schemas for the same domain.
 4. **No replication pressure.** In science, independent groups must reproduce results using shared formalisms — this forces convergence. In software, each codebase is private. There's no "peer review" of your schema. Bad data models survive indefinitely because nobody outside the company sees them.
 
 ### Comparison to Science
@@ -516,6 +615,10 @@ This is half right. AI makes **code** cheap to change. It does not make **data**
 - **State shapes** in frontends determine component hierarchies.
 
 You can regenerate all the code in an afternoon. You cannot regenerate a production database schema with three years of data in it. **The AI era makes Rule 5 more important, not less** — the part AI does well (code) is now cheap, and the part it does poorly (data design) is still expensive to get wrong.
+
+**Schema evolution is the hard problem.** If data dominates, what happens when the data model was wrong? The industry has developed partial answers: database migration frameworks (Flyway, Alembic), Protobuf's backward/forward compatibility rules (field numbering, `optional` by default), Avro's schema registries with compatibility checks, and API versioning strategies. These exist precisely because data structures are load-bearing — you can't just swap them out the way you swap out a function body. AI can help generate migration scripts, but the *decision* to restructure — and the judgment about what the new model should be — remains a design problem that requires domain understanding.
+
+**The `nostrademons` counterargument** (from the [HN thread](https://news.ycombinator.com/item?id=47425935)): "The rule may not hold with AI driven development. The rule exists because it's expensive to rewrite code that depends on a given data structure arrangement... If writing code becomes free, the AI will just rewrite the whole program to fit the new requirements." This user reports exactly this behavior on small (~1,000-line) programs. The counterargument has real force for throwaway scripts, prototypes, and applications without persistent data. It weakens once you have a production database, external API consumers, or event subscribers — because those are data contracts that can't be rewritten unilaterally.
 
 ### The Lisp Curse Intensifies
 
@@ -591,6 +694,7 @@ A small reference of problem shapes mapped to data-dominant patterns. The emphas
 | Transform A→B with variations | Pipeline of named steps (data) | Steps are reorderable, composable, testable |
 | Hierarchical categorization | Tree / DAG as data, generic traversal | Structure changes don't require code changes |
 | Repeated similar-but-different logic | Configuration-driven (data describes variants) | Variants are data rows, not code forks |
+| Need full history / audit / undo | Event sourcing (append-only event log) | Current state derived from data; history is free |
 
 This table plus one concrete before/after per row is likely more useful than a large collection of curated codebases. It teaches the recognition skill, not just the pattern.
 
@@ -615,22 +719,25 @@ Real-world systems where the data model *is* the architecture, worth studying:
 | **SQLite** (Hipp, 2000) | B-tree pages, cells, overflow chains | The on-disk format drives the entire architecture. All code follows from the page structure. |
 | **Kubernetes** (Google, 2014) | Declarative resource types (Pod, Service, Deployment) + reconciliation controllers | The desired-state data model *is* the system. Controllers are just loops: read desired state, compare to actual, reconcile. |
 | **PostgreSQL system catalog** | `pg_class`, `pg_attribute`, `pg_type`, etc. — the database describes itself as tables | The server is essentially "code that operates on the catalog." Schema information is data, queryable with SQL. |
-| **Datomic** (Hickey, 2012) | Entity-attribute-value triples, immutable and time-indexed | Database as a value. The data model makes time-travel queries and auditing trivial — no special code needed. |
+| **Datomic** (Hickey, 2012) | Entity-attribute-value triples, immutable and time-indexed | Database as a value. The data model makes time-travel queries and auditing trivial — no special code needed. An event-sourced database: current state is derived by replaying the immutable log of facts. |
 | **Unix filesystem** (Thompson & Ritchie, 1969) | Inodes, directory entries, file descriptors | "Everything is a file" is a data abstraction. Once you have file descriptors and inodes, pipes, sockets, and devices are just the same operations on different data. |
+| **Event-sourced systems** (general pattern) | Append-only log of domain events; current state derived by replaying the log | The event log *is* the system of record. All queries, projections, and materializations are derived views. The state machine example in this document encodes transitions as data; event sourcing goes further — it makes the *entire history* a data structure. Often combined with CQRS (separate read/write models). Used in financial systems, audit-critical domains, and distributed architectures where the event log provides a single source of truth. |
 
 ---
 
 ## Related Quotes
 
-- **Fred Brooks**, *The Mythical Man-Month* (1975): "Show me your tables, and I won't usually need your flowcharts; it'll be obvious."
-- **Linus Torvalds**, [git mailing list](https://lwn.net/Articles/193245/) (2006): "Bad programmers worry about the code. Good programmers worry about data structures and their relationships."
+- **Fred Brooks**, *The Mythical Man-Month* (1975, pp. 102–103): "Show me your flowcharts and conceal your tables, and I shall continue to be mystified. Show me your tables, and I won't usually need your flowcharts; they'll be obvious."
+- **Linus Torvalds**, [git mailing list](https://lwn.net/Articles/193245/) (2006): "I will, in fact, claim that the difference between a bad programmer and a good one is whether he considers his code or his data structures more important. Bad programmers worry about the code. Good programmers worry about data structures and their relationships."
 - **Alan Perlis**, *Epigrams on Programming*, SIGPLAN Notices 17(9) (1982): "It is better to have 100 functions operate on one data structure than 10 functions on 10 data structures."
 - **Rich Hickey**, *The Value of Values*, JaxConf keynote (2012): Values — immutable data — can be printed, compared, serialized, and shared. Objects can't.
 - **Alan Kay**, [email to Stefan Ram](https://userpage.fu-berlin.de/~ram/pub/pub_jf47ht81Ht/doc_kay_oop_de) (2003): "I wanted to get rid of data." Context: eliminating tight coupling between business logic and manual data-structure traversal in 1960s programming; the cell/computer metaphor replaces it with message-passing.
 - **Alan Kay**, [HN AMA](https://news.ycombinator.com/item?id=11945722) (2016): "For important negotiations we don't send telegrams, we send ambassadors." Context: systems at massive scale need something richer than raw data — bundled computation that can negotiate meaning with unknown counterparts.
 - **Rich Hickey**, [HN response to Kay](https://news.ycombinator.com/item?id=11945722) (2016): "Data is as bad an idea as numbers, facts, and record-keeping. Science couldn't have happened if consuming and reasoning about data had the risk of interacting with an ambassador."
+- **Eric S. Raymond**, *The Art of Unix Programming* (2003), Rule of Representation: "Fold knowledge into data so program logic can be stupid and robust."
+- **Mike Acton**, CppCon 2014 / CellPerformance blog (2008): "The transformation of data is the only purpose of any program." And: "Lie #3: Code is more important than data."
 - **Rudolf Winestock**, [*The Lisp Curse*](http://www.winestockwebdesign.com/Essays/Lisp_Curse.html) (c. 2011): "Lisp is so powerful that problems which are technical issues in other programming languages are social issues in Lisp."
-- **Melvin Conway** (1967): "Organizations which design systems are constrained to produce designs which are copies of the communication structures of those organizations."
+- **Melvin Conway**, ["How Do Committees Invent?"](http://www.melconway.com/research/committees.html), *Datamation* 14(4) (1968): "Organizations which design systems are constrained to produce designs which are copies of the communication structures of those organizations."
 - **Eric Normand**, [*What if data is a really bad idea?*](https://ericnormand.me/podcast/what-if-data-is-a-really-bad-idea) (2021): The most thorough analysis of the Kay-Hickey exchange. Concludes they used "data" to mean different things and were asking questions at different scales.
 
 ---
