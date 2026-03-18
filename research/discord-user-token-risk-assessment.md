@@ -1,4 +1,4 @@
-← [Discord FTC Archive Pipeline](discord-ftc-archive-pipeline.md) · [Index](../README.md)
+← [Discord FTC Archive Pipeline](../../discord-scrape/docs/design.md) · [Index](../README.md)
 
 # Discord User Token Scraping — Risk Assessment (March 2026)
 
