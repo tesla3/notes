@@ -3,6 +3,30 @@
 > **Note:** File paths in entries before 2026-02-17 session 7 refer to the flat structure
 > before the notes reorg. See [README.md](README.md) for current file locations.
 
+## 2026-03-18 — Ghostty keybindings research
+
+- Attempted to add macOS-style keybinds (`Super+t`, `Super+v`, `Super+Shift+[`/`]`) to Ghostty on Ubuntu
+- Fixed syntax issue: Ghostty uses `[`/`]` not `left_bracket`/`right_bracket`
+- Confirmed GNOME doesn't grab `Super+t`/`Super+v`/`Super+Shift+[`/`]` — these should work but need restart to verify
+- Reverted custom keybinds for now; documented defaults in `ghostty-tips.md`
+- Key learning: `Ctrl+<letter>` generates ASCII control codes (sent to shell), so Linux terminals use `Ctrl+Shift` for UI actions; macOS `Cmd` is handled at GUI layer, never enters terminal byte stream
+- Created `ghostty-tips.md` — macOS vs Linux default keybinding comparison table
+- Checked in ghostty config and notes to chezmoi + notes repo
+
+## 2026-03-17 — gpu-ubuntu setup: repos + pi extensions
+
+- Cloned all repos from GitHub to `/home/hua/repos/` → symlinked/copied into `/home/hua/pi-place/`
+- Installed 9 pi extensions into `~/.pi/agent/extensions/` from two local packages:
+  - **shitty-extensions** (`~/pi-place/shitty-extensions`, npm: `shitty-extensions`, GitHub: `hjanuschka/shitty-extensions`):
+    - `clipboard.ts` — `copy_to_clipboard` tool (copies text to system clipboard)
+    - `plan-mode.ts` — `plan` tool (file-based plan management in `.pi/plans/`)
+    - `handoff.ts`, `oracle.ts`, `memory-mode.ts`
+  - **agent-stuff** (`~/pi-place/agent-stuff`):
+    - `context.ts`, `files.ts`, `review.ts`, `session-breakdown.ts`
+- Pi package config in `~/.pi/agent/settings.json`: `"../../pi-place/shitty-extensions"` (relative to `~/.pi/agent/`)
+- Also configured: `npm:permission-pi`, pi-skills (brave-search, youtube-transcript)
+- Set context windows back to 200K for Opus 4.6 / Sonnet 4.6 via `~/.pi/agent/models.json`
+
 ## 2026-03-04 — Second-round edge case review of tool-use rules
 
 - Re-reviewed `research/agent-tool-use-self-review.md` stress test with 22 independent tests against 273 session files
