@@ -1,6 +1,7 @@
 # Notes — Agent Instructions
 
 This is a personal research knowledge base. No code. Pure markdown.
+Extends global AGENTS.md. Overrides: Work Log → see Worklog Convention below.
 
 ## Reading Protocol
 - **For decisions/current state:** start at README.md, follow links to topics/, stop when answered.
@@ -9,15 +10,11 @@ This is a personal research knowledge base. No code. Pure markdown.
 - Personal operational state (README, topics/) overrides general research findings when they conflict.
 
 ## Writing Protocol
-- **New research:** create in `research/`, add backlink header, add forward link in the topic page's "Deep Research" section.
+- **New research:** search existing files first (`rg -l` in `research/`) — extend or update existing files rather than creating duplicates. Create in `research/`, add backlink header, add forward link in the topic page's "Deep Research" section.
 - **Decision change:** update top-down: README → topic page. Research files keep their own conclusions.
 - **New topic page:** only when 2+ research files cluster or a decision needs recording.
 - **Renaming/moving:** update all links — backlinks, forward links from topic pages, README if affected.
-
-## Backlink header format
-```
-← [Topic Name](../topics/X.md) · [Index](../README.md)
-```
+- **Backlink header:** `← [Topic Name](../topics/X.md) · [Index](../README.md)`
 
 ## Research Writing
 
@@ -49,7 +46,19 @@ This is a personal research knowledge base. No code. Pure markdown.
 - Writing forensics: consistent structure across all comments, perfect grammar with zero typos, overwrought metaphors, and shallow "personal" details that add nothing to the argument are AI-generation signals.
 - New accounts with burst-then-silence patterns and zero reply engagement are low-trust sources regardless of comment quality.
 
+## Worklog Convention
+- `worklog.md` — index with table linking to weekly files. Keep entry counts updated.
+- `worklogs/YYYY-WNN.md` — one file per ISO week. Header: `# Worklog — Mon D to Mon D, YYYY (WNN)`.
+- Entries: `## YYYY-MM-DD — Session Title` — chronological order, no duplicate dates, merge sessions under same day.
+- Agent reads only the current week's file by default. Read older weeks only when asked or when prior context is needed.
+
+**Archive procedure (at session start):**
+1. Check if `worklogs/` has a file for the current ISO week.
+2. If it does — append to the existing day or add a new day entry. Done.
+3. If it doesn't (new week has started):
+   a. Create `worklogs/YYYY-WNN.md` with the new week header.
+   b. Add a row to the `worklog.md` index table.
+
 ## Non-Obvious
-- `research/google-gemini-api-key.md` = what works **on this specific API key** (operational).
-  `research/google-gemini-market.md` = general pricing/landscape. These serve different purposes.
-- Commits use conventional commits. Default to `docs: ...`. Use `fix:` for broken links, `chore:` for cleanup.
+- Some topics have separate operational vs. market research files (e.g., what works on *our* API key vs. general pricing/landscape). Don't conflate them.
+- Default commit type is `docs:`. Use `fix:` for broken links, `chore:` for cleanup.
