@@ -3,6 +3,24 @@
 > Current week. At week's end, move to `worklogs/2026-W12.md`.
 > Past weeks: [`worklogs/`](worklogs/)
 
+## 2026-03-19 — HN distillation: scaling autoresearch + hn-distill skill update
+
+- Distilled HN thread on SkyPilot's "Scaling Karpathy's Autoresearch" (58pts, 22 comments)
+- Key finding: arxiv MCP (field report from [kraddypatties]) is the buried lede — real-time literature retrieval breaks agents out of weight-space recombination, addressing the actual bottleneck (knowledge, not compute)
+- Karpathy showed up, conceded current behavior resembles autotuning but bet on trajectory
+- Updated `~/.pi/agent/skills/hn-distill/SKILL.md`: added "What's Novel" section (guidelines + template)
+  - Novelty criteria: specific/contextual, falsifiable, cited exactly, with implications developed
+  - Distinct from insights (thread dynamics) — novelty is about the world
+- Saved to `research/hn-scaling-autoresearch-skypilot.md`
+
+## 2026-03-19 — HN distillation: web advertising dysfunction
+
+- Distilled HN thread on Gruber's "Your Frustration Is the Product" (278pts, 172 comments)
+- Key finding: paying subscribers still get full ad load (NYT $2B sub revenue, still stuffs ads)
+- Best signal: donohoe's claim that cleaning up mobile pages *increased* ad revenue 30%
+- Thread's blind spot: ad-tech intermediaries as the actual power center, not publishers
+- Saved to `research/hn-your-frustration-is-the-product.md`
+
 ## 2026-03-18 — Discord FTC archive pipeline review
 
 - Reviewed `discord-ftc-archive-pipeline.md` — found 15 gaps (dotnet priority, server name wrong, channel rename orphaning)
