@@ -3,6 +3,13 @@
 > Current week. At week's end, move to `worklogs/2026-W12.md`.
 > Past weeks: [`worklogs/`](worklogs/)
 
+## 2026-03-20 — TBS Instagram college decisions update
+
+- Re-scraped `@tbs26decisions` — still 44 posts, no new since Feb 16
+- Screenshot-verified all 8 previously-⚠️ entries: all alt-text extractions were correct
+- All 44/44 now fully ✅ screenshot-verified
+- **Next:** Ivy Day imminent (late March) — check back for RD wave
+
 ## 2026-03-20 — PRS Instagram college decisions re-scrape
 
 - Re-scraped `@prsdecisions2026` — 1 new post since Feb 17

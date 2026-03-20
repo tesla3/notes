@@ -8,9 +8,9 @@ Source: [instagram.com/tbs26decisions](https://www.instagram.com/tbs26decisions/
 
 **Note:** Previous scrape used `@tbsdecisions2026` which is a **different school** — not Bishop's La Jolla. That data was discarded.
 
-## Status: COMPLETE (44 posts verified against live Instagram, Feb 21 2026)
+## Status: COMPLETE (44 posts, all screenshot-verified, Mar 20 2026)
 
-All 44 posts confirmed present on `@tbs26decisions`. 8 entries (marked ⚠️) were sourced from alt-text only — details (especially majors) not yet screenshot-verified but post existence confirmed.
+All 44 posts confirmed present on `@tbs26decisions` and screenshot-verified. No new posts since Feb 16, 2026. Ivy Day results (late March) expected soon.
 
 | # | Student | University | Major | Date | Notes |
 |---|---------|-----------|-------|------|-------|
@@ -40,28 +40,28 @@ All 44 posts confirmed present on `@tbs26decisions`. 8 entries (marked ⚠️) w
 | 24 | Melanie Yau | UChicago | Political Science | Dec 13, 2025 | ✅ |
 | 25 | Elena Monico | Northeastern University | Psychology | Dec 14, 2025 | ✅ |
 | 26 | Allison Moores | Stanford | Biomedical Computation | Dec 14, 2025 | ✅ |
-| 27 | Ella Kaminsky | Northeastern University | Business Administration | Dec 14, 2025 | ⚠️ from alt-text |
+| 27 | Ella Kaminsky | Northeastern University | Business Administration | Dec 14, 2025 | ✅ |
 | 28 | Sophie Arrowsmith | Duke | Public Policy | Dec 15, 2025 | ✅ |
 | 29 | Francie Vano | Duke | Public Policy | Dec 15, 2025 | ✅ |
-| 30 | Wyatt Stone | Duke | Mechanical Engineering | Dec 15, 2025 | ⚠️ from alt-text |
+| 30 | Wyatt Stone | Duke | Mechanical Engineering | Dec 15, 2025 | ✅ |
 | 31 | Audrey Donnelly | Columbia | Biology | Dec 16, 2025 | ✅ |
-| 32 | Kayla Pfefferman | George Washington University | Marketing | Dec 16, 2025 | ⚠️ from alt-text |
+| 32 | Kayla Pfefferman | George Washington University | Marketing | Dec 16, 2025 | ✅ |
 | 33 | Tom Lowe | UPenn | Economics | Dec 19, 2025 | D1 Lacrosse ✅ |
-| 34 | Connor Gutierrez | Santa Clara University | Finance | Dec 20, 2025 | ⚠️ from alt-text |
-| 35 | Ariadne Georgiou | Harvard | Government and Ethnicity, Migration, Rights | Jan 7, 2026 | ⚠️ from alt-text |
+| 34 | Connor Gutierrez | Santa Clara University | Finance | Dec 20, 2025 | ✅ |
+| 35 | Ariadne Georgiou | Harvard | Government and Ethnicity, Migration, Rights | Jan 7, 2026 | ✅ |
 | 36 | Addie West | University of Utah | Business | Jan 25, 2026 | ✅ |
 | 37 | Gabby Gallus | Chapman University | Psychology | Jan 29, 2026 | ✅ |
-| 38 | Penelope Fountain | University of Alabama | Communications Studies (Pre-Law Track) | Jan 31, 2026 | ⚠️ from alt-text |
+| 38 | Penelope Fountain | University of Alabama | Communications Studies (Pre-Law Track) | Jan 31, 2026 | ✅ |
 | 39 | Kalia Roper | Boston College | Neuroscience (Pre-Med Track) | Feb 8, 2026 | ✅ |
 | 40 | Helios Hernandez | Lehigh University | Business / Biology | Feb 8, 2026 | ✅ |
-| 41 | Kaylee Yen | NYU | Undecided | Feb 9, 2026 | ⚠️ from alt-text |
-| 42 | Brandon Agbayani | Santa Clara University | Business Economics | Feb 16, 2026 | ⚠️ from alt-text |
+| 41 | Kaylee Yen | NYU | Undecided | Feb 9, 2026 | ✅ |
+| 42 | Brandon Agbayani | Santa Clara University | Business Economics | Feb 16, 2026 | ✅ |
 | 43 | Claire Stallings | BYU | Economics | Feb 16, 2026 | ✅ |
 | 44 | Calista Upton | UChicago | Business Economics | Feb 16, 2026 | ✅ |
 
 **44 decisions across 28 universities** as of Feb 21, 2026. Student-run account; likely incomplete (self-reported only).
 
-Legend: ✅ = verified from screenshot, ⚠️ = extracted from Instagram grid alt-text (needs screenshot confirmation)
+Legend: ✅ = verified from screenshot
 
 ## Summary
 
@@ -171,8 +171,8 @@ Econ/business dominates at 36%. Hard STEM (engineering, CS, computation) notably
 ## Next Steps
 
 - [x] ~~Verify completeness against live Instagram~~ (confirmed 44/44, Feb 21 2026)
-- [ ] Screenshot-verify the 8 ⚠️ entries for major/detail accuracy (especially Ariadne Georgiou → Harvard)
+- [x] ~~Screenshot-verify all entries~~ (all 44/44 screenshot-verified, Mar 20 2026)
 - [ ] Continue monitoring for new RD posts through April 2026
-- [ ] Check if account posts Ivy Day results (late March)
+- [ ] Check if account posts Ivy Day results (late March — imminent)
 
-*Data extracted via agent-browser from Instagram screenshots + grid alt-text, Feb 21, 2026.*
+*Data extracted via agent-browser from Instagram screenshots + grid alt-text. Last updated Mar 20, 2026.*
