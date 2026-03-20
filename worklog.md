@@ -3,6 +3,13 @@
 > Current week. At week's end, move to `worklogs/2026-W12.md`.
 > Past weeks: [`worklogs/`](worklogs/)
 
+## 2026-03-20 — Ghostty SSH terminfo fix
+
+- Delete key sending wrong escape sequence when SSH'd from macOS Ghostty to hua@nlp (GPU Linux)
+- Root cause: remote missing `xterm-ghostty` terminfo entry (`'xterm-ghostty': unknown terminal type`)
+- Fix: `infocmp -x xterm-ghostty | ssh nlp 'tic -x -'` from Mac copies terminfo to remote
+- **Decision:** one-time fix per remote host; no alias override needed
+
 ## 2026-03-19 — HN distillation: scaling autoresearch + hn-distill skill update
 
 - Distilled HN thread on SkyPilot's "Scaling Karpathy's Autoresearch" (58pts, 22 comments)
