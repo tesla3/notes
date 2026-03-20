@@ -3,6 +3,14 @@
 > Current week. At week's end, move to `worklogs/2026-W12.md`.
 > Past weeks: [`worklogs/`](worklogs/)
 
+## 2026-03-20 — PRS Instagram college decisions re-scrape
+
+- Re-scraped `@prsdecisions2026` — 1 new post since Feb 17
+- New entry: Ben Kinsley → Utah State University (Aviation Technology - Professional Pilot), Mar 11
+- Total now 20 decisions across 18 universities
+- RD wave not yet started; most RD results expected April–May
+- **Next:** re-scrape again in mid-April when RD posts should be flowing
+
 ## 2026-03-20 — Tailscale mesh + discord-scrape on gpu-linux
 
 - Set up Tailscale on gpu-linux (machine name: `nlp`) and intel-macbook-air (`jack-sparrow`)
