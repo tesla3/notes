@@ -3,6 +3,14 @@
 > Current week. At week's end, move to `worklogs/2026-W12.md`.
 > Past weeks: [`worklogs/`](worklogs/)
 
+## 2026-03-20 — Tailscale mesh + discord-scrape on gpu-linux
+
+- Set up Tailscale on gpu-linux (machine name: `nlp`) and intel-macbook-air (`jack-sparrow`)
+- SSH access from macbook-air: `ssh hua@nlp`
+- Developed `discord-scrape` on nlp using pi-coding-agent — downloads technical Discord channels
+- Indexed scraped data with qmd for retrieval
+- Code in private GitHub repo; tested with two analyses under `analysis/`
+
 ## 2026-03-20 — Ghostty SSH terminfo fix
 
 - Delete key sending wrong escape sequence when SSH'd from macOS Ghostty to hua@nlp (GPU Linux)

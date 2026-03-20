@@ -21,86 +21,7 @@ Think of it like furniture in a room. If you arrange the furniture well, the pat
 
 ## Examples
 
-### 1. Permission System
-
-#### Before — Logic-Dominated
-
-You need to check if a user can perform actions. You start thinking procedurally:
-
-```python
-def can_edit(user, document):
-    if user.role == "admin":
-        return True
-    if user.role == "editor" and document.department == user.department:
-        return True
-    if user.id == document.owner_id:
-        return True
-    if user.role == "editor" and document.is_public:
-        return True
-    return False
-
-def can_delete(user, document):
-    if user.role == "admin":
-        return True
-    if user.id == document.owner_id and user.role != "viewer":
-        return True
-    return False
-
-def can_share(user, document):
-    if user.role == "admin":
-        return True
-    if user.id == document.owner_id:
-        return True
-    if user.role == "editor" and document.department == user.department:
-        return True
-    return False
-```
-
-Every new action = a new function with its own `if` tree. Every new role = you touch every function. The logic is scattered. Bugs hide in the inconsistencies between functions. Adding "can a manager share cross-department?" means editing three places.
-
-#### After — Data-Dominated
-
-Stop. Think about data first. What *is* a permission? It's a relationship: **(role, action, condition) → allowed**.
-
-```python
-PERMISSIONS = {
-    "admin":  {"edit", "delete", "share", "admin"},
-    "editor": {"edit", "share"},
-    "viewer": {"view"},
-    "owner":  {"edit", "delete", "share"},
-}
-
-SCOPE_RULES = {
-    "editor": lambda user, doc: doc.department == user.department or doc.is_public,
-    "viewer": lambda user, doc: True,
-    "owner":  lambda user, doc: True,
-    "admin":  lambda user, doc: True,
-}
-
-def get_roles(user, document):
-    roles = {user.role}
-    if user.id == document.owner_id:
-        roles.add("owner")
-    return roles
-
-def can(user, document, action):
-    return any(
-        action in PERMISSIONS.get(role, set())
-        and SCOPE_RULES.get(role, lambda u, d: False)(user, document)
-        for role in get_roles(user, document)
-    )
-```
-
-Now:
-- Adding a new action = add a string to a set
-- Adding a new role = one entry in each dict
-- The `can()` function **never changes**
-- You can serialize `PERMISSIONS` to a database and make it user-configurable
-- You can unit test the data table exhaustively with a matrix
-
-**The algorithm (`can`) became trivial because the data structure encodes the domain.**
-
-### 2. State Machine (Order Processing)
+### 1. State Machine (Order Processing)
 
 #### Before — Code-as-State-Machine
 
@@ -165,7 +86,7 @@ Now you can:
 
 The engine is 6 lines. It will **never change**. All future complexity goes into the data table, where it's visible and testable.
 
-### 3. Scheduling / Calendar Conflicts
+### 2. Scheduling / Calendar Conflicts
 
 #### Before — Algorithm-First
 
@@ -215,6 +136,153 @@ def find_conflicts(meetings):
 - More importantly: the *grouping* did the thinking. Once meetings are partitioned by room and sorted by time, conflict detection is just "check your neighbor"
 
 You didn't invent a clever algorithm. You organized the data so that the obvious algorithm is the fast one.
+
+### 3. Permission System — When Decomposition Meets Reality
+
+The first two examples are clean wins for Rule 5 — the problems decompose naturally into data, and the engines are trivial. Permission systems look like they should work the same way. Often they don't.
+
+#### Before — Disorganized Procedural Code
+
+You need to check if a user can perform actions. You start thinking procedurally:
+
+```python
+def can_edit(user, document):
+    if user.role == "admin":
+        return True
+    if user.role == "editor" and document.department == user.department:
+        return True
+    if user.id == document.owner_id:
+        return True
+    if user.role == "editor" and document.is_public:
+        return True
+    return False
+
+def can_delete(user, document):
+    if user.role == "admin":
+        return True
+    if user.id == document.owner_id and user.role != "viewer":
+        return True
+    return False
+
+def can_share(user, document):
+    if user.role == "admin":
+        return True
+    if user.id == document.owner_id:
+        return True
+    if user.role == "editor" and document.department == user.department:
+        return True
+    return False
+```
+
+Three functions, each with its own if-tree. The admin check is duplicated everywhere. Editor conditions are split across `can_edit` with the owner check wedged between them. Adding a role means touching every function. Adding an action means writing another function with another copy of the admin/owner boilerplate.
+
+But the deeper problem isn't duplication — it's that the code doesn't read like a policy. The structure follows no organizing principle: not grouped by role, not ordered by priority, just whatever order the developer thought of the cases.
+
+#### Data-Dominant Refactoring
+
+Apply Rule 5. What *is* a permission? A relationship: **(role, action, condition) → allowed**.
+
+```python
+PERMISSIONS = {
+    "admin":  {"edit", "delete", "share", "admin"},
+    "editor": {"edit", "share"},
+    "viewer": {"view"},
+    "owner":  {"edit", "delete", "share"},
+}
+
+SCOPE_RULES = {
+    "editor": lambda user, doc: doc.department == user.department or doc.is_public,
+    "viewer": lambda user, doc: True,
+    "owner":  lambda user, doc: True,
+    "admin":  lambda user, doc: True,
+}
+
+def get_roles(user, document):
+    roles = {user.role}
+    if user.id == document.owner_id:
+        roles.add("owner")
+    return roles
+
+def can(user, document, action):
+    return any(
+        action in PERMISSIONS.get(role, set())
+        and SCOPE_RULES.get(role, lambda u, d: False)(user, document)
+        for role in get_roles(user, document)
+    )
+```
+
+Two clean data tables. One six-line engine. Adding a role means one entry in each dict. The engine never changes. You can serialize `PERMISSIONS` to a database and test it with a matrix.
+
+> ⚠️ **This refactoring introduced two behavioral changes from the original.** Compare the before and after carefully — what permissions changed? Try to identify them before reading on.
+
+#### The Bugs
+
+**Bug 1 — Editor sharing scope widened.** The original allows editors to *edit* public cross-department docs but only *share* within their department. The refactored version uses one scope rule per role for all actions — so editors can now share public docs from any department. The decomposition assumed scope varies by **role** alone, but it actually varies by **(role, action)**.
+
+**Bug 2 — Viewer-owners can now delete.** The original explicitly blocks this: `user.role != "viewer"` in `can_delete`. The refactored version treats roles as purely additive — any granting role is sufficient. But the domain has a restrictive interaction: viewer status overrides ownership for deletion. The data model assumes role independence; the domain has role interference.
+
+Both bugs share a root cause: the domain's rules don't factor into independent dimensions. Scope varies by (role, action), not by role alone. Roles interact non-additively. The clean `(role → actions) + (role → scope)` decomposition silently changed the semantics.
+
+The claimed benefits unravel with it:
+
+- **"Serialize to a database"** — fixing Bug 1 requires `(role, action) → lambda`. Lambdas aren't serializable.
+- **"Engine never changes"** — fixing Bug 2 requires deny-logic in the engine.
+- **"One entry per role"** — a corrected model needs entries per (role, action) pair, plus restriction rules.
+
+You can force a fix, but the "data" table becomes a dict of lambdas — code wearing a data costume. The indirection adds complexity without adding clarity.
+
+#### After — Clean Procedural Code
+
+The right answer for this domain isn't a data table. It's a single function whose structure mirrors how the business describes the policy:
+
+```python
+def can(user, document, action):
+    # Admins can do anything
+    if user.role == "admin":
+        return True
+
+    # Owners can edit, delete, and share their documents
+    # Exception: viewers can't delete even their own documents
+    if user.id == document.owner_id:
+        if action == "delete" and user.role == "viewer":
+            return False
+        return action in {"edit", "delete", "share"}
+
+    # Editors get department-scoped access
+    if user.role == "editor":
+        if action == "edit":
+            return document.department == user.department or document.is_public
+        if action == "share":
+            return document.department == user.department
+
+    # All other roles (including viewers): no access
+    return False
+```
+
+Eighteen lines. Every case handled correctly. A PM can verify it against the spec in 30 seconds.
+
+| | Disorganized procedural | Data-dominant | Clean procedural |
+|---|---|---|---|
+| Correct? | ✅ Yes | ❌ Two bugs | ✅ Yes |
+| Reads like policy? | ❌ Scattered, no structure | ⚠️ Need to trace through lambdas | ✅ Top-to-bottom |
+| PM can verify? | ❌ Across three functions | ❌ Across two dicts + engine | ✅ Single function |
+| Extend with new role? | Touch every function | Add dict entries (if rules are regular) | Add one block |
+
+#### The Lesson
+
+The state machine and calendar examples decomposed cleanly: independent dimensions, trivial engines, purely inspectable data. That's Rule 5 at its best.
+
+This permission system looked like it should decompose the same way — but the domain has **cross-cutting rules**. Scope varies by (role, action), not by role alone. Roles interact non-additively. These irregularities mean the data table either silently changes semantics (the bugs above) or needs lambdas and exception mechanisms (code in a data costume).
+
+**When clean decomposition doesn't exist, well-structured procedural code is the right answer — not a compromise.** The original three functions weren't bad because they used if/else. They were bad because the if/else was disorganized: scattered conditions, no grouping principle, duplicated checks, an ordering that reflects stream-of-consciousness rather than domain structure.
+
+Good procedural code treats its if/else tree as a **decision tree** and optimizes for two things:
+
+1. **Minimum structure.** No redundant checks. Unify related cases. The three-function version checks `user.role == "admin"` three times; the clean version checks it once.
+
+2. **Semantic match.** The tree's shape mirrors how the business reasons about the policy — what comes first, what's grouped, what's a special case of what. If the business says "admins override everything, then ownership matters, then role-based access," the code has exactly those blocks in exactly that order.
+
+**The test:** can someone who knows the policy but not the codebase read the function and confirm it's correct? If yes, the decision tree matches the domain. If they have to simulate execution paths or cross-reference multiple data structures, it doesn't.
 
 ---
 
@@ -503,7 +571,7 @@ In these domains, the right response to "I'm writing complex logic" is not "your
 
 ### When Data Tables Become Code in Disguise
 
-The permission example in this document works because permissions decompose into independent `(role, action, condition)` tuples. Many real business rules don't decompose cleanly:
+The permission example earlier in this document illustrates this directly: the data-dominant refactoring looked clean, but the domain's cross-cutting rules — scope varying by (role, action), roles restricting each other — meant the decomposition silently changed behavior. Many real business rules don't decompose cleanly:
 
 > "Editors can edit cross-department documents only during the first 48 hours after creation, unless the department head approved an extension, except for compliance-flagged documents which require VP-level approval regardless."
 
@@ -601,7 +669,34 @@ AI coding agents are pattern matchers trained on the corpus of existing code. Mo
 
 Multiple practitioners in the [HN thread on Pike's rules](https://news.ycombinator.com/item?id=47423647) (2026) confirmed this. User `ta20211004_1`: "Claude is much more likely to suggest or expand complex control flow logic on small data types than it is to recognize and implement an opportunity to encapsulate ideas in composable chunks." User `bfivyvysj`: "The data structures [from AI] are incredibly naive... no amount of context management will help you, it is fighting against the literal mean." User `jerf`: "AI tends to code the same way it documents... it won't have either clear flow charts or tables unless you carefully prompt for them."
 
-AI is competent at the *code* half of Rule 5 — writing simple operations on well-designed structures. It is weak at the *design* half — choosing the right structures in the first place. That requires domain judgment that can't be pattern-matched from GitHub.
+AI is competent at the *code* half of Rule 5 — writing simple operations on well-designed structures. It is weak at the *design* half — choosing the right structures in the first place. The question is *why*, and whether the gap is fixable.
+
+### Why: Five Layers of Failure
+
+AI's weakness at data-dominant design isn't a single problem. It decomposes into five layers with different causes and different fixability profiles.
+
+**Layer 1: Training distribution bias.** Most code on GitHub is mediocre and procedural. AI learns the statistical mean. As `bfivyvysj` put it: "it is fighting against the literal mean." The if/elif permission checker appears in thousands of repositories; the data-dominant version appears in dozens. AI reproduces the frequency distribution of its training data.
+
+**Layer 2: Task framing bias.** Users ask "write a function that checks permissions" — not "design the data model for a permission system." The prompt frames the problem as code generation, so AI generates code. The interface itself biases toward implementation over design. This is partly a user habit and partly a tool design issue: code editors, chat interfaces, and agent frameworks are all oriented around producing code, not around producing data models that make code unnecessary.
+
+**Layer 3: Optimization target mismatch.** AI coding models are evaluated on **correctness** — tests pass, code runs, output matches. Data-dominant design optimizes for **maintainability, extensibility, and clarity** — qualities with no automated signal. The if/elif permission checker *passes every test you'd write*. It's functionally identical to the data-dominant version. The difference only shows up months later when you add a new role, a new action, a new exception. Current evaluation benchmarks reward the wrong thing: they can measure whether code works but not whether the design is right.
+
+**Layer 4: The negative insight problem.** Data-dominant design is fundamentally about **restraint** — recognizing "this complexity shouldn't be code at all, it should be data." It's a *negative* insight: stop generating, step back, restructure. AI is trained to *produce tokens*. The entire reinforcement loop rewards generating output, not pausing to reconsider the problem framing. This is analogous to how AI struggles with "the answer is: we need more information" or "the right move is to do nothing." Knowing when to stop writing code and start restructuring data requires a meta-cognitive move that current training objectives don't reward.
+
+**Layer 5: Problem modeling vs. solution generation.** This is the deepest layer. **Data design is about modeling the problem. Code generation is about implementing a solution.** These are fundamentally different cognitive acts.
+
+The step-by-step method from earlier in this document reveals why:
+- **Name the entities** — requires understanding the *domain*, not the code
+- **Name the relationships** — requires knowing what changes, what's stable, who the stakeholders are
+- **Pick representations that make relationships queryable** — requires anticipating *future* access patterns
+
+None of this information is in the code. It's in the problem space. And the problem space includes things AI cannot observe from its training data:
+- **Organizational structure** — Conway's Law means the "right" schema depends on team boundaries
+- **Change vectors** — which requirements will shift next quarter
+- **Stakeholder mental models** — DDD's "ubiquitous language" comes from conversations with domain experts, not from code
+- **Questions that haven't been asked yet** — the whole point of Rule 5 is that good data structures make *unforeseen* queries easy
+
+AI can pattern-match "e-commerce systems usually have Product → Cart → Order → Payment" because that pattern is heavily represented in training data. But it can't tell you whether *your* business should model subscriptions as a separate entity or as a recurring order — that depends on your business strategy, your org structure, your existing integrations. This is domain judgment that requires understanding the problem, not recognizing patterns in solutions.
 
 ### The Cost Equation Shifts — Asymmetrically
 
@@ -653,7 +748,27 @@ There's a risk specific to the AI era:
 3. Requirements change → data model can't accommodate them → human redesign needed.
 4. But the human hasn't been practicing data design because AI was writing everything → the skill has atrophied.
 
-This is the scenario where Rule 5 matters most and gets practiced least. The mitigation is to keep data design as a human-owned responsibility, even as code generation is delegated to AI.
+This is the scenario where Rule 5 matters most and gets practiced least.
+
+**The "good enough to be dangerous" variant.** The compounding debt paradox becomes worse as AI *improves* at data design. If AI were 0% competent at data design, every developer would have to do it themselves — the skill would be preserved. If AI is 80% competent, it handles the permission systems and state machines correctly (because those are well-represented patterns in training data), and developers stop practicing. The remaining 20% — the novel domain models, the weird one-off business rules, the cross-system data contracts — are precisely the cases where getting the data model wrong is most expensive. AI handles the easy cases well enough that humans lose the skill needed for the hard cases. Partial competence is more corrosive to human expertise than total incompetence.
+
+The mitigation is to keep data design as a human-owned responsibility, even as code generation is delegated to AI. Use AI to *explore* schema variations and *simulate* their downstream implications, but keep the *judgment* about which model fits the domain on the human side.
+
+### Intrinsic vs. Transient
+
+Are these failures things AI will outgrow, or hard limits? The five layers have different answers.
+
+| Layer | Nature | Fixability | Timescale |
+|---|---|---|---|
+| 1. Training distribution bias | Transient | Better data curation, RLHF on design quality | 1–2 years |
+| 2. Task framing bias | Transient | Prompt design, tool UX changes | Already addressable (Level 1 prompting works) |
+| 3. Optimization target mismatch | Transient | New benchmarks that reward design, not just correctness | 3–5 years (requires evaluation community shift) |
+| 4. Negative insight / restraint | Mixed | Architectural advances + prompting partially address it; training objective tension remains | Uncertain |
+| 5. Problem modeling / domain judgment | Mostly intrinsic | Richer context helps; residual remains | Hard ceiling, softened by better context |
+
+**What "mostly intrinsic" means for Layer 5:** It does not mean AI will never improve at data design. It means the improvement curve flattens. AI with rich enough context — domain documentation, org charts, stakeholder interview transcripts, existing schemas, product roadmaps — can get substantially better at modeling problems. But data design requires tacit knowledge about domain boundaries and change vectors that experienced engineers build over years of watching systems evolve. That tacit knowledge resists formalization, which means it resists being encoded in a prompt or a training set. The gap narrows but doesn't close.
+
+**A partial counterargument:** the "Premature Data Modeling" section earlier in this document argues that data design is iterative, not a single act of insight. If so, AI's ability to generate 20 schema variations and simulate queries against each one could compress the iteration cycle — making AI a powerful *exploration tool* for data design even if it can't do the final judgment. The failure mode isn't "AI can't help with data design" — it's "AI defaults to skipping it entirely unless explicitly directed." The intervention at Level 1 (prompting) addresses exactly this default.
 
 ---
 
