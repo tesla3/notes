@@ -3,6 +3,14 @@
 > Current week. At week's end, move to `worklogs/2026-W12.md`.
 > Past weeks: [`worklogs/`](worklogs/)
 
+## 2026-03-22 — claire_ml repo init
+
+- Created `claire_ml` repo for Claire's spring break ML sprint
+- Moved all files from `notes/claire/` → organized into `notebooks/`, `notes/`, `src/`
+- Two micromamba envs: `jupyterlab` (host), `claire_ml` (work, Python 3.12)
+- Registered `claire_ml` as Jupyter kernel via ipykernel
+- **Decision:** Python 3.12 (PyTorch has no 3.14 wheels); pip-only for packages; micromamba only for env management
+
 ## 2026-03-22 — Pi: tps extension install
 
 - Installed `tps.ts` extension from `pi-mono/.pi/extensions/` — shows output tokens/sec and token breakdown after each agent turn
