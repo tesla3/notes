@@ -10,6 +10,18 @@
 - All 44/44 now fully ✅ screenshot-verified
 - **Next:** Ivy Day imminent (late March) — check back for RD wave
 
+## 2026-03-20 — PRS fit assessment: deep review, character analysis, interventions
+
+- Deep fact-check of `avery/prs-fit-assessment.md` — found 6 factual errors, 5 analytical gaps
+- **Corrected:** Exeter/Andover Ivy rate (17.6%, not "25-30%"), CCA class size (26:1 not 35), CCA counselor ratio (364:1 not 300:1), SAT projections flagged as speculative, Exeter≠PRS caveat
+- **Added:** CCA demographics (46% Asian), CCA genuine strengths (26 APs incl. AP CS A, Speech & Debate, 4×4), financial analysis ($161K savings at CCA), testing policy table (majority T20 STEM now require scores)
+- **Critical new finding — Avery character analysis:** fixed mindset ("I'm good at this / not good at that" since young), immediate-feedback preference (math/piano = immediate → thrives; verbal = delayed → avoids), system-optimizer (works hard but never raises bar on herself). She refused Speech & Debate at CCA course selection. Said "mini-required, be done with it." Garage FTC team = credential without contribution.
+- **Self-critique of PRS argument:** PRS assigning 890L books to 1200L reader + A+ grades masking verbal weakness + modest MAP growth projection = PRS may not be delivering on its core promise. BUT: middle school vs upper school distinction, reading list data pending.
+- **Key insight:** grade-level projects (9th Oration) matter more than Harkness for Avery specifically — forced verbal performance + immediate audience feedback matches her wiring. Growth mindset breaks through experience, not messaging.
+- **Actionable interventions added:** Vocabulary.com/Anki (immediate feedback), timed scored comprehension, rapid-feedback writing, MAP tracking, piano-as-analogy framing
+- **Decision:** Conditional PRS recommendation. Hinge = Scott Lyman reading list data. If upper school English is rigorous → stay. If below level + school shrugs → CCA + supplementation.
+- **Next:** Follow up Scott Lyman by Mar 23; email current English teacher; start Vocabulary.com immediately; re-scrape @prsdecisions2026 mid-April
+
 ## 2026-03-20 — PRS Instagram college decisions re-scrape
 
 - Re-scraped `@prsdecisions2026` — 1 new post since Feb 17

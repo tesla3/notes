@@ -219,13 +219,23 @@ These books were found at home — **not confirmed as the class reading list.** 
 
 ## PRS English Department — Key Contacts
 
-### Dr. Timothy Rosenwong — English Department Chair
+### Scott Lyman — Department Chair of English (current)
+- **LinkedIn title:** English Teacher and Department Chair at Pacific Ridge School
+- **PRS directory (stale):** Still lists him as "Director of Facilities and Security" — website not updated
+- **Confirmed by:** Tim Rosenwong's email (March 2026) referring to Scott as "the chair of the English department"
+- **Status:** Tim is making an intro. Waiting for Scott to reach out. If no contact by ~March 23, follow up directly referencing Tim's referral.
+
+### Johnnie Lyman — Former(?) Department Chair of English
+- **PRS directory (possibly stale):** Still listed as "Department Chair of English"
+- **LinkedIn:** Shows "High School Chemistry Teacher at High Tech High North County" — may have left PRS
+- **Note:** Two Lymans on staff. PRS website may not reflect current roles.
+
+### Timothy Rosenwong — Teacher of Science
 - **Email:** trosenwong@pacificridge.org
-- **At PRS since:** ~2015 (11 years)
+- **PRS directory (current):** Listed as **Teacher of Science** — not English, not department chair
 - **Education:** Ph.D. Comparative Literature (Shakespeare & critical theory), UC Irvine; M.A. Philosophy, UC Santa Cruz; B.A., UC Santa Cruz
-- **Prior teaching:** UC Irvine, UC Santa Cruz, Université Paris Nanterre
-- **Additional role:** Student Diversity Coordinator; AAPI affinity group faculty advisor
-- **Status:** Emailed requesting 9th/10th grade reading lists (March 2026)
+- **Note:** Our original research (from ZoomInfo) incorrectly identified him as English Department Chair. ZoomInfo data was stale. Tim's background is in literature/philosophy but he currently teaches science at PRS.
+- **Status:** Responded March 2026. Redirected to Scott Lyman (English chair). No further action needed.
 
 ### Elizabeth Grossman — Assistant Head of Upper School & Teacher of English
 - **Email:** egrossman@pacificridge.org
@@ -237,8 +247,13 @@ These books were found at home — **not confirmed as the class reading list.** 
 - **~25 years** in independent day schools
 - **Status:** Reserved for follow-up conversation if reading list data confirms rigor concerns
 
+### Data Quality Note
+Original contact research used ZoomInfo scraper data, which was stale/wrong on Tim Rosenwong's role. PRS website directory also appears partially outdated (Scott Lyman's title, possibly Johnnie Lyman's). Lesson: cross-reference scraper data against primary sources and staff themselves.
+
 ### Outreach Strategy
 1. ✅ Email current 8th grade English teacher — request this year's reading list + summer reading assignment
-2. ✅ Email Dr. Rosenwong (dept chair) — request 9th/10th grade reading lists (information only, neutral tone)
-3. ⏳ **Pending data:** Once lists are received, run full Lexile analysis
-4. ⏳ **If concerns confirmed:** Escalate to Elizabeth Grossman with evidence — discuss curriculum fit, differentiation options, and whether PRS is the right path for Avery's reading development
+2. ✅ Email Tim Rosenwong (believed to be dept chair) — request 9th/10th grade reading lists
+3. ✅ Tim responded — redirected to Scott Lyman (actual English dept chair). Intro in progress.
+4. ⏳ **Waiting:** Scott Lyman to respond with reading lists
+5. ⏳ **Pending data:** Once lists are received, run full Lexile analysis
+6. ⏳ **If concerns confirmed:** Escalate to Elizabeth Grossman with evidence — discuss curriculum fit, differentiation options, and whether PRS is the right path for Avery's reading development
