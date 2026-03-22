@@ -3,9 +3,43 @@
 > Current week. At week's end, move to `worklogs/2026-W12.md`.
 > Past weeks: [`worklogs/`](worklogs/)
 
+## 2026-03-22 — Pi: tps extension install
+
+- Installed `tps.ts` extension from `pi-mono/.pi/extensions/` — shows output tokens/sec and token breakdown after each agent turn
+- Initially copied file; replaced with symlink (`~/.pi/agent/extensions/tps.ts` → pi-mono source)
+- Reviewed `prompt-url-widget.ts` (PR/issue widget) and `redraws.ts` (TUI debug) — both pi-mono dev aids, skipped
+- **Decision:** Symlink extensions from source repos rather than copying, to stay in sync
+
+## 2026-03-22 — New machine setup: hua (Avery's MacBook Air)
+
+**Hardware:** MacBook Air M3, 24 GB RAM, macOS 26.3.1, arm64
+
+**Core tools installed (Homebrew):**
+- **Casks:** Visual Studio Code
+- **Formulae:** bat, chezmoi, coreutils, eza, findutils, fzf, gh, git-delta, glow, gnu-sed, grep, micromamba, ripgrep, tmux, zoxide
+- **Non-brew:** Node v24.14.0 (nvm), Python 3.9.6 (system), Git 2.50.1 (Apple)
+
+**Apps:** Ghostty (terminal)
+
+**Dev environment:**
+- pi coding agent (via nvm/node)
+- micromamba for Python per-project envs
+- SSH key set up, passwordless access to hua@nlp
+- git difftool configured for VS Code
+- pi extensions: diff, clipboard, files, handoff, memory-mode, oracle, plan-mode, review, session-breakdown, answer, context
+
+**Not yet installed:** nvim (vimdiff available via system vim)
+
+## 2026-03-22 — Pi: diff extension + VS Code setup
+
+- Installed diff extension from `pi-mono/.pi/extensions/diff.ts` → `~/.pi/agent/extensions/diff.ts`
+- Installed VS Code via `brew install --cask visual-studio-code`
+- Configured git difftool for VS Code: `git config --global difftool.vscode.cmd 'code --wait --diff "$LOCAL" "$REMOTE"'`
+- `/diff` command now available in pi — shows git status, opens selected file in VS Code diff view
+
 ## 2026-03-22 — Infra: SSH key setup
 
-- Re-generated SSH key on jack-sparrow (MacBook Air)
+- Re-generated SSH key on hua (MacBook Air)
 - Copied public key to hua@nlp — passwordless SSH now works
 - Added SSH tunnel config to `~/.ssh/config` on MacBook Air — `ssh nlp -N -f` opens tunnel in background without a login session
 
