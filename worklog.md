@@ -3,6 +3,11 @@
 > Current week. At week's end, move to `worklogs/2026-W12.md`.
 > Past weeks: [`worklogs/`](worklogs/)
 
+## 2026-03-22 — Infra: SSH key setup
+
+- Re-generated SSH key on jack-sparrow (MacBook Air)
+- Copied public key to hua@nlp — passwordless SSH now works
+
 ## 2026-03-20 — TBS Instagram college decisions update
 
 - Re-scraped `@tbs26decisions` — still 44 posts, no new since Feb 16
