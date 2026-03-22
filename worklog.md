@@ -7,6 +7,7 @@
 
 - Re-generated SSH key on jack-sparrow (MacBook Air)
 - Copied public key to hua@nlp — passwordless SSH now works
+- Added SSH tunnel config to `~/.ssh/config` on MacBook Air — `ssh nlp -N -f` opens tunnel in background without a login session
 
 ## 2026-03-20 — TBS Instagram college decisions update
 
