@@ -15,6 +15,7 @@
 - [Coding Agents](topics/coding-agents.md) — Pi, OpenClaw, agent landscape, tool comparisons, practitioner evidence
 - [Software Factory](topics/software-factory.md) — autonomous production, dark factory thesis, verification layers, StrongDM
 - [Developer Tools](topics/dev-tools.md) — terminal markdown renderers, search APIs, browser comparison
+- [College Admissions](topics/college-admissions.md) — daughters' application strategy, post-SFFA / post-test-optional / post-AI landscape, consultant search
 
 ## Other Research
 

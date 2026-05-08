@@ -6,7 +6,7 @@
 set -e
 
 echo "=== Animations & Visual Effects ==="
-defaults write com.apple.universalaccess reduceMotion -bool true
+sudo defaults write com.apple.universalaccess reduceMotion -bool true
 defaults write com.apple.finder DisableAllAnimations -bool true
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 defaults write -g QLPanelAnimationDuration -float 0
@@ -25,10 +25,10 @@ killall Dock
 killall Finder
 
 echo "=== Disabling background daemons (persistent) ==="
-sudo launchctl disable system/us.zoom.ZoomDaemon
-launchctl disable gui/$(id -u)/us.zoom.updater
-launchctl disable gui/$(id -u)/us.zoom.updater.login.check
-launchctl disable gui/$(id -u)/com.amazon.codewhisperer.launcher
+#sudo launchctl disable system/us.zoom.ZoomDaemon
+#launchctl disable gui/$(id -u)/us.zoom.updater
+#launchctl disable gui/$(id -u)/us.zoom.updater.login.check
+#launchctl disable gui/$(id -u)/com.amazon.codewhisperer.launcher
 
 echo "=== DNS → Cloudflare ==="
 sudo networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1
