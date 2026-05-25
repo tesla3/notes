@@ -517,3 +517,13 @@ The analysis has been through three reviews and the core architecture remains ro
 - Futurum Group, "Microsoft Leaders Have an Answer To AI Gutting the Developer Pipeline," Mar 2026 (analysis of Russinovich/Hanselman CACM piece + EDS precedent)
 - "Artificial Creativity: from predictive AI to Generative System 3," Frontiers in AI, Mar 2026 — tri-process framework for LLM creativity limitations
 - Reddit r/LocalLLaMA, "Let's talk about the 'swe-bench verified' benchmark/leaderboard," Jan 2026 (discussion of submission restrictions and score discrepancies)
+
+## Addendum (from earlier draft)
+*2026-03-10. Distilled from an adversarial analysis session probing the HN "Agents that run while I sleep" thread's consensus on AI testing, specification, and human-AI collaboration.*
+- **Meta ACH (ICSE 2025):** Production deployment across 10,795 Kotlin classes (Messenger, WhatsApp). Engineers accepted 73% of generated tests.
+### Evidence That AI Handles Unspecified Gaps Adequately
+- "Will It Survive?" (arxiv 2601.16809, Jan 2026): AI code is modified less frequently than human code (HR=0.842) across 200K code units in 201 OSS projects. Whatever AI does with unspecified gaps, it's not systematically worse than human judgment.
+- **Models regress on code quality.** Current trajectory is improvement, but not guaranteed.
+- **Spec ambiguity at scale.** Works for function/feature level. Unclear for large-system architectural decisions.
+- **Expertise pipeline.** If junior developers never engage with implementation, do they develop the judgment to write good specs and identify real problems? This is an open question, not a refutation — analogous to asking whether SQL analysts need to understand query engines. (Mostly they don't.)
+- Meta ACH, "Mutation-Guided LLM-based Test Generation at Meta," ICSE 2025

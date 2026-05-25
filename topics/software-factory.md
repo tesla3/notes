@@ -42,6 +42,11 @@ Key ideas: specification sandwich (types → contracts → PBT wrapping every fu
 - [Verification, Alignment & Software Factory](../research/verification-alignment-software-factory.md) — convergence of factory verification with AI training (RLHF/GRPO)
 - [Maximum Leverage Brainstorm](../research/maximum-leverage-brainstorm.md) — verification harness design: type hints, contracts, PBT for agent loops
 - [HN: What AI Coding Costs You](../research/hn-ai-coding-costs-47194847.md) — StrongDM factory as "ghost at the banquet" in developer cognitive-cost debate
+- [Stripe Minions — Article Analysis](../research/stripe-minions-part1-analysis.md) — deep read of Part 1 & 2 blog posts, blueprints pattern, Toolshed, verification transfer thesis
+- [HN: Stripe Minions Part 2](../research/hn-stripe-minions-part2.md) — 1,300 agent PRs/week at Stripe, HN reaction, guardrails-as-moat insight
+- [V4 Meta-Review](../research/thoughts-critical-review-v4-meta.md) — distilled synthesis across all reviews: two architectures, what's proven, what to build next
+- [**The Post-Generation Thesis**](../research/thoughts-synthesis-summary.md) — standalone research report: verification bottleneck evidence, StrongDM forensic evaluation, marketplace behavioral simulation proposal, two-architecture framework, 48 primary sources
+- [**Executive Summary**](../research/thoughts-synthesis-exec-summary-edited.md) — Director/VP-level distillation of the Post-Generation Thesis
 
 ## Related
 

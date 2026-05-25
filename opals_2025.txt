@@ -1,0 +1,444 @@
+
+Get responses tailored to you
+
+Log in to get answers based on saved chats, plus create images and upload files.
+
+
+Log in
+Content created using ChatGPT
+I looked at your context and the lab you linked is Rose Yu’s Spatiotemporal Learning Lab (Rose-STL Lab at UCSD). Their work is not generic “deep learning”; it focuses on scientific machine learning, especially:
+
+Spatiotemporal data (data changing across space + time)
+
+Climate/environment
+
+Transportation
+
+Healthcare
+
+Biology
+
+Dynamical systems
+
+AI for science
+
+Graph neural networks (GNNs)
+
+Time-series forecasting
+
+Scientific foundation models
+
+That is actually very aligned with OPALS + UCSD IEM + biophotonics + RTCA imaging + neuroscience.
+
+Here are realistic projects high school students could do after following their ML getting-started roadmap:
+
+1. Predict Cell Wound Healing from RTCA/eSight Images ⭐⭐⭐⭐⭐
+Very OPALS-friendly.
+
+Data:
+
+Fibroblast wound healing
+
+Endothelial cells
+
+Oxidative stress
+
+Confluence curves
+
+Time-lapse images
+
+Questions:
+
+Can AI predict:
+
+wound closure speed?
+
+final confluence?
+
+recovery after H₂O₂?
+
+effect of drugs/peptides?
+
+Methods:
+
+CNN + LSTM / Time-series models
+
+Possible title:
+
+Deep Learning Prediction of Cell Recovery Dynamics Using Real-Time Imaging
+
+Could become conference abstracts.
+
+2. Forecast Cell Growth Curves
+Use RTCA impedance values:
+
+Input:
+
+0–24 hrs
+
+Predict:
+
+24–72 hrs
+
+This becomes:
+
+time-series forecasting
+
+Exactly Rose Lab territory.
+
+Algorithms:
+
+LSTM
+
+Transformer
+
+Temporal CNN
+
+3. AI Classification of Healthy vs Stressed Cells ⭐⭐⭐⭐
+Images:
+
+Control vs oxidative stress
+
+Classify:
+
+Healthy / Damaged
+
+Good beginner CV project.
+
+4. Neuroscience + ML
+Use:
+
+Mouse tracking
+
+Deeplabcut outputs
+
+Alzheimer's mice
+
+Predict:
+
+Behavior scores
+
+Possible conference paper.
+
+5. Predict Cancer Drug Response ⭐⭐⭐⭐⭐
+Your lab already discusses:
+
+KRAS inhibitors
+
+peptides
+
+HGH
+
+HPAECs
+
+Train models:
+
+Drug concentration → cell viability
+
+Potential publication.
+
+6. Spatial Biology / Cell Position Modeling
+Rose Lab works heavily on spatial-temporal systems.
+
+Project:
+
+Can neighboring cells predict wound healing?
+
+Graph Neural Networks (GNN)
+
+Very advanced but impressive.
+
+7. AI for Stargardt Disease / Retina
+Since your group works on retinal disease:
+
+Predict:
+
+Cell damage progression
+
+or
+
+Image segmentation
+
+Strong translational angle.
+
+8. Build a Scientific Foundation Model for OPALS Data
+Long-term vision:
+
+Combine:
+
+microscopy
+
+impedance
+
+gene expression
+
+behavior
+
+Train one AI model.
+
+This is where biology AI is moving.
+
+9. Environmental + Health AI (easier for HS students)
+Examples:
+
+Air pollution → asthma
+
+Climate → disease spread
+
+Uses public datasets.
+
+10. Transportation + Public Health (excellent for conferences)
+Rose Lab has transportation ML.
+
+Questions:
+
+Traffic + pollution → health outcome
+
+Urban design → accessibility
+
+Good for students without wet lab access.
+
+For Summer OPALS 2026, I think the highest-impact ML projects would be:
+
+Predicting wound healing using RTCA images ⭐⭐⭐⭐⭐
+
+Forecasting cell growth curves from impedance data ⭐⭐⭐⭐⭐
+
+Healthy vs stressed cell image classification ⭐⭐⭐⭐
+
+Cancer drug response prediction ⭐⭐⭐⭐
+
+Mouse behavior + AI ⭐⭐⭐⭐
+
+Those leverage equipment you already have and can realistically produce abstracts in 4 weeks.
+
+Also: if Rose Yu’s group becomes an OPALS advisor, a project like:
+
+AI for Predicting Cell Recovery Dynamics from Real-Time Imaging
+
+would fit their lab surprisingly well.
+
+
+
+Voice
+
+Email Rewrite Request
+You’re viewing user-generated content that may be unverified or unsafe.
+Report
+
+Email Rewrite Request
+You’re viewing user-generated content that may be unverified or unsafe.
+Report
+I looked at your context and the lab you linked is Rose Yu’s Spatiotemporal Learning Lab (Rose-STL Lab at UCSD). Their work is not generic “deep learning”; it focuses on scientific machine learning, especially:
+
+Spatiotemporal data (data changing across space + time)
+
+Climate/environment
+
+Transportation
+
+Healthcare
+
+Biology
+
+Dynamical systems
+
+AI for science
+
+Graph neural networks (GNNs)
+
+Time-series forecasting
+
+Scientific foundation models
+
+That is actually very aligned with OPALS + UCSD IEM + biophotonics + RTCA imaging + neuroscience.
+
+Here are realistic projects high school students could do after following their ML getting-started roadmap:
+
+1. Predict Cell Wound Healing from RTCA/eSight Images ⭐⭐⭐⭐⭐
+Very OPALS-friendly.
+
+Data:
+
+Fibroblast wound healing
+
+Endothelial cells
+
+Oxidative stress
+
+Confluence curves
+
+Time-lapse images
+
+Questions:
+
+Can AI predict:
+
+wound closure speed?
+
+final confluence?
+
+recovery after H₂O₂?
+
+effect of drugs/peptides?
+
+Methods:
+
+CNN + LSTM / Time-series models
+
+Possible title:
+
+Deep Learning Prediction of Cell Recovery Dynamics Using Real-Time Imaging
+
+Could become conference abstracts.
+
+2. Forecast Cell Growth Curves
+Use RTCA impedance values:
+
+Input:
+
+0–24 hrs
+
+Predict:
+
+24–72 hrs
+
+This becomes:
+
+time-series forecasting
+
+Exactly Rose Lab territory.
+
+Algorithms:
+
+LSTM
+
+Transformer
+
+Temporal CNN
+
+3. AI Classification of Healthy vs Stressed Cells ⭐⭐⭐⭐
+Images:
+
+Control vs oxidative stress
+
+Classify:
+
+Healthy / Damaged
+
+Good beginner CV project.
+
+4. Neuroscience + ML
+Use:
+
+Mouse tracking
+
+Deeplabcut outputs
+
+Alzheimer's mice
+
+Predict:
+
+Behavior scores
+
+Possible conference paper.
+
+5. Predict Cancer Drug Response ⭐⭐⭐⭐⭐
+Your lab already discusses:
+
+KRAS inhibitors
+
+peptides
+
+HGH
+
+HPAECs
+
+Train models:
+
+Drug concentration → cell viability
+
+Potential publication.
+
+6. Spatial Biology / Cell Position Modeling
+Rose Lab works heavily on spatial-temporal systems.
+
+Project:
+
+Can neighboring cells predict wound healing?
+
+Graph Neural Networks (GNN)
+
+Very advanced but impressive.
+
+7. AI for Stargardt Disease / Retina
+Since your group works on retinal disease:
+
+Predict:
+
+Cell damage progression
+
+or
+
+Image segmentation
+
+Strong translational angle.
+
+8. Build a Scientific Foundation Model for OPALS Data
+Long-term vision:
+
+Combine:
+
+microscopy
+
+impedance
+
+gene expression
+
+behavior
+
+Train one AI model.
+
+This is where biology AI is moving.
+
+9. Environmental + Health AI (easier for HS students)
+Examples:
+
+Air pollution → asthma
+
+Climate → disease spread
+
+Uses public datasets.
+
+10. Transportation + Public Health (excellent for conferences)
+Rose Lab has transportation ML.
+
+Questions:
+
+Traffic + pollution → health outcome
+
+Urban design → accessibility
+
+Good for students without wet lab access.
+
+For Summer OPALS 2026, I think the highest-impact ML projects would be:
+
+Predicting wound healing using RTCA images ⭐⭐⭐⭐⭐
+
+Forecasting cell growth curves from impedance data ⭐⭐⭐⭐⭐
+
+Healthy vs stressed cell image classification ⭐⭐⭐⭐
+
+Cancer drug response prediction ⭐⭐⭐⭐
+
+Mouse behavior + AI ⭐⭐⭐⭐
+
+Those leverage equipment you already have and can realistically produce abstracts in 4 weeks.
+
+Also: if Rose Yu’s group becomes an OPALS advisor, a project like:
+
+AI for Predicting Cell Recovery Dynamics from Real-Time Imaging
+
+would fit their lab surprisingly well.
+
+

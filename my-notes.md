@@ -170,3 +170,10 @@ The user wants **three** changes:
 User's push back is much more strongly felt, rather than instructing with an extra step (which is usually useless).
 
 **implication: LLM/AI assistant are trained to be interactive rather than fully autonomous (or how to balance them?)
+
+---
+tag: tactic
+** production deployment can be blocked by LSE2 in non-obivious way. Say we try to deploy to us-west-2, though LSE is in us-east-1, but still can delay the deployment.
+
+---
+2/27| new insights | scionarios library become more essential assets. 1/ SQLites selling tests as business model. 2/ [tldraw move test to close source repo] (https://github.com/tldraw/tldraw/issues/8082) 3/ [Cloudfair re-writes Next.js in one week] (https://blog.cloudflare.com/vinext/)

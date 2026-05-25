@@ -92,6 +92,9 @@ Kiro CLI's context model: guidance (conventions) + instructions (task-specific) 
 - [AI Coding Agents Feb 2026](../research/ai-coding-agents-feb-2026-deep-assessment.md) — state of the landscape: Anthropic, OpenAI, Google, AWS, Apple
 - [OpenCode vs Claude Code vs Kiro](../research/critical-review-opencode-claude-code-kiro.md) — claim-by-claim tool comparison review
 - [Context Engineering for Kiro CLI](../research/context-engineering-kiro-cli-v2.md) — full feature reference for Kiro's context model
+- [Goose vs Pi Deep Comparison](../research/goose-vs-pi-deep-comparison.md) — architecture, extensions, sessions, context engineering, community, verdict
+- [Anthropic Model-Tool Co-Optimization Audit](../research/anthropic-model-tool-co-optimization-audit.md) — does Anthropic jointly optimize Claude + Claude Code? (verdict: substantially overstated)
+- [HN: Gemini 3.1 Pro Reactions](../research/hn-gemini-3.1-pro-practitioner-reactions.md) — steerability as the new bottleneck, model affinity, why Gemini fails agentically
 
 ### Agent Sandboxing & Security
 
@@ -109,6 +112,14 @@ Kiro CLI's context model: guidance (conventions) + instructions (task-specific) 
 - [Separate User: Pre-Commitment Analysis](../research/agent-separate-user-precommit-analysis.md) — what you get, pay, forgo, and what remains exposed
 - [Ash (ashell.dev) Critical Review](../research/ash-ashell-critical-review.md) — proprietary macOS sandbox using Endpoint Security + Network Extension. Best OS-level sandbox available; novel policy registry, observe mode, exec argument matching. But shared kernel = ceiling. No secret injection, no confused deputy mitigation, no red-teaming evidence, closed source.
 - [Agent Security: What People Actually Do](../research/agent-security-landscape-what-people-do.md) — interactive vs autonomous, LuLu + dedicated accounts pattern, tiered recommendations
+- [Securing Pi Agents: Landscape & Patterns](../research/securing-pi-agents-landscape.md) — four-layer model, NVIDIA Red Team controls, community patterns, practical tiers
+- [Pi + Nono: Best of Both](../research/pi-plus-nono-best-of-both.md) — layered integration: nono kernel sandbox + pi sandbox extension, three approaches
+- [Agent Security from First Principles](../research/agent-security-first-principles.md) — fundamental critique: in-process tools as architectural flaw, API key proxy, allowlists over denylists, split trust domain proposal
+- [Gondolin Security Review](../research/gondolin-security-review.md) — first-principles review of Gondolin micro-VM sandbox: all four tools in VM, secret placeholders, userspace network stack, NVIDIA controls ✅
+- [Gondolin Security Review Validation](../research/gondolin-security-review-validation.md) — code-level validation of the review: confirms architecture, finds ARM64-only claim wrong (x86_64 tested in CI), flags WebSocket opaque tunnel as missed security gap
+- [Pi-Mono vs Rust Alternatives](../research/research-pi-mono-rust.md) — security-focused comparison, why sandboxing beats rewrites
+- [HN: OpenClaw Bull Case Reactions](../research/hn-openclaw-bull-case-reactions.md) — productivity skepticism, "solution looking for a problem," non-determinism vs life admin
+- [HN: NanoClaw Security Reactions](../research/hn-nanoclaw-security-reactions.md) — lethal trifecta, prompt injection unsolved, coding vs product agent taxonomy, sandboxing is ~20% of threat surface
 
 ### Multi-Agent Coordination
 - [HN: Parallel Coding Agents with tmux & Markdown Specs](../research/hn-parallel-coding-agents-tmux-47218318.md) — spec-driven FD workflow, ~8 agent cognitive ceiling, "don't sync, own" pattern, deny-list security broken, output is personal/internal tooling, tool churn outpacing workflow stabilization

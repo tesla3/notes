@@ -1,0 +1,123 @@
+// --- Pandoc typst template for dense professional proposal ---
+
+#let horizontalrule = v(0.3em) + line(length: 100%, stroke: 0.3pt + luma(200)) + v(0.3em)
+
+#show terms.item: it => block(breakable: false)[
+  #text(weight: "bold")[#it.term]
+  #block(inset: (left: 1.5em, top: -0.4em))[#it.description]
+]
+
+#show figure.where(kind: table): set figure.caption(position: top)
+#show figure.where(kind: image): set figure.caption(position: bottom)
+
+// Remove figure caption numbering for tables (pandoc wraps tables in figures)
+#show figure.where(kind: table): set figure(numbering: none)
+#show figure.caption: it => {
+  // Hide auto-generated "Table N:" captions from pandoc
+}
+
+$if(highlighting-definitions)$
+$highlighting-definitions$
+$endif$
+
+#set smartquote(enabled: false)
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+// ---- Page & typography setup ----
+#set page(
+  paper: "us-letter",
+  margin: (x: 0.75in, y: 0.65in),
+  numbering: "1",
+  number-align: center,
+  header: context {
+    if counter(page).get().first() > 1 [
+      #set text(7pt, fill: luma(140))
+      #emph[PA as Buffer for Screen Time–Sleep Association]
+      #h(1fr)
+      #emph[Summer Research Camp Proposal]
+    ]
+  },
+)
+
+#set par(justify: true, leading: 0.5em, first-line-indent: 0em, spacing: 0.6em)
+#set text(
+  font: ("Libertinus Serif", "Georgia", "Times New Roman"),
+  size: 9pt,
+  lang: "en",
+  region: "US",
+)
+
+// ---- Heading styles ----
+#show heading.where(level: 1): it => {
+  set text(12.5pt, weight: "bold")
+  v(0.4em)
+  block(below: 0.15em)[#it]
+  line(length: 100%, stroke: 0.4pt + luma(100))
+  v(0.1em)
+}
+
+#show heading.where(level: 2): it => {
+  set text(10pt, weight: "bold")
+  v(0.3em)
+  block(below: 0.15em)[#it]
+}
+
+#show heading.where(level: 3): it => {
+  set text(9pt, weight: "bold", style: "italic")
+  v(0.2em)
+  block(below: 0.1em)[#it]
+}
+
+// ---- Table styling — professional academic rules ----
+#set table(
+  inset: (x: 5pt, y: 3pt),
+  stroke: none,
+)
+#show table: set text(8pt)
+
+// Add top/bottom rules and header rule via table.hline
+#show table: it => {
+  set text(8pt)
+  block(width: 100%, above: 0.4em, below: 0.4em)[#it]
+}
+
+// ---- Block quote styling ----
+#show quote.where(block: true): it => {
+  set text(8.5pt, style: "italic", fill: luma(30))
+  block(inset: (left: 1em, right: 0.8em, y: 0.15em), stroke: (left: 1.5pt + luma(170)))[#it]
+}
+
+// ---- Code blocks ----
+#show raw.where(block: true): it => {
+  set text(6.5pt)
+  block(fill: luma(248), inset: 5pt, radius: 1.5pt, width: 100%, breakable: true)[#it]
+}
+#show raw.where(block: false): set text(8pt)
+
+// ---- Lists ----
+#set list(indent: 0.7em, body-indent: 0.3em, spacing: 0.3em)
+#set enum(indent: 0.7em, body-indent: 0.3em, spacing: 0.3em)
+
+// ---- Title block ----
+#align(center)[
+  #v(0.1in)
+  #block(below: 0.15em)[
+    #set text(14.5pt, weight: "bold")
+    $if(title)$$title$$endif$
+  ]
+  $if(subtitle)$
+  #block(below: 0.1em)[
+    #set text(9.5pt, fill: luma(50))
+    $subtitle$
+  ]
+  $endif$
+  #v(0.04in)
+  #line(length: 30%, stroke: 0.3pt + luma(170))
+  #v(0.08in)
+]
+
+// ---- Body ----
+$body$
