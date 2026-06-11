@@ -303,6 +303,73 @@ The most common pipeline right now: **CogSci → UX/Product Design** in tech. Th
 
 ---
 
+## How Rigorous Is It Really? (Honest Assessment)
+
+### The uncomfortable truth: it depends entirely on which track you choose
+
+CogSci is a **wide-variance discipline**. The same department contains students on tracks that are worlds apart in intellectual demand. This is simultaneously its greatest strength and its biggest credibility problem.
+
+### The Difficulty Spectrum
+
+| Track / Level | Math Required | Rigor Level | Comparable To |
+|---|---|---|---|
+| **General BA** (UCSD) | Calculus, intro stats | Moderate | Psychology major with some CS exposure |
+| **Design & Interaction** (UCSD) | Minimal beyond stats | Moderate | HCI / Information Science |
+| **Language & Culture** | Minimal | Moderate | Linguistics + anthropology |
+| **Clinical Aspects** | Moderate (can add orgo/physiology) | Moderate-Hard | Pre-med psychology track |
+| **Neuroscience spec.** | Moderate | Hard | Neuroscience minor equivalent |
+| **Machine Learning & Neural Computation** (UCSD) | **10 math classes** (Calc series, linear algebra, probability, upper-div stats), **6 programming classes** | **Hard** | CS minor + neuroscience |
+| **PhD program** (UCSD) | Varies by subfield but computational fluency expected | **Very hard** | Competitive with top psych/neuro/CS PhD programs. ~5-7% admit rate (10-14 from 200-250 applicants) |
+
+### What "Brainy" Means Here
+
+CogSci doesn't demand one kind of intelligence. It demands **intellectual range**:
+
+**To survive (get the degree):**
+- You need to be able to handle intro statistics, basic programming (Python), and memorize neuroanatomy
+- The general BA/BS floor is genuinely not that high. Minimum 2.0 GPA in upper-division courses. C- per course.
+- Multiple students describe the intro courses as "just memorization"
+- CogSci is **not** an impacted/capped major at UCSD (unlike CS, engineering, biology) — you can declare it freely once admitted
+
+**To get a lot out of it (the middle tier):**
+- You need to be comfortable switching between quantitative and qualitative reasoning in the same week
+- Read a philosophy paper Monday, code a neural network Wednesday, memorize brain anatomy Friday
+- The students who thrive are the ones who genuinely enjoy the *connections* between fields — not just tolerating breadth as a requirement
+- This requires genuine intellectual curiosity more than raw horsepower
+
+**To get the most out of it (top tier / research / PhD track):**
+- You need serious mathematical maturity: calculus through multivariable, linear algebra, probability theory, and the ability to read papers with equations without flinching
+- You need programming skill deep enough to build computational models, not just run someone else's code
+- You need to read and critically evaluate primary research across multiple disciplines
+- You need to hold Marr's three levels in your head simultaneously and know when a claim at one level doesn't support a claim at another
+- This is genuinely demanding. The best CogSci researchers are as quantitatively sophisticated as CS researchers AND as theoretically careful as philosophers AND as experimentally rigorous as psychologists. That triple competence is rare.
+
+### Failure Rate / Attrition
+
+There is no published "failure rate" for CogSci specifically at UCSD or elsewhere. But here's what the data suggests:
+
+**Undergraduate:**
+- The floor is low enough that few people *fail out*. The 2.0 GPA minimum and C- per course thresholds aren't gatekeepers.
+- UCSD graduates ~750+ CogSci bachelor's per year (759 in 2021-22, up 9% from prior year). It's one of the largest majors.
+- The real "failure" isn't academic — it's **the breadth-without-depth trap**. As one UCSD alum put it: *"the depth you learn in one specific subject is generally in inverse proportion to the scope of knowledge. You won't be called an expert."* Graduates with just a general BA often struggle in the job market because *nobody knows what CogSci is*, and the degree alone doesn't make you competitive against a CS major for engineering roles or a psych major for clinical roles.
+- Another alum: *"A degree in Cognitive Science is vague, and nobody really knows what it is. I'd say you really want to know what your career goals are before committing."*
+
+**Graduate (PhD):**
+- Much more selective at entry (~5-7% admit rate at UCSD). Students come from CS, EE, linguistics, math, psychology — varied backgrounds but all strong.
+- PhD completion rates at UCSD are comparable to other top programs (UC system-wide doctoral completion is ~55-65% within 10 years depending on field). CogSci is likely in that range.
+
+### The Honest Verdict
+
+**CogSci has a low floor and a very high ceiling.**
+
+At the low end, you can cruise through a BA doing intro psych courses, light coding, and some neuroscience memorization. It's not harder than psychology. This is fine if you're using it as a stepping stone to UX/design or as a launchpad to grad school where you'll specialize.
+
+At the high end — ML specialization, computational modeling, PhD-track research — it demands the kind of person who can handle multivariable calculus AND Wittgenstein AND fMRI data analysis AND Python AND experimental design. That's a genuinely unusual cognitive profile. Not necessarily "genius IQ" but **high intellectual bandwidth** — the ability to context-switch across radically different modes of thinking without drowning.
+
+**The risk isn't failing. The risk is being mediocre across six disciplines instead of excellent in one.** The students who thrive are the ones who use the breadth strategically — picking a computational spine (ML, data science, or neuroscience) and wrapping the interdisciplinary perspective around it, rather than floating through surface-level exposure to everything.
+
+---
+
 ## Bottom Line
 
 Cognitive science asks: **How does the mind work?** It attacks this question by combining the tools of multiple disciplines under the unifying idea that cognition involves computation over representations. It produced AI, behavioral economics, UX design, and modern neuroscience as byproducts. The flagship program is UCSD (first department, 1986). The standard intro textbook is Thagard's *Mind* (MIT Press). The field is ~50 years old and currently in a period of intense ferment as it grapples with what deep learning and LLMs mean for theories of human cognition.
