@@ -200,6 +200,109 @@ It's arguably the most consequential interdisciplinary field of the second half 
 
 ---
 
+## What Students Actually Learn — Skills and Deep Understanding
+
+This is where CogSci gets interesting. It's not just "learn some psychology + some CS." The curriculum trains a specific *type of thinker* that doesn't come out of any single department.
+
+### The Deep Understanding (What You *Know*)
+
+**1. The mind as an information-processing system**
+The foundational insight: cognition = computation over representations. Students internalize this at a level where they can look at *any* intelligent behavior — a child learning language, a doctor diagnosing illness, a user navigating an app — and ask: What representations are being used? What computations are being performed on them? Where do they break down?
+
+**2. Multiple levels of analysis (Marr's framework)**
+David Marr's three levels become second nature:
+- **Computational**: *What* is the system trying to do? What problem is it solving?
+- **Algorithmic**: *How* does it solve it? What representations and procedures?
+- **Implementational**: *What* is it physically made of? (neurons, silicon, social structures)
+
+This is arguably the most transferable intellectual tool in CogSci. It teaches you to analyze *any* complex system by asking "what, how, and in what substrate?" — and to recognize that answers at one level don't automatically explain the others.
+
+**3. How perception, memory, attention, and language actually work**
+Not armchair philosophizing — experimental results:
+- Memory isn't a filing cabinet; it's reconstructive and fallible (Bartlett, Loftus)
+- Attention is a bottleneck with specific, measurable limits (Broadbent, Treisman)
+- Perception is an active inference process, not passive recording (Marr, Helmholtz)
+- Language acquisition can't be explained by stimulus-response alone; there's innate structure (Chomsky, but also Tomasello's usage-based alternatives)
+- Decision-making is systematically irrational in predictable ways (Kahneman & Tversky)
+
+**4. The brain-mind relationship**
+Students learn the *hard* version: not just "the brain does thinking" but how specific neural circuits map to cognitive functions, where the mapping is clean (e.g., visual cortex retinotopy), and where it's messy (consciousness, executive function). They learn to read fMRI studies critically — what they actually show vs. what journalists claim.
+
+**5. Computation and its limits**
+What a Turing machine can and can't do. Why symbolic AI works for some problems and fails for others. Why connectionist/neural network approaches succeed where symbols fail — and vice versa. The strengths and weaknesses of Bayesian models. This isn't CS theory in the abstract; it's always tied to "what does this tell us about the mind?"
+
+**6. The embodied/situated turn**
+Cognition doesn't happen in a vacuum. It's shaped by:
+- The body (affordances, sensorimotor grounding)
+- The environment (distributed cognition — Hutchins' classic: a ship's navigation is performed by the *system* of people + instruments, not by any one brain)
+- Culture and language (Boroditsky's work on how language shapes thought)
+
+This gives CogSci students a richer model of intelligence than pure CS students typically get.
+
+### The Practical Skills (What You *Can Do*)
+
+**1. Experimental design and statistical reasoning**
+- Design controlled experiments to test cognitive hypotheses
+- Statistical analysis (frequentist and increasingly Bayesian)
+- Understand confounds, effect sizes, replication issues
+- Read and critically evaluate empirical papers
+
+**2. Programming and computational modeling**
+- Python (standard), sometimes R, MATLAB, or LISP
+- Build computational models of cognitive processes (neural networks, Bayesian models, reinforcement learning agents)
+- Data science pipeline: collect, clean, analyze, visualize
+
+**3. Interdisciplinary translation**
+This is the *distinctive* skill. A CogSci graduate can:
+- Read a neuroscience paper, a philosophy paper, a linguistics paper, and an AI paper on the same phenomenon and synthesize them
+- Translate between disciplinary vocabularies
+- Spot when a finding in one field has implications for another that the specialists missed
+- Hold multiple levels of explanation simultaneously without collapsing them
+
+**4. Human-centered design thinking**
+Especially at UCSD (Design & Interaction track):
+- User research (ethnographic observation, cognitive task analysis)
+- Rapid prototyping and usability testing
+- Information architecture based on cognitive principles
+- This is why CogSci → UX/Product Design is such a well-worn career path
+
+**5. Formal reasoning and argumentation**
+From the philosophy side:
+- Construct and evaluate deductive and inductive arguments
+- Identify logical fallacies and cognitive biases (in others AND in yourself)
+- Engage with hard questions about consciousness, free will, and the nature of representation without hand-waving
+
+**6. Scientific communication**
+- Write up research following disciplinary conventions
+- Present complex interdisciplinary findings to varied audiences
+- This comes naturally from having to constantly explain to one discipline what another discipline found
+
+### What Makes CogSci Graduates Different
+
+Compared to a **psychology** graduate: more computational skill, more formal modeling, more exposure to AI/linguistics/philosophy. Broader toolkit.
+
+Compared to a **computer science** graduate: deeper understanding of human cognition, perception, and behavior. Better at designing systems that work *for* humans, not just systems that work.
+
+Compared to a **neuroscience** graduate: more computational and theoretical breadth. Less bench biology, more cognitive architecture.
+
+Compared to a **philosophy** graduate: more empirical grounding. Trained to test ideas, not just debate them.
+
+The unique compound: **someone who can think rigorously about both human minds and artificial systems, design experiments to test theories, build computational models, and translate across disciplinary boundaries.** This is rare.
+
+### Where Graduates End Up (UCSD data)
+
+| Path | Examples |
+|---|---|
+| **Tech industry** | UX designer/researcher, product manager, data scientist, ML engineer, software engineer, front-end developer |
+| **Graduate school** | PhD in CogSci, neuroscience, psychology, CS, linguistics |
+| **Professional school** | Medicine (especially psychiatry, neurology), law, business |
+| **Research** | Cognitive neuroscience labs, AI research, language processing |
+| **Other** | Education, journalism, marketing, game design |
+
+The most common pipeline right now: **CogSci → UX/Product Design** in tech. The ML/Neural Computation specialization increasingly feeds into **data science and ML engineering**.
+
+---
+
 ## Bottom Line
 
 Cognitive science asks: **How does the mind work?** It attacks this question by combining the tools of multiple disciplines under the unifying idea that cognition involves computation over representations. It produced AI, behavioral economics, UX design, and modern neuroscience as byproducts. The flagship program is UCSD (first department, 1986). The standard intro textbook is Thagard's *Mind* (MIT Press). The field is ~50 years old and currently in a period of intense ferment as it grapples with what deep learning and LLMs mean for theories of human cognition.
