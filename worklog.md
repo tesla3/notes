@@ -3,7 +3,16 @@
 > Current week. At week's end, move to `worklogs/2026-W24.md`.
 > Past weeks: [`worklogs/`](worklogs/)
 
-## 2026-06-10 — Post-AI STEM Major: Final Consolidation
+## 2026-06-10 — Post-AI STEM Major: Rigorous Revision
+
+- Deep critical review of `post-ai-optimal-stem-major.md` — found 11 weaknesses, rewrote with all fixes
+- Added: scarce-complement principle (Hal Varian), structural vs capability moat distinction, network effects, geographic constraints, grad school strategy, generalized self-teach asymmetry
+- Fixed: Applied Math judgment ★5→★3 (inconsistent with physics reasoning), upgraded Comp Bio judgment ★3→★4, added explicit column definitions and rating methodology
+- Added game theory data from `college-majors-trends-2026.md` (CS -8.1%, Eng +7.3%, 273 apps/posting)
+- Added 3 break scenarios: AI tutoring, credential inflation, industrial policy
+- **Key insight:** "modern EE" qualifier was doing ALL the work — now honestly caveated
+
+## 2026-06-10 — Post-AI STEM Major: Final Consolidation (earlier)
 
 - Deep critical review and consolidation of v1 + v2 into single `research/post-ai-optimal-stem-major.md`
 - Deleted `research/post-ai-optimal-stem-major-v2.md`
