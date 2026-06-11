@@ -3,271 +3,362 @@
 # What STEM Major Best Prepares You for the Post-AI Era?
 
 > First-principles analysis using economics, technological evolution, and human nature as foundations.
+> Consolidated from two earlier drafts. Corrects the reality-stack fallacy, survivorship bias, biology blind spot, judgment moat overestimation, and transition-period underweighting. Arrives at a defensible, actionable conclusion.
 
 ---
 
-## Step 1: What Does "Post-AI" Actually Mean Economically?
+## 1. The Economic Engine: Commoditization Cascades
 
-Don't start with technology. Start with economic history.
-
-Every major technology platform shift follows the same pattern: **it commoditizes the current value layer and shifts value to the layer above it.**
+Every general-purpose technology follows the same pattern: **it commoditizes the current value layer and shifts value to the layer it can't reach.**
 
 | Transition | What got commoditized | Where value moved |
 |---|---|---|
-| Agricultural → Industrial (1800s) | Physical labor (muscles) | Operating & designing machines; managing complex organizations |
-| Industrial → Information (1950s–2000s) | Manufacturing (routine physical + cognitive processes) | Software, services, information processing |
-| Internet → Cloud (2000s–2010s) | Distribution & infrastructure | Domain-specific applications, attention, data |
-| **Information → AI (2020s–?)** | **Cognitive execution** (writing, coding, analysis, synthesis, pattern matching) | **???** |
+| Agricultural → Industrial | Physical labor | Machine operation, organization design |
+| Industrial → Information | Routine physical + cognitive processes | Software, services, information processing |
+| Internet → Cloud | Distribution & infrastructure | Domain-specific applications, attention, data |
+| **Information → AI** | **Cognitive execution** (writing, coding, analysis, pattern matching) | **???** |
 
-The question is: **what's the "layer above" cognitive execution?**
+History's answer is consistent: value moves to **judgment, framing, and operation in the domain the new technology can't reach.**
 
-History's answer is consistent: **judgment, framing, and operation in the domain that the new technology can't reach.**
+But this framework, while real, is incomplete in two ways:
 
-- When machines did physical work → value moved to cognitive work (which machines couldn't do)
-- When software did information processing → value moved to domain expertise and human judgment (which software couldn't do)
-- When AI does cognitive execution → value moves to **problem framing, physical-world operation, and judgment under genuine uncertainty** (which AI can't do)
+**First, speed changes strategy.** Previous transitions took 50–100 years. AI disruption is playing out over years, not generations. The direction of value migration is predictable; the speed is not, and speed changes what you should optimize for. A 50-year transition lets you retrain mid-career. A 10-year transition doesn't.
 
-This is not speculation. It's the same structural shift repeating for the fourth time.
+**Second, GPTs create new categories, not just shifts.** The steam engine didn't just move value from muscles to machine operators — it created railroads, factories, and urbanization. The internet didn't just move value from distribution to applications — it created social networks, search, and the attention economy. **AI will create categories of valuable work that don't exist yet and that this analysis cannot predict.** Any framework that only asks "what existing domains survive?" is structurally incomplete. The best we can do is optimize for the ability to recognize and enter new categories quickly.
 
 ---
 
-## Step 2: What Can AI Do vs. What Can't It Do?
+## 2. Two Independent Axes, Not One
 
-Be precise here. Not "AI can do everything" doomerism or "AI is just autocomplete" dismissal.
+Most analyses (including this paper's v1) collapse two distinct dimensions into one. They're independent, and the distinction is critical.
 
-**AI does well (and will do better):**
-- Pattern matching over large datasets
-- Code generation from specs
-- Text synthesis and summarization
-- Optimization over well-defined objective functions
-- Translation between known domains
-- Standard data analysis
-- Routine engineering calculations
-- Any task where the problem is already framed and the evaluation criteria are clear
+### Axis 1: Knowledge Half-Life (long ↔ short)
 
-**AI struggles with (and will struggle with longer):**
-- **Defining the right problem.** AI optimizes objectives; humans choose objectives. This is THE bottleneck. AI can solve "minimize cost" but can't decide whether minimizing cost is the right goal.
-- **Operating on physical reality.** Atoms are harder than bits. Robotics, wet labs, field work, manufacturing, construction — the physical world has friction, noise, and unpredictability that digital systems don't.
-- **Judgment under Knightian uncertainty.** Risk (known probability distributions) is computable. Uncertainty (unknown unknowns, novel situations with no historical data) requires human judgment, taste, and courage.
-- **Trust, accountability, and skin in the game.** Someone has to sign the engineering certification. Someone goes to jail if the bridge collapses. AI doesn't bear consequences; humans do.
-- **Navigating human systems.** Politics, negotiation, persuasion, coalition-building, ethical trade-offs — these require understanding human nature in a way that's embodied, not merely modeled.
-- **Novel scientific discovery at the frontier.** AI accelerates discovery within known paradigms. Paradigm shifts — recognizing that the entire framework is wrong — still appear to require human insight. (This could change, but it hasn't yet.)
+Some knowledge is permanent. Some depreciates.
 
-**Key insight: AI excels at EXECUTION within a defined frame. It's poor at FRAMING the problem and operating where the frame doesn't exist yet.**
+| Long half-life (centuries) | Short half-life (years) |
+|---|---|
+| Calculus, linear algebra, probability | Specific programming languages (5–15 yr) |
+| Newtonian mechanics, thermodynamics, E&M | Frameworks and tools (2–5 yr) |
+| Evolution, central dogma, thermodynamics of living systems | Memorized domain facts |
+| First-principles decomposition | Specific API knowledge |
+| Systems architecture thinking | Routine analytical procedures |
 
----
+### Axis 2: AI Vulnerability (execution ↔ judgment)
 
-## Step 3: What Skills Compound Over a Career?
+Some work is execution within a defined frame. Some is judgment about the frame itself.
 
-Not all learning is equal. Some skills compound — each year of experience makes the next year's learning faster and more valuable. Other skills depreciate — they become obsolete as tools change.
+**Execution** (AI does well and will do better): pattern matching, code generation from specs, optimization over defined objectives, standard analysis, textbook problem-solving, synthesis of known information.
 
-**Skills that compound (long half-life):**
+**Judgment** (AI struggles with longer): choosing the right problem, operating on physical reality, decisions under genuine novelty with no historical data, accountability with consequences, navigating human systems, paradigm-shifting discovery.
 
-| Skill | Half-life | Why it compounds |
-|---|---|---|
-| Mathematical reasoning | 200+ years | Calculus, linear algebra, probability — unchanged for centuries. Each concept builds on previous ones. |
-| Physical intuition | 200+ years | Newtonian mechanics, thermodynamics, E&M — the physical world doesn't get updated. |
-| First-principles thinking | Indefinite | The ability to decompose a novel problem into fundamentals. Improves with every problem you solve. |
-| Domain expertise (deep) | 20-50 years | The last 20% of understanding in any field is where all the value concentrates. This takes years to build and can't be shortcut. |
-| Judgment / taste | Indefinite | Only develops through exposure to real problems, real consequences, real feedback. |
-| Building physical things | Indefinite | Understanding how materials, systems, and physical processes actually behave under real conditions. |
+### Why the distinction matters
 
-**Skills that depreciate (short half-life):**
+These axes are **independent.** You can have:
 
-| Skill | Half-life | Why it depreciates |
-|---|---|---|
-| Specific programming languages | 5-15 years | Languages come and go. Python may not be dominant in 2040. |
-| Specific frameworks/tools | 3-5 years | React, TensorFlow, whatever — all get replaced. |
-| Memorized domain facts | Variable | Searchable, AI-retrievable, constantly revised. |
-| Routine analytical procedures | Shrinking fast | AI automates standard data analysis, A/B testing, literature review. |
+- **Long half-life + execution** → Solving textbook differential equations. Knowledge is permanent, but AI does it. A physics undergrad grinding problem sets is here.
+- **Long half-life + judgment** → Deciding which physical model applies to a novel system. Knowledge is permanent, AI can't do it. A senior engineer diagnosing an unprecedented failure mode is here.
+- **Short half-life + execution** → Writing React components. Knowledge depreciates, AI does it. Most web developers are here.
+- **Short half-life + judgment** → Choosing the right architecture for a novel distributed system given this week's tool landscape. Knowledge depreciates, but the judgment is real and current. A senior systems architect is here.
 
-**The optimal major maximizes compounding skills and minimizes dependence on depreciating ones.**
+**The optimal training maximizes BOTH axes: long-half-life knowledge AND judgment capability.** Being at a "deeper layer of reality" (v1's thesis) only helps on Axis 1. It says nothing about Axis 2. A physics graduate solving textbook problems has durable knowledge but vulnerable skills. A CS architect making novel design trade-offs has less durable knowledge but more durable judgment.
 
 ---
 
-## Step 4: Where Is Value Creation Moving?
+## 3. The Judgment Moat Is Real but Narrower Than You Think
 
-Follow the capital. Where are the hard, unsolved, economically massive problems that require human involvement?
+Both earlier drafts treated "judgment" as a stable, broad human advantage. This needs a stress test.
 
-**1. Physical-world transformation (atoms, not bits)**
-- Energy transition: batteries, grid, solar, fusion, nuclear
-- Biotech/pharma: drug discovery, gene therapy, diagnostics, aging
-- Advanced manufacturing: semiconductors, materials science, additive manufacturing
-- Infrastructure: everything is old and needs rebuilding/upgrading
-- Robotics: bridging AI and the physical world
-- Space: launch, satellites, resource extraction
+**AI is already performing routine judgment:**
+- Medical diagnosis (matching or exceeding specialists on imaging, differential diagnosis)
+- Risk assessment (credit scoring, fraud detection, insurance underwriting)
+- Strategic recommendations (consulting-style analysis, market research synthesis)
+- Code review and architectural suggestions
+- Scientific hypothesis generation within known paradigms
 
-**Capital flowing here:** trillions. All of these involve physical reality, where AI is weakest.
+These are judgment tasks. AI does them. The "AI can only execute, not judge" framing was approximately true in 2023. It's decreasingly true in 2026.
 
-**2. Human-AI systems (the interface layer)**
-- AI alignment and safety
-- Human-AI collaboration design
-- Trust, accountability, and governance of AI systems
-- Clinical and legal decision-making augmented by AI
+**What remains durably human is narrower than "judgment":**
 
-**3. Frontier science**
+1. **Judgment under genuine novelty** — situations with no historical analog, where the distribution itself is unknown (Knightian uncertainty). AI trained on past data structurally struggles here.
+2. **Judgment with accountability** — someone signs the certification, takes the liability, goes to jail. This is structural (legal/regulatory), not capability-based. It persists even if AI is technically better.
+3. **Judgment involving taste and values** — what *should* we optimize for? What's worth building? What's beautiful? These require choosing objectives, not optimizing given ones.
+4. **Judgment about AI itself** — knowing when AI output is wrong, when the training distribution doesn't match the deployment context, when the model is confidently hallucinating. This is meta-judgment, and it requires deep domain expertise.
+
+**Implication:** Training that develops only "I can reason formally" is insufficient. You need training that develops the ability to operate in genuinely novel situations, bear real consequences, exercise taste, and critically evaluate AI output in a specific domain. This is a more specific — and more useful — prescription than "develop judgment."
+
+---
+
+## 4. Where Capital Is Flowing
+
+Follow the money. Where are the hard, economically massive, unsolved problems?
+
+### Physical-world transformation (atoms, not bits)
+- **Energy:** batteries, grid modernization, solar, fusion, nuclear, hydrogen — trillions in capital
+- **Biotech/pharma:** drug discovery, gene therapy, synthetic biology, precision medicine, aging — the largest physical-world value creation opportunity of the coming decades
+- **Advanced manufacturing:** semiconductors, materials science, additive manufacturing
+- **Infrastructure:** everything is old and needs rebuilding
+- **Robotics:** bridging AI and the physical world
+- **Space:** launch, satellites, resource extraction
+
+### AI infrastructure layer
+- Alignment and safety, human-AI trust architecture
+- Systems that deploy AI reliably at scale
+- Evaluation, monitoring, and governance of AI systems
+
+### Frontier science
 - Novel materials, quantum computing, neuroscience, climate modeling
-- AI accelerates discovery but humans still set the research agenda and recognize paradigm shifts
+- AI accelerates within-paradigm discovery; humans still set agendas and recognize paradigm shifts
 
-**Common thread across ALL of these: physical reality + formal reasoning + judgment under uncertainty.**
+### Honest mapping of domains to workforce
 
-Notice what's NOT on the list: building standard web apps, routine data analysis, basic software engineering. Not because these disappear — they don't — but because AI handles more and more of the execution, so the human value per unit of coding skill drops.
+| Sector | Primary workforce | Physics relevance |
+|---|---|---|
+| Energy transition | EE, ChemE, materials science | Indirect — foundations, not application |
+| Biotech/pharma | Biology, chemistry, bioengineering, MDs | **Minimal** — you cannot derive pharmacology from the Hamiltonian |
+| Semiconductors | EE, materials science, ChemE | Moderate |
+| Robotics | EE, MechE, CS (controls/perception) | Indirect |
+| Infrastructure | Civil, MechE | Minimal |
+| AI systems | CS, applied math, EE (signals/ML) | Indirect |
+| Fusion/nuclear | Physics directly | High |
 
----
+Physics is *adjacent* to most high-value sectors but *directly optimal* for almost none of them. The "universal adapter" narrative is real but carries a hidden retraining cost and career-entry delay. This delay matters more than v1 acknowledged — see Section 6.
 
-## Step 5: Which Major Delivers This?
-
-Now map the analysis to actual undergraduate training.
-
-### The scorecard
-
-What the post-AI era demands:
-1. **Mathematical depth** — so you can reason formally about anything, learn new domains fast, and evaluate AI outputs critically
-2. **Physical-world fluency** — so you can operate where AI is weakest and where capital is flowing
-3. **Computational fluency** — so you can USE AI as a force multiplier, not compete with it
-4. **First-principles thinking** — so you can frame problems, not just solve pre-framed ones
-5. **One deep domain** — so you have real judgment and taste in something specific
-
-| Major | Math depth | Physical-world | Computation | First-principles | Domain depth | Overall |
-|---|---|---|---|---|---|---|
-| **Physics** | ★★★★★ | ★★★★★ | ★★★☆☆ | ★★★★★ | ★★★★☆ (physics itself) | **Highest** |
-| **Applied Math** | ★★★★★ | ★★☆☆☆ | ★★★☆☆ | ★★★★☆ | ★★☆☆☆ (domain-agnostic) | High but incomplete |
-| **EE (modern focus)** | ★★★★☆ | ★★★★★ | ★★★★☆ | ★★★★☆ | ★★★★☆ (signals/systems/energy) | **High** |
-| **CS** | ★★★☆☆ | ★☆☆☆☆ | ★★★★★ | ★★★☆☆ | ★★★☆☆ (software) | Medium-high but vulnerable |
-| **MechE** | ★★★★☆ | ★★★★★ | ★★☆☆☆ | ★★★★☆ | ★★★★☆ (physical systems) | High, under-appreciated |
-| **Chemical Eng** | ★★★★☆ | ★★★★★ | ★★☆☆☆ | ★★★★☆ | ★★★★★ (materials/bio/energy) | High for specific domains |
-| **CogSci (ML track)** | ★★★☆☆ | ★☆☆☆☆ | ★★★★☆ | ★★★☆☆ | ★★★☆☆ (human cognition) | Medium |
-| **CogSci (general BA)** | ★★☆☆☆ | ★☆☆☆☆ | ★★☆☆☆ | ★★☆☆☆ | ★★☆☆☆ | Low |
-| **Biology** | ★★☆☆☆ | ★★★★☆ | ★★☆☆☆ | ★★☆☆☆ | ★★★★☆ | Medium |
-
-### The ranking
-
-**Tier 1: Physics**
-
-Physics wins because it is the deepest training in first-principles reasoning about physical reality that exists. Here's the case:
-
-- **Mathematical depth**: Physics requires the full stack — multivariable calc, differential equations, linear algebra, probability, group theory, complex analysis. Not as theory-for-its-own-sake but as tools for understanding reality. This is applied math with teeth.
-- **Physical-world fluency**: This is physics' home turf. Understanding how energy, matter, fields, and forces behave. Post-AI, the physical world is where the unsolved problems live.
-- **First-principles thinking**: Physics is DEFINED by first-principles reasoning. Take a complex system, identify the relevant forces, make simplifying assumptions, solve. Know which simplifications are safe and which aren't. This is the skill of JUDGMENT — knowing what matters and what to ignore. It's the hardest skill to automate.
-- **Transfer speed**: Physics graduates have the highest GRE, LSAT, and MCAT scores of any discipline. Not because physicists are born smarter, but because the training develops transferable reasoning ability better than anything else. A physics grad learning finance, biology, or AI is faster than those fields' own graduates learning physics.
-- **Career optionality data**: Physics BSs become quants, engineers, data scientists, biotech researchers, patent lawyers, tech founders, national security analysts. The degree is a universal adapter.
-
-The knock on physics: **weak on computation** and **first job is harder to get** (no one hires "a physicist" — you have to sell yourself as an engineer, analyst, or developer). This is real but solvable: add Python/ML skills through projects or a CS minor. The gap is small and closeable.
-
-**Tier 1b: EE (with modern focus)**
-
-EE is the dark horse. Everyone thinks it's outdated, but EE sits exactly at the physical-digital interface — which is precisely where post-AI value creation concentrates.
-
-- Signal processing + ML = sensor fusion, autonomous systems, brain-computer interfaces
-- Control theory + robotics = the entire physical automation frontier
-- Electromagnetics + communications = 5G/6G, quantum networks
-- Power systems + grid = energy transition
-
-EE gives you math, physics intuition, computation, AND a domain. The modern EE grad who focuses on embedded ML, robotics, or energy systems is extremely well-positioned.
-
-**Tier 2: Applied Math, MechE, ChemE**
-
-Applied math is physics-tier on formal reasoning but lacks the physical-world fluency and domain specificity. You can solve equations but you don't know which equations matter until you specialize. It's a strong *foundation* but needs a *direction*.
-
-MechE and ChemE are strong because they operate directly on physical reality with serious mathematical foundations. Underrated post-AI because everyone's distracted by software.
-
-**Tier 3: CS**
-
-This is the controversial ranking. CS has been the king major for 20 years. Here's why I'm ranking it below physics and EE for the POST-AI era (not the current era):
-
-**The paradox of CS in the AI era: CS built the tool that commoditizes CS.**
-
-- The core economic value of most CS graduates has been: "I can write code that works." AI is coming for exactly this skill.
-- The top 10% of CS (systems architecture, novel algorithms, AI/ML research) remains extremely valuable. These people are designing the AIs.
-- The middle 80% — application developers, web engineers, standard data scientists — face increasing competition from AI-augmented smaller teams. You'll need fewer of them per unit of output.
-- CS training is heavy on depreciating skills (specific languages, frameworks) and lighter on compounding skills (math, physics) compared to physics or EE.
-- CS has almost zero physical-world content. In a world where atoms matter more, this is a gap.
-
-**CS is still a strong degree.** But its dominance was built on a world where "building software" was the scarce, valuable skill. In a world where AI makes software construction cheaper, the relative value shifts toward people who understand the PHYSICAL and FORMAL domains that software operates on.
-
-**Tier 4: CogSci, Biology**
-
-Valuable domain knowledge but insufficient formal depth for long-term compounding. Need to be combined with harder foundations.
+**The biology blind spot.** The single largest physical-world value creation opportunity — biotech, CRISPR, mRNA platforms, synthetic biology, aging research — is fundamentally *biology*. Biology has its own irreducible first principles (evolution, the central dogma, thermodynamic constraints on living systems, ecological dynamics) that are genuine foundations, not stamp-collecting. You cannot derive the Krebs cycle from quantum mechanics. Emergent complexity is real, not a failure of reductionism.
 
 ---
 
-## Step 6: The Deeper Pattern
+## 5. What Actually Develops the Skills That Matter?
 
-Let me step back and state the general principle:
+The durable human advantage is: judgment under novelty, with accountability, in a specific domain, augmented by AI tools. What *training* develops this?
 
-**The most durable training is the training closest to REALITY'S OPERATING SYSTEM.**
+### The ingredients
 
-Reality runs on physics and mathematics. Everything else is an abstraction layer on top:
+1. **Formal reasoning depth** — so you can evaluate whether a solution is solving the right problem. Math through at least: multivariable calculus, linear algebra, differential equations, probability/statistics. Ideally: real analysis or abstract algebra. This is the compounding engine.
 
-```
-Layer 0: Mathematics (the language)
-Layer 1: Physics (how reality behaves)
-Layer 2: Chemistry, Materials Science (how matter combines)
-Layer 3: Biology, Engineering (how complex systems are built)
-Layer 4: Computer Science (how information is processed)  ← AI commoditizes HERE
-Layer 5: Domain applications (software, products, services)
-Layer 6: Social sciences, humanities (how humans organize and make meaning)
-```
+2. **Deep expertise in at least one domain** — so you know what real mastery feels like and can evaluate AI output critically. By graduation, you should look at AI output in your domain and know when it's wrong without being told. That's judgment. It takes years.
 
-**AI commoditizes from the TOP DOWN.** It eats Layer 5 and 6 first (writing, synthesis, analysis, routine coding), then Layer 4 (more complex software engineering), and works downward. It has the hardest time with Layers 0-2 because those require understanding physical reality, not just processing information about it.
+3. **Physical-world fluency** — so you operate where AI is weakest and capital is flowing. Lab work, manufacturing, field experience, building things with atoms.
 
-**The further down the stack your training sits, the longer it takes AI to reach you.**
+4. **Serious computational fluency** — not "Python basics" (that's "can use a calculator" in 2026), but genuine systems thinking: how to decompose problems for AI agents, evaluate outputs, build reliable pipelines, architect human-AI workflows. This is a **core competency**, not an accessory. Minor in CS, 4–6 serious CS courses, or equivalent sustained project work.
 
-Physics sits at Layer 1. Applied math sits at Layer 0. CS sits at Layer 4. CogSci general BA sits at Layer 5-6. This is the durability ranking.
+5. **Learning velocity** — the ability to rapidly acquire new domain knowledge. In a world of rapid disruption, this may be the single most important meta-skill. It's developed through: exposure to multiple domains, practice learning under time pressure, and deep enough foundations that new knowledge has existing structure to attach to.
 
----
+6. **Breadth of exposure** — problem-framing is fundamentally cross-domain. The best problem-framers (Darwin, Shannon, the Wright brothers) were polymaths — depth plus breadth. Taste develops through confronting many different types of problems with real stakes.
 
-## Step 7: What About Human Nature?
+### The critical question: what kind of training ACTUALLY delivers judgment?
 
-One more dimension that changes the calculus.
+Not coursework alone. **Judgment develops through exposure to real problems with real consequences and real feedback loops.** This means:
 
-**Humans want things AI can't provide:**
+- Research experience (even undergraduate) where you face genuinely open questions
+- Internships and co-ops where your work has consequences
+- Projects where you build things that have to actually work (not just pass a grader)
+- Years of experience in a domain, accumulating pattern recognition about what matters
 
-1. **Trust with consequences.** I want a human doctor who takes liability, not an AI that disclaims. I want a human engineer who signs the structural certification. Trust requires skin in the game — which requires a body and a reputation.
-
-2. **Meaning and status.** Humans pay premium for human-made, human-judged, human-curated things. The "artisanal" instinct isn't going away. This actually INCREASES as AI-generated content floods every channel. Human judgment becomes a scarce signal in a noisy world.
-
-3. **Physical presence.** No AI builds a bridge, performs surgery, fixes a power grid, or harvests crops. The physical world requires physical agents. For a long time, those agents will be humans + machines, not machines alone.
-
-4. **Somebody to blame.** Governance, regulation, and liability require human agents. Complex systems need human operators who exercise judgment and bear responsibility. This is structural, not sentimental.
-
-**All four of these favor training in physical-world disciplines with deep formal foundations over training in information-processing disciplines.**
+This has a profound implication for major selection: **a major that gets you into real-stakes work earlier may develop judgment faster than a major with deeper theoretical foundations but slower career entry.** Two years of real-world problem-solving builds more judgment than two years of additional coursework. This is not anti-intellectual — it's recognizing that judgment is a skill of practice, not a skill of study.
 
 ---
 
-## Step 8: The Synthesis
+## 6. The Timeline Problem: Why It's Not a Footnote
 
-### The optimal post-AI STEM education has four properties:
+This is the most underweighted variable in most analyses, including v2. Let me make the case for why it might be *the* most important consideration.
 
-1. **Deep formal foundations** (math, first-principles reasoning) — so learning compounds across your entire career
-2. **Physical-world fluency** — so you operate where AI is weakest and capital is flowing
-3. **Computational literacy** (not mastery) — so you USE AI as amplification, not compete with it as substitution
-4. **One domain of genuine depth** — so you have judgment, taste, and the ability to frame problems (not just solve them)
+**The transition period (2025–2045)** is when most current students will build their careers, develop their networks, establish their reputations, and compound their judgment through experience. The "equilibrium" (2050+) is what they'll face in their late career.
 
-### The answer:
+**For the transition period:**
+- Computational depth is at peak leverage — understanding the AI tools reshaping everything gives a massive multiplier
+- Career entry speed matters — getting started 2–3 years earlier compounds: you build judgment, network, and reputation during the period of maximum disruption
+- The sectors absorbing talent *right now* have specific skill demands; generalized physics training requires additional specialization to enter any of them
+- Adaptability matters — CS-style training, where you constantly learn new tools and paradigms, may develop adaptation muscles that physics-style "master timeless fundamentals" training does not
 
-**Physics** is the single best undergraduate major for long-term post-AI durability.
+**For the equilibrium (20+ years out):**
+- Mathematical depth and physical intuition compound over a full career
+- Domain-specific tools churn; foundations don't
+- Physical-world fluency becomes increasingly valuable as AI penetrates more digital work
 
-Not because physics is "harder" (though it is), but because:
-- It trains the compounding skills (math + physical intuition + first-principles reasoning)
-- It operates at the lowest, most durable layer of the reality stack
-- It gives you the fastest domain-acquisition speed for any adjacent field
-- It develops the specific skill AI lacks: judgment about which simplifications are safe, which models are appropriate, which problems matter
+**The strategic tension:** If you optimize for the equilibrium, you may not survive the transition. A beautiful theoretical foundation doesn't help if you can't get hired for 3 years after graduation. But if you optimize for the transition, you may be caught flat-footed when the equilibrium arrives and your rapidly-acquired skills have depreciated.
 
-**Combined with**: enough CS/programming to be computationally fluent (Python, ML basics, data tools — achievable through a minor, projects, or self-study). The physics grad who can also code is nearly unstoppable. The CS grad who can also do physics is much rarer, because physics is harder to self-teach.
-
-**Second choice**: EE (modern focus on embedded ML, robotics, energy, or signals). EE is physics-adjacent with more immediate domain applicability. Slightly less theoretical depth, more practical deployment readiness.
-
-**Third choice**: Applied Math, but only if you aggressively specialize in a physical-world domain through research/projects. Pure applied math without domain is a tool without a workbench.
-
-**CS remains strong** but its position is shifting from "the default best choice" to "a very good choice that is increasingly commoditized at the execution layer." The CS grad who goes deep into systems, architecture, or AI research is still elite. The CS grad who just learned to build web apps is increasingly vulnerable.
+**Resolution:** The training that resolves this tension is one that provides *enough* formal depth for long-term compounding *and* enough practical applicability for immediate career entry. This is a Pareto optimization, not a single-axis maximization. It's why "physics is the best major" (v1's conclusion) is overfit — physics maximizes one axis at the expense of the other. The engineering disciplines (EE, MechE, ChemE) sit closer to the Pareto frontier.
 
 ---
 
-## The One-Line Summary
+## 7. Human Nature: Structural Demand for Human Agents
 
-**Train at the layer of reality that AI reaches last: mathematics and physics. Then learn to use AI as your tool, not compete with it as your replacement.**
+This dimension holds up best under scrutiny because it's about institutional and psychological structures, not capability comparisons that AI can erode.
+
+1. **Trust with consequences.** People want a human doctor who takes liability, a human engineer who signs the structural certification. Trust requires skin in the game — a body, a reputation, something to lose. This is institutional, legal, and psychological. It persists even if AI is technically better at the task.
+
+2. **Meaning and status.** Humans pay premium for human-made, human-judged, human-curated output. This "artisanal" instinct *increases* as AI-generated content floods every channel. Human judgment becomes a scarce signal in a world of infinite AI noise.
+
+3. **Physical presence.** No AI builds a bridge, performs surgery, fixes a power grid. The physical world requires physical agents. For decades, those will be humans augmented by machines, not machines alone. (The robotics timeline is compressing — Boston Dynamics, Figure, Tesla Optimus — but novel physical situations in unstructured environments remain far from solved.)
+
+4. **Accountability.** Governance, regulation, liability require human agents. When cascading AI failures cause real harm, someone human must diagnose, decide, and answer for it.
+
+All four favor training that combines formal depth with physical-world fluency and domain expertise. They don't uniquely favor any single major — they favor the *profile.*
 
 ---
 
-*Analysis: June 2026. First-principles reasoning, not survey of opinions. Historical patterns, economic structure, and technological trajectories as foundations.*
+## 8. Correcting Common Analytical Errors
+
+### Error 1: The Reality-Stack Fallacy (v1)
+
+V1 argued AI commoditizes "top-down" through a reality stack (social sciences → CS → biology → chemistry → physics → math), so being at the "bottom" is safest.
+
+**Wrong.** AI attacks execution at ALL layers simultaneously. AlphaProof does mathematical reasoning. GNoME discovers 2.2M crystal structures. AlphaFold solves protein folding. AI doesn't eat reality top-down — it automates *execution* at every layer while leaving *judgment* at every layer. The durable advantage is judgment at whatever layer you operate, not sitting at a "deeper" layer.
+
+The grain of truth: lower-layer knowledge has longer half-lives (Axis 1). The Schrödinger equation won't change; the React framework will. But long half-life ≠ AI-proof. Solving the Schrödinger equation for known potentials is long-half-life *execution* — and AI does it.
+
+### Error 2: Survivorship Bias in Physics Data (v1)
+
+V1 cited physics graduates' GRE/LSAT/MCAT scores and career optionality as evidence that physics training is superior. This conflates selection effects with training effects. Physics attracts and retains — through a brutal curriculum — students pre-selected for raw cognitive horsepower. Would those same students have performed equally well with a math, EE, or CS degree? Almost certainly.
+
+The proper test (two students of identical aptitude, different majors, compared over a career) doesn't exist. The GRE data tells you smart people choose physics. It doesn't tell you physics makes people smarter.
+
+**Corrected claim:** Physics is one of several rigorous STEM majors that develops strong formal reasoning. Its distinctive advantage is the *combination* of mathematical depth with physical intuition — real, but not as large as naive cross-major comparisons imply.
+
+### Error 3: Underrating Biology (v1)
+
+V1 gave biology ★★ for first-principles thinking, reflecting a bias equating "first-principles" with "mathematical formalism." Evolution, the central dogma, thermodynamic constraints on living systems, ecological dynamics — these are genuine first principles with enormous explanatory power. The biotech sector is likely the single largest physical-world value creation opportunity of the coming decades. Ignoring biology because it's "less mathematical" is a serious analytical failure.
+
+### Error 4: Overestimating the Judgment Moat (v2)
+
+Addressed in Section 3. The moat is real but narrower than "all judgment." It's specifically: judgment under genuine novelty + accountability + taste/values + meta-judgment about AI. Training should target these specifically, not just "develop judgment" generically.
+
+### Error 5: Treating "Major" as the Primary Variable
+
+Companies hire for roles and demonstrated skills, not majors. The major is a signal and a training path, not a destiny. Two physics graduates with different research experiences, internships, and side projects will have radically different career outcomes. The major choice matters for the first 5 years of career, decreasingly thereafter. What matters more: the *profile* you assemble across coursework, research, projects, and internships.
+
+---
+
+## 9. The Scorecard
+
+### Criteria
+
+1. **Math depth** — formal reasoning that compounds across decades
+2. **Physical-world fluency** — operating where AI is weakest and capital is flowing
+3. **Computational fluency** — using AI as genuine amplification (systems thinking, not just scripting)
+4. **First-principles / judgment development** — rated for the *median graduate*, not the ceiling
+5. **Domain depth** — real expertise where you can evaluate AI output critically
+6. **Career entry** — ability to start building real-world judgment early
+
+| Major | Math | Physical | Compute | Judgment | Domain | Entry | Post-AI durability |
+|---|---|---|---|---|---|---|---|
+| **EE (modern)** | ★★★★ | ★★★★★ | ★★★★ | ★★★★ | ★★★★★ | ★★★★ | **Highest** |
+| **Physics + CS depth** | ★★★★★ | ★★★★★ | ★★★★ | ★★★★ | ★★★★ | ★★★ | **Highest** (requires supplement) |
+| **CS (systems/AI depth)** | ★★★ | ★ | ★★★★★ | ★★★★ | ★★★★ | ★★★★★ | **High** |
+| **MechE** | ★★★★ | ★★★★★ | ★★★ | ★★★★ | ★★★★ | ★★★★ | **High** |
+| **ChemE** | ★★★★ | ★★★★★ | ★★★ | ★★★★ | ★★★★★ | ★★★★ | **High** |
+| **Physics (pure BS)** | ★★★★★ | ★★★★★ | ★★★ | ★★★ | ★★★★ | ★★ | High (entry friction) |
+| **Applied Math** | ★★★★★ | ★★ | ★★★ | ★★★★★ | ★★ | ★★★ | High (needs domain) |
+| **Comp. Biology** | ★★★ | ★★★★ | ★★★★ | ★★★ | ★★★★★ | ★★★★ | High (sector tailwind) |
+| **CS (general/web)** | ★★★ | ★ | ★★★★★ | ★★ | ★★★ | ★★★★★ | **Medium** (execution-layer risk) |
+| **Biology** | ★★ | ★★★★ | ★★ | ★★★ | ★★★★ | ★★★ | Medium |
+| **CogSci (ML track)** | ★★★ | ★ | ★★★★ | ★★★ | ★★★ | ★★★ | Medium |
+| **CogSci (general BA)** | ★★ | ★ | ★★ | ★★ | ★★ | ★★ | Low |
+
+### Key rating decisions
+
+- **Physics pure BS judgment at ★3, not ★5.** Undergraduate physics develops formal problem-solving on well-defined problems. The deep judgment skill ("which simplifications are safe?" "which model applies to this unprecedented situation?") develops primarily through *research experience*, not coursework. Most BS graduates don't reach that level. Rate the median graduate, not the ceiling.
+- **Physics + CS depth at ★4 judgment.** The supplement forces more real-world problem-solving and project work, developing judgment faster than pure coursework.
+- **EE at ★4 judgment.** Lab-heavy, project-heavy curriculum with tighter feedback loops between theory and practice. Develops practical judgment earlier.
+- **MechE computation upgraded to ★3.** Modern MechE involves significant simulation, CAD, and increasingly ML — not the ★2 from v2.
+- **CS split into two tracks.** Systems/AI depth (understanding the tool reshaping everything) vs. general/web (building things the tool increasingly builds itself). The gap is real and widening.
+- **"Highest" tier requires combination.** No single pure major achieves top marks on all axes. EE comes closest because it inherently sits at the physical-digital interface.
+
+---
+
+## 10. Game Theory: What Everyone Else Does
+
+Individual optimal strategy depends on collective behavior. Basic labor economics.
+
+If everyone follows "study CS" → CS graduates become oversupplied → their wages drop relative to scarcer skills. If "CS is dying" narrative spreads → CS enrollment drops → remaining CS graduates become scarcer and more valuable.
+
+**Current state (2026):** CS enrollment is at record highs. Physics, EE, ChemE, MechE enrollment is relatively low. The contrarian signal — studying something rigorous but unfashionable — provides market positioning value independent of the subject matter.
+
+**Structural point:** The specific ranking in Section 9 matters less than whether you go genuinely deep in something rigorous while assembling the complete profile. If everyone zigs toward AI/CS, there's real value in zagging toward physical-world disciplines — *especially* if you supplement with computational depth that CS-native students take for granted.
+
+---
+
+## 11. The Synthesis
+
+### The core insight
+
+**The post-AI era rewards a profile, not a pedigree.** The analysis converges on six properties that matter, and multiple majors can anchor them:
+
+1. **Formal reasoning depth** that compounds over decades (math through DiffEq + LinAlg + Prob/Stats minimum; ideally real analysis)
+2. **Physical-world fluency** where AI is weakest and capital is flowing
+3. **Serious computational fluency** — systems thinking, model evaluation, AI-augmented workflow design (not just scripting)
+4. **One domain of genuine depth** — real expertise where you have judgment AI lacks
+5. **Learning velocity and breadth** — exposure to multiple domains, ability to rapidly acquire new knowledge
+6. **Early entry into real-stakes work** — judgment compounds only through experience with consequences
+
+### Tiered assessment
+
+**Tier 1 — Strongest post-AI positioning:**
+
+- **EE (modern: embedded ML, robotics, energy, signals/controls)** — Sits exactly at the physical-digital interface. Math, physical intuition, computation, and a concrete domain — all in one major. Reasonable career entry. The dark horse that deserves to be the frontrunner. The modern EE grad focused on autonomous systems, energy systems, or embedded AI is the single best-positioned STEM graduate.
+
+- **Physics + serious computational supplement** — Deepest formal foundations plus physical intuition. Powerful *combination*, but the pure physics BS without computational depth and domain specialization faces real career-entry friction. This path works best for students headed toward graduate school, research, or who aggressively self-supplement with CS and research experience. Without the supplement, drops to Tier 2 due to entry friction.
+
+- **CS with depth (systems architecture, AI/ML internals, distributed systems, hardware)** — Understanding the technology reshaping everything is a massive advantage during the transition period. The skill is shifting from "I can write code" (commodity) to "I understand the system reshaping everything" (strategic). Enormous transition-period leverage. Long-term risk is real but manageable if you build domain depth alongside.
+
+**Tier 2 — Strong with tailwinds:**
+
+- **MechE, ChemE** — Operate directly on physical reality with serious mathematical foundations. Underrated because everyone is distracted by software. ChemE maps to energy transition and materials — massive capital flows. MechE maps to robotics, manufacturing, infrastructure.
+
+- **Computational biology / bioengineering** — The largest physical-world value creation sector (biotech) needs people combining biological domain knowledge with computational tools. Strong 20+ year sector tailwind. Narrower bet than Tier 1 options but high expected value if the biotech thesis plays out (it probably does).
+
+- **Applied Math + aggressive domain specialization** — Physics-tier formal reasoning. But pure applied math without a domain is a tool without a workbench — you can solve equations but don't know which equations matter. Must be combined with sustained research or project work in a specific physical-world domain.
+
+**Tier 3 — Viable, needs supplementation:**
+
+- **Biology** — Increasingly important domain (biotech tailwind) but insufficient formal and computational depth on its own. Strongest when combined with quantitative/computational focus.
+- **CS (general/application-focused)** — Still employable, still in demand, but the middle-80% CS grad building standard web apps is among the most AI-vulnerable positions in STEM. The execution layer is being commoditized by the tools CS built.
+- **CogSci (ML track)** — Legitimate quantitative training + domain expertise in human cognition. Relevant to human-AI interface. But narrow market.
+
+**Tier 4 — Insufficient on its own:**
+
+- **CogSci (general BA)** — Mostly soft science with computational garnish. The claimed advantage of "interdisciplinary synthesis" is exactly what LLMs do at machine speed. Needs hard supplementation.
+
+### The non-negotiable checklist (regardless of major)
+
+1. **Math:** Multivariable calculus, linear algebra, differential equations, probability and statistics. Minimum. Ideally: one proof-based course (real analysis, abstract algebra).
+2. **Computation:** Can architect a system, critically evaluate AI output, build data pipelines, understand ML well enough to know when it's failing. 4–6 serious CS courses or equivalent project work. Not optional.
+3. **Physical-world exposure:** Research in a lab, internship in manufacturing/energy/biotech, hands-on engineering project. This is where capital flows and AI is weakest.
+4. **Domain depth:** By graduation, you can look at AI output in your domain and know when it's wrong without being told. That's judgment. It takes years.
+5. **Breadth:** Courses outside your discipline. Reading widely. The problem-framing skill requires exposure to many frames.
+6. **Real stakes early:** Undergraduate research, co-ops, internships, projects that ship. Don't wait for the credential to start building judgment.
+
+### The asymmetry to exploit (revised)
+
+Physics and math are harder to self-teach than programming. This is the v1 insight and it's real. But v1 underestimated the *depth* of computational skill needed. "Python basics" in 2026 is table stakes. Effective AI-augmented work requires genuine systems thinking about computation — decomposing problems for AI agents, evaluating outputs, building reliable pipelines, architecting human-AI workflows.
+
+**Revised prescription:** Major in something with deep formal and physical-world foundations (physics, EE, MechE, ChemE) AND invest serious effort in computational depth (minor + sustained projects). Or: major in CS with genuine depth AND invest serious effort in physical-world domain exposure through research and internships.
+
+Both paths work. Neither works halfway. **The worst move is optimizing along a single axis** — pure theory without computation, pure coding without physical intuition, pure breadth without any depth.
+
+---
+
+## 12. What Could Make This Analysis Wrong
+
+Intellectual honesty requires stating the conditions under which the entire framework fails.
+
+**Scenario 1: AGI arrives fast (5–10 years) and commoditizes ALL human cognitive work.** If AI achieves human-level general intelligence and the physical-world robotics problem is solved simultaneously, then no STEM training provides durable advantage. The analysis assumes AI capabilities plateau or progress slowly in key areas. If that assumption fails, nothing here matters. *Probability: low but non-trivial. Hedge: the physical-world and accountability advantages are the last to fall even in this scenario.*
+
+**Scenario 2: The transition period is much shorter than assumed.** If AI disruption compresses into 5 years rather than 20, the "optimize for transition" argument weakens — everyone will need to adapt fast regardless of training. The formal-foundations advantage reasserts because those with deeper reasoning can adapt faster. *Probability: moderate. Hedge: this makes the non-negotiable math/foundations checklist even more important.*
+
+**Scenario 3: New categories of valuable work emerge that don't map to current disciplines.** Previous GPTs created entirely new job categories. AI will too. If the biggest value creation happens in a domain that doesn't yet exist, then optimizing for any current domain is the wrong strategy. The right strategy is maximizing learning velocity and adaptability. *Probability: high — this will definitely happen. Hedge: the profile (formal depth + breadth + learning velocity) is optimized for this scenario.*
+
+**Scenario 4: Credentials become irrelevant.** If AI makes knowledge acquisition so easy that anyone can learn anything, the major choice becomes purely about signaling and network effects, not about training. *Probability: partially true already and increasing. Hedge: this strengthens the "profile not pedigree" conclusion — what you can demonstrate matters more than what you studied.*
+
+**Scenario 5: Physical-world automation advances faster than expected.** The "atoms are harder than bits" argument has been made about every task AI eventually conquered (chess, Go, protein folding). If humanoid robotics and autonomous manufacturing reach human-level competence in 10–15 years, the physical-world moat narrows dramatically. *Probability: moderate for routine physical work, low for novel unstructured physical situations. Hedge: the advantage is in novel physical situations, not routine ones.*
+
+---
+
+## The One-Paragraph Summary
+
+The post-AI era rewards a profile, not a major: formal reasoning depth that compounds over decades, physical-world fluency where AI is weakest and capital is flowing, serious computational fluency to use AI as genuine amplification, one domain of real expertise where you have judgment AI lacks, and early entry into real-stakes work where judgment actually develops. EE (modern focus), physics with computational supplement, and deep-track CS are the strongest anchors for this profile. The major matters less than whether you assemble the complete package — and the worst strategic error is maximizing along a single axis while neglecting the others.
+
+---
+
+*Consolidated analysis: June 2026. First-principles reasoning corrected for survivorship bias, reality-stack fallacy, judgment moat overestimation, biology blind spot, timeline dynamics, and single-axis optimization. Supersedes v1 and v2.*
